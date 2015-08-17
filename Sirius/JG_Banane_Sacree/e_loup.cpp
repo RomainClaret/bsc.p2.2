@@ -13,6 +13,7 @@
 
 #include "e_loup.h"
 #include "gameboard.h"
+#include "s_viewblocennemi.h"
 
 E_Loup::E_Loup(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
 {
@@ -28,15 +29,9 @@ E_Loup::E_Loup(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
         setZValue(2);
 
     //Création du champs de vue
-    int gs = Gameboard::getGameSquares();
     for(int i=1; i<=5; i++)
     {
-        ViewBloc vb;
-        vb.bloc = new QGraphicsRectItem(0,0, gs-2, gs-2);
-        vb.bloc->setZValue(2);
-        vb.colonne=i;
-        vb.ligne=0;
-
+        S_ViewBlocEnnemi* vb = new S_ViewBlocEnnemi(0, i, this);
         champVue.append(vb);
     }
 

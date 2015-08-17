@@ -13,7 +13,7 @@
 
 #include "e_renard.h"
 #include "gameboard.h"
-
+#include "s_viewblocennemi.h"
 E_Renard::E_Renard(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
 {
     //vitesse entre 1 et 100
@@ -28,17 +28,11 @@ E_Renard::E_Renard(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
         setZValue(2);
 
     //Création du champs de vue
-    int gs = Gameboard::getGameSquares();
     for(int i=1; i<=2; i++)
     {
         for(int j=-1; j<=1; j++)
         {
-            ViewBloc vb;
-            vb.bloc = new QGraphicsRectItem(0,0, gs-2, gs-2);
-            vb.bloc->setZValue(2);
-            vb.colonne=i;
-            vb.ligne=j;
-
+            S_ViewBlocEnnemi* vb = new S_ViewBlocEnnemi(j, i, this);
             champVue.append(vb);
         }
     }

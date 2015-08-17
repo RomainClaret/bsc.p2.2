@@ -20,13 +20,7 @@ class QPoint;
 class QGraphicsRectItem;
 class Gameboard;
 
-
-struct ViewBloc{
-    QGraphicsRectItem *bloc;
-    int ligne;      //.. -2, -1, 0, 1, 2 ..
-    int colonne;    // 0,1,2..
-    bool actif;
-};
+class S_ViewBlocEnnemi;
 
 /**
  * \brief Classe parent de touts les ennemis.
@@ -53,14 +47,16 @@ public:
 
     void setPath(QList<QPoint>);
 
+    void pinguinOnViewBloc();
+
 protected:
     void advance(int);
     int speed;
 
     QList<QPoint> path;
-    QList<ViewBloc> champVue;
+    QList<S_ViewBlocEnnemi* > champVue;
 
-    void setPosViewBloc(QGraphicsRectItem*, QPoint);
+    void setPosViewBloc(S_ViewBlocEnnemi*, QPoint);
 
     //Les skins sont les images attribué au méchant
     QString leftSkin;

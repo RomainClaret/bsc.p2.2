@@ -34,6 +34,7 @@
 #include "b_movable.h"
 #include "player.h"
 #include "p_penguin.h"
+#include "s_viewblocennemi.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -77,18 +78,14 @@ void Ennemi::viewBlocActif()
     QList<QPoint> toDesactivate;
     bool allunactived = false;
 
-    QList<ViewBloc>::iterator it;
+    QList<S_ViewBlocEnnemi* >::iterator it;
     for (it = champVue.begin(); it != champVue.end(); ++it)
     {
-        //On les actives tous !
-        (*it).actif = true;
-
-        //Design Activated
-        (*it).bloc->setBrush(brush);
-        (*it).bloc->setPen(pen);
+        //On les active tous !
+        (*it)->setActif(true);
 
         //lesquels on va désactiver ?
-        QList<QGraphicsItem *> CollidingItems = (*it).bloc->collidingItems();
+        QList<QGraphicsItem *> CollidingItems = (*it)->collidingItems();
         bool bUnactivate = false;
 
         foreach (QGraphicsItem *item, CollidingItems) {
@@ -102,11 +99,11 @@ void Ennemi::viewBlocActif()
 
         if(bUnactivate)
         {
-            if((*it).ligne==0 && (*it).colonne ==1) //si c'est le bloc 1
+            if((*it)->getLine()==0 && (*it)->getColonne() ==1) //si c'est le bloc 1
             {
                 allunactived = true;
             }
-            toDesactivate.append(QPoint((*it).ligne, (*it).colonne));
+            toDesactivate.append(QPoint((*it)->getLine(), (*it)->getColonne()));
         }
     }
 
@@ -118,17 +115,13 @@ void Ennemi::viewBlocActif()
     //on déactive ce qu'il faut
     foreach (QPoint toDes, toDesactivate)
     {
-        QList<ViewBloc>::iterator it;
+        QList<S_ViewBlocEnnemi*>::iterator it;
         for (it = champVue.begin(); it != champVue.end(); ++it)
         {
             //on désactive la ligne
-            if(((*it).colonne >= toDes.y() && (*it).ligne == toDes.x()) || allunactived)
+            if(((*it)->getColonne() >= toDes.y() && (*it)->getLine() == toDes.x()) || allunactived)
             {
-                (*it).actif=false;
-
-                //Design Unactivated
-                (*it).bloc->setBrush(brush);
-                (*it).bloc->setPen(pen);
+                (*it)->setActif(false);
             }
         }
     }
@@ -146,24 +139,30 @@ void Ennemi::pinguinDetection()
     pen.setColor(Qt::yellow);
 
     detectPinguin = false;
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        if(vb.actif)
+        if(vb->isActif())
         {
-            QList<QGraphicsItem *> CollidingItems = vb.bloc->collidingItems();
+            QList<QGraphicsItem *> CollidingItems = vb->collidingItems();
 
             for(int i=0; i<CollidingItems.length(); i++)
             {
                 if(typeid(*CollidingItems.at(i)).name() == typeid(Pingouin).name())
                 {
-                    this->detectPinguin = true;
-                    vb.bloc->setBrush(brush);
-                    vb.bloc->setPen(pen);
-                    game->restartEnigma();
+                    vb->setStylePinguinOn();
+                    pinguinOnViewBloc();
                 }
             }
         }
     }
+}
+
+//appelé par les s_viewblocennemi si le pingouin marche (se déplace) dessus
+//ou par ennemi si un pingouin est detecté
+void Ennemi::pinguinOnViewBloc()
+{
+    this->detectPinguin = true;
+    game->restartEnigma();
 }
 
 QPoint Ennemi::convertPosPoint(QPointF psrc)
@@ -175,10 +174,10 @@ QPoint Ennemi::convertPosPoint(QPointF psrc)
 
 bool Ennemi::collide()
 {
-    QGraphicsRectItem *collideRect;
-    foreach (ViewBloc vb, champVue) {
-        if(vb.colonne==1 && vb.ligne==0){
-            collideRect = vb.bloc;
+    S_ViewBlocEnnemi *collideRect;
+    foreach (S_ViewBlocEnnemi* vb, champVue) {
+        if(vb->getColonne()==1 && vb->getLine()==0){
+            collideRect = vb;
         }
     }
 
@@ -234,12 +233,13 @@ int Ennemi::nextPoint()
 //Cerveau de l'ennemi
 void Ennemi::advance(int step)
 {
-    if(step == 1)
+    if(step == 1) //répond au second appel
     {
-        viewBlocActif();
-        pinguinDetection();
+        //En supprimant ces deux appels on optimise grandement le programme
+        viewBlocActif(); //désactive les blocs obstrués par un mur
+        pinguinDetection(); //test la détection du pingouin
 
-        if(time % speed==0 && !detectPinguin)
+        if(time % speed == 0 && !detectPinguin)
         {
             time = 0;
             QPoint posEnnemi = convertPosPoint(this->pos());
@@ -271,19 +271,16 @@ void Ennemi::advance(int step)
                        if(path.at(iDestPoint).x() > posEnnemi.x())
                        {
                            //tourne a droite
-                           //turnRight();
                            setOrientation_right();
                        }
                        else if(path.at(iDestPoint).x() < posEnnemi.x())
                        {
                            //tourne a gauche
-                           //turnLeft();
                            setOrientation_left();
                        }
                        else if(path.at(iDestPoint).y() > posEnnemi.y())
                        {
                            //on se retourne ( toujours par la droite )
-                           //turnRight();
                            setOrientation_right();
                        }
                    }
@@ -292,13 +289,11 @@ void Ennemi::advance(int step)
                        if(path.at(iDestPoint).x() > posEnnemi.x())
                        {
                            //tourne a SA gauche
-                           //turnLeft();
                            setOrientation_right();
                        }
                        else if(path.at(iDestPoint).x() < posEnnemi.x())
                        {
                            //tourne a SA droite
-                           //turnRight();
                            setOrientation_left();
                        }
                        else if(path.at(iDestPoint).y() < posEnnemi.y())
@@ -312,19 +307,16 @@ void Ennemi::advance(int step)
                        if(path.at(iDestPoint).x() < posEnnemi.x())
                        {
                            //on se retourne ( toujours par SA droite )
-                           //turnRight();
                            setOrientation_bottom();
                        }
                        else if(path.at(iDestPoint).y() < posEnnemi.y())
                        {
                            //tourne a SA gauche
-                           //turnLeft();
                            setOrientation_top();
                        }
                        else if(path.at(iDestPoint).y() > posEnnemi.y())
                        {
                            //tourne a SA droite
-                           //turnRight();
                            setOrientation_bottom();
                        }
                    }
@@ -333,34 +325,30 @@ void Ennemi::advance(int step)
                        if(path.at(iDestPoint).x() > posEnnemi.x())
                        {
                            //on se retourne ( toujours par SA droite )
-                           //turnRight();
                            setOrientation_top();
                        }
                        else if(path.at(iDestPoint).y() < posEnnemi.y())
                        {
                            //tourne a SA droite
-                           //turnRight();
                            setOrientation_top();
                        }
                        else if(path.at(iDestPoint).y() > posEnnemi.y())
                        {
                            //tourne a SA droite
-                           //turnLeft();
                            setOrientation_bottom();
-
                        }
                    }
-                }
+            }
             else
             {
-                //déplacement en x en premier puis en y
+                //toujours déplacement en x en premier puis en y
                 if(path.at(iDestPoint).x() > posEnnemi.x())
                 {
                     if(!collide())
                     {
                         this->moveBy(1,0);
                     }
-                    else
+                    else //inversion du sens de la ronde
                     {
                         sens = !sens;
                         iDestPoint = nextPoint();
@@ -408,8 +396,8 @@ void Ennemi::advance(int step)
                 }
             }
 
-            viewBlocActif();
-            pinguinDetection();
+            viewBlocActif(); //désactive les blocs obstrués par un mur
+            pinguinDetection(); //test la détection du pingouin
 
         }
         time ++;
@@ -453,54 +441,54 @@ QRectF Ennemi::boundingRect() const
 void Ennemi::setOrientation_top()
 {
     orientation = 't';
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        setPosViewBloc(vb.bloc, QPoint(vb.ligne, -vb.colonne));
+        setPosViewBloc(vb, QPoint(vb->getLine(), -vb->getColonne()));
     }
     update();
 }
 void Ennemi::setOrientation_bottom()
 {
     orientation = 'b';
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        setPosViewBloc(vb.bloc, QPoint(-vb.ligne, vb.colonne));
+        setPosViewBloc(vb, QPoint(-vb->getLine(), vb->getColonne()));
     }
     update();
 }
 void Ennemi::setOrientation_left()
 {
     orientation = 'l';
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        setPosViewBloc(vb.bloc, QPoint(-vb.colonne, -vb.ligne));
+        setPosViewBloc(vb, QPoint(-vb->getColonne(), -vb->getLine()));
     }
     update();
 }
 void Ennemi::setOrientation_right()
 {
     orientation = 'r';
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        setPosViewBloc(vb.bloc, QPoint(vb.colonne, vb.ligne));
+        setPosViewBloc(vb, QPoint(vb->getColonne(), vb->getLine()));
     }
     update();
 }
 
 //Défini la position d'un bloc "viewBloc" en fonction de sa ligne et sa colonne
-void Ennemi::setPosViewBloc(QGraphicsRectItem* bloc, QPoint p)
+void Ennemi::setPosViewBloc(S_ViewBlocEnnemi* bloc, QPoint p)
 {
     int gs = Gameboard::getGameSquares();
     QPoint posEnnemi = convertPosPoint(this->pos());
 
-    bloc->setPos(posEnnemi.x()*gs + p.x()*gs+1, posEnnemi.y()*gs + p.y()*gs+1);
+    bloc->setPosPixel(posEnnemi.x()*gs + p.x()*gs+1, posEnnemi.y()*gs + p.y()*gs+1);
 }
 
 void Ennemi::setPos(int x, int y)
 {
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        setPosViewBloc(vb.bloc, QPoint(vb.ligne, vb.colonne));
+        setPosViewBloc(vb, QPoint(vb->getLine(), vb->getColonne()));
     }
 
     QGraphicsItem::setPos(x*Gameboard::getGameSquares()+1, y*Gameboard::getGameSquares()+1);
@@ -508,9 +496,10 @@ void Ennemi::setPos(int x, int y)
 void Ennemi::moveBy(int x, int y)
 {
     int gameSquare = Gameboard::getGameSquares();
-    foreach (ViewBloc vb, champVue)
+
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        vb.bloc->moveBy(x*gameSquare,y*gameSquare);
+        vb->moveBy(x*gameSquare,y*gameSquare);
     }
 
     QGraphicsItem::moveBy(x*gameSquare,y*gameSquare);
@@ -520,8 +509,8 @@ void Ennemi::addToScene(QGraphicsScene* scene)
 {
     scene->addItem(this);
 
-    foreach (ViewBloc vb, champVue)
+    foreach (S_ViewBlocEnnemi* vb, champVue)
     {
-        scene->addItem(vb.bloc);
+        scene->addItem(vb);
     }
 }
