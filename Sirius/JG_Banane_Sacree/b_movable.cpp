@@ -31,12 +31,20 @@
 #include <typeinfo.h>
 #endif
 
+/**
+ * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
+ * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
+ */
 B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent)
 {
    setDesign(xpos, ypos);
    setZValue(1);
 }
 
+/**
+ * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
+ * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
+ */
 B_Movable::B_Movable(QGraphicsItem *parent) : Surface(0, 0, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
@@ -48,6 +56,12 @@ void B_Movable::setPos(int x, int y)
     QGraphicsRectItem::setPos(x*Gameboard::getGameSquares()+1, y*Gameboard::getGameSquares()+1);
 }
 
+/**
+ * @details Creates a brush for self.
+ * Build the cross of boxes around self with QGraphicsRectItem of getGameSquares-2.
+ * Set the position of the boxes around self (left, right, bottom, top).
+ * Turn of the visilibility of the boxes around self.
+ */
 void B_Movable::setDesign(int xpos, int ypos)
 {
     QBrush brush;
@@ -70,6 +84,9 @@ void B_Movable::setDesign(int xpos, int ypos)
     topCollideBox->setPen(Qt::NoPen);
 }
 
+/**
+ * @details Move self and the cross for colliding detectection.
+ */
 void B_Movable::moveBy(int x, int y)
 {
     int gameSquare = Gameboard::getGameSquares();
@@ -81,6 +98,9 @@ void B_Movable::moveBy(int x, int y)
     topCollideBox->moveBy(x*gameSquare,y*gameSquare);
 }
 
+/**
+ * @details Add self and the cross for colliding detectection.
+ */
 void B_Movable::addToScene(QGraphicsScene* Scene)
 {
     Scene->addItem(this);
@@ -90,6 +110,9 @@ void B_Movable::addToScene(QGraphicsScene* Scene)
     Scene->addItem(rightCollideBox);
 }
 
+/**
+ * @details Remove self and the cross for colliding detectection.
+ */
 void B_Movable::removeFromScene(QGraphicsScene* Scene)
 {
     Scene->removeItem(this);
@@ -99,6 +122,9 @@ void B_Movable::removeFromScene(QGraphicsScene* Scene)
     Scene->removeItem(rightCollideBox);
 }
 
+/**
+ * @details Check if the cross of detection collides with B_Wall, B_Movable, E_Renard, E_Loup.
+ */
 bool B_Movable::IsMovable(QList<QGraphicsItem *> l)
 {
     for(int i=0; i<l.length(); i++)
@@ -114,6 +140,9 @@ bool B_Movable::IsMovable(QList<QGraphicsItem *> l)
     return true;
 }
 
+/**
+ * @details Check if the cross of detection collides with S_Ice.
+ */
 bool B_Movable::isSlide()
 {
     QList<QGraphicsItem *> CollidingItems = this->CollidesCenter();
@@ -131,12 +160,15 @@ bool B_Movable::isSlide()
 bool B_Movable::IsMovableToLeft(){
     return IsMovable(leftCollideBox->collidingItems());
 }
+
 bool B_Movable::IsMovableToRight(){
     return IsMovable(rightCollideBox->collidingItems());
 }
+
 bool B_Movable::IsMovableToBottom(){
     return IsMovable(bottomCollideBox->collidingItems());
 }
+
 bool B_Movable::IsMovableToTop(){
     return IsMovable(topCollideBox->collidingItems());
 }
@@ -145,6 +177,10 @@ QList<QGraphicsItem *> B_Movable::CollidesCenter(){
      return collidingItems();
 }
 
+/**
+ * @details Check the direction as parameter ("b":bottom,"l":left,"r":right,"t":top).
+ * Return NULL if no colliding item is found.
+ */
 QGraphicsRectItem* B_Movable::getCollideBlocPosition(char sens)
 {
     QGraphicsRectItem* collide = new QGraphicsRectItem();
