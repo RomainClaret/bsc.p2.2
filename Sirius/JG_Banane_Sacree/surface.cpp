@@ -35,6 +35,10 @@ void Surface::setPos(int x, int y)
 {
     QGraphicsRectItem::setPos(x*Gameboard::getGameSquares(), y*Gameboard::getGameSquares());
 }
+void Surface::setPosPixel(int x, int y)
+{
+    QGraphicsRectItem::setPos(x, y);
+}
 QPoint Surface::getPos()
 {
     return QPoint(this->pos().x()/Gameboard::getGameSquares(), this->pos().y()/Gameboard::getGameSquares());

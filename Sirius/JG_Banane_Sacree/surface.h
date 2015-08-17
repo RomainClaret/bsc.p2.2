@@ -24,6 +24,7 @@ public:
     Surface(int xpos, int ypos, int width, int height, QGraphicsItem *parent = 0);
     ~Surface();
     void setPos(int, int);
+    void setPosPixel(int, int);
     QPoint getPos();
     void setColor(QString brushColor);
 };

@@ -51,7 +51,8 @@ player.cpp \
     e_loup.cpp \
     s_dialog.cpp \
     w_dialog.cpp \
-    w_life.cpp
+    w_life.cpp \
+    s_viewblocennemi.cpp
 
 HEADERS  += \
     player.h \
@@ -76,7 +77,8 @@ HEADERS  += \
     e_loup.h \
     s_dialog.h \
     w_dialog.h \
-    w_life.h
+    w_life.h \
+    s_viewblocennemi.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
