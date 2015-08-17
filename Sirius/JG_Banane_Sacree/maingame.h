@@ -22,10 +22,23 @@
 class QGraphicsView;
 class QLabel;
 
+
 /**
- * \brief QWidget principal gerant le programme du jeu dans le fond.
+ * @mainpage  James Gouin et la Banane Sacrée
  *
- * Ce QWidget gère le jeu dans son fond. Il affiche le menu
+ * Jeu d’infiltration en 2D sans combats sous forme de puzzle game.
+ * Le joueur manipule un pingouin agent-secret envoyé sur un iceberg pour récupérer la « banane sacrée » volée par un singe.
+ * Son personnage peut marcher et glisser dans les quatre directions.
+ * Il fera face à un niveau de tutoriel, 6 niveaux normaux et un niveau final.
+ * Il a pour objectif de récupérer des blocs de glace auprès du boss normal de chaque niveau afin de se créer un passage jusqu’à l’iceberg central abritant l’igloo du singe.
+ * Pour cela, le joueur devra résoudre des problèmes logiques en se frayant un chemin tout en évitant d’entrer dans le champs de vision des ennemis.
+ *            <p/> <br/>
+ */
+
+/**
+ * @brief QWidget principal gerant le programme du jeu dans le fond.
+ *
+ * @details Ce QWidget gère le jeu dans son fond. Il affiche le menu
  * principal du jeu pour commencer. Il premet d'effectuer la transition
  * entre le menu principal et le Gameboard. Il offre la structure
  * graphique de base du jeu au niveau software et disposition dans
