@@ -31,7 +31,7 @@ MainGame::MainGame(QWidget *parent) : QWidget(parent)
     toggleGameCreated = false;
     toggleFirstStart = true;
 
-    currentLevel = new Level2(-1, NULL);
+    currentLevel = new Level(-1, NULL);
 
     // Les Variables par default du jeu
     windowTitle = tr("James Gouin et la Banane Sacrée");
