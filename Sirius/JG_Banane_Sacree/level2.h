@@ -27,8 +27,6 @@ class QStringList;
 #include <QDomElement>
 #include <QDomDocument>
 
-//#include "gameboard.h"
-
 class Level2
 {
 public:

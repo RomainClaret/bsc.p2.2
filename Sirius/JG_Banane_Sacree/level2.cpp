@@ -18,6 +18,8 @@
 #include <QTextStream>
 #include <QGraphicsScene>
 
+#include "surface.h"
+#include "surfacefactory.h"
 #include "b_wall.h"
 #include "b_water.h"
 #include "b_movable.h"
@@ -142,70 +144,16 @@ void Level2::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
 {
     QString tagName = elem.tagName();
     if(tagName == "BLOC")
-    {
-        QString type = elem.attribute("type");
-        if(type == "WALL")
-        {
-            B_Wall *item = new B_Wall();
-            item->setPos(x,y);
-            scene->addItem(item);
-        }
-        else if(type == "MOVABLE")
-        {
-            B_Movable *item = new B_Movable(x,y);
-            item->addToScene(scene);
-        }
-        else if(type == "WATER")
-        {
-            B_Water *item = new B_Water();
-            item->setPos(x,y);
-            scene->addItem(item);
-        }
-        else if(type == "SNOW")
-        {
-            S_Snow *item = new S_Snow();
-            item->setPos(x,y);
-            scene->addItem(item);
-        }
-        else if(type == "ICE")
-        {
-            S_Ice *item = new S_Ice();
-            item->setPos(x,y);
-            scene->addItem(item);
-        }
+    {       
+        SurfaceFactory::createSurface(elem.attribute("type"),x,y,scene);
     }
     else if(tagName == "ITEM")
     {
-        QString type = elem.attribute("type");
-        if(type == "ITEM") //NEED TO CHANGE LATER ON
-        {
-            Object *item = new Object(QString("Poisson"));
-            item->setPos(x, y);
-            scene->addItem(item);
-        }
-        if (type == "BONUS")
-        {
-            Object *item = new Object("Oeuf");
-            item->setPos(x, y);
-            scene->addItem(item);
-        }
-        if (type == "SHOES")
-        {
-            Object *item = new Object("Chaussure");
-            item->setPos(x, y);
-            scene->addItem(item);
-        }
+        scene->addItem(new Object(elem.attribute("type"),x,y));
     }
     else if(tagName == "DOOR")
     {
-        S_ViewTransition *item = new S_ViewTransition();
-        item->setPos(x,y);
-        item->setLevelEnd(false);
-
-        item->setNeededItem(elem.attribute("item"));
-        item->setNbItem(0);
-
-        scene->addItem(item);
+        SurfaceFactory::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene);
     }
     else if(tagName == "END")
     {
@@ -215,7 +163,7 @@ void Level2::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
         item->setNextLevel(elem.attribute("nextLevel").toInt());
         scene->addItem(item);
     }
-    else if(tagName == "ENNEMI")
+    else if(tagName == "ENEMY")
     {
         QString ennemiType = elem.attribute("type");
         QList<QPoint> move;
@@ -223,13 +171,12 @@ void Level2::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
         {
            move.append(QPoint(moveElement.attribute("x").toInt(),moveElement.attribute("y").toInt()));
         }
-
-        if(ennemiType == "RENARD")
+        if(ennemiType == "FOX")
         {
             E_Renard *item2 = new E_Renard(move, game);
             item2->addToScene(scene);
         }
-        else if(ennemiType == "LOUP")
+        else if(ennemiType == "WOLF")
         {
             E_Loup *item2 = new E_Loup(move, game);
             item2->addToScene(scene);

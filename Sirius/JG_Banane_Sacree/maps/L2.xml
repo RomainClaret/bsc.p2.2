@@ -189,6 +189,7 @@
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="SNOW"/>
+	<DOOR />
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">
@@ -372,7 +373,7 @@
     <BLOC type="WALL"/>
    </LIGNE>
    <LIGNE position="21">
-    <BLOC type="MOVABLE"/>
+    <DOOR />
     <BLOC type="SNOW"/>
    </LIGNE>
   </COLONNE>
@@ -1794,6 +1795,7 @@
    </LIGNE>
    <LIGNE position="25">
     <BLOC type="ICE"/>
+	<BLOC type="MOVABLE"/>
    </LIGNE>
    <LIGNE position="26">
     <BLOC type="ICE"/>
@@ -2618,6 +2620,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
+    <DOOR />
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">

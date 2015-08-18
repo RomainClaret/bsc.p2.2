@@ -36,8 +36,9 @@ class QBrush;
 class Object : public Surface
 {
 public:
-    Object(int xpos, int ypos, QGraphicsItem *parent);
-    Object(QString new_nom, QGraphicsItem *parent = 0);
+    Object(int xpos, int ypos, QGraphicsItem *parent = 0);
+    Object(QString name, QGraphicsItem *parent = 0);
+    Object(QString name, int xpos, int ypos, QGraphicsItem *parent = 0);
 
     void setDesign();
     QString getName();

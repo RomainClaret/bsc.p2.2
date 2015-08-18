@@ -339,12 +339,12 @@ int main(int argc, char *argv[])
                             QString type;
                             switch(values.at(matX).toInt())
                             {
-                            case 1: type = "RENARD";
-                            case 2: type = "LOUP";
+                            case 1: type = "FOX";
+                            case 2: type = "WOLF";
                             default:break;
                             }
 
-                            element = findElement(doc, ligne,"ENNEMI","type",type);
+                            element = findElement(doc, ligne,"ENEMY","type",type);
 
                             for (int i = 0; i < ennemi.at(k).size(); ++i) {
                                 QDomElement deplacement = doc.createElement("MOVE");
@@ -416,6 +416,10 @@ int main(int argc, char *argv[])
                             {
                                 element = findElement(doc, ligne,"DOOR","item","Poisson");
                                 element.setAttribute("nbItem",values.at(matX).toInt()%20);
+                            }
+                            else
+                            {
+                                element = findElement(doc, ligne,"DOOR","","");
                             }
 
                             ligne.appendChild(element);

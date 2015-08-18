@@ -53,7 +53,8 @@ player.cpp \
     w_dialog.cpp \
     w_life.cpp \
     s_viewblocennemi.cpp \
-    level2.cpp
+    level2.cpp \
+    surfacefactory.cpp
 
 HEADERS  += \
     player.h \
@@ -80,7 +81,8 @@ HEADERS  += \
     w_dialog.h \
     w_life.h \
     s_viewblocennemi.h \
-    level2.h
+    level2.h \
+    surfacefactory.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \

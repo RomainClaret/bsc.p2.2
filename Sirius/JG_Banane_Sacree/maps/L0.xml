@@ -740,7 +740,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="14">
-    <DOOR nbItem="5" item="Poisson"/>
+    <DOOR nbItem="5" item="FISH"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2245,7 +2245,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="4">
-    <ITEM type="ITEM"/>
+    <ITEM type="FISH"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="5">
@@ -2537,7 +2537,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <ITEM type="BONUS"/>
+    <ITEM type="EGG"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="16">
@@ -3349,7 +3349,7 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <ITEM type="BONUS"/>
+    <ITEM type="EGG"/>
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="3">
@@ -3670,7 +3670,7 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="22">
-    <ITEM type="ITEM"/>
+    <ITEM type="FISH"/>
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="23">
@@ -4288,7 +4288,7 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="8">
-    <ITEM type="ITEM"/>
+    <ITEM type="FISH"/>
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="9">
@@ -4621,7 +4621,7 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="SNOW"/>
-    <ENNEMI type="LOUP">
+    <ENEMY type="WOLF">
      <MOVE x="8" y="9" i="1"/>
      <MOVE x="5" y="9" i="2"/>
      <MOVE x="5" y="12" i="3"/>
@@ -4630,7 +4630,7 @@
      <MOVE x="11" y="9" i="6"/>
      <MOVE x="11" y="12" i="7"/>
      <MOVE x="8" y="12" i="8"/>
-    </ENNEMI>
+    </ENEMY>
    </LIGNE>
   </COLONNE>
   <COLONNE position="8">
@@ -4722,16 +4722,16 @@
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
-    <ENNEMI type="LOUP">
+    <ENEMY type="FOX">
      <MOVE x="8" y="1" i="1"/>
      <MOVE x="8" y="7" i="2"/>
-    </ENNEMI>
+    </ENEMY>
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="SNOW"/>
-    <ENNEMI type="LOUP">
+    <ENEMY type="FOX">
      <MOVE x="15" y="6" i="1"/>
-    </ENNEMI>
+    </ENEMY>
    </LIGNE>
   </COLONNE>
   <COLONNE position="4">
@@ -4821,7 +4821,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
-    <ITEM type="ITEM"/>
+    <ITEM type="FISH"/>
     <BLOC type="SNOW"/>
     <DIALOG position="10" text="Bravo! Retourne voir la loutre pour lui donner tes poissons!"/>
    </LIGNE>
@@ -4912,12 +4912,12 @@
     <BLOC type="WATER"/>
    </LIGNE>
    <LIGNE position="22">
-    <DOOR nbItem="2" item="Poisson"/>
+    <DOOR />
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG position="9" text="Les sous-fifres de Docteur Douceur sont d�sormais en place! R�cup�re le dernier poisson sans te faire rep�rer par les ennemis. Aide-toi des blocs pour arriver � d�jouer leur champ de vision. Indice: Rouge = Danger, Vert = S�curit�"/>
+    <DIALOG position="9" text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire rep�rer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">
@@ -5011,12 +5011,12 @@
     <BLOC type="WALL"/>
    </LIGNE>
    <LIGNE position="22">
-    <DOOR nbItem="1" item="Poisson"/>
+    <DOOR nbItem="1" item="FISH"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG position="8" text="James Gouin a peur de mouiller son noeud papillon et ne peut pas nager ! Essaye de te frayer un chemin gr�ce aux blocs !"/>
+    <DIALOG position="8" text="James Gouin a peur de mouiller son noeud papillon et ne peut pas nager ! Essaye de te frayer un chemin grâce aux blocs !"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="54">
@@ -5072,7 +5072,7 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="15">
-    <DOOR nbItem="1" item="Poisson"/>
+    <DOOR nbItem="1" item="FISH"/>
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="16">
@@ -5110,7 +5110,7 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="SNOW"/>
-    <DIALOG position="7" text="Il fallait s'y attendre, les bottes fournies par l'organisation ne valent pas deux sous. Tu n'as d�sormais plus de bottes. Attention, tu dois donc g�rer tes glissades !"/>
+    <DIALOG position="7" text="Il fallait s'y attendre, les bottes fournies par l'organisation ne valent pas deux sous. Tu n'as désormais plus de bottes. Attention, tu dois donc gérer tes glissades !"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="22">
@@ -5202,9 +5202,9 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="17">
-    <ITEM type="BONUS"/>
+    <ITEM type="EGG"/>
     <BLOC type="SNOW"/>
-    <DIALOG position="4" text="Ca y'est, tu as ta premi�re vie ! Bravo ! Prends-en bien soin car tu perdras une vie � chaque fois que tu recommences un niveau � un checkpoint! Si tu perds toutes tes vies, tu recommences au tout d�but du niveau. Tu peux voir la quantit� de vies qui te reste en haut � gauche."/>
+    <DIALOG position="4" text="Ca y'est, tu as ta première vie ! Bravo ! Prends-en bien soin car tu perdras une vie à chaque fois que tu recommences un niveau à un checkpoint! Si tu perds toutes tes vies, tu recommences au tout début du niveau. Tu peux voir la quantité de vies qui te reste en haut à gauche."/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="18">
@@ -5298,7 +5298,7 @@
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG position="2" text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une �nigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te co�tera une vie � chaque fois!"/>
+    <DIALOG position="2" text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une énigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te coûtera une vie à chaque fois!"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="20">
@@ -5387,12 +5387,12 @@
     <BLOC type="WATER"/>
    </LIGNE>
    <LIGNE position="5">
-    <DOOR nbItem="4" item="Poisson"/>
+    <DOOR nbItem="4" item="FISH"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG position="3" text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? D�place des blocs pour acc�der � ton premier poisson! Mais avant toute chose, ce voyage jusqu'� l'iceberg t'a �puis� !  Tu peux aller r�cup�rer un petit peu de vie gr�ce � l'oeuf ici en haut!"/>
+    <DIALOG position="3" text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? Déplace des blocs pour accéder à ton premier poisson! Mais avant toute chose, ce voyage jusqu'à l'iceberg t'a épuisé !  Tu peux aller récupérer un petit peu de vie grâce à l'oeuf ici en haut!"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="40">
@@ -5481,13 +5481,13 @@
     <BLOC type="WALL"/>
    </LIGNE>
    <LIGNE position="5">
-    <DOOR nbItem="3" item="Poisson"/>
+    <DOOR nbItem="3" item="FISH"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
     <ITEM type="SHOES"/>
-    <DIALOG position="6" text="Ouah! De la glace! Afin de t'aider, l'organisation te mets � disposition des super bottes d'espion qui t'emp�chent de glisser. Mais attention, les blocs glissent jusqu'� rencontrer un mur ou un autre bloc!"/>
+    <DIALOG position="6" text="Ouah! De la glace! Afin de t'aider, l'organisation te mets à disposition des super bottes d'espion qui t'empêchent de glisser. Mais attention, les blocs glissent jusqu'à rencontrer un mur ou un autre bloc!"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="28">
@@ -5581,7 +5581,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="25">
-    <ITEM type="ITEM"/>
+    <ITEM type="FISH"/>
     <BLOC type="SNOW"/>
     <DIALOG position="5" text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas � droite se trouve ta sacoche, elle te pr�sentera la liste des objets que tu poss�des. "/>
    </LIGNE>
