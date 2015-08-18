@@ -359,7 +359,7 @@ void Gameboard::fixeMovable(B_Movable *b)
             S_ViewBlocEnnemi *vb;
             vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
             vb->blocOn();
-            qDebug() << "---- un bloc obstrue la vue";
+            //qDebug() << "---- un bloc obstrue la vue";
         }
 
     }
@@ -1071,4 +1071,19 @@ void Gameboard::removeAllItems()
         iter++;
     }
     mainScene->clear();
+}
+
+/**
+ * @details return the size X
+ */
+int Gameboard::getSizeX()
+{
+    return sizeX;
+}
+/**
+ * @details return the size Y
+ */
+int Gameboard::getSizeY()
+{
+    return sizeY;
 }

@@ -54,8 +54,11 @@ player.cpp \
     w_life.cpp \
     s_viewblocennemi.cpp \
     level2.cpp \
-    surfacefactory.cpp
-
+ 	observablesennemis.cpp \
+    stateennemi_patrol.cpp \
+    stateennemi_sleep.cpp \
+    stateenemy_pause.cpp \
+surfacefactory.cpp
 HEADERS  += \
     player.h \
     surface.h \
@@ -82,8 +85,12 @@ HEADERS  += \
     w_life.h \
     s_viewblocennemi.h \
     level2.h \
-    surfacefactory.h
-RESOURCES += \
+	observablesennemis.h \
+    stateennemi.h \
+    stateennemi_patrol.h \
+    stateennemi_sleep.h \
+    stateenemy_pause.h \
+    surfacefactory.hRESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc
