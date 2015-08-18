@@ -78,16 +78,20 @@ public:
     void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
 
 private:
+    // Level Playing Informations
     int levelNumber;
     QPoint* startingPoint;
     QPoint* viewStart;
     QPoint* unlockEnd;
 
+    // Game
     Gameboard *game;
 
+    // Level Size
     int maxBlocksHeight;
     int maxBlocksWidth;
 
+    // XML Informations Files
     QString fileName;
     QDomDocument* doc;
 };
