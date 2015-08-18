@@ -26,11 +26,11 @@
  * @version 1.0
  * @date 27 January 2015
  */
-class WidgetLife : public QWidget
+class W_Life : public QWidget
 {
     Q_OBJECT
 public:
-    WidgetLife(QWidget *parent = 0);
+    W_Life(QWidget *parent = 0);
     void paintEvent(QPaintEvent *);
     void updateHearts(int value);
 

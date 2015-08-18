@@ -14,7 +14,7 @@
 #ifndef S_DIALOG_H
 #define S_DIALOG_H
 
-#include "surface.h"
+#include "g_surface.h"
 
 class QGraphicsItem;
 
@@ -29,7 +29,7 @@ class QGraphicsItem;
  * @version 1.0
  * @date 27 January 2015
  */
-class S_Dialog : public Surface
+class S_Dialog : public G_Surface
 {
 public:
     S_Dialog(int xpos, int ypos, QGraphicsItem *parent = 0);

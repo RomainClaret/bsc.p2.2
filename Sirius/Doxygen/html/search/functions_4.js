@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['gameboard',['Gameboard',['../class_gameboard.html#a82157069ecfab2d2245b7d5df563aaae',1,'Gameboard::Gameboard(QWidget *parent=0)'],['../class_gameboard.html#a82157069ecfab2d2245b7d5df563aaae',1,'Gameboard::Gameboard(QWidget *parent=0)']]],
-  ['getcollideblocposition',['getCollideBlocPosition',['../class_b___movable.html#a4cb26e3d494505eaaa6773c0a448c479',1,'B_Movable::getCollideBlocPosition(char sens)'],['../class_b___movable.html#aef4ab507bbb425d12f9c585ba8aae2db',1,'B_Movable::getCollideBlocPosition(char sens)']]],
-  ['getenemypos',['getEnemyPos',['../class_ennemi.html#a14529c0dc2ad2edf3b5d174221ffa6ff',1,'Ennemi::getEnemyPos()'],['../class_ennemi.html#a14529c0dc2ad2edf3b5d174221ffa6ff',1,'Ennemi::getEnemyPos()']]],
-  ['getlevelnumber',['getLevelNumber',['../class_level2.html#afc7097e892ccfb17fcc8846c9fda4910',1,'Level2::getLevelNumber()'],['../class_level2.html#afc7097e892ccfb17fcc8846c9fda4910',1,'Level2::getLevelNumber()']]],
-  ['getsizex',['getSizeX',['../class_gameboard.html#ab64b2e36f45a6d19b85df77bec6511e3',1,'Gameboard::getSizeX()'],['../class_gameboard.html#a7608e79bfe05ad0742fbf81277045029',1,'Gameboard::getSizeX()']]],
-  ['getsizey',['getSizeY',['../class_gameboard.html#a4c24be994533597a965ada18a4b70a35',1,'Gameboard::getSizeY()'],['../class_gameboard.html#ae35c2c74c7ff6d54a568212e217b42c7',1,'Gameboard::getSizeY()']]],
-  ['getstartingpoint',['getStartingPoint',['../class_level2.html#aa2117b86b6ba46bc91fa6bdbb0cfb058',1,'Level2::getStartingPoint()'],['../class_level2.html#a57e80746dcfba5f73ed1b4f84d5b1a76',1,'Level2::getStartingPoint()']]],
-  ['getunlockendpoint',['getUnlockEndPoint',['../class_level2.html#a7e8c1628b703886e61a00f755dc2038b',1,'Level2::getUnlockEndPoint()'],['../class_level2.html#a7e8c1628b703886e61a00f755dc2038b',1,'Level2::getUnlockEndPoint()']]],
-  ['getviewstart',['getViewStart',['../class_level2.html#ae00d67c53b25def82750bad0e296d1ef',1,'Level2::getViewStart()'],['../class_level2.html#ae00d67c53b25def82750bad0e296d1ef',1,'Level2::getViewStart()']]]
+  ['g_5fgameboard',['G_Gameboard',['../class_g___gameboard.html#ae6ae7653d9dfe58687423ea159198b03',1,'G_Gameboard']]],
+  ['g_5flevel',['G_Level',['../class_g___level.html#a38ac069cc3b5490988f71aad58442581',1,'G_Level']]],
+  ['g_5fnpc',['G_NPC',['../class_g___n_p_c.html#a909491fd7337f820dc5070f32c819e81',1,'G_NPC']]],
+  ['getcollideblocposition',['getCollideBlocPosition',['../class_b___movable.html#a4cb26e3d494505eaaa6773c0a448c479',1,'B_Movable']]],
+  ['getlevelnumber',['getLevelNumber',['../class_g___level.html#a4e25af74391b572f9a66865007078777',1,'G_Level']]],
+  ['getnpcpos',['getNPCPos',['../class_g___n_p_c.html#af22fec22cbb253daebe6b4dcd1beff68',1,'G_NPC']]],
+  ['getsizex',['getSizeX',['../class_g___gameboard.html#a07ce76215f7d0d6cd0ae9a429cd7aab5',1,'G_Gameboard']]],
+  ['getsizey',['getSizeY',['../class_g___gameboard.html#af3d38cd9763eb3c9aedf66bf7f2349c3',1,'G_Gameboard']]],
+  ['getstartingpoint',['getStartingPoint',['../class_g___level.html#ae90beef96e5793703baf53667286ad56',1,'G_Level']]],
+  ['getunlockendpoint',['getUnlockEndPoint',['../class_g___level.html#a78fe48953fdd7e137c8282d4bc48f5f2',1,'G_Level']]],
+  ['getviewstart',['getViewStart',['../class_g___level.html#a66909b5d2a0a5d0667a493dac8114572',1,'G_Level']]]
 ];

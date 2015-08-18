@@ -1,8 +1,19 @@
 var searchData=
 [
-  ['ismovabletobottom',['IsMovableToBottom',['../class_b___movable.html#a190fdc076141ae6698334bfe4dfd61a3',1,'B_Movable::IsMovableToBottom()'],['../class_b___movable.html#a190fdc076141ae6698334bfe4dfd61a3',1,'B_Movable::IsMovableToBottom()']]],
-  ['ismovabletoleft',['IsMovableToLeft',['../class_b___movable.html#a96a0a18c27314600a19d467b6f7820a3',1,'B_Movable::IsMovableToLeft()'],['../class_b___movable.html#a96a0a18c27314600a19d467b6f7820a3',1,'B_Movable::IsMovableToLeft()']]],
-  ['ismovabletoright',['IsMovableToRight',['../class_b___movable.html#a134b648413c6d27c008f8a0655ffa0f9',1,'B_Movable::IsMovableToRight()'],['../class_b___movable.html#a134b648413c6d27c008f8a0655ffa0f9',1,'B_Movable::IsMovableToRight()']]],
-  ['ismovabletotop',['IsMovableToTop',['../class_b___movable.html#a68bb6a98d031f9495cdeb80b9aa325c4',1,'B_Movable::IsMovableToTop()'],['../class_b___movable.html#a68bb6a98d031f9495cdeb80b9aa325c4',1,'B_Movable::IsMovableToTop()']]],
-  ['isslide',['isSlide',['../class_b___movable.html#a44d1413ec8bceda3b1a50c673b429d03',1,'B_Movable::isSlide()'],['../class_b___movable.html#a44d1413ec8bceda3b1a50c673b429d03',1,'B_Movable::isSlide()']]]
+  ['g_5fgameboard',['G_Gameboard',['../class_g___gameboard.html',1,'G_Gameboard'],['../class_g___gameboard.html#ae6ae7653d9dfe58687423ea159198b03',1,'G_Gameboard::G_Gameboard()']]],
+  ['g_5flevel',['G_Level',['../class_g___level.html',1,'G_Level'],['../class_g___level.html#a38ac069cc3b5490988f71aad58442581',1,'G_Level::G_Level()']]],
+  ['g_5fmaingame',['G_MainGame',['../class_g___main_game.html',1,'']]],
+  ['g_5fnpc',['G_NPC',['../class_g___n_p_c.html',1,'G_NPC'],['../class_g___n_p_c.html#a909491fd7337f820dc5070f32c819e81',1,'G_NPC::G_NPC()']]],
+  ['g_5fobject',['G_Object',['../class_g___object.html',1,'']]],
+  ['g_5fplayer',['G_Player',['../class_g___player.html',1,'']]],
+  ['g_5fprofil',['G_Profil',['../class_g___profil.html',1,'']]],
+  ['g_5fsurface',['G_Surface',['../class_g___surface.html',1,'']]],
+  ['getcollideblocposition',['getCollideBlocPosition',['../class_b___movable.html#a4cb26e3d494505eaaa6773c0a448c479',1,'B_Movable']]],
+  ['getlevelnumber',['getLevelNumber',['../class_g___level.html#a4e25af74391b572f9a66865007078777',1,'G_Level']]],
+  ['getnpcpos',['getNPCPos',['../class_g___n_p_c.html#af22fec22cbb253daebe6b4dcd1beff68',1,'G_NPC']]],
+  ['getsizex',['getSizeX',['../class_g___gameboard.html#a07ce76215f7d0d6cd0ae9a429cd7aab5',1,'G_Gameboard']]],
+  ['getsizey',['getSizeY',['../class_g___gameboard.html#af3d38cd9763eb3c9aedf66bf7f2349c3',1,'G_Gameboard']]],
+  ['getstartingpoint',['getStartingPoint',['../class_g___level.html#ae90beef96e5793703baf53667286ad56',1,'G_Level']]],
+  ['getunlockendpoint',['getUnlockEndPoint',['../class_g___level.html#a78fe48953fdd7e137c8282d4bc48f5f2',1,'G_Level']]],
+  ['getviewstart',['getViewStart',['../class_g___level.html#a66909b5d2a0a5d0667a493dac8114572',1,'G_Level']]]
 ];

@@ -15,11 +15,11 @@
 
 #include <QBrush>
 
-S_Dialog::S_Dialog(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
+S_Dialog::S_Dialog(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     setDesign();
 }
-S_Dialog::S_Dialog(QGraphicsItem *parent) : Surface(0, 0, parent)
+S_Dialog::S_Dialog(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }

@@ -19,7 +19,7 @@
 #include <QLabel>
 #include <QStyleOption>
 
-WidgetDialog::WidgetDialog(QWidget *parent)
+W_Dialog::W_Dialog(QWidget *parent)
 {
     resize(300,200);
     this->setStyleSheet(
@@ -65,18 +65,18 @@ WidgetDialog::WidgetDialog(QWidget *parent)
     this->setLayout(layout);
 }
 
-void WidgetDialog::setText(QString text, int type)
+void W_Dialog::setText(QString text, int type)
 {
     this->type = type;
     this->text->setText(text);
 }
 
-QString WidgetDialog::getText()
+QString W_Dialog::getText()
 {
     return this->text->text();
 }
 
-void WidgetDialog::paintEvent(QPaintEvent *pe)
+void W_Dialog::paintEvent(QPaintEvent *pe)
 {
   QStyleOption o;
   o.initFrom(this);

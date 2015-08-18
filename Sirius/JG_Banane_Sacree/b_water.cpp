@@ -17,7 +17,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
-B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
+B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     setDesign();
 }
@@ -25,7 +25,7 @@ B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Water::B_Water(QGraphicsItem *parent) : Surface(0, 0, parent)
+B_Water::B_Water(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }

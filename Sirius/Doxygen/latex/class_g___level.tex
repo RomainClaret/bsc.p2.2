@@ -1,0 +1,163 @@
+\hypertarget{class_g___level}{}\section{G\+\_\+\+Level Class Reference}
+\label{class_g___level}\index{G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g___level_a38ac069cc3b5490988f71aad58442581}{G\+\_\+\+Level} (int level\+Number, \hyperlink{class_g___gameboard}{G\+\_\+\+Gameboard} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Level\textquotesingle{}s Constructor. \end{DoxyCompactList}\item 
+Q\+Graphics\+Scene $\ast$ \hyperlink{class_g___level_a3d34ee97aa649f7e72c6bb8a1fcd02a1}{populate\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Populate the Q\+Graphics\+Scene according to X\+M\+L Level File. \end{DoxyCompactList}\item 
+Q\+Point $\ast$ \hyperlink{class_g___level_ae90beef96e5793703baf53667286ad56}{get\+Starting\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get the starting position of the Penguin. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_g___level_a66909b5d2a0a5d0667a493dac8114572}{get\+View\+Start} ()
+\begin{DoxyCompactList}\small\item\em Get the starting x/y view position. \end{DoxyCompactList}\item 
+int \hyperlink{class_g___level_a4e25af74391b572f9a66865007078777}{get\+Level\+Number} ()
+\begin{DoxyCompactList}\small\item\em Get the current Level Number. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_g___level_a78fe48953fdd7e137c8282d4bc48f5f2}{get\+Unlock\+End\+Point} ()
+\begin{DoxyCompactList}\small\item\em Return the unlocking position. \end{DoxyCompactList}\item 
+void \hyperlink{class_g___level_a4f3a07d032accbb59bb7a9db39940f7f}{add\+Level\+Information} (Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Add the informations from param into the class. \end{DoxyCompactList}\item 
+void \hyperlink{class_g___level_a7f20bfd85286d75b9a4ff2ba57f5623e}{add\+Level\+Item} (Q\+Graphics\+Scene $\ast$scene, Q\+Dom\+Element elem, int x, int y)
+\begin{DoxyCompactList}\small\item\em Add the item from param into the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_g___level_a38ac069cc3b5490988f71aad58442581}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\index{G\+\_\+\+Level@{G\+\_\+\+Level}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{G\+\_\+\+Level}]{\setlength{\rightskip}{0pt plus 5cm}G\+\_\+\+Level\+::\+G\+\_\+\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level\+Number, }
+\item[{{\bf G\+\_\+\+Gameboard} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a38ac069cc3b5490988f71aad58442581}
+
+
+Level\textquotesingle{}s Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Number} & int containing the Level Number \\
+\hline
+{\em game} & Gameboard$\ast$\\
+\hline
+\end{DoxyParams}
+Create Level according to level\+Number and read the basics X\+M\+L level informations 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_g___level_a4f3a07d032accbb59bb7a9db39940f7f}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!add\+Level\+Information@{add\+Level\+Information}}
+\index{add\+Level\+Information@{add\+Level\+Information}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{add\+Level\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void G\+\_\+\+Level\+::add\+Level\+Information (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a4f3a07d032accbb59bb7a9db39940f7f}
+
+
+Add the informations from param into the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Q\+Dom\+Element containing the informations\\
+\hline
+\end{DoxyParams}
+Put informations into class\textquotesingle{}s attribute according to Q\+Dom\+Element type. \hypertarget{class_g___level_a7f20bfd85286d75b9a4ff2ba57f5623e}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!add\+Level\+Item@{add\+Level\+Item}}
+\index{add\+Level\+Item@{add\+Level\+Item}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{add\+Level\+Item}]{\setlength{\rightskip}{0pt plus 5cm}void G\+\_\+\+Level\+::add\+Level\+Item (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Dom\+Element}]{elem, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a7f20bfd85286d75b9a4ff2ba57f5623e}
+
+
+Add the item from param into the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Q\+Graphics\+Scene$\ast$ from the level \\
+\hline
+{\em elem} & Q\+Dom\+Element containing the informations \\
+\hline
+{\em x} & x\+Position \\
+\hline
+{\em y} & y\+Position\\
+\hline
+\end{DoxyParams}
+Add into the Scene an Item on (x;y) position according to Q\+Dom\+Element data \hypertarget{class_g___level_a4e25af74391b572f9a66865007078777}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!get\+Level\+Number@{get\+Level\+Number}}
+\index{get\+Level\+Number@{get\+Level\+Number}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{get\+Level\+Number}]{\setlength{\rightskip}{0pt plus 5cm}int G\+\_\+\+Level\+::get\+Level\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a4e25af74391b572f9a66865007078777}
+
+
+Get the current Level Number. 
+
+\begin{DoxyReturn}{Returns}
+int Level Number 
+\end{DoxyReturn}
+\hypertarget{class_g___level_ae90beef96e5793703baf53667286ad56}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!get\+Starting\+Point@{get\+Starting\+Point}}
+\index{get\+Starting\+Point@{get\+Starting\+Point}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{get\+Starting\+Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point $\ast$ G\+\_\+\+Level\+::get\+Starting\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g___level_ae90beef96e5793703baf53667286ad56}
+
+
+Get the starting position of the Penguin. 
+
+\begin{DoxyReturn}{Returns}
+Starting Q\+Point$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_g___level_a78fe48953fdd7e137c8282d4bc48f5f2}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!get\+Unlock\+End\+Point@{get\+Unlock\+End\+Point}}
+\index{get\+Unlock\+End\+Point@{get\+Unlock\+End\+Point}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{get\+Unlock\+End\+Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point G\+\_\+\+Level\+::get\+Unlock\+End\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a78fe48953fdd7e137c8282d4bc48f5f2}
+
+
+Return the unlocking position. 
+
+\begin{DoxyReturn}{Returns}
+Q\+Point containing the unlocking position 
+\end{DoxyReturn}
+\hypertarget{class_g___level_a66909b5d2a0a5d0667a493dac8114572}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!get\+View\+Start@{get\+View\+Start}}
+\index{get\+View\+Start@{get\+View\+Start}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{get\+View\+Start}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point G\+\_\+\+Level\+::get\+View\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a66909b5d2a0a5d0667a493dac8114572}
+
+
+Get the starting x/y view position. 
+
+\begin{DoxyReturn}{Returns}
+Starting View Q\+Point$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_g___level_a3d34ee97aa649f7e72c6bb8a1fcd02a1}{}\index{G\+\_\+\+Level@{G\+\_\+\+Level}!populate\+Scene@{populate\+Scene}}
+\index{populate\+Scene@{populate\+Scene}!G\+\_\+\+Level@{G\+\_\+\+Level}}
+\subsubsection[{populate\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Graphics\+Scene $\ast$ G\+\_\+\+Level\+::populate\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g___level_a3d34ee97aa649f7e72c6bb8a1fcd02a1}
+
+
+Populate the Q\+Graphics\+Scene according to X\+M\+L Level File. 
+
+\begin{DoxyReturn}{Returns}
+Q\+Graphics\+Scene$\ast$ containing all items
+\end{DoxyReturn}
+Populate the scene that will be returned by using add\+Level\+Item method. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+g\+\_\+level.\+h\item 
+g\+\_\+level.\+cpp\end{DoxyCompactItemize}

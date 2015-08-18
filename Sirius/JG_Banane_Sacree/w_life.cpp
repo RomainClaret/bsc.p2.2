@@ -12,8 +12,8 @@
 **********************************************************************************/
 
 #include "w_life.h"
-#include "object.h"
-#include "gameboard.h"
+#include "g_object.h"
+#include "g_gameboard.h"
 
 #include <QPainter>
 #include <QBrush>
@@ -21,14 +21,14 @@
 #include <QWidget>
 #include <QDebug>
 
-WidgetLife::WidgetLife(QWidget *parent)
+W_Life::W_Life(QWidget *parent)
 {
     totalLife = 0;
-    this->resize(Gameboard::getGameSquares(),Gameboard::getGameSquares());
+    this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     this->setAttribute(Qt::WA_TranslucentBackground);
 }
 
-void WidgetLife::paintEvent(QPaintEvent *)
+void W_Life::paintEvent(QPaintEvent *)
 {
     QPainter paint(this);
 
@@ -44,10 +44,10 @@ void WidgetLife::paintEvent(QPaintEvent *)
     font.setFamily("Century Gothic");
     font.setPointSize(11);
 
-    paint.drawPixmap(0,0,Gameboard::getGameSquares(),Gameboard::getGameSquares(),QPixmap(img));
+    paint.drawPixmap(0,0,G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares(),QPixmap(img));
     paint.setBrush(brush);
     paint.setFont(font);
-    paint.drawText(Gameboard::getGameSquares()+5, Gameboard::getGameSquares()/2+5, totalLifeString);
+    paint.drawText(G_Gameboard::getGameSquares()+5, G_Gameboard::getGameSquares()/2+5, totalLifeString);
 
 //    for(int i = 0; i<totalLife; i++)
 //    {
@@ -57,9 +57,9 @@ void WidgetLife::paintEvent(QPaintEvent *)
 //    }
 }
 
-void WidgetLife::updateHearts(int value)
+void W_Life::updateHearts(int value)
 {
     this->totalLife = value;
-    this->resize(value*Gameboard::getGameSquares(),Gameboard::getGameSquares());
+    this->resize(value*G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     update();
 }

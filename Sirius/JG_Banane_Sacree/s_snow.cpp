@@ -16,11 +16,11 @@
 #include <QBrush>
 #include <QGraphicsItem>
 
-S_Snow::S_Snow(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
+S_Snow::S_Snow(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     setDesign();
 }
-S_Snow::S_Snow(QGraphicsItem *parent) : Surface(0, 0, parent)
+S_Snow::S_Snow(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }

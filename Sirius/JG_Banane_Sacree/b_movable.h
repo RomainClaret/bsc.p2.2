@@ -13,7 +13,7 @@
 
 #ifndef B_MOVABLE_H
 #define B_MOVABLE_H
-#include "surface.h"
+#include "g_surface.h"
 #include <QList>
 
 class QGraphicsRectItem;
@@ -32,7 +32,7 @@ class QGraphicsScene;
  */
 //@bug no bugs
 //@warning no warnings
-class B_Movable : public Surface
+class B_Movable : public G_Surface
 {
 public:
     //Constructors

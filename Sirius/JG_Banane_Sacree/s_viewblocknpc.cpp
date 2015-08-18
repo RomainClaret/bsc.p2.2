@@ -1,0 +1,109 @@
+#include "s_viewblocknpc.h"
+
+#include <QGraphicsRectItem>
+#include <QGraphicsItem>
+#include <QBrush>
+#include <QPen>
+#include "g_npc.h"
+#include "g_gameboard.h"
+
+
+S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, G_NPC* proprietaire, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
+{
+    this->ligne = ligne;
+    this->colonne = colonne;
+    this->owner = proprietaire;
+    this->setZValue(2);
+
+    setStyleActivated();
+}
+
+void S_ViewBlockNPC::setActive(bool actif)
+{
+    this->actif = actif;
+
+    //Style
+    if(actif)
+    {
+        setStyleActivated();
+    }
+    else
+    {
+        setStyleDesactivated();
+    }
+}
+
+int S_ViewBlockNPC::getLine()
+{
+    return ligne;
+}
+
+int S_ViewBlockNPC::getColonne()
+{
+    return colonne;
+}
+
+bool S_ViewBlockNPC::isActive()
+{
+    return actif;
+}
+
+//le pinguoin s'est déplacé sur un bloc de détection
+void S_ViewBlockNPC::playableCharacterOn()
+{
+    if(actif)
+    {
+        setStylePlayableCharacterOn();
+        owner->playableCharacterOnViewBlock(); //relai de l'info
+    }
+}
+
+void S_ViewBlockNPC::blockOn()
+{
+    //recalcul le champs de vision de l'ennemi
+    if(actif)
+    {
+        owner->viewBlockActive();
+    }
+}
+
+void S_ViewBlockNPC::setStylePlayableCharacterOn()
+{
+    QBrush brush;
+    brush.setStyle(Qt::DiagCrossPattern);
+    brush.setColor(Qt::yellow);
+
+    QPen pen;
+    pen.setStyle(Qt::SolidLine);
+    pen.setColor(Qt::yellow);
+
+    this->setBrush(brush);
+    this->setPen(pen);
+}
+
+void S_ViewBlockNPC::setStyleDesactivated()
+{
+    QBrush brush;
+    brush.setStyle(Qt::Dense6Pattern);
+    brush.setColor(Qt::green);
+
+    QPen pen;
+    pen.setStyle(Qt::NoPen);
+
+    this->setBrush(brush);
+    this->setPen(pen);
+}
+
+void S_ViewBlockNPC::setStyleActivated()
+{
+    QBrush brush;
+    brush.setStyle(Qt::DiagCrossPattern);
+    brush.setColor(Qt::red);
+
+    QPen pen;
+    pen.setStyle(Qt::SolidLine);
+    pen.setColor(Qt::red);
+
+    this->setBrush(brush);
+    this->setPen(pen);
+}

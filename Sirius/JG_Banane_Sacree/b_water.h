@@ -13,7 +13,7 @@
 
 #ifndef B_WATER_H
 #define B_WATER_H
-#include "surface.h"
+#include "g_surface.h"
 
 class QGraphicsRectItem;
 
@@ -28,7 +28,7 @@ class QGraphicsRectItem;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class B_Water : public Surface
+class B_Water : public G_Surface
 {
 public:
     //Constructors

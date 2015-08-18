@@ -16,11 +16,11 @@
 #include <QBrush>
 #include <QGraphicsItem>
 
-S_Ice::S_Ice(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
+S_Ice::S_Ice(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     setDesign();
 }
-S_Ice::S_Ice(QGraphicsItem *parent) : Surface(0, 0, parent)
+S_Ice::S_Ice(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }

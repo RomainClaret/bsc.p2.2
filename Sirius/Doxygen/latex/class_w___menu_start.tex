@@ -1,0 +1,105 @@
+\hypertarget{class_w___menu_start}{}\section{W\+\_\+\+Menu\+Start Class Reference}
+\label{class_w___menu_start}\index{W\+\_\+\+Menu\+Start@{W\+\_\+\+Menu\+Start}}
+
+
+Main menu, which appears at the game startup.  
+
+
+
+
+{\ttfamily \#include $<$w\+\_\+menustart.\+h$>$}
+
+Inheritance diagram for W\+\_\+\+Menu\+Start\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w___menu_start}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_w___menu_start_aca05c93827e90a48e5044846e0a76f23}{}void {\bfseries load\+Game} (Q\+String value)\label{class_w___menu_start_aca05c93827e90a48e5044846e0a76f23}
+
+\item 
+\hypertarget{class_w___menu_start_a5dbc5260b96e79bdd2a55c54095f9853}{}void {\bfseries new\+Game} ()\label{class_w___menu_start_a5dbc5260b96e79bdd2a55c54095f9853}
+
+\item 
+\hypertarget{class_w___menu_start_aff79d990b8166fe640fad052d7271a30}{}void {\bfseries new\+Game\+Form} ()\label{class_w___menu_start_aff79d990b8166fe640fad052d7271a30}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_w___menu_start_a21cf2c3cc2f360daa9d46f1b5c983461}{}void {\bfseries start\+Game} (\hyperlink{class_g___profil}{G\+\_\+\+Profil} $\ast$)\label{class_w___menu_start_a21cf2c3cc2f360daa9d46f1b5c983461}
+
+\item 
+\hypertarget{class_w___menu_start_a5e5f50ca83e56da21da0df7cc6bfd8f1}{}void {\bfseries refresh\+Game\+Menu} ()\label{class_w___menu_start_a5e5f50ca83e56da21da0df7cc6bfd8f1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_w___menu_start_a7f9c60df0d2a0fba30c37b99d2b7630e}{}{\bfseries W\+\_\+\+Menu\+Start} (Q\+Widget $\ast$parent=0)\label{class_w___menu_start_a7f9c60df0d2a0fba30c37b99d2b7630e}
+
+\item 
+\hypertarget{class_w___menu_start_aa147cc302db6aa457fba0c75ab25e1b2}{}bool {\bfseries get\+Profil} ()\label{class_w___menu_start_aa147cc302db6aa457fba0c75ab25e1b2}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_w___menu_start_a87603ac8ad130f946bb152a98acc1a57}{}static void {\bfseries save\+Game} (\hyperlink{class_g___profil}{G\+\_\+\+Profil} $\ast$current\+User)\label{class_w___menu_start_a87603ac8ad130f946bb152a98acc1a57}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_w___menu_start_aa2206920f3ba0841ded6b2360131764e}{}Q\+List$<$ Q\+Push\+Button $\ast$ $>$ $\ast$ {\bfseries list\+Button\+Profil}\label{class_w___menu_start_aa2206920f3ba0841ded6b2360131764e}
+
+\item 
+\hypertarget{class_w___menu_start_a92e6b7e7860d623aa8417fa5471a106a}{}Q\+Push\+Button $\ast$ {\bfseries button\+New}\label{class_w___menu_start_a92e6b7e7860d623aa8417fa5471a106a}
+
+\item 
+\hypertarget{class_w___menu_start_a20adaa510f2b53261e6cfa3fed4e040e}{}Q\+V\+Box\+Layout $\ast$ {\bfseries layout\+Menu}\label{class_w___menu_start_a20adaa510f2b53261e6cfa3fed4e040e}
+
+\item 
+\hypertarget{class_w___menu_start_a6c752b6f0bd351a0ef46dc950655b35c}{}Q\+Line\+Edit $\ast$ {\bfseries username}\label{class_w___menu_start_a6c752b6f0bd351a0ef46dc950655b35c}
+
+\item 
+\hypertarget{class_w___menu_start_ad7033d974516740eff5db51bf0445721}{}Q\+Push\+Button $\ast$ {\bfseries validate}\label{class_w___menu_start_ad7033d974516740eff5db51bf0445721}
+
+\item 
+\hypertarget{class_w___menu_start_a7410f32bb3db08dfc0cebd6aa2f09fa8}{}Q\+Label $\ast$ {\bfseries text\+Pseudo}\label{class_w___menu_start_a7410f32bb3db08dfc0cebd6aa2f09fa8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main menu, which appears at the game startup. 
+
+It allows the user to select or create a profil and run a game. Games are saved in a json file type. Saves are found in\+: Mac\+O\+S\+X \+: \char`\"{}\+Game.\+app/\+Contents/\+Mac\+O\+S/save.\+json\char`\"{}, Windows \+: Dans le meme dossier que Game.\+exe. Save files are not encrypted. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27 January 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000013}{Todo}]encrypt save files 
+
+add credits \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+w\+\_\+menustart.\+h\item 
+w\+\_\+menustart.\+cpp\end{DoxyCompactItemize}

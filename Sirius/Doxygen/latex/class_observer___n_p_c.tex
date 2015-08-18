@@ -1,0 +1,122 @@
+\hypertarget{class_observer___n_p_c}{}\section{Observer\+\_\+\+N\+P\+C Class Reference}
+\label{class_observer___n_p_c}\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+
+
+Pattern Observer to manage the \char`\"{}\+Ennemis\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$observer\+\_\+npc.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_observer___n_p_c_a02a4df6c3974a0ebae0143077fdc43b9}{Observer\+\_\+\+N\+P\+C} ()
+\begin{DoxyCompactList}\small\item\em Observables\+N\+P\+C Constructor of Observables\+N\+P\+Cs. \end{DoxyCompactList}\item 
+\hypertarget{class_observer___n_p_c_afa171d5bb3869a7a2a83024c9ee48c44}{}\hyperlink{class_observer___n_p_c_afa171d5bb3869a7a2a83024c9ee48c44}{$\sim$\+Observer\+\_\+\+N\+P\+C} ()\label{class_observer___n_p_c_afa171d5bb3869a7a2a83024c9ee48c44}
+
+\begin{DoxyCompactList}\small\item\em Observables\+Ennemis Destuctor delete all the npcs. \end{DoxyCompactList}\item 
+void \hyperlink{class_observer___n_p_c_a5b4f8fa343886c15bcda6c44b8367a2b}{add\+N\+P\+C\+Observer} (\hyperlink{class_g___n_p_c}{G\+\_\+\+N\+P\+C} $\ast$ennemi)
+\begin{DoxyCompactList}\small\item\em add\+Ennemi\+Observer add npc as observer \end{DoxyCompactList}\item 
+void \hyperlink{class_observer___n_p_c_a587198fc5427895800f74b5c4e14dcaa}{change\+N\+P\+C\+State} (\hyperlink{class_state___n_p_c}{State\+\_\+\+N\+P\+C} $\ast$state, Q\+Point pos\+Player)
+\begin{DoxyCompactList}\small\item\em change\+N\+P\+C\+State change the state of the npcs in the L\+E\+V\+E\+L P\+H\+A\+S\+E \end{DoxyCompactList}\item 
+void \hyperlink{class_observer___n_p_c_a69e882a059bac1e47b29ee83d177b09b}{change\+N\+P\+C\+State} (\hyperlink{class_state___n_p_c}{State\+\_\+\+N\+P\+C} $\ast$state)
+\begin{DoxyCompactList}\small\item\em change\+N\+P\+C\+State change the state of A\+L\+L npcs in the level \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pattern Observer to manage the \char`\"{}\+Ennemis\char`\"{}. 
+
+\char`\"{}\+Ennemis\char`\"{} can be tune with the State Pattern \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 august 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]add management of State pattern, remplace timer by thread in \char`\"{}\+N\+P\+C\char`\"{}  D\+E\+L\+E\+T\+E and C\+R\+E\+A\+T\+E un new Observables\+N\+P\+C for the next level ! Observables\+N\+P\+Cs will delete all the npc of the level automaticaly \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_observer___n_p_c_a02a4df6c3974a0ebae0143077fdc43b9}{}\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}!Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}!Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+\subsubsection[{Observer\+\_\+\+N\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}Observer\+\_\+\+N\+P\+C\+::\+Observer\+\_\+\+N\+P\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_observer___n_p_c_a02a4df6c3974a0ebae0143077fdc43b9}
+
+
+Observables\+N\+P\+C Constructor of Observables\+N\+P\+Cs. 
+
+Desactivate the view of the ennemi at the first run and do nothing after 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_observer___n_p_c_a5b4f8fa343886c15bcda6c44b8367a2b}{}\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}!add\+N\+P\+C\+Observer@{add\+N\+P\+C\+Observer}}
+\index{add\+N\+P\+C\+Observer@{add\+N\+P\+C\+Observer}!Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+\subsubsection[{add\+N\+P\+C\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void Observer\+\_\+\+N\+P\+C\+::add\+N\+P\+C\+Observer (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+\_\+\+N\+P\+C} $\ast$}]{ennemi}
+\end{DoxyParamCaption}
+)}\label{class_observer___n_p_c_a5b4f8fa343886c15bcda6c44b8367a2b}
+
+
+add\+Ennemi\+Observer add npc as observer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ennemi} & the new observer\\
+\hline
+\end{DoxyParams}
+add\+Ennemi\+Observer add ennemi as observer \hypertarget{class_observer___n_p_c_a587198fc5427895800f74b5c4e14dcaa}{}\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}!change\+N\+P\+C\+State@{change\+N\+P\+C\+State}}
+\index{change\+N\+P\+C\+State@{change\+N\+P\+C\+State}!Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+\subsubsection[{change\+N\+P\+C\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Observer\+\_\+\+N\+P\+C\+::change\+N\+P\+C\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+\_\+\+N\+P\+C} $\ast$}]{state, }
+\item[{Q\+Point}]{pos\+Player}
+\end{DoxyParamCaption}
+)}\label{class_observer___n_p_c_a587198fc5427895800f74b5c4e14dcaa}
+
+
+change\+N\+P\+C\+State change the state of the npcs in the L\+E\+V\+E\+L P\+H\+A\+S\+E 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ennemi} & the new observer \\
+\hline
+{\em pos\+Player} & is the position of the player\\
+\hline
+\end{DoxyParams}
+change\+Ennemi\+State change the state of the ennemis in the L\+E\+V\+E\+L P\+H\+A\+S\+E \hypertarget{class_observer___n_p_c_a69e882a059bac1e47b29ee83d177b09b}{}\index{Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}!change\+N\+P\+C\+State@{change\+N\+P\+C\+State}}
+\index{change\+N\+P\+C\+State@{change\+N\+P\+C\+State}!Observer\+\_\+\+N\+P\+C@{Observer\+\_\+\+N\+P\+C}}
+\subsubsection[{change\+N\+P\+C\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Observer\+\_\+\+N\+P\+C\+::change\+N\+P\+C\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+\_\+\+N\+P\+C} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}\label{class_observer___n_p_c_a69e882a059bac1e47b29ee83d177b09b}
+
+
+change\+N\+P\+C\+State change the state of A\+L\+L npcs in the level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the new observer\\
+\hline
+\end{DoxyParams}
+change\+Ennemi\+State change the state of all ennemis in the L\+E\+V\+E\+L 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+observer\+\_\+npc.\+h\item 
+observer\+\_\+npc.\+cpp\end{DoxyCompactItemize}

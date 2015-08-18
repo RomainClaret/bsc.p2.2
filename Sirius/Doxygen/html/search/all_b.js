@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['removefromscene',['removeFromScene',['../class_b___movable.html#aa4d26e877655021ef70bc6914fe04418',1,'B_Movable::removeFromScene(QGraphicsScene *Scene)'],['../class_b___movable.html#aa4d26e877655021ef70bc6914fe04418',1,'B_Movable::removeFromScene(QGraphicsScene *Scene)']]],
-  ['restartenigma',['restartEnigma',['../class_gameboard.html#a0de799440eb9030b55bf3f59fa350683',1,'Gameboard::restartEnigma()'],['../class_gameboard.html#a0de799440eb9030b55bf3f59fa350683',1,'Gameboard::restartEnigma()']]],
-  ['restartlevel',['restartLevel',['../class_gameboard.html#a0d4ac38611d2ed24732823656ba613e0',1,'Gameboard::restartLevel()'],['../class_gameboard.html#a0d4ac38611d2ed24732823656ba613e0',1,'Gameboard::restartLevel()']]],
-  ['resumegame',['resumeGame',['../class_gameboard.html#a1447e62dd9f78bcba4bdb06c4bfb8f10',1,'Gameboard::resumeGame()'],['../class_gameboard.html#a1447e62dd9f78bcba4bdb06c4bfb8f10',1,'Gameboard::resumeGame()']]],
-  ['returnisland',['returnIsland',['../class_gameboard.html#a538d797eadaa51a15c999c14f984f76c',1,'Gameboard::returnIsland()'],['../class_gameboard.html#a538d797eadaa51a15c999c14f984f76c',1,'Gameboard::returnIsland()']]],
-  ['rightcollidebox',['rightCollideBox',['../class_b___movable.html#a197fc74b228c304f1f88e0670c1b3dcc',1,'B_Movable']]]
+  ['p_5ffox',['P_Fox',['../class_p___fox.html',1,'P_Fox'],['../class_p___fox.html#a6cab8923b0e5c4de67c1ac420965fbf5',1,'P_Fox::P_Fox()']]],
+  ['p_5fpenguin',['P_Penguin',['../class_p___penguin.html',1,'']]],
+  ['p_5fwolf',['P_Wolf',['../class_p___wolf.html',1,'P_Wolf'],['../class_p___wolf.html#a11be678cb2cabbba514d4b030a5084e4',1,'P_Wolf::P_Wolf()']]],
+  ['playablecharacteronviewblock',['playableCharacterOnViewBlock',['../class_g___n_p_c.html#a49883585ada9c0308c0d620c98556f34',1,'G_NPC']]],
+  ['populatescene',['populateScene',['../class_g___level.html#a3d34ee97aa649f7e72c6bb8a1fcd02a1',1,'G_Level']]]
 ];

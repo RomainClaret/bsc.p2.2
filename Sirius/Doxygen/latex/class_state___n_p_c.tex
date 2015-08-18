@@ -1,0 +1,77 @@
+\hypertarget{class_state___n_p_c}{}\section{State\+\_\+\+N\+P\+C Class Reference}
+\label{class_state___n_p_c}\index{State\+\_\+\+N\+P\+C@{State\+\_\+\+N\+P\+C}}
+
+
+Abstract class of the Pattern State to manage the \char`\"{}\+Ennemis\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+npc.\+h$>$}
+
+Inheritance diagram for State\+\_\+\+N\+P\+C\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_state___n_p_c}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_state___n_p_c_a81773e7a148bc212a31f223bc1c3de6d}{}\hyperlink{class_state___n_p_c_a81773e7a148bc212a31f223bc1c3de6d}{State\+\_\+\+N\+P\+C} ()\label{class_state___n_p_c_a81773e7a148bc212a31f223bc1c3de6d}
+
+\begin{DoxyCompactList}\small\item\em State\+Enemy Constructor of State\+Enemy. \end{DoxyCompactList}\item 
+\hypertarget{class_state___n_p_c_a18bce4b30a3b39894e7ee868d2b75e5e}{}virtual \hyperlink{class_state___n_p_c_a18bce4b30a3b39894e7ee868d2b75e5e}{$\sim$\+State\+\_\+\+N\+P\+C} ()\label{class_state___n_p_c_a18bce4b30a3b39894e7ee868d2b75e5e}
+
+\begin{DoxyCompactList}\small\item\em $\sim$\+State\+Enemy Virtual destuctor of State\+Enemy \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_state___n_p_c_a4123003789e88b4d40b47f49c6c84b04}{step} (\hyperlink{class_g___n_p_c}{G\+\_\+\+N\+P\+C} $\ast$npc)=0
+\begin{DoxyCompactList}\small\item\em step Vitual methode, each state\+Ennemi must implements \char`\"{}step\char`\"{} this is the brain of the ennemi \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class of the Pattern State to manage the \char`\"{}\+Ennemis\char`\"{}. 
+
+\char`\"{}\+Ennemis\char`\"{} can be tune with the State Pattern, State\+Ennemi is a F\+R\+I\+E\+N\+D of Ennemi \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 august 2015 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_state___n_p_c_a4123003789e88b4d40b47f49c6c84b04}{}\index{State\+\_\+\+N\+P\+C@{State\+\_\+\+N\+P\+C}!step@{step}}
+\index{step@{step}!State\+\_\+\+N\+P\+C@{State\+\_\+\+N\+P\+C}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\+\_\+\+N\+P\+C\+::step (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+\_\+\+N\+P\+C} $\ast$}]{npc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_state___n_p_c_a4123003789e88b4d40b47f49c6c84b04}
+
+
+step Vitual methode, each state\+Ennemi must implements \char`\"{}step\char`\"{} this is the brain of the ennemi 
+
+
+\begin{DoxyParams}{Parameters}
+{\em npc} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_state___n_p_c_patrol_ad9a4dab7ef0601ceff090595e7cac92c}{State\+\_\+\+N\+P\+C\+Patrol}, and \hyperlink{class_state___n_p_c_sleep_ad21b765e6749e9be78f646a7e122934f}{State\+\_\+\+N\+P\+C\+Sleep}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+state\+\_\+npc.\+h\end{DoxyCompactItemize}

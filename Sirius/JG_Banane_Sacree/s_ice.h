@@ -13,7 +13,7 @@
 
 #ifndef S_ICE_H
 #define S_ICE_H
-#include "surface.h"
+#include "g_surface.h"
 
 class QGraphicsItem;
 
@@ -27,7 +27,7 @@ class QGraphicsItem;
  * @version 1.0
  * @date 27 January 2015
  */
-class S_Ice : public Surface
+class S_Ice : public G_Surface
 {
 public:
     S_Ice(int xpos, int ypos, QGraphicsItem *parent = 0);

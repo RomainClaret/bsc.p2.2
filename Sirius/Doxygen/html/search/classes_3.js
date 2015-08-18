@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['level',['Level',['../class_level.html',1,'']]],
-  ['level2',['Level2',['../class_level2.html',1,'']]]
+  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html',1,'']]]
 ];

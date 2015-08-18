@@ -28,11 +28,11 @@ class QLabel;
  * @version 1.0
  * @date 27 January 2015
  */
-class WidgetDialog : public QWidget
+class W_Dialog : public QWidget
 {
     Q_OBJECT
 public:
-    WidgetDialog(QWidget *parent = 0);
+    W_Dialog(QWidget *parent = 0);
     void setText(QString text, int type);
     QString getText();
     void paintEvent(QPaintEvent *);

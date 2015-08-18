@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['pinguinonviewbloc',['pinguinOnViewBloc',['../class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e',1,'Ennemi::pinguinOnViewBloc()'],['../class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e',1,'Ennemi::pinguinOnViewBloc()']]],
-  ['populatescene',['populateScene',['../class_level2.html#a3429efd969734df0725bda5a0ef31bb3',1,'Level2::populateScene()'],['../class_level2.html#a50807da02e4e94065c18999374341508',1,'Level2::populateScene()']]]
+  ['p_5ffox',['P_Fox',['../class_p___fox.html#a6cab8923b0e5c4de67c1ac420965fbf5',1,'P_Fox']]],
+  ['p_5fwolf',['P_Wolf',['../class_p___wolf.html#a11be678cb2cabbba514d4b030a5084e4',1,'P_Wolf']]],
+  ['playablecharacteronviewblock',['playableCharacterOnViewBlock',['../class_g___n_p_c.html#a49883585ada9c0308c0d620c98556f34',1,'G_NPC']]],
+  ['populatescene',['populateScene',['../class_g___level.html#a3d34ee97aa649f7e72c6bb8a1fcd02a1',1,'G_Level']]]
 ];

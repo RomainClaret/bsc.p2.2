@@ -28,68 +28,68 @@ win32:RC_FILE = winIcon.rc
 
 
 SOURCES += \
-    player.cpp \
-    surface.cpp \
-    gameboard.cpp \
     main.cpp \
     b_movable.cpp \
     s_snow.cpp \
-    s_viewtransition.cpp \
     b_wall.cpp \
-    p_penguin.cpp \
     b_water.cpp \
-    profil.cpp \
-    m_menustart.cpp \
-    object.cpp \
-    m_pause.cpp \
     s_ice.cpp \
-    level.cpp \
-    maingame.cpp \
     w_object.cpp \
-    e_renard.cpp \
-    e_loup.cpp \
     s_dialog.cpp \
     w_dialog.cpp \
     w_life.cpp \
-    s_viewblocennemi.cpp \
-    observablesennemis.cpp \
-    stateennemi_patrol.cpp \
-    stateennemi_sleep.cpp \
-    stateenemy_pause.cpp \
-    surfacefactory.cpp \
-    enemy.cpp
+    g_npc.cpp \
+    g_gameboard.cpp \
+    g_level.cpp \
+    w_menustart.cpp \
+    w_pause.cpp \
+    g_maingame.cpp \
+    g_object.cpp \
+    observer_npc.cpp \
+    g_player.cpp \
+    g_profil.cpp \
+    s_viewblocknpc.cpp \
+    s_door.cpp \
+    state_npcpause.cpp \
+    state_npcpatrol.cpp \
+    state_npcsleep.cpp \
+    factory_surface.cpp \
+    g_surface.cpp \
+    c_fox.cpp \
+    c_penguin.cpp \
+    c_wolf.cpp
 
 HEADERS  += \
-    player.h \
-    surface.h \
-    gameboard.h \
     b_movable.h \
     b_wall.h \
-    s_viewtransition.h \
     s_snow.h \
-    p_penguin.h \
     b_water.h \
-    profil.h \
-    m_menustart.h \
-    object.h \
-    m_pause.h \
     s_ice.h \
-    level.h \
-    maingame.h \
     w_object.h \
     s_dialog.h \
     w_dialog.h \
     w_life.h \
-    stateenemy_pause.h \
-    surfacefactory.h \
-    enemy.h \
-    stateenemy.h \
-    stateenemy_patrol.h \
-    stateenemy_sleep.h \
-    observablesenemy.h \
-    e_wolf.h \
-    e_fox.h \
-    s_viewblockenemy.h
+    s_door.h \
+    s_viewblocknpc.h \
+    factory_surface.h \
+    w_menustart.h \
+    w_menupause.h \
+    g_gameboard.h \
+    g_level.h \
+    g_maingame.h \
+    g_object.h \
+    g_npc.h \
+    g_player.h \
+    g_profil.h \
+    g_surface.h \
+    state_npc.h \
+    state_npcpatrol.h \
+    state_npcpause.h \
+    state_npcsleep.h \
+    observer_npc.h \
+    c_fox.h \
+    c_penguin.h \
+    c_wolf.h
 
 RESOURCES += \
     images.qrc \

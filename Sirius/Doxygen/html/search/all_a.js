@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['pingouin',['Pingouin',['../class_pingouin.html',1,'']]],
-  ['pinguinonviewbloc',['pinguinOnViewBloc',['../class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e',1,'Ennemi::pinguinOnViewBloc()'],['../class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e',1,'Ennemi::pinguinOnViewBloc()']]],
-  ['player',['Player',['../class_player.html',1,'']]],
-  ['populatescene',['populateScene',['../class_level2.html#a3429efd969734df0725bda5a0ef31bb3',1,'Level2::populateScene()'],['../class_level2.html#a50807da02e4e94065c18999374341508',1,'Level2::populateScene()']]],
-  ['profil',['Profil',['../class_profil.html',1,'']]]
+  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html',1,'Observer_NPC'],['../class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9',1,'Observer_NPC::Observer_NPC()']]]
 ];

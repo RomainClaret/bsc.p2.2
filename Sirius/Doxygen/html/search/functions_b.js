@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['viewblocactif',['viewBlocActif',['../class_ennemi.html#ad4861b8a3ad9d4819d3716ac3d0e8501',1,'Ennemi::viewBlocActif()'],['../class_ennemi.html#ad4861b8a3ad9d4819d3716ac3d0e8501',1,'Ennemi::viewBlocActif()']]]
+  ['viewblockactive',['viewBlockActive',['../class_g___n_p_c.html#a39d36f9f6e71dbef7c937d8ab8a48638',1,'G_NPC']]]
 ];

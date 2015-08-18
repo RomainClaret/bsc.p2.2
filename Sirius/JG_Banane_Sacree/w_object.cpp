@@ -12,22 +12,22 @@
 **********************************************************************************/
 
 #include "w_object.h"
-#include "object.h"
-#include "p_penguin.h"
-#include "gameboard.h"
+#include "g_object.h"
+#include "c_penguin.h"
+#include "g_gameboard.h"
 #include <QWidget>
 #include <QDebug>
 //#include <QList>
 //#include <QMap>
 #include <QPainter>
 
-WidgetObject::WidgetObject(QWidget *parent)
+W_Object::W_Object(QWidget *parent)
 {
-    this->resize(Gameboard::getGameSquares(),Gameboard::getGameSquares());
+    this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     this->setAttribute(Qt::WA_TranslucentBackground);
 }
 
-void WidgetObject::paintEvent(QPaintEvent *)
+void W_Object::paintEvent(QPaintEvent *)
 {
     qDebug() << "PaintEvent";
     QPainter paint(this);
@@ -46,14 +46,14 @@ void WidgetObject::paintEvent(QPaintEvent *)
 
          img.append(".png");
 
-         paint.drawPixmap(j*Gameboard::getGameSquares(),0,Gameboard::getGameSquares(),
-                          Gameboard::getGameSquares(),QPixmap(img));
+         paint.drawPixmap(j*G_Gameboard::getGameSquares(),0,G_Gameboard::getGameSquares(),
+                          G_Gameboard::getGameSquares(),QPixmap(img));
          ++i;
          j++;
      }
 }
 
-void WidgetObject::reloadObjectList(QList<Object*> objectList)
+void W_Object::reloadObjectList(QList<G_Object*> objectList)
 {
     sacoche = objectList;
     map.clear();
@@ -71,7 +71,7 @@ void WidgetObject::reloadObjectList(QList<Object*> objectList)
         }
     }
 
-    this->resize(map.size()*Gameboard::getGameSquares(),Gameboard::getGameSquares());
+    this->resize(map.size()*G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
 
     qDebug() << "Call Update";
     update();

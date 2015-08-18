@@ -19,10 +19,10 @@
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
-#include "enemy.h"
-#include "e_fox.h"
-#include "e_wolf.h"
-#include "gameboard.h"
+#include "g_npc.h"
+#include "c_fox.h"
+#include "c_wolf.h"
+#include "g_gameboard.h"
 
 #include "s_ice.h"
 
@@ -35,7 +35,7 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent)
+B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
    setDesign(xpos, ypos);
    setZValue(1);
@@ -45,7 +45,7 @@ B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, 
  * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_Movable::B_Movable(QGraphicsItem *parent) : Surface(0, 0, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
+B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
     setZValue(1);
@@ -53,7 +53,7 @@ B_Movable::B_Movable(QGraphicsItem *parent) : Surface(0, 0, Gameboard::getGameSq
 
 void B_Movable::setPos(int x, int y)
 {
-    QGraphicsRectItem::setPos(x*Gameboard::getGameSquares()+1, y*Gameboard::getGameSquares()+1);
+    QGraphicsRectItem::setPos(x*G_Gameboard::getGameSquares()+1, y*G_Gameboard::getGameSquares()+1);
 }
 
 /**
@@ -70,7 +70,7 @@ void B_Movable::setDesign(int xpos, int ypos)
 
     setBrush(brush);
 
-    int size = Gameboard::getGameSquares();
+    int size = G_Gameboard::getGameSquares();
 
     setPos(xpos,ypos);
     leftCollideBox = new QGraphicsRectItem(size*xpos-size+1, size*ypos+1,size-2, size-2);
@@ -89,7 +89,7 @@ void B_Movable::setDesign(int xpos, int ypos)
  */
 void B_Movable::moveBy(int x, int y)
 {
-    int gameSquare = Gameboard::getGameSquares();
+    int gameSquare = G_Gameboard::getGameSquares();
 
     QGraphicsRectItem::moveBy(x*gameSquare,y*gameSquare);
     leftCollideBox->moveBy(x*gameSquare,y*gameSquare);
@@ -131,8 +131,8 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
     {
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
            typeid(*l.at(i)).name() == typeid(B_Movable).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Wolf).name())
+           typeid(*l.at(i)).name() == typeid(C_Fox).name() ||
+           typeid(*l.at(i)).name() == typeid(C_Wolf).name())
         {
             return false;
         }

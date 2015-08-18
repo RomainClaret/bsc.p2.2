@@ -15,7 +15,7 @@
 #define W_OBJECT_H
 
 #include <QWidget>
-#include "object.h"
+#include "g_object.h"
 #include <QList>
 #include <QMap>
 
@@ -29,20 +29,20 @@
  * @version 1.0
  * @date 27 January 2015
  */
-class WidgetObject : public QWidget
+class W_Object : public QWidget
 {
     Q_OBJECT
 public:
-    WidgetObject(QWidget *parent = 0);
+    W_Object(QWidget *parent = 0);
     void paintEvent(QPaintEvent *);
-    void reloadObjectList(QList<Object*> objectList);
+    void reloadObjectList(QList<G_Object*> objectList);
 
 signals:
 
 public slots:
 
 private:
-    QList<Object* > sacoche;
+    QList<G_Object* > sacoche;
     QMap<QString, int> map;
 
 };

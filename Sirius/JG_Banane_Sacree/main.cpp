@@ -11,11 +11,11 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "gameboard.h"
-#include "m_menustart.h"
+#include "g_gameboard.h"
+#include "w_menustart.h"
 #include <QApplication>
 #include "w_object.h"
-#include "maingame.h"
+#include "g_maingame.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 //    MenuStart w;
 //    Gameboard w;
 //    WidgetObject w;
-    MainGame w;
+    G_MainGame w;
     w.show();
 
     return a.exec();

@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['setorientation_5fbottom',['setOrientation_bottom',['../class_ennemi.html#ab3bbc6381307320c22b1686c5bc59d93',1,'Ennemi::setOrientation_bottom()'],['../class_ennemi.html#ab3bbc6381307320c22b1686c5bc59d93',1,'Ennemi::setOrientation_bottom()']]],
-  ['setorientation_5fleft',['setOrientation_left',['../class_ennemi.html#ac455b7c41a46dc42a27841b9c566e329',1,'Ennemi::setOrientation_left()'],['../class_ennemi.html#ac455b7c41a46dc42a27841b9c566e329',1,'Ennemi::setOrientation_left()']]],
-  ['setorientation_5fright',['setOrientation_right',['../class_ennemi.html#a4e99225c7a632efceebba66996d7d9ee',1,'Ennemi::setOrientation_right()'],['../class_ennemi.html#a4e99225c7a632efceebba66996d7d9ee',1,'Ennemi::setOrientation_right()']]],
-  ['setorientation_5ftop',['setOrientation_top',['../class_ennemi.html#a7c509f048996eecb4ee768a044825d15',1,'Ennemi::setOrientation_top()'],['../class_ennemi.html#a7c509f048996eecb4ee768a044825d15',1,'Ennemi::setOrientation_top()']]],
-  ['setpath',['setPath',['../class_ennemi.html#a482e9c5ccc0cf1c3aa4e83f32f3eedb1',1,'Ennemi::setPath(QList&lt; QPoint &gt;)'],['../class_ennemi.html#a482e9c5ccc0cf1c3aa4e83f32f3eedb1',1,'Ennemi::setPath(QList&lt; QPoint &gt;)']]],
-  ['setplayerprofil',['setPlayerProfil',['../class_gameboard.html#a7ac10eb79b85cecff7fdeda1f31e980b',1,'Gameboard::setPlayerProfil(Profil *playerProfil)'],['../class_gameboard.html#a7ac10eb79b85cecff7fdeda1f31e980b',1,'Gameboard::setPlayerProfil(Profil *playerProfil)']]],
-  ['setpos',['setPos',['../class_b___movable.html#aca717ec608426940422f1bc658201bf5',1,'B_Movable::setPos(int x, int y)'],['../class_b___movable.html#aca717ec608426940422f1bc658201bf5',1,'B_Movable::setPos(int x, int y)']]],
-  ['setposviewbloc',['setPosViewBloc',['../class_ennemi.html#a029f6711fe3817f9697a8369718e50f6',1,'Ennemi::setPosViewBloc(S_ViewBlocEnnemi *bloc, QPoint p)'],['../class_ennemi.html#a029f6711fe3817f9697a8369718e50f6',1,'Ennemi::setPosViewBloc(S_ViewBlocEnnemi *bloc, QPoint p)']]],
-  ['slidebloc',['SlideBloc',['../class_gameboard.html#aa4e9c04466f50e1590269eab05773581',1,'Gameboard::SlideBloc()'],['../class_gameboard.html#aa4e9c04466f50e1590269eab05773581',1,'Gameboard::SlideBloc()']]],
-  ['slidepingouin',['SlidePingouin',['../class_gameboard.html#ac59525fc331dafd4a1a290593327aa7c',1,'Gameboard::SlidePingouin()'],['../class_gameboard.html#ac59525fc331dafd4a1a290593327aa7c',1,'Gameboard::SlidePingouin()']]],
-  ['stateenemy_5fpause',['StateEnemy_Pause',['../class_state_enemy___pause.html#a255ff4bef3595145a33896c0f0065ef4',1,'StateEnemy_Pause']]],
-  ['stateennemi',['StateEnnemi',['../class_state_ennemi.html#a6ae588f8b9cd09de07eb04b503ff2b49',1,'StateEnnemi::StateEnnemi()'],['../class_state_ennemi.html#a6ae588f8b9cd09de07eb04b503ff2b49',1,'StateEnnemi::StateEnnemi()']]],
-  ['stateennemi_5fpatrol',['StateEnnemi_Patrol',['../class_state_ennemi___patrol.html#adc38ffd909b82bd049d309541bafd6b9',1,'StateEnnemi_Patrol']]],
-  ['stateennemi_5fsleep',['StateEnnemi_Sleep',['../class_state_ennemi___sleep.html#ac39a77f604c8ea0162b9d399d0c41dd3',1,'StateEnnemi_Sleep']]],
-  ['step',['step',['../class_state_ennemi.html#a8df87629876307ddb6cb241864bb8da8',1,'StateEnnemi::step()'],['../class_state_enemy___pause.html#a69ff2e92a26470974c9f7531ce3a6dda',1,'StateEnemy_Pause::step()'],['../class_state_ennemi.html#a8df87629876307ddb6cb241864bb8da8',1,'StateEnnemi::step()'],['../class_state_ennemi___patrol.html#a79492b24068ff2934defd920651f8a0c',1,'StateEnnemi_Patrol::step()'],['../class_state_ennemi___sleep.html#a7c099adf160769dcd2c6829345241507',1,'StateEnnemi_Sleep::step()']]]
+  ['setorientation_5fbottom',['setOrientation_bottom',['../class_g___n_p_c.html#a0bbff0e4fede0f6197312a366910a6b1',1,'G_NPC']]],
+  ['setorientation_5fleft',['setOrientation_left',['../class_g___n_p_c.html#a95a1c3b344d34d2918505b4591d93b14',1,'G_NPC']]],
+  ['setorientation_5fright',['setOrientation_right',['../class_g___n_p_c.html#ac8985a2b56b6082c1025ec061eac7bb0',1,'G_NPC']]],
+  ['setorientation_5ftop',['setOrientation_top',['../class_g___n_p_c.html#a2850ccbb21d59d211efda814a9868668',1,'G_NPC']]],
+  ['setpath',['setPath',['../class_g___n_p_c.html#a394604b45fd2f51b46055b370c9c1d2f',1,'G_NPC']]],
+  ['setplayerprofil',['setPlayerProfil',['../class_g___gameboard.html#a3742b642a0654410d81415107b70629c',1,'G_Gameboard']]],
+  ['setpos',['setPos',['../class_b___movable.html#aca717ec608426940422f1bc658201bf5',1,'B_Movable']]],
+  ['setposviewbloc',['setPosViewBloc',['../class_g___n_p_c.html#a2b04f9184c5a2d923d3ea4e894d70009',1,'G_NPC']]],
+  ['slideblock',['slideBlock',['../class_g___gameboard.html#acfa547e03c2451bda2b28cc1d9a7ed2d',1,'G_Gameboard']]],
+  ['slideplayablecharacter',['slidePlayableCharacter',['../class_g___gameboard.html#abf8df9d44eaa471ad102887ec901ab78',1,'G_Gameboard']]],
+  ['state_5fnpc',['State_NPC',['../class_state___n_p_c.html#a81773e7a148bc212a31f223bc1c3de6d',1,'State_NPC']]],
+  ['state_5fnpcpatrol',['State_NPCPatrol',['../class_state___n_p_c_patrol.html#a51a03345cdf2a44f50dcb515bcbbbf92',1,'State_NPCPatrol']]],
+  ['state_5fnpcpause',['State_NPCPause',['../class_state___n_p_c_pause.html#a1d76054bb7712a85ae31b5ae9280195e',1,'State_NPCPause']]],
+  ['state_5fnpcsleep',['State_NPCSleep',['../class_state___n_p_c_sleep.html#adfef1c3c176bdd3c486dfaedb2bc566b',1,'State_NPCSleep']]],
+  ['step',['step',['../class_state___n_p_c.html#a4123003789e88b4d40b47f49c6c84b04',1,'State_NPC::step()'],['../class_state___n_p_c_patrol.html#ad9a4dab7ef0601ceff090595e7cac92c',1,'State_NPCPatrol::step()'],['../class_state___n_p_c_pause.html#a14542459d2844c8f5ee2b1c628611f7b',1,'State_NPCPause::step()'],['../class_state___n_p_c_sleep.html#ad21b765e6749e9be78f646a7e122934f',1,'State_NPCSleep::step()']]]
 ];

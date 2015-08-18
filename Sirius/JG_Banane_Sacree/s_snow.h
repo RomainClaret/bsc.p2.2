@@ -13,7 +13,7 @@
 
 #ifndef S_SNOW_H
 #define S_SNOW_H
-#include "surface.h"
+#include "g_surface.h"
 
 class QGraphicsItem;
 
@@ -27,7 +27,7 @@ class QGraphicsItem;
  * @version 1.0
  * @date 27 January 2015
  */
-class S_Snow : public Surface
+class S_Snow : public G_Surface
 {
 public:
     S_Snow(int xpos, int ypos, QGraphicsItem *parent = 0);

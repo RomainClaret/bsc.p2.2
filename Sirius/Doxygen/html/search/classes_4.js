@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_5fpause',['M_Pause',['../class_m___pause.html',1,'']]],
-  ['maingame',['MainGame',['../class_main_game.html',1,'']]],
-  ['menustart',['MenuStart',['../class_menu_start.html',1,'']]]
+  ['p_5ffox',['P_Fox',['../class_p___fox.html',1,'']]],
+  ['p_5fpenguin',['P_Penguin',['../class_p___penguin.html',1,'']]],
+  ['p_5fwolf',['P_Wolf',['../class_p___wolf.html',1,'']]]
 ];
