@@ -22,6 +22,17 @@ class QPixmap;
 class QGraphicsPixmapItem;
 class QBrush;
 
+/**
+ * @brief Object from the game
+ * @details Set the object's info and its skin.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
+
 class Object : public Surface
 {
 public:

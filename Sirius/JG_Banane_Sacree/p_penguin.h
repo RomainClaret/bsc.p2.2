@@ -21,6 +21,20 @@ class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
 
+/**
+ * @brief Playable character: Penguin.
+ * @details This character is playable.
+ * It contains the direction control from the keyboard.
+ * It controls player's bag, which contains objects.
+ * The collision detection is done by cross, with smaller blocks.
+ * Sliding or MoveBy (walking) is here.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 
 class Pingouin  : public Player
 {

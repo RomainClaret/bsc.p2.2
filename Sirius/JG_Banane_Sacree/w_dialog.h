@@ -17,6 +17,17 @@
 #include <QWidget>
 class QLabel;
 
+/**
+ * @brief Dialog popup.
+ * @details Widget shown on top of the game which contains a dialog.
+ * It can be dismissed by pressing a key on the keyboard.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 class WidgetDialog : public QWidget
 {
     Q_OBJECT

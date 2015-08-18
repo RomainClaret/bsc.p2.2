@@ -18,6 +18,18 @@
 
 class QGraphicsItem;
 
+/**
+ * @brief View Transition Surface.
+ * @details This surface can move player's view on the scene.
+ * It checks if the level is completed.
+ * Moves the player and changes the view to the next level is it's complited.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 class S_ViewTransition : public Surface
 {
 public:

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removefromscene',['removeFromScene',['../class_b___movable.html#aa4d26e877655021ef70bc6914fe04418',1,'B_Movable']]]
+  ['moveby',['moveBy',['../class_b___movable.html#a55fb8069fc55c4edabd2ac076acdee17',1,'B_Movable']]]
 ];

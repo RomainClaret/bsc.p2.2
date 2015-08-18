@@ -20,20 +20,18 @@ class QGraphicsRectItem;
 class QGraphicsScene;
 
 /**
- * @brief Movable blocks
- * @details Those blocks can be moved with characters.
+ * @brief Movable block
+ * @details This block can be moved with characters.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo integrate with DP Factory
+ * @todo integrate with DP Factoryx
  */
 //@bug no bugs
 //@warning no warnings
-
-
 class B_Movable : public Surface
 {
 public:
@@ -65,13 +63,14 @@ public:
     void removeFromScene(QGraphicsScene* Scene);
 
     /**
-     * @brief Move object by x and y values.
+     * @brief Move self by x and y values.
      * @param x move this amount on the x-axis
      * @param y move this amount on the y-axis
      */
     void moveBy(int x, int y);
+
     /**
-     * @brief Set the position of the object with the x and y values.
+     * @brief Set the position of self with the x and y values.
      * @param x set the postion on the x-axis
      * @param y set the postion on the y-axis
      */
@@ -79,32 +78,32 @@ public:
 
     //Methodes related to the displacement of the block
     /**
-     * @brief Check if the block can move to the left.
+     * @brief Check if self can move to the left.
      * @return true if can move to left
      */
     bool IsMovableToLeft();
 
     /**
-     * @brief Check if the block can move to the right.
+     * @brief Check if self can move to the right.
      * @return true if can move to right
      */
     bool IsMovableToRight();
 
     /**
-     * @brief Check if the block can move to the bottom.
+     * @brief Check if self can move to the bottom.
      * @return true if can move to bottom
      */
     bool IsMovableToBottom();
 
     /**
-     * @brief Check if the block can move to the top.
+     * @brief Check if self can move to the top.
      * @return true if can move to top
      */
     bool IsMovableToTop();
 
     /**
-     * @brief Check if it should slide
-     * @return true if it collides with a specific block.
+     * @brief Check if self should slide
+     * @return true if self collides with a specific block.
      */
     bool isSlide();
 

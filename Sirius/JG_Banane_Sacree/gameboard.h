@@ -39,20 +39,28 @@ class QPushButton;
 class QPoint;
 class QTimer;
 
+/**
+ * @brief Structure used in Gameboard.
+ * @details Used for blocks when they slides into a direction ("l":left, "r":right, "t":top, "b":bottom).
+ * @todo integrate with DP Factory
+ */
 struct slideBloc{
     B_Movable *slidingMovable;
     char sens; //l, r, t, b
 };
 
 /**
- * \brief La platefrome du jeu.
- *
- * C'est LE QWidget qui donne vie au jeu ! Il gère les
- * transistion de niveaux, le joueur, les ennemis, les
- * objets, les blocs, les dialogues, le menu pause, et
- * les interactions.
+ * @brief Game Board. Where the game happens.
+ * @details This is the QWidget which is giving life to the game.
+ * Managing the level transition, the player, enemies, objects, blocs, dialogs, pause menu, and interactions.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo update
  */
-
 class Gameboard : public QWidget
 {
     Q_OBJECT
