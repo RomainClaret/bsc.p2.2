@@ -98,7 +98,7 @@ Inheritance diagram for E_Loup:</div>
  <div class="center">
   <img src="class_e___loup.png" usemap="#E_Loup_map" alt=""/>
   <map id="E_Loup_map" name="E_Loup_map">
-<area href="class_ennemi.html" title="Classe parent de touts les ennemis. " alt="Ennemi" shape="rect" coords="0,56,95,80"/>
+<area href="class_ennemi.html" title="Enemy Class. " alt="Ennemi" shape="rect" coords="0,56,95,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -135,6 +135,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOrientation_right<
 <tr class="memitem:a482e9c5ccc0cf1c3aa4e83f32f3eedb1 inherit pub_methods_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a482e9c5ccc0cf1c3aa4e83f32f3eedb1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setPath</b> (QList&lt; QPoint &gt;)</td></tr>
 <tr class="separator:a482e9c5ccc0cf1c3aa4e83f32f3eedb1 inherit pub_methods_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6811b0a25a92ec210750072b83d1f74e inherit pub_methods_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6811b0a25a92ec210750072b83d1f74e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pinguinOnViewBloc</b> ()</td></tr>
+<tr class="separator:a6811b0a25a92ec210750072b83d1f74e inherit pub_methods_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -142,9 +145,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afc6832bb7b5969ac0e13f87c643a5ce2 inherit pro_methods_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc6832bb7b5969ac0e13f87c643a5ce2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advance</b> (int)</td></tr>
 <tr class="separator:afc6832bb7b5969ac0e13f87c643a5ce2 inherit pro_methods_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68ed78a65bdade39ff0b1b55a190240 inherit pro_methods_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad68ed78a65bdade39ff0b1b55a190240"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosViewBloc</b> (QGraphicsRectItem *, QPoint)</td></tr>
-<tr class="separator:ad68ed78a65bdade39ff0b1b55a190240 inherit pro_methods_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239561a109368460aaae98da30938dc4 inherit pro_methods_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a239561a109368460aaae98da30938dc4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosViewBloc</b> (<a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> *, QPoint)</td></tr>
+<tr class="separator:a239561a109368460aaae98da30938dc4 inherit pro_methods_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_ennemi"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_ennemi')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_ennemi.html">Ennemi</a></td></tr>
 <tr class="memitem:abf051ea1d034df4a8b0480e9387f2008 inherit pro_attribs_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf051ea1d034df4a8b0480e9387f2008"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
@@ -152,9 +155,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
 <tr class="memitem:a4ddf1ae5a5662a8206dc6f4a3aac6fbf inherit pro_attribs_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ddf1ae5a5662a8206dc6f4a3aac6fbf"></a>
 QList&lt; QPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
 <tr class="separator:a4ddf1ae5a5662a8206dc6f4a3aac6fbf inherit pro_attribs_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6afa5e2cd63928656532a8c99fe64f8 inherit pro_attribs_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6afa5e2cd63928656532a8c99fe64f8"></a>
-QList&lt; <a class="el" href="struct_view_bloc.html">ViewBloc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>champVue</b></td></tr>
-<tr class="separator:ab6afa5e2cd63928656532a8c99fe64f8 inherit pro_attribs_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd4b33e091ce69e811959720e14dde6 inherit pro_attribs_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabd4b33e091ce69e811959720e14dde6"></a>
+QList&lt; <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>champVue</b></td></tr>
+<tr class="separator:aabd4b33e091ce69e811959720e14dde6 inherit pro_attribs_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5537ad37a49d572d09a76749238490c2 inherit pro_attribs_class_ennemi"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5537ad37a49d572d09a76749238490c2"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>leftSkin</b></td></tr>
 <tr class="separator:a5537ad37a49d572d09a76749238490c2 inherit pro_attribs_class_ennemi"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,7 +181,7 @@ QBrush *&#160;</td><td class="memItemRight" valign="bottom"><b>ennemiSkin</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 17 2015 15:55:14 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 09:35:25 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

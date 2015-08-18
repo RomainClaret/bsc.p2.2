@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Classe parent de touts les ennemis.  
+<p>Enemy Class.  
  <a href="class_ennemi.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ennemi_8h_source.html">ennemi.h</a>&gt;</code></p>
@@ -106,7 +106,7 @@ Inheritance diagram for Ennemi:</div>
   <img src="class_ennemi.png" usemap="#Ennemi_map" alt=""/>
   <map id="Ennemi_map" name="Ennemi_map">
 <area href="class_e___loup.html" alt="E_Loup" shape="rect" coords="0,112,95,136"/>
-<area href="class_e___renard.html" title="Classe enfant de Enemie. Il se deplace et voie. " alt="E_Renard" shape="rect" coords="105,112,200,136"/>
+<area href="class_e___renard.html" title="Enemy Character: Fox. " alt="E_Renard" shape="rect" coords="105,112,200,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -139,15 +139,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOrientation_right<
 <tr class="memitem:a482e9c5ccc0cf1c3aa4e83f32f3eedb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a482e9c5ccc0cf1c3aa4e83f32f3eedb1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setPath</b> (QList&lt; QPoint &gt;)</td></tr>
 <tr class="separator:a482e9c5ccc0cf1c3aa4e83f32f3eedb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6811b0a25a92ec210750072b83d1f74e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6811b0a25a92ec210750072b83d1f74e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pinguinOnViewBloc</b> ()</td></tr>
+<tr class="separator:a6811b0a25a92ec210750072b83d1f74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc6832bb7b5969ac0e13f87c643a5ce2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc6832bb7b5969ac0e13f87c643a5ce2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advance</b> (int)</td></tr>
 <tr class="separator:afc6832bb7b5969ac0e13f87c643a5ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68ed78a65bdade39ff0b1b55a190240"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad68ed78a65bdade39ff0b1b55a190240"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosViewBloc</b> (QGraphicsRectItem *, QPoint)</td></tr>
-<tr class="separator:ad68ed78a65bdade39ff0b1b55a190240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239561a109368460aaae98da30938dc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a239561a109368460aaae98da30938dc4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosViewBloc</b> (<a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> *, QPoint)</td></tr>
+<tr class="separator:a239561a109368460aaae98da30938dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -157,9 +160,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
 <tr class="memitem:a4ddf1ae5a5662a8206dc6f4a3aac6fbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ddf1ae5a5662a8206dc6f4a3aac6fbf"></a>
 QList&lt; QPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
 <tr class="separator:a4ddf1ae5a5662a8206dc6f4a3aac6fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6afa5e2cd63928656532a8c99fe64f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6afa5e2cd63928656532a8c99fe64f8"></a>
-QList&lt; <a class="el" href="struct_view_bloc.html">ViewBloc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>champVue</b></td></tr>
-<tr class="separator:ab6afa5e2cd63928656532a8c99fe64f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd4b33e091ce69e811959720e14dde6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabd4b33e091ce69e811959720e14dde6"></a>
+QList&lt; <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>champVue</b></td></tr>
+<tr class="separator:aabd4b33e091ce69e811959720e14dde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5537ad37a49d572d09a76749238490c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5537ad37a49d572d09a76749238490c2"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>leftSkin</b></td></tr>
 <tr class="separator:a5537ad37a49d572d09a76749238490c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,8 +180,16 @@ QBrush *&#160;</td><td class="memItemRight" valign="bottom"><b>ennemiSkin</b></t
 <tr class="separator:afed643ae9412716c1f1caabfdea06fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Classe parent de touts les ennemis. </p>
-<p>C'est la classe parent des ennemis. Elle permet de definir, de diriger, et specifier les enemies enfants </p>
+<div class="textblock"><p>Enemy Class. </p>
+<p>Parent class for enemies. Contains the orientation, the path, the skin, the definition, and the specification. </p><dl class="section author"><dt>Author</dt><dd>Claret Romain, <a href="#" onclick="location.href='mai'+'lto:'+'rom'+'ai'+'n.c'+'la'+'ret'+'@r'+'ocl'+'a.'+'ch'; return false;">romai<span style="display: none;">.nosp@m.</span>n.cl<span style="display: none;">.nosp@m.</span>aret@<span style="display: none;">.nosp@m.</span>rocl<span style="display: none;">.nosp@m.</span>a.ch</a> </dd>
+<dd>
+Divernois Margaux, <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'ga'+'ux.'+'di'+'ver'+'no'+'is@'+'gm'+'ail'+'.c'+'om'; return false;">marga<span style="display: none;">.nosp@m.</span>ux.d<span style="display: none;">.nosp@m.</span>ivern<span style="display: none;">.nosp@m.</span>ois@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd>
+<dd>
+Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'+'st'+'@gm'+'ai'+'l.c'+'om'; return false;">visin<span style="display: none;">.nosp@m.</span>ands<span style="display: none;">.nosp@m.</span>t@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Custom License + NDA </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>integrate with DP Factory </dd></dl>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="ennemi_8h_source.html">ennemi.h</a></li>
 <li>ennemi.cpp</li>
@@ -186,7 +197,7 @@ QBrush *&#160;</td><td class="memItemRight" valign="bottom"><b>ennemiSkin</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 17 2015 15:55:14 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 09:35:25 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -15,11 +15,8 @@
 #include "gameboard.h"
 
 #include <QPainter>
-#include <QGraphicsItem>
 #include <QDebug>
-
 #include <QRectF>
-#include <QGraphicsItem>
 
 
 Player::Player()

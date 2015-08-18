@@ -14,10 +14,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-
+#include <QGraphicsItem>
 class QPainter;
 class QRectF;
-#include <QGraphicsItem>
+
 
 
 class Player : public QGraphicsItem

@@ -20,8 +20,8 @@ class QGraphicsRectItem;
 class QGraphicsScene;
 
 /**
- * @brief Movable blocks
- * @details Those blocks can be moved with characters.
+ * @brief Movable block
+ * @details This block can be moved with characters.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
@@ -32,7 +32,6 @@ class QGraphicsScene;
  */
 //@bug no bugs
 //@warning no warnings
-
 
 class B_Movable : public Surface
 {

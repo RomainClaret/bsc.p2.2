@@ -13,19 +13,22 @@
 
 #ifndef E_RENARD_H
 #define E_RENARD_H
-
 #include "ennemi.h"
 
 /**
- * \brief Classe enfant de Enemie. Il se deplace et
- * voie.
- *
- * Il se deplace dans un patern généré entre
- * automatiquement entre deux points. Il regarde
- * devant lui dans un champ 3x2. Si le joueur entre
- * dans le change de vue du Renard, la partie est perdue.
- *
+ * @brief Enemy Character: Fox
+ * @details This is a character with its own characteristics.
+ * It moves on a automatic pattern generated between two given points.
+ * His view is 3x2 blocs.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo integrate with DP Factory
  */
+
 class E_Renard : public Ennemi
 {
 public:

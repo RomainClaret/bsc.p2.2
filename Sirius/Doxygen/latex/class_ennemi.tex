@@ -2,7 +2,7 @@
 \label{class_ennemi}\index{Ennemi@{Ennemi}}
 
 
-Classe parent de touts les ennemis.  
+Enemy Class.  
 
 
 
@@ -44,6 +44,9 @@ Inheritance diagram for Ennemi\+:\begin{figure}[H]
 \item 
 \hypertarget{class_ennemi_a482e9c5ccc0cf1c3aa4e83f32f3eedb1}{}void {\bfseries set\+Path} (Q\+List$<$ Q\+Point $>$)\label{class_ennemi_a482e9c5ccc0cf1c3aa4e83f32f3eedb1}
 
+\item 
+\hypertarget{class_ennemi_a6811b0a25a92ec210750072b83d1f74e}{}void {\bfseries pinguin\+On\+View\+Bloc} ()\label{class_ennemi_a6811b0a25a92ec210750072b83d1f74e}
+
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -51,7 +54,7 @@ Inheritance diagram for Ennemi\+:\begin{figure}[H]
 \hypertarget{class_ennemi_afc6832bb7b5969ac0e13f87c643a5ce2}{}void {\bfseries advance} (int)\label{class_ennemi_afc6832bb7b5969ac0e13f87c643a5ce2}
 
 \item 
-\hypertarget{class_ennemi_ad68ed78a65bdade39ff0b1b55a190240}{}void {\bfseries set\+Pos\+View\+Bloc} (Q\+Graphics\+Rect\+Item $\ast$, Q\+Point)\label{class_ennemi_ad68ed78a65bdade39ff0b1b55a190240}
+\hypertarget{class_ennemi_a239561a109368460aaae98da30938dc4}{}void {\bfseries set\+Pos\+View\+Bloc} (\hyperlink{class_s___view_bloc_ennemi}{S\+\_\+\+View\+Bloc\+Ennemi} $\ast$, Q\+Point)\label{class_ennemi_a239561a109368460aaae98da30938dc4}
 
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -63,7 +66,7 @@ Inheritance diagram for Ennemi\+:\begin{figure}[H]
 \hypertarget{class_ennemi_a4ddf1ae5a5662a8206dc6f4a3aac6fbf}{}Q\+List$<$ Q\+Point $>$ {\bfseries path}\label{class_ennemi_a4ddf1ae5a5662a8206dc6f4a3aac6fbf}
 
 \item 
-\hypertarget{class_ennemi_ab6afa5e2cd63928656532a8c99fe64f8}{}Q\+List$<$ \hyperlink{struct_view_bloc}{View\+Bloc} $>$ {\bfseries champ\+Vue}\label{class_ennemi_ab6afa5e2cd63928656532a8c99fe64f8}
+\hypertarget{class_ennemi_aabd4b33e091ce69e811959720e14dde6}{}Q\+List$<$ \hyperlink{class_s___view_bloc_ennemi}{S\+\_\+\+View\+Bloc\+Ennemi} $\ast$ $>$ {\bfseries champ\+Vue}\label{class_ennemi_aabd4b33e091ce69e811959720e14dde6}
 
 \item 
 \hypertarget{class_ennemi_a5537ad37a49d572d09a76749238490c2}{}Q\+String {\bfseries left\+Skin}\label{class_ennemi_a5537ad37a49d572d09a76749238490c2}
@@ -84,9 +87,27 @@ Inheritance diagram for Ennemi\+:\begin{figure}[H]
 
 
 \subsection{Detailed Description}
-Classe parent de touts les ennemis. 
+Enemy Class. 
 
-C\textquotesingle{}est la classe parent des ennemis. Elle permet de definir, de diriger, et specifier les enemies enfants 
+Parent class for enemies. Contains the orientation, the path, the skin, the definition, and the specification. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27 January 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]integrate with D\+P Factory \end{DoxyRefDesc}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

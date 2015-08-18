@@ -13,8 +13,20 @@
 
 #ifndef B_WATER_H
 #define B_WATER_H
-
 #include "surface.h"
+
+/**
+ * @brief Water block
+ * @details This block make the character fall in the water.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo integrate with DP Factory
+ */
+
 class QGraphicsRectItem;
 
 class B_Water : public Surface

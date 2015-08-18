@@ -23,11 +23,16 @@ class Gameboard;
 class S_ViewBlocEnnemi;
 
 /**
- * \brief Classe parent de touts les ennemis.
- *
- * C'est la classe parent des ennemis. Elle permet de
- * definir, de diriger, et specifier les enemies enfants
- *
+ * @brief Enemy Class
+ * @details Parent class for enemies.
+ * Contains the orientation, the path, the skin, the definition, and the specification.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo integrate with DP Factory
  */
 
 class Ennemi : public QGraphicsItem
