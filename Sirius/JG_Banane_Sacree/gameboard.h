@@ -19,7 +19,7 @@
 #include "p_penguin.h"
 #include "b_movable.h"
 #include "m_pause.h"
-#include "level.h"
+#include "level2.h"
 #include "w_object.h"
 #include "w_dialog.h"
 #include "profil.h"
@@ -129,7 +129,7 @@ private:
     int windowSizeX;
 
     //Positionnement et gestion du niveau
-    Level* currentLevel;
+    Level2* currentLevel;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;

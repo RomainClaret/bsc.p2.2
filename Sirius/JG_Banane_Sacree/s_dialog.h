@@ -27,10 +27,14 @@ public:
     void setDialogNumber(int value);
     int getDialogNumber();
 
+    void addDialogText(QString text);
+    QString getText();
+
 private:
     void setDesign();
 
     int dialogNumber;
+    QString text;
 
 };
 

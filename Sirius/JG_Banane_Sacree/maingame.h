@@ -67,7 +67,7 @@ private:
     static int gameSquares;
     QString windowTitle;
 
-    Level* currentLevel;
+    Level2* currentLevel;
 
     int menuSizeX;
     int menuSizeY;

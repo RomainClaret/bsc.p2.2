@@ -1,0 +1,5962 @@
+<?xml version="1.0"?>
+<DATA>
+ <LEVEL>
+  <SIZE width="60" height="30"/>
+  <POSITION x="3" y="1"/>
+  <START x="60" y="8"/>
+  <END x="0" y="20"/>
+ </LEVEL>
+ <LEVELITEM>
+  <COLONNE position="19">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="20">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="39">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="40">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="1">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="3">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="5">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="8">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="9">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="10">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="11">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="14">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="16">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="18">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="21">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="22">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="23">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="24">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="25">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="26">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="27">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="28">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="29">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="30">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="31">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="32">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="33">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="34">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="35">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="36">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="37">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="38">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="41">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="42">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="43">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="44">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="45">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="46">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="47">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="48">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+	<DOOR />
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="49">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="50">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="51">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="52">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="53">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="54">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="55">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="56">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="57">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="58">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="59">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <ITEM type="SHOES"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="0">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="SNOW"/>
+    <END nextLevel="1"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="15">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="4" y="10" i="1"/>
+     <MOVE x="4" y="4" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="6">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="2" y="25" i="1"/>
+     <MOVE x="5" y="25" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="6" y="4" i="1"/>
+     <MOVE x="13" y="4" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="4">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="6" y="6" i="1"/>
+     <MOVE x="13" y="6" i="2"/>
+     <MOVE x="13" y="8" i="3"/>
+     <MOVE x="6" y="8" i="4"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="13">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="7" y="23" i="1"/>
+     <MOVE x="7" y="27" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="7">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="12" y="23" i="1"/>
+     <MOVE x="10" y="23" i="2"/>
+     <MOVE x="10" y="25" i="3"/>
+     <MOVE x="12" y="25" i="4"/>
+     <MOVE x="12" y="27" i="5"/>
+     <MOVE x="10" y="27" i="6"/>
+     <MOVE x="12" y="27" i="7"/>
+     <MOVE x="12" y="25" i="8"/>
+     <MOVE x="10" y="25" i="9"/>
+     <MOVE x="10" y="23" i="10"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="12">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="13" y="10" i="1"/>
+     <MOVE x="6" y="10" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="2">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="15" y="4" i="1"/>
+     <MOVE x="15" y="10" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="17">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALL"/>
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+    <ENNEMI type="LOUP">
+     <MOVE x="17" y="25" i="1"/>
+     <MOVE x="14" y="25" i="2"/>
+    </ENNEMI>
+   </LIGNE>
+  </COLONNE>
+ </LEVELITEM>
+</DATA>

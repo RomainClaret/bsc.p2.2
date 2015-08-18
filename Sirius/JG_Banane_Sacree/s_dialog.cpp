@@ -44,3 +44,13 @@ int S_Dialog::getDialogNumber()
 {
     return this->dialogNumber;
 }
+
+void S_Dialog::addDialogText(QString text)
+{
+    this->text = text;
+}
+
+QString S_Dialog::getText()
+{
+    return this->text;
+}

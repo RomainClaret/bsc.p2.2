@@ -17,7 +17,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -52,7 +52,8 @@ player.cpp \
     s_dialog.cpp \
     w_dialog.cpp \
     w_life.cpp \
-    s_viewblocennemi.cpp
+    s_viewblocennemi.cpp \
+    level2.cpp
 
 HEADERS  += \
     player.h \
@@ -78,7 +79,8 @@ HEADERS  += \
     s_dialog.h \
     w_dialog.h \
     w_life.h \
-    s_viewblocennemi.h
+    s_viewblocennemi.h \
+    level2.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
