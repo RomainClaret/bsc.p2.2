@@ -35,6 +35,7 @@ class Ennemi : public QGraphicsItem
 
 public:
     Ennemi(QList<QPoint>, Gameboard *g);
+    ~Ennemi();
     void addToScene(QGraphicsScene*);
 
     QRectF boundingRect() const;

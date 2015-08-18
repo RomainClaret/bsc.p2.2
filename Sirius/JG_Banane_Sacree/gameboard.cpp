@@ -19,6 +19,7 @@
 #include "m_menustart.h"
 #include "object.h"
 #include "s_viewtransition.h"
+#include "s_viewblocennemi.h"
 #include "s_snow.h"
 #include "s_ice.h"
 #include "s_dialog.h"
@@ -420,6 +421,14 @@ void Gameboard::checkPositionEvents()
             dialogProxy->show();
             dialog->setText("Tu t'es fait repéré par un ennemi",2);
             dialogToogle = true;
+        }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlocEnnemi).name()) //collision avec le champs de vue d'un ennemi
+        {
+            S_ViewBlocEnnemi *vb;
+            vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
+
+            vb->pinguinOn();
+            qDebug() << "---------je me suis déplacé sur le champs de vue d'un ennemi";
         }
     }
     if(pingouin->x() == currentLevel->getUnlockEndPoint().x() && pingouin->y() == currentLevel->getUnlockEndPoint().y())

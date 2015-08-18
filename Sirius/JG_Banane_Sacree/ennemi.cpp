@@ -57,6 +57,14 @@ Ennemi::Ennemi(QList<QPoint> path, Gameboard *g)
     setZValue(2);
 }
 
+Ennemi::~Ennemi()
+{
+    foreach (S_ViewBlocEnnemi* vb, champVue)
+    {
+        delete vb;
+    }
+}
+
 void Ennemi::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;
@@ -237,7 +245,7 @@ void Ennemi::advance(int step)
     {
         //En supprimant ces deux appels on optimise grandement le programme
         viewBlocActif(); //désactive les blocs obstrués par un mur
-        pinguinDetection(); //test la détection du pingouin
+        //pinguinDetection(); //test la détection du pingouin
 
         if(time % speed == 0 && !detectPinguin)
         {

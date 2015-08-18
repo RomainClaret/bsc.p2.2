@@ -46,10 +46,14 @@ bool S_ViewBlocEnnemi::isActif()
     return actif;
 }
 
+//le pinguoin s'est déplacé sur un bloc de détection
 void S_ViewBlocEnnemi::pinguinOn()
 {
-    setStylePinguinOn();
-    proprietaire->pinguinOnViewBloc();
+    if(actif)
+    {
+        setStylePinguinOn();
+        proprietaire->pinguinOnViewBloc(); //relai de l'info
+    }
 }
 
 void S_ViewBlocEnnemi::setStylePinguinOn()
