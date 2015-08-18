@@ -36,7 +36,7 @@ public:
      * @brief Constructor with position setup.
      * @param xpos set the postion on the x-axis
      * @param ypos set the postion on the y-axis
-     * @param parent QGraphicsItem parent
+     * @param parent QGraphicsItem to depend on
      */
     B_Water(int xpos, int ypos, QGraphicsItem *parent = 0);
 

@@ -276,7 +276,7 @@ void Gameboard::SlidePingouin()
 }
 
 Gameboard::~Gameboard(){
-
+    removeAllItems();
 }
 
 
@@ -301,7 +301,12 @@ void Gameboard::setViewPosition()
     }
 }
 
-//appelé à chaque déplacement d'un bloc déplacable
+
+/**
+ * @details Called at each block displacement.
+ * Used mainly when block is moving.
+ * Check if collides with B_Water, S_ViewTransition, B_Wall, Object, S_ViewBlocEnnemi.
+ */
 void Gameboard::fixeMovable(B_Movable *b)
 {
     QList<QGraphicsItem *> CollidingItems = b->CollidesCenter();
@@ -460,6 +465,9 @@ void Gameboard::checkPositionEvents()
     }
 }
 
+/**
+ * @details Directions: "l":left, "r":right, "t":top, "b":bottom.
+ */
 void Gameboard::checkChangeView(char sens)
 {
     QList<QGraphicsItem *> CollidingItems = pingouin->CollidesCenter();
@@ -524,6 +532,9 @@ void Gameboard::checkChangeView(char sens)
     }
 }
 
+/**
+ * @details Directions: "l":left, "r":right, "t":top, "b":bottom.
+ */
 void Gameboard::ChangeView(char sens)
 {
     saveCheckpoint();
@@ -593,6 +604,9 @@ void Gameboard::setPositionTop(QWidget* widget)
     widget->setGeometry(viewPositionX,viewPositionY,width,height);
 }
 
+/**
+ * @details Directions: "l":left, "r":right, "t":top, "b":bottom.
+ */
 void Gameboard::MoveBloc(char sens)
 {
     switch(sens)
@@ -796,6 +810,10 @@ bool Gameboard::MovePingouinToBottom()
     return MovePingouin(pingouin->CollidesBottom(), 'b');
 }
 
+/**
+ * @details Uses the cross of boxes.
+ * Directions: "l":left, "r":right, "t":top, "b":bottom.
+ */
 bool Gameboard::MovePingouin(QList<QGraphicsItem *> CollidingItems, char sensDepl)
 {
     bool bMove = true;
@@ -1004,8 +1022,12 @@ void Gameboard::setProxy()
     dialogToogle = false;
 }
 
+/**
+ * @details -1 StartMenu, 0 tutorial, 1 main island, 2 level-1, 3 level-2, 4 level-3, 5 level-4, 6 level-5, 7 level-6, 8 final-level
+ */
 void Gameboard::setLevel(int value)
 {
+    delete currentLevel;
     playerProfil->setLevel(value);
     currentLevel = new Level2(value, this);
     pingouin->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());

@@ -36,7 +36,8 @@ class QLabel;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo encrypt save files, add credits
+ * @todo encrypt save files
+ * @todo add credits
  */
 
 class MenuStart : public QWidget

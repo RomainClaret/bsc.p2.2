@@ -28,7 +28,7 @@ class QGraphicsScene;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo integrate with DP Factoryx
+ * @todo integrate with DP Factory
  */
 //@bug no bugs
 //@warning no warnings
@@ -46,11 +46,11 @@ public:
 
     /**
      * @brief Constructor without position setup
-     * @param parent QGraphicsItem parent
+     * @param parent QGraphicsItem to depend on
      */
     B_Movable(QGraphicsItem *parent = 0);
 
-    //Methodes related to the Scene
+    //Methods related to the Scene
     /**
      * @brief Add self to scene.
      * @param Scene scene to add self to
@@ -76,7 +76,7 @@ public:
      */
     void setPos(int x, int y);
 
-    //Methodes related to the displacement of the block
+    //Methods related to the displacement of the block
     /**
      * @brief Check if self can move to the left.
      * @return true if can move to left

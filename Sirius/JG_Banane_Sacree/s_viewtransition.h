@@ -29,6 +29,7 @@ class QGraphicsItem;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
+ * @todo refactor into s_door
  */
 class S_ViewTransition : public Surface
 {
