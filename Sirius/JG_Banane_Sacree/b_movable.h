@@ -28,7 +28,7 @@ class QGraphicsScene;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo integrate with DP Factory
+ * @todo integrate with DP Factoryx
  */
 //@bug no bugs
 //@warning no warnings

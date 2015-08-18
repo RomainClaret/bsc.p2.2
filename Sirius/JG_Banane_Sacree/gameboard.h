@@ -54,7 +54,7 @@ struct slideBloc{
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo integrate with DP Factory
+ * @todo update
  */
 
 class Gameboard : public QWidget

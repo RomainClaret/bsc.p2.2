@@ -13,8 +13,20 @@
 
 #ifndef E_LOUP_H
 #define E_LOUP_H
-
 #include "ennemi.h"
+
+/**
+ * @brief Enemy Character: Wolf
+ * @details This is a character with its own characteristics.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo integrate with DP Factory
+ */
+
 class Gameboard;
 
 class E_Loup : public Ennemi
