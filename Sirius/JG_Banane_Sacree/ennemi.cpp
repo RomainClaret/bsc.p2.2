@@ -36,6 +36,9 @@
 #include "p_penguin.h"
 #include "s_viewblocennemi.h"
 
+#include "stateennemi_patrol.h"
+#include "stateennemi_sleep.h"
+
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
     #include <typeinfo.h>
@@ -55,6 +58,10 @@ Ennemi::Ennemi(QList<QPoint> path, Gameboard *g)
 
     setPath(path);
     setZValue(2);
+
+
+    //default state
+    state = new StateEnnemi_Patrol();
 }
 
 Ennemi::~Ennemi()
@@ -63,6 +70,24 @@ Ennemi::~Ennemi()
     {
         delete vb;
     }
+
+    delete state;
+}
+
+/**
+ * @detail replace the state of the enemy with newState
+ */
+void Ennemi::changeState(StateEnnemi* newState)
+{
+    delete state;
+    this->state = newState;
+}
+/**
+ * @detail getEnemyPos return the position with the correct coords on the map
+ */
+QPoint Ennemi::getEnemyPos()
+{
+    return convertPosPoint(this->pos());
 }
 
 void Ennemi::setPath(QList<QPoint> path)
@@ -221,172 +246,7 @@ void Ennemi::advance(int step)
 {
     if(step == 1) //répond au second appel
     {
-        //En supprimant ces deux appels on optimise grandement le programme
-        //viewBlocActif(); //désactive les blocs obstrués par un mur
-        //pinguinDetection(); //test la détection du pingouin
-
-        if(time % speed == 0 && !detectPinguin)
-        {
-            time = 0;
-            QPoint posEnnemi = convertPosPoint(this->pos());
-
-            //1 on trouve son orientation
-            char direction = orientation;
-            if(path.at(iDestPoint).x() > posEnnemi.x())
-            {
-                direction = 'r'; // la direction voulu avant de marcher
-            }
-            else if(path.at(iDestPoint).x() < posEnnemi.x())
-            {
-                direction = 'l';
-            }
-            else if(path.at(iDestPoint).y() > posEnnemi.y())
-            {
-                direction = 'b';
-            }
-            else if(path.at(iDestPoint).y() < posEnnemi.y())
-            {
-                direction = 't';
-            }
-
-            if(direction != orientation) //l'orientation n'est pas bonne
-            {
-                //le point est a ma gauche ou a ma droite ?
-                   if(orientation == 't')
-                   {
-                       if(path.at(iDestPoint).x() > posEnnemi.x())
-                       {
-                           //tourne a droite
-                           setOrientation_right();
-                       }
-                       else if(path.at(iDestPoint).x() < posEnnemi.x())
-                       {
-                           //tourne a gauche
-                           setOrientation_left();
-                       }
-                       else if(path.at(iDestPoint).y() > posEnnemi.y())
-                       {
-                           //on se retourne ( toujours par la droite )
-                           setOrientation_right();
-                       }
-                   }
-                   else if(orientation=='b')
-                   {
-                       if(path.at(iDestPoint).x() > posEnnemi.x())
-                       {
-                           //tourne a SA gauche
-                           setOrientation_right();
-                       }
-                       else if(path.at(iDestPoint).x() < posEnnemi.x())
-                       {
-                           //tourne a SA droite
-                           setOrientation_left();
-                       }
-                       else if(path.at(iDestPoint).y() < posEnnemi.y())
-                       {
-                           //on se retourne ( toujours par SA droite )
-                           setOrientation_left();
-                       }
-                   }
-                   else if(orientation=='r')
-                   {
-                       if(path.at(iDestPoint).x() < posEnnemi.x())
-                       {
-                           //on se retourne ( toujours par SA droite )
-                           setOrientation_bottom();
-                       }
-                       else if(path.at(iDestPoint).y() < posEnnemi.y())
-                       {
-                           //tourne a SA gauche
-                           setOrientation_top();
-                       }
-                       else if(path.at(iDestPoint).y() > posEnnemi.y())
-                       {
-                           //tourne a SA droite
-                           setOrientation_bottom();
-                       }
-                   }
-                   else if(orientation=='l')
-                   {
-                       if(path.at(iDestPoint).x() > posEnnemi.x())
-                       {
-                           //on se retourne ( toujours par SA droite )
-                           setOrientation_top();
-                       }
-                       else if(path.at(iDestPoint).y() < posEnnemi.y())
-                       {
-                           //tourne a SA droite
-                           setOrientation_top();
-                       }
-                       else if(path.at(iDestPoint).y() > posEnnemi.y())
-                       {
-                           //tourne a SA droite
-                           setOrientation_bottom();
-                       }
-                   }
-            }
-            else
-            {
-                //toujours déplacement en x en premier puis en y
-                if(path.at(iDestPoint).x() > posEnnemi.x())
-                {
-                    if(!collide())
-                    {
-                        this->moveBy(1,0);
-                    }
-                    else //inversion du sens de la ronde
-                    {
-                        sens = !sens;
-                        iDestPoint = nextPoint();
-                    }
-                }
-                else if(path.at(iDestPoint).x() < posEnnemi.x())
-                {
-                    if(!collide())
-                    {
-                        this->moveBy(-1,0);
-                    }
-                    else
-                    {
-                        sens = !sens;
-                        iDestPoint = nextPoint();
-                    }
-                }
-                else if(path.at(iDestPoint).y() > posEnnemi.y())
-                {
-                    if(!collide())
-                    {
-                        this->moveBy(0,1);
-                    }
-                    else
-                    {
-                        sens = !sens;
-                        iDestPoint = nextPoint();
-                    }
-                }
-                else if(path.at(iDestPoint).y() < posEnnemi.y())
-                {
-                    if(!collide())
-                    {
-                        this->moveBy(0,-1);
-                    }
-                    else
-                    {
-                        sens = !sens;
-                        iDestPoint = nextPoint();
-                    }
-                }
-                else //on est arrivé sur le point de destination
-                {
-                    iDestPoint = nextPoint();
-                }
-            }
-
-            viewBlocActif(); //désactive les blocs obstrués par un mur
-            pinguinDetection(); //test la détection du pingouin
-
-        }
-        time ++;
+        state->step(this);
     }
 }
 void Ennemi::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
