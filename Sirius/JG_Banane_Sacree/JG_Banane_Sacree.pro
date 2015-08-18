@@ -28,7 +28,7 @@ win32:RC_FILE = winIcon.rc
 
 
 SOURCES += \
-player.cpp \
+    player.cpp \
     surface.cpp \
     gameboard.cpp \
     main.cpp \
@@ -54,11 +54,12 @@ player.cpp \
     w_life.cpp \
     s_viewblocennemi.cpp \
     level2.cpp \
- 	observablesennemis.cpp \
+    observablesennemis.cpp \
     stateennemi_patrol.cpp \
     stateennemi_sleep.cpp \
     stateenemy_pause.cpp \
-surfacefactory.cpp
+    surfacefactory.cpp
+
 HEADERS  += \
     player.h \
     surface.h \
@@ -85,12 +86,14 @@ HEADERS  += \
     w_life.h \
     s_viewblocennemi.h \
     level2.h \
-	observablesennemis.h \
+    observablesennemis.h \
     stateennemi.h \
     stateennemi_patrol.h \
     stateennemi_sleep.h \
     stateenemy_pause.h \
-    surfacefactory.hRESOURCES += \
+    surfacefactory.h
+
+RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc
