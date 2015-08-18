@@ -27,19 +27,19 @@ void \hyperlink{class_b___movable_a8a23ac4b1692d95607dcccd6d6c9a973}{add\+To\+Sc
 void \hyperlink{class_b___movable_aa4d26e877655021ef70bc6914fe04418}{remove\+From\+Scene} (Q\+Graphics\+Scene $\ast$Scene)
 \begin{DoxyCompactList}\small\item\em Remove self to scene. \end{DoxyCompactList}\item 
 void \hyperlink{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{move\+By} (int x, int y)
-\begin{DoxyCompactList}\small\item\em Move object by x and y values. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Move self by x and y values. \end{DoxyCompactList}\item 
 void \hyperlink{class_b___movable_aca717ec608426940422f1bc658201bf5}{set\+Pos} (int x, int y)
-\begin{DoxyCompactList}\small\item\em Set the position of the object with the x and y values. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set the position of self with the x and y values. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}{Is\+Movable\+To\+Left} ()
-\begin{DoxyCompactList}\small\item\em Check if the block can move to the left. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if self can move to the left. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b___movable_a134b648413c6d27c008f8a0655ffa0f9}{Is\+Movable\+To\+Right} ()
-\begin{DoxyCompactList}\small\item\em Check if the block can move to the right. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if self can move to the right. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}{Is\+Movable\+To\+Bottom} ()
-\begin{DoxyCompactList}\small\item\em Check if the block can move to the bottom. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if self can move to the bottom. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}{Is\+Movable\+To\+Top} ()
-\begin{DoxyCompactList}\small\item\em Check if the block can move to the top. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if self can move to the top. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}{is\+Slide} ()
-\begin{DoxyCompactList}\small\item\em Check if it should slide. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if self should slide. \end{DoxyCompactList}\item 
 Q\+List$<$ Q\+Graphics\+Item $\ast$ $>$ \hyperlink{class_b___movable_a081e4e71fb9483330f3315e6b32bbcbb}{Collides\+Center} ()
 \begin{DoxyCompactList}\small\item\em Get all colliding blocks. \end{DoxyCompactList}\item 
 Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a4cb26e3d494505eaaa6773c0a448c479}{get\+Collide\+Bloc\+Position} (char sens)
@@ -184,7 +184,7 @@ Check the direction as parameter (\char`\"{}b\char`\"{}\+:bottom,\char`\"{}l\cha
 )}\label{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}
 
 
-Check if the block can move to the bottom. 
+Check if self can move to the bottom. 
 
 \begin{DoxyReturn}{Returns}
 true if can move to bottom 
@@ -198,7 +198,7 @@ true if can move to bottom
 )}\label{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}
 
 
-Check if the block can move to the left. 
+Check if self can move to the left. 
 
 \begin{DoxyReturn}{Returns}
 true if can move to left 
@@ -212,7 +212,7 @@ true if can move to left
 )}\label{class_b___movable_a134b648413c6d27c008f8a0655ffa0f9}
 
 
-Check if the block can move to the right. 
+Check if self can move to the right. 
 
 \begin{DoxyReturn}{Returns}
 true if can move to right 
@@ -226,7 +226,7 @@ true if can move to right
 )}\label{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}
 
 
-Check if the block can move to the top. 
+Check if self can move to the top. 
 
 \begin{DoxyReturn}{Returns}
 true if can move to top 
@@ -240,10 +240,10 @@ true if can move to top
 )}\label{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}
 
 
-Check if it should slide. 
+Check if self should slide. 
 
 \begin{DoxyReturn}{Returns}
-true if it collides with a specific block.
+true if self collides with a specific block.
 \end{DoxyReturn}
 Check if the cross of detection collides with \hyperlink{class_s___ice}{S\+\_\+\+Ice}. \hypertarget{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!move\+By@{move\+By}}
 \index{move\+By@{move\+By}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
@@ -255,7 +255,7 @@ Check if the cross of detection collides with \hyperlink{class_s___ice}{S\+\_\+\
 )}\label{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}
 
 
-Move object by x and y values. 
+Move self by x and y values. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -290,7 +290,7 @@ Remove self and the cross for colliding detectection. \hypertarget{class_b___mov
 )}\label{class_b___movable_aca717ec608426940422f1bc658201bf5}
 
 
-Set the position of the object with the x and y values. 
+Set the position of self with the x and y values. 
 
 
 \begin{DoxyParams}{Parameters}

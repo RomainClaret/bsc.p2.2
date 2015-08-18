@@ -21,7 +21,11 @@ B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos
 {
     setDesign();
 }
-B_Water::B_Water(QGraphicsItem *parent) : Surface(0, 0, parent) //Pas le choix, obligé de donner un position fictive
+
+/**
+ * @details No other choice that use FICTIVE positions x and y. Here set at 0.
+ */
+B_Water::B_Water(QGraphicsItem *parent) : Surface(0, 0, parent)
 {
     setDesign();
 }

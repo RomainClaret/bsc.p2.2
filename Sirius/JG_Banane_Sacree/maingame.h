@@ -57,6 +57,7 @@ class QLabel;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
+ * @todo Manage the close event correctly, because it's painful when just in the MenuStart.
  */
 
 class MainGame : public QWidget

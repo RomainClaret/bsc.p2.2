@@ -39,6 +39,11 @@ class QPushButton;
 class QPoint;
 class QTimer;
 
+/**
+ * @brief Structure used in Gameboard.
+ * @details Used for blocks when they slides into a direction ("l":left, "r":right, "t":top, "b":bottom).
+ * @todo integrate with DP Factory
+ */
 struct slideBloc{
     B_Movable *slidingMovable;
     char sens; //l, r, t, b
@@ -56,7 +61,6 @@ struct slideBloc{
  * @date 27 January 2015
  * @todo update
  */
-
 class Gameboard : public QWidget
 {
     Q_OBJECT

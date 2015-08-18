@@ -15,6 +15,8 @@
 #define E_LOUP_H
 #include "ennemi.h"
 
+class Gameboard;
+
 /**
  * @brief Enemy Character: Wolf
  * @details This is a character with its own characteristics.
@@ -26,12 +28,15 @@
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-
-class Gameboard;
-
 class E_Loup : public Ennemi
 {
 public:
+    //Constructors
+    /**
+     * @brief Constructor with path setup.
+     * @param path QList of QPoint for the path
+     * @param g Gameboard to construct on
+     */
     E_Loup(QList<QPoint> path, Gameboard *g);
 };
 

@@ -28,10 +28,15 @@
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-
 class E_Renard : public Ennemi
 {
 public:
+    //Constructors
+    /**
+     * @brief Constructor with path setup.
+     * @param path QList of QPoint for the path
+     * @param g Gameboard to construct on
+     */
     E_Renard(QList<QPoint> path, Gameboard *g);
 };
 

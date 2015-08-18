@@ -34,36 +34,86 @@ class S_ViewBlocEnnemi;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-
 class Ennemi : public QGraphicsItem
 {
 
 public:
+    //Constructors
+    /**
+     * @brief Constructor with path setup.
+     * @param path QList of QPoint for the path
+     * @param g Gameboard to construct on
+     */
     Ennemi(QList<QPoint>, Gameboard *g);
+
+    //Destructor
+    /**
+      * @brief Destrucation of the blocks used for the vision.
+      */
     ~Ennemi();
+
+    //Methods related to the scene
+    /**
+     * @brief Add self to the scene.
+     */
     void addToScene(QGraphicsScene*);
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
+    //Methods related to self
+    /**
+     * @brief Set the orientation of self to the top.
+     */
     void setOrientation_top();
+
+    /**
+     * @brief Set the orientation of self to the bottom
+     */
     void setOrientation_bottom();
+
+    /**
+     * @brief Set the orientation of self to the left
+     */
     void setOrientation_left();
+
+    /**
+     * @brief Set the orientation of self to the right
+     */
     void setOrientation_right();
 
+    /**
+     * @brief Set the path of self for the automatic displacement.
+     */
     void setPath(QList<QPoint>);
 
+    /**
+     * @brief Restart game is Playable character is detected.
+     */
     void pinguinOnViewBloc();
+
+    /**
+     * @brief Enable or Disable vision blocks.
+     */
     void viewBlocActif();
 
 protected:
-    void advance(int);
+    /**
+     * @brief Moves self by an amount.
+     * @param step amount to move self
+     */
+    void advance(int step);
     int speed;
 
     QList<QPoint> path;
     QList<S_ViewBlocEnnemi* > champVue;
 
-    void setPosViewBloc(S_ViewBlocEnnemi*, QPoint);
+    /**
+     * @brief Set the position of the block "S_ViewBlocEnnemi"
+     * @param bloc self is positioned to this S_ViewBlocEnnemi
+     * @param p
+     */
+    void setPosViewBloc(S_ViewBlocEnnemi* bloc, QPoint p);
 
     //Les skins sont les images attribué au méchant
     QString leftSkin;
@@ -80,13 +130,42 @@ private:
     int time;
     char orientation;
 
-    void moveBy(int, int);
-    void setPos(int, int);
-    QPoint convertPosPoint(QPointF);
+    /**
+     * @brief Move self by x and y values.
+     * @param x move this amount on the x-axis
+     * @param y move this amount on the y-axis
+     */
+    void moveBy(int x, int y);
+
+    /**
+     * @brief Set the position of self with the x and y values.
+     * @param x set the postion on the x-axis
+     * @param y set the postion on the y-axis
+     */
+    void setPos(int x, int y);
+
+    /**
+     * @brief Convert QPointF to QPoint.
+     * @param psrc QPointF to convet
+     * @return converted QPoint
+     */
+    QPoint convertPosPoint(QPointF psrc);
+
+    /**
+     * @brief Check of collison with self.
+     * @return true if self collides
+     */
     bool collide();
 
+    /**
+     * @brief Get the next point in the list.
+     * @return id of the next point in the list of points
+     */
     int nextPoint();
 
+    /**
+     * @brief Detect if the Playable character Pingouin is in the vision.
+     */
     void pinguinDetection();
 
     Gameboard *game;
