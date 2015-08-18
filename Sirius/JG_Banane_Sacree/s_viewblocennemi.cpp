@@ -14,6 +14,8 @@ S_ViewBlocEnnemi::S_ViewBlocEnnemi(int ligne, int colonne, Ennemi* proprietaire,
     this->colonne = colonne;
     this->proprietaire = proprietaire;
     this->setZValue(2);
+
+    setStyleActivated();
 }
 
 void S_ViewBlocEnnemi::setActif(bool actif)
@@ -53,6 +55,15 @@ void S_ViewBlocEnnemi::pinguinOn()
     {
         setStylePinguinOn();
         proprietaire->pinguinOnViewBloc(); //relai de l'info
+    }
+}
+
+void S_ViewBlocEnnemi::blocOn()
+{
+    //recalcul le champs de vision de l'ennemi
+    if(actif)
+    {
+        proprietaire->viewBlocActif();
     }
 }
 

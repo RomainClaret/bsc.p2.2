@@ -301,6 +301,7 @@ void Gameboard::setViewPosition()
     }
 }
 
+//appelé à chaque déplacement d'un bloc déplacable
 void Gameboard::fixeMovable(B_Movable *b)
 {
     QList<QGraphicsItem *> CollidingItems = b->CollidesCenter();
@@ -353,6 +354,14 @@ void Gameboard::fixeMovable(B_Movable *b)
                 dialogToogle = true;
             }
         }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlocEnnemi).name()) //collision avec le champs de vue d'un ennemi
+        {
+            S_ViewBlocEnnemi *vb;
+            vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
+            vb->blocOn();
+            qDebug() << "---- un bloc obstrue la vue";
+        }
+
     }
 }
 
@@ -428,7 +437,7 @@ void Gameboard::checkPositionEvents()
             vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
 
             vb->pinguinOn();
-            qDebug() << "---------je me suis déplacé sur le champs de vue d'un ennemi";
+            //qDebug() << "---------Je me suis déplacé sur le champs de vue d'un ennemi";
         }
     }
     if(pingouin->x() == currentLevel->getUnlockEndPoint().x() && pingouin->y() == currentLevel->getUnlockEndPoint().y())

@@ -49,6 +49,7 @@ public:
     void setPath(QList<QPoint>);
 
     void pinguinOnViewBloc();
+    void viewBlocActif();
 
 protected:
     void advance(int);
@@ -81,7 +82,6 @@ private:
 
     int nextPoint();
 
-    void viewBlocActif();
     void pinguinDetection();
 
     Gameboard *game;
