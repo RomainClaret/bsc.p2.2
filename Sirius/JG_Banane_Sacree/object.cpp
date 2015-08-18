@@ -55,3 +55,7 @@ QPixmap Object::getTexture()
 {
     return objectSkin->texture();
 }
+
+QString Object::OBJECT_EGG = "EGG";
+QString Object::OBJECT_SHOES = "SHOES";
+QString Object::OBJECT_FISH = "FISH";

@@ -4917,7 +4917,7 @@
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG position="9" text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire rep�rer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité"/>
+    <DIALOG position="9" text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire repérer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">

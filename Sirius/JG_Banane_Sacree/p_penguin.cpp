@@ -166,7 +166,7 @@ Player* Pingouin::getPlayer(){
 
 void Pingouin::addObjectToSacoche(Object *object)
 {
-    if(object->getName()=="Oeuf")
+    if(object->getName()== Object::OBJECT_EGG)
     {
         nbLives++;
     }

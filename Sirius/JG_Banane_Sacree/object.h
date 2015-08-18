@@ -44,12 +44,14 @@ public:
     QString getName();
     QPixmap getTexture();
 
+    static QString OBJECT_EGG;
+    static QString OBJECT_SHOES;
+    static QString OBJECT_FISH;
+
 private:
     QBrush* objectSkin;
     QString* nom;
 
 };
-
-
 
 #endif // OBJECT_H
