@@ -24,15 +24,19 @@ class QLineEdit;
 class QLabel;
 
 /**
- * \brief Premier menu (start) que le joueur voie en lancant le jeu.
- *
- * QWidget du menu principal du jeu. Celui-ci permet de
- * créer un profile d'utilisateur et de lancer un partie
- * déjà existante dans un profile existant.
- * Les sauvegardes sont sauvées dans le repertoire :
- * MacOSX : Game.app/Contents/MacOS/save.json
- * Windows : Dans le meme dossier que Game.exe
- * A noter que la sauvegarde est en texte et n'est pas encrypté.
+ * @brief Main menu, which appears at the game startup.
+ * @details It allows the user to select or create a profil and run a game.
+ * Games are saved in a json file type. Saves are found in:
+ * MacOSX : "Game.app/Contents/MacOS/save.json",
+ * Windows : Dans le meme dossier que Game.exe.
+ * Save files are not encrypted.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo encrypt save files, add credits
  */
 
 class MenuStart : public QWidget

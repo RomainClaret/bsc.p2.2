@@ -15,6 +15,10 @@
 #include "gameboard.h"
 #include "s_viewblocennemi.h"
 
+/**
+ * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
+ * Vision of the enemy is created here.
+ */
 E_Loup::E_Loup(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
 {
     //vitesse entre 1 et 100

@@ -21,7 +21,22 @@ class QPushButton;
 class QFormLayout;
 class QGraphicsDropShadowEffect;
 
-
+/**
+ * @brief Pause Menu, which appears when the game is paused.
+ * @details It allows the user to:
+ * Resume the game,
+ * Go the main island to select another level,
+ * Quit the game,
+ * Restart the enigma,
+ * Restart the level,
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo add credits, cheat codes
+ */
 
 class M_Pause : public QWidget
 {

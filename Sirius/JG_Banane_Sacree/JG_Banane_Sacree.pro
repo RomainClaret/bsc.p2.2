@@ -17,7 +17,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -53,7 +53,8 @@ player.cpp \
     w_dialog.cpp \
     w_life.cpp \
     s_viewblocennemi.cpp \
-    observablesennemis.cpp \
+    level2.cpp \
+ 	observablesennemis.cpp \
     stateennemi_patrol.cpp \
     stateennemi_sleep.cpp \
     stateenemy_pause.cpp
@@ -83,7 +84,8 @@ HEADERS  += \
     w_dialog.h \
     w_life.h \
     s_viewblocennemi.h \
-    observablesennemis.h \
+    level2.h \
+	observablesennemis.h \
     stateennemi.h \
     stateennemi_patrol.h \
     stateennemi_sleep.h \

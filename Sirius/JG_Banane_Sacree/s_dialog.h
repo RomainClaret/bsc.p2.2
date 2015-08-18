@@ -18,6 +18,17 @@
 
 class QGraphicsItem;
 
+
+/**
+ * @brief Dialog blocks.
+ * @details Surface with a dialog to interact with the player.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 class S_Dialog : public Surface
 {
 public:
@@ -27,10 +38,14 @@ public:
     void setDialogNumber(int value);
     int getDialogNumber();
 
+    void addDialogText(QString text);
+    QString getText();
+
 private:
     void setDesign();
 
     int dialogNumber;
+    QString text;
 
 };
 

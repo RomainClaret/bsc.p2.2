@@ -44,6 +44,10 @@
     #include <typeinfo.h>
 #endif
 
+/**
+ * @details Set the speed at 100, Z value at 2, detectPinguin to false, sens to true and the path given.
+ * For the speed: 1 is really fast, 100 is really slow.
+ */
 Ennemi::Ennemi(QList<QPoint> path, Gameboard *g)
 {
     game = g;
@@ -168,8 +172,10 @@ void Ennemi::pinguinDetection()
     }
 }
 
-//appelé par les s_viewblocennemi si le pingouin marche (se déplace) dessus
-//ou par ennemi si un pingouin est detecté
+/**
+  * @details Called by the s_viewblocennemi if the playable character collides with it,
+  * Or by the enemy if the playable character is detected.
+  */
 void Ennemi::pinguinOnViewBloc()
 {
     this->detectPinguin = true;
@@ -183,6 +189,9 @@ QPoint Ennemi::convertPosPoint(QPointF psrc)
     return QPoint(x, y);
 }
 
+/**
+ * @details Check for each S_ViewBlocEnnemi of champVue if collides with B_Water, B_Movable, B_Wall, or Ennemi.
+ */
 bool Ennemi::collide()
 {
     S_ViewBlocEnnemi *collideRect;
@@ -215,8 +224,9 @@ bool Ennemi::collide()
     return false;
 }
 
-//renvoi l'id du point suivant dans la liste de point
-//prend en compte le sens de déplacement de l'ennemi
+/**
+ * @details  Taking in account the direction of the enemy.
+ */
 int Ennemi::nextPoint()
 {
     if(sens)
@@ -240,8 +250,10 @@ int Ennemi::nextPoint()
     return iDestPoint;
 }
 
-//Exécuté à chaque appel du slot "advance()" de la scene
-//Cerveau de l'ennemi
+/**
+ * @details Executed at each call of the slot advance() from the Scene.
+ * It is the brain of the enemy.
+ */
 void Ennemi::advance(int step)
 {
     if(step == 1) //répond au second appel
@@ -249,6 +261,7 @@ void Ennemi::advance(int step)
         state->step(this);
     }
 }
+
 void Ennemi::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     //Draw the ennemi
@@ -279,6 +292,7 @@ void Ennemi::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget 
     painter->fillRect(ennemiBox,*ennemiSkin);   //charger la couleur
     painter->drawRect(ennemiBox);
 }
+
 QRectF Ennemi::boundingRect() const
 {
     return QRectF(0,0,Gameboard::getGameSquares()-2,Gameboard::getGameSquares()-2);
@@ -322,6 +336,9 @@ void Ennemi::setOrientation_right()
 }
 
 //Défini la position d'un bloc "viewBloc" en fonction de sa ligne et sa colonne
+/**
+ * @details Define the poistion of the block S_ViewBlocEnnemi in function of its line and column.
+ */
 void Ennemi::setPosViewBloc(S_ViewBlocEnnemi* bloc, QPoint p)
 {
     int gs = Gameboard::getGameSquares();
@@ -339,6 +356,7 @@ void Ennemi::setPos(int x, int y)
 
     QGraphicsItem::setPos(x*Gameboard::getGameSquares()+1, y*Gameboard::getGameSquares()+1);
 }
+
 void Ennemi::moveBy(int x, int y)
 {
     int gameSquare = Gameboard::getGameSquares();

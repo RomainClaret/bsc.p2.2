@@ -23,7 +23,7 @@
 #include "s_snow.h"
 #include "s_ice.h"
 #include "s_dialog.h"
-#include "level.h"
+#include "level2.h"
 #include "ennemi.h"
 #include "e_renard.h"
 #include "e_loup.h"
@@ -75,7 +75,7 @@ Gameboard::Gameboard(QWidget *parent) : QWidget(parent)
     pingouin = new Pingouin();
     checkpoint = new QPoint(0,0);
     playerProfil = new Profil();
-    currentLevel = new Level(0, this);
+    currentLevel = new Level2(0, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     playerView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -410,7 +410,7 @@ void Gameboard::checkPositionEvents()
 
             setPositionCenter(dialog);
             dialogProxy->show();
-            dialog->setText(currentLevel->getDialogText(item->getDialogNumber()),1);
+            dialog->setText(item->getText(),1);
             dialogToogle = true;
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
@@ -467,6 +467,7 @@ void Gameboard::checkChangeView(char sens)
     {
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewTransition).name())
         {
+            qDebug() << "TRANSITION!";
             S_ViewTransition *bloc = dynamic_cast<S_ViewTransition*>(CollidingItems.at(i));
             if(bloc->isEndLevel() && endable)
             {
@@ -1006,7 +1007,7 @@ void Gameboard::setProxy()
 void Gameboard::setLevel(int value)
 {
     playerProfil->setLevel(value);
-    currentLevel = new Level(value, this);
+    currentLevel = new Level2(value, this);
     pingouin->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
     MenuStart::saveGame(playerProfil);
@@ -1054,7 +1055,7 @@ void Gameboard::setFirstDialog()
 {
     setPositionCenter(dialog);
     dialogProxy->show();
-    dialog->setText(currentLevel->getDialogText(1),1);
+    dialog->setText("OK",1);
     dialogToogle = true;
 }
 

@@ -107,7 +107,12 @@ int main(int argc, char *argv[])
         }
     }
     fHeader.close();
-    doc.appendChild(level);
+
+    QDomNode noeud = doc.createProcessingInstruction("xml","version=\"1.0\"");
+    doc.insertBefore(noeud,doc.firstChild());
+
+    QDomElement data = doc.createElement("DATA");
+    data.appendChild(level);
 
     QStringList dialogList;
     levelName = QFileDialog::getOpenFileName(0, QObject::tr("Open File"), "/", QObject::tr("Text files (*.cpp *.txt)"));
@@ -129,7 +134,7 @@ int main(int argc, char *argv[])
     }
     fTextes.close();
 
-    QDomElement lvl_elements = doc.createElement("LEVEL_ELEMENT");
+    QDomElement lvl_elements = doc.createElement("LEVELITEM");
 
     levelName = QFileDialog::getOpenFileName(0, QObject::tr("Open File"), "/", QObject::tr("Text files (*.cpp *.txt)"));
     QFile fLevel(levelName);
@@ -187,12 +192,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","WALL");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","WALL");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -214,12 +219,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","WALL");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","WALL");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -242,12 +247,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","MOVABLE");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","MOVABLE");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -272,12 +277,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"ITEM","type","ITEM");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"ITEM","type","ITEM");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -300,12 +305,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"ITEM","type","BONUS");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"ITEM","type","BONUS");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -328,8 +333,8 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
 
                             QString type;
                             switch(values.at(matX).toInt())
@@ -339,7 +344,7 @@ int main(int argc, char *argv[])
                             default:break;
                             }
 
-                            element = findElement(doc, colonne,"ENNEMI","type",type);
+                            element = findElement(doc, ligne,"ENNEMI","type",type);
 
                             for (int i = 0; i < ennemi.at(k).size(); ++i) {
                                 QDomElement deplacement = doc.createElement("MOVE");
@@ -349,9 +354,9 @@ int main(int argc, char *argv[])
                                 element.appendChild(deplacement);
                             }
 
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
 
                             k++;
                         }
@@ -375,12 +380,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"END","nextLevel",values.at(matX));
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"END","nextLevel",values.at(matX));
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -402,18 +407,20 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+
+                            qDebug() << "x : " << matX << " y : " << matY;
 
                             if(values.at(matX).toInt() > 20 && values.at(matX).toInt() < 30)
                             {
-                                element = findElement(doc, colonne,"DOOR","item","Poisson");
+                                element = findElement(doc, ligne,"DOOR","item","Poisson");
                                 element.setAttribute("nbItem",values.at(matX).toInt()%20);
                             }
 
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -435,12 +442,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","WATER");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","WATER");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -463,12 +470,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","WALL");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","WALL");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -491,12 +498,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","SNOW");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","SNOW");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -519,12 +526,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"BLOC","type","ICE");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"BLOC","type","ICE");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -547,12 +554,12 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"ITEM","type","shoes");
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"ITEM","type","SHOES");
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -574,13 +581,13 @@ int main(int argc, char *argv[])
                     {
                         if(values.at(matX).toInt() != 0)
                         {
-                            ligne = findElement(doc, lvl_elements,"LIGNE","position",QString::number(matX));
-                            colonne = findElement(doc, ligne,"COLONNE","position",QString::number(matY));
-                            element = findElement(doc, colonne,"DIALOG","position",values.at(matX));
+                            colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                            ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                            element = findElement(doc, ligne,"DIALOG","position",values.at(matX));
                             element.setAttribute("text",dialogList.at(values.at(matX).toInt()-1));
-                            colonne.appendChild(element);
-                            ligne.appendChild(colonne);
-                            lvl_elements.appendChild(ligne);
+                            ligne.appendChild(element);
+                            colonne.appendChild(ligne);
+                            lvl_elements.appendChild(colonne);
                         }
                     }
                     line_count++;
@@ -595,7 +602,9 @@ int main(int argc, char *argv[])
         qDebug() << "Fichier non ouvert";
     }
 
-    doc.appendChild(lvl_elements);
+    data.appendChild(lvl_elements);
+    doc.appendChild(data);
+
     QTextStream out(&fileWrite);
     out << doc.toString();
 
