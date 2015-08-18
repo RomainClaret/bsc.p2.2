@@ -1,14 +1,14 @@
-#include "s_viewblocennemi.h"
+#include "s_viewblockenemy.h"
 
 #include <QGraphicsRectItem>
 #include <QGraphicsItem>
 #include <QBrush>
 #include <QPen>
-#include "ennemi.h"
+#include "enemy.h"
 #include "gameboard.h"
 
 
-S_ViewBlocEnnemi::S_ViewBlocEnnemi(int ligne, int colonne, Ennemi* proprietaire, QGraphicsItem *parent) : Surface(0, 0, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent)
+S_ViewBlockEnemy::S_ViewBlockEnemy(int ligne, int colonne, Enemy* proprietaire, QGraphicsItem *parent) : Surface(0, 0, Gameboard::getGameSquares()-2, Gameboard::getGameSquares()-2, parent)
 {
     this->ligne = ligne;
     this->colonne = colonne;
@@ -18,7 +18,7 @@ S_ViewBlocEnnemi::S_ViewBlocEnnemi(int ligne, int colonne, Ennemi* proprietaire,
     setStyleActivated();
 }
 
-void S_ViewBlocEnnemi::setActif(bool actif)
+void S_ViewBlockEnemy::setActif(bool actif)
 {
     this->actif = actif;
 
@@ -33,41 +33,41 @@ void S_ViewBlocEnnemi::setActif(bool actif)
     }
 }
 
-int S_ViewBlocEnnemi::getLine()
+int S_ViewBlockEnemy::getLine()
 {
     return ligne;
 }
 
-int S_ViewBlocEnnemi::getColonne()
+int S_ViewBlockEnemy::getColonne()
 {
     return colonne;
 }
 
-bool S_ViewBlocEnnemi::isActif()
+bool S_ViewBlockEnemy::isActif()
 {
     return actif;
 }
 
 //le pinguoin s'est déplacé sur un bloc de détection
-void S_ViewBlocEnnemi::pinguinOn()
+void S_ViewBlockEnemy::pinguinOn()
 {
     if(actif)
     {
         setStylePinguinOn();
-        proprietaire->pinguinOnViewBloc(); //relai de l'info
+        proprietaire->playableCharacterOnViewBloc(); //relai de l'info
     }
 }
 
-void S_ViewBlocEnnemi::blocOn()
+void S_ViewBlockEnemy::blocOn()
 {
     //recalcul le champs de vision de l'ennemi
     if(actif)
     {
-        proprietaire->viewBlocActif();
+        proprietaire->viewBlockActive();
     }
 }
 
-void S_ViewBlocEnnemi::setStylePinguinOn()
+void S_ViewBlockEnemy::setStylePinguinOn()
 {
     QBrush brush;
     brush.setStyle(Qt::DiagCrossPattern);
@@ -81,7 +81,7 @@ void S_ViewBlocEnnemi::setStylePinguinOn()
     this->setPen(pen);
 }
 
-void S_ViewBlocEnnemi::setStyleUnactivated()
+void S_ViewBlockEnemy::setStyleUnactivated()
 {
     QBrush brush;
     brush.setStyle(Qt::Dense6Pattern);
@@ -94,7 +94,7 @@ void S_ViewBlocEnnemi::setStyleUnactivated()
     this->setPen(pen);
 }
 
-void S_ViewBlocEnnemi::setStyleActivated()
+void S_ViewBlockEnemy::setStyleActivated()
 {
     QBrush brush;
     brush.setStyle(Qt::DiagCrossPattern);

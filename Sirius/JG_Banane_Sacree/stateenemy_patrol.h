@@ -1,7 +1,7 @@
 #ifndef STATEENNEMI_PATROL_H
 #define STATEENNEMI_PATROL_H
-#include "stateennemi.h"
-class Ennemi;
+#include "stateenemy.h"
+class Enemy;
 
 /**
  * @brief Concrete class of the State Pattern for Ennemis
@@ -13,20 +13,20 @@ class Ennemi;
  * @version 1.0
  * @date 18 august 2015
  */
-class StateEnnemi_Patrol : public StateEnnemi
+class StateEnemy_Patrol : public StateEnemy
 {
 public:
 
     /**
      * @brief StateEnnemi_Patrol Constructor of StateEnnemi_Patrol
      */
-    StateEnnemi_Patrol();
+    StateEnemy_Patrol();
 
     /**
      * @brief step This is the brain of the Ennemi, it determinate the way of the ennemi and move him
      * @param ennemi
      */
-    void step(Ennemi* ennemi);
+    void step(Enemy* ennemi);
 };
 
 #endif // STATEENNEMI_PATROL_H

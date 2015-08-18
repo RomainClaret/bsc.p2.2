@@ -1,8 +1,8 @@
 #ifndef STATEENEMY_PAUSE_H
 #define STATEENEMY_PAUSE_H
 
-#include "stateennemi.h"
-class Ennemi;
+#include "stateenemy.h"
+class Enemy;
 
 /**
  * @brief Concrete class of the State Pattern for Ennemis
@@ -26,7 +26,7 @@ public:
      * @brief step is the brain of the enemy, in this case the enemy just freeze
      * @param ennemi
      */
-    void step(Ennemi* ennemi);
+    void step(Enemy* ennemi);
 };
 
 #endif // STATEENEMY_PAUSE_H

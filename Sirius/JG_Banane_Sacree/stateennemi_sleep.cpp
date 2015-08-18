@@ -1,8 +1,8 @@
-#include "stateennemi_sleep.h"
-#include "ennemi.h"
-#include "s_viewblocennemi.h"
+#include "stateenemy_sleep.h"
+#include "enemy.h"
+#include "s_viewblockenemy.h"
 
-StateEnnemi_Sleep::StateEnnemi_Sleep() : StateEnnemi()
+StateEnemy_Sleep::StateEnemy_Sleep() : StateEnemy()
 {
     initialisation = true;
 }
@@ -10,11 +10,11 @@ StateEnnemi_Sleep::StateEnnemi_Sleep() : StateEnnemi()
 /**
  * @details Desactivate the view of the ennemi at the first run and do nothing after
  */
-void StateEnnemi_Sleep::step(Ennemi* ennemi)
+void StateEnemy_Sleep::step(Enemy* ennemi)
 {
     if(initialisation)
     {
-        foreach (S_ViewBlocEnnemi* vb, ennemi->champVue)
+        foreach (S_ViewBlockEnemy* vb, ennemi->viewField)
         {
             vb->setActif(false);
         }

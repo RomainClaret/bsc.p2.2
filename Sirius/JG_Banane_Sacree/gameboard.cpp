@@ -11,7 +11,6 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-{
 #include "gameboard.h"
 #include "p_penguin.h"
 #include "b_wall.h"
@@ -20,14 +19,14 @@
 #include "m_menustart.h"
 #include "object.h"
 #include "s_viewtransition.h"
-#include "s_viewblocennemi.h"
+#include "s_viewblockenemy.h"
 #include "s_snow.h"
 #include "s_ice.h"
 #include "s_dialog.h"
 #include "level.h"
-#include "ennemi.h"
-#include "e_renard.h"
-#include "e_loup.h"
+#include "enemy.h"
+#include "e_fox.h"
+#include "e_wolf.h"
 #include "profil.h"
 
 #include <QtWidgets>
@@ -46,7 +45,6 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QGraphicsProxyWidget>
-}
 
 #define SLIDE_SPEED (80)
 
@@ -113,7 +111,7 @@ void Gameboard::SlideBloc()
             {
             case 't':
 
-                if(SlidingBloc->IsMovableToTop())
+                if(SlidingBloc->isMovableToTop())
                 {
                     SlidingBloc->moveBy(0,-1);
                     fixeMovable(SlidingBloc);
@@ -127,7 +125,7 @@ void Gameboard::SlideBloc()
 
             case 'b':
 
-                if(SlidingBloc->IsMovableToBottom())
+                if(SlidingBloc->isMovableToBottom())
                 {
                     SlidingBloc->moveBy(0,1);
                     fixeMovable(SlidingBloc);
@@ -141,7 +139,7 @@ void Gameboard::SlideBloc()
 
             case 'l':
 
-                if(SlidingBloc->IsMovableToLeft())
+                if(SlidingBloc->isMovableToLeft())
                 {
                     SlidingBloc->moveBy(-1,0);
                     fixeMovable(SlidingBloc);
@@ -155,7 +153,7 @@ void Gameboard::SlideBloc()
 
             case 'r':
 
-                if(SlidingBloc->IsMovableToRight())
+                if(SlidingBloc->isMovableToRight())
                 {
                     SlidingBloc->moveBy(1,0);
                     fixeMovable(SlidingBloc);
@@ -311,7 +309,7 @@ void Gameboard::setViewPosition()
  */
 void Gameboard::fixeMovable(B_Movable *b)
 {
-    QList<QGraphicsItem *> CollidingItems = b->CollidesCenter();
+    QList<QGraphicsItem *> CollidingItems = b->collidesCenter();
     for(int i=0; i<CollidingItems.length(); i++)
     {
         QPoint p = b->getPos();
@@ -361,10 +359,10 @@ void Gameboard::fixeMovable(B_Movable *b)
                 dialogToogle = true;
             }
         }
-        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlocEnnemi).name()) //collision avec le champs de vue d'un ennemi
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockEnemy).name()) //collision avec le champs de vue d'un ennemi
         {
-            S_ViewBlocEnnemi *vb;
-            vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
+            S_ViewBlockEnemy *vb;
+            vb = dynamic_cast<S_ViewBlockEnemy*>(CollidingItems.at(i));
             vb->blocOn();
             //qDebug() << "---- un bloc obstrue la vue";
         }
@@ -382,7 +380,7 @@ void Gameboard::checkPositionEvents()
         {
             Object *objet = dynamic_cast<Object*>(CollidingItems.at(i));
             qDebug() << objet->getName();
-            pingouin->addObjectToSacoche(new Object(objet->getName()));
+            pingouin->addObjectToBag(new Object(objet->getName()));
             mainScene->removeItem(CollidingItems.at(i));
 
             if(objet->getName() == Object::OBJECT_SHOES)
@@ -406,7 +404,7 @@ void Gameboard::checkPositionEvents()
                 }
             }
 
-            objectList->reloadObjectList(pingouin->getSacoche());
+            objectList->reloadObjectList(pingouin->getBag());
             setPositionBottom(objectList);
             objectList->show();
         }
@@ -429,7 +427,7 @@ void Gameboard::checkPositionEvents()
             dialog->setText("Plouf, dans l'eau! Tu recommences au dernier checkpoint",2);
             dialogToogle = true;
         }
-        if(typeid(*CollidingItems.at(i)).name() == typeid(E_Renard).name() || typeid(*CollidingItems.at(i)).name() == typeid(E_Loup).name())
+        if(typeid(*CollidingItems.at(i)).name() == typeid(E_Fox).name() || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name())
         {
             restartEnigma();
 
@@ -438,10 +436,10 @@ void Gameboard::checkPositionEvents()
             dialog->setText("Tu t'es fait repéré par un ennemi",2);
             dialogToogle = true;
         }
-        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlocEnnemi).name()) //collision avec le champs de vue d'un ennemi
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockEnemy).name()) //collision avec le champs de vue d'un ennemi
         {
-            S_ViewBlocEnnemi *vb;
-            vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
+            S_ViewBlockEnemy *vb;
+            vb = dynamic_cast<S_ViewBlockEnemy*>(CollidingItems.at(i));
 
             vb->pinguinOn();
             //qDebug() << "---------Je me suis déplacé sur le champs de vue d'un ennemi";
@@ -540,7 +538,7 @@ void Gameboard::checkChangeView(char sens)
 void Gameboard::ChangeView(char sens)
 {
     saveCheckpoint();
-    pingouin->emptyTempSacoche();
+    pingouin->emptyTempBag();
 
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
 
@@ -576,7 +574,7 @@ void Gameboard::ChangeView(char sens)
     setViewPosition();
     playerView->setSceneRect(viewPositionX,viewPositionY,windowSizeX,windowSizeY);
 
-    objectList->reloadObjectList(pingouin->getSacoche());
+    objectList->reloadObjectList(pingouin->getBag());
     setPositionBottom(objectList);
     setPositionCenter(dialog);
     setPositionTop(lifeList);
@@ -830,22 +828,22 @@ bool Gameboard::MovePingouin(QList<QGraphicsItem *> CollidingItems, char sensDep
             B_Movable *b;
             b = dynamic_cast<B_Movable*>(CollidingItems.at(i));
 
-            if(sensDepl == 'l' && b->IsMovableToLeft() && checkPosition(b->getCollideBlocPosition(sensDepl)))
+            if(sensDepl == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(sensDepl)))
             {
                 moveBloc = b;
                 bMove = true;
             }
-            else if(sensDepl == 'r' && b->IsMovableToRight() && checkPosition(b->getCollideBlocPosition(sensDepl)))
+            else if(sensDepl == 'r' && b->isMovableToRight() && checkPosition(b->getCollideBlocPosition(sensDepl)))
             {
                 moveBloc = b;
                 bMove = true;
             }
-            else if(sensDepl == 't' && b->IsMovableToTop() && checkPosition(b->getCollideBlocPosition(sensDepl)))
+            else if(sensDepl == 't' && b->isMovableToTop() && checkPosition(b->getCollideBlocPosition(sensDepl)))
             {
                 moveBloc = b;
                 bMove = true;
             }
-            else if(sensDepl == 'b' && b->IsMovableToBottom()  && checkPosition(b->getCollideBlocPosition(sensDepl)))
+            else if(sensDepl == 'b' && b->isMovableToBottom()  && checkPosition(b->getCollideBlocPosition(sensDepl)))
             {
                 moveBloc = b;
                 bMove = true;
@@ -1005,7 +1003,7 @@ void Gameboard::setProxy()
     toggleMenuPause = false;
 
     objectList = new WidgetObject(this);
-    objectList->reloadObjectList(pingouin->getSacoche());
+    objectList->reloadObjectList(pingouin->getBag());
     setPositionBottom(objectList);
     objectListProxy = mainScene->addWidget(objectList);
     objectListProxy->show();

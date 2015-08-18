@@ -164,7 +164,7 @@ Player* Pingouin::getPlayer(){
      return this;
 }
 
-void Pingouin::addObjectToSacoche(Object *object)
+void Pingouin::addObjectToBag(Object *object)
 {
     if(object->getName()== Object::OBJECT_EGG)
     {
@@ -205,7 +205,7 @@ void Pingouin::printSacoche()
     qDebug() << " ";
 }
 
-QList<Object*> Pingouin::getSacoche()
+QList<Object*> Pingouin::getBag()
 {
     return sacoche;
 }
@@ -231,7 +231,7 @@ bool Pingouin::checkObjectSacoche(QString object, int quantity)
     }
 }
 
-void Pingouin::emptyTempSacoche()
+void Pingouin::emptyTempBag()
 {
     tempSacoche.clear();
 }
@@ -249,7 +249,7 @@ void Pingouin::removeTempFromSacoche()
         QString nom = tempSacoche.at(i)->getName();
         removeObjectFromSacoche(nom);
     }
-    emptyTempSacoche();
+    emptyTempBag();
 }
 
 QGraphicsRectItem* Pingouin::getCollideBloc(char sensDepl)

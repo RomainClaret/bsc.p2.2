@@ -11,15 +11,15 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "e_renard.h"
+#include "e_fox.h"
 #include "gameboard.h"
-#include "s_viewblocennemi.h"
+#include "s_viewblockenemy.h"
 
 /**
  * @details Set the skin, speed at 10, Z value at 2 and default orientation to top.
  * Vision of the enemy is created here.
  */
-E_Renard::E_Renard(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
+E_Fox::E_Fox(QList<QPoint> path, Gameboard *g) : Enemy(path, g)
 {
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
@@ -37,8 +37,8 @@ E_Renard::E_Renard(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
     {
         for(int j=-1; j<=1; j++)
         {
-            S_ViewBlocEnnemi* vb = new S_ViewBlocEnnemi(j, i, this);
-            champVue.append(vb);
+            S_ViewBlockEnemy* vb = new S_ViewBlockEnemy(j, i, this);
+            viewField.append(vb);
         }
     }
 

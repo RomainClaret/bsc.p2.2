@@ -6,7 +6,7 @@
 #include "s_dialog.h"
 #include "s_ice.h"
 #include "s_snow.h"
-#include "s_viewblocennemi.h"
+#include "s_viewblockenemy.h"
 #include "s_viewtransition.h"
 
 #include "b_movable.h"

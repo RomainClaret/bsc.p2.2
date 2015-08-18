@@ -11,15 +11,15 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "e_loup.h"
+#include "e_wolf.h"
 #include "gameboard.h"
-#include "s_viewblocennemi.h"
+#include "s_viewblockenemy.h"
 
 /**
  * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
  * Vision of the enemy is created here.
  */
-E_Loup::E_Loup(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
+E_Wolf::E_Wolf(QList<QPoint> path, Gameboard *g) : Enemy(path, g)
 {
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
@@ -35,8 +35,8 @@ E_Loup::E_Loup(QList<QPoint> path, Gameboard *g) : Ennemi(path, g)
     //Création du champs de vue
     for(int i=1; i<=5; i++)
     {
-        S_ViewBlocEnnemi* vb = new S_ViewBlocEnnemi(0, i, this);
-        champVue.append(vb);
+        S_ViewBlockEnemy* vb = new S_ViewBlockEnemy(0, i, this);
+        viewField.append(vb);
     }
 
     //il lui faut une orientation de base

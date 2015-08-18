@@ -1,20 +1,20 @@
-#include "stateennemi_patrol.h"
-#include "ennemi.h"
+#include "stateenemy_patrol.h"
+#include "enemy.h"
 
-StateEnnemi_Patrol::StateEnnemi_Patrol() : StateEnnemi()
+StateEnemy_Patrol::StateEnemy_Patrol() : StateEnemy()
 {
 }
 
 /**
  * @details Calculate the direction and move the ennemi with his view. Take care that "StateEnnemi_Patrol" is a Friend of "Ennemi"
  */
-void StateEnnemi_Patrol::step(Ennemi* ennemi)
+void StateEnemy_Patrol::step(Enemy* ennemi)
 {
     //En supprimant ces deux appels on optimise grandement le programme
     //viewBlocActif(); //désactive les blocs obstrués par un mur
     //pinguinDetection(); //test la détection du pingouin
 
-    if(ennemi->time % ennemi->speed == 0 && !ennemi->detectPinguin)
+    if(ennemi->time % ennemi->speed == 0 && !ennemi->detectPlayableCharacter)
     {
         ennemi->time = 0;
         QPoint posEnnemi = ennemi->convertPosPoint(ennemi->pos());
@@ -125,7 +125,7 @@ void StateEnnemi_Patrol::step(Ennemi* ennemi)
                 }
                 else //inversion du sens de la ronde
                 {
-                    ennemi->sens = !ennemi->sens;
+                    ennemi->direction = !ennemi->direction;
                     ennemi->iDestPoint = ennemi->nextPoint();
                 }
             }
@@ -137,7 +137,7 @@ void StateEnnemi_Patrol::step(Ennemi* ennemi)
                 }
                 else
                 {
-                    ennemi->sens = !ennemi->sens;
+                    ennemi->direction = !ennemi->direction;
                     ennemi->iDestPoint = ennemi->nextPoint();
                 }
             }
@@ -149,7 +149,7 @@ void StateEnnemi_Patrol::step(Ennemi* ennemi)
                 }
                 else
                 {
-                    ennemi->sens = !ennemi->sens;
+                    ennemi->direction = !ennemi->direction;
                     ennemi->iDestPoint = ennemi->nextPoint();
                 }
             }
@@ -161,7 +161,7 @@ void StateEnnemi_Patrol::step(Ennemi* ennemi)
                 }
                 else
                 {
-                    ennemi->sens = !ennemi->sens;
+                    ennemi->direction = !ennemi->direction;
                     ennemi->iDestPoint = ennemi->nextPoint();
                 }
             }
@@ -171,8 +171,8 @@ void StateEnnemi_Patrol::step(Ennemi* ennemi)
             }
         }
 
-        ennemi->viewBlocActif(); //désactive les blocs obstrués par un mur
-        ennemi->pinguinDetection(); //test la détection du pingouin
+        ennemi->viewBlockActive(); //désactive les blocs obstrués par un mur
+        ennemi->playableCharacterDetection(); //test la détection du pingouin
 
     }
     ennemi->time ++;

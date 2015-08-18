@@ -81,25 +81,25 @@ public:
      * @brief Check if self can move to the left.
      * @return true if can move to left
      */
-    bool IsMovableToLeft();
+    bool isMovableToLeft();
 
     /**
      * @brief Check if self can move to the right.
      * @return true if can move to right
      */
-    bool IsMovableToRight();
+    bool isMovableToRight();
 
     /**
      * @brief Check if self can move to the bottom.
      * @return true if can move to bottom
      */
-    bool IsMovableToBottom();
+    bool isMovableToBottom();
 
     /**
      * @brief Check if self can move to the top.
      * @return true if can move to top
      */
-    bool IsMovableToTop();
+    bool isMovableToTop();
 
     /**
      * @brief Check if self should slide
@@ -111,7 +111,7 @@ public:
      * @brief Get all colliding blocks.
      * @return colliding QGraphicsItem
      */
-    QList<QGraphicsItem *> CollidesCenter();
+    QList<QGraphicsItem *> collidesCenter();
 
     /**
      * @brief Get the colliding block from a direction.
@@ -147,7 +147,7 @@ private:
      * @param l QList of QGraphicsItem
      * @return true if self can move
      */
-    bool IsMovable(QList<QGraphicsItem *> l);
+    bool isMovable(QList<QGraphicsItem *> l);
 
     /**
      * @brief Create the cross of items around self.

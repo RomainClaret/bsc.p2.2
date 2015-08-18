@@ -63,13 +63,13 @@ public:
     void moveBack();
 
     void addToScene(QGraphicsScene*);
-    void addObjectToSacoche(Object *object);
+    void addObjectToBag(Object *object);
     void removeObjectFromSacoche(QString object);
     void removeTempFromSacoche();
     bool checkObjectSacoche(QString object, int quantity = 1);
-    QList<Object*> getSacoche();
+    QList<Object*> getBag();
     void printSacoche();
-    void emptyTempSacoche();
+    void emptyTempBag();
     void emptySacoche();
 
     bool isSlide();

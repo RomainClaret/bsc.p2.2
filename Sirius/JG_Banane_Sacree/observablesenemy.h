@@ -17,7 +17,7 @@
 //@bug no bugs
 //@warning no warnings
 
-#include "ennemi.h"
+#include "enemy.h"
 #include <QList>
 #include <QPoint>
 
@@ -38,23 +38,23 @@ public:
      * @brief addEnnemiObserver add ennemi as observer
      * @param ennemi the new observer
      */
-    void addEnnemiObserver(Ennemi* ennemi);
+    void addEnnemiObserver(Enemy* ennemi);
 
     /**
      * @brief changeEnnemiState change the state of the ennemis in the LEVEL PHASE
      * @param ennemi the new observer
      * @param posPlayer is the position of the player
      */
-    void changeEnnemiState(StateEnnemi* state, QPoint posPlayer);
+    void changeEnnemiState(StateEnemy* state, QPoint posPlayer);
 
     /**
      * @brief changeEnnemiState change the state of ALL ennemis in the level
      * @param ennemi the new observer
      */
-    void changeEnnemiState(StateEnnemi* state);
+    void changeEnnemiState(StateEnemy* state);
 
 private:
-    QList<Ennemi*> list_ennemisObserver;
+    QList<Enemy*> list_ennemisObserver;
 
 };
 

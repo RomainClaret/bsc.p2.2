@@ -3,20 +3,20 @@
 
 class QGraphicsRectItem;
 class QGraphicsItem;
-class Ennemi;
+class Enemy;
 
 #include "surface.h"
 
-class S_ViewBlocEnnemi : public Surface
+class S_ViewBlockEnemy : public Surface
 {
 public:
-    S_ViewBlocEnnemi(int ligne, int colonne, Ennemi* proprietaire, QGraphicsItem *parent = 0);
+    S_ViewBlockEnemy(int ligne, int colonne, Enemy* proprietaire, QGraphicsItem *parent = 0);
     int getLine();
     int getColonne();
     bool isActif();
     void setActif(bool actif);
 
-    Ennemi* proprietaire;
+    Enemy* proprietaire;
 
     void pinguinOn();
     void blocOn();

@@ -1,6 +1,6 @@
 #ifndef STATEENNEMI_SLEEP_H
 #define STATEENNEMI_SLEEP_H
-#include "stateennemi.h"
+#include "stateenemy.h"
 class ennemi;
 
 /**
@@ -13,20 +13,20 @@ class ennemi;
  * @version 1.0
  * @date 18 august 2015
  */
-class StateEnnemi_Sleep : public StateEnnemi
+class StateEnemy_Sleep : public StateEnemy
 {
 public:
 
     /**
      * @brief StateEnnemi_Sleep Constructor of StateEnnemi_Sleep
      */
-    StateEnnemi_Sleep();
+    StateEnemy_Sleep();
 
     /**
      * @brief step This is the brain of the Ennemi, in this case it only desactivate the view of the ennemi at the first run
      * @param ennemi
      */
-    void step(Ennemi* ennemi);
+    void step(Enemy* ennemi);
 
 private:
     bool initialisation;

@@ -19,9 +19,9 @@
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
-#include "ennemi.h"
-#include "e_renard.h"
-#include "e_loup.h"
+#include "enemy.h"
+#include "e_fox.h"
+#include "e_wolf.h"
 #include "gameboard.h"
 
 #include "s_ice.h"
@@ -125,14 +125,14 @@ void B_Movable::removeFromScene(QGraphicsScene* Scene)
 /**
  * @details Check if the cross of detection collides with B_Wall, B_Movable, E_Renard, E_Loup.
  */
-bool B_Movable::IsMovable(QList<QGraphicsItem *> l)
+bool B_Movable::isMovable(QList<QGraphicsItem *> l)
 {
     for(int i=0; i<l.length(); i++)
     {
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
            typeid(*l.at(i)).name() == typeid(B_Movable).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Renard).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Loup).name())
+           typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
+           typeid(*l.at(i)).name() == typeid(E_Wolf).name())
         {
             return false;
         }
@@ -145,7 +145,7 @@ bool B_Movable::IsMovable(QList<QGraphicsItem *> l)
  */
 bool B_Movable::isSlide()
 {
-    QList<QGraphicsItem *> CollidingItems = this->CollidesCenter();
+    QList<QGraphicsItem *> CollidingItems = this->collidesCenter();
 
     for(int i=0; i<CollidingItems.length(); i++)
     {
@@ -157,23 +157,23 @@ bool B_Movable::isSlide()
     return false;
 }
 
-bool B_Movable::IsMovableToLeft(){
-    return IsMovable(leftCollideBox->collidingItems());
+bool B_Movable::isMovableToLeft(){
+    return isMovable(leftCollideBox->collidingItems());
 }
 
-bool B_Movable::IsMovableToRight(){
-    return IsMovable(rightCollideBox->collidingItems());
+bool B_Movable::isMovableToRight(){
+    return isMovable(rightCollideBox->collidingItems());
 }
 
-bool B_Movable::IsMovableToBottom(){
-    return IsMovable(bottomCollideBox->collidingItems());
+bool B_Movable::isMovableToBottom(){
+    return isMovable(bottomCollideBox->collidingItems());
 }
 
-bool B_Movable::IsMovableToTop(){
-    return IsMovable(topCollideBox->collidingItems());
+bool B_Movable::isMovableToTop(){
+    return isMovable(topCollideBox->collidingItems());
 }
 
-QList<QGraphicsItem *> B_Movable::CollidesCenter(){
+QList<QGraphicsItem *> B_Movable::collidesCenter(){
      return collidingItems();
 }
 

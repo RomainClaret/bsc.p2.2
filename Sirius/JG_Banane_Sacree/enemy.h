@@ -11,22 +11,22 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef MECHANT_H
-#define MECHANT_H
+#ifndef ENEMY_H
+#define ENEMY_H
 
 #include <QGraphicsItem>
-#include "stateennemi.h"
+#include "stateenemy.h"
 
 
 class QPoint;
 class QGraphicsRectItem;
 class Gameboard;
 
-class S_ViewBlocEnnemi;
+class S_ViewBlockEnemy;
 
-class StateEnnemi;
-class StateEnnemi_Patrol;
-class StateEnnemi_Sleep;
+class StateEnemy;
+class StateEnemy_Patrol;
+class StateEnemy_Sleep;
 
 /**
  * @brief Enemy Class
@@ -40,12 +40,12 @@ class StateEnnemi_Sleep;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class Ennemi : public QGraphicsItem
+class Enemy : public QGraphicsItem
 {
-    friend class StateEnnemi;
-    friend class StateEnnemi_Patrol;
-    friend class StateEnnemi_Sleep;
-    friend class StateEnnemi_Pause;
+    friend class StateEnemy;
+    friend class StateEnemy_Patrol;
+    friend class StateEnemy_Sleep;
+    friend class StateEnemy_Pause;
 
 public:
     //Constructors
@@ -54,13 +54,13 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    Ennemi(QList<QPoint>, Gameboard *g);
+    Enemy(QList<QPoint> path, Gameboard *g);
 
     //Destructor
     /**
       * @brief Destruction of the blocks used for the vision.
       */
-    ~Ennemi();
+    ~Enemy();
 
     //Methods related to the scene
     /**
@@ -100,12 +100,12 @@ public:
     /**
      * @brief Restart game is Playable character is detected.
      */
-    void pinguinOnViewBloc();
+    void playableCharacterOnViewBloc();
 
     /**
      * @brief Enable or Disable vision blocks.
      */
-    void viewBlocActif();
+    void viewBlockActive();
 
     /**
      * @brief getEnemyPos return the position with the correct coords on the map
@@ -117,7 +117,7 @@ public:
      * @brief changeState replace the state of the enemy with newState
      * @param newState
      */
-    void changeState(StateEnnemi* newState);
+    void changeState(StateEnemy* newState);
 
 protected:
     /**
@@ -128,14 +128,14 @@ protected:
     int speed;
 
     QList<QPoint> path;
-    QList<S_ViewBlocEnnemi* > champVue;
+    QList<S_ViewBlockEnemy* > viewField;
 
     /**
-     * @brief Set the position of the block "S_ViewBlocEnnemi"
-     * @param bloc self is positioned to this S_ViewBlocEnnemi
+     * @brief Set the position of the block "S_ViewBlocEnemy"
+     * @param bloc self is positioned to this S_ViewBlocEnemy
      * @param p
      */
-    void setPosViewBloc(S_ViewBlocEnnemi* bloc, QPoint p);
+    void setPosViewBloc(S_ViewBlockEnemy* block, QPoint p);
 
     //Skins are the pictures given to self
     QString leftSkin;
@@ -143,12 +143,12 @@ protected:
     QString upSkin;
     QString downSkin;
 
-    QBrush *ennemiSkin;
+    QBrush *enemySkin;
 
 private:
     int iDestPoint;
-    bool sens;
-    bool detectPinguin;
+    bool direction;
+    bool detectPlayableCharacter;
     int time;
     char orientation;
 
@@ -188,13 +188,13 @@ private:
     /**
      * @brief Detect if the Playable character Pingouin is in the vision.
      */
-    void pinguinDetection();
+    void playableCharacterDetection();
 
     Gameboard *game;
 
-    StateEnnemi* state;
+    StateEnemy* state;
 
 
 };
 
-#endif // MECHANT_H
+#endif // ENEMY_H

@@ -29,8 +29,8 @@
 #include "s_dialog.h"
 #include "object.h"
 
-#include "e_loup.h"
-#include "e_renard.h"
+#include "e_wolf.h"
+#include "e_fox.h"
 
 #include <QPoint>
 #include <QDebug>
@@ -181,12 +181,12 @@ void Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
         }
         if(ennemiType == "FOX")
         {
-            E_Renard *item2 = new E_Renard(move, game);
+            E_Fox *item2 = new E_Fox(move, game);
             item2->addToScene(scene);
         }
         else if(ennemiType == "WOLF")
         {
-            E_Loup *item2 = new E_Loup(move, game);
+            E_Wolf *item2 = new E_Wolf(move, game);
             item2->addToScene(scene);
         }
     }

@@ -1,4 +1,4 @@
-#include "observablesennemis.h"
+#include "observablesenemy.h"
 #include "gameboard.h"
 
 /**
@@ -10,7 +10,7 @@ ObservablesEnnemis::ObservablesEnnemis()
 
 ObservablesEnnemis::~ObservablesEnnemis()
 {
-    foreach (Ennemi* enemy, list_ennemisObserver)
+    foreach (Enemy* enemy, list_ennemisObserver)
     {
         delete enemy;
     }
@@ -19,7 +19,7 @@ ObservablesEnnemis::~ObservablesEnnemis()
 /**
  * @details addEnnemiObserver add ennemi as observer
  */
-void ObservablesEnnemis::addEnnemiObserver(Ennemi* ennemi)
+void ObservablesEnnemis::addEnnemiObserver(Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
 }
@@ -27,7 +27,7 @@ void ObservablesEnnemis::addEnnemiObserver(Ennemi* ennemi)
 /**
  * @details changeEnnemiState change the state of the ennemis in the LEVEL PHASE
  */
-void ObservablesEnnemis::changeEnnemiState(StateEnnemi* state, QPoint posPlayer)
+void ObservablesEnnemis::changeEnnemiState(StateEnemy* state, QPoint posPlayer)
 {
     //find the player's zone
     int gameX = Gameboard::getSizeX();
@@ -48,7 +48,7 @@ void ObservablesEnnemis::changeEnnemiState(StateEnnemi* state, QPoint posPlayer)
     //  1,2  2,2  3,2
 
     //change the state of the enemies in this zone
-    foreach (Ennemi* enemy, list_ennemisObserver)
+    foreach (Enemy* enemy, list_ennemisObserver)
     {
         QPoint posEnemy = enemy->getEnemyPos();
 
@@ -63,9 +63,9 @@ void ObservablesEnnemis::changeEnnemiState(StateEnnemi* state, QPoint posPlayer)
 /**
  * @details changeEnnemiState change the state of all ennemis in the LEVEL
  */
-void ObservablesEnnemis::changeEnnemiState(StateEnnemi* state)
+void ObservablesEnnemis::changeEnnemiState(StateEnemy* state)
 {
-    foreach (Ennemi* enemy, list_ennemisObserver) {
+    foreach (Enemy* enemy, list_ennemisObserver) {
         enemy->changeState(state);
     }
 }

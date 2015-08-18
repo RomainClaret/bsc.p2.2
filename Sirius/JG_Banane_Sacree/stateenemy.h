@@ -1,7 +1,7 @@
 #ifndef STATEENNEMI_H
 #define STATEENNEMI_H
 
-class Ennemi;
+class Enemy;
 
 /**
  * @brief Abstract class of the Pattern State to manage the "Ennemis"
@@ -13,24 +13,24 @@ class Ennemi;
  * @version 1.0
  * @date 18 august 2015
  */
-class StateEnnemi
+class StateEnemy
 {
 public:
     /**
      * @brief StateEnnemi Constructor of StateEnnemi
      */
-    StateEnnemi(){}
+    StateEnemy(){}
 
     /**
      * @brief ~StateEnnemi Virtual destuctor of StateEnnemi
      */
-    virtual ~StateEnnemi(){}
+    virtual ~StateEnemy(){}
 
     /**
      * @brief step Vitual methode, each stateEnnemi must implements "step" this is the brain of the ennemi
      * @param ennemi
      */
-    virtual void step(Ennemi* ennemi) = 0;
+    virtual void step(Enemy* ennemi) = 0;
 };
 
 #endif // STATEENNEMI_H

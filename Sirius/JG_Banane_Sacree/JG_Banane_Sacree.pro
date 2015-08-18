@@ -42,7 +42,6 @@ SOURCES += \
     m_menustart.cpp \
     object.cpp \
     m_pause.cpp \
-    ennemi.cpp \
     s_ice.cpp \
     level.cpp \
     maingame.cpp \
@@ -57,7 +56,8 @@ SOURCES += \
     stateennemi_patrol.cpp \
     stateennemi_sleep.cpp \
     stateenemy_pause.cpp \
-    surfacefactory.cpp
+    surfacefactory.cpp \
+    enemy.cpp
 
 HEADERS  += \
     player.h \
@@ -73,23 +73,23 @@ HEADERS  += \
     m_menustart.h \
     object.h \
     m_pause.h \
-    ennemi.h \
     s_ice.h \
     level.h \
     maingame.h \
     w_object.h \
-    e_renard.h \
-    e_loup.h \
     s_dialog.h \
     w_dialog.h \
     w_life.h \
-    s_viewblocennemi.h \
-    observablesennemis.h \
-    stateennemi.h \
-    stateennemi_patrol.h \
-    stateennemi_sleep.h \
     stateenemy_pause.h \
-    surfacefactory.h
+    surfacefactory.h \
+    enemy.h \
+    stateenemy.h \
+    stateenemy_patrol.h \
+    stateenemy_sleep.h \
+    observablesenemy.h \
+    e_wolf.h \
+    e_fox.h \
+    s_viewblockenemy.h
 
 RESOURCES += \
     images.qrc \
