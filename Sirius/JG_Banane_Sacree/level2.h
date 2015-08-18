@@ -31,14 +31,50 @@ class Level2
 {
 public:
     Level2(int levelNumber, Gameboard *game);
+
+    /**
+     * @brief Populate the QGraphicsScene according to XML Level File
+     * @return QGraphicsScene* containing all items
+     */
     QGraphicsScene* populateScene();
+
+    /**
+     * @brief Get the starting position of the Penguin
+     * @return Starting QPoint*
+     */
     QPoint* getStartingPoint();
+
+    /**
+     * @brief Get the starting x/y view position
+     * @return Starting View QPoint*
+     */
     QPoint getViewStart();
-    int changeLevel(int levelNumber);
+
+    /**
+     * @brief Get the current Level Number
+     * @return int Level Number
+     */
     int getLevelNumber();
+
+    /**
+     * @brief Return the unlocking position
+     * @return QPoint containing the unlocking position
+     */
     QPoint getUnlockEndPoint();
 
+    /**
+     * @brief Add the informations from param into the class
+     * @param elem QDomElement containing the informations
+     */
     void addLevelInformation(QDomElement elem);
+
+    /**
+     * @brief Add the item from param into the scene
+     * @param scene QGraphicsScene* from the level
+     * @param elem QDomElement containing the informations
+     * @param x xPosition
+     * @param y yPosition
+     */
     void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
 
 private:

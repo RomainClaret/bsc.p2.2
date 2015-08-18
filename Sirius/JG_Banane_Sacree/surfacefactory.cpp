@@ -57,9 +57,12 @@ S_Snow* SurfaceFactory::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* sc
     return s;
 }
 
-S_Dialog* SurfaceFactory::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene)
+S_Dialog* SurfaceFactory::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text)
 {
-    return new S_Dialog(xpos, ypos);
+    S_Dialog *d = new S_Dialog(xpos, ypos);
+    d->addDialogText(text);
+    scene->addItem(d);
+    return d;
 }
 
 S_ViewTransition* SurfaceFactory::createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene)
@@ -76,6 +79,15 @@ S_ViewTransition* SurfaceFactory::createSurfaceDoor(int xpos, int ypos, QString 
     d->setLevelEnd(false);
     d->setNeededItem(item);
     d->setNbItem(quantity);
+    scene->addItem(d);
+    return d;
+}
+
+S_ViewTransition* SurfaceFactory::createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene)
+{
+    S_ViewTransition *d = new S_ViewTransition(xpos,ypos);
+    d->setLevelEnd(true);
+    d->setNextLevel(nextLevel);
     scene->addItem(d);
     return d;
 }

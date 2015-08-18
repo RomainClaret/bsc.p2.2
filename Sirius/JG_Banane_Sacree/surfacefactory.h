@@ -30,9 +30,10 @@ public:
     static Surface* createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene);
     static S_Ice* createSurfaceIce(int xpos, int ypos, QGraphicsScene *scene);
     static S_Snow* createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene);
-    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene);
+    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text = "");
     static S_ViewTransition* createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene);
     static S_ViewTransition* createSurfaceDoor(int xpos, int ypos, QString item, int quantity, QGraphicsScene* scene);
+    static S_ViewTransition* createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene);
     static B_Movable* createBlocMovable(int xpos, int ypos, QGraphicsScene* scene);
     static B_Wall* createBlocWall(int xpos, int ypos, QGraphicsScene* scene);
     static B_Water* createBlocWater(int xpos, int ypos, QGraphicsScene* scene);

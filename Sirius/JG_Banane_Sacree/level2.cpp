@@ -157,11 +157,7 @@ void Level2::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
     }
     else if(tagName == "END")
     {
-        S_ViewTransition *item = new S_ViewTransition();
-        item->setLevelEnd(true);
-        item->setPos(x, y);
-        item->setNextLevel(elem.attribute("nextLevel").toInt());
-        scene->addItem(item);
+        SurfaceFactory::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
     }
     else if(tagName == "ENEMY")
     {
@@ -184,11 +180,7 @@ void Level2::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
     }
     else if(tagName == "DIALOG")
     {
-        S_Dialog *item = new S_Dialog();
-        item->setPos(x,y);
-        item->setDialogNumber(elem.attribute("position").toInt());
-        item->addDialogText(elem.attribute("text"));
-        scene->addItem(item);
+        SurfaceFactory::createSurfaceDialog(x, y, scene, elem.attribute("text"));
     }
 }
 

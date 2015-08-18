@@ -30,7 +30,6 @@ WidgetLife::WidgetLife(QWidget *parent)
 
 void WidgetLife::paintEvent(QPaintEvent *)
 {
-    qDebug() << "PaintEvent";
     QPainter paint(this);
 
     QString img = ":/items/items/egg.png";
