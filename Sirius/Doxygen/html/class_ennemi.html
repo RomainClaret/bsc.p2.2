@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -89,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_ennemi-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ennemi Class Reference</div>  </div>
@@ -106,7 +108,9 @@ Inheritance diagram for Ennemi:</div>
   <img src="class_ennemi.png" usemap="#Ennemi_map" alt=""/>
   <map id="Ennemi_map" name="Ennemi_map">
 <area href="class_e___loup.html" title="Enemy Character: Wolf. " alt="E_Loup" shape="rect" coords="0,112,95,136"/>
-<area href="class_e___renard.html" title="Enemy Character: Fox. " alt="E_Renard" shape="rect" coords="105,112,200,136"/>
+<area href="class_e___loup.html" title="Enemy Character: Wolf. " alt="E_Loup" shape="rect" coords="105,112,200,136"/>
+<area href="class_e___renard.html" title="Enemy Character: Fox. " alt="E_Renard" shape="rect" coords="210,112,305,136"/>
+<area href="class_e___renard.html" title="Enemy Character: Fox. " alt="E_Renard" shape="rect" coords="315,112,410,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -156,9 +160,72 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#ad4861b8a3ad9d4819d3716ac3d0e8501">viewBlocActif</a> ()</td></tr>
 <tr class="memdesc:ad4861b8a3ad9d4819d3716ac3d0e8501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable vision blocks. <br /></td></tr>
 <tr class="separator:ad4861b8a3ad9d4819d3716ac3d0e8501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a14529c0dc2ad2edf3b5d174221ffa6ff">getEnemyPos</a> ()</td></tr>
+<tr class="memdesc:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">getEnemyPos return the position with the correct coords on the map  <a href="#a14529c0dc2ad2edf3b5d174221ffa6ff">More...</a><br /></td></tr>
+<tr class="separator:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a3d8cf7a7d4b577a46cfdfaa1f37e9ded">changeState</a> (<a class="el" href="class_state_ennemi.html">StateEnnemi</a> *newState)</td></tr>
+<tr class="memdesc:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">changeState replace the state of the enemy with newState  <a href="#a3d8cf7a7d4b577a46cfdfaa1f37e9ded">More...</a><br /></td></tr>
+<tr class="separator:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86e9134a1cfd8d878305924702b9d7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#af86e9134a1cfd8d878305924702b9d7a">Ennemi</a> (QList&lt; QPoint &gt;, <a class="el" href="class_gameboard.html">Gameboard</a> *g)</td></tr>
+<tr class="memdesc:af86e9134a1cfd8d878305924702b9d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with path setup.  <a href="#af86e9134a1cfd8d878305924702b9d7a">More...</a><br /></td></tr>
+<tr class="separator:af86e9134a1cfd8d878305924702b9d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf402a9389efe705c604f91d6e74d00e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf402a9389efe705c604f91d6e74d00e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#adf402a9389efe705c604f91d6e74d00e">~Ennemi</a> ()</td></tr>
+<tr class="memdesc:adf402a9389efe705c604f91d6e74d00e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruction of the blocks used for the vision. <br /></td></tr>
+<tr class="separator:adf402a9389efe705c604f91d6e74d00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62d1dcf274319710e7ac4495c95a221"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae62d1dcf274319710e7ac4495c95a221"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#ae62d1dcf274319710e7ac4495c95a221">addToScene</a> (QGraphicsScene *)</td></tr>
+<tr class="memdesc:ae62d1dcf274319710e7ac4495c95a221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add self to the scene. <br /></td></tr>
+<tr class="separator:ae62d1dcf274319710e7ac4495c95a221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00ff90bbb5d71456a23673e77c41bb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa00ff90bbb5d71456a23673e77c41bb4"></a>
+QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>boundingRect</b> () const </td></tr>
+<tr class="separator:aa00ff90bbb5d71456a23673e77c41bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbdea6c2e62c2065694a32db0f049325"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbdea6c2e62c2065694a32db0f049325"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr class="separator:afbdea6c2e62c2065694a32db0f049325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c509f048996eecb4ee768a044825d15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c509f048996eecb4ee768a044825d15"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a7c509f048996eecb4ee768a044825d15">setOrientation_top</a> ()</td></tr>
+<tr class="memdesc:a7c509f048996eecb4ee768a044825d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orientation of self to the top. <br /></td></tr>
+<tr class="separator:a7c509f048996eecb4ee768a044825d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bbc6381307320c22b1686c5bc59d93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3bbc6381307320c22b1686c5bc59d93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#ab3bbc6381307320c22b1686c5bc59d93">setOrientation_bottom</a> ()</td></tr>
+<tr class="memdesc:ab3bbc6381307320c22b1686c5bc59d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orientation of self to the bottom. <br /></td></tr>
+<tr class="separator:ab3bbc6381307320c22b1686c5bc59d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac455b7c41a46dc42a27841b9c566e329"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac455b7c41a46dc42a27841b9c566e329"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#ac455b7c41a46dc42a27841b9c566e329">setOrientation_left</a> ()</td></tr>
+<tr class="memdesc:ac455b7c41a46dc42a27841b9c566e329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orientation of self to the left. <br /></td></tr>
+<tr class="separator:ac455b7c41a46dc42a27841b9c566e329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e99225c7a632efceebba66996d7d9ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e99225c7a632efceebba66996d7d9ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a4e99225c7a632efceebba66996d7d9ee">setOrientation_right</a> ()</td></tr>
+<tr class="memdesc:a4e99225c7a632efceebba66996d7d9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orientation of self to the right. <br /></td></tr>
+<tr class="separator:a4e99225c7a632efceebba66996d7d9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482e9c5ccc0cf1c3aa4e83f32f3eedb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a482e9c5ccc0cf1c3aa4e83f32f3eedb1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a482e9c5ccc0cf1c3aa4e83f32f3eedb1">setPath</a> (QList&lt; QPoint &gt;)</td></tr>
+<tr class="memdesc:a482e9c5ccc0cf1c3aa4e83f32f3eedb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the path of self for the automatic displacement. <br /></td></tr>
+<tr class="separator:a482e9c5ccc0cf1c3aa4e83f32f3eedb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6811b0a25a92ec210750072b83d1f74e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6811b0a25a92ec210750072b83d1f74e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e">pinguinOnViewBloc</a> ()</td></tr>
+<tr class="memdesc:a6811b0a25a92ec210750072b83d1f74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart game is Playable character is detected. <br /></td></tr>
+<tr class="separator:a6811b0a25a92ec210750072b83d1f74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4861b8a3ad9d4819d3716ac3d0e8501"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4861b8a3ad9d4819d3716ac3d0e8501"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#ad4861b8a3ad9d4819d3716ac3d0e8501">viewBlocActif</a> ()</td></tr>
+<tr class="memdesc:ad4861b8a3ad9d4819d3716ac3d0e8501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable vision blocks. <br /></td></tr>
+<tr class="separator:ad4861b8a3ad9d4819d3716ac3d0e8501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a14529c0dc2ad2edf3b5d174221ffa6ff">getEnemyPos</a> ()</td></tr>
+<tr class="memdesc:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">getEnemyPos return the position with the correct coords on the map  <a href="#a14529c0dc2ad2edf3b5d174221ffa6ff">More...</a><br /></td></tr>
+<tr class="separator:a14529c0dc2ad2edf3b5d174221ffa6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a3d8cf7a7d4b577a46cfdfaa1f37e9ded">changeState</a> (<a class="el" href="class_state_ennemi.html">StateEnnemi</a> *newState)</td></tr>
+<tr class="memdesc:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">changeState replace the state of the enemy with newState  <a href="#a3d8cf7a7d4b577a46cfdfaa1f37e9ded">More...</a><br /></td></tr>
+<tr class="separator:a3d8cf7a7d4b577a46cfdfaa1f37e9ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a68785ba49227d8588b0acc1fcc9856fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a68785ba49227d8588b0acc1fcc9856fa">advance</a> (int step)</td></tr>
+<tr class="memdesc:a68785ba49227d8588b0acc1fcc9856fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves self by an amount.  <a href="#a68785ba49227d8588b0acc1fcc9856fa">More...</a><br /></td></tr>
+<tr class="separator:a68785ba49227d8588b0acc1fcc9856fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029f6711fe3817f9697a8369718e50f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a029f6711fe3817f9697a8369718e50f6">setPosViewBloc</a> (<a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> *bloc, QPoint p)</td></tr>
+<tr class="memdesc:a029f6711fe3817f9697a8369718e50f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the block "S_ViewBlocEnnemi".  <a href="#a029f6711fe3817f9697a8369718e50f6">More...</a><br /></td></tr>
+<tr class="separator:a029f6711fe3817f9697a8369718e50f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68785ba49227d8588b0acc1fcc9856fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemi.html#a68785ba49227d8588b0acc1fcc9856fa">advance</a> (int step)</td></tr>
 <tr class="memdesc:a68785ba49227d8588b0acc1fcc9856fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves self by an amount.  <a href="#a68785ba49227d8588b0acc1fcc9856fa">More...</a><br /></td></tr>
 <tr class="separator:a68785ba49227d8588b0acc1fcc9856fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,12 +238,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:abf051ea1d034df4a8b0480e9387f2008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf051ea1d034df4a8b0480e9387f2008"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
 <tr class="separator:abf051ea1d034df4a8b0480e9387f2008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ddf1ae5a5662a8206dc6f4a3aac6fbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ddf1ae5a5662a8206dc6f4a3aac6fbf"></a>
+<tr class="memitem:acbd9a5c07e51a477a42daf0496d864e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbd9a5c07e51a477a42daf0496d864e4"></a>
 QList&lt; QPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
-<tr class="separator:a4ddf1ae5a5662a8206dc6f4a3aac6fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabd4b33e091ce69e811959720e14dde6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabd4b33e091ce69e811959720e14dde6"></a>
+<tr class="separator:acbd9a5c07e51a477a42daf0496d864e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e9c4370bff0dd2a6b05c24a4fd06f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e9c4370bff0dd2a6b05c24a4fd06f7"></a>
 QList&lt; <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>champVue</b></td></tr>
-<tr class="separator:aabd4b33e091ce69e811959720e14dde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a54e9c4370bff0dd2a6b05c24a4fd06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5537ad37a49d572d09a76749238490c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5537ad37a49d572d09a76749238490c2"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>leftSkin</b></td></tr>
 <tr class="separator:a5537ad37a49d572d09a76749238490c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,9 +256,24 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>upSkin</b></td></t
 <tr class="memitem:a3a72c0537216823ea706923d20f9ed5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a72c0537216823ea706923d20f9ed5a"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>downSkin</b></td></tr>
 <tr class="separator:a3a72c0537216823ea706923d20f9ed5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed643ae9412716c1f1caabfdea06fc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afed643ae9412716c1f1caabfdea06fc0"></a>
+<tr class="memitem:aef6146a86a5b04b34f0e7292a1ddd237"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef6146a86a5b04b34f0e7292a1ddd237"></a>
 QBrush *&#160;</td><td class="memItemRight" valign="bottom"><b>ennemiSkin</b></td></tr>
-<tr class="separator:afed643ae9412716c1f1caabfdea06fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aef6146a86a5b04b34f0e7292a1ddd237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ad4e940eeddddccbb3f0fa1b9c6655b19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4e940eeddddccbb3f0fa1b9c6655b19"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>StateEnnemi</b></td></tr>
+<tr class="separator:ad4e940eeddddccbb3f0fa1b9c6655b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3993e6f153d417c1b39a3fd9887fd2fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3993e6f153d417c1b39a3fd9887fd2fe"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>StateEnnemi_Patrol</b></td></tr>
+<tr class="separator:a3993e6f153d417c1b39a3fd9887fd2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb95dc3768b5bcbfc4b8577fd2e8673"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabb95dc3768b5bcbfc4b8577fd2e8673"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>StateEnnemi_Sleep</b></td></tr>
+<tr class="separator:aabb95dc3768b5bcbfc4b8577fd2e8673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6b7120d88c0cd46c85c0af86341abf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a6b7120d88c0cd46c85c0af86341abf"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>StateEnnemi_Pause</b></td></tr>
+<tr class="separator:a6a6b7120d88c0cd46c85c0af86341abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Enemy Class. </p>
@@ -204,6 +286,15 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>integrate with DP Factory </dd></dl>
+<p>Parent class for enemies. Contains the orientation, the path, the skin, the definition, and the specification. </p><dl class="section author"><dt>Author</dt><dd>Claret Romain, <a href="#" onclick="location.href='mai'+'lto:'+'rom'+'ai'+'n.c'+'la'+'ret'+'@r'+'ocl'+'a.'+'ch'; return false;">romai<span style="display: none;">.nosp@m.</span>n.cl<span style="display: none;">.nosp@m.</span>aret@<span style="display: none;">.nosp@m.</span>rocl<span style="display: none;">.nosp@m.</span>a.ch</a> </dd>
+<dd>
+Divernois Margaux, <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'ga'+'ux.'+'di'+'ver'+'no'+'is@'+'gm'+'ail'+'.c'+'om'; return false;">marga<span style="display: none;">.nosp@m.</span>ux.d<span style="display: none;">.nosp@m.</span>ivern<span style="display: none;">.nosp@m.</span>ois@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd>
+<dd>
+Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'+'st'+'@gm'+'ai'+'l.c'+'om'; return false;">visin<span style="display: none;">.nosp@m.</span>ands<span style="display: none;">.nosp@m.</span>t@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Custom License + NDA </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>integrate with DP Factory </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af86e9134a1cfd8d878305924702b9d7a"></a>
 <div class="memitem">
@@ -241,7 +332,74 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="af86e9134a1cfd8d878305924702b9d7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ennemi::Ennemi </td>
+          <td>(</td>
+          <td class="paramtype">QList&lt; QPoint &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_gameboard.html">Gameboard</a> *&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor with path setup. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>QList of QPoint for the path </td></tr>
+    <tr><td class="paramname">g</td><td><a class="el" href="class_gameboard.html" title="Game Board. Where the game happens. ">Gameboard</a> to depend on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a68785ba49227d8588b0acc1fcc9856fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ennemi::advance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves self by an amount. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>amount to move self </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a68785ba49227d8588b0acc1fcc9856fa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -272,6 +430,91 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
   </dd>
 </dl>
 <p>Executed at each call of the slot <a class="el" href="class_ennemi.html#a68785ba49227d8588b0acc1fcc9856fa" title="Moves self by an amount. ">advance()</a> from the Scene. It is the brain of the enemy. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3d8cf7a7d4b577a46cfdfaa1f37e9ded"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ennemi::changeState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_state_ennemi.html">StateEnnemi</a> *&#160;</td>
+          <td class="paramname"><em>newState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>changeState replace the state of the enemy with newState </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td>replace the state of the enemy with newState </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d8cf7a7d4b577a46cfdfaa1f37e9ded"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ennemi::changeState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_state_ennemi.html">StateEnnemi</a> *&#160;</td>
+          <td class="paramname"><em>newState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>changeState replace the state of the enemy with newState </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a14529c0dc2ad2edf3b5d174221ffa6ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint Ennemi::getEnemyPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getEnemyPos return the position with the correct coords on the map </p>
+<dl class="section return"><dt>Returns</dt><dd>position of the enemy</dd></dl>
+<p>getEnemyPos return the position with the correct coords on the map </p>
+
+</div>
+</div>
+<a class="anchor" id="a14529c0dc2ad2edf3b5d174221ffa6ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint Ennemi::getEnemyPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getEnemyPos return the position with the correct coords on the map </p>
+<dl class="section return"><dt>Returns</dt><dd>position of the enemy </dd></dl>
 
 </div>
 </div>
@@ -329,6 +572,49 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bloc</td><td>self is positioned to this <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> </td></tr>
+    <tr><td class="paramname">p</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a029f6711fe3817f9697a8369718e50f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ennemi::setPosViewBloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> *&#160;</td>
+          <td class="paramname"><em>bloc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPoint&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the position of the block "S_ViewBlocEnnemi". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bloc</td><td>self is positioned to this <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> </td></tr>
     <tr><td class="paramname">p</td><td>Define the poistion of the block <a class="el" href="class_s___view_bloc_ennemi.html">S_ViewBlocEnnemi</a> in function of its line and column. </td></tr>
   </table>
   </dd>
@@ -338,12 +624,13 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="ennemi_8h_source.html">ennemi.h</a></li>
+<li>gameboard.cpp</li>
 <li>ennemi.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

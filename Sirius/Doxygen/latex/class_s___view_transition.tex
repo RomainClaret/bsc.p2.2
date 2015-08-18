@@ -50,6 +50,39 @@ Inheritance diagram for S\+\_\+\+View\+Transition\+:\begin{figure}[H]
 \item 
 \hypertarget{class_s___view_transition_aef44e5819f80ec0689175510a7d50c37}{}int {\bfseries get\+Next\+Level} ()\label{class_s___view_transition_aef44e5819f80ec0689175510a7d50c37}
 
+\item 
+\hypertarget{class_s___view_transition_a114168f77853ed98ff87d750f2982b39}{}{\bfseries S\+\_\+\+View\+Transition} (int xpos, int ypos, Q\+Graphics\+Item $\ast$parent=0)\label{class_s___view_transition_a114168f77853ed98ff87d750f2982b39}
+
+\item 
+\hypertarget{class_s___view_transition_a95dbe7a7f23bb8ed903ad8dff6f7ea6a}{}{\bfseries S\+\_\+\+View\+Transition} (Q\+Graphics\+Item $\ast$parent=0)\label{class_s___view_transition_a95dbe7a7f23bb8ed903ad8dff6f7ea6a}
+
+\item 
+\hypertarget{class_s___view_transition_ab6671a5c3df741a34c2cff8194c8c428}{}bool {\bfseries is\+End\+Level} ()\label{class_s___view_transition_ab6671a5c3df741a34c2cff8194c8c428}
+
+\item 
+\hypertarget{class_s___view_transition_afbfd78f5dcb2edb6b5444c4e2a73110a}{}void {\bfseries set\+Level\+End} (bool value)\label{class_s___view_transition_afbfd78f5dcb2edb6b5444c4e2a73110a}
+
+\item 
+\hypertarget{class_s___view_transition_af81ef15e45fb55bc71e3e81acb88971a}{}void {\bfseries set\+Needed\+Item} (Q\+String value)\label{class_s___view_transition_af81ef15e45fb55bc71e3e81acb88971a}
+
+\item 
+\hypertarget{class_s___view_transition_a9c7c1d53104949673f340c808682806d}{}Q\+String {\bfseries get\+Needed\+Item} ()\label{class_s___view_transition_a9c7c1d53104949673f340c808682806d}
+
+\item 
+\hypertarget{class_s___view_transition_a9f623ff7ddaa749fe32af0149e4dc7b7}{}bool {\bfseries is\+Needing\+Item} ()\label{class_s___view_transition_a9f623ff7ddaa749fe32af0149e4dc7b7}
+
+\item 
+\hypertarget{class_s___view_transition_a5926082bed3cb63fd6eea5e6d2cfb875}{}void {\bfseries set\+Nb\+Item} (int nb)\label{class_s___view_transition_a5926082bed3cb63fd6eea5e6d2cfb875}
+
+\item 
+\hypertarget{class_s___view_transition_aadf7b185d779366bc93d20856e0985c3}{}int {\bfseries get\+Nb\+Item} ()\label{class_s___view_transition_aadf7b185d779366bc93d20856e0985c3}
+
+\item 
+\hypertarget{class_s___view_transition_a7aa555ea153a02bc957cce590c7f0660}{}void {\bfseries set\+Next\+Level} (int nb)\label{class_s___view_transition_a7aa555ea153a02bc957cce590c7f0660}
+
+\item 
+\hypertarget{class_s___view_transition_aef44e5819f80ec0689175510a7d50c37}{}int {\bfseries get\+Next\+Level} ()\label{class_s___view_transition_aef44e5819f80ec0689175510a7d50c37}
+
 \end{DoxyCompactItemize}
 
 
@@ -73,10 +106,31 @@ Custom License + N\+D\+A
 27 January 2015 
 \end{DoxyDate}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000016}{Todo}]refactor into s\+\_\+door \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000014}{Todo}]refactor into s\+\_\+door \end{DoxyRefDesc}
+
+
+This surface can move player\textquotesingle{}s view on the scene. It checks if the level is completed. Moves the player and changes the view to the next level is it\textquotesingle{}s complited. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27 January 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000031}{Todo}]refactor into s\+\_\+door \end{DoxyRefDesc}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
+gameboard.\+cpp\item 
 s\+\_\+viewtransition.\+h\item 
 s\+\_\+viewtransition.\+cpp\end{DoxyCompactItemize}

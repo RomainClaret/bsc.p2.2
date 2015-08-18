@@ -11,6 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
+{
 #include "gameboard.h"
 #include "p_penguin.h"
 #include "b_wall.h"
@@ -45,6 +46,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QGraphicsProxyWidget>
+}
 
 #define SLIDE_SPEED (80)
 

@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -115,44 +116,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QDomElement&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QDomDocument&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//#include &quot;gameboard.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_level2.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_level2.html">Level2</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_level2.html">Level2</a>(<span class="keywordtype">int</span> levelNumber, <a class="code" href="class_gameboard.html">Gameboard</a> *game);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QGraphicsScene* populateScene();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QPoint* getStartingPoint();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QPoint getViewStart();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> changeLevel(<span class="keywordtype">int</span> levelNumber);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> getLevelNumber();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QPoint getUnlockEndPoint();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> addLevelInformation(QDomElement elem);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> addLevelItem(QGraphicsScene* scene, QDomElement elem, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> levelNumber;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QPoint* startingPoint;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QPoint* viewStart;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QPoint* unlockEnd;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_gameboard.html">Gameboard</a> *game;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> maxBlocksHeight;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> maxBlocksWidth;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString fileName;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QDomDocument* doc;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // LEVEL2_H</span></div>
-<div class="ttc" id="class_level2_html"><div class="ttname"><a href="class_level2.html">Level2</a></div><div class="ttdef"><b>Definition:</b> level2.h:32</div></div>
-<div class="ttc" id="class_gameboard_html"><div class="ttname"><a href="class_gameboard.html">Gameboard</a></div><div class="ttdoc">Game Board. Where the game happens. </div><div class="ttdef"><b>Definition:</b> gameboard.h:64</div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="class_level2.html">Level2</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_level2.html">Level2</a>(<span class="keywordtype">int</span> levelNumber, <a class="code" href="class_gameboard.html">Gameboard</a> *game);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QGraphicsScene* <a class="code" href="class_level2.html#a3429efd969734df0725bda5a0ef31bb3">populateScene</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QPoint* <a class="code" href="class_level2.html#aa2117b86b6ba46bc91fa6bdbb0cfb058">getStartingPoint</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QPoint <a class="code" href="class_level2.html#ae00d67c53b25def82750bad0e296d1ef">getViewStart</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_level2.html#afc7097e892ccfb17fcc8846c9fda4910">getLevelNumber</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QPoint <a class="code" href="class_level2.html#a7e8c1628b703886e61a00f755dc2038b">getUnlockEndPoint</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level2.html#a6c6c7c86949a63afde397fdd7c76b01c">addLevelInformation</a>(QDomElement elem);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level2.html#a87a8120e0107e8d7029480ff0e473b05">addLevelItem</a>(QGraphicsScene* scene, QDomElement elem, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> levelNumber;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QPoint* startingPoint;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QPoint* viewStart;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QPoint* unlockEnd;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_gameboard.html">Gameboard</a> *game;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> maxBlocksHeight;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> maxBlocksWidth;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    QString fileName;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QDomDocument* doc;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // LEVEL2_H</span></div>
+<div class="ttc" id="class_level2_html_a7e8c1628b703886e61a00f755dc2038b"><div class="ttname"><a href="class_level2.html#a7e8c1628b703886e61a00f755dc2038b">Level2::getUnlockEndPoint</a></div><div class="ttdeci">QPoint getUnlockEndPoint()</div><div class="ttdoc">Return the unlocking position. </div><div class="ttdef"><b>Definition:</b> level2.cpp:192</div></div>
+<div class="ttc" id="class_level2_html_a3429efd969734df0725bda5a0ef31bb3"><div class="ttname"><a href="class_level2.html#a3429efd969734df0725bda5a0ef31bb3">Level2::populateScene</a></div><div class="ttdeci">QGraphicsScene * populateScene()</div><div class="ttdoc">Populate the QGraphicsScene according to XML Level File. </div><div class="ttdef"><b>Definition:</b> level2.cpp:89</div></div>
+<div class="ttc" id="class_level2_html_aa2117b86b6ba46bc91fa6bdbb0cfb058"><div class="ttname"><a href="class_level2.html#aa2117b86b6ba46bc91fa6bdbb0cfb058">Level2::getStartingPoint</a></div><div class="ttdeci">QPoint * getStartingPoint()</div><div class="ttdoc">Get the starting position of the Penguin. </div><div class="ttdef"><b>Definition:</b> level2.cpp:84</div></div>
+<div class="ttc" id="class_level2_html_ae00d67c53b25def82750bad0e296d1ef"><div class="ttname"><a href="class_level2.html#ae00d67c53b25def82750bad0e296d1ef">Level2::getViewStart</a></div><div class="ttdeci">QPoint getViewStart()</div><div class="ttdoc">Get the starting x/y view position. </div><div class="ttdef"><b>Definition:</b> level2.cpp:187</div></div>
+<div class="ttc" id="class_level2_html"><div class="ttname"><a href="class_level2.html">Level2</a></div><div class="ttdef"><b>Definition:</b> gameboard.cpp:30</div></div>
+<div class="ttc" id="class_level2_html_a6c6c7c86949a63afde397fdd7c76b01c"><div class="ttname"><a href="class_level2.html#a6c6c7c86949a63afde397fdd7c76b01c">Level2::addLevelInformation</a></div><div class="ttdeci">void addLevelInformation(QDomElement elem)</div><div class="ttdoc">Add the informations from param into the class. </div><div class="ttdef"><b>Definition:</b> level2.cpp:118</div></div>
+<div class="ttc" id="class_level2_html_a87a8120e0107e8d7029480ff0e473b05"><div class="ttname"><a href="class_level2.html#a87a8120e0107e8d7029480ff0e473b05">Level2::addLevelItem</a></div><div class="ttdeci">void addLevelItem(QGraphicsScene *scene, QDomElement elem, int x, int y)</div><div class="ttdoc">Add the item from param into the scene. </div><div class="ttdef"><b>Definition:</b> level2.cpp:143</div></div>
+<div class="ttc" id="class_level2_html_afc7097e892ccfb17fcc8846c9fda4910"><div class="ttname"><a href="class_level2.html#afc7097e892ccfb17fcc8846c9fda4910">Level2::getLevelNumber</a></div><div class="ttdeci">int getLevelNumber()</div><div class="ttdoc">Get the current Level Number. </div><div class="ttdef"><b>Definition:</b> level2.cpp:197</div></div>
+<div class="ttc" id="class_gameboard_html"><div class="ttname"><a href="class_gameboard.html">Gameboard</a></div><div class="ttdoc">Game Board. Where the game happens. </div><div class="ttdef"><b>Definition:</b> gameboard.cpp:64</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

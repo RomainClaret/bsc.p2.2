@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -104,7 +105,8 @@ Inheritance diagram for B_Movable:</div>
  <div class="center">
   <img src="class_b___movable.png" usemap="#B_Movable_map" alt=""/>
   <map id="B_Movable_map" name="B_Movable_map">
-<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="0,56,120,80"/>
+<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="65,56,185,80"/>
+<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="325,56,445,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -149,7 +151,64 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4cb26e3d494505eaaa6773c0a448c479"><td class="memItemLeft" align="right" valign="top">QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a4cb26e3d494505eaaa6773c0a448c479">getCollideBlocPosition</a> (char sens)</td></tr>
 <tr class="memdesc:a4cb26e3d494505eaaa6773c0a448c479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the colliding block from a direction.  <a href="#a4cb26e3d494505eaaa6773c0a448c479">More...</a><br /></td></tr>
 <tr class="separator:a4cb26e3d494505eaaa6773c0a448c479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac874fc12d19502117d0bfc396d1059d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#ac874fc12d19502117d0bfc396d1059d2">B_Movable</a> (int xpos, int ypos, QGraphicsItem *parent=0)</td></tr>
+<tr class="memdesc:ac874fc12d19502117d0bfc396d1059d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with position setup.  <a href="#ac874fc12d19502117d0bfc396d1059d2">More...</a><br /></td></tr>
+<tr class="separator:ac874fc12d19502117d0bfc396d1059d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef88fa8933731c08731796a9ee3fda6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#aef88fa8933731c08731796a9ee3fda6b">B_Movable</a> (QGraphicsItem *parent=0)</td></tr>
+<tr class="memdesc:aef88fa8933731c08731796a9ee3fda6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor without position setup.  <a href="#aef88fa8933731c08731796a9ee3fda6b">More...</a><br /></td></tr>
+<tr class="separator:aef88fa8933731c08731796a9ee3fda6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a23ac4b1692d95607dcccd6d6c9a973"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a8a23ac4b1692d95607dcccd6d6c9a973">addToScene</a> (QGraphicsScene *Scene)</td></tr>
+<tr class="memdesc:a8a23ac4b1692d95607dcccd6d6c9a973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add self to scene.  <a href="#a8a23ac4b1692d95607dcccd6d6c9a973">More...</a><br /></td></tr>
+<tr class="separator:a8a23ac4b1692d95607dcccd6d6c9a973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d26e877655021ef70bc6914fe04418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#aa4d26e877655021ef70bc6914fe04418">removeFromScene</a> (QGraphicsScene *Scene)</td></tr>
+<tr class="memdesc:aa4d26e877655021ef70bc6914fe04418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove self to scene.  <a href="#aa4d26e877655021ef70bc6914fe04418">More...</a><br /></td></tr>
+<tr class="separator:aa4d26e877655021ef70bc6914fe04418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fb8069fc55c4edabd2ac076acdee17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a55fb8069fc55c4edabd2ac076acdee17">moveBy</a> (int x, int y)</td></tr>
+<tr class="memdesc:a55fb8069fc55c4edabd2ac076acdee17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move self by x and y values.  <a href="#a55fb8069fc55c4edabd2ac076acdee17">More...</a><br /></td></tr>
+<tr class="separator:a55fb8069fc55c4edabd2ac076acdee17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca717ec608426940422f1bc658201bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#aca717ec608426940422f1bc658201bf5">setPos</a> (int x, int y)</td></tr>
+<tr class="memdesc:aca717ec608426940422f1bc658201bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of self with the x and y values.  <a href="#aca717ec608426940422f1bc658201bf5">More...</a><br /></td></tr>
+<tr class="separator:aca717ec608426940422f1bc658201bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a0a18c27314600a19d467b6f7820a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a96a0a18c27314600a19d467b6f7820a3">IsMovableToLeft</a> ()</td></tr>
+<tr class="memdesc:a96a0a18c27314600a19d467b6f7820a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self can move to the left.  <a href="#a96a0a18c27314600a19d467b6f7820a3">More...</a><br /></td></tr>
+<tr class="separator:a96a0a18c27314600a19d467b6f7820a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134b648413c6d27c008f8a0655ffa0f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a134b648413c6d27c008f8a0655ffa0f9">IsMovableToRight</a> ()</td></tr>
+<tr class="memdesc:a134b648413c6d27c008f8a0655ffa0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self can move to the right.  <a href="#a134b648413c6d27c008f8a0655ffa0f9">More...</a><br /></td></tr>
+<tr class="separator:a134b648413c6d27c008f8a0655ffa0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190fdc076141ae6698334bfe4dfd61a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a190fdc076141ae6698334bfe4dfd61a3">IsMovableToBottom</a> ()</td></tr>
+<tr class="memdesc:a190fdc076141ae6698334bfe4dfd61a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self can move to the bottom.  <a href="#a190fdc076141ae6698334bfe4dfd61a3">More...</a><br /></td></tr>
+<tr class="separator:a190fdc076141ae6698334bfe4dfd61a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bb6a98d031f9495cdeb80b9aa325c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a68bb6a98d031f9495cdeb80b9aa325c4">IsMovableToTop</a> ()</td></tr>
+<tr class="memdesc:a68bb6a98d031f9495cdeb80b9aa325c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self can move to the top.  <a href="#a68bb6a98d031f9495cdeb80b9aa325c4">More...</a><br /></td></tr>
+<tr class="separator:a68bb6a98d031f9495cdeb80b9aa325c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d1413ec8bceda3b1a50c673b429d03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a44d1413ec8bceda3b1a50c673b429d03">isSlide</a> ()</td></tr>
+<tr class="memdesc:a44d1413ec8bceda3b1a50c673b429d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self should slide.  <a href="#a44d1413ec8bceda3b1a50c673b429d03">More...</a><br /></td></tr>
+<tr class="separator:a44d1413ec8bceda3b1a50c673b429d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84271d347bea1604a96c930b8bffe17"><td class="memItemLeft" align="right" valign="top">QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#ac84271d347bea1604a96c930b8bffe17">CollidesCenter</a> ()</td></tr>
+<tr class="memdesc:ac84271d347bea1604a96c930b8bffe17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all colliding blocks.  <a href="#ac84271d347bea1604a96c930b8bffe17">More...</a><br /></td></tr>
+<tr class="separator:ac84271d347bea1604a96c930b8bffe17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4ab507bbb425d12f9c585ba8aae2db"><td class="memItemLeft" align="right" valign="top">QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#aef4ab507bbb425d12f9c585ba8aae2db">getCollideBlocPosition</a> (char sens)</td></tr>
+<tr class="memdesc:aef4ab507bbb425d12f9c585ba8aae2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the colliding block from a direction.  <a href="#aef4ab507bbb425d12f9c585ba8aae2db">More...</a><br /></td></tr>
+<tr class="separator:aef4ab507bbb425d12f9c585ba8aae2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_surface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_surface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_surface.html">Surface</a></td></tr>
+<tr class="memitem:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03bea7e4e17982fd17f8a571035a6f0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Surface</b> (int xpos, int ypos, QGraphicsItem *parent=0)</td></tr>
+<tr class="separator:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1af81e4723f854196608b966a86415 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e1af81e4723f854196608b966a86415"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Surface</b> (int xpos, int ypos, int width, int height, QGraphicsItem *parent=0)</td></tr>
+<tr class="separator:a3e1af81e4723f854196608b966a86415 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025ed38853ae95be3c6fe8814711ffc3 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a025ed38853ae95be3c6fe8814711ffc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (int, int)</td></tr>
+<tr class="separator:a025ed38853ae95be3c6fe8814711ffc3 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63590ebca0d813b110aa286400eac72 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab63590ebca0d813b110aa286400eac72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosPixel</b> (int, int)</td></tr>
+<tr class="separator:ab63590ebca0d813b110aa286400eac72 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdbf91a4cca74bb9da6c8a2fa932cd7 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbdbf91a4cca74bb9da6c8a2fa932cd7"></a>
+QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td></tr>
+<tr class="separator:acbdbf91a4cca74bb9da6c8a2fa932cd7 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7dd076ec71f2d6a63fe60f6c011786b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (QString brushColor)</td></tr>
+<tr class="separator:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03bea7e4e17982fd17f8a571035a6f0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Surface</b> (int xpos, int ypos, QGraphicsItem *parent=0)</td></tr>
 <tr class="separator:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,22 +230,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (QString
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab838f983e5e7b13148fc7f4873f2c347"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab838f983e5e7b13148fc7f4873f2c347"></a>
-QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#ab838f983e5e7b13148fc7f4873f2c347">leftCollideBox</a></td></tr>
-<tr class="memdesc:ab838f983e5e7b13148fc7f4873f2c347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the left side of the b_movable. <br /></td></tr>
-<tr class="separator:ab838f983e5e7b13148fc7f4873f2c347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5da8e8b462e4504f219857a3e007ad97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5da8e8b462e4504f219857a3e007ad97"></a>
-QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a5da8e8b462e4504f219857a3e007ad97">rightCollideBox</a></td></tr>
-<tr class="memdesc:a5da8e8b462e4504f219857a3e007ad97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the right side of the b_movable. <br /></td></tr>
-<tr class="separator:a5da8e8b462e4504f219857a3e007ad97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ad546481827dc987708ad36023ba21b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ad546481827dc987708ad36023ba21b"></a>
-QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a6ad546481827dc987708ad36023ba21b">bottomCollideBox</a></td></tr>
-<tr class="memdesc:a6ad546481827dc987708ad36023ba21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the bottom side of the b_movable. <br /></td></tr>
-<tr class="separator:a6ad546481827dc987708ad36023ba21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0609a13a4c686a8c7a4a0edb5e87efbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0609a13a4c686a8c7a4a0edb5e87efbf"></a>
-QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a0609a13a4c686a8c7a4a0edb5e87efbf">topCollideBox</a></td></tr>
-<tr class="memdesc:a0609a13a4c686a8c7a4a0edb5e87efbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the top side of the b_movable. <br /></td></tr>
-<tr class="separator:a0609a13a4c686a8c7a4a0edb5e87efbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab41c3e35cebd0d3ceb7c5e81ed61b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ab41c3e35cebd0d3ceb7c5e81ed61b8"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a7ab41c3e35cebd0d3ceb7c5e81ed61b8">leftCollideBox</a></td></tr>
+<tr class="memdesc:a7ab41c3e35cebd0d3ceb7c5e81ed61b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the left side of the b_movable. <br /></td></tr>
+<tr class="separator:a7ab41c3e35cebd0d3ceb7c5e81ed61b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197fc74b228c304f1f88e0670c1b3dcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a197fc74b228c304f1f88e0670c1b3dcc"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a197fc74b228c304f1f88e0670c1b3dcc">rightCollideBox</a></td></tr>
+<tr class="memdesc:a197fc74b228c304f1f88e0670c1b3dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the right side of the b_movable. <br /></td></tr>
+<tr class="separator:a197fc74b228c304f1f88e0670c1b3dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179bdd1cda40cb2bb81035420ad58c61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a179bdd1cda40cb2bb81035420ad58c61"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a179bdd1cda40cb2bb81035420ad58c61">bottomCollideBox</a></td></tr>
+<tr class="memdesc:a179bdd1cda40cb2bb81035420ad58c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the bottom side of the b_movable. <br /></td></tr>
+<tr class="separator:a179bdd1cda40cb2bb81035420ad58c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455a8c29d95faab500eb13a996a387ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a455a8c29d95faab500eb13a996a387ce"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b___movable.html#a455a8c29d95faab500eb13a996a387ce">topCollideBox</a></td></tr>
+<tr class="memdesc:a455a8c29d95faab500eb13a996a387ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box on the top side of the b_movable. <br /></td></tr>
+<tr class="separator:a455a8c29d95faab500eb13a996a387ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Movable block. </p>
@@ -199,6 +258,15 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>integrate with DP Factory </dd></dl>
+<p>This block can be moved with characters. </p><dl class="section author"><dt>Author</dt><dd>Claret Romain, <a href="#" onclick="location.href='mai'+'lto:'+'rom'+'ai'+'n.c'+'la'+'ret'+'@r'+'ocl'+'a.'+'ch'; return false;">romai<span style="display: none;">.nosp@m.</span>n.cl<span style="display: none;">.nosp@m.</span>aret@<span style="display: none;">.nosp@m.</span>rocl<span style="display: none;">.nosp@m.</span>a.ch</a> </dd>
+<dd>
+Divernois Margaux, <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'ga'+'ux.'+'di'+'ver'+'no'+'is@'+'gm'+'ail'+'.c'+'om'; return false;">marga<span style="display: none;">.nosp@m.</span>ux.d<span style="display: none;">.nosp@m.</span>ivern<span style="display: none;">.nosp@m.</span>ois@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd>
+<dd>
+Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'+'st'+'@gm'+'ai'+'l.c'+'om'; return false;">visin<span style="display: none;">.nosp@m.</span>ands<span style="display: none;">.nosp@m.</span>t@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Custom License + NDA </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>integrate with DP Factory </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac874fc12d19502117d0bfc396d1059d2"></a>
 <div class="memitem">
@@ -268,6 +336,72 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="ac874fc12d19502117d0bfc396d1059d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">B_Movable::B_Movable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ypos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor with position setup. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xpos</td><td>set the postion on the x-axis </td></tr>
+    <tr><td class="paramname">ypos</td><td>set the postion on the y-axis </td></tr>
+    <tr><td class="paramname">parent</td><td>QGraphicsItem parent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aef88fa8933731c08731796a9ee3fda6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">B_Movable::B_Movable </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor without position setup. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>QGraphicsItem to depend on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8a23ac4b1692d95607dcccd6d6c9a973"></a>
 <div class="memitem">
@@ -294,12 +428,54 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="a8a23ac4b1692d95607dcccd6d6c9a973"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void B_Movable::addToScene </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsScene *&#160;</td>
+          <td class="paramname"><em>Scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add self to scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Scene</td><td>scene to add self to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a081e4e71fb9483330f3315e6b32bbcbb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QList&lt; QGraphicsItem * &gt; B_Movable::CollidesCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get all colliding blocks. </p>
+<dl class="section return"><dt>Returns</dt><dd>colliding QGraphicsItem </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac84271d347bea1604a96c930b8bffe17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;QGraphicsItem *&gt; B_Movable::CollidesCenter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -335,6 +511,49 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>QGraphicsRectItem in collision with the parameter</dd></dl>
 <p>Check the direction as parameter ("b":bottom,"l":left,"r":right,"t":top). Return NULL if no colliding item is found. </p>
+
+</div>
+</div>
+<a class="anchor" id="aef4ab507bbb425d12f9c585ba8aae2db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGraphicsRectItem* B_Movable::getCollideBlocPosition </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sens</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the colliding block from a direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sens</td><td>the side to check for a collision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QGraphicsRectItem in collision with the parameter </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a190fdc076141ae6698334bfe4dfd61a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool B_Movable::IsMovableToBottom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if self can move to the bottom. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if can move to bottom </dd></dl>
 
 </div>
 </div>
@@ -374,6 +593,24 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="a96a0a18c27314600a19d467b6f7820a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool B_Movable::IsMovableToLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if self can move to the left. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if can move to left </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a134b648413c6d27c008f8a0655ffa0f9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -389,6 +626,42 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 <p>Check if self can move to the right. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if can move to right </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a134b648413c6d27c008f8a0655ffa0f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool B_Movable::IsMovableToRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if self can move to the right. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if can move to right </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68bb6a98d031f9495cdeb80b9aa325c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool B_Movable::IsMovableToTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if self can move to the top. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if can move to top </dd></dl>
 
 </div>
 </div>
@@ -429,6 +702,59 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="a44d1413ec8bceda3b1a50c673b429d03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool B_Movable::isSlide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if self should slide. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if self collides with a specific block. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a55fb8069fc55c4edabd2ac076acdee17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void B_Movable::moveBy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Move self by x and y values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>move this amount on the x-axis </td></tr>
+    <tr><td class="paramname">y</td><td>move this amount on the y-axis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a55fb8069fc55c4edabd2ac076acdee17"></a>
 <div class="memitem">
 <div class="memproto">
@@ -462,6 +788,30 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
   </dd>
 </dl>
 <p>Move self and the cross for colliding detectection. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa4d26e877655021ef70bc6914fe04418"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void B_Movable::removeFromScene </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsScene *&#160;</td>
+          <td class="paramname"><em>Scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove self to scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Scene</td><td>scene to remove self from </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -525,14 +875,50 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 
 </div>
 </div>
+<a class="anchor" id="aca717ec608426940422f1bc658201bf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void B_Movable::setPos </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the position of self with the x and y values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>set the postion on the x-axis </td></tr>
+    <tr><td class="paramname">y</td><td>set the postion on the y-axis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="b__movable_8h_source.html">b_movable.h</a></li>
+<li>gameboard.cpp</li>
 <li>b_movable.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

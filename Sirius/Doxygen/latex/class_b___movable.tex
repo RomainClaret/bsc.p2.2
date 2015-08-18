@@ -43,20 +43,46 @@ bool \hyperlink{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}{is\+Slide} 
 Q\+List$<$ Q\+Graphics\+Item $\ast$ $>$ \hyperlink{class_b___movable_a081e4e71fb9483330f3315e6b32bbcbb}{Collides\+Center} ()
 \begin{DoxyCompactList}\small\item\em Get all colliding blocks. \end{DoxyCompactList}\item 
 Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a4cb26e3d494505eaaa6773c0a448c479}{get\+Collide\+Bloc\+Position} (char sens)
+\begin{DoxyCompactList}\small\item\em Get the colliding block from a direction. \end{DoxyCompactList}\item 
+\hyperlink{class_b___movable_ac874fc12d19502117d0bfc396d1059d2}{B\+\_\+\+Movable} (int xpos, int ypos, Q\+Graphics\+Item $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor with position setup. \end{DoxyCompactList}\item 
+\hyperlink{class_b___movable_aef88fa8933731c08731796a9ee3fda6b}{B\+\_\+\+Movable} (Q\+Graphics\+Item $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor without position setup. \end{DoxyCompactList}\item 
+void \hyperlink{class_b___movable_a8a23ac4b1692d95607dcccd6d6c9a973}{add\+To\+Scene} (Q\+Graphics\+Scene $\ast$Scene)
+\begin{DoxyCompactList}\small\item\em Add self to scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_b___movable_aa4d26e877655021ef70bc6914fe04418}{remove\+From\+Scene} (Q\+Graphics\+Scene $\ast$Scene)
+\begin{DoxyCompactList}\small\item\em Remove self to scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{move\+By} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Move self by x and y values. \end{DoxyCompactList}\item 
+void \hyperlink{class_b___movable_aca717ec608426940422f1bc658201bf5}{set\+Pos} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Set the position of self with the x and y values. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}{Is\+Movable\+To\+Left} ()
+\begin{DoxyCompactList}\small\item\em Check if self can move to the left. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b___movable_a134b648413c6d27c008f8a0655ffa0f9}{Is\+Movable\+To\+Right} ()
+\begin{DoxyCompactList}\small\item\em Check if self can move to the right. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}{Is\+Movable\+To\+Bottom} ()
+\begin{DoxyCompactList}\small\item\em Check if self can move to the bottom. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}{Is\+Movable\+To\+Top} ()
+\begin{DoxyCompactList}\small\item\em Check if self can move to the top. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}{is\+Slide} ()
+\begin{DoxyCompactList}\small\item\em Check if self should slide. \end{DoxyCompactList}\item 
+Q\+List$<$ Q\+Graphics\+Item $\ast$ $>$ \hyperlink{class_b___movable_ac84271d347bea1604a96c930b8bffe17}{Collides\+Center} ()
+\begin{DoxyCompactList}\small\item\em Get all colliding blocks. \end{DoxyCompactList}\item 
+Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_aef4ab507bbb425d12f9c585ba8aae2db}{get\+Collide\+Bloc\+Position} (char sens)
 \begin{DoxyCompactList}\small\item\em Get the colliding block from a direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_b___movable_ab838f983e5e7b13148fc7f4873f2c347}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_ab838f983e5e7b13148fc7f4873f2c347}{left\+Collide\+Box}\label{class_b___movable_ab838f983e5e7b13148fc7f4873f2c347}
+\hypertarget{class_b___movable_a7ab41c3e35cebd0d3ceb7c5e81ed61b8}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a7ab41c3e35cebd0d3ceb7c5e81ed61b8}{left\+Collide\+Box}\label{class_b___movable_a7ab41c3e35cebd0d3ceb7c5e81ed61b8}
 
 \begin{DoxyCompactList}\small\item\em Box on the left side of the b\+\_\+movable. \end{DoxyCompactList}\item 
-\hypertarget{class_b___movable_a5da8e8b462e4504f219857a3e007ad97}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a5da8e8b462e4504f219857a3e007ad97}{right\+Collide\+Box}\label{class_b___movable_a5da8e8b462e4504f219857a3e007ad97}
+\hypertarget{class_b___movable_a197fc74b228c304f1f88e0670c1b3dcc}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a197fc74b228c304f1f88e0670c1b3dcc}{right\+Collide\+Box}\label{class_b___movable_a197fc74b228c304f1f88e0670c1b3dcc}
 
 \begin{DoxyCompactList}\small\item\em Box on the right side of the b\+\_\+movable. \end{DoxyCompactList}\item 
-\hypertarget{class_b___movable_a6ad546481827dc987708ad36023ba21b}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a6ad546481827dc987708ad36023ba21b}{bottom\+Collide\+Box}\label{class_b___movable_a6ad546481827dc987708ad36023ba21b}
+\hypertarget{class_b___movable_a179bdd1cda40cb2bb81035420ad58c61}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a179bdd1cda40cb2bb81035420ad58c61}{bottom\+Collide\+Box}\label{class_b___movable_a179bdd1cda40cb2bb81035420ad58c61}
 
 \begin{DoxyCompactList}\small\item\em Box on the bottom side of the b\+\_\+movable. \end{DoxyCompactList}\item 
-\hypertarget{class_b___movable_a0609a13a4c686a8c7a4a0edb5e87efbf}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a0609a13a4c686a8c7a4a0edb5e87efbf}{top\+Collide\+Box}\label{class_b___movable_a0609a13a4c686a8c7a4a0edb5e87efbf}
+\hypertarget{class_b___movable_a455a8c29d95faab500eb13a996a387ce}{}Q\+Graphics\+Rect\+Item $\ast$ \hyperlink{class_b___movable_a455a8c29d95faab500eb13a996a387ce}{top\+Collide\+Box}\label{class_b___movable_a455a8c29d95faab500eb13a996a387ce}
 
 \begin{DoxyCompactList}\small\item\em Box on the top side of the b\+\_\+movable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -82,6 +108,26 @@ Custom License + N\+D\+A
 \end{DoxyDate}
 \begin{DoxyRefDesc}{Todo}
 \item[\hyperlink{todo__todo000001}{Todo}]integrate with D\+P Factory \end{DoxyRefDesc}
+
+
+This block can be moved with characters. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27 January 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]integrate with D\+P Factory \end{DoxyRefDesc}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -123,7 +169,45 @@ Constructor without position setup.
 {\em parent} & Q\+Graphics\+Item to depend on\\
 \hline
 \end{DoxyParams}
-The use F\+I\+C\+T\+I\+V\+E positions x and y to create the cross of box around self to check collisions. Sets the position on the Z-\/axis to 1 to be on top of the scene which is at 0. 
+The use F\+I\+C\+T\+I\+V\+E positions x and y to create the cross of box around self to check collisions. Sets the position on the Z-\/axis to 1 to be on top of the scene which is at 0. \hypertarget{class_b___movable_ac874fc12d19502117d0bfc396d1059d2}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{B\+\_\+\+Movable}]{\setlength{\rightskip}{0pt plus 5cm}B\+\_\+\+Movable\+::\+B\+\_\+\+Movable (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_ac874fc12d19502117d0bfc396d1059d2}
+
+
+Constructor with position setup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & set the postion on the x-\/axis \\
+\hline
+{\em ypos} & set the postion on the y-\/axis \\
+\hline
+{\em parent} & Q\+Graphics\+Item parent \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b___movable_aef88fa8933731c08731796a9ee3fda6b}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{B\+\_\+\+Movable}]{\setlength{\rightskip}{0pt plus 5cm}B\+\_\+\+Movable\+::\+B\+\_\+\+Movable (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_aef88fa8933731c08731796a9ee3fda6b}
+
+
+Constructor without position setup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Q\+Graphics\+Item to depend on \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
 \hypertarget{class_b___movable_a8a23ac4b1692d95607dcccd6d6c9a973}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!add\+To\+Scene@{add\+To\+Scene}}
@@ -142,13 +226,43 @@ Add self to scene.
 {\em Scene} & scene to add self to\\
 \hline
 \end{DoxyParams}
-Add self and the cross for colliding detectection. \hypertarget{class_b___movable_a081e4e71fb9483330f3315e6b32bbcbb}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Collides\+Center@{Collides\+Center}}
+Add self and the cross for colliding detectection. \hypertarget{class_b___movable_a8a23ac4b1692d95607dcccd6d6c9a973}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!add\+To\+Scene@{add\+To\+Scene}}
+\index{add\+To\+Scene@{add\+To\+Scene}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{add\+To\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::add\+To\+Scene (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{Scene}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a8a23ac4b1692d95607dcccd6d6c9a973}
+
+
+Add self to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Scene} & scene to add self to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b___movable_a081e4e71fb9483330f3315e6b32bbcbb}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Collides\+Center@{Collides\+Center}}
 \index{Collides\+Center@{Collides\+Center}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
 \subsubsection[{Collides\+Center}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ Q\+Graphics\+Item $\ast$ $>$ B\+\_\+\+Movable\+::\+Collides\+Center (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_b___movable_a081e4e71fb9483330f3315e6b32bbcbb}
+
+
+Get all colliding blocks. 
+
+\begin{DoxyReturn}{Returns}
+colliding Q\+Graphics\+Item 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_ac84271d347bea1604a96c930b8bffe17}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Collides\+Center@{Collides\+Center}}
+\index{Collides\+Center@{Collides\+Center}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{Collides\+Center}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$Q\+Graphics\+Item $\ast$$>$ B\+\_\+\+Movable\+::\+Collides\+Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_ac84271d347bea1604a96c930b8bffe17}
 
 
 Get all colliding blocks. 
@@ -175,7 +289,26 @@ Get the colliding block from a direction.
 \begin{DoxyReturn}{Returns}
 Q\+Graphics\+Rect\+Item in collision with the parameter
 \end{DoxyReturn}
-Check the direction as parameter (\char`\"{}b\char`\"{}\+:bottom,\char`\"{}l\char`\"{}\+:left,\char`\"{}r\char`\"{}\+:right,\char`\"{}t\char`\"{}\+:top). Return N\+U\+L\+L if no colliding item is found. \hypertarget{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Bottom@{Is\+Movable\+To\+Bottom}}
+Check the direction as parameter (\char`\"{}b\char`\"{}\+:bottom,\char`\"{}l\char`\"{}\+:left,\char`\"{}r\char`\"{}\+:right,\char`\"{}t\char`\"{}\+:top). Return N\+U\+L\+L if no colliding item is found. \hypertarget{class_b___movable_aef4ab507bbb425d12f9c585ba8aae2db}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!get\+Collide\+Bloc\+Position@{get\+Collide\+Bloc\+Position}}
+\index{get\+Collide\+Bloc\+Position@{get\+Collide\+Bloc\+Position}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{get\+Collide\+Bloc\+Position}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Graphics\+Rect\+Item$\ast$ B\+\_\+\+Movable\+::get\+Collide\+Bloc\+Position (
+\begin{DoxyParamCaption}
+\item[{char}]{sens}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_aef4ab507bbb425d12f9c585ba8aae2db}
+
+
+Get the colliding block from a direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sens} & the side to check for a collision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Graphics\+Rect\+Item in collision with the parameter 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Bottom@{Is\+Movable\+To\+Bottom}}
 \index{Is\+Movable\+To\+Bottom@{Is\+Movable\+To\+Bottom}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
 \subsubsection[{Is\+Movable\+To\+Bottom}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Bottom (
 \begin{DoxyParamCaption}
@@ -188,6 +321,34 @@ Check if self can move to the bottom.
 
 \begin{DoxyReturn}{Returns}
 true if can move to bottom 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Bottom@{Is\+Movable\+To\+Bottom}}
+\index{Is\+Movable\+To\+Bottom@{Is\+Movable\+To\+Bottom}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{Is\+Movable\+To\+Bottom}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Bottom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a190fdc076141ae6698334bfe4dfd61a3}
+
+
+Check if self can move to the bottom. 
+
+\begin{DoxyReturn}{Returns}
+true if can move to bottom 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Left@{Is\+Movable\+To\+Left}}
+\index{Is\+Movable\+To\+Left@{Is\+Movable\+To\+Left}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{Is\+Movable\+To\+Left}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}
+
+
+Check if self can move to the left. 
+
+\begin{DoxyReturn}{Returns}
+true if can move to left 
 \end{DoxyReturn}
 \hypertarget{class_b___movable_a96a0a18c27314600a19d467b6f7820a3}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Left@{Is\+Movable\+To\+Left}}
 \index{Is\+Movable\+To\+Left@{Is\+Movable\+To\+Left}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
@@ -217,6 +378,34 @@ Check if self can move to the right.
 \begin{DoxyReturn}{Returns}
 true if can move to right 
 \end{DoxyReturn}
+\hypertarget{class_b___movable_a134b648413c6d27c008f8a0655ffa0f9}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Right@{Is\+Movable\+To\+Right}}
+\index{Is\+Movable\+To\+Right@{Is\+Movable\+To\+Right}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{Is\+Movable\+To\+Right}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a134b648413c6d27c008f8a0655ffa0f9}
+
+
+Check if self can move to the right. 
+
+\begin{DoxyReturn}{Returns}
+true if can move to right 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Top@{Is\+Movable\+To\+Top}}
+\index{Is\+Movable\+To\+Top@{Is\+Movable\+To\+Top}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{Is\+Movable\+To\+Top}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}
+
+
+Check if self can move to the top. 
+
+\begin{DoxyReturn}{Returns}
+true if can move to top 
+\end{DoxyReturn}
 \hypertarget{class_b___movable_a68bb6a98d031f9495cdeb80b9aa325c4}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!Is\+Movable\+To\+Top@{Is\+Movable\+To\+Top}}
 \index{Is\+Movable\+To\+Top@{Is\+Movable\+To\+Top}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
 \subsubsection[{Is\+Movable\+To\+Top}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::\+Is\+Movable\+To\+Top (
@@ -245,7 +434,40 @@ Check if self should slide.
 \begin{DoxyReturn}{Returns}
 true if self collides with a specific block.
 \end{DoxyReturn}
-Check if the cross of detection collides with \hyperlink{class_s___ice}{S\+\_\+\+Ice}. \hypertarget{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!move\+By@{move\+By}}
+Check if the cross of detection collides with \hyperlink{class_s___ice}{S\+\_\+\+Ice}. \hypertarget{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!is\+Slide@{is\+Slide}}
+\index{is\+Slide@{is\+Slide}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{is\+Slide}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+\_\+\+Movable\+::is\+Slide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a44d1413ec8bceda3b1a50c673b429d03}
+
+
+Check if self should slide. 
+
+\begin{DoxyReturn}{Returns}
+true if self collides with a specific block. 
+\end{DoxyReturn}
+\hypertarget{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!move\+By@{move\+By}}
+\index{move\+By@{move\+By}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{move\+By}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::move\+By (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}
+
+
+Move self by x and y values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & move this amount on the x-\/axis \\
+\hline
+{\em y} & move this amount on the y-\/axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b___movable_a55fb8069fc55c4edabd2ac076acdee17}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!move\+By@{move\+By}}
 \index{move\+By@{move\+By}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
 \subsubsection[{move\+By}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::move\+By (
 \begin{DoxyParamCaption}
@@ -265,6 +487,22 @@ Move self by x and y values.
 \hline
 \end{DoxyParams}
 Move self and the cross for colliding detectection. \hypertarget{class_b___movable_aa4d26e877655021ef70bc6914fe04418}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!remove\+From\+Scene@{remove\+From\+Scene}}
+\index{remove\+From\+Scene@{remove\+From\+Scene}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{remove\+From\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::remove\+From\+Scene (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{Scene}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_aa4d26e877655021ef70bc6914fe04418}
+
+
+Remove self to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Scene} & scene to remove self from \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b___movable_aa4d26e877655021ef70bc6914fe04418}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!remove\+From\+Scene@{remove\+From\+Scene}}
 \index{remove\+From\+Scene@{remove\+From\+Scene}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
 \subsubsection[{remove\+From\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::remove\+From\+Scene (
 \begin{DoxyParamCaption}
@@ -299,9 +537,29 @@ Set the position of self with the x and y values.
 {\em y} & set the postion on the y-\/axis \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_b___movable_aca717ec608426940422f1bc658201bf5}{}\index{B\+\_\+\+Movable@{B\+\_\+\+Movable}!set\+Pos@{set\+Pos}}
+\index{set\+Pos@{set\+Pos}!B\+\_\+\+Movable@{B\+\_\+\+Movable}}
+\subsubsection[{set\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}void B\+\_\+\+Movable\+::set\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_b___movable_aca717ec608426940422f1bc658201bf5}
+
+
+Set the position of self with the x and y values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & set the postion on the x-\/axis \\
+\hline
+{\em y} & set the postion on the y-\/axis \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 b\+\_\+movable.\+h\item 
+gameboard.\+cpp\item 
 b\+\_\+movable.\+cpp\end{DoxyCompactItemize}

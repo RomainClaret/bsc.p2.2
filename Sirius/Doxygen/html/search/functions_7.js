@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pinguinonviewbloc',['pinguinOnViewBloc',['../class_ennemi.html#a6811b0a25a92ec210750072b83d1f74e',1,'Ennemi']]]
+  ['observablesennemis',['ObservablesEnnemis',['../class_observables_ennemis.html#a42dd715d39ad5f9bd012d7528e9c2dcd',1,'ObservablesEnnemis']]]
 ];

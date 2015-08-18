@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 852.713178
+%%BoundingBox: 0 0 500 1033.591731
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.586364 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.483750 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 11 def
-/cols 2 def
+/rows 20 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -175,14 +175,24 @@ boxfont setfont
 1 boundaspect scale
 (Surface) cw
 (QGraphicsRectItem) cw
+(QGraphicsRectItem) cw
+(B_Movable) cw
 (B_Movable) cw
 (B_Wall) cw
+(B_Wall) cw
+(B_Water) cw
 (B_Water) cw
 (Object) cw
+(Object) cw
+(S_Dialog) cw
 (S_Dialog) cw
 (S_Ice) cw
+(S_Ice) cw
+(S_Snow) cw
 (S_Snow) cw
 (S_ViewBlocEnnemi) cw
+(S_ViewBlocEnnemi) cw
+(S_ViewTransition) cw
 (S_ViewTransition) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -195,43 +205,75 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Surface) 0.000000 9.000000 box
- (QGraphicsRectItem) 0.000000 10.000000 box
- (B_Movable) 1.000000 8.000000 box
- (B_Wall) 1.000000 7.000000 box
- (B_Water) 1.000000 6.000000 box
- (Object) 1.000000 5.000000 box
- (S_Dialog) 1.000000 4.000000 box
- (S_Ice) 1.000000 3.000000 box
- (S_Snow) 1.000000 2.000000 box
- (S_ViewBlocEnnemi) 1.000000 1.000000 box
- (S_ViewTransition) 1.000000 0.000000 box
+ (Surface) 0.500000 18.000000 box
+ (QGraphicsRectItem) 0.000000 19.000000 box
+ (QGraphicsRectItem) 1.000000 19.000000 box
+ (B_Movable) 1.500000 17.000000 box
+ (B_Movable) 1.500000 16.000000 box
+ (B_Wall) 1.500000 15.000000 box
+ (B_Wall) 1.500000 14.000000 box
+ (B_Water) 1.500000 13.000000 box
+ (B_Water) 1.500000 12.000000 box
+ (Object) 1.500000 11.000000 box
+ (Object) 1.500000 10.000000 box
+ (S_Dialog) 1.500000 9.000000 box
+ (S_Dialog) 1.500000 8.000000 box
+ (S_Ice) 1.500000 7.000000 box
+ (S_Ice) 1.500000 6.000000 box
+ (S_Snow) 1.500000 5.000000 box
+ (S_Snow) 1.500000 4.000000 box
+ (S_ViewBlocEnnemi) 1.500000 3.000000 box
+ (S_ViewBlocEnnemi) 1.500000 2.000000 box
+ (S_ViewTransition) 1.500000 1.000000 box
+ (S_ViewTransition) 1.500000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 0.000000 9.000000 out
+0 0.500000 18.000000 out
 solid
-1 0.000000 10.000000 in
+0.000000 1.000000 19.000000 conn
 solid
-1 0.000000 8.250000 out
+1 0.000000 19.000000 in
 solid
-0 0.000000 8.500000 hedge
+1 1.000000 19.000000 in
 solid
-0 0.000000 7.500000 hedge
+1 0.500000 17.250000 out
 solid
-0 0.000000 6.500000 hedge
+0 0.500000 17.500000 hedge
 solid
-0 0.000000 5.500000 hedge
+0 0.500000 16.500000 hedge
 solid
-0 0.000000 4.500000 hedge
+0 0.500000 15.500000 hedge
 solid
-0 0.000000 3.500000 hedge
+0 0.500000 14.500000 hedge
 solid
-0 0.000000 2.500000 hedge
+0 0.500000 13.500000 hedge
 solid
-0 0.000000 1.500000 hedge
+0 0.500000 12.500000 hedge
 solid
-0 0.000000 0.500000 hedge
+0 0.500000 11.500000 hedge
 solid
-0.000000 9.000000 0.500000 vedge
+0 0.500000 10.500000 hedge
+solid
+0 0.500000 9.500000 hedge
+solid
+0 0.500000 8.500000 hedge
+solid
+0 0.500000 7.500000 hedge
+solid
+0 0.500000 6.500000 hedge
+solid
+0 0.500000 5.500000 hedge
+solid
+0 0.500000 4.500000 hedge
+solid
+0 0.500000 3.500000 hedge
+solid
+0 0.500000 2.500000 hedge
+solid
+0 0.500000 1.500000 hedge
+solid
+0 0.500000 0.500000 hedge
+solid
+0.500000 18.000000 0.500000 vedge

@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -121,9 +122,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>newGame</b> ()</td></
 <tr class="memitem:a27892e476830d761fae92cc8b7db323f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27892e476830d761fae92cc8b7db323f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>newGameForm</b> ()</td></tr>
 <tr class="separator:a27892e476830d761fae92cc8b7db323f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af8ec946e4b575852937b469bfe3d59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af8ec946e4b575852937b469bfe3d59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadGame</b> (QString value)</td></tr>
+<tr class="separator:a8af8ec946e4b575852937b469bfe3d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebce084546f1f9374a2e1cd0378d17a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ebce084546f1f9374a2e1cd0378d17a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>newGame</b> ()</td></tr>
+<tr class="separator:a3ebce084546f1f9374a2e1cd0378d17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27892e476830d761fae92cc8b7db323f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27892e476830d761fae92cc8b7db323f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>newGameForm</b> ()</td></tr>
+<tr class="separator:a27892e476830d761fae92cc8b7db323f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
+<tr class="memitem:a6bb370ac28c64683a712f30b19a97bc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bb370ac28c64683a712f30b19a97bc8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startGame</b> (<a class="el" href="class_profil.html">Profil</a> *)</td></tr>
+<tr class="separator:a6bb370ac28c64683a712f30b19a97bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277ad4799e66f6b7e314d159467bc963"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a277ad4799e66f6b7e314d159467bc963"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refreshGameMenu</b> ()</td></tr>
+<tr class="separator:a277ad4799e66f6b7e314d159467bc963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb370ac28c64683a712f30b19a97bc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bb370ac28c64683a712f30b19a97bc8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>startGame</b> (<a class="el" href="class_profil.html">Profil</a> *)</td></tr>
 <tr class="separator:a6bb370ac28c64683a712f30b19a97bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,33 +155,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa472610f5ba9e271cb02159d2ca421cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa472610f5ba9e271cb02159d2ca421cc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getProfil</b> ()</td></tr>
 <tr class="separator:aa472610f5ba9e271cb02159d2ca421cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184ff65bb2534378670fee22487b02eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184ff65bb2534378670fee22487b02eb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MenuStart</b> (QWidget *parent=0)</td></tr>
+<tr class="separator:a184ff65bb2534378670fee22487b02eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa472610f5ba9e271cb02159d2ca421cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa472610f5ba9e271cb02159d2ca421cc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getProfil</b> ()</td></tr>
+<tr class="separator:aa472610f5ba9e271cb02159d2ca421cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cb6adad5555d8eb90e27bed5e4333c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cb6adad5555d8eb90e27bed5e4333c5"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>saveGame</b> (<a class="el" href="class_profil.html">Profil</a> *currentUser)</td></tr>
 <tr class="separator:a7cb6adad5555d8eb90e27bed5e4333c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fbde7b6bda9d99c6ebb430c41a49e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22fbde7b6bda9d99c6ebb430c41a49e2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>saveGame</b> (<a class="el" href="class_profil.html">Profil</a> *currentUser)</td></tr>
+<tr class="separator:a22fbde7b6bda9d99c6ebb430c41a49e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a04d0eac4832176f91f62172757ce0616"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04d0eac4832176f91f62172757ce0616"></a>
+<tr class="memitem:adaafc9036857d8831529feb89b83990e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaafc9036857d8831529feb89b83990e"></a>
 QList&lt; QPushButton * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>listButtonProfil</b></td></tr>
-<tr class="separator:a04d0eac4832176f91f62172757ce0616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01ac293a06b0da924be0ad29aa587cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af01ac293a06b0da924be0ad29aa587cf"></a>
+<tr class="separator:adaafc9036857d8831529feb89b83990e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10532e5bfc68a845178d028d4c3a3be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10532e5bfc68a845178d028d4c3a3be"></a>
 QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>buttonNew</b></td></tr>
-<tr class="separator:af01ac293a06b0da924be0ad29aa587cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9426199e93ab1722b19b4e4e178b0164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9426199e93ab1722b19b4e4e178b0164"></a>
+<tr class="separator:ac10532e5bfc68a845178d028d4c3a3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5759a4749f1350bee532e826b97ddf1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5759a4749f1350bee532e826b97ddf1"></a>
 QVBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><b>layoutMenu</b></td></tr>
-<tr class="separator:a9426199e93ab1722b19b4e4e178b0164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf21ea1841ef22859a15b1c201b8bbf6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf21ea1841ef22859a15b1c201b8bbf6"></a>
+<tr class="separator:ab5759a4749f1350bee532e826b97ddf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2bebeb291dcef99edef5947582c390"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d2bebeb291dcef99edef5947582c390"></a>
 QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><b>username</b></td></tr>
-<tr class="separator:abf21ea1841ef22859a15b1c201b8bbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ebe4101b60777e4e1465e1073d533b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06ebe4101b60777e4e1465e1073d533b"></a>
+<tr class="separator:a0d2bebeb291dcef99edef5947582c390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9850c71a592c3d709309befc56739d21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9850c71a592c3d709309befc56739d21"></a>
 QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b></td></tr>
-<tr class="separator:a06ebe4101b60777e4e1465e1073d533b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a427333babe7349783094bc9257462cb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a427333babe7349783094bc9257462cb0"></a>
+<tr class="separator:a9850c71a592c3d709309befc56739d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9b1af2e6c06b251dbf00f81ff4b294"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a9b1af2e6c06b251dbf00f81ff4b294"></a>
 QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>textPseudo</b></td></tr>
-<tr class="separator:a427333babe7349783094bc9257462cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a8a9b1af2e6c06b251dbf00f81ff4b294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main menu, which appears at the game startup. </p>
@@ -180,14 +205,26 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd><p class="startdd">encrypt save files </p>
 <p class="enddd">add credits </p>
 </dd></dl>
+<p>It allows the user to select or create a profil and run a game. Games are saved in a json file type. Saves are found in: MacOSX : "Game.app/Contents/MacOS/save.json", Windows : Dans le meme dossier que Game.exe. Save files are not encrypted. </p><dl class="section author"><dt>Author</dt><dd>Claret Romain, <a href="#" onclick="location.href='mai'+'lto:'+'rom'+'ai'+'n.c'+'la'+'ret'+'@r'+'ocl'+'a.'+'ch'; return false;">romai<span style="display: none;">.nosp@m.</span>n.cl<span style="display: none;">.nosp@m.</span>aret@<span style="display: none;">.nosp@m.</span>rocl<span style="display: none;">.nosp@m.</span>a.ch</a> </dd>
+<dd>
+Divernois Margaux, <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'ga'+'ux.'+'di'+'ver'+'no'+'is@'+'gm'+'ail'+'.c'+'om'; return false;">marga<span style="display: none;">.nosp@m.</span>ux.d<span style="display: none;">.nosp@m.</span>ivern<span style="display: none;">.nosp@m.</span>ois@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd>
+<dd>
+Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'+'st'+'@gm'+'ai'+'l.c'+'om'; return false;">visin<span style="display: none;">.nosp@m.</span>ands<span style="display: none;">.nosp@m.</span>t@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Custom License + NDA </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd><p class="startdd">encrypt save files </p>
+<p class="enddd">add credits </p>
+</dd></dl>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>gameboard.cpp</li>
 <li><a class="el" href="m__menustart_8h_source.html">m_menustart.h</a></li>
 <li>m_menustart.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

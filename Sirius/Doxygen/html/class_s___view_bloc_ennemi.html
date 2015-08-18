@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -99,12 +100,37 @@ Inheritance diagram for S_ViewBlocEnnemi:</div>
  <div class="center">
   <img src="class_s___view_bloc_ennemi.png" usemap="#S_ViewBlocEnnemi_map" alt=""/>
   <map id="S_ViewBlocEnnemi_map" name="S_ViewBlocEnnemi_map">
-<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="0,56,121,80"/>
+<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="65,56,186,80"/>
+<area href="class_surface.html" title="Walking blocks. " alt="Surface" shape="rect" coords="327,56,448,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a61ac9969081699f9cc22f89dcfdba2e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61ac9969081699f9cc22f89dcfdba2e6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>S_ViewBlocEnnemi</b> (int ligne, int colonne, <a class="el" href="class_ennemi.html">Ennemi</a> *proprietaire, QGraphicsItem *parent=0)</td></tr>
+<tr class="separator:a61ac9969081699f9cc22f89dcfdba2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af570c3ab5ad404591829ef8bbed13b08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af570c3ab5ad404591829ef8bbed13b08"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getLine</b> ()</td></tr>
+<tr class="separator:af570c3ab5ad404591829ef8bbed13b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae843182fc545b9c84c22322873e499cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae843182fc545b9c84c22322873e499cd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getColonne</b> ()</td></tr>
+<tr class="separator:ae843182fc545b9c84c22322873e499cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aef2bd784ad1c7c180de4f5608a9624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aef2bd784ad1c7c180de4f5608a9624"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActif</b> ()</td></tr>
+<tr class="separator:a5aef2bd784ad1c7c180de4f5608a9624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976bc517403eeef48f2e7d8bb67dfa99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a976bc517403eeef48f2e7d8bb67dfa99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setActif</b> (bool actif)</td></tr>
+<tr class="separator:a976bc517403eeef48f2e7d8bb67dfa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6bb606eaf348d513caf0bfd73fd0aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c6bb606eaf348d513caf0bfd73fd0aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pinguinOn</b> ()</td></tr>
+<tr class="separator:a3c6bb606eaf348d513caf0bfd73fd0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930acab8e21620c59f18144230a9a33d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a930acab8e21620c59f18144230a9a33d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>blocOn</b> ()</td></tr>
+<tr class="separator:a930acab8e21620c59f18144230a9a33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215944e297397346d3d5c0a08ae3d1fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a215944e297397346d3d5c0a08ae3d1fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStylePinguinOn</b> ()</td></tr>
+<tr class="separator:a215944e297397346d3d5c0a08ae3d1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ac9969081699f9cc22f89dcfdba2e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61ac9969081699f9cc22f89dcfdba2e6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>S_ViewBlocEnnemi</b> (int ligne, int colonne, <a class="el" href="class_ennemi.html">Ennemi</a> *proprietaire, QGraphicsItem *parent=0)</td></tr>
 <tr class="separator:a61ac9969081699f9cc22f89dcfdba2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,21 +174,40 @@ QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td><
 <tr class="memitem:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7dd076ec71f2d6a63fe60f6c011786b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (QString brushColor)</td></tr>
 <tr class="separator:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03bea7e4e17982fd17f8a571035a6f0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Surface</b> (int xpos, int ypos, QGraphicsItem *parent=0)</td></tr>
+<tr class="separator:ac03bea7e4e17982fd17f8a571035a6f0 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1af81e4723f854196608b966a86415 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e1af81e4723f854196608b966a86415"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Surface</b> (int xpos, int ypos, int width, int height, QGraphicsItem *parent=0)</td></tr>
+<tr class="separator:a3e1af81e4723f854196608b966a86415 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025ed38853ae95be3c6fe8814711ffc3 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a025ed38853ae95be3c6fe8814711ffc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (int, int)</td></tr>
+<tr class="separator:a025ed38853ae95be3c6fe8814711ffc3 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63590ebca0d813b110aa286400eac72 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab63590ebca0d813b110aa286400eac72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosPixel</b> (int, int)</td></tr>
+<tr class="separator:ab63590ebca0d813b110aa286400eac72 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdbf91a4cca74bb9da6c8a2fa932cd7 inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbdbf91a4cca74bb9da6c8a2fa932cd7"></a>
+QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td></tr>
+<tr class="separator:acbdbf91a4cca74bb9da6c8a2fa932cd7 inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7dd076ec71f2d6a63fe60f6c011786b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (QString brushColor)</td></tr>
+<tr class="separator:ab7dd076ec71f2d6a63fe60f6c011786b inherit pub_methods_class_surface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a85aabc73d2414af643c1d6e65a3384f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85aabc73d2414af643c1d6e65a3384f5"></a>
+<tr class="memitem:a81d0ab8a06869937e2c7bdc9674ab92e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81d0ab8a06869937e2c7bdc9674ab92e"></a>
 <a class="el" href="class_ennemi.html">Ennemi</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>proprietaire</b></td></tr>
-<tr class="separator:a85aabc73d2414af643c1d6e65a3384f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a81d0ab8a06869937e2c7bdc9674ab92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
+<li>gameboard.cpp</li>
 <li><a class="el" href="s__viewblocennemi_8h_source.html">s_viewblocennemi.h</a></li>
 <li>s_viewblocennemi.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

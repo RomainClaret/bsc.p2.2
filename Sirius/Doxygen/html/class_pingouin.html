@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Pingouin_Original_Face.gif"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">James Gouin et la Banane Sacrée
    &#160;<span id="projectnumber">Version 2.0</span>
@@ -103,7 +104,8 @@ Inheritance diagram for Pingouin:</div>
  <div class="center">
   <img src="class_pingouin.png" usemap="#Pingouin_map" alt=""/>
   <map id="Pingouin_map" name="Pingouin_map">
-<area href="class_player.html" title="Playable characters. " alt="Player" shape="rect" coords="0,56,95,80"/>
+<area href="class_player.html" title="Playable characters. " alt="Player" shape="rect" coords="52,56,147,80"/>
+<area href="class_player.html" title="Playable characters. " alt="Player" shape="rect" coords="262,56,357,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -184,6 +186,81 @@ QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getBot
 <tr class="memitem:ae8bf1799a91f7c7863731ddcfe1b1418"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8bf1799a91f7c7863731ddcfe1b1418"></a>
 <a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayer</b> ()</td></tr>
 <tr class="separator:ae8bf1799a91f7c7863731ddcfe1b1418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f0120d2ee61c6a6ca715a8e88f3d3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f0120d2ee61c6a6ca715a8e88f3d3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (int, int)</td></tr>
+<tr class="separator:a91f0120d2ee61c6a6ca715a8e88f3d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80aa8b486de1bba6c637a8ab0233fc10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80aa8b486de1bba6c637a8ab0233fc10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>moveBy</b> (int, int)</td></tr>
+<tr class="separator:a80aa8b486de1bba6c637a8ab0233fc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b74f3acac4cce611992586356805d4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b74f3acac4cce611992586356805d4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>moveBack</b> ()</td></tr>
+<tr class="separator:a6b74f3acac4cce611992586356805d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90eef5bc5b47bdae1508f572d1d898d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90eef5bc5b47bdae1508f572d1d898d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addToScene</b> (QGraphicsScene *)</td></tr>
+<tr class="separator:a90eef5bc5b47bdae1508f572d1d898d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad91b21a996f75e32a78c203eb7490446"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad91b21a996f75e32a78c203eb7490446"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addObjectToSacoche</b> (<a class="el" href="class_object.html">Object</a> *object)</td></tr>
+<tr class="separator:ad91b21a996f75e32a78c203eb7490446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73130bc706f0c1a40a20f05d0d3a3ffa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73130bc706f0c1a40a20f05d0d3a3ffa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeObjectFromSacoche</b> (QString object)</td></tr>
+<tr class="separator:a73130bc706f0c1a40a20f05d0d3a3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc2b0b92b4093f59821a683e6d71b14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bc2b0b92b4093f59821a683e6d71b14"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeTempFromSacoche</b> ()</td></tr>
+<tr class="separator:a7bc2b0b92b4093f59821a683e6d71b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53145c212327b2a733237e1eb55aad24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53145c212327b2a733237e1eb55aad24"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkObjectSacoche</b> (QString object, int quantity=1)</td></tr>
+<tr class="separator:a53145c212327b2a733237e1eb55aad24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0bba74647869527534c9aa1da1c3f9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0bba74647869527534c9aa1da1c3f9e"></a>
+QList&lt; <a class="el" href="class_object.html">Object</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSacoche</b> ()</td></tr>
+<tr class="separator:ae0bba74647869527534c9aa1da1c3f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736f73e55524b59c00479aef1f91f94d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a736f73e55524b59c00479aef1f91f94d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printSacoche</b> ()</td></tr>
+<tr class="separator:a736f73e55524b59c00479aef1f91f94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1adb59f85236324915f9211bc111faa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1adb59f85236324915f9211bc111faa6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emptyTempSacoche</b> ()</td></tr>
+<tr class="separator:a1adb59f85236324915f9211bc111faa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53b1d8d5167cd2fc039f97219f22064"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af53b1d8d5167cd2fc039f97219f22064"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emptySacoche</b> ()</td></tr>
+<tr class="separator:af53b1d8d5167cd2fc039f97219f22064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31dcd728180d2e85cf1c696ad2f0b062"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31dcd728180d2e85cf1c696ad2f0b062"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSlide</b> ()</td></tr>
+<tr class="separator:a31dcd728180d2e85cf1c696ad2f0b062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecce86d070fcfef325a55676043866ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecce86d070fcfef325a55676043866ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSlideAble</b> (bool value)</td></tr>
+<tr class="separator:aecce86d070fcfef325a55676043866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9648ffb7a4da9385b6a424a419b1844"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9648ffb7a4da9385b6a424a419b1844"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getCollideBloc</b> (char sensDepl)</td></tr>
+<tr class="separator:ac9648ffb7a4da9385b6a424a419b1844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52b664bec9976b1026e92022e0409db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae52b664bec9976b1026e92022e0409db"></a>
+QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CollidesRight</b> ()</td></tr>
+<tr class="separator:ae52b664bec9976b1026e92022e0409db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f46058cc86907aa0f7890a89f87b143"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f46058cc86907aa0f7890a89f87b143"></a>
+QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CollidesLeft</b> ()</td></tr>
+<tr class="separator:a0f46058cc86907aa0f7890a89f87b143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86037613d06b3f9f3c25d0979702bd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa86037613d06b3f9f3c25d0979702bd5"></a>
+QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CollidesTop</b> ()</td></tr>
+<tr class="separator:aa86037613d06b3f9f3c25d0979702bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e102222ed4acde6df83c651b8d3b61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93e102222ed4acde6df83c651b8d3b61"></a>
+QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CollidesBottom</b> ()</td></tr>
+<tr class="separator:a93e102222ed4acde6df83c651b8d3b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaf2cc224d3476459efe9c55d2b8912"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafaf2cc224d3476459efe9c55d2b8912"></a>
+QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CollidesCenter</b> ()</td></tr>
+<tr class="separator:aafaf2cc224d3476459efe9c55d2b8912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44549cdbb9dffeaf95b13aff69b63de1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44549cdbb9dffeaf95b13aff69b63de1"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getLeftCB</b> ()</td></tr>
+<tr class="separator:a44549cdbb9dffeaf95b13aff69b63de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1481b2b9ba69162172fe6368ff38ebad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1481b2b9ba69162172fe6368ff38ebad"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getRightCB</b> ()</td></tr>
+<tr class="separator:a1481b2b9ba69162172fe6368ff38ebad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f24049dbfc187822e2d7a430b691dff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f24049dbfc187822e2d7a430b691dff"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getTopCB</b> ()</td></tr>
+<tr class="separator:a5f24049dbfc187822e2d7a430b691dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c65f5df2708bbfa22f7d794bfcffc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62c65f5df2708bbfa22f7d794bfcffc3"></a>
+QGraphicsRectItem *&#160;</td><td class="memItemRight" valign="bottom"><b>getBottomCB</b> ()</td></tr>
+<tr class="separator:a62c65f5df2708bbfa22f7d794bfcffc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b57fcabaf2518e98b4511c8bba35a40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b57fcabaf2518e98b4511c8bba35a40"></a>
+<a class="el" href="class_player.html">Player</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayer</b> ()</td></tr>
+<tr class="separator:a0b57fcabaf2518e98b4511c8bba35a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_player"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_player')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_player.html">Player</a></td></tr>
 <tr class="memitem:a40e85189b099c86221a8ad62f3173980 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40e85189b099c86221a8ad62f3173980"></a>
 QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>boundingRect</b> () const </td></tr>
@@ -200,13 +277,28 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerOrientati
 <tr class="memitem:aab3077d4bd36a08a88a618b56a115b1e inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab3077d4bd36a08a88a618b56a115b1e"></a>
 QPoint *&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td></tr>
 <tr class="separator:aab3077d4bd36a08a88a618b56a115b1e inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e85189b099c86221a8ad62f3173980 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40e85189b099c86221a8ad62f3173980"></a>
+QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>boundingRect</b> () const </td></tr>
+<tr class="separator:a40e85189b099c86221a8ad62f3173980 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d1d7a8488bc2ed3a9b317dcf17b39c inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02d1d7a8488bc2ed3a9b317dcf17b39c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr class="separator:a02d1d7a8488bc2ed3a9b317dcf17b39c inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ee830f8960d206559305a257e34dcb inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80ee830f8960d206559305a257e34dcb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlayerOrientation</b> (QString orientation)</td></tr>
+<tr class="separator:a80ee830f8960d206559305a257e34dcb inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c71ec72ae01aa19ffff508fe61df393 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c71ec72ae01aa19ffff508fe61df393"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerOrientation</b> ()</td></tr>
+<tr class="separator:a7c71ec72ae01aa19ffff508fe61df393 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0118e0d9248cf4e63491228fb4db484 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0118e0d9248cf4e63491228fb4db484"></a>
+QPoint *&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> ()</td></tr>
+<tr class="separator:af0118e0d9248cf4e63491228fb4db484 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_player"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_player')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_player.html">Player</a></td></tr>
-<tr class="memitem:aa6bebd35f8a777820886664b9444b9b5 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6bebd35f8a777820886664b9444b9b5"></a>
+<tr class="memitem:af645259dc442f5e32e7cd46d5b48ed7f inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af645259dc442f5e32e7cd46d5b48ed7f"></a>
 QBrush *&#160;</td><td class="memItemRight" valign="bottom"><b>playerSkin</b></td></tr>
-<tr class="separator:aa6bebd35f8a777820886664b9444b9b5 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:af645259dc442f5e32e7cd46d5b48ed7f inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_player"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_player')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_player.html">Player</a></td></tr>
 <tr class="memitem:aa3c4b095965da25dba3e777122082773 inherit pro_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3c4b095965da25dba3e777122082773"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>xPos</b></td></tr>
@@ -226,13 +318,14 @@ Visinand Steve, <a href="#" onclick="location.href='mai'+'lto:'+'vis'+'in'+'and'
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>27 January 2015 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>gameboard.cpp</li>
 <li><a class="el" href="p__penguin_8h_source.html">p_penguin.h</a></li>
 <li>p_penguin.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 16:41:50 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 18 2015 17:12:27 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

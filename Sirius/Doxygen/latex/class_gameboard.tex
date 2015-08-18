@@ -38,10 +38,38 @@ Inheritance diagram for Gameboard\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Restart the level at the beginning. \end{DoxyCompactList}\item 
 \hypertarget{class_gameboard_a538d797eadaa51a15c999c14f984f76c}{}void \hyperlink{class_gameboard_a538d797eadaa51a15c999c14f984f76c}{return\+Island} ()\label{class_gameboard_a538d797eadaa51a15c999c14f984f76c}
 
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Load the Island \hyperlink{class_level}{Level}. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_a1447e62dd9f78bcba4bdb06c4bfb8f10}{}void \hyperlink{class_gameboard_a1447e62dd9f78bcba4bdb06c4bfb8f10}{resume\+Game} ()\label{class_gameboard_a1447e62dd9f78bcba4bdb06c4bfb8f10}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Resume the Game after pause. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_ac59525fc331dafd4a1a290593327aa7c}{}void \hyperlink{class_gameboard_ac59525fc331dafd4a1a290593327aa7c}{Slide\+Pingouin} ()\label{class_gameboard_ac59525fc331dafd4a1a290593327aa7c}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Slide the playable character. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_aa4e9c04466f50e1590269eab05773581}{}void \hyperlink{class_gameboard_aa4e9c04466f50e1590269eab05773581}{Slide\+Bloc} ()\label{class_gameboard_aa4e9c04466f50e1590269eab05773581}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Slide blocks in the List of sliding blocks. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_af76ebc877764feed7bc9d90452178f5f}{}void \hyperlink{class_gameboard_af76ebc877764feed7bc9d90452178f5f}{exit\+Game} ()\label{class_gameboard_af76ebc877764feed7bc9d90452178f5f}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Ask for profil save, and destruct self. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_a0de799440eb9030b55bf3f59fa350683}{}void \hyperlink{class_gameboard_a0de799440eb9030b55bf3f59fa350683}{restart\+Enigma} ()\label{class_gameboard_a0de799440eb9030b55bf3f59fa350683}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Restart the level at the last checkpoint-\/$>$ \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_a0d4ac38611d2ed24732823656ba613e0}{}void \hyperlink{class_gameboard_a0d4ac38611d2ed24732823656ba613e0}{restart\+Level} ()\label{class_gameboard_a0d4ac38611d2ed24732823656ba613e0}
+
+\begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Restart the level at the beginning. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_a538d797eadaa51a15c999c14f984f76c}{}void \hyperlink{class_gameboard_a538d797eadaa51a15c999c14f984f76c}{return\+Island} ()\label{class_gameboard_a538d797eadaa51a15c999c14f984f76c}
+
 \begin{DoxyCompactList}\small\item\em S\+L\+O\+T\+: Load the Island \hyperlink{class_level}{Level}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_gameboard_a82157069ecfab2d2245b7d5df563aaae}{Gameboard} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_gameboard}{Gameboard}. \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}{}\hyperlink{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}{$\sim$\+Gameboard} ()\label{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}
+
+\begin{DoxyCompactList}\small\item\em Remove all items on it. \end{DoxyCompactList}\item 
+void \hyperlink{class_gameboard_a7ac10eb79b85cecff7fdeda1f31e980b}{set\+Player\+Profil} (\hyperlink{class_profil}{Profil} $\ast$player\+Profil)
+\begin{DoxyCompactList}\small\item\em Load info from the profil into the \hyperlink{class_gameboard}{Gameboard}. \end{DoxyCompactList}\item 
 \hyperlink{class_gameboard_a82157069ecfab2d2245b7d5df563aaae}{Gameboard} (Q\+Widget $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_gameboard}{Gameboard}. \end{DoxyCompactList}\item 
 \hypertarget{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}{}\hyperlink{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}{$\sim$\+Gameboard} ()\label{class_gameboard_a4387b654115aa01bd309e5e0b6c8724a}
@@ -54,14 +82,25 @@ void \hyperlink{class_gameboard_a7ac10eb79b85cecff7fdeda1f31e980b}{set\+Player\+
 \item 
 \hypertarget{class_gameboard_aa10ed162ff321f4fe480e531ef352bd8}{}static int {\bfseries get\+Game\+Squares} ()\label{class_gameboard_aa10ed162ff321f4fe480e531ef352bd8}
 
-\end{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_gameboard_ab64b2e36f45a6d19b85df77bec6511e3}{get\+Size\+X} ()
+\begin{DoxyCompactList}\small\item\em get\+Size\+X \end{DoxyCompactList}\item 
+static int \hyperlink{class_gameboard_a4c24be994533597a965ada18a4b70a35}{get\+Size\+Y} ()
+\begin{DoxyCompactList}\small\item\em get\+Size\+Y \end{DoxyCompactList}\item 
+\hypertarget{class_gameboard_abbb7bbb191ceb2a8f9ff8127c137e6db}{}static int {\bfseries get\+Game\+Squares} ()\label{class_gameboard_abbb7bbb191ceb2a8f9ff8127c137e6db}
+
+\item 
+static int \hyperlink{class_gameboard_a7608e79bfe05ad0742fbf81277045029}{get\+Size\+X} ()
+\begin{DoxyCompactList}\small\item\em get\+Size\+X \end{DoxyCompactList}\item 
+static int \hyperlink{class_gameboard_ae35c2c74c7ff6d54a568212e217b42c7}{get\+Size\+Y} ()
+\begin{DoxyCompactList}\small\item\em get\+Size\+Y \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_gameboard_a50499cde2f942a0d18d261a7103e1e2a}{}static int {\bfseries size\+X} = 20\label{class_gameboard_a50499cde2f942a0d18d261a7103e1e2a}
+\hypertarget{class_gameboard_ac369f7be1f2d6213446001327dfe2b46}{}static int {\bfseries size\+X} = 20\label{class_gameboard_ac369f7be1f2d6213446001327dfe2b46}
 
 \item 
-\hypertarget{class_gameboard_a1a60c1746c1bfa669b3bf7b3dfc6534d}{}static int {\bfseries size\+Y} = 15\label{class_gameboard_a1a60c1746c1bfa669b3bf7b3dfc6534d}
+\hypertarget{class_gameboard_a9bd9fa4c73c4703bc38394a220575bd3}{}static int {\bfseries size\+Y} = 15\label{class_gameboard_a9bd9fa4c73c4703bc38394a220575bd3}
 
 \end{DoxyCompactItemize}
 
@@ -86,7 +125,27 @@ Custom License + N\+D\+A
 27 January 2015 
 \end{DoxyDate}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000008}{Todo}]create a translation file \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000010}{Todo}]create a translation file \end{DoxyRefDesc}
+
+
+This is the Q\+Widget which is giving life to the game. Managing the level transition, the player, enemies, objects, blocs, dialogs, pause menu, and interactions. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27 January 2015 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000022}{Todo}]create a translation file \end{DoxyRefDesc}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -106,9 +165,97 @@ Constructor of the \hyperlink{class_gameboard}{Gameboard}.
 {\em parent} & Q\+Widget to depend on \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_gameboard_a82157069ecfab2d2245b7d5df563aaae}{}\index{Gameboard@{Gameboard}!Gameboard@{Gameboard}}
+\index{Gameboard@{Gameboard}!Gameboard@{Gameboard}}
+\subsubsection[{Gameboard}]{\setlength{\rightskip}{0pt plus 5cm}Gameboard\+::\+Gameboard (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_gameboard_a82157069ecfab2d2245b7d5df563aaae}
+
+
+Constructor of the \hyperlink{class_gameboard}{Gameboard}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Q\+Widget to depend on \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_gameboard_ab64b2e36f45a6d19b85df77bec6511e3}{}\index{Gameboard@{Gameboard}!get\+Size\+X@{get\+Size\+X}}
+\index{get\+Size\+X@{get\+Size\+X}!Gameboard@{Gameboard}}
+\subsubsection[{get\+Size\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Gameboard\+::get\+Size\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_gameboard_ab64b2e36f45a6d19b85df77bec6511e3}
+
+
+get\+Size\+X 
+
+\begin{DoxyReturn}{Returns}
+the size X of the scene (the map)
+\end{DoxyReturn}
+return the size X \hypertarget{class_gameboard_a7608e79bfe05ad0742fbf81277045029}{}\index{Gameboard@{Gameboard}!get\+Size\+X@{get\+Size\+X}}
+\index{get\+Size\+X@{get\+Size\+X}!Gameboard@{Gameboard}}
+\subsubsection[{get\+Size\+X}]{\setlength{\rightskip}{0pt plus 5cm}static int Gameboard\+::get\+Size\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_gameboard_a7608e79bfe05ad0742fbf81277045029}
+
+
+get\+Size\+X 
+
+\begin{DoxyReturn}{Returns}
+the size X of the scene (the map) 
+\end{DoxyReturn}
+\hypertarget{class_gameboard_a4c24be994533597a965ada18a4b70a35}{}\index{Gameboard@{Gameboard}!get\+Size\+Y@{get\+Size\+Y}}
+\index{get\+Size\+Y@{get\+Size\+Y}!Gameboard@{Gameboard}}
+\subsubsection[{get\+Size\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Gameboard\+::get\+Size\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_gameboard_a4c24be994533597a965ada18a4b70a35}
+
+
+get\+Size\+Y 
+
+\begin{DoxyReturn}{Returns}
+the size Y of the scene (the map)
+\end{DoxyReturn}
+return the size Y \hypertarget{class_gameboard_ae35c2c74c7ff6d54a568212e217b42c7}{}\index{Gameboard@{Gameboard}!get\+Size\+Y@{get\+Size\+Y}}
+\index{get\+Size\+Y@{get\+Size\+Y}!Gameboard@{Gameboard}}
+\subsubsection[{get\+Size\+Y}]{\setlength{\rightskip}{0pt plus 5cm}static int Gameboard\+::get\+Size\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_gameboard_ae35c2c74c7ff6d54a568212e217b42c7}
+
+
+get\+Size\+Y 
+
+\begin{DoxyReturn}{Returns}
+the size Y of the scene (the map) 
+\end{DoxyReturn}
+\hypertarget{class_gameboard_a7ac10eb79b85cecff7fdeda1f31e980b}{}\index{Gameboard@{Gameboard}!set\+Player\+Profil@{set\+Player\+Profil}}
+\index{set\+Player\+Profil@{set\+Player\+Profil}!Gameboard@{Gameboard}}
+\subsubsection[{set\+Player\+Profil}]{\setlength{\rightskip}{0pt plus 5cm}void Gameboard\+::set\+Player\+Profil (
+\begin{DoxyParamCaption}
+\item[{{\bf Profil} $\ast$}]{player\+Profil}
+\end{DoxyParamCaption}
+)}\label{class_gameboard_a7ac10eb79b85cecff7fdeda1f31e980b}
+
+
+Load info from the profil into the \hyperlink{class_gameboard}{Gameboard}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Profil} & \hyperlink{class_profil}{Profil} of the player \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_gameboard_a7ac10eb79b85cecff7fdeda1f31e980b}{}\index{Gameboard@{Gameboard}!set\+Player\+Profil@{set\+Player\+Profil}}
 \index{set\+Player\+Profil@{set\+Player\+Profil}!Gameboard@{Gameboard}}
 \subsubsection[{set\+Player\+Profil}]{\setlength{\rightskip}{0pt plus 5cm}void Gameboard\+::set\+Player\+Profil (
@@ -129,5 +276,5 @@ Load info from the profil into the \hyperlink{class_gameboard}{Gameboard}.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-gameboard.\+h\item 
-gameboard.\+cpp\end{DoxyCompactItemize}
+gameboard.\+cpp\item 
+gameboard.\+h\end{DoxyCompactItemize}
