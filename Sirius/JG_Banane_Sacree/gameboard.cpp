@@ -23,7 +23,7 @@
 #include "s_snow.h"
 #include "s_ice.h"
 #include "s_dialog.h"
-#include "level2.h"
+#include "level.h"
 #include "ennemi.h"
 #include "e_renard.h"
 #include "e_loup.h"
@@ -75,7 +75,7 @@ Gameboard::Gameboard(QWidget *parent) : QWidget(parent)
     pingouin = new Pingouin();
     checkpoint = new QPoint(0,0);
     playerProfil = new Profil();
-    currentLevel = new Level2(0, this);
+    currentLevel = new Level(0, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     playerView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1029,7 +1029,7 @@ void Gameboard::setLevel(int value)
 {
     delete currentLevel;
     playerProfil->setLevel(value);
-    currentLevel = new Level2(value, this);
+    currentLevel = new Level(value, this);
     pingouin->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
     MenuStart::saveGame(playerProfil);

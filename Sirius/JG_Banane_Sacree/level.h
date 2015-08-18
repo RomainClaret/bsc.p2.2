@@ -24,51 +24,81 @@ class QStringList;
 #include <QList>
 
 #include "w_dialog.h"
-
-//#include "gameboard.h"
-
-/**
- * @brief Level generator from tilded text file
- * @details Convert a given file generated with Tiled into blocks and positions.
- * It populates the scene.
- * @author Claret Romain, romain.claret@rocla.ch
- * @author Divernois Margaux, margaux.divernois@gmail.com
- * @author Visinand Steve, visinandst@gmail.com
- * @copyright Custom License + NDA
- * @version 1.0
- * @date 27 January 2015
- * @todo stop reading line by line
- */
+#include <QDomElement>
+#include <QDomDocument>
 
 class Level
 {
 public:
+    /**
+     * @brief Level's Constructor
+     * @param levelNumber int containing the Level Number
+     * @param game Gameboard*
+     */
     Level(int levelNumber, Gameboard *game);
-    QGraphicsScene *populateScene();
+
+    /**
+     * @brief Populate the QGraphicsScene according to XML Level File
+     * @return QGraphicsScene* containing all items
+     */
+    QGraphicsScene* populateScene();
+
+    /**
+     * @brief Get the starting position of the Penguin
+     * @return Starting QPoint*
+     */
     QPoint* getStartingPoint();
+
+    /**
+     * @brief Get the starting x/y view position
+     * @return Starting View QPoint*
+     */
     QPoint getViewStart();
-    int changeLevel(int levelNumber);
+
+    /**
+     * @brief Get the current Level Number
+     * @return int Level Number
+     */
     int getLevelNumber();
-    QString getDialogText(int value);
+
+    /**
+     * @brief Return the unlocking position
+     * @return QPoint containing the unlocking position
+     */
     QPoint getUnlockEndPoint();
 
+    /**
+     * @brief Add the informations from param into the class
+     * @param elem QDomElement containing the informations
+     */
+    void addLevelInformation(QDomElement elem);
+
+    /**
+     * @brief Add the item from param into the scene
+     * @param scene QGraphicsScene* from the level
+     * @param elem QDomElement containing the informations
+     * @param x xPosition
+     * @param y yPosition
+     */
+    void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
+
 private:
+    // Level Playing Informations
     int levelNumber;
     QPoint* startingPoint;
     QPoint* viewStart;
     QPoint* unlockEnd;
 
+    // Game
     Gameboard *game;
 
+    // Level Size
     int maxBlocksHeight;
     int maxBlocksWidth;
 
-    void getSceneSize();
-    void getSceneDialog();
-
-    QList<QList<QPoint> > ennemi;
-    QStringList dialogList;
-    int dialogValue;
+    // XML Informations Files
+    QString fileName;
+    QDomDocument* doc;
 };
 
 #endif // LEVEL_H

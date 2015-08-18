@@ -18,6 +18,8 @@
 #include <QTextStream>
 #include <QGraphicsScene>
 
+#include "surface.h"
+#include "surfacefactory.h"
 #include "b_wall.h"
 #include "b_water.h"
 #include "b_movable.h"
@@ -34,6 +36,13 @@
 #include <QDebug>
 #include <QList>
 
+#include <QDomNodeList>
+#include <QDomElement>
+#include <QDomDocument>
+
+/**
+ * @details Create Level according to levelNumber and read the basics XML level informations
+ */
 Level::Level(int levelNumber, Gameboard *game)
 {
     this->game = game;
@@ -46,9 +55,33 @@ Level::Level(int levelNumber, Gameboard *game)
     viewStart = new QPoint(0,0);
     unlockEnd = new QPoint(0,0);
 
-    dialogValue = 0;
+    QString fileName = ":/maps/maps/L";
+    fileName.append(QString("%1").arg(levelNumber));
+    fileName.append(".xml");
+    qDebug() << fileName;
 
-    getSceneSize();
+    QString errorMsg;
+    int errorLine, errorColumn;
+    doc = new QDomDocument(fileName);
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly))
+        return;
+    if (!doc->setContent(&file, &errorMsg, &errorLine, &errorColumn))
+    {
+        file.close();
+        qDebug() << "ERROR";
+        qDebug() << "Parsing error, line " << errorLine
+                << " column " << errorColumn
+                << ": " << qPrintable(errorMsg) << endl;
+        return;
+    }
+    file.close();
+
+    QDomElement levelInformation = doc->firstChildElement().firstChildElement();
+    for(QDomElement elem = levelInformation.firstChildElement(); !elem.isNull(); elem = elem.nextSiblingElement())
+    {
+        addLevelInformation(elem);
+    }
 }
 
 QPoint* Level::getStartingPoint()
@@ -56,45 +89,12 @@ QPoint* Level::getStartingPoint()
     return this->startingPoint;
 }
 
+/**
+ * @details Populate the scene that will be returned by using addLevelItem method.
+ */
 QGraphicsScene* Level::populateScene()
 {
     QGraphicsScene* scene = new QGraphicsScene();
-
-    getSceneSize();
-    getSceneDialog();
-
-    int Mat_Walls_Blocks[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Movable_Blocks[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Items[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Bonus[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Enemies[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Scene_End[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Doors[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Water_Blocks[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Snow_Surface[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Ice_Surface[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Item_Shoes[maxBlocksWidth][maxBlocksHeight];
-    int Mat_Dialog[maxBlocksWidth][maxBlocksHeight];
-
-    for (int matY = 0; matY < maxBlocksHeight; matY++)
-    {
-        for (int matX = 0; matX < maxBlocksWidth; matX++)
-        {
-            Mat_Walls_Blocks[matX][matY] = 0;
-            Mat_Movable_Blocks[matX][matY] = 0;
-            Mat_Items[matX][matY] = 0;
-            Mat_Bonus[matX][matY] = 0;
-            Mat_Doors[matX][matY] = 0;
-            Mat_Water_Blocks[matX][matY] = 0;
-            Mat_Snow_Surface[matX][matY] = 0;
-            Mat_Ice_Surface[matX][matY] = 0;
-            Mat_Item_Shoes[matX][matY] = 0;
-            Mat_Enemies[matX][matY] = 0;
-            Mat_Scene_End[matX][matY] = 0;
-            Mat_Dialog[matX][matY] = 0;
-
-        }
-    }
 
     QString background = ":/maps/maps/";
     background.append(QString("%1").arg(levelNumber));
@@ -102,528 +102,99 @@ QGraphicsScene* Level::populateScene()
     QPixmap pixmapBackground(background);
     scene->setBackgroundBrush(pixmapBackground);
 
-    QString map = ":/maps/maps/";
-    map.append(QString("%1").arg(levelNumber));
-    map.append(".txt");
+    QDomNode level = doc->firstChildElement().firstChild();
+    QDomNode levelItem = level.nextSibling();
 
-    QFile f(map);
-
-    if(f.open(QIODevice::ReadOnly | QIODevice::Text))
+    //LIGNE
+    for(QDomElement elemLine = levelItem.firstChildElement(); !elemLine.isNull(); elemLine = elemLine.nextSiblingElement())
     {
-        QTextStream t(&f);
-        t.setCodec("UTF-8");
-        QString line[1000];
-        QString s;
-        int line_count=0;
-
-        int matX, matY;
-
-        while(!t.atEnd())
+        //COLONNE
+        for(QDomElement elemColonne = elemLine.firstChildElement(); !elemColonne.isNull(); elemColonne = elemColonne.nextSiblingElement())
         {
-            line_count++;
-            line[line_count]=t.readLine();
-
-            if(line[line_count].contains("[ennemi]"))
+            //ITEM
+            for(QDomElement elemItem = elemColonne.firstChildElement(); !elemItem.isNull(); elemItem = elemItem.nextSiblingElement())
             {
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList listEnnemi = line[line_count].split("//");
-
-                for(int j = 0; j < listEnnemi.size(); j++)
-                {
-                    QStringList listPoint = listEnnemi.at(j).split(",");
-                    QList<QPoint> listeDePoints;
-                    for(int i = 0; i < listPoint.size(); i++)
-                    {
-                        QStringList point = listPoint.at(i).split("-");
-                        listeDePoints.append(QPoint(point.at(0).toInt(),point.at(1).toInt()));
-                    }
-                    ennemi.append(listeDePoints);
-                }
-            }
-
-            if(line[line_count].contains("type=Walls_Blocks"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Walls_Blocks[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Solid_Blocks"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Walls_Blocks[matX][matY] += values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Movable_Blocks"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Movable_Blocks[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Items"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Items[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Bonus"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Bonus[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Enemies"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Enemies[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-            if(line[line_count].contains("type=Scene_End"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Scene_End[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-            if(line[line_count].contains("type=Doors"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Doors[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Water_Blocks"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Water_Blocks[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=NoMoves_Blocks"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Walls_Blocks[matX][matY] += values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-
-            if(line[line_count].contains("type=Snow_Surface"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Snow_Surface[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Ice_Surface"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Ice_Surface[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-
-            if(line[line_count].contains("type=Item_Shoes"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Item_Shoes[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-            if(line[line_count].contains("type=Dialogs"))
-            {
-                line_count ++;
-                line[line_count]=t.readLine();
-                line_count ++;
-                line[line_count]=t.readLine();
-
-                for (matY = 0; matY < maxBlocksHeight; matY++)
-                {
-                    QStringList values = line[line_count].split(",");
-
-                    for (matX = 0; matX < maxBlocksWidth; matX++)
-                    {
-                        Mat_Dialog[matX][matY] = values.at(matX).toInt();
-                    }
-                    line_count++;
-                    line[line_count]=t.readLine();
-                }
-            }
-        }
-        f.resize(0);
-        t << s;
-        f.close();
-    }
-    else
-    {
-        qDebug() << "Fichier non ouvert";
-    }
-
-    int k = 0;
-    // Populate scene
-    for (int i = 0; i < maxBlocksWidth; i++)
-    {
-        for (int j = 0; j < maxBlocksHeight; j++)
-        {
-            if (Mat_Walls_Blocks[i][j] != 0)
-            {
-                B_Wall *item = new B_Wall();
-                item->setPos(i,j);
-                scene->addItem(item);
-            }
-            if (Mat_Movable_Blocks[i][j] != 0)
-            {
-                B_Movable *item = new B_Movable(i,j);
-                item->addToScene(scene);
-            }
-            if (Mat_Items[i][j] != 0)
-            {
-                Object *item = new Object(QString("Poisson"));
-                item->setPos(i, j);
-                scene->addItem(item);
-            }
-            if (Mat_Bonus[i][j] != 0)
-            {
-                Object *item = new Object("Oeuf");
-                item->setPos(i, j);
-                scene->addItem(item);
-            }
-            if(Mat_Item_Shoes[i][j] != 0)
-            {
-                Object *item = new Object("Chaussure");
-                item->setPos(i, j);
-                scene->addItem(item);
-            }
-            if (Mat_Enemies[i][j] != 0)
-            {
-                switch(Mat_Enemies[i][j])
-                {
-                case 1: {
-                    E_Renard *item2 = new E_Renard(ennemi.at(k), game);
-                    item2->addToScene(scene);
-                    break;
-                }
-                case 2: {
-                    E_Loup *item2 = new E_Loup(ennemi.at(k), game);
-                    item2->addToScene(scene);
-                    break;
-                    }
-                default:break;
-                }
-
-                k++;
-            }
-            if (Mat_Scene_End[i][j] != 0)
-            {
-                S_ViewTransition *item = new S_ViewTransition();
-                item->setLevelEnd(true);
-                item->setPos(i, j);
-
-                item->setNextLevel(Mat_Scene_End[i][j]);
-
-                scene->addItem(item);
-            }
-            if (Mat_Doors[i][j] != 0)
-            {
-                S_ViewTransition *item = new S_ViewTransition();
-                item->setPos(i,j);
-                item->setLevelEnd(false);
-
-                if(Mat_Doors[i][j] > 20 && Mat_Doors[i][j] < 30)
-                {
-                    item->setNbItem(Mat_Doors[i][j]%20);
-                    item->setNeededItem("Poisson");
-                }
-
-                scene->addItem(item);
-            }
-            if (Mat_Water_Blocks[i][j] != 0)
-            {
-                B_Water *item = new B_Water();
-                item->setPos(i,j);
-                scene->addItem(item);
-            }
-            if (Mat_Snow_Surface[i][j] != 0)
-            {
-                S_Snow *item = new S_Snow();
-                item->setPos(i,j);
-                scene->addItem(item);
-            }
-            if (Mat_Ice_Surface[i][j] != 0)
-            {
-                S_Ice *item = new S_Ice();
-                item->setPos(i,j);
-                scene->addItem(item);
-            }
-            if (Mat_Dialog[i][j] != 0)
-            {
-                S_Dialog *item = new S_Dialog();
-                item->setPos(i,j);
-                item->setDialogNumber(Mat_Dialog[i][j]);
-                scene->addItem(item);
+               addLevelItem(scene, elemItem, elemLine.attribute("position").toInt(), elemColonne.attribute("position").toInt());
             }
         }
     }
     return scene;
 }
 
-
-void Level::getSceneSize()
+/**
+ * @details Put informations into class's attribute according to QDomElement type.
+ */
+void Level::addLevelInformation(QDomElement elem)
 {
-    QString map = ":/maps/maps/";
-    map.append(QString("%1").arg(levelNumber));
-    map.append("header.txt");
-
-    QFile f(map);
-
-    if(f.open(QIODevice::ReadOnly | QIODevice::Text))
+    QString tagName = elem.tagName();
+    if(tagName == "SIZE")
     {
-        QTextStream t(&f);
-        QString line[1000];
-        int line_count=0;
+        maxBlocksWidth = elem.attribute("width").toInt();
+        maxBlocksHeight = elem.attribute("height").toInt();
+    }
+    else if(tagName == "POSITION")
+    {
+        viewStart->setX(elem.attribute("x").toInt());
+        viewStart->setY(elem.attribute("y").toInt());
+    }
+    else if(tagName == "START")
+    {
+        startingPoint->setX(elem.attribute("x").toInt());
+        startingPoint->setY(elem.attribute("y").toInt());
+    }
+    else if(tagName == "END")
+    {
+        unlockEnd->setX(elem.attribute("x").toInt()*Gameboard::getGameSquares());
+        unlockEnd->setY(elem.attribute("y").toInt()*Gameboard::getGameSquares());
+    }
+}
 
-        while(!t.atEnd())
+/**
+ * @details Add into the Scene an Item on (x;y) position according to QDomElement data
+ */
+void Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y)
+{
+    QString tagName = elem.tagName();
+    if(tagName == "BLOC")
+    {       
+        SurfaceFactory::createSurface(elem.attribute("type"),x,y,scene);
+    }
+    else if(tagName == "ITEM")
+    {
+        scene->addItem(new Object(elem.attribute("type"),x,y));
+    }
+    else if(tagName == "DOOR")
+    {
+        SurfaceFactory::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene);
+    }
+    else if(tagName == "END")
+    {
+        SurfaceFactory::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+    }
+    else if(tagName == "ENEMY")
+    {
+        QString ennemiType = elem.attribute("type");
+        QList<QPoint> move;
+        for(QDomElement moveElement = elem.firstChildElement(); !moveElement.isNull(); moveElement = moveElement.nextSiblingElement())
         {
-            line_count++;
-            line[line_count]=t.readLine();
-            if(line[line_count].contains("[header]"))
-            {
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueWidth = line[line_count].split("=");
-                maxBlocksWidth = valueWidth.at(1).toInt();
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueHeight = line[line_count].split("=");
-                maxBlocksHeight = valueHeight.at(1).toInt();
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueViewX = line[line_count].split("=");
-                viewStart->setX(valueViewX.at(1).toInt());
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueViewY = line[line_count].split("=");
-                viewStart->setY(valueViewY.at(1).toInt());
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueStartX = line[line_count].split("=");
-                startingPoint->setX(valueStartX.at(1).toInt());
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList valueStartY = line[line_count].split("=");
-                startingPoint->setY(valueStartY.at(1).toInt());
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList unlockEndX = line[line_count].split("=");
-                unlockEnd->setX(unlockEndX.at(1).toInt()*Gameboard::getGameSquares());
-
-                line_count++;
-                line[line_count] = t.readLine();
-                QStringList unlockEndY = line[line_count].split("=");
-                unlockEnd->setY(unlockEndY.at(1).toInt()*Gameboard::getGameSquares());
-            }
+           move.append(QPoint(moveElement.attribute("x").toInt(),moveElement.attribute("y").toInt()));
+        }
+        if(ennemiType == "FOX")
+        {
+            E_Renard *item2 = new E_Renard(move, game);
+            item2->addToScene(scene);
+        }
+        else if(ennemiType == "WOLF")
+        {
+            E_Loup *item2 = new E_Loup(move, game);
+            item2->addToScene(scene);
         }
     }
-    f.close();
- }
-
-void Level::getSceneDialog()
-{
-    QString map = ":/maps/maps/";
-    map.append(QString("%1").arg(levelNumber));
-    map.append("texte.txt");
-
-    QFile f(map);
-
-    if(f.open(QIODevice::ReadOnly | QIODevice::Text))
+    else if(tagName == "DIALOG")
     {
-        QTextStream t(&f);
-        t.setCodec("UTF-8");
-        QString line[1000];
-        int line_count=0;
-
-        while(!t.atEnd())
-        {
-            line_count++;
-            line[line_count]=t.readLine();
-            dialogList.append(line[line_count]);
-        }
+        SurfaceFactory::createSurfaceDialog(x, y, scene, elem.attribute("text"));
     }
-    f.close();
- }
+}
 
 QPoint Level::getViewStart()
 {
@@ -638,17 +209,4 @@ QPoint Level::getUnlockEndPoint()
 int Level::getLevelNumber()
 {
     return this->levelNumber;
-}
-
-QString Level::getDialogText(int value)
-{
-    if(value<=dialogList.size())
-    {
-        return dialogList.at(value-1);
-    }
-    else
-    {
-        qDebug() << "ERREUR - PAS DE TEXTE POUR CE DIALOG : " << dialogValue;
-        return "";
-    }
 }

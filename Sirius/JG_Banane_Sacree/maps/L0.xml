@@ -4621,7 +4621,7 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="SNOW"/>
-    <ENEMY type="WOLF">
+    <ENEMY type="FOX">
      <MOVE x="8" y="9" i="1"/>
      <MOVE x="5" y="9" i="2"/>
      <MOVE x="5" y="12" i="3"/>
@@ -4729,7 +4729,7 @@
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="SNOW"/>
-    <ENEMY type="FOX">
+    <ENEMY type="WOLF">
      <MOVE x="15" y="6" i="1"/>
     </ENEMY>
    </LIGNE>
