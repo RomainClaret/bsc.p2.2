@@ -35,7 +35,7 @@ public:
     /**
      * @brief Constructor with path setup.
      * @param path QList of QPoint for the path
-     * @param g Gameboard to construct on
+     * @param g Gameboard to depend on
      */
     E_Loup(QList<QPoint> path, Gameboard *g);
 };

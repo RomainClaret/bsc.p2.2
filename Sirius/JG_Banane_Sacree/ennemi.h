@@ -52,13 +52,13 @@ public:
     /**
      * @brief Constructor with path setup.
      * @param path QList of QPoint for the path
-     * @param g Gameboard to construct on
+     * @param g Gameboard to depend on
      */
     Ennemi(QList<QPoint>, Gameboard *g);
 
     //Destructor
     /**
-      * @brief Destrucation of the blocks used for the vision.
+      * @brief Destruction of the blocks used for the vision.
       */
     ~Ennemi();
 
@@ -137,7 +137,7 @@ protected:
      */
     void setPosViewBloc(S_ViewBlocEnnemi* bloc, QPoint p);
 
-    //Les skins sont les images attribué au méchant
+    //Skins are the pictures given to self
     QString leftSkin;
     QString rightSkin;
     QString upSkin;

@@ -35,7 +35,8 @@ class QGraphicsDropShadowEffect;
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo add credits, cheat codes
+ * @todo add credits
+ * @todo cheat codes
  */
 
 class M_Pause : public QWidget
