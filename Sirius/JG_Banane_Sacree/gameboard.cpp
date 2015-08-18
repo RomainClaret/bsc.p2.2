@@ -346,7 +346,7 @@ void Gameboard::fixeMovable(B_Movable *b)
 
             Object *objet = dynamic_cast<Object*>(CollidingItems.at(i));
 
-            if(objet->getName() != "Oeuf")
+            if(objet->getName() != Object::OBJECT_EGG)
             {
                 restartEnigma();
 
@@ -364,7 +364,7 @@ void Gameboard::fixeMovable(B_Movable *b)
             S_ViewBlocEnnemi *vb;
             vb = dynamic_cast<S_ViewBlocEnnemi*>(CollidingItems.at(i));
             vb->blocOn();
-            qDebug() << "---- un bloc obstrue la vue";
+            //qDebug() << "---- un bloc obstrue la vue";
         }
 
     }
@@ -383,11 +383,11 @@ void Gameboard::checkPositionEvents()
             pingouin->addObjectToSacoche(new Object(objet->getName()));
             mainScene->removeItem(CollidingItems.at(i));
 
-            if(objet->getName() == "Chaussure")
+            if(objet->getName() == Object::OBJECT_SHOES)
             {
                 pingouin->setSlideAble(false);
             }
-            else if(objet->getName() == "Oeuf")
+            else if(objet->getName() == Object::OBJECT_EGG)
             {
                 if(playerProfil->getNbLive()<Profil::NBMAXVIE)
                 {
@@ -493,9 +493,9 @@ void Gameboard::checkChangeView(char sens)
             {
                 if(!bloc->isNeedingItem())
                 {
-                    if(pingouin->checkObjectSacoche(QString("Chaussure")))
+                    if(pingouin->checkObjectSacoche(Object::OBJECT_SHOES))
                     {
-                        pingouin->removeObjectFromSacoche(QString("Chaussure"));
+                        pingouin->removeObjectFromSacoche(Object::OBJECT_SHOES);
                         pingouin->setSlideAble(true);
                     }
 
@@ -503,9 +503,9 @@ void Gameboard::checkChangeView(char sens)
                 }
                 else if(bloc->isNeedingItem() && pingouin->checkObjectSacoche(bloc->getNeededItem(), bloc->getNbItem()))
                 {
-                    if(pingouin->checkObjectSacoche(QString("Chaussure")))
+                    if(pingouin->checkObjectSacoche(Object::OBJECT_SHOES))
                     {
-                        pingouin->removeObjectFromSacoche(QString("Chaussure"));
+                        pingouin->removeObjectFromSacoche(Object::OBJECT_SHOES);
                         pingouin->setSlideAble(true);
                     }
 
@@ -1093,4 +1093,19 @@ void Gameboard::removeAllItems()
         iter++;
     }
     mainScene->clear();
+}
+
+/**
+ * @details return the size X
+ */
+int Gameboard::getSizeX()
+{
+    return sizeX;
+}
+/**
+ * @details return the size Y
+ */
+int Gameboard::getSizeY()
+{
+    return sizeY;
 }

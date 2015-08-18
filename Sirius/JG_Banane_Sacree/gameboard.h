@@ -79,6 +79,18 @@ public:
     ~Gameboard();
 
     static int getGameSquares();
+
+    /**
+     * @brief getSizeX
+     * @return the size X of the scene (the map)
+     */
+    static int getSizeX();
+    /**
+     * @brief getSizeY
+     * @return the size Y of the scene (the map)
+     */
+    static int getSizeY();
+
     static int sizeX;
     static int sizeY;
 

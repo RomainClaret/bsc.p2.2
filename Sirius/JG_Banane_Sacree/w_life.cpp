@@ -33,7 +33,7 @@ void WidgetLife::paintEvent(QPaintEvent *)
     qDebug() << "PaintEvent";
     QPainter paint(this);
 
-    QString img = ":/items/items/oeuf.png";
+    QString img = ":/items/items/egg.png";
     QString totalLifeString = QString::number(totalLife);
     totalLifeString.append("x");
 

@@ -19,11 +19,18 @@
 Object::Object(int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
 {
     setDesign();
-
 }
-Object::Object(QString new_nom, QGraphicsItem *parent) : Surface(0, 0, parent)
+
+Object::Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : Surface(xpos, ypos, parent)
 {
-    this->nom = new QString(new_nom);
+    this->nom = new QString(name);
+    setZValue(2);
+    setDesign();
+}
+
+Object::Object(QString name, QGraphicsItem *parent): Surface(0, 0, parent)
+{
+    this->nom = new QString(name);
     setZValue(2);
     setDesign();
 }
@@ -48,3 +55,7 @@ QPixmap Object::getTexture()
 {
     return objectSkin->texture();
 }
+
+QString Object::OBJECT_EGG = "EGG";
+QString Object::OBJECT_SHOES = "SHOES";
+QString Object::OBJECT_FISH = "FISH";

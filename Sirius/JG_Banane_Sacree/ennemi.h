@@ -15,12 +15,18 @@
 #define MECHANT_H
 
 #include <QGraphicsItem>
+#include "stateennemi.h"
+
 
 class QPoint;
 class QGraphicsRectItem;
 class Gameboard;
 
 class S_ViewBlocEnnemi;
+
+class StateEnnemi;
+class StateEnnemi_Patrol;
+class StateEnnemi_Sleep;
 
 /**
  * @brief Enemy Class
@@ -36,6 +42,10 @@ class S_ViewBlocEnnemi;
  */
 class Ennemi : public QGraphicsItem
 {
+    friend class StateEnnemi;
+    friend class StateEnnemi_Patrol;
+    friend class StateEnnemi_Sleep;
+    friend class StateEnnemi_Pause;
 
 public:
     //Constructors
@@ -96,6 +106,18 @@ public:
      * @brief Enable or Disable vision blocks.
      */
     void viewBlocActif();
+
+    /**
+     * @brief getEnemyPos return the position with the correct coords on the map
+     * @return position of the enemy
+     */
+    QPoint getEnemyPos();
+
+    /**
+     * @brief changeState replace the state of the enemy with newState
+     * @param newState
+     */
+    void changeState(StateEnnemi* newState);
 
 protected:
     /**
@@ -169,6 +191,8 @@ private:
     void pinguinDetection();
 
     Gameboard *game;
+
+    StateEnnemi* state;
 
 
 };

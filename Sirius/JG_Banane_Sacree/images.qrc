@@ -14,13 +14,13 @@
         <file>characters/loup_right.png</file>
     </qresource>
     <qresource prefix="/items">
-        <file>items/poisson.png</file>
-        <file>items/poisson2.png</file>
-        <file>items/oeuf.png</file>
-        <file>items/chaussure.png</file>
-        <file>items/poisson3.png</file>
-        <file>items/poisson4.png</file>
-        <file>items/poisson5.png</file>
+        <file>items/egg.png</file>
+        <file>items/fish.png</file>
+        <file>items/fish2.png</file>
+        <file>items/fish3.png</file>
+        <file>items/fish4.png</file>
+        <file>items/fish5.png</file>
+        <file>items/shoes.png</file>
     </qresource>
     <qresource prefix="/maps">
         <file>maps/0.png</file>
