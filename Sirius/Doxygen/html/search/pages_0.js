@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bug_20list',['Bug List',['../bug.html',1,'']]]
+  ['james_20gouin_20et_20la_20banane_20sacrée',['James Gouin et la Banane Sacrée',['../index.html',1,'']]]
 ];

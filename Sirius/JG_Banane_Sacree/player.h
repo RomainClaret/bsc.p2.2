@@ -18,7 +18,16 @@
 class QPainter;
 class QRectF;
 
-
+/**
+ * @brief Playable characters.
+ * @details Contains the skin, orientation, and position.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 
 class Player : public QGraphicsItem
 {

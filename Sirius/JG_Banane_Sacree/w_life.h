@@ -16,6 +16,16 @@
 
 #include <QWidget>
 
+/**
+ * @brief Diplay player's life on the game.
+ * @details Widget that shows on top of the game the amount of life left of the player.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 class WidgetLife : public QWidget
 {
     Q_OBJECT

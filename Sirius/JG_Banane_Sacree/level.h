@@ -28,16 +28,16 @@ class QStringList;
 //#include "gameboard.h"
 
 /**
- * @brief Game Board. Where the game happens.
- * @details This is the QWidget which is giving life to the game.
- * Managing the level transition, the player, enemies, objects, blocs, dialogs, pause menu, and interactions.
+ * @brief Level generator from tilded text file
+ * @details Convert a given file generated with Tiled into blocks and positions.
+ * It populates the scene.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo update
+ * @todo stop reading line by line
  */
 
 class Level

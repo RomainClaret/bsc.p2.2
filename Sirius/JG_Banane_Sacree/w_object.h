@@ -19,6 +19,16 @@
 #include <QList>
 #include <QMap>
 
+/**
+ * @brief Diplay player's bag on the game.
+ * @details Widget that shows on top of the game the objects owned by the player.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
 class WidgetObject : public QWidget
 {
     Q_OBJECT

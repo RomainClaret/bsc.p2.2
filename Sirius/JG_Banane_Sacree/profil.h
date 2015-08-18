@@ -18,6 +18,18 @@
 #include <QJsonObject>
 #include <QList>
 
+/**
+ * @brief Player's profil management.
+ * @details Read and write a json file for the profils, which are the saves for the game.
+ * It saves player's information and its game advancement and stats.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 27 January 2015
+ */
+
 class Profil
 {
 public:
