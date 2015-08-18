@@ -61,6 +61,18 @@ public:
     ~Gameboard();
 
     static int getGameSquares();
+
+    /**
+     * @brief getSizeX
+     * @return the size X of the scene (the map)
+     */
+    static int getSizeX();
+    /**
+     * @brief getSizeY
+     * @return the size Y of the scene (the map)
+     */
+    static int getSizeY();
+
     static int sizeX;
     static int sizeY;
 
@@ -87,6 +99,8 @@ private:
     void saveCheckpoint();
     void loadCheckpoint();
     void setFirstDialog();
+
+
 
     //Gestion des proxy / widgets
     void setPositionBottom(QWidget* widget);

@@ -52,7 +52,11 @@ player.cpp \
     s_dialog.cpp \
     w_dialog.cpp \
     w_life.cpp \
-    s_viewblocennemi.cpp
+    s_viewblocennemi.cpp \
+    observablesennemis.cpp \
+    stateennemi_patrol.cpp \
+    stateennemi_sleep.cpp \
+    stateenemy_pause.cpp
 
 HEADERS  += \
     player.h \
@@ -78,7 +82,12 @@ HEADERS  += \
     s_dialog.h \
     w_dialog.h \
     w_life.h \
-    s_viewblocennemi.h
+    s_viewblocennemi.h \
+    observablesennemis.h \
+    stateennemi.h \
+    stateennemi_patrol.h \
+    stateennemi_sleep.h \
+    stateenemy_pause.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
