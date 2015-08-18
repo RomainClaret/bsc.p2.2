@@ -57,6 +57,14 @@ Ennemi::Ennemi(QList<QPoint> path, Gameboard *g)
     setZValue(2);
 }
 
+Ennemi::~Ennemi()
+{
+    foreach (S_ViewBlocEnnemi* vb, champVue)
+    {
+        delete vb;
+    }
+}
+
 void Ennemi::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;
@@ -66,15 +74,6 @@ void Ennemi::setPath(QList<QPoint> path)
 
 void Ennemi::viewBlocActif()
 {
-    QBrush brush;
-    QPen pen;
-
-    //Design Activated
-    brush.setStyle(Qt::DiagCrossPattern);
-    brush.setColor(Qt::red);
-    pen.setStyle(Qt::SolidLine);
-    pen.setColor(Qt::red);
-
     QList<QPoint> toDesactivate;
     bool allunactived = false;
 
@@ -107,11 +106,6 @@ void Ennemi::viewBlocActif()
         }
     }
 
-    //Design Unactivated
-    brush.setStyle(Qt::Dense6Pattern);
-    brush.setColor(Qt::green);
-    pen.setStyle(Qt::NoPen);
-
     //on déactive ce qu'il faut
     foreach (QPoint toDes, toDesactivate)
     {
@@ -130,14 +124,6 @@ void Ennemi::viewBlocActif()
 
 void Ennemi::pinguinDetection()
 {
-    QBrush brush;
-    brush.setStyle(Qt::DiagCrossPattern);
-    brush.setColor(Qt::yellow);
-
-    QPen pen;
-    pen.setStyle(Qt::SolidLine);
-    pen.setColor(Qt::yellow);
-
     detectPinguin = false;
     foreach (S_ViewBlocEnnemi* vb, champVue)
     {
@@ -236,8 +222,8 @@ void Ennemi::advance(int step)
     if(step == 1) //répond au second appel
     {
         //En supprimant ces deux appels on optimise grandement le programme
-        viewBlocActif(); //désactive les blocs obstrués par un mur
-        pinguinDetection(); //test la détection du pingouin
+        //viewBlocActif(); //désactive les blocs obstrués par un mur
+        //pinguinDetection(); //test la détection du pingouin
 
         if(time % speed == 0 && !detectPinguin)
         {

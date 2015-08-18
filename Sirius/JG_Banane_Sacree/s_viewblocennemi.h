@@ -19,6 +19,7 @@ public:
     Ennemi* proprietaire;
 
     void pinguinOn();
+    void blocOn();
     void setStylePinguinOn();
 
 private:

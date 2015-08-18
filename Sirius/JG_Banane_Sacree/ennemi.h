@@ -40,6 +40,7 @@ class Ennemi : public QGraphicsItem
 
 public:
     Ennemi(QList<QPoint>, Gameboard *g);
+    ~Ennemi();
     void addToScene(QGraphicsScene*);
 
     QRectF boundingRect() const;
@@ -53,6 +54,7 @@ public:
     void setPath(QList<QPoint>);
 
     void pinguinOnViewBloc();
+    void viewBlocActif();
 
 protected:
     void advance(int);
@@ -85,7 +87,6 @@ private:
 
     int nextPoint();
 
-    void viewBlocActif();
     void pinguinDetection();
 
     Gameboard *game;
