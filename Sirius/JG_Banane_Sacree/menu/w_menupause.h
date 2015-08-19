@@ -49,7 +49,9 @@ public:
     /**
      * @brief Overlay widget to display the pause menu.
      * @param parent if need
-     */W_MenuPause(QWidget *parent, G_Gameboard *gameboard);
+     */
+    W_MenuPause(QWidget *parent, G_Gameboard *gameboard);
+
     /**
      * @brief Lock and unable the pause menu.
      * @param levelValue number of the level
@@ -73,17 +75,13 @@ private:
 
     W_Menu* parent;
 
-/**
+    /**
      * @brief Creates a shadow effect on buttons.
      * @return QGraphicsDropShadowEffect
      */
     QGraphicsDropShadowEffect* shadowbtn();
 
-    /**
-     * @brief Listen to the paint event
-     * @param pe
-     */
-    void paintEvent(QPaintEvent *pe);signals:
+signals:
 
 public slots:
 
