@@ -58,7 +58,8 @@ SOURCES += \
     e_fox.cpp \
     e_wolf.cpp \
     g_character.cpp \
-    p_penguin.cpp
+    p_penguin.cpp \
+    factory_character.cpp
 
 HEADERS  += \
     b_movable.h \
@@ -91,7 +92,8 @@ HEADERS  += \
     state_enemypatrol.h \
     state_enemypause.h \
     g_character.h \
-    state_enemysleep.h
+    state_enemysleep.h \
+    factory_character.h
 
 RESOURCES += \
     images.qrc \
