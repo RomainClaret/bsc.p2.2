@@ -11,8 +11,8 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef W_MENUPAUSE_H
-#define W_MENUPAUSE_H
+#ifndef W_MENUBONUS_H
+#define W_MENUBONUS_H
 
 #include <QWidget>
 
@@ -20,48 +20,36 @@ class QLabel;
 class QPushButton;
 class QFormLayout;
 class QGraphicsDropShadowEffect;
+class W_Menu;
 
 /**
- * @brief Pause Menu, which appears when the game is paused.
+ * @brief Bonus Menu, which appears when the bonus button is clicked on Pause Menu.
  * @details It allows the user to:
- * Resume the game,
- * Go the main island to select another level,
- * Quit the game,
- * Restart the enigma,
- * Restart the level,
+ * Use Bonus Codes,
+ * ...
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
- * @todo add credits
- * @todo cheat codes
+ * @date 19 August 2015
+ * @todo code all the class
  */
-
-class W_MenuPause : public QWidget
+class W_MenuBonus : public QWidget
 {
     Q_OBJECT
 public:
-    W_MenuPause(QWidget *parent);
-
-    void setUnableMenu(int levelValue);
+    W_MenuBonus(QWidget *parent);
+    void setTitleParent();
 
 private:
     QFormLayout *layoutMenuPause;
-    QLabel *titleMenuPause;
-    QLabel *undertitleMenuPause;
 
-    QPushButton *btnMenuPauseResume;
-    QPushButton *btnMenuPauseIsland;
-    QPushButton *btnMenuPauseQuit;
-    QPushButton *btnMenuPauseRestartEnigma;
-    QPushButton *btnMenuPauseRestartLevel;
+    QPushButton *btnBonusCode;
+    QPushButton *btnBonusCredits;
+    QPushButton *btnBonusReturn;
 
-    QString styleBtn;
-
-    QGraphicsDropShadowEffect* shadowbtn();
-    void paintEvent(QPaintEvent *pe);
+    W_Menu* parent;
 
 signals:
 
@@ -69,4 +57,4 @@ public slots:
 
 };
 
-#endif // W_MENUPAUSE_H
+#endif // W_MENUBONUS_H

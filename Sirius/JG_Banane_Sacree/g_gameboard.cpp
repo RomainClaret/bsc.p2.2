@@ -16,7 +16,6 @@
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
-#include "w_menustart.h"
 #include "g_object.h"
 #include "s_door.h"
 #include "S_ViewBlockNPC.h"
@@ -28,6 +27,10 @@
 #include "e_fox.h"
 #include "e_wolf.h"
 #include "g_profil.h"
+#include "menu/w_menustart.h"
+#include "menu/w_menubonus.h"
+#include "menu/w_menupause.h"
+#include "menu/w_menu.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -911,7 +914,19 @@ void G_Gameboard::restartLevel()
     //setFirstDialog();
 }
 
+void G_Gameboard::loadBonus()
+{
+    qDebug() << "LOAD BONUS";
 
+//    delete widgetBonus;
+//    widgetBonus = new W_MenuBonus(this);
+
+//    setWidgetPositionCenter(widgetBonus);
+//    proxy = mainScene->addWidget(widgetBonus);
+//    proxy->show();
+//    proxy->setZValue(100);
+//    toggleMenuPause = true;
+}
 
 void G_Gameboard::returnIsland()
 {
@@ -974,7 +989,7 @@ void G_Gameboard::loadCheckpoint()
 
 void G_Gameboard::setProxy()
 {
-    menuPauseInGame = new W_MenuPause(this);
+    menuPauseInGame = new W_Menu(this);
     setWidgetPositionCenter(menuPauseInGame);
     proxy = mainScene->addWidget(menuPauseInGame);
     proxy->hide();

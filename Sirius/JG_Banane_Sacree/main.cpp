@@ -12,7 +12,7 @@
 **********************************************************************************/
 
 #include "g_gameboard.h"
-#include "w_menustart.h"
+#include "menu/w_menustart.h"
 #include <QApplication>
 #include "w_object.h"
 #include "g_maingame.h"

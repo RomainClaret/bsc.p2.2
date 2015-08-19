@@ -18,12 +18,13 @@
 
 #include "p_penguin.h"
 #include "b_movable.h"
-#include "w_menupause.h"
+#include "menu/w_menupause.h"
 #include "g_level.h"
 #include "w_object.h"
 #include "w_dialog.h"
 #include "g_profil.h"
 #include "w_life.h"
+class W_Menu;
 
 class QGraphicsProxyWidget;
 class QGraphicsScene;
@@ -38,6 +39,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
+
 
 /**
  * @brief Structure used in Gameboard.
@@ -251,11 +253,6 @@ private:
     void checkPositionEvents();
 
     /**
-     * @brief Enable the pause menu.
-     */
-    void pauseMenu();
-
-    /**
      * @brief Delete all items from self.
      */
     void removeAllItems();
@@ -289,7 +286,8 @@ private:
     bool endable;
 
     //Widgets & Proxies
-    W_MenuPause *menuPauseInGame;
+    W_Menu *menuPauseInGame;
+    //W_MenuBonus* widgetBonus;
     QGraphicsProxyWidget *proxy;
     bool toggleMenuPause;
 
@@ -363,6 +361,16 @@ public slots:
      * @brief SLOT: Load the Island Level.
      */
     void returnIsland();
+
+    /**
+     * @brief SLOT: Change the usual menu into the "Bonus" menu
+     */
+    void loadBonus();
+
+    /**
+     * @brief SLOT: Enable the pause menu.
+     */
+    void pauseMenu();
 };
 
 #endif // G_GAMEBOARD_H

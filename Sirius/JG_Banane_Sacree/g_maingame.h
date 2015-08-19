@@ -16,7 +16,7 @@
 
 #include <QWidget>
 #include "g_gameboard.h"
-#include "w_menustart.h"
+#include "menu/w_menustart.h"
 #include "g_profil.h"
 
 class QGraphicsView;

@@ -41,8 +41,6 @@ SOURCES += \
     g_npc.cpp \
     g_gameboard.cpp \
     g_level.cpp \
-    w_menustart.cpp \
-    w_pause.cpp \
     g_maingame.cpp \
     g_object.cpp \
     observer_npc.cpp \
@@ -58,7 +56,12 @@ SOURCES += \
     e_fox.cpp \
     e_wolf.cpp \
     g_character.cpp \
-    p_penguin.cpp
+    p_penguin.cpp \
+    menu/w_menu.cpp \
+    menu/w_menubonus.cpp \
+    menu/w_menupause.cpp \
+    menu/w_menustart.cpp \
+    menu/w_menucode.cpp
 
 HEADERS  += \
     b_movable.h \
@@ -73,8 +76,6 @@ HEADERS  += \
     s_door.h \
     s_viewblocknpc.h \
     factory_surface.h \
-    w_menustart.h \
-    w_menupause.h \
     g_gameboard.h \
     g_level.h \
     g_maingame.h \
@@ -91,7 +92,12 @@ HEADERS  += \
     state_enemypatrol.h \
     state_enemypause.h \
     g_character.h \
-    state_enemysleep.h
+    state_enemysleep.h \
+    menu/w_menu.h \
+    menu/w_menubonus.h \
+    menu/w_menupause.h \
+    menu/w_menustart.h \
+    menu/w_menucode.h
 
 RESOURCES += \
     images.qrc \
