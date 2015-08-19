@@ -15,7 +15,7 @@
 #define C_ENEMY_H
 
 #include <QGraphicsItem>
-#include "state_enemy.h"
+#include "state/state_enemy.h"
 
 #include "g_character.h"
 
@@ -28,6 +28,7 @@ class S_ViewBlockNPC;
 class State_Enemy;
 class State_EnemyPatrol;
 class State_EnemySleep;
+class State_EnemyPause;
 
 /**
  * @brief Enemy Class

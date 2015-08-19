@@ -12,22 +12,25 @@
 **********************************************************************************/
 
 #include "g_gameboard.h"
-#include "p_penguin.h"
-#include "b_wall.h"
-#include "b_movable.h"
-#include "b_water.h"
-#include "w_menustart.h"
+#include "character/p_penguin.h"
+#include "surface/b_wall.h"
+#include "surface/b_movable.h"
+#include "surface/b_water.h"
 #include "g_object.h"
-#include "s_door.h"
-#include "S_ViewBlockNPC.h"
-#include "s_snow.h"
-#include "s_ice.h"
-#include "s_dialog.h"
+#include "surface/s_door.h"
+#include "surface/s_viewblocknpc.h"
+#include "surface/s_snow.h"
+#include "surface/s_ice.h"
+#include "surface/s_dialog.h"
 #include "g_level.h"
-#include "c_enemy.h"
-#include "e_fox.h"
-#include "e_wolf.h"
+#include "character/c_enemy.h"
+#include "character/e_fox.h"
+#include "character/e_wolf.h"
 #include "g_profil.h"
+#include "menu/w_menustart.h"
+#include "menu/w_menubonus.h"
+#include "menu/w_menupause.h"
+#include "menu/w_menu.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -75,7 +78,9 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     playableCharacter = new P_Penguin();
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
-    currentLevel = new G_Level(0, this);
+
+    observerEnemy = new Observer_NPC();
+    currentLevel = new G_Level(0, observerEnemy, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     playerView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -560,6 +565,9 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionBottomRight(objectList);
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE); //all in pause
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -855,15 +863,21 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
+        observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE, playableCharacter->getPosOnGame());
+
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
         setWidgetPositionCenter(menuPauseInGame);
         proxy->show();
         toggleMenuPause = true;
     }else{
+
         proxy->hide();
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
+
+        //TODO : return to the state before PAUSE !
+        observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
     }
 }
 
@@ -883,7 +897,7 @@ void G_Gameboard::restartEnigma()
         lifeList->updateHearts(playerProfil->getNbLive());
 
         loadLevel();
-        setProxy();
+        setProxy();   
     }
     else
     {
@@ -893,6 +907,8 @@ void G_Gameboard::restartEnigma()
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
         showDialog(text);
     }
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -911,7 +927,19 @@ void G_Gameboard::restartLevel()
     //setFirstDialog();
 }
 
+void G_Gameboard::loadBonus()
+{
+    qDebug() << "LOAD BONUS";
 
+//    delete widgetBonus;
+//    widgetBonus = new W_MenuBonus(this);
+
+//    setWidgetPositionCenter(widgetBonus);
+//    proxy = mainScene->addWidget(widgetBonus);
+//    proxy->show();
+//    proxy->setZValue(100);
+//    toggleMenuPause = true;
+}
 
 void G_Gameboard::returnIsland()
 {
@@ -974,7 +1002,7 @@ void G_Gameboard::loadCheckpoint()
 
 void G_Gameboard::setProxy()
 {
-    menuPauseInGame = new W_MenuPause(this);
+    menuPauseInGame = new W_Menu(this);
     setWidgetPositionCenter(menuPauseInGame);
     proxy = mainScene->addWidget(menuPauseInGame);
     proxy->hide();
@@ -1011,7 +1039,8 @@ void G_Gameboard::setLevel(int value)
 {
     delete currentLevel;
     playerProfil->setLevel(value);
-    currentLevel = new G_Level(value, this);
+
+    currentLevel = new G_Level(value, observerEnemy, this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
     W_MenuStart::saveGame(playerProfil);
@@ -1021,6 +1050,8 @@ void G_Gameboard::setLevel(int value)
 
 void G_Gameboard::loadLevel()
 {
+    observerEnemy->clear();
+
     mainScene = currentLevel->populateScene();
     setViewPosition();
 

@@ -18,7 +18,7 @@
 #include <QGraphicsScene>
 #include <QList>
 #include <QDebug>
-#include "s_ice.h"
+#include "surface/s_ice.h"
 #include "g_object.h"
 
 #include <QPropertyAnimation>

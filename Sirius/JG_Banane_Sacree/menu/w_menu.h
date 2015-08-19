@@ -11,10 +11,13 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef W_MENUPAUSE_H
-#define W_MENUPAUSE_H
+#ifndef W_MENU_H
+#define W_MENU_H
 
 #include <QWidget>
+#include "w_menupause.h"
+#include "w_menubonus.h"
+#include "w_menucode.h"
 
 class QLabel;
 class QPushButton;
@@ -22,38 +25,32 @@ class QFormLayout;
 class QGraphicsDropShadowEffect;
 
 /**
- * @brief Pause Menu, which appears when the game is paused.
+ * @brief Bonus Menu, which appears when the bonus button is clicked on Pause Menu.
  * @details It allows the user to:
- * Resume the game,
- * Go the main island to select another level,
- * Quit the game,
- * Restart the enigma,
- * Restart the level,
+ * Use Bonus Codes,
+ * ...
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
- * @todo add credits
- * @todo cheat codes
+ * @date 19 August 2015
+ * @todo code all the class
  */
-
-class W_MenuPause : public QWidget
+class W_Menu : public QWidget
 {
     Q_OBJECT
 public:
-    //Constructor
-    /**
-     * @brief Overlay widget to display the pause menu.
-     * @param parent if need
-     */
-    W_MenuPause(QWidget *parent);
+    W_Menu(QWidget *parent);
 
-    /**
-     * @brief Lock and unable the pause menu.
-     * @param levelValue number of the level
-     */
+    static QString styleBtn;
+    static QString styleBtnUnable;
+
+    void setTitle(QString title);
+    void setSubTitle(QString subTitle);
+
+    void showEvent(QShowEvent*);
+
     void setUnableMenu(int levelValue);
 
 private:
@@ -61,30 +58,19 @@ private:
     QLabel *titleMenuPause;
     QLabel *undertitleMenuPause;
 
-    QPushButton *btnMenuPauseResume;
-    QPushButton *btnMenuPauseIsland;
-    QPushButton *btnMenuPauseQuit;
-    QPushButton *btnMenuPauseRestartEnigma;
-    QPushButton *btnMenuPauseRestartLevel;
+    W_MenuPause* menuPause;
+    W_MenuBonus* menuBonus;
+    W_MenuCode* menuCode;
 
-    QString styleBtn;
-
-    /**
-     * @brief Creates a shadow effect on buttons.
-     * @return QGraphicsDropShadowEffect
-     */
     QGraphicsDropShadowEffect* shadowbtn();
-
-    /**
-     * @brief Listen to the paint event
-     * @param pe
-     */
     void paintEvent(QPaintEvent *pe);
 
 signals:
 
 public slots:
+    void loadBonus();
+    void loadPause();
 
 };
 
-#endif // W_MENUPAUSE_H
+#endif // W_MENU_H

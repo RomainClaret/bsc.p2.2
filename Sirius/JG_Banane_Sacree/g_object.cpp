@@ -12,7 +12,7 @@
 **********************************************************************************/
 
 #include "g_object.h"
-#include "g_surface.h"
+#include "surface/g_surface.h"
 #include <QBrush>
 #include <QGraphicsItem>
 

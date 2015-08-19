@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "c_enemy.h"
+#include "character/c_enemy.h"
 
 #include <QGraphicsItem>
 #include <QPoint>
@@ -29,15 +29,18 @@
 #include <QDebug>
 
 #include "g_gameboard.h"
-#include "b_wall.h"
-#include "b_water.h"
-#include "b_movable.h"
-#include "c_player.h"
-#include "p_penguin.h"
-#include "s_viewblocknpc.h"
 
-#include "state_enemypatrol.h"
-#include "state_enemysleep.h"
+#include "surface/b_wall.h"
+#include "surface/b_water.h"
+#include "surface/b_movable.h"
+#include "surface/s_viewblocknpc.h"
+
+#include "character/c_player.h"
+#include "character/p_penguin.h"
+
+#include "state/state_enemypatrol.h"
+#include "state/state_enemysleep.h"
+#include "state/state_enemypause.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -65,7 +68,7 @@ C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
 
 
     //default state
-    state = new State_EnemyPatrol();
+    state = new State_EnemyPause();
 }
 
 C_Enemy::~C_Enemy()

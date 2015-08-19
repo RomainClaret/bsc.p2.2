@@ -16,15 +16,17 @@
 
 #include <QWidget>
 
-#include "p_penguin.h"
-#include "b_movable.h"
-#include "w_menupause.h"
+#include "character/p_penguin.h"
+#include "surface/b_movable.h"
+#include "menu/w_menupause.h"
 #include "g_level.h"
-#include "w_object.h"
-#include "w_dialog.h"
+#include "widget/w_object.h"
+#include "widget/w_dialog.h"
 #include "g_profil.h"
-#include "w_life.h"
+#include "widget/w_life.h"
+#include "observer_npc.h"
 
+class W_Menu;
 class QGraphicsProxyWidget;
 class QGraphicsScene;
 class QGraphicsView;
@@ -38,6 +40,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
+
 
 /**
  * @brief Structure used in Gameboard.
@@ -251,11 +254,6 @@ private:
     void checkPositionEvents();
 
     /**
-     * @brief Enable the pause menu.
-     */
-    void pauseMenu();
-
-    /**
      * @brief Delete all items from self.
      */
     void removeAllItems();
@@ -281,6 +279,7 @@ private:
 
     //Positioning and level management
     G_Level* currentLevel;
+    Observer_NPC* observerEnemy;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;
@@ -289,7 +288,7 @@ private:
     bool endable;
 
     //Widgets & Proxies
-    W_MenuPause *menuPauseInGame;
+    W_Menu *menuPauseInGame;
     QGraphicsProxyWidget *proxy;
     bool toggleMenuPause;
 
@@ -330,39 +329,49 @@ signals:
 
 public slots:
     /**
-     * @brief Resume the Game after pause
+     * @brief SLOT: Resume the Game after pause
      */
     void resumeGame();
 
     /**
-     * @brief Slide the playable character.
+     * @brief SLOT: Slide the playable character.
      */
     void slidePlayableCharacter();
 
     /**
-     * @brief Slide blocks in the List of sliding blocks.
+     * @brief SLOT: Slide blocks in the List of sliding blocks.
      */
     void slideBlock();
 
     /**
-     * @brief Ask for profil save, and destruct self.
+     * @brief SLOT: Ask for profil save, and destruct self.
      */
     void exitGame();
 
     /**
-     * @brief Restart the level at the last checkpoint->
+     * @brief SLOT: Restart the level at the last checkpoint->
      */
     void restartEnigma();
 
     /**
-     * @brief Restart the level at the beginning
+     * @brief SLOT: Restart the level at the beginning
      */
     void restartLevel();
 
     /**
-     * @brief Load the Island Level.
+     * @brief SLOT: Load the Island Level.
      */
     void returnIsland();
+
+    /**
+     * @brief SLOT: Change the usual menu into the "Bonus" menu
+     */
+    void loadBonus();
+
+    /**
+     * @brief SLOT: Enable the pause menu.
+     */
+    void pauseMenu();
 };
 
 #endif // G_GAMEBOARD_H

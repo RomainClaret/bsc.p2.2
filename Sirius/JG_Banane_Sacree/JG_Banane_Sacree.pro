@@ -26,72 +26,79 @@ TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
 
-
 SOURCES += \
     main.cpp \
-    b_movable.cpp \
-    s_snow.cpp \
-    b_wall.cpp \
-    b_water.cpp \
-    s_ice.cpp \
-    w_object.cpp \
-    s_dialog.cpp \
-    w_dialog.cpp \
-    w_life.cpp \
     g_npc.cpp \
     g_gameboard.cpp \
     g_level.cpp \
-    w_menustart.cpp \
-    w_pause.cpp \
     g_maingame.cpp \
     g_object.cpp \
     observer_npc.cpp \
     g_player.cpp \
     g_profil.cpp \
-    s_viewblocknpc.cpp \
-    s_door.cpp \
-    state_npcpause.cpp \
-    state_npcpatrol.cpp \
-    state_npcsleep.cpp \
-    factory_surface.cpp \
-    g_surface.cpp \
-    e_fox.cpp \
-    e_wolf.cpp \
-    g_character.cpp \
-    p_penguin.cpp
+    menu/w_menu.cpp \
+    menu/w_menubonus.cpp \
+    menu/w_menupause.cpp \
+    menu/w_menustart.cpp \
+    menu/w_menucode.cpp \
+    surface/b_movable.cpp \
+    surface/b_wall.cpp \
+    surface/b_water.cpp \
+    surface/g_surface.cpp \
+    surface/s_dialog.cpp \
+    surface/s_door.cpp \
+    surface/s_ice.cpp \
+    surface/s_snow.cpp \
+    surface/s_viewblocknpc.cpp \
+    surface/factory_surface.cpp \
+    character/e_fox.cpp \
+    character/e_wolf.cpp \
+    character/factory_character.cpp \
+    character/g_character.cpp \
+    character/p_penguin.cpp \
+    state/state_npcpatrol.cpp \
+    state/state_npcpause.cpp \
+    state/state_npcsleep.cpp \
+    widget/w_dialog.cpp \
+    widget/w_life.cpp \
+    widget/w_object.cpp
 
 HEADERS  += \
-    b_movable.h \
-    b_wall.h \
-    s_snow.h \
-    b_water.h \
-    s_ice.h \
-    w_object.h \
-    s_dialog.h \
-    w_dialog.h \
-    w_life.h \
-    s_door.h \
-    s_viewblocknpc.h \
-    factory_surface.h \
-    w_menustart.h \
-    w_menupause.h \
     g_gameboard.h \
     g_level.h \
     g_maingame.h \
     g_object.h \
     g_profil.h \
-    g_surface.h \
     observer_npc.h \
-    e_fox.h \
-    e_wolf.h \
-    p_penguin.h \
-    c_enemy.h \
-    c_player.h \
-    state_enemy.h \
-    state_enemypatrol.h \
-    state_enemypause.h \
-    g_character.h \
-    state_enemysleep.h
+    menu/w_menu.h \
+    menu/w_menubonus.h \
+    menu/w_menupause.h \
+    menu/w_menustart.h \
+    menu/w_menucode.h \
+    surface/b_movable.h \
+    surface/b_wall.h \
+    surface/b_water.h \
+    surface/g_surface.h \
+    surface/s_dialog.h \
+    surface/s_door.h \
+    surface/s_ice.h \
+    surface/s_snow.h \
+    surface/s_viewblocknpc.h \
+    surface/factory_surface.h \
+    character/c_enemy.h \
+    character/c_player.h \
+    character/e_fox.h \
+    character/e_wolf.h \
+    character/factory_character.h \
+    character/g_character.h \
+    character/p_penguin.h \
+    state/state_enemy.h \
+    state/state_enemypatrol.h \
+    state/state_enemypause.h \
+    state/state_enemysleep.h \
+    widget/w_dialog.h \
+    widget/w_life.h \
+    widget/w_object.h
 
 RESOURCES += \
     images.qrc \

@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "c_player.h"
+#include "character/c_player.h"
 #include "g_gameboard.h"
 
 #include <QPainter>
@@ -43,4 +43,10 @@ char C_Player::getPlayerOrientation()
 QPoint* C_Player::getPos()
 {
     return new QPoint(xPos, yPos);
+}
+QPoint C_Player::getPosOnGame()
+{
+    int x = (this->pos().x()-1) /G_Gameboard::getGameSquares();
+    int y = (this->pos().y()-1) /G_Gameboard::getGameSquares();
+    return QPoint(x, y);
 }
