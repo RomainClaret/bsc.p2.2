@@ -864,15 +864,21 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
+        observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE, playableCharacter->getPosOnGame());
+
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
         setWidgetPositionCenter(menuPauseInGame);
         proxy->show();
         toggleMenuPause = true;
     }else{
+
         proxy->hide();
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
+
+        //TODO : return to the state before PAUSE !
+        observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
     }
 }
 
