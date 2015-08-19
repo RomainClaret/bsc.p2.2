@@ -12,26 +12,25 @@
 **********************************************************************************/
 
 #include "g_gameboard.h"
-#include "p_penguin.h"
-#include "b_wall.h"
-#include "b_movable.h"
-#include "b_water.h"
+#include "character/p_penguin.h"
+#include "surface/b_wall.h"
+#include "surface/b_movable.h"
+#include "surface/b_water.h"
 #include "g_object.h"
-#include "s_door.h"
-#include "S_ViewBlockNPC.h"
-#include "s_snow.h"
-#include "s_ice.h"
-#include "s_dialog.h"
+#include "surface/s_door.h"
+#include "surface/s_viewblocknpc.h"
+#include "surface/s_snow.h"
+#include "surface/s_ice.h"
+#include "surface/s_dialog.h"
 #include "g_level.h"
-#include "c_enemy.h"
-#include "e_fox.h"
-#include "e_wolf.h"
+#include "character/c_enemy.h"
+#include "character/e_fox.h"
+#include "character/e_wolf.h"
 #include "g_profil.h"
 #include "menu/w_menustart.h"
 #include "menu/w_menubonus.h"
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
-
 
 #include <QtWidgets>
 #include <QList>

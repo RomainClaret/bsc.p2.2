@@ -2,9 +2,9 @@
 #include "g_gameboard.h"
 #include <QDebug>
 
-#include "state_enemypatrol.h"
-#include "state_enemypause.h"
-#include "state_enemysleep.h"
+#include "state/state_enemypatrol.h"
+#include "state/state_enemypause.h"
+#include "state/state_enemysleep.h"
 /**
  * @details Desactivate the view of the ennemi at the first run and do nothing after
  */

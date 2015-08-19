@@ -17,7 +17,7 @@
 //@bug no bugs
 //@warning no warnings
 
-#include "c_enemy.h"
+#include "character/c_enemy.h"
 #include <QList>
 #include <QPoint>
 

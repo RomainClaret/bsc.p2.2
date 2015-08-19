@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "c_player.h"
+#include "character/c_player.h"
 #include "g_gameboard.h"
 
 #include <QPainter>

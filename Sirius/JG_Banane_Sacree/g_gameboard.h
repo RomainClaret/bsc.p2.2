@@ -16,14 +16,14 @@
 
 #include <QWidget>
 
-#include "p_penguin.h"
-#include "b_movable.h"
+#include "character/p_penguin.h"
+#include "surface/b_movable.h"
 #include "menu/w_menupause.h"
 #include "g_level.h"
-#include "w_object.h"
-#include "w_dialog.h"
+#include "widget/w_object.h"
+#include "widget/w_dialog.h"
 #include "g_profil.h"
-#include "w_life.h"
+#include "widget/w_life.h"
 #include "observer_npc.h"
 
 class W_Menu;
