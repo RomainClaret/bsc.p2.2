@@ -57,7 +57,8 @@ SOURCES += \
     g_surface.cpp \
     c_fox.cpp \
     c_penguin.cpp \
-    c_wolf.cpp
+    c_wolf.cpp \
+    g_character.cpp
 
 HEADERS  += \
     b_movable.h \
@@ -89,7 +90,8 @@ HEADERS  += \
     observer_npc.h \
     c_fox.h \
     c_penguin.h \
-    c_wolf.h
+    c_wolf.h \
+    g_character.h
 
 RESOURCES += \
     images.qrc \
