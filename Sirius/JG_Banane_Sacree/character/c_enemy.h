@@ -15,7 +15,7 @@
 #define C_ENEMY_H
 
 #include <QGraphicsItem>
-#include "state_enemy.h"
+#include "state/state_enemy.h"
 
 #include "g_character.h"
 

@@ -19,21 +19,21 @@
 #include <QGraphicsScene>
 
 #include "observer_npc.h"
-#include "factory_character.h"
+#include "character/factory_character.h"
 
-#include "g_surface.h"
-#include "factory_surface.h"
-#include "b_wall.h"
-#include "b_water.h"
-#include "b_movable.h"
-#include "s_snow.h"
-#include "s_ice.h"
-#include "s_door.h"
-#include "s_dialog.h"
+#include "surface/g_surface.h"
+#include "surface/factory_surface.h"
+#include "surface/b_wall.h"
+#include "surface/b_water.h"
+#include "surface/b_movable.h"
+#include "surface/s_snow.h"
+#include "surface/s_ice.h"
+#include "surface/s_door.h"
+#include "surface/s_dialog.h"
 #include "g_object.h"
 
-#include "e_wolf.h"
-#include "e_fox.h"
+#include "character/e_wolf.h"
+#include "character/e_fox.h"
 
 #include <QPoint>
 #include <QDebug>

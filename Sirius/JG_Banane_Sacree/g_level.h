@@ -24,7 +24,7 @@ class Observer_NPC;
 
 #include <QList>
 
-#include "w_dialog.h"
+#include "widget/w_dialog.h"
 #include <QDomElement>
 #include <QDomDocument>
 

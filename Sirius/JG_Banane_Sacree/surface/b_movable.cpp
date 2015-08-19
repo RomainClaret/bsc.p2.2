@@ -19,9 +19,9 @@
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
-#include "c_enemy.h"
-#include "e_fox.h"
-#include "e_wolf.h"
+#include "character/c_enemy.h"
+#include "character/e_fox.h"
+#include "character/e_wolf.h"
 #include "g_gameboard.h"
 
 #include "s_ice.h"

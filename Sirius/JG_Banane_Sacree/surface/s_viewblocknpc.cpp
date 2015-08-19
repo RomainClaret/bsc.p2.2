@@ -4,7 +4,7 @@
 #include <QGraphicsItem>
 #include <QBrush>
 #include <QPen>
-#include "c_enemy.h"
+#include "character/c_enemy.h"
 #include "g_gameboard.h"
 
 

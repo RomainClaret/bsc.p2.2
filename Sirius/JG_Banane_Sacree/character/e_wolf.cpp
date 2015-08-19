@@ -13,7 +13,7 @@
 
 #include "e_wolf.h"
 #include "g_gameboard.h"
-#include "s_viewblocknpc.h"
+#include "surface/s_viewblocknpc.h"
 
 /**
  * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
