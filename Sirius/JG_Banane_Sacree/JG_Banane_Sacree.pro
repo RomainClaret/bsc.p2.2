@@ -57,6 +57,7 @@ SOURCES += \
     g_surface.cpp \
     e_fox.cpp \
     e_wolf.cpp \
+    g_character.cpp \
     p_penguin.cpp
 
 HEADERS  += \
@@ -89,6 +90,7 @@ HEADERS  += \
     state_enemy.h \
     state_enemypatrol.h \
     state_enemypause.h \
+    g_character.h \
     state_enemysleep.h
 
 RESOURCES += \
