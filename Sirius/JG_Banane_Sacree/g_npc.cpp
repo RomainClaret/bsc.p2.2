@@ -262,42 +262,6 @@ void C_Enemy::advance(int step)
     }
 }
 
-void C_Enemy::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
-{
-    //Draw the ennemi
-    painter->setPen(Qt::transparent);
-
-    npcSkin = new QBrush();
-
-    //Set ennemiSkin texture depending on ennemi's orientation
-    switch (orientation) {
-    case 'l':
-        npcSkin->setTexture(QPixmap(leftSkin));
-        break;
-    case 'r':
-        npcSkin->setTexture(QPixmap(rightSkin));
-        break;
-    case 't':
-        npcSkin->setTexture(QPixmap(upSkin));
-        break;
-    case 'b':
-        npcSkin->setTexture(QPixmap(downSkin));
-        break;
-    default:
-        break;
-    }
-
-    QRectF ennemiBox = boundingRect();  //Setting ennemi's box
-
-    painter->fillRect(ennemiBox,*npcSkin);   //charger la couleur
-    painter->drawRect(ennemiBox);
-}
-
-QRectF C_Enemy::boundingRect() const
-{
-    return QRectF(0,0,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
-}
-
 void C_Enemy::setOrientation_top()
 {
     orientation = 't';

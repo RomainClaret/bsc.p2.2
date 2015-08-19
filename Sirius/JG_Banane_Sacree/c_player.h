@@ -13,7 +13,7 @@
 
 #ifndef C_PLAYER_H
 #define C_PLAYER_H
-
+#include "g_character.h"
 #include <QGraphicsItem>
 class QPainter;
 class QRectF;
@@ -29,19 +29,16 @@ class QRectF;
  * @date 27 January 2015
  */
 
-class C_Player : public QGraphicsItem
+class C_Player : public G_Character
 {
 
 public:
     C_Player();
 
-    QRectF boundingRect() const;    //la box du player
 
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget); //paint event
-    QBrush *playerSkin;
 
-    void setPlayerOrientation(QString orientation);
-    QString getPlayerOrientation();
+    void setPlayerOrientation(char orientation);
+    char getPlayerOrientation();
     QPoint *getPos();
 
 protected:
@@ -50,11 +47,6 @@ protected:
 
 private:
     //Les skins sont les images attribué au personnage
-    QString leftSkin;
-    QString rightSkin;
-    QString upSkin;
-    QString downSkin;
-    QString playerOrientation;
 
 };
 

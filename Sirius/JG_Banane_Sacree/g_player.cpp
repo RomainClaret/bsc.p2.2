@@ -25,49 +25,19 @@ C_Player::C_Player()
     rightSkin = ":/characters/characters/player_right.png";
     upSkin = ":/characters/characters/player_back.png";
     downSkin = ":/characters/characters/player_front.png";
-    playerOrientation = "down"; //Orientation de depart du joueur
+    orientation = 'b'; //Orientation de depart du joueur
 
     setZValue(2);
 }
 
-QRectF C_Player::boundingRect() const
+void C_Player::setPlayerOrientation(char orientation)
 {
-    return QRectF(1,1,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
+    this->orientation = orientation;
 }
 
-void C_Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+char C_Player::getPlayerOrientation()
 {
-    playerSkin = new QBrush();
-
-    //Set playerSkin texture depending on player's orientation
-    if (playerOrientation == "left"){
-        playerSkin->setTexture(QPixmap(leftSkin));
-    }
-    if (playerOrientation == "right"){
-        playerSkin->setTexture(QPixmap(rightSkin));
-    }
-    if (playerOrientation == "up"){
-        playerSkin->setTexture(QPixmap(upSkin));
-    }
-    if (playerOrientation == "down"){
-        playerSkin->setTexture(QPixmap(downSkin));
-    }
-
-    QRectF playerBox = boundingRect();  //Setting player's box
-
-    painter->setPen(Qt::transparent);   //Le coutour du joueur
-    painter->fillRect(playerBox,*playerSkin);   //charger la couleur
-    painter->drawRect(playerBox);   //dessiner le joueur
-}
-
-void C_Player::setPlayerOrientation(QString orientation)
-{
-    playerOrientation = orientation;
-}
-
-QString C_Player::getPlayerOrientation()
-{
-    return playerOrientation;
+    return orientation;
 }
 
 QPoint* C_Player::getPos()
