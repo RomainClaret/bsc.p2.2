@@ -17,7 +17,7 @@ class G_Character : public QGraphicsItem
 {
 public:
     G_Character();
-
+    virtual ~G_Character(){}
     /**
      * @brief boundingRect must be implement to be a QGraphicsItem
      * @return the size of the colliding zone
