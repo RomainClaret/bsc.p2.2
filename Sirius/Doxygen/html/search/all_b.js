@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['p_5ffox',['P_Fox',['../class_p___fox.html',1,'P_Fox'],['../class_p___fox.html#a6cab8923b0e5c4de67c1ac420965fbf5',1,'P_Fox::P_Fox()']]],
-  ['p_5fpenguin',['P_Penguin',['../class_p___penguin.html',1,'']]],
-  ['p_5fwolf',['P_Wolf',['../class_p___wolf.html',1,'P_Wolf'],['../class_p___wolf.html#a11be678cb2cabbba514d4b030a5084e4',1,'P_Wolf::P_Wolf()']]],
-  ['playablecharacteronviewblock',['playableCharacterOnViewBlock',['../class_g___n_p_c.html#a49883585ada9c0308c0d620c98556f34',1,'G_NPC']]],
-  ['populatescene',['populateScene',['../class_g___level.html#a3d34ee97aa649f7e72c6bb8a1fcd02a1',1,'G_Level']]]
+  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html',1,'Observer_NPC'],['../class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9',1,'Observer_NPC::Observer_NPC()']]]
 ];

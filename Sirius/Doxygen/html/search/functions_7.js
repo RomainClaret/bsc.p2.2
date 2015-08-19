@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9',1,'Observer_NPC']]]
+  ['moveby',['moveBy',['../class_b___movable.html#a55fb8069fc55c4edabd2ac076acdee17',1,'B_Movable']]]
 ];

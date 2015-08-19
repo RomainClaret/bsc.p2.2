@@ -145,7 +145,7 @@ void G_Profil::read(const QJsonObject &json)
     }
 }
 
-void G_Profil::print()
+void G_Profil::printDebug()
 {
     qDebug() << "Username : " << this->username;
     qDebug() << "Start Date : " << this->startDate;

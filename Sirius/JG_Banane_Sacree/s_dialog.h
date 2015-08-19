@@ -32,16 +32,49 @@ class QGraphicsItem;
 class S_Dialog : public G_Surface
 {
 public:
+    //Constructors
+    /**
+     * @brief Constructor with position setup.
+     * @param xpos set the postion on the x-axis
+     * @param ypos set the postion on the y-axis
+     * @param parent QGraphicsItem parent
+     */
     S_Dialog(int xpos, int ypos, QGraphicsItem *parent = 0);
+
+    /**
+     * @brief Constructor without position setup.
+     * @param parent QGraphicsItem to depend on
+     */
     S_Dialog(QGraphicsItem *parent = 0);
 
+    /**
+     * @brief Set the number of the dialog.
+     * @param value
+     */
     void setDialogNumber(int value);
+
+    /**
+     * @brief Get the number of the dialog of self.
+     * @param value
+     */
     int getDialogNumber();
 
+    /**
+     * @brief Set the dialog of self.
+     * @param text
+     */
     void addDialogText(QString text);
+
+    /**
+     * @brief Get the dialog of self.
+     * @return text of the dialog
+     */
     QString getText();
 
 private:
+    /**
+     * @brief Set the design of self.
+     */
     void setDesign();
 
     int dialogNumber;

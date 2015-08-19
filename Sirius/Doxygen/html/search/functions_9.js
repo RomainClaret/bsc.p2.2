@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['removefromscene',['removeFromScene',['../class_b___movable.html#aa4d26e877655021ef70bc6914fe04418',1,'B_Movable']]],
-  ['restartenigma',['restartEnigma',['../class_g___gameboard.html#ad0b089132d43872c36b24e06baf44993',1,'G_Gameboard']]],
-  ['restartlevel',['restartLevel',['../class_g___gameboard.html#aa7e2e09932f2f0859009abaa99c53ada',1,'G_Gameboard']]],
-  ['resumegame',['resumeGame',['../class_g___gameboard.html#a1e25a7b0f6613e95a1f511456da194be',1,'G_Gameboard']]],
-  ['returnisland',['returnIsland',['../class_g___gameboard.html#a536b6194e02960ac47ad54d5e8647afc',1,'G_Gameboard']]]
+  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9',1,'Observer_NPC']]]
 ];

@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//@bug no bugs</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//@warning no warnings</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;g_npc.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;c_enemy.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QPoint&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
@@ -103,29 +103,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_observer___n_p_c.html#afa171d5bb3869a7a2a83024c9ee48c44">~Observer_NPC</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#a5b4f8fa343886c15bcda6c44b8367a2b">addNPCObserver</a>(<a class="code" href="class_g___n_p_c.html">G_NPC</a>* ennemi);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#ad19b7ebfa8ee3a222a330d9eb35ad464">addNPCObserver</a>(<a class="code" href="class_c___enemy.html">C_Enemy</a>* ennemi);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#a587198fc5427895800f74b5c4e14dcaa">changeNPCState</a>(<a class="code" href="class_state___n_p_c.html">State_NPC</a>* state, QPoint posPlayer);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#a2c3cf6b1af26686ceedccf6f9007fb8a">changeNPCState</a>(<a class="code" href="class_state___enemy.html">State_Enemy</a>* state, QPoint posPlayer);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#a587198fc5427895800f74b5c4e14dcaa">changeNPCState</a>(<a class="code" href="class_state___n_p_c.html">State_NPC</a>* state);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_observer___n_p_c.html#a2c3cf6b1af26686ceedccf6f9007fb8a">changeNPCState</a>(<a class="code" href="class_state___enemy.html">State_Enemy</a>* state);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QList&lt;G_NPC*&gt; list_ennemisObserver;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QList&lt;C_Enemy*&gt; list_ennemisObserver;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // OBSERVER_NPC_H</span></div>
-<div class="ttc" id="class_observer___n_p_c_html_a5b4f8fa343886c15bcda6c44b8367a2b"><div class="ttname"><a href="class_observer___n_p_c.html#a5b4f8fa343886c15bcda6c44b8367a2b">Observer_NPC::addNPCObserver</a></div><div class="ttdeci">void addNPCObserver(G_NPC *ennemi)</div><div class="ttdoc">addEnnemiObserver add npc as observer </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:22</div></div>
 <div class="ttc" id="class_observer___n_p_c_html_afa171d5bb3869a7a2a83024c9ee48c44"><div class="ttname"><a href="class_observer___n_p_c.html#afa171d5bb3869a7a2a83024c9ee48c44">Observer_NPC::~Observer_NPC</a></div><div class="ttdeci">~Observer_NPC()</div><div class="ttdoc">ObservablesEnnemis Destuctor delete all the npcs. </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:11</div></div>
 <div class="ttc" id="class_observer___n_p_c_html"><div class="ttname"><a href="class_observer___n_p_c.html">Observer_NPC</a></div><div class="ttdoc">Pattern Observer to manage the "Ennemis". </div><div class="ttdef"><b>Definition:</b> observer_npc.h:24</div></div>
-<div class="ttc" id="class_g___n_p_c_html"><div class="ttname"><a href="class_g___n_p_c.html">G_NPC</a></div><div class="ttdoc">NPC Class. </div><div class="ttdef"><b>Definition:</b> g_npc.h:43</div></div>
 <div class="ttc" id="class_observer___n_p_c_html_a02a4df6c3974a0ebae0143077fdc43b9"><div class="ttname"><a href="class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9">Observer_NPC::Observer_NPC</a></div><div class="ttdeci">Observer_NPC()</div><div class="ttdoc">ObservablesNPC Constructor of ObservablesNPCs. </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:7</div></div>
-<div class="ttc" id="class_observer___n_p_c_html_a587198fc5427895800f74b5c4e14dcaa"><div class="ttname"><a href="class_observer___n_p_c.html#a587198fc5427895800f74b5c4e14dcaa">Observer_NPC::changeNPCState</a></div><div class="ttdeci">void changeNPCState(State_NPC *state, QPoint posPlayer)</div><div class="ttdoc">changeNPCState change the state of the npcs in the LEVEL PHASE </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:30</div></div>
-<div class="ttc" id="class_state___n_p_c_html"><div class="ttname"><a href="class_state___n_p_c.html">State_NPC</a></div><div class="ttdoc">Abstract class of the Pattern State to manage the "Ennemis". </div><div class="ttdef"><b>Definition:</b> state_npc.h:16</div></div>
+<div class="ttc" id="class_observer___n_p_c_html_ad19b7ebfa8ee3a222a330d9eb35ad464"><div class="ttname"><a href="class_observer___n_p_c.html#ad19b7ebfa8ee3a222a330d9eb35ad464">Observer_NPC::addNPCObserver</a></div><div class="ttdeci">void addNPCObserver(C_Enemy *ennemi)</div><div class="ttdoc">addEnnemiObserver add npc as observer </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:22</div></div>
+<div class="ttc" id="class_c___enemy_html"><div class="ttname"><a href="class_c___enemy.html">C_Enemy</a></div><div class="ttdoc">Enemy Class. </div><div class="ttdef"><b>Definition:</b> c_enemy.h:43</div></div>
+<div class="ttc" id="class_observer___n_p_c_html_a2c3cf6b1af26686ceedccf6f9007fb8a"><div class="ttname"><a href="class_observer___n_p_c.html#a2c3cf6b1af26686ceedccf6f9007fb8a">Observer_NPC::changeNPCState</a></div><div class="ttdeci">void changeNPCState(State_Enemy *state, QPoint posPlayer)</div><div class="ttdoc">changeNPCState change the state of the npcs in the LEVEL PHASE </div><div class="ttdef"><b>Definition:</b> observer_npc.cpp:30</div></div>
+<div class="ttc" id="class_state___enemy_html"><div class="ttname"><a href="class_state___enemy.html">State_Enemy</a></div><div class="ttdoc">Abstract class of the Pattern State to manage the "Ennemis". </div><div class="ttdef"><b>Definition:</b> state_enemy.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 11:58:36 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

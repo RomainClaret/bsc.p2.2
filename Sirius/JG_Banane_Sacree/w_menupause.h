@@ -43,8 +43,17 @@ class W_MenuPause : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Overlay widget to display the pause menu.
+     * @param parent if need
+     */
     W_MenuPause(QWidget *parent);
 
+    /**
+     * @brief Lock and unable the pause menu.
+     * @param levelValue number of the level
+     */
     void setUnableMenu(int levelValue);
 
 private:
@@ -60,7 +69,16 @@ private:
 
     QString styleBtn;
 
+    /**
+     * @brief Creates a shadow effect on buttons.
+     * @return QGraphicsDropShadowEffect
+     */
     QGraphicsDropShadowEffect* shadowbtn();
+
+    /**
+     * @brief Listen to the paint event
+     * @param pe
+     */
     void paintEvent(QPaintEvent *pe);
 
 signals:

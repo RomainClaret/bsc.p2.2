@@ -110,30 +110,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_s___dialog.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s___dialog.html">S_Dialog</a> : <span class="keyword">public</span> <a class="code" href="class_g___surface.html">G_Surface</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_s___dialog.html">S_Dialog</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_s___dialog.html">S_Dialog</a>(QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> setDialogNumber(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> getDialogNumber();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> addDialogText(QString text);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QString getText();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//Constructors</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span>    <a class="code" href="class_s___dialog.html#a9b20a59ab0954ef8d9befdfbb556e398">S_Dialog</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> setDesign();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> dialogNumber;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QString text;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_s___dialog.html#a9b20a59ab0954ef8d9befdfbb556e398">S_Dialog</a>(QGraphicsItem *parent = 0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // S_DIALOG_H</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___dialog.html#a139b0eb3a98042192ac78df37806f1ad">setDialogNumber</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_s___dialog.html#ad26a628ae1d62d07e1b226126b04814f">getDialogNumber</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___dialog.html#ac156dc3bb16b5c84bce3c710dae215f7">addDialogText</a>(QString text);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QString <a class="code" href="class_s___dialog.html#aac6c0556054892ff474f485b962027fd">getText</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setDesign();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> dialogNumber;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QString text;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // S_DIALOG_H</span></div>
+<div class="ttc" id="class_s___dialog_html_a139b0eb3a98042192ac78df37806f1ad"><div class="ttname"><a href="class_s___dialog.html#a139b0eb3a98042192ac78df37806f1ad">S_Dialog::setDialogNumber</a></div><div class="ttdeci">void setDialogNumber(int value)</div><div class="ttdoc">Set the number of the dialog. </div><div class="ttdef"><b>Definition:</b> s_dialog.cpp:35</div></div>
+<div class="ttc" id="class_s___dialog_html_a9b20a59ab0954ef8d9befdfbb556e398"><div class="ttname"><a href="class_s___dialog.html#a9b20a59ab0954ef8d9befdfbb556e398">S_Dialog::S_Dialog</a></div><div class="ttdeci">S_Dialog(int xpos, int ypos, QGraphicsItem *parent=0)</div><div class="ttdoc">Constructor with position setup. </div><div class="ttdef"><b>Definition:</b> s_dialog.cpp:18</div></div>
 <div class="ttc" id="class_g___surface_html"><div class="ttname"><a href="class_g___surface.html">G_Surface</a></div><div class="ttdoc">Walking blocks. </div><div class="ttdef"><b>Definition:</b> g_surface.h:30</div></div>
 <div class="ttc" id="class_s___dialog_html"><div class="ttname"><a href="class_s___dialog.html">S_Dialog</a></div><div class="ttdoc">Dialog blocks. </div><div class="ttdef"><b>Definition:</b> s_dialog.h:32</div></div>
+<div class="ttc" id="class_s___dialog_html_ad26a628ae1d62d07e1b226126b04814f"><div class="ttname"><a href="class_s___dialog.html#ad26a628ae1d62d07e1b226126b04814f">S_Dialog::getDialogNumber</a></div><div class="ttdeci">int getDialogNumber()</div><div class="ttdoc">Get the number of the dialog of self. </div><div class="ttdef"><b>Definition:</b> s_dialog.cpp:40</div></div>
+<div class="ttc" id="class_s___dialog_html_ac156dc3bb16b5c84bce3c710dae215f7"><div class="ttname"><a href="class_s___dialog.html#ac156dc3bb16b5c84bce3c710dae215f7">S_Dialog::addDialogText</a></div><div class="ttdeci">void addDialogText(QString text)</div><div class="ttdoc">Set the dialog of self. </div><div class="ttdef"><b>Definition:</b> s_dialog.cpp:45</div></div>
+<div class="ttc" id="class_s___dialog_html_aac6c0556054892ff474f485b962027fd"><div class="ttname"><a href="class_s___dialog.html#aac6c0556054892ff474f485b962027fd">S_Dialog::getText</a></div><div class="ttdeci">QString getText()</div><div class="ttdoc">Get the dialog of self. </div><div class="ttdef"><b>Definition:</b> s_dialog.cpp:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 11:58:36 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

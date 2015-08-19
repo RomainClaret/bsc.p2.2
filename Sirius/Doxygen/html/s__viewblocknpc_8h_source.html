@@ -91,43 +91,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span>QGraphicsRectItem;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span>QGraphicsItem;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_g___n_p_c.html">G_NPC</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_c___enemy.html">C_Enemy</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;g_surface.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s___view_block_n_p_c.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s___view_block_n_p_c.html">S_ViewBlockNPC</a> : <span class="keyword">public</span> <a class="code" href="class_g___surface.html">G_Surface</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_s___view_block_n_p_c.html">S_ViewBlockNPC</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne, <a class="code" href="class_g___n_p_c.html">G_NPC</a>* owner, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> getLine();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> getColonne();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> isActive();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> setActive(<span class="keywordtype">bool</span> actif);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_g___n_p_c.html">G_NPC</a>* owner;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> playableCharacterOn();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> blockOn();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> setStylePlayableCharacterOn();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> ligne;      <span class="comment">//.. -2, -1, 0, 1, 2 ..</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> colonne;    <span class="comment">// 0,1,2..</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> actif;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> setStyleDesactivated();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> setStyleActivated();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>    <a class="code" href="class_s___view_block_n_p_c.html#a505d9eb8092ca4fdf3a8662418dd6511">S_ViewBlockNPC</a>(<span class="keywordtype">int</span> line, <span class="keywordtype">int</span> column, <a class="code" href="class_c___enemy.html">C_Enemy</a>* owner, QGraphicsItem *parent = 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_s___view_block_n_p_c.html#a32c2bf2773dfb42611e5b029a98f9b3f">getLine</a>();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // S_VIEWBLOCKNPC_H</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_s___view_block_n_p_c.html#ab6a88434bbcb808b801994bc320b5981">getColonne</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_s___view_block_n_p_c.html#a59c007ce0c4eaae6e361f65bb7782289">isActive</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___view_block_n_p_c.html#aa8cc7f8d5958a998ce6eb7db6b20031a">setActive</a>(<span class="keywordtype">bool</span> actif);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_c___enemy.html">C_Enemy</a>* owner;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___view_block_n_p_c.html#aaa7984976e743660e694b860cc6122de">playableCharacterOn</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___view_block_n_p_c.html#a97f4bbd45d4768a2cf7b31ec36197ef1">blockOn</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s___view_block_n_p_c.html#a8b5b1c08526115e555f49c292fabb59f">setStylePlayableCharacterOn</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> line;      <span class="comment">//.. -2, -1, 0, 1, 2 ..</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> column;    <span class="comment">// 0,1,2..</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> actif;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> setStyleDesactivated();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> setStyleActivated();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif // S_VIEWBLOCKNPC_H</span></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_a59c007ce0c4eaae6e361f65bb7782289"><div class="ttname"><a href="class_s___view_block_n_p_c.html#a59c007ce0c4eaae6e361f65bb7782289">S_ViewBlockNPC::isActive</a></div><div class="ttdeci">bool isActive()</div><div class="ttdoc">Get if self is active for detection. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:46</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_a8b5b1c08526115e555f49c292fabb59f"><div class="ttname"><a href="class_s___view_block_n_p_c.html#a8b5b1c08526115e555f49c292fabb59f">S_ViewBlockNPC::setStylePlayableCharacterOn</a></div><div class="ttdeci">void setStylePlayableCharacterOn()</div><div class="ttdoc">Change self skin if playable character has been detected. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:70</div></div>
 <div class="ttc" id="class_g___surface_html"><div class="ttname"><a href="class_g___surface.html">G_Surface</a></div><div class="ttdoc">Walking blocks. </div><div class="ttdef"><b>Definition:</b> g_surface.h:30</div></div>
 <div class="ttc" id="class_s___view_block_n_p_c_html"><div class="ttname"><a href="class_s___view_block_n_p_c.html">S_ViewBlockNPC</a></div><div class="ttdoc">View Block for NPC characters. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.h:20</div></div>
-<div class="ttc" id="class_g___n_p_c_html"><div class="ttname"><a href="class_g___n_p_c.html">G_NPC</a></div><div class="ttdoc">NPC Class. </div><div class="ttdef"><b>Definition:</b> g_npc.h:43</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_aaa7984976e743660e694b860cc6122de"><div class="ttname"><a href="class_s___view_block_n_p_c.html#aaa7984976e743660e694b860cc6122de">S_ViewBlockNPC::playableCharacterOn</a></div><div class="ttdeci">void playableCharacterOn()</div><div class="ttdoc">The playable character has been detected. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:52</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_ab6a88434bbcb808b801994bc320b5981"><div class="ttname"><a href="class_s___view_block_n_p_c.html#ab6a88434bbcb808b801994bc320b5981">S_ViewBlockNPC::getColonne</a></div><div class="ttdeci">int getColonne()</div><div class="ttdoc">Get the column of self in the matrix view of the enemy. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:41</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_aa8cc7f8d5958a998ce6eb7db6b20031a"><div class="ttname"><a href="class_s___view_block_n_p_c.html#aa8cc7f8d5958a998ce6eb7db6b20031a">S_ViewBlockNPC::setActive</a></div><div class="ttdeci">void setActive(bool actif)</div><div class="ttdoc">Set self vision. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:21</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_a32c2bf2773dfb42611e5b029a98f9b3f"><div class="ttname"><a href="class_s___view_block_n_p_c.html#a32c2bf2773dfb42611e5b029a98f9b3f">S_ViewBlockNPC::getLine</a></div><div class="ttdeci">int getLine()</div><div class="ttdoc">Get the line of self in the matrix view of the enemy. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:36</div></div>
+<div class="ttc" id="class_c___enemy_html"><div class="ttname"><a href="class_c___enemy.html">C_Enemy</a></div><div class="ttdoc">Enemy Class. </div><div class="ttdef"><b>Definition:</b> c_enemy.h:43</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_a97f4bbd45d4768a2cf7b31ec36197ef1"><div class="ttname"><a href="class_s___view_block_n_p_c.html#a97f4bbd45d4768a2cf7b31ec36197ef1">S_ViewBlockNPC::blockOn</a></div><div class="ttdeci">void blockOn()</div><div class="ttdoc">A block has been detected. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:61</div></div>
+<div class="ttc" id="class_s___view_block_n_p_c_html_a505d9eb8092ca4fdf3a8662418dd6511"><div class="ttname"><a href="class_s___view_block_n_p_c.html#a505d9eb8092ca4fdf3a8662418dd6511">S_ViewBlockNPC::S_ViewBlockNPC</a></div><div class="ttdeci">S_ViewBlockNPC(int line, int column, C_Enemy *owner, QGraphicsItem *parent=0)</div><div class="ttdoc">Constructor to position this vision block to given enemy. </div><div class="ttdef"><b>Definition:</b> s_viewblocknpc.cpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 11:58:36 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

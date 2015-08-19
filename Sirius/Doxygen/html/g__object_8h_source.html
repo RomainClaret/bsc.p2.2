@@ -113,31 +113,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_g___object.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_g___object.html">G_Object</a> : <span class="keyword">public</span> <a class="code" href="class_g___surface.html">G_Surface</a></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_g___object.html">G_Object</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_g___object.html">G_Object</a>(QString name, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_g___object.html">G_Object</a>(QString name, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> setDesign();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QString getName();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QPixmap getTexture();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> QString OBJECT_EGG;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> QString OBJECT_SHOES;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> QString OBJECT_FISH;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QBrush* objectSkin;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QString* nom;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//Constructors</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span>    <a class="code" href="class_g___object.html#aa64de9d24e8b67e33e537657030a813d">G_Object</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_g___object.html#aa64de9d24e8b67e33e537657030a813d">G_Object</a>(QString name, QGraphicsItem *parent = 0);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // G_OBJECT_H</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_g___object.html#aa64de9d24e8b67e33e537657030a813d">G_Object</a>(QString name, <span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___object.html#ad9241749fb08c9e3974c3759f98caa80">setDesign</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QString <a class="code" href="class_g___object.html#a945031891a56f388325b8d2920f47737">getName</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QPixmap <a class="code" href="class_g___object.html#a0996523a11fefccaff0cc05ad15121bd">getTexture</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> QString OBJECT_EGG;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">static</span> QString OBJECT_SHOES;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> QString OBJECT_FISH;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QBrush* objectSkin;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QString* nom;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif // G_OBJECT_H</span></div>
 <div class="ttc" id="class_g___surface_html"><div class="ttname"><a href="class_g___surface.html">G_Surface</a></div><div class="ttdoc">Walking blocks. </div><div class="ttdef"><b>Definition:</b> g_surface.h:30</div></div>
+<div class="ttc" id="class_g___object_html_aa64de9d24e8b67e33e537657030a813d"><div class="ttname"><a href="class_g___object.html#aa64de9d24e8b67e33e537657030a813d">G_Object::G_Object</a></div><div class="ttdeci">G_Object(int xpos, int ypos, QGraphicsItem *parent=0)</div><div class="ttdoc">Constructor for an object. </div><div class="ttdef"><b>Definition:</b> g_object.cpp:19</div></div>
+<div class="ttc" id="class_g___object_html_ad9241749fb08c9e3974c3759f98caa80"><div class="ttname"><a href="class_g___object.html#ad9241749fb08c9e3974c3759f98caa80">G_Object::setDesign</a></div><div class="ttdeci">void setDesign()</div><div class="ttdoc">Set the skin of self. </div><div class="ttdef"><b>Definition:</b> g_object.cpp:38</div></div>
 <div class="ttc" id="class_g___object_html"><div class="ttname"><a href="class_g___object.html">G_Object</a></div><div class="ttdoc">Object from the game. </div><div class="ttdef"><b>Definition:</b> g_object.h:36</div></div>
+<div class="ttc" id="class_g___object_html_a0996523a11fefccaff0cc05ad15121bd"><div class="ttname"><a href="class_g___object.html#a0996523a11fefccaff0cc05ad15121bd">G_Object::getTexture</a></div><div class="ttdeci">QPixmap getTexture()</div><div class="ttdoc">Get the texture of self. </div><div class="ttdef"><b>Definition:</b> g_object.cpp:54</div></div>
+<div class="ttc" id="class_g___object_html_a945031891a56f388325b8d2920f47737"><div class="ttname"><a href="class_g___object.html#a945031891a56f388325b8d2920f47737">G_Object::getName</a></div><div class="ttdeci">QString getName()</div><div class="ttdoc">Get the name of self. </div><div class="ttdef"><b>Definition:</b> g_object.cpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 11:58:36 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

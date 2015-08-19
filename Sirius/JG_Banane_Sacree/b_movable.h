@@ -45,7 +45,7 @@ public:
     B_Movable(int xpos, int ypos, QGraphicsItem *parent = 0);
 
     /**
-     * @brief Constructor without position setup
+     * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
     B_Movable(QGraphicsItem *parent = 0);

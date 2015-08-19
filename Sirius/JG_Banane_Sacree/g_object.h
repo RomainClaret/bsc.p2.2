@@ -36,12 +36,46 @@ class QBrush;
 class G_Object : public G_Surface
 {
 public:
+    //Constructors
+    /**
+     * @brief Constructor for an object
+     * @param xpos x-axis position of the item to add
+     * @param ypos y-axis position of the item to add
+     * @param parent QGraphicsItem* of the created item
+     */
     G_Object(int xpos, int ypos, QGraphicsItem *parent = 0);
+
+    /**
+     * @brief Constructor for an object
+     * @param name name of the object
+     * @param parent QGraphicsItem* of the created item
+     */
     G_Object(QString name, QGraphicsItem *parent = 0);
+
+    /**
+     * @brief Constructor for an object
+     * @param name name of the object
+     * @param xpos x-axis position of the item to add
+     * @param ypos y-axis position of the item to add
+     * @param parent QGraphicsItem* of the created item
+     */
     G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent = 0);
 
+    /**
+     * @brief Set the skin of self.
+     */
     void setDesign();
+
+    /**
+     * @brief Get the name of self.
+     * @return name of self
+     */
     QString getName();
+
+    /**
+     * @brief Get the texture of self.
+     * @return texture of self
+     */
     QPixmap getTexture();
 
     static QString OBJECT_EGG;
