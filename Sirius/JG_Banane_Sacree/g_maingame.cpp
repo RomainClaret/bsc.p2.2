@@ -22,6 +22,8 @@
 #include <QPushButton>
 #include <QFormLayout>
 
+#include "observer_npc.h"
+
 
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
@@ -31,7 +33,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     toggleGameCreated = false;
     toggleFirstStart = true;
 
-    currentLevel = new G_Level(-1, NULL);
+    currentLevel = new G_Level(-1, new Observer_NPC(), NULL);
 
     // Les Variables par default du jeu
     windowTitle = tr("James Gouin et la Banane Sacrée");

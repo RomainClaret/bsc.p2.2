@@ -75,7 +75,9 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     playableCharacter = new P_Penguin();
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
-    currentLevel = new G_Level(0, this);
+
+    observerEnemy = new Observer_NPC();
+    currentLevel = new G_Level(0, observerEnemy, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     playerView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1011,7 +1013,11 @@ void G_Gameboard::setLevel(int value)
 {
     delete currentLevel;
     playerProfil->setLevel(value);
-    currentLevel = new G_Level(value, this);
+
+    delete this->observerEnemy;
+    this->observerEnemy = new Observer_NPC();
+
+    currentLevel = new G_Level(value, observerEnemy, this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
     W_MenuStart::saveGame(playerProfil);
