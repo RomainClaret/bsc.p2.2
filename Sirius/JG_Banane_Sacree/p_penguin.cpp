@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "c_penguin.h"
+#include "p_penguin.h"
 #include "g_gameboard.h"
 #include <QGraphicsRectItem>
 #include <QPoint>
@@ -28,7 +28,7 @@
 #include <typeinfo.h>
 #endif
 
-C_Penguin::C_Penguin() : G_Player()
+P_Penguin::P_Penguin() : C_Player()
 {
     int BlocsSizeX = G_Gameboard::getGameSquares()-2;
     int BlocsSizeY = G_Gameboard::getGameSquares()-2;
@@ -48,12 +48,12 @@ C_Penguin::C_Penguin() : G_Player()
     slideAble = true;
 
 }
-void C_Penguin::setPos(int x, int y)
+void P_Penguin::setPos(int x, int y)
 {
     int xPos = x*G_Gameboard::getGameSquares()-G_Gameboard::getGameSquares();
     int yPos = y*G_Gameboard::getGameSquares()-G_Gameboard::getGameSquares();
 
-    G_Player::setPos(xPos, yPos);
+    C_Player::setPos(xPos, yPos);
 
     leftCollideBox->setPos(xPos-G_Gameboard::getGameSquares()+1, yPos+1);
     rightCollideBox->setPos(xPos+G_Gameboard::getGameSquares()+1, yPos+1);
@@ -61,7 +61,7 @@ void C_Penguin::setPos(int x, int y)
     topCollideBox->setPos(xPos+1, yPos-G_Gameboard::getGameSquares()+1);
 }
 
-void C_Penguin::moveBy(int x, int y)
+void P_Penguin::moveBy(int x, int y)
 {
 
 
@@ -72,7 +72,7 @@ void C_Penguin::moveBy(int x, int y)
 
 //    animation->start();
 
-    G_Player::moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
+    C_Player::moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     leftCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     rightCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     bottomCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
@@ -82,7 +82,7 @@ void C_Penguin::moveBy(int x, int y)
     lastMove->setY(y);
 }
 
-void C_Penguin::moveBack()
+void P_Penguin::moveBack()
 {
     moveBy(-lastMove->x(),-lastMove->y());
     lastMove->setX(0);
@@ -91,7 +91,7 @@ void C_Penguin::moveBack()
     qDebug() << "MoveBack" << x() << " " << y();
 }
 
-void C_Penguin::addToScene(QGraphicsScene* Scene)
+void P_Penguin::addToScene(QGraphicsScene* Scene)
 {
     Scene->addItem(this);
     Scene->addItem(topCollideBox);
@@ -100,7 +100,7 @@ void C_Penguin::addToScene(QGraphicsScene* Scene)
     Scene->addItem(rightCollideBox);
 }
 
-bool C_Penguin::isSlide()
+bool P_Penguin::isSlide()
 {
     QList<QGraphicsItem *> CollidingItems = this->CollidesCenter();
     bool slide = false;
@@ -118,53 +118,53 @@ bool C_Penguin::isSlide()
     return slide;
 }
 
-void C_Penguin::setSlideAble(bool value)
+void P_Penguin::setSlideAble(bool value)
 {
     this->slideAble = value;
 }
 
 //Retour des listes des collisions
-QList<QGraphicsItem *> C_Penguin::CollidesRight()
+QList<QGraphicsItem *> P_Penguin::CollidesRight()
 {
     return rightCollideBox->collidingItems();
 }
-QList<QGraphicsItem *> C_Penguin::CollidesLeft()
+QList<QGraphicsItem *> P_Penguin::CollidesLeft()
 {
     return leftCollideBox->collidingItems();
 }
-QList<QGraphicsItem *> C_Penguin::CollidesTop()
+QList<QGraphicsItem *> P_Penguin::CollidesTop()
 {
     return topCollideBox->collidingItems();
 }
-QList<QGraphicsItem *> C_Penguin::CollidesBottom()
+QList<QGraphicsItem *> P_Penguin::CollidesBottom()
 {
     return bottomCollideBox->collidingItems();
 }
-QList<QGraphicsItem *> C_Penguin::CollidesCenter()
+QList<QGraphicsItem *> P_Penguin::CollidesCenter()
 {
-    return G_Player::collidingItems();
+    return C_Player::collidingItems();
 }
 
 
 //temporaire
-QGraphicsRectItem* C_Penguin::getLeftCB(){
+QGraphicsRectItem* P_Penguin::getLeftCB(){
     return leftCollideBox;
 }
-QGraphicsRectItem* C_Penguin::getRightCB(){
+QGraphicsRectItem* P_Penguin::getRightCB(){
      return rightCollideBox;
 }
-QGraphicsRectItem* C_Penguin::getTopCB(){
+QGraphicsRectItem* P_Penguin::getTopCB(){
      return topCollideBox;
 }
-QGraphicsRectItem* C_Penguin::getBottomCB(){
+QGraphicsRectItem* P_Penguin::getBottomCB(){
      return bottomCollideBox;
 }
 
-G_Player* C_Penguin::getPlayer(){
+C_Player* P_Penguin::getPlayer(){
      return this;
 }
 
-void C_Penguin::addObjectToBag(G_Object *object)
+void P_Penguin::addObjectToBag(G_Object *object)
 {
     if(object->getName()== G_Object::OBJECT_EGG)
     {
@@ -178,7 +178,7 @@ void C_Penguin::addObjectToBag(G_Object *object)
 
 }
 
-void C_Penguin::removeObjectFromSacoche(QString object)
+void P_Penguin::removeObjectFromSacoche(QString object)
 {
     for (int i = 0; i < sacoche.size(); ++i)
     {
@@ -190,7 +190,7 @@ void C_Penguin::removeObjectFromSacoche(QString object)
     }
 }
 
-void C_Penguin::printSacoche()
+void P_Penguin::printSacoche()
 {
     qDebug() << "[PrintSacoche]";
     for (int i = 0; i < sacoche.size(); ++i) {
@@ -205,12 +205,12 @@ void C_Penguin::printSacoche()
     qDebug() << " ";
 }
 
-QList<G_Object*> C_Penguin::getBag()
+QList<G_Object*> P_Penguin::getBag()
 {
     return sacoche;
 }
 
-bool C_Penguin::checkObjectSacoche(QString object, int quantity)
+bool P_Penguin::checkObjectSacoche(QString object, int quantity)
 {
     int total = 0;
     for (int i = 0; i < sacoche.size(); ++i)
@@ -231,17 +231,17 @@ bool C_Penguin::checkObjectSacoche(QString object, int quantity)
     }
 }
 
-void C_Penguin::emptyTempBag()
+void P_Penguin::emptyTempBag()
 {
     tempSacoche.clear();
 }
 
-void C_Penguin::emptySacoche()
+void P_Penguin::emptySacoche()
 {
     sacoche.clear();
 }
 
-void C_Penguin::removeTempFromSacoche()
+void P_Penguin::removeTempFromSacoche()
 {
     for (int i = 0; i < tempSacoche.size(); ++i)
     {
@@ -252,7 +252,7 @@ void C_Penguin::removeTempFromSacoche()
     emptyTempBag();
 }
 
-QGraphicsRectItem* C_Penguin::getCollideBloc(char sensDepl)
+QGraphicsRectItem* P_Penguin::getCollideBloc(char sensDepl)
 {
     if(sensDepl == 'b')
     {

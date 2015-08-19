@@ -4,11 +4,11 @@
 #include <QGraphicsItem>
 #include <QBrush>
 #include <QPen>
-#include "g_npc.h"
+#include "c_enemy.h"
 #include "g_gameboard.h"
 
 
-S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, G_NPC* proprietaire, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
+S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
     this->ligne = ligne;
     this->colonne = colonne;

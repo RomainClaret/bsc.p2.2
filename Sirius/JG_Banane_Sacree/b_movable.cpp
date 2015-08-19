@@ -19,9 +19,9 @@
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
-#include "g_npc.h"
-#include "c_fox.h"
-#include "c_wolf.h"
+#include "c_enemy.h"
+#include "e_fox.h"
+#include "e_wolf.h"
 #include "g_gameboard.h"
 
 #include "s_ice.h"
@@ -131,8 +131,8 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
     {
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
            typeid(*l.at(i)).name() == typeid(B_Movable).name() ||
-           typeid(*l.at(i)).name() == typeid(C_Fox).name() ||
-           typeid(*l.at(i)).name() == typeid(C_Wolf).name())
+           typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
+           typeid(*l.at(i)).name() == typeid(E_Wolf).name())
         {
             return false;
         }

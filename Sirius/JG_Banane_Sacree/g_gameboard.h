@@ -16,7 +16,7 @@
 
 #include <QWidget>
 
-#include "c_penguin.h"
+#include "p_penguin.h"
 #include "b_movable.h"
 #include "w_menupause.h"
 #include "g_level.h"
@@ -267,7 +267,7 @@ private:
     //Scene & Playable Character
     QGraphicsScene *mainScene;
     QGraphicsView *playerView;
-    C_Penguin *playableCharacter;
+    P_Penguin *playableCharacter;
 
     //Window
     int windowSizeY;

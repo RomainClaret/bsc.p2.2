@@ -11,35 +11,37 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "c_wolf.h"
+#include "e_fox.h"
 #include "g_gameboard.h"
 #include "s_viewblocknpc.h"
 
 /**
- * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
+ * @details Set the skin, speed at 10, Z value at 2 and default orientation to top.
  * Vision of the enemy is created here.
  */
-C_Wolf::C_Wolf(QList<QPoint> path, G_Gameboard *g) : G_NPC(path, g)
+E_Fox::E_Fox(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
 {
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
-    speed = 8; //vitesse par défaut
+    speed = 10; //vitesse par défaut
 
-    leftSkin = ":/characters/characters/loup_left.png";
-    rightSkin = ":/characters/characters/loup_right.png";
-    upSkin = ":/characters/characters/loup_back.png";
-    downSkin = ":/characters/characters/loup_front.png";
+    leftSkin = ":/characters/characters/renard_left.png";
+    rightSkin = ":/characters/characters/renard_right.png";
+    upSkin = ":/characters/characters/renard_back.png";
+    downSkin = ":/characters/characters/renard_front.png";
 
         setZValue(2);
 
     //Création du champs de vue
-    for(int i=1; i<=5; i++)
+    for(int i=1; i<=2; i++)
     {
-        S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, i, this);
-        viewField.append(vb);
+        for(int j=-1; j<=1; j++)
+        {
+            S_ViewBlockNPC* vb = new S_ViewBlockNPC(j, i, this);
+            viewField.append(vb);
+        }
     }
 
     //il lui faut une orientation de base
     setOrientation_top();
-
 }

@@ -1,8 +1,8 @@
-#ifndef STATE_NPCPAUSE_H
-#define STATE_NPCPAUSE_H
+#ifndef STATE_ENEMYPAUSE_H
+#define STATE_ENEMYPAUSE_H
 
-#include "state_npc.h"
-class G_NPC;
+#include "state_enemy.h"
+class C_Enemy;
 
 /**
  * @brief Concrete class of the State Pattern for Ennemis
@@ -14,19 +14,19 @@ class G_NPC;
  * @version 1.0
  * @date 18 august 2015
  */
-class State_NPCPause
+class State_EnemyPause
 {
 public:
     /**
      * @brief StateNPC_Pause Constructor
      */
-    State_NPCPause();
+    State_EnemyPause();
 
     /**
      * @brief step is the brain of the npc, in this case the npc just freeze
      * @param npc
      */
-    void step(G_NPC* npc);
+    void step(C_Enemy* npc);
 };
 
-#endif // STATE_NPCPAUSE_H
+#endif // STATE_ENEMYPAUSE_H

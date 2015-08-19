@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "g_npc.h"
+#include "c_enemy.h"
 
 #include <QGraphicsItem>
 #include <QPoint>
@@ -32,12 +32,12 @@
 #include "b_wall.h"
 #include "b_water.h"
 #include "b_movable.h"
-#include "g_player.h"
-#include "c_penguin.h"
+#include "c_player.h"
+#include "p_penguin.h"
 #include "s_viewblocknpc.h"
 
-#include "state_npcpatrol.h"
-#include "state_npcsleep.h"
+#include "state_enemypatrol.h"
+#include "state_enemysleep.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -48,7 +48,7 @@
  * @details Set the speed at 100, Z value at 2, detectPinguin to false, sens to true and the path given.
  * For the speed: 1 is really fast, 100 is really slow.
  */
-G_NPC::G_NPC(QList<QPoint> path, G_Gameboard *g)
+C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
 {
     game = g;
 
@@ -65,10 +65,10 @@ G_NPC::G_NPC(QList<QPoint> path, G_Gameboard *g)
 
 
     //default state
-    state = new State_NPCPatrol();
+    state = new State_EnemyPatrol();
 }
 
-G_NPC::~G_NPC()
+C_Enemy::~C_Enemy()
 {
     foreach (S_ViewBlockNPC* vb, viewField)
     {
@@ -81,7 +81,7 @@ G_NPC::~G_NPC()
 /**
  * @detail replace the state of the enemy with newState
  */
-void G_NPC::changeState(State_NPC* newState)
+void C_Enemy::changeState(State_Enemy* newState)
 {
     delete state;
     this->state = newState;
@@ -89,19 +89,19 @@ void G_NPC::changeState(State_NPC* newState)
 /**
  * @detail getEnemyPos return the position with the correct coords on the map
  */
-QPoint G_NPC::getNPCPos()
+QPoint C_Enemy::getNPCPos()
 {
     return convertPosPoint(this->pos());
 }
 
-void G_NPC::setPath(QList<QPoint> path)
+void C_Enemy::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;
     this->path = path;
     setPos(path.at(0).x(), path.at(0).y());
 }
 
-void G_NPC::viewBlockActive()
+void C_Enemy::viewBlockActive()
 {
     QList<QPoint> toDesactivate;
     bool allunactived = false;
@@ -119,7 +119,7 @@ void G_NPC::viewBlockActive()
         foreach (QGraphicsItem *item, CollidingItems) {
             if(typeid(*item).name() == typeid(B_Movable).name()
             || typeid(*item).name() == typeid(B_Wall).name()
-            || typeid(*item).name() == typeid(G_NPC).name())
+            || typeid(*item).name() == typeid(C_Enemy).name())
             {
                 bUnactivate = true;
             }
@@ -151,7 +151,7 @@ void G_NPC::viewBlockActive()
 
 }
 
-void G_NPC::playableCharacterDetection()
+void C_Enemy::playableCharacterDetection()
 {
     detectPlayableCharacter = false;
     foreach (S_ViewBlockNPC* vb, viewField)
@@ -162,7 +162,7 @@ void G_NPC::playableCharacterDetection()
 
             for(int i=0; i<CollidingItems.length(); i++)
             {
-                if(typeid(*CollidingItems.at(i)).name() == typeid(C_Penguin).name())
+                if(typeid(*CollidingItems.at(i)).name() == typeid(P_Penguin).name())
                 {
                     vb->setStylePlayableCharacterOn();
                     playableCharacterOnViewBlock();
@@ -176,13 +176,13 @@ void G_NPC::playableCharacterDetection()
   * @details Called by the s_viewblocennemi if the playable character collides with it,
   * Or by the enemy if the playable character is detected.
   */
-void G_NPC::playableCharacterOnViewBlock()
+void C_Enemy::playableCharacterOnViewBlock()
 {
     this->detectPlayableCharacter = true;
     game->restartEnigma();
 }
 
-QPoint G_NPC::convertPosPoint(QPointF psrc)
+QPoint C_Enemy::convertPosPoint(QPointF psrc)
 {
     int x = (psrc.x()-1) /G_Gameboard::getGameSquares();
     int y = (psrc.y()-1) /G_Gameboard::getGameSquares();
@@ -192,7 +192,7 @@ QPoint G_NPC::convertPosPoint(QPointF psrc)
 /**
  * @details Check for each S_ViewBlocEnnemi of champVue if collides with B_Water, B_Movable, B_Wall, or Ennemi.
  */
-bool G_NPC::collide()
+bool C_Enemy::collide()
 {
     S_ViewBlockNPC *collideRect;
     foreach (S_ViewBlockNPC* vb, viewField) {
@@ -216,7 +216,7 @@ bool G_NPC::collide()
         {
             return true;
         }
-        else if(typeid(*CollidingItems.at(i)).name() == typeid(G_NPC).name())
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(C_Enemy).name())
         {
             return true;
         }
@@ -227,7 +227,7 @@ bool G_NPC::collide()
 /**
  * @details  Taking in account the direction of the enemy.
  */
-int G_NPC::nextPoint()
+int C_Enemy::nextPoint()
 {
     if(direction)
     {
@@ -254,7 +254,7 @@ int G_NPC::nextPoint()
  * @details Executed at each call of the slot advance() from the Scene.
  * It is the brain of the enemy.
  */
-void G_NPC::advance(int step)
+void C_Enemy::advance(int step)
 {
     if(step == 1) //répond au second appel
     {
@@ -262,7 +262,7 @@ void G_NPC::advance(int step)
     }
 }
 
-void G_NPC::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
+void C_Enemy::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     //Draw the ennemi
     painter->setPen(Qt::transparent);
@@ -293,12 +293,12 @@ void G_NPC::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *
     painter->drawRect(ennemiBox);
 }
 
-QRectF G_NPC::boundingRect() const
+QRectF C_Enemy::boundingRect() const
 {
     return QRectF(0,0,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
 }
 
-void G_NPC::setOrientation_top()
+void C_Enemy::setOrientation_top()
 {
     orientation = 't';
     foreach (S_ViewBlockNPC* vb, viewField)
@@ -307,7 +307,7 @@ void G_NPC::setOrientation_top()
     }
     update();
 }
-void G_NPC::setOrientation_bottom()
+void C_Enemy::setOrientation_bottom()
 {
     orientation = 'b';
     foreach (S_ViewBlockNPC* vb, viewField)
@@ -316,7 +316,7 @@ void G_NPC::setOrientation_bottom()
     }
     update();
 }
-void G_NPC::setOrientation_left()
+void C_Enemy::setOrientation_left()
 {
     orientation = 'l';
     foreach (S_ViewBlockNPC* vb, viewField)
@@ -325,7 +325,7 @@ void G_NPC::setOrientation_left()
     }
     update();
 }
-void G_NPC::setOrientation_right()
+void C_Enemy::setOrientation_right()
 {
     orientation = 'r';
     foreach (S_ViewBlockNPC* vb, viewField)
@@ -339,7 +339,7 @@ void G_NPC::setOrientation_right()
 /**
  * @details Define the poistion of the block S_ViewBlocEnnemi in function of its line and column.
  */
-void G_NPC::setPosViewBloc(S_ViewBlockNPC* bloc, QPoint p)
+void C_Enemy::setPosViewBloc(S_ViewBlockNPC* bloc, QPoint p)
 {
     int gs = G_Gameboard::getGameSquares();
     QPoint posEnnemi = convertPosPoint(this->pos());
@@ -347,7 +347,7 @@ void G_NPC::setPosViewBloc(S_ViewBlockNPC* bloc, QPoint p)
     bloc->setPosPixel(posEnnemi.x()*gs + p.x()*gs+1, posEnnemi.y()*gs + p.y()*gs+1);
 }
 
-void G_NPC::setPos(int x, int y)
+void C_Enemy::setPos(int x, int y)
 {
     foreach (S_ViewBlockNPC* vb, viewField)
     {
@@ -357,7 +357,7 @@ void G_NPC::setPos(int x, int y)
     QGraphicsItem::setPos(x*G_Gameboard::getGameSquares()+1, y*G_Gameboard::getGameSquares()+1);
 }
 
-void G_NPC::moveBy(int x, int y)
+void C_Enemy::moveBy(int x, int y)
 {
     int gameSquare = G_Gameboard::getGameSquares();
 
@@ -369,7 +369,7 @@ void G_NPC::moveBy(int x, int y)
     QGraphicsItem::moveBy(x*gameSquare,y*gameSquare);
 }
 
-void G_NPC::addToScene(QGraphicsScene* scene)
+void C_Enemy::addToScene(QGraphicsScene* scene)
 {
     scene->addItem(this);
 

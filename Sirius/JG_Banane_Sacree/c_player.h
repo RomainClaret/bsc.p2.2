@@ -11,33 +11,51 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef C_FOX_H
-#define C_FOX_H
-#include "g_npc.h"
+#ifndef C_PLAYER_H
+#define C_PLAYER_H
+
+#include <QGraphicsItem>
+class QPainter;
+class QRectF;
 
 /**
- * @brief Enemy Character: Fox
- * @details This is a character with its own characteristics.
- * It moves on a automatic pattern generated between two given points.
- * His view is 3x2 blocs.
+ * @brief Playable characters.
+ * @details Contains the skin, orientation, and position.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
- * @todo integrate with DP Factory
  */
-class C_Fox : public G_NPC
+
+class C_Player : public QGraphicsItem
 {
+
 public:
-    //Constructors
-    /**
-     * @brief Constructor with path setup.
-     * @param path QList of QPoint for the path
-     * @param g Gameboard to depend on
-     */
-    C_Fox(QList<QPoint> path, G_Gameboard *g);
+    C_Player();
+
+    QRectF boundingRect() const;    //la box du player
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget); //paint event
+    QBrush *playerSkin;
+
+    void setPlayerOrientation(QString orientation);
+    QString getPlayerOrientation();
+    QPoint *getPos();
+
+protected:
+    int xPos;
+    int yPos;
+
+private:
+    //Les skins sont les images attribué au personnage
+    QString leftSkin;
+    QString rightSkin;
+    QString upSkin;
+    QString downSkin;
+    QString playerOrientation;
+
 };
 
-#endif // C_FOX_H
+#endif // C_PLAYER_H

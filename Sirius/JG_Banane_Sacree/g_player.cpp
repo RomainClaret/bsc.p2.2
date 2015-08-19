@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "g_player.h"
+#include "c_player.h"
 #include "g_gameboard.h"
 
 #include <QPainter>
@@ -19,7 +19,7 @@
 #include <QRectF>
 
 
-G_Player::G_Player()
+C_Player::C_Player()
 {
     leftSkin = ":/characters/characters/player_left.png";
     rightSkin = ":/characters/characters/player_right.png";
@@ -30,12 +30,12 @@ G_Player::G_Player()
     setZValue(2);
 }
 
-QRectF G_Player::boundingRect() const
+QRectF C_Player::boundingRect() const
 {
     return QRectF(1,1,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
 }
 
-void G_Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void C_Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     playerSkin = new QBrush();
 
@@ -60,17 +60,17 @@ void G_Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
     painter->drawRect(playerBox);   //dessiner le joueur
 }
 
-void G_Player::setPlayerOrientation(QString orientation)
+void C_Player::setPlayerOrientation(QString orientation)
 {
     playerOrientation = orientation;
 }
 
-QString G_Player::getPlayerOrientation()
+QString C_Player::getPlayerOrientation()
 {
     return playerOrientation;
 }
 
-QPoint* G_Player::getPos()
+QPoint* C_Player::getPos()
 {
     return new QPoint(xPos, yPos);
 }

@@ -11,9 +11,9 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef C_PENGUIN_H
-#define C_PENGUIN_H
-#include "g_player.h"
+#ifndef P_PENGUIN_H
+#define P_PENGUIN_H
+#include "c_player.h"
 #include "g_object.h"
 #include <QList>
 
@@ -36,7 +36,7 @@ class QGraphicsScene;
  * @date 27 January 2015
  */
 
-class C_Penguin  : public G_Player
+class P_Penguin  : public C_Player
 {
 //    Q_PROPERTY(QPoint pos READ pos WRITE setPos)
 
@@ -56,7 +56,7 @@ private:
     int nbLives;
 
 public:
-    C_Penguin();
+    P_Penguin();
 
     void setPos(int, int);
     void moveBy(int, int);
@@ -88,8 +88,8 @@ public:
     QGraphicsRectItem* getRightCB();
     QGraphicsRectItem* getTopCB();
     QGraphicsRectItem* getBottomCB();
-    G_Player* getPlayer();
+    C_Player* getPlayer();
 
 };
 
-#endif // C_PENGUIN_H
+#endif // P_PENGUIN_H
