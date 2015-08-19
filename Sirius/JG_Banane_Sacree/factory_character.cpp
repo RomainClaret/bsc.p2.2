@@ -38,4 +38,5 @@ C_Player* Factory_Character::createPlayer(QGraphicsScene* scene)
 {
     C_Player* player = new C_Player();
     scene->addItem(player);
+    return player;
 }

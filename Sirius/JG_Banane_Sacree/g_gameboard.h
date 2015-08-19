@@ -24,7 +24,9 @@
 #include "w_dialog.h"
 #include "g_profil.h"
 #include "w_life.h"
-#include "observer_npc.h"class W_Menu;
+#include "observer_npc.h"
+
+class W_Menu;
 class QGraphicsProxyWidget;
 class QGraphicsScene;
 class QGraphicsView;
@@ -286,7 +288,7 @@ private:
     bool endable;
 
     //Widgets & Proxies
-    W_MenuPause *menuPauseInGame;
+    W_Menu *menuPauseInGame;
     QGraphicsProxyWidget *proxy;
     bool toggleMenuPause;
 
