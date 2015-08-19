@@ -215,111 +215,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> removeAllItems();</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">     * ATTRIBUTES</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">//Scene &amp; Playable Character</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    QGraphicsScene *mainScene;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    QGraphicsView *playerView;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="class_p___penguin.html">P_Penguin</a> *playableCharacter;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">//Window</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">int</span> windowSizeY;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">int</span> windowSizeX;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">//Positioning and level management</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="class_g___level.html">G_Level</a>* currentLevel;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    QPoint* checkpoint;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    QPoint viewRequested;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">int</span> viewPositionX;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">int</span> viewPositionY;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="class_g___profil.html">G_Profil</a>* playerProfil;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">bool</span> endable;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">//Widgets &amp; Proxies</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="class_w___menu_pause.html">W_MenuPause</a> *menuPauseInGame;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    QGraphicsProxyWidget *proxy;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">bool</span> toggleMenuPause;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="class_w___object.html">W_Object</a> *objectList;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    QGraphicsProxyWidget *objectListProxy;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="class_w___life.html">W_Life</a> *lifeList;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    QGraphicsProxyWidget *lifeListProxy;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">void</span> showDialog(QString text);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">     * ATTRIBUTES</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">//Scene &amp; Playable Character</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    QGraphicsScene *mainScene;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    QGraphicsView *playerView;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="class_p___penguin.html">P_Penguin</a> *playableCharacter;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">//Window</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">int</span> windowSizeY;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">int</span> windowSizeX;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">//Positioning and level management</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="class_g___level.html">G_Level</a>* currentLevel;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    QPoint* checkpoint;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    QPoint viewRequested;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">int</span> viewPositionX;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">int</span> viewPositionY;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="class_g___profil.html">G_Profil</a>* playerProfil;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">bool</span> endable;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">//Widgets &amp; Proxies</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="class_w___menu_pause.html">W_MenuPause</a> *menuPauseInGame;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    QGraphicsProxyWidget *proxy;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">bool</span> toggleMenuPause;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="class_w___dialog.html">W_Dialog</a> *dialog;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    QGraphicsProxyWidget* dialogProxy;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> dialogToogle;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">//Sliding &amp; Displacement</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">char</span> directionPlayableCharacter;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">bool</span> isSliding;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="class_b___movable.html">B_Movable</a> *movable;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    QList&lt;SlidingBlock&gt; listSlindingBlocks;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    QTimer *timer;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    QTimer *timerPlayableCharacterSlide;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    QTimer *timerBlockDisplacementSlide;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">//Static</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> gameSquares;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="comment">//Pause Menu</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    QString windowTitle;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    QFormLayout *layoutMenuPause;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    QGroupBox *groupBoxMenuPause;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    QLabel *titleMenuPause;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    QPushButton *btnMenuPauseResume;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    QPushButton *btnMenuPauseConfigure;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    QPushButton *btnMenuPauseQuit;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;signals:</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#a1e25a7b0f6613e95a1f511456da194be">resumeGame</a>();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="class_w___object.html">W_Object</a> *objectList;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    QGraphicsProxyWidget *objectListProxy;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="class_w___life.html">W_Life</a> *lifeList;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    QGraphicsProxyWidget *lifeListProxy;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="class_w___dialog.html">W_Dialog</a> *dialog;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    QGraphicsProxyWidget* dialogProxy;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">bool</span> dialogToogle;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">//Sliding &amp; Displacement</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">char</span> directionPlayableCharacter;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">bool</span> isSliding;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="class_b___movable.html">B_Movable</a> *movable;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    QList&lt;SlidingBlock&gt; listSlindingBlocks;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    QTimer *timer;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    QTimer *timerPlayableCharacterSlide;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    QTimer *timerBlockDisplacementSlide;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">//Static</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> gameSquares;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">//Pause Menu</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    QString windowTitle;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    QFormLayout *layoutMenuPause;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    QGroupBox *groupBoxMenuPause;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    QLabel *titleMenuPause;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    QPushButton *btnMenuPauseResume;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    QPushButton *btnMenuPauseConfigure;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    QPushButton *btnMenuPauseQuit;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;signals:</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#abf8df9d44eaa471ad102887ec901ab78">slidePlayableCharacter</a>();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#acfa547e03c2451bda2b28cc1d9a7ed2d">slideBlock</a>();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#aed56d94cf1c9bac8790b3405f8cdb76d">exitGame</a>();</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#ad0b089132d43872c36b24e06baf44993">restartEnigma</a>();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#aa7e2e09932f2f0859009abaa99c53ada">restartLevel</a>();</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#a536b6194e02960ac47ad54d5e8647afc">returnIsland</a>();</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;};</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#a1e25a7b0f6613e95a1f511456da194be">resumeGame</a>();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#abf8df9d44eaa471ad102887ec901ab78">slidePlayableCharacter</a>();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#acfa547e03c2451bda2b28cc1d9a7ed2d">slideBlock</a>();</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#aed56d94cf1c9bac8790b3405f8cdb76d">exitGame</a>();</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#ad0b089132d43872c36b24e06baf44993">restartEnigma</a>();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#aa7e2e09932f2f0859009abaa99c53ada">restartLevel</a>();</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#endif // G_GAMEBOARD_H</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___gameboard.html#a536b6194e02960ac47ad54d5e8647afc">returnIsland</a>();</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;};</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">#endif // G_GAMEBOARD_H</span></div>
 <div class="ttc" id="class_w___menu_pause_html"><div class="ttname"><a href="class_w___menu_pause.html">W_MenuPause</a></div><div class="ttdoc">Pause Menu, which appears when the game is paused. </div><div class="ttdef"><b>Definition:</b> w_menupause.h:42</div></div>
-<div class="ttc" id="class_g___gameboard_html_a07ce76215f7d0d6cd0ae9a429cd7aab5"><div class="ttname"><a href="class_g___gameboard.html#a07ce76215f7d0d6cd0ae9a429cd7aab5">G_Gameboard::getSizeX</a></div><div class="ttdeci">static int getSizeX()</div><div class="ttdoc">getSizeX </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1101</div></div>
+<div class="ttc" id="class_g___gameboard_html_a07ce76215f7d0d6cd0ae9a429cd7aab5"><div class="ttname"><a href="class_g___gameboard.html#a07ce76215f7d0d6cd0ae9a429cd7aab5">G_Gameboard::getSizeX</a></div><div class="ttdeci">static int getSizeX()</div><div class="ttdoc">getSizeX </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1081</div></div>
 <div class="ttc" id="class_w___dialog_html"><div class="ttname"><a href="class_w___dialog.html">W_Dialog</a></div><div class="ttdoc">Dialog popup. </div><div class="ttdef"><b>Definition:</b> w_dialog.h:31</div></div>
 <div class="ttc" id="class_g___profil_html"><div class="ttname"><a href="class_g___profil.html">G_Profil</a></div><div class="ttdoc">Player&#39;s profil management. </div><div class="ttdef"><b>Definition:</b> g_profil.h:33</div></div>
-<div class="ttc" id="class_g___gameboard_html_a3742b642a0654410d81415107b70629c"><div class="ttname"><a href="class_g___gameboard.html#a3742b642a0654410d81415107b70629c">G_Gameboard::setPlayerProfil</a></div><div class="ttdeci">void setPlayerProfil(G_Profil *playerProfil)</div><div class="ttdoc">Load info from the profil into the Gameboard. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1068</div></div>
-<div class="ttc" id="class_g___gameboard_html_a1e25a7b0f6613e95a1f511456da194be"><div class="ttname"><a href="class_g___gameboard.html#a1e25a7b0f6613e95a1f511456da194be">G_Gameboard::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Resume the Game after pause. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:888</div></div>
+<div class="ttc" id="class_g___gameboard_html_a3742b642a0654410d81415107b70629c"><div class="ttname"><a href="class_g___gameboard.html#a3742b642a0654410d81415107b70629c">G_Gameboard::setPlayerProfil</a></div><div class="ttdeci">void setPlayerProfil(G_Profil *playerProfil)</div><div class="ttdoc">Load info from the profil into the Gameboard. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1048</div></div>
+<div class="ttc" id="class_g___gameboard_html_a1e25a7b0f6613e95a1f511456da194be"><div class="ttname"><a href="class_g___gameboard.html#a1e25a7b0f6613e95a1f511456da194be">G_Gameboard::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Resume the Game after pause. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:870</div></div>
 <div class="ttc" id="class_g___level_html"><div class="ttname"><a href="class_g___level.html">G_Level</a></div><div class="ttdoc">Where the level informations are read (from XML) and stored. </div><div class="ttdef"><b>Definition:</b> g_level.h:40</div></div>
 <div class="ttc" id="class_g___gameboard_html_acfa547e03c2451bda2b28cc1d9a7ed2d"><div class="ttname"><a href="class_g___gameboard.html#acfa547e03c2451bda2b28cc1d9a7ed2d">G_Gameboard::slideBlock</a></div><div class="ttdeci">void slideBlock()</div><div class="ttdoc">Slide blocks in the List of sliding blocks. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:101</div></div>
 <div class="ttc" id="class_w___life_html"><div class="ttname"><a href="class_w___life.html">W_Life</a></div><div class="ttdoc">Diplay player&#39;s life on the game. </div><div class="ttdef"><b>Definition:</b> w_life.h:29</div></div>
 <div class="ttc" id="class_b___movable_html"><div class="ttname"><a href="class_b___movable.html">B_Movable</a></div><div class="ttdoc">Movable block. </div><div class="ttdef"><b>Definition:</b> b_movable.h:35</div></div>
 <div class="ttc" id="class_g___gameboard_html_ae6ae7653d9dfe58687423ea159198b03"><div class="ttname"><a href="class_g___gameboard.html#ae6ae7653d9dfe58687423ea159198b03">G_Gameboard::G_Gameboard</a></div><div class="ttdeci">G_Gameboard(QWidget *parent=0)</div><div class="ttdoc">Constructor of the Gameboard. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:60</div></div>
-<div class="ttc" id="class_g___gameboard_html_aa7e2e09932f2f0859009abaa99c53ada"><div class="ttname"><a href="class_g___gameboard.html#aa7e2e09932f2f0859009abaa99c53ada">G_Gameboard::restartLevel</a></div><div class="ttdeci">void restartLevel()</div><div class="ttdoc">Restart the level at the beginning. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:918</div></div>
+<div class="ttc" id="class_g___gameboard_html_aa7e2e09932f2f0859009abaa99c53ada"><div class="ttname"><a href="class_g___gameboard.html#aa7e2e09932f2f0859009abaa99c53ada">G_Gameboard::restartLevel</a></div><div class="ttdeci">void restartLevel()</div><div class="ttdoc">Restart the level at the beginning. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:898</div></div>
 <div class="ttc" id="class_g___gameboard_html_abf8df9d44eaa471ad102887ec901ab78"><div class="ttname"><a href="class_g___gameboard.html#abf8df9d44eaa471ad102887ec901ab78">G_Gameboard::slidePlayableCharacter</a></div><div class="ttdeci">void slidePlayableCharacter()</div><div class="ttdoc">Slide the playable character. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:182</div></div>
-<div class="ttc" id="class_g___gameboard_html_ad0b089132d43872c36b24e06baf44993"><div class="ttname"><a href="class_g___gameboard.html#ad0b089132d43872c36b24e06baf44993">G_Gameboard::restartEnigma</a></div><div class="ttdeci">void restartEnigma()</div><div class="ttdoc">Restart the level at the last checkpoint-> </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:893</div></div>
+<div class="ttc" id="class_g___gameboard_html_ad0b089132d43872c36b24e06baf44993"><div class="ttname"><a href="class_g___gameboard.html#ad0b089132d43872c36b24e06baf44993">G_Gameboard::restartEnigma</a></div><div class="ttdeci">void restartEnigma()</div><div class="ttdoc">Restart the level at the last checkpoint-> </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:875</div></div>
 <div class="ttc" id="struct_sliding_block_html"><div class="ttname"><a href="struct_sliding_block.html">SlidingBlock</a></div><div class="ttdoc">Structure used in Gameboard. </div><div class="ttdef"><b>Definition:</b> g_gameboard.h:47</div></div>
-<div class="ttc" id="class_g___gameboard_html_af3d38cd9763eb3c9aedf66bf7f2349c3"><div class="ttname"><a href="class_g___gameboard.html#af3d38cd9763eb3c9aedf66bf7f2349c3">G_Gameboard::getSizeY</a></div><div class="ttdeci">static int getSizeY()</div><div class="ttdoc">getSizeY </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1108</div></div>
+<div class="ttc" id="class_g___gameboard_html_af3d38cd9763eb3c9aedf66bf7f2349c3"><div class="ttname"><a href="class_g___gameboard.html#af3d38cd9763eb3c9aedf66bf7f2349c3">G_Gameboard::getSizeY</a></div><div class="ttdeci">static int getSizeY()</div><div class="ttdoc">getSizeY </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:1088</div></div>
 <div class="ttc" id="class_p___penguin_html"><div class="ttname"><a href="class_p___penguin.html">P_Penguin</a></div><div class="ttdoc">Playable character: Penguin. </div><div class="ttdef"><b>Definition:</b> p_penguin.h:39</div></div>
-<div class="ttc" id="class_g___gameboard_html_aed56d94cf1c9bac8790b3405f8cdb76d"><div class="ttname"><a href="class_g___gameboard.html#aed56d94cf1c9bac8790b3405f8cdb76d">G_Gameboard::exitGame</a></div><div class="ttdeci">void exitGame()</div><div class="ttdoc">Ask for profil save, and destruct self. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:953</div></div>
+<div class="ttc" id="class_g___gameboard_html_aed56d94cf1c9bac8790b3405f8cdb76d"><div class="ttname"><a href="class_g___gameboard.html#aed56d94cf1c9bac8790b3405f8cdb76d">G_Gameboard::exitGame</a></div><div class="ttdeci">void exitGame()</div><div class="ttdoc">Ask for profil save, and destruct self. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:933</div></div>
 <div class="ttc" id="class_g___gameboard_html"><div class="ttname"><a href="class_g___gameboard.html">G_Gameboard</a></div><div class="ttdoc">Game Board. Where the game happens. </div><div class="ttdef"><b>Definition:</b> g_gameboard.h:64</div></div>
 <div class="ttc" id="class_w___object_html"><div class="ttname"><a href="class_w___object.html">W_Object</a></div><div class="ttdoc">Diplay player&#39;s bag on the game. </div><div class="ttdef"><b>Definition:</b> w_object.h:32</div></div>
 <div class="ttc" id="class_g___gameboard_html_ac0188a03ee6d69b116b9e225faa264f0"><div class="ttname"><a href="class_g___gameboard.html#ac0188a03ee6d69b116b9e225faa264f0">G_Gameboard::~G_Gameboard</a></div><div class="ttdeci">~G_Gameboard()</div><div class="ttdoc">Remove all items on it. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:278</div></div>
-<div class="ttc" id="class_g___gameboard_html_a536b6194e02960ac47ad54d5e8647afc"><div class="ttname"><a href="class_g___gameboard.html#a536b6194e02960ac47ad54d5e8647afc">G_Gameboard::returnIsland</a></div><div class="ttdeci">void returnIsland()</div><div class="ttdoc">Load the Island Level. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:936</div></div>
+<div class="ttc" id="class_g___gameboard_html_a536b6194e02960ac47ad54d5e8647afc"><div class="ttname"><a href="class_g___gameboard.html#a536b6194e02960ac47ad54d5e8647afc">G_Gameboard::returnIsland</a></div><div class="ttdeci">void returnIsland()</div><div class="ttdoc">Load the Island Level. </div><div class="ttdef"><b>Definition:</b> g_gameboard.cpp:916</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 19 2015 11:58:36 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 12:15:47 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

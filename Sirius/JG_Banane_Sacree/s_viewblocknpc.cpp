@@ -48,7 +48,7 @@ bool S_ViewBlockNPC::isActive()
     return actif;
 }
 
-//le pinguoin s'est déplacé sur un bloc de détection
+//the playable character moved on the block of detection
 void S_ViewBlockNPC::playableCharacterOn()
 {
     if(actif)
@@ -60,7 +60,7 @@ void S_ViewBlockNPC::playableCharacterOn()
 
 void S_ViewBlockNPC::blockOn()
 {
-    //recalcul le champs de vision de l'ennemi
+    //recalculated the view field of the enemy
     if(actif)
     {
         owner->viewBlockActive();

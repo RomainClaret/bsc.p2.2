@@ -33,7 +33,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 
     currentLevel = new G_Level(-1, NULL);
 
-    // Les Variables par default du jeu
+    // Default variables from the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
     windowSizeX = theGame->sizeX*G_Gameboard::getGameSquares();
     windowSizeY = theGame->sizeY*G_Gameboard::getGameSquares();
@@ -62,7 +62,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     gameView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     gameView->setSceneRect(viewPositionX,viewPositionY,theGame->sizeX*G_Gameboard::getGameSquares(),theGame->sizeY*G_Gameboard::getGameSquares());
 
-    //On position la vue
+    //Set the view position
     gameView->setScene(gameScene);
 
     gameTitle = new QLabel(this);

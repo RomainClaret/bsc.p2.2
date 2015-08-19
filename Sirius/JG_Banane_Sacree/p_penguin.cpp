@@ -123,7 +123,7 @@ void P_Penguin::setSlideAble(bool value)
     this->slideAble = value;
 }
 
-//Retour des listes des collisions
+//Return lists of collisions
 QList<QGraphicsItem *> P_Penguin::CollidesRight()
 {
     return rightCollideBox->collidingItems();
@@ -146,7 +146,7 @@ QList<QGraphicsItem *> P_Penguin::CollidesCenter()
 }
 
 
-//temporaire
+//temp
 QGraphicsRectItem* P_Penguin::getLeftCB(){
     return leftCollideBox;
 }
