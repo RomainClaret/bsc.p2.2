@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "s_snow.h"
+#include "../surface/s_snow.h"
 
 #include <QBrush>
 #include <QGraphicsItem>

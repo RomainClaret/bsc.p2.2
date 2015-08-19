@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_dialog.h"
+#include "../widget/w_dialog.h"
 #include <QPainter>
 #include <QDebug>
 

@@ -16,15 +16,14 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsScene>
 
-#include "b_wall.h"
-#include "b_movable.h"
-#include "b_water.h"
-#include "character/c_enemy.h"
-#include "character/e_fox.h"
-#include "character/e_wolf.h"
-#include "g_gameboard.h"
-
-#include "s_ice.h"
+#include "../surface/b_wall.h"
+#include "../surface/b_movable.h"
+#include "../surface/b_water.h"
+#include "../character/c_enemy.h"
+#include "../character/e_fox.h"
+#include "../character/e_wolf.h"
+#include "../g_gameboard.h"
+#include "../surface/s_ice.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else

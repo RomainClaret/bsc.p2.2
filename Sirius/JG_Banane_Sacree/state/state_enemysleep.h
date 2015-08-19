@@ -1,6 +1,6 @@
 #ifndef STATE_ENEMYSLEEP_H
 #define STATE_ENEMYSLEEP_H
-#include "state_enemy.h"
+#include "../state/state_enemy.h"
 class ennemi;
 
 /**

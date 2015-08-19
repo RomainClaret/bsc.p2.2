@@ -11,15 +11,15 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "p_penguin.h"
-#include "g_gameboard.h"
+#include "../character/p_penguin.h"
+#include "../g_gameboard.h"
 #include <QGraphicsRectItem>
 #include <QPoint>
 #include <QGraphicsScene>
 #include <QList>
 #include <QDebug>
-#include "surface/s_ice.h"
-#include "g_object.h"
+#include "../surface/s_ice.h"
+#include "../g_object.h"
 
 #include <QPropertyAnimation>
 

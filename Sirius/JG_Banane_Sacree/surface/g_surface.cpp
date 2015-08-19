@@ -11,8 +11,8 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "g_surface.h"
-#include "g_gameboard.h"
+#include "../surface/g_surface.h"
+#include "../g_gameboard.h"
 #include <QGraphicsItem>
 #include <QPoint>
 #include <QPen>

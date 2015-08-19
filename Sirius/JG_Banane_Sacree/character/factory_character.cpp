@@ -2,12 +2,12 @@
 
 #include <QGraphicsScene>
 
-#include "g_gameboard.h"
-#include "c_enemy.h"
-#include "e_fox.h"
-#include "e_wolf.h"
-#include "c_player.h"
-#include "observer_npc.h"
+#include "../g_gameboard.h"
+#include "../character/c_enemy.h"
+#include "../character/e_fox.h"
+#include "../character/e_wolf.h"
+#include "../character/c_player.h"
+#include "../observer_npc.h"
 
 QString Factory_Character::ENEMY_WOLF = "WOLF";
 QString Factory_Character::ENEMY_FOX = "FOX";

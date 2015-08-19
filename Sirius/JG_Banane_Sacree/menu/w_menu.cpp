@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_menu.h"
+#include "../menu/w_menu.h"
 #include <QGraphicsDropShadowEffect>
 #include <QGraphicsEffect>
 #include <QFrame>

@@ -1,11 +1,11 @@
-#include "s_viewblocknpc.h"
+#include "../surface/s_viewblocknpc.h"
 
 #include <QGraphicsRectItem>
 #include <QGraphicsItem>
 #include <QBrush>
 #include <QPen>
-#include "character/c_enemy.h"
-#include "g_gameboard.h"
+#include "../character/c_enemy.h"
+#include "../g_gameboard.h"
 
 
 S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)

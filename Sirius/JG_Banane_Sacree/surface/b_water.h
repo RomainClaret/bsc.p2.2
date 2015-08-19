@@ -13,7 +13,7 @@
 
 #ifndef B_WATER_H
 #define B_WATER_H
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 
 class QGraphicsRectItem;
 

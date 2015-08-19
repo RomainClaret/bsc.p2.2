@@ -1,17 +1,17 @@
 #ifndef FACTORY_SURFACE_H
 #define FACTORY_SURFACE_H
 
-#include "surface/g_surface.h"
+#include "../surface/g_surface.h"
 
-#include "surface/s_dialog.h"
-#include "surface/s_ice.h"
-#include "surface/s_snow.h"
-#include "surface/s_viewblocknpc.h"
-#include "surface/s_door.h"
+#include "../surface/s_dialog.h"
+#include "../surface/s_ice.h"
+#include "../surface/s_snow.h"
+#include "../surface/s_viewblocknpc.h"
+#include "../surface/s_door.h"
 
-#include "surface/b_movable.h"
-#include "surface/b_wall.h"
-#include "surface/b_water.h"
+#include "../surface/b_movable.h"
+#include "../surface/b_wall.h"
+#include "../surface/b_water.h"
 
 class QGraphicsScene;
 

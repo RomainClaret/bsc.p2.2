@@ -5,7 +5,7 @@ class QGraphicsRectItem;
 class QGraphicsItem;
 class C_Enemy;
 
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 
 /**
  * @brief View Block for NPC characters.

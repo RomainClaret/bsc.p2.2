@@ -15,9 +15,9 @@
 #define W_MENU_H
 
 #include <QWidget>
-#include "w_menupause.h"
-#include "w_menubonus.h"
-#include "w_menucode.h"
+#include "../menu/w_menupause.h"
+#include "../menu/w_menubonus.h"
+#include "../menu/w_menucode.h"
 
 class QLabel;
 class QPushButton;

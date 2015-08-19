@@ -15,7 +15,7 @@
 #define W_MENUSTART_H
 
 #include <QWidget>
-#include "g_profil.h"
+#include "../g_profil.h"
 
 class QPushButton;
 class QVBoxLayout;
