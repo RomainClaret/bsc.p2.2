@@ -13,6 +13,7 @@
 
 #include "g_maingame.h"
 #include "g_profil.h"
+#include "observer_npc.h"
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -21,9 +22,6 @@
 #include <QResizeEvent>
 #include <QPushButton>
 #include <QFormLayout>
-
-#include "observer_npc.h"
-
 
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)

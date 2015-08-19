@@ -38,6 +38,7 @@
 
 #include "state_enemypatrol.h"
 #include "state_enemysleep.h"
+#include "state_enemypause.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -65,7 +66,7 @@ C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
 
 
     //default state
-    state = new State_EnemyPatrol();
+    state = new State_EnemyPause();
 }
 
 C_Enemy::~C_Enemy()

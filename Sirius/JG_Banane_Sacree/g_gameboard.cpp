@@ -29,6 +29,7 @@
 #include "e_wolf.h"
 #include "g_profil.h"
 
+
 #include <QtWidgets>
 #include <QList>
 #include <QDebug>
@@ -562,6 +563,9 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionBottomRight(objectList);
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE); //all in pause
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -885,7 +889,7 @@ void G_Gameboard::restartEnigma()
         lifeList->updateHearts(playerProfil->getNbLive());
 
         loadLevel();
-        setProxy();
+        setProxy();   
     }
     else
     {
@@ -895,6 +899,8 @@ void G_Gameboard::restartEnigma()
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
         showDialog(text);
     }
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -1014,9 +1020,6 @@ void G_Gameboard::setLevel(int value)
     delete currentLevel;
     playerProfil->setLevel(value);
 
-    delete this->observerEnemy;
-    this->observerEnemy = new Observer_NPC();
-
     currentLevel = new G_Level(value, observerEnemy, this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
@@ -1027,6 +1030,8 @@ void G_Gameboard::setLevel(int value)
 
 void G_Gameboard::loadLevel()
 {
+    observerEnemy->clear();
+
     mainScene = currentLevel->populateScene();
     setViewPosition();
 

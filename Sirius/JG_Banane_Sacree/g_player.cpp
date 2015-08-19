@@ -44,3 +44,9 @@ QPoint* C_Player::getPos()
 {
     return new QPoint(xPos, yPos);
 }
+QPoint C_Player::getPosOnGame()
+{
+    int x = (this->pos().x()-1) /G_Gameboard::getGameSquares();
+    int y = (this->pos().y()-1) /G_Gameboard::getGameSquares();
+    return QPoint(x, y);
+}

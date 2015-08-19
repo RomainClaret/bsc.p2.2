@@ -14,7 +14,7 @@ class C_Enemy;
  * @version 1.0
  * @date 18 august 2015
  */
-class State_EnemyPause
+class State_EnemyPause : public State_Enemy
 {
 public:
     /**

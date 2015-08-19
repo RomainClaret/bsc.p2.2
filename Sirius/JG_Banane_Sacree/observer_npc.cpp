@@ -1,9 +1,18 @@
 #include "observer_npc.h"
 #include "g_gameboard.h"
+#include <QDebug>
 
+#include "state_enemypatrol.h"
+#include "state_enemypause.h"
+#include "state_enemysleep.h"
 /**
  * @details Desactivate the view of the ennemi at the first run and do nothing after
  */
+
+QString Observer_NPC::STATE_PATROL = "patrol";
+QString Observer_NPC::STATE_PAUSE = "pause";
+QString Observer_NPC::STATE_SLEEP = "sleep";
+
 Observer_NPC::Observer_NPC()
 {
 }
@@ -27,7 +36,7 @@ void Observer_NPC::addNPCObserver(C_Enemy* ennemi)
 /**
  * @details changeEnnemiState change the state of the ennemis in the LEVEL PHASE
  */
-void Observer_NPC::changeNPCState(State_Enemy* state, QPoint posPlayer)
+void Observer_NPC::changeNPCState(QString state, QPoint posPlayer)
 {
     //find the player's zone
     int gameX = G_Gameboard::getSizeX();
@@ -55,7 +64,21 @@ void Observer_NPC::changeNPCState(State_Enemy* state, QPoint posPlayer)
         if((posEnemy.x() < phaseX*gameX && posEnemy.x() > (phaseX-1)*gameX)
                 && (posEnemy.y() < phaseY*gameY && posEnemy.y() > (phaseY-1)*gameY))
         {
-            enemy->changeState(state);
+            qDebug() << "---Change one state in pos " << phaseX << ", " << phaseY << " to "<< state;
+
+
+            if(state == STATE_PATROL)
+            {
+                enemy->changeState(new State_EnemyPatrol());
+            }
+            else if(state == STATE_PAUSE)
+            {
+                enemy->changeState(new State_EnemyPause());
+            }
+            else if(state == STATE_SLEEP)
+            {
+                enemy->changeState(new State_EnemySleep());
+            }
         }
     }
 }
@@ -63,9 +86,31 @@ void Observer_NPC::changeNPCState(State_Enemy* state, QPoint posPlayer)
 /**
  * @details changeEnnemiState change the state of all ennemis in the LEVEL
  */
-void Observer_NPC::changeNPCState(State_Enemy* state)
+void Observer_NPC::changeNPCState(QString state)
 {
     foreach (C_Enemy* enemy, list_ennemisObserver) {
-        enemy->changeState(state);
+        qDebug() << "---Change one state in the lvl" << " to "<< state;
+
+        if(state == STATE_PATROL)
+        {
+            enemy->changeState(new State_EnemyPatrol());
+        }
+        else if(state == STATE_PAUSE)
+        {
+            enemy->changeState(new State_EnemyPause());
+        }
+        else if(state == STATE_SLEEP)
+        {
+            enemy->changeState(new State_EnemySleep());
+        }
     }
+}
+
+void Observer_NPC::clear()
+{
+    foreach (C_Enemy* enemy, list_ennemisObserver)
+    {
+        delete enemy;
+    }
+    list_ennemisObserver.clear();
 }

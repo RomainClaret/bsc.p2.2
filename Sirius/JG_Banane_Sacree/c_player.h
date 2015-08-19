@@ -35,11 +35,10 @@ class C_Player : public G_Character
 public:
     C_Player();
 
-
-
     void setPlayerOrientation(char orientation);
     char getPlayerOrientation();
     QPoint *getPos();
+    QPoint getPosOnGame();
 
 protected:
     int xPos;

@@ -28,6 +28,7 @@ class S_ViewBlockNPC;
 class State_Enemy;
 class State_EnemyPatrol;
 class State_EnemySleep;
+class State_EnemyPause;
 
 /**
  * @brief Enemy Class
