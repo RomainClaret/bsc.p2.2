@@ -20,6 +20,7 @@ class QPixmap;
 class QPoint;
 class G_Gameboard;
 class QStringList;
+class Observer_NPC;
 
 #include <QList>
 
@@ -28,7 +29,7 @@ class QStringList;
 #include <QDomDocument>
 
 /**
- * @brief Level. Where the level informations are read (from XML) and stored.
+ * @brief Where the level informations are read (from XML) and stored.
  * @details This is the level which will contain the level information and generate the Scene with all items.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
@@ -45,7 +46,7 @@ public:
      * @param levelNumber int containing the Level Number
      * @param game Gameboard*
      */
-    G_Level(int levelNumber, G_Gameboard *game);
+    G_Level(int levelNumber, Observer_NPC* observer, G_Gameboard *game);
 
     /**
      * @brief Populate the QGraphicsScene according to XML Level File
@@ -101,6 +102,7 @@ private:
 
     // Game
     G_Gameboard *game;
+    Observer_NPC *observerEnemy;
 
     // Level Size
     int maxBlocksHeight;

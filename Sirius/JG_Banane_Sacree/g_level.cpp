@@ -18,6 +18,9 @@
 #include <QTextStream>
 #include <QGraphicsScene>
 
+#include "observer_npc.h"
+#include "factory_character.h"
+
 #include "g_surface.h"
 #include "factory_surface.h"
 #include "b_wall.h"
@@ -43,10 +46,11 @@
 /**
  * @details Create Level according to levelNumber and read the basics XML level informations
  */
-G_Level::G_Level(int levelNumber, G_Gameboard *game)
+G_Level::G_Level(int levelNumber, Observer_NPC* observer, G_Gameboard *game)
 {
     this->game = game;
     this->levelNumber = levelNumber;
+    this->observerEnemy = observer;
 
     maxBlocksHeight = 2*G_Gameboard::sizeY;
     maxBlocksWidth = 3*G_Gameboard::sizeX;
@@ -178,16 +182,19 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
         {
            move.append(QPoint(moveElement.attribute("x").toInt(),moveElement.attribute("y").toInt()));
         }
-        if(ennemiType == "FOX")
-        {
-            E_Fox *item2 = new E_Fox(move, game);
-            item2->addToScene(scene);
-        }
-        else if(ennemiType == "WOLF")
-        {
-            E_Wolf *item2 = new E_Wolf(move, game);
-            item2->addToScene(scene);
-        }
+
+        Factory_Character::createEnemy(ennemiType, move, game, observerEnemy, scene);
+
+//        if(ennemiType == "FOX")
+//        {
+//            E_Fox *item2 = new E_Fox(move, game);
+//            item2->addToScene(scene);
+//        }
+//        else if(ennemiType == "WOLF")
+//        {
+//            E_Wolf *item2 = new E_Wolf(move, game);
+//            item2->addToScene(scene);
+//        }
     }
     else if(tagName == "DIALOG")
     {

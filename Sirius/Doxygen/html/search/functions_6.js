@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['moveby',['moveBy',['../class_b___movable.html#a55fb8069fc55c4edabd2ac076acdee17',1,'B_Movable']]]
+  ['loadgame',['loadGame',['../class_w___menu_start.html#aca05c93827e90a48e5044846e0a76f23',1,'W_MenuStart']]]
 ];

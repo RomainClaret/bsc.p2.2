@@ -10,6 +10,9 @@ QString Factory_Surface::BLOC_MOVABLE = "MOVABLE";
 QString Factory_Surface::BLOC_WALL = "WALL";
 QString Factory_Surface::BLOC_WATER = "WATER";
 
+/**
+ * @details Returns NULL if the given type is not found.
+ */
 G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene)
 {
     if(type == SURFACE_ICE)

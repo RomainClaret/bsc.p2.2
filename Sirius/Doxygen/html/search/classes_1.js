@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['factory_5fsurface',['Factory_Surface',['../class_factory___surface.html',1,'']]]
+  ['c_5fenemy',['C_Enemy',['../class_c___enemy.html',1,'']]],
+  ['c_5fplayer',['C_Player',['../class_c___player.html',1,'']]]
 ];

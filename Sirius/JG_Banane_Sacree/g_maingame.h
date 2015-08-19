@@ -64,12 +64,20 @@ class G_MainGame : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Constructor
+     * @param parent
+     */
     explicit G_MainGame(QWidget *parent = 0);
+
+    //Destructor
     ~G_MainGame();
 
 private:
 
-    QPushButton* quitGame;  /**< \var Boutton pour quitter le jeu completement */
+    //Button to quit completly the game.
+    QPushButton* quitGame;
 
     G_Gameboard *theGame;
 
@@ -81,35 +89,45 @@ private:
     int viewPositionY;
     static int gameSquares;
     QString windowTitle;
-
-    G_Level* currentLevel;
-
-    int menuSizeX;
-    int menuSizeY;
-
-    int quitBtnSizeX;
-    int quitBtnSizeY;
-
-    int titleSizeX;
-    int titleSizeY;
-
-    W_MenuStart *menuStart;
-
-    QGraphicsProxyWidget *menuStartProxy;
-
     QLabel *gameTitle;
 
-    void resizeEvent ( QResizeEvent * event );
-
+    G_Level* currentLevel;
     bool toggleGameCreated;
     bool toggleFirstStart;
 
+    int menuSizeX;
+    int menuSizeY;
+    int quitBtnSizeX;
+    int quitBtnSizeY;
+    int titleSizeX;
+    int titleSizeY;
+    W_MenuStart *menuStart;
+    QGraphicsProxyWidget *menuStartProxy;
+
+    /**
+     * @brief Listen to window resizing event.
+     * @param event pointer on current event
+     */
+    void resizeEvent ( QResizeEvent * event );
+
+    /**
+     * @brief Listen to window closing event.
+     * @param event pointer on current event
+     */
     void closeEvent (QCloseEvent *event);
 
 signals:
 
 public slots:
+    /**
+     * @brief Load player's profil.
+     * @param user profil to load
+     */
     void startGame(G_Profil *user);
+
+    /**
+     * @brief Reloading the Gamemenu.
+     */
     void refreshGameMenu();
 
 };

@@ -36,18 +36,24 @@ class G_Gameboard;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 27 January 2015
- * @todo add credits
- * @todo cheat codes
+ * @version 2.0
+ * @date 19 August 2015
  */
 
 class W_MenuPause : public QWidget
 {
     Q_OBJECT
 public:
-    W_MenuPause(QWidget *parent, G_Gameboard *gameboard);
-
+    
+    //Constructor
+    /**
+     * @brief Overlay widget to display the pause menu.
+     * @param parent if need
+     */W_MenuPause(QWidget *parent, G_Gameboard *gameboard);
+    /**
+     * @brief Lock and unable the pause menu.
+     * @param levelValue number of the level
+     */
     void setUnableMenu(int levelValue);
     void setTitleParent();
 
@@ -67,7 +73,17 @@ private:
 
     W_Menu* parent;
 
-signals:
+/**
+     * @brief Creates a shadow effect on buttons.
+     * @return QGraphicsDropShadowEffect
+     */
+    QGraphicsDropShadowEffect* shadowbtn();
+
+    /**
+     * @brief Listen to the paint event
+     * @param pe
+     */
+    void paintEvent(QPaintEvent *pe);signals:
 
 public slots:
 

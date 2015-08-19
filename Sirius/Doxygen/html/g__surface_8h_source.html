@@ -108,21 +108,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_g___surface.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_g___surface.html">G_Surface</a> : <span class="keyword">public</span> QGraphicsRectItem</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_g___surface.html">G_Surface</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_g___surface.html">G_Surface</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="class_g___surface.html">G_Surface</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> setPos(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> setPosPixel(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QPoint getPos();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> setColor(QString brushColor);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Constructors</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span>    <a class="code" href="class_g___surface.html#afb71c0c8f19e917e3de6b1547ee7ec0b">G_Surface</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, QGraphicsItem *parent = 0);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif // G_SURFACE_H</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_g___surface.html#afb71c0c8f19e917e3de6b1547ee7ec0b">G_Surface</a>(<span class="keywordtype">int</span> xpos, <span class="keywordtype">int</span> ypos, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, QGraphicsItem *parent = 0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="class_g___surface.html">G_Surface</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___surface.html#adacf1e913c711bb57d8145991f41fb5a">setPos</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___surface.html#a6938d1689fbdf07e428d611766b6f331">setPosPixel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QPoint <a class="code" href="class_g___surface.html#a1aae4cce58f1381631ac5735e10b85b5">getPos</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_g___surface.html#a44703a4951f6948fa890be9b7374c71e">setColor</a>(QString brushColor);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif // G_SURFACE_H</span></div>
+<div class="ttc" id="class_g___surface_html_a44703a4951f6948fa890be9b7374c71e"><div class="ttname"><a href="class_g___surface.html#a44703a4951f6948fa890be9b7374c71e">G_Surface::setColor</a></div><div class="ttdeci">void setColor(QString brushColor)</div><div class="ttdoc">Set color the brush on self. </div><div class="ttdef"><b>Definition:</b> g_surface.cpp:47</div></div>
 <div class="ttc" id="class_g___surface_html"><div class="ttname"><a href="class_g___surface.html">G_Surface</a></div><div class="ttdoc">Walking blocks. </div><div class="ttdef"><b>Definition:</b> g_surface.h:30</div></div>
+<div class="ttc" id="class_g___surface_html_afb71c0c8f19e917e3de6b1547ee7ec0b"><div class="ttname"><a href="class_g___surface.html#afb71c0c8f19e917e3de6b1547ee7ec0b">G_Surface::G_Surface</a></div><div class="ttdeci">G_Surface(int xpos, int ypos, QGraphicsItem *parent=0)</div><div class="ttdoc">Constructor with position setup. </div><div class="ttdef"><b>Definition:</b> g_surface.cpp:22</div></div>
+<div class="ttc" id="class_g___surface_html_adacf1e913c711bb57d8145991f41fb5a"><div class="ttname"><a href="class_g___surface.html#adacf1e913c711bb57d8145991f41fb5a">G_Surface::setPos</a></div><div class="ttdeci">void setPos(int x, int y)</div><div class="ttdoc">Set the position of self related to gamesquare. </div><div class="ttdef"><b>Definition:</b> g_surface.cpp:34</div></div>
+<div class="ttc" id="class_g___surface_html_a1aae4cce58f1381631ac5735e10b85b5"><div class="ttname"><a href="class_g___surface.html#a1aae4cce58f1381631ac5735e10b85b5">G_Surface::getPos</a></div><div class="ttdeci">QPoint getPos()</div><div class="ttdoc">Get the position of self. </div><div class="ttdef"><b>Definition:</b> g_surface.cpp:42</div></div>
+<div class="ttc" id="class_g___surface_html_a6938d1689fbdf07e428d611766b6f331"><div class="ttname"><a href="class_g___surface.html#a6938d1689fbdf07e428d611766b6f331">G_Surface::setPosPixel</a></div><div class="ttdeci">void setPosPixel(int x, int y)</div><div class="ttdoc">Set the position of self with pixels. </div><div class="ttdef"><b>Definition:</b> g_surface.cpp:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 12:15:47 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

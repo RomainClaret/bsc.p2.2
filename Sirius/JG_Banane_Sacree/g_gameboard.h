@@ -24,8 +24,7 @@
 #include "w_dialog.h"
 #include "g_profil.h"
 #include "w_life.h"
-class W_Menu;
-
+#include "observer_npc.h"class W_Menu;
 class QGraphicsProxyWidget;
 class QGraphicsScene;
 class QGraphicsView;
@@ -278,6 +277,7 @@ private:
 
     //Positioning and level management
     G_Level* currentLevel;
+    Observer_NPC* observerEnemy;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;
@@ -286,8 +286,7 @@ private:
     bool endable;
 
     //Widgets & Proxies
-    W_Menu *menuPauseInGame;
-    //W_MenuBonus* widgetBonus;
+    W_MenuPause *menuPauseInGame;
     QGraphicsProxyWidget *proxy;
     bool toggleMenuPause;
 

@@ -33,8 +33,22 @@ class W_Object : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Overlay widget to display objects of the player.
+     * @param parent if need
+     */
     W_Object(QWidget *parent = 0);
+
+    /**
+     * @brief Listen to the paint event
+     */
     void paintEvent(QPaintEvent *);
+
+    /**
+     * @brief Update the object list to given.
+     * @param objectList list of objects
+     */
     void reloadObjectList(QList<G_Object*> objectList);
 
 signals:

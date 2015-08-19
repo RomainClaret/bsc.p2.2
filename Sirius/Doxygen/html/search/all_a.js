@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['observer_5fnpc',['Observer_NPC',['../class_observer___n_p_c.html',1,'Observer_NPC'],['../class_observer___n_p_c.html#a02a4df6c3974a0ebae0143077fdc43b9',1,'Observer_NPC::Observer_NPC()']]]
+  ['newgame',['newGame',['../class_w___menu_start.html#a5dbc5260b96e79bdd2a55c54095f9853',1,'W_MenuStart']]],
+  ['newgameform',['newGameForm',['../class_w___menu_start.html#aff79d990b8166fe640fad052d7271a30',1,'W_MenuStart']]]
 ];

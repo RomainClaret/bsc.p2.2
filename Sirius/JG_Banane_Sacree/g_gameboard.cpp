@@ -32,6 +32,7 @@
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
 
+
 #include <QtWidgets>
 #include <QList>
 #include <QDebug>
@@ -78,7 +79,9 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     playableCharacter = new P_Penguin();
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
-    currentLevel = new G_Level(0, this);
+
+    observerEnemy = new Observer_NPC();
+    currentLevel = new G_Level(0, observerEnemy, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     playerView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -563,6 +566,9 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionBottomRight(objectList);
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE); //all in pause
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -666,7 +672,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_W || event->key() == Qt::Key_Up)
             {
-                playableCharacter->setPlayerOrientation("up"); //definir l'orientation du joueur
+                playableCharacter->setPlayerOrientation('t'); //definir l'orientation du joueur
 
                 if(movePlayableCharacterPingouinToTop())
                 {
@@ -689,7 +695,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_S || event->key() == Qt::Key_Down)
             {
-                playableCharacter->setPlayerOrientation("down");
+                playableCharacter->setPlayerOrientation('b');
 
                 if(movePlayableCharacterToBottom())
                 {
@@ -711,7 +717,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_A || event->key() == Qt::Key_Left)
             {
-                playableCharacter->setPlayerOrientation("left");
+                playableCharacter->setPlayerOrientation('l');
 
                 if(movePlayableCharacterPingouinToLeft())
                 {
@@ -734,7 +740,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_D || event->key() == Qt::Key_Right)
             {
-                playableCharacter->setPlayerOrientation("right");
+                playableCharacter->setPlayerOrientation('r');
 
                 if(movePlayableCharacterPingouinToRight())
                 {
@@ -886,7 +892,7 @@ void G_Gameboard::restartEnigma()
         lifeList->updateHearts(playerProfil->getNbLive());
 
         loadLevel();
-        setProxy();
+        setProxy();   
     }
     else
     {
@@ -896,6 +902,8 @@ void G_Gameboard::restartEnigma()
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
         showDialog(text);
     }
+
+    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -1026,7 +1034,8 @@ void G_Gameboard::setLevel(int value)
 {
     delete currentLevel;
     playerProfil->setLevel(value);
-    currentLevel = new G_Level(value, this);
+
+    currentLevel = new G_Level(value, observerEnemy, this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
     viewRequested = currentLevel->getViewStart();
     W_MenuStart::saveGame(playerProfil);
@@ -1036,6 +1045,8 @@ void G_Gameboard::setLevel(int value)
 
 void G_Gameboard::loadLevel()
 {
+    observerEnemy->clear();
+
     mainScene = currentLevel->populateScene();
     setViewPosition();
 
@@ -1045,7 +1056,7 @@ void G_Gameboard::loadLevel()
     playableCharacter->addToScene(mainScene);
 
     playableCharacter->removeTempFromSacoche();
-    playableCharacter->setPlayerOrientation("down");
+    playableCharacter->setPlayerOrientation('b');
     loadCheckpoint();
     setTimer();
 }

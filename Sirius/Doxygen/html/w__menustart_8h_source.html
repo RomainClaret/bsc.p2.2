@@ -115,43 +115,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_w___menu_start.html">W_MenuStart</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QList&lt;QPushButton*&gt; *listButtonProfil;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QPushButton* buttonNew;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QVBoxLayout* layoutMenu;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QLineEdit* username;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QPushButton* validate;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QLabel *textPseudo;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> saveGame(<a class="code" href="class_g___profil.html">G_Profil</a>* currentUser);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> getProfil();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;signals:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> startGame(<a class="code" href="class_g___profil.html">G_Profil</a>*);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> refreshGameMenu();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> loadGame(QString value);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> newGame();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> newGameForm();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span> :</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QSignalMapper* signalMapper;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> totalForms;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> maxTotalForms;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_g___profil.html">G_Profil</a> *user;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // W_MENUSTART_H</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="class_w___menu_start.html#a7f9c60df0d2a0fba30c37b99d2b7630e">W_MenuStart</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QList&lt;QPushButton*&gt; *listButtonProfil;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QPushButton* buttonNew;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QVBoxLayout* layoutMenu;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QLineEdit* username;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QPushButton* validate;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    QLabel *textPseudo;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#a87603ac8ad130f946bb152a98acc1a57">saveGame</a>(<a class="code" href="class_g___profil.html">G_Profil</a>* currentUser);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_w___menu_start.html#aa147cc302db6aa457fba0c75ab25e1b2">getProfil</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;signals:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#a21cf2c3cc2f360daa9d46f1b5c983461">startGame</a>(<a class="code" href="class_g___profil.html">G_Profil</a>*);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#a5e5f50ca83e56da21da0df7cc6bfd8f1">refreshGameMenu</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#aca05c93827e90a48e5044846e0a76f23">loadGame</a>(QString value);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#a5dbc5260b96e79bdd2a55c54095f9853">newGame</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_start.html#aff79d990b8166fe640fad052d7271a30">newGameForm</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span> :</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    QSignalMapper* signalMapper;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> totalForms;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> maxTotalForms;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_g___profil.html">G_Profil</a> *user;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif // W_MENUSTART_H</span></div>
+<div class="ttc" id="class_w___menu_start_html_a87603ac8ad130f946bb152a98acc1a57"><div class="ttname"><a href="class_w___menu_start.html#a87603ac8ad130f946bb152a98acc1a57">W_MenuStart::saveGame</a></div><div class="ttdeci">static void saveGame(G_Profil *currentUser)</div><div class="ttdoc">Save the current level to the given profil. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:195</div></div>
+<div class="ttc" id="class_w___menu_start_html_a5dbc5260b96e79bdd2a55c54095f9853"><div class="ttname"><a href="class_w___menu_start.html#a5dbc5260b96e79bdd2a55c54095f9853">W_MenuStart::newGame</a></div><div class="ttdeci">void newGame()</div><div class="ttdoc">Create a new game, and its profil. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:151</div></div>
+<div class="ttc" id="class_w___menu_start_html_a5e5f50ca83e56da21da0df7cc6bfd8f1"><div class="ttname"><a href="class_w___menu_start.html#a5e5f50ca83e56da21da0df7cc6bfd8f1">W_MenuStart::refreshGameMenu</a></div><div class="ttdeci">void refreshGameMenu()</div><div class="ttdoc">Reload the game menu on maingame. </div></div>
 <div class="ttc" id="class_g___profil_html"><div class="ttname"><a href="class_g___profil.html">G_Profil</a></div><div class="ttdoc">Player&#39;s profil management. </div><div class="ttdef"><b>Definition:</b> g_profil.h:33</div></div>
+<div class="ttc" id="class_w___menu_start_html_a21cf2c3cc2f360daa9d46f1b5c983461"><div class="ttname"><a href="class_w___menu_start.html#a21cf2c3cc2f360daa9d46f1b5c983461">W_MenuStart::startGame</a></div><div class="ttdeci">void startGame(G_Profil *)</div><div class="ttdoc">Start the game with with G_Profil. </div></div>
+<div class="ttc" id="class_w___menu_start_html_a7f9c60df0d2a0fba30c37b99d2b7630e"><div class="ttname"><a href="class_w___menu_start.html#a7f9c60df0d2a0fba30c37b99d2b7630e">W_MenuStart::W_MenuStart</a></div><div class="ttdeci">W_MenuStart(QWidget *parent=0)</div><div class="ttdoc">Overlay widget to display the start menu. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:36</div></div>
+<div class="ttc" id="class_w___menu_start_html_aca05c93827e90a48e5044846e0a76f23"><div class="ttname"><a href="class_w___menu_start.html#aca05c93827e90a48e5044846e0a76f23">W_MenuStart::loadGame</a></div><div class="ttdeci">void loadGame(QString value)</div><div class="ttdoc">Load the given level. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:110</div></div>
+<div class="ttc" id="class_w___menu_start_html_aff79d990b8166fe640fad052d7271a30"><div class="ttname"><a href="class_w___menu_start.html#aff79d990b8166fe640fad052d7271a30">W_MenuStart::newGameForm</a></div><div class="ttdeci">void newGameForm()</div><div class="ttdoc">Display of hide the interaction to create a new game. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:132</div></div>
 <div class="ttc" id="class_w___menu_start_html"><div class="ttname"><a href="class_w___menu_start.html">W_MenuStart</a></div><div class="ttdoc">Main menu, which appears at the game startup. </div><div class="ttdef"><b>Definition:</b> w_menustart.h:43</div></div>
+<div class="ttc" id="class_w___menu_start_html_aa147cc302db6aa457fba0c75ab25e1b2"><div class="ttname"><a href="class_w___menu_start.html#aa147cc302db6aa457fba0c75ab25e1b2">W_MenuStart::getProfil</a></div><div class="ttdeci">bool getProfil()</div><div class="ttdoc">Load the profil. </div><div class="ttdef"><b>Definition:</b> w_menustart.cpp:89</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 12:15:47 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

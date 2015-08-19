@@ -32,10 +32,31 @@ class W_Dialog : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Overlay widget to display the dialog.
+     * @param parent if need
+     */
     W_Dialog(QWidget *parent = 0);
+
+    /**
+     * @brief Set text to self.
+     * @param text text to set
+     * @param type type of the text
+     */
     void setText(QString text, int type);
+
+    /**
+     * @brief Get the text from self.
+     * @return text of the dialog
+     */
     QString getText();
-    void paintEvent(QPaintEvent *);
+
+    /**
+     * @brief Listen to the paint event
+     * @param pe event
+     */
+    void paintEvent(QPaintEvent *pe);
 
 signals:
 

@@ -56,13 +56,13 @@ SOURCES += \
     e_fox.cpp \
     e_wolf.cpp \
     g_character.cpp \
+    factory_character.cpp \
     p_penguin.cpp \
     menu/w_menu.cpp \
     menu/w_menubonus.cpp \
     menu/w_menupause.cpp \
     menu/w_menustart.cpp \
     menu/w_menucode.cpp
-
 HEADERS  += \
     b_movable.h \
     b_wall.h \
@@ -93,12 +93,11 @@ HEADERS  += \
     state_enemypause.h \
     g_character.h \
     state_enemysleep.h \
-    menu/w_menu.h \
+factory_character.h \     menu/w_menu.h \
     menu/w_menubonus.h \
     menu/w_menupause.h \
     menu/w_menustart.h \
     menu/w_menucode.h
-
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \

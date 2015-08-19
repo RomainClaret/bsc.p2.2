@@ -17,6 +17,7 @@
 #include <QGraphicsItem>
 #include "state_enemy.h"
 
+#include "g_character.h"
 
 class QPoint;
 class QGraphicsRectItem;
@@ -27,6 +28,7 @@ class S_ViewBlockNPC;
 class State_Enemy;
 class State_EnemyPatrol;
 class State_EnemySleep;
+class State_EnemyPause;
 
 /**
  * @brief Enemy Class
@@ -40,7 +42,7 @@ class State_EnemySleep;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class C_Enemy : public QGraphicsItem
+class C_Enemy : public G_Character
 {
     friend class State_Enemy;
     friend class State_EnemyPatrol;
@@ -67,9 +69,6 @@ public:
      * @brief Add self to the scene.
      */
     void addToScene(QGraphicsScene*);
-
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
     //Methods related to self
     /**
@@ -137,20 +136,11 @@ protected:
      */
     void setPosViewBloc(S_ViewBlockNPC* block, QPoint p);
 
-    //Skins are the pictures given to self
-    QString leftSkin;
-    QString rightSkin;
-    QString upSkin;
-    QString downSkin;
-
-    QBrush *npcSkin;
-
 private:
     int iDestPoint;
     bool direction;
     bool detectPlayableCharacter;
     int time;
-    char orientation;
 
     /**
      * @brief Move self by x and y values.

@@ -24,6 +24,9 @@
 class Observer_NPC
 {
 public:
+    static QString STATE_PATROL;
+    static QString STATE_PAUSE;
+    static QString STATE_SLEEP;
     /**
      * @brief ObservablesNPC Constructor of ObservablesNPCs
      */
@@ -42,16 +45,21 @@ public:
 
     /**
      * @brief changeNPCState change the state of the npcs in the LEVEL PHASE
-     * @param ennemi the new observer
+     * @param state the state, check the static attr for differents states
      * @param posPlayer is the position of the player
      */
-    void changeNPCState(State_Enemy* state, QPoint posPlayer);
+    void changeNPCState(QString state, QPoint posPlayer);
 
     /**
      * @brief changeNPCState change the state of ALL npcs in the level
-     * @param state the new observer
+     * @param state the state, check the static attr for differents states
      */
-    void changeNPCState(State_Enemy* state);
+    void changeNPCState(QString state);
+
+    /**
+     * @brief clear delete all enemys
+     */
+    void clear();
 
 private:
     QList<C_Enemy*> list_ennemisObserver;

@@ -29,6 +29,7 @@ B_Water::B_Water(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }
+
 void B_Water::setDesign()
 {
 //    QBrush brush;
