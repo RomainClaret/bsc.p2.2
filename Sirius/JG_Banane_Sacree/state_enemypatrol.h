@@ -1,7 +1,7 @@
-#ifndef STATE_NPCPATROL_H
-#define STATE_NPCPATROL_H
-#include "state_npc.h"
-class G_NPC;
+#ifndef STATE_ENEMYPATROL_H
+#define STATE_ENEMYPATROL_H
+#include "state_enemy.h"
+class C_Enemy;
 
 /**
  * @brief Concrete class of the State Pattern for npc
@@ -13,20 +13,20 @@ class G_NPC;
  * @version 1.0
  * @date 18 august 2015
  */
-class State_NPCPatrol : public State_NPC
+class State_EnemyPatrol : public State_Enemy
 {
 public:
 
     /**
      * @brief StateEnemy_Patrol Constructor of StateEnemy_Patrol
      */
-    State_NPCPatrol();
+    State_EnemyPatrol();
 
     /**
      * @brief step This is the brain of the npc, it determinate the way of the npc and move him
      * @param mpc
      */
-    void step(G_NPC* npc);
+    void step(C_Enemy* npc);
 };
 
-#endif // STATE_NPCPATROL_H
+#endif // STATE_ENEMYPATROL_H

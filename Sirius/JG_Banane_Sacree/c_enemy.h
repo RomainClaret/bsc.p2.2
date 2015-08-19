@@ -11,11 +11,11 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef G_NPC_H
-#define G_NPC_H
+#ifndef C_ENEMY_H
+#define C_ENEMY_H
 
 #include <QGraphicsItem>
-#include "state_npc.h"
+#include "state_enemy.h"
 
 
 class QPoint;
@@ -24,12 +24,12 @@ class G_Gameboard;
 
 class S_ViewBlockNPC;
 
-class State_NPC;
-class State_NPCPatrol;
-class State_NPCSleep;
+class State_Enemy;
+class State_EnemyPatrol;
+class State_EnemySleep;
 
 /**
- * @brief NPC Class
+ * @brief Enemy Class
  * @details Parent class for Non Player Characters.
  * Contains the orientation, the path, the skin, the definition, and the specification.
  * @author Claret Romain, romain.claret@rocla.ch
@@ -40,12 +40,12 @@ class State_NPCSleep;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class G_NPC : public QGraphicsItem
+class C_Enemy : public QGraphicsItem
 {
-    friend class State_NPC;
-    friend class State_NPCPatrol;
-    friend class State_NPCSleep;
-    friend class StateNPC_Pause;
+    friend class State_Enemy;
+    friend class State_EnemyPatrol;
+    friend class State_EnemySleep;
+    friend class State_EnemyPause;
 
 public:
     //Constructors
@@ -54,13 +54,13 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    G_NPC(QList<QPoint> path, G_Gameboard *g);
+    C_Enemy(QList<QPoint> path, G_Gameboard *g);
 
     //Destructor
     /**
       * @brief Destruction of the blocks used for the vision.
       */
-    ~G_NPC();
+    ~C_Enemy();
 
     //Methods related to the scene
     /**
@@ -117,7 +117,7 @@ public:
      * @brief changeState replace the state of the enemy with newState
      * @param newState
      */
-    void changeState(State_NPC* newState);
+    void changeState(State_Enemy* newState);
 
 protected:
     /**
@@ -192,9 +192,9 @@ private:
 
     G_Gameboard *game;
 
-    State_NPC* state;
+    State_Enemy* state;
 
 
 };
 
-#endif // G_NPC_H
+#endif // C_ENEMY_H

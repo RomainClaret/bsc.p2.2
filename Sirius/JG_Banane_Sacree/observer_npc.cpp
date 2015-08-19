@@ -10,7 +10,7 @@ Observer_NPC::Observer_NPC()
 
 Observer_NPC::~Observer_NPC()
 {
-    foreach (G_NPC* enemy, list_ennemisObserver)
+    foreach (C_Enemy* enemy, list_ennemisObserver)
     {
         delete enemy;
     }
@@ -19,7 +19,7 @@ Observer_NPC::~Observer_NPC()
 /**
  * @details addEnnemiObserver add ennemi as observer
  */
-void Observer_NPC::addNPCObserver(G_NPC* ennemi)
+void Observer_NPC::addNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
 }
@@ -27,7 +27,7 @@ void Observer_NPC::addNPCObserver(G_NPC* ennemi)
 /**
  * @details changeEnnemiState change the state of the ennemis in the LEVEL PHASE
  */
-void Observer_NPC::changeNPCState(State_NPC* state, QPoint posPlayer)
+void Observer_NPC::changeNPCState(State_Enemy* state, QPoint posPlayer)
 {
     //find the player's zone
     int gameX = G_Gameboard::getSizeX();
@@ -48,7 +48,7 @@ void Observer_NPC::changeNPCState(State_NPC* state, QPoint posPlayer)
     //  1,2  2,2  3,2
 
     //change the state of the enemies in this zone
-    foreach (G_NPC* enemy, list_ennemisObserver)
+    foreach (C_Enemy* enemy, list_ennemisObserver)
     {
         QPoint posEnemy = enemy->getNPCPos();
 
@@ -63,9 +63,9 @@ void Observer_NPC::changeNPCState(State_NPC* state, QPoint posPlayer)
 /**
  * @details changeEnnemiState change the state of all ennemis in the LEVEL
  */
-void Observer_NPC::changeNPCState(State_NPC* state)
+void Observer_NPC::changeNPCState(State_Enemy* state)
 {
-    foreach (G_NPC* enemy, list_ennemisObserver) {
+    foreach (C_Enemy* enemy, list_ennemisObserver) {
         enemy->changeState(state);
     }
 }

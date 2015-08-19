@@ -55,9 +55,10 @@ SOURCES += \
     state_npcsleep.cpp \
     factory_surface.cpp \
     g_surface.cpp \
-    c_fox.cpp \
-    c_penguin.cpp \
-    c_wolf.cpp
+    e_fox.cpp \
+    e_wolf.cpp \
+    g_character.cpp \
+    p_penguin.cpp
 
 HEADERS  += \
     b_movable.h \
@@ -78,18 +79,19 @@ HEADERS  += \
     g_level.h \
     g_maingame.h \
     g_object.h \
-    g_npc.h \
-    g_player.h \
     g_profil.h \
     g_surface.h \
-    state_npc.h \
-    state_npcpatrol.h \
-    state_npcpause.h \
-    state_npcsleep.h \
     observer_npc.h \
-    c_fox.h \
-    c_penguin.h \
-    c_wolf.h
+    e_fox.h \
+    e_wolf.h \
+    p_penguin.h \
+    c_enemy.h \
+    c_player.h \
+    state_enemy.h \
+    state_enemypatrol.h \
+    state_enemypause.h \
+    g_character.h \
+    state_enemysleep.h
 
 RESOURCES += \
     images.qrc \

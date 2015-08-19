@@ -13,7 +13,7 @@
 
 #include "w_object.h"
 #include "g_object.h"
-#include "c_penguin.h"
+#include "p_penguin.h"
 #include "g_gameboard.h"
 #include <QWidget>
 #include <QDebug>

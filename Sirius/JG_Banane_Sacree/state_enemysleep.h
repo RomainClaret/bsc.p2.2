@@ -1,6 +1,6 @@
-#ifndef STATE_NPCSLEEP_H
-#define STATE_NPCSLEEP_H
-#include "state_npc.h"
+#ifndef STATE_ENEMYSLEEP_H
+#define STATE_ENEMYSLEEP_H
+#include "state_enemy.h"
 class ennemi;
 
 /**
@@ -13,23 +13,23 @@ class ennemi;
  * @version 1.0
  * @date 18 august 2015
  */
-class State_NPCSleep : public State_NPC
+class State_EnemySleep : public State_Enemy
 {
 public:
 
     /**
      * @brief StateNPC_Sleep Constructor of StateNPC_Sleep
      */
-    State_NPCSleep();
+    State_EnemySleep();
 
     /**
      * @brief step This is the brain of the npc, in this case it only desactivate the view of the npc at the first run
      * @param npc
      */
-    void step(G_NPC* npc);
+    void step(C_Enemy* npc);
 
 private:
     bool initialisation;
 };
 
-#endif // STATE_NPCSLEEP_H
+#endif // STATE_ENEMYSLEEP_H

@@ -3,7 +3,7 @@
 
 class QGraphicsRectItem;
 class QGraphicsItem;
-class G_NPC;
+class C_Enemy;
 
 #include "g_surface.h"
 
@@ -20,13 +20,13 @@ class G_NPC;
 class S_ViewBlockNPC : public G_Surface
 {
 public:
-    S_ViewBlockNPC(int ligne, int colonne, G_NPC* owner, QGraphicsItem *parent = 0);
+    S_ViewBlockNPC(int ligne, int colonne, C_Enemy* owner, QGraphicsItem *parent = 0);
     int getLine();
     int getColonne();
     bool isActive();
     void setActive(bool actif);
 
-    G_NPC* owner;
+    C_Enemy* owner;
 
     void playableCharacterOn();
     void blockOn();

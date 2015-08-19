@@ -11,51 +11,33 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef G_PLAYER_H
-#define G_PLAYER_H
+#ifndef E_WOLF_H
+#define E_WOLF_H
+#include "c_enemy.h"
 
-#include <QGraphicsItem>
-class QPainter;
-class QRectF;
+class G_Gameboard;
 
 /**
- * @brief Playable characters.
- * @details Contains the skin, orientation, and position.
+ * @brief Enemy Character: Wolf
+ * @details This is a character with its own characteristics.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
  * @date 27 January 2015
+ * @todo integrate with DP Factory
  */
-
-class G_Player : public QGraphicsItem
+class E_Wolf : public C_Enemy
 {
-
 public:
-    G_Player();
-
-    QRectF boundingRect() const;    //la box du player
-
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget); //paint event
-    QBrush *playerSkin;
-
-    void setPlayerOrientation(QString orientation);
-    QString getPlayerOrientation();
-    QPoint *getPos();
-
-protected:
-    int xPos;
-    int yPos;
-
-private:
-    //Les skins sont les images attribué au personnage
-    QString leftSkin;
-    QString rightSkin;
-    QString upSkin;
-    QString downSkin;
-    QString playerOrientation;
-
+    //Constructors
+    /**
+     * @brief Constructor with path setup.
+     * @param path QList of QPoint for the path
+     * @param g Gameboard to depend on
+     */
+    E_Wolf(QList<QPoint> path, G_Gameboard *g);
 };
 
-#endif // G_PLAYER_H
+#endif // E_WOLF_H

@@ -29,8 +29,8 @@
 #include "s_dialog.h"
 #include "g_object.h"
 
-#include "c_wolf.h"
-#include "c_fox.h"
+#include "e_wolf.h"
+#include "e_fox.h"
 
 #include <QPoint>
 #include <QDebug>
@@ -180,12 +180,12 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
         }
         if(ennemiType == "FOX")
         {
-            C_Fox *item2 = new C_Fox(move, game);
+            E_Fox *item2 = new E_Fox(move, game);
             item2->addToScene(scene);
         }
         else if(ennemiType == "WOLF")
         {
-            C_Wolf *item2 = new C_Wolf(move, game);
+            E_Wolf *item2 = new E_Wolf(move, game);
             item2->addToScene(scene);
         }
     }

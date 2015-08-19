@@ -1,7 +1,7 @@
-#ifndef STATE_NPC_H
-#define STATE_NPC_H
+#ifndef STATE_ENEMY_H
+#define STATE_ENEMY_H
 
-class G_NPC;
+class C_Enemy;
 
 /**
  * @brief Abstract class of the Pattern State to manage the "Ennemis"
@@ -13,24 +13,24 @@ class G_NPC;
  * @version 1.0
  * @date 18 august 2015
  */
-class State_NPC
+class State_Enemy
 {
 public:
     /**
      * @brief StateEnemy Constructor of StateEnemy
      */
-    State_NPC(){}
+    State_Enemy(){}
 
     /**
      * @brief ~StateEnemy Virtual destuctor of StateEnemy
      */
-    virtual ~State_NPC(){}
+    virtual ~State_Enemy(){}
 
     /**
      * @brief step Vitual methode, each stateEnnemi must implements "step" this is the brain of the ennemi
      * @param npc
      */
-    virtual void step(G_NPC* npc) = 0;
+    virtual void step(C_Enemy* npc) = 0;
 };
 
-#endif // STATE_NPC_H
+#endif // STATE_ENEMY_H

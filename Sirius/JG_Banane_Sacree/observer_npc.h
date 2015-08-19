@@ -17,7 +17,7 @@
 //@bug no bugs
 //@warning no warnings
 
-#include "g_npc.h"
+#include "c_enemy.h"
 #include <QList>
 #include <QPoint>
 
@@ -38,23 +38,23 @@ public:
      * @brief addEnnemiObserver add npc as observer
      * @param ennemi the new observer
      */
-    void addNPCObserver(G_NPC* ennemi);
+    void addNPCObserver(C_Enemy* ennemi);
 
     /**
      * @brief changeNPCState change the state of the npcs in the LEVEL PHASE
      * @param ennemi the new observer
      * @param posPlayer is the position of the player
      */
-    void changeNPCState(State_NPC* state, QPoint posPlayer);
+    void changeNPCState(State_Enemy* state, QPoint posPlayer);
 
     /**
      * @brief changeNPCState change the state of ALL npcs in the level
      * @param state the new observer
      */
-    void changeNPCState(State_NPC* state);
+    void changeNPCState(State_Enemy* state);
 
 private:
-    QList<G_NPC*> list_ennemisObserver;
+    QList<C_Enemy*> list_ennemisObserver;
 
 };
 

@@ -12,7 +12,7 @@
 **********************************************************************************/
 
 #include "g_gameboard.h"
-#include "c_penguin.h"
+#include "p_penguin.h"
 #include "b_wall.h"
 #include "b_movable.h"
 #include "b_water.h"
@@ -24,9 +24,9 @@
 #include "s_ice.h"
 #include "s_dialog.h"
 #include "g_level.h"
-#include "g_npc.h"
-#include "c_fox.h"
-#include "c_wolf.h"
+#include "c_enemy.h"
+#include "e_fox.h"
+#include "e_wolf.h"
 #include "g_profil.h"
 
 #include <QtWidgets>
@@ -72,7 +72,7 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 
     mainScene = new QGraphicsScene(this);
     playerView = new QGraphicsView(this);
-    playableCharacter = new C_Penguin();
+    playableCharacter = new P_Penguin();
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
     currentLevel = new G_Level(0, this);
@@ -427,7 +427,7 @@ void G_Gameboard::checkPositionEvents()
             dialog->setText("Plouf, dans l'eau! Tu recommences au dernier checkpoint",2);
             dialogToogle = true;
         }
-        if(typeid(*CollidingItems.at(i)).name() == typeid(C_Fox).name() || typeid(*CollidingItems.at(i)).name() == typeid(C_Wolf).name())
+        if(typeid(*CollidingItems.at(i)).name() == typeid(E_Fox).name() || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name())
         {
             restartEnigma();
 

@@ -1,14 +1,14 @@
-#include "state_npcpatrol.h"
-#include "g_npc.h"
+#include "state_enemypatrol.h"
+#include "c_enemy.h"
 
-State_NPCPatrol::State_NPCPatrol() : State_NPC()
+State_EnemyPatrol::State_EnemyPatrol() : State_Enemy()
 {
 }
 
 /**
  * @details Calculate the direction and move the ennemi with his view. Take care that "StateEnnemi_Patrol" is a Friend of "Ennemi"
  */
-void State_NPCPatrol::step(G_NPC* ennemi)
+void State_EnemyPatrol::step(C_Enemy* ennemi)
 {
     //En supprimant ces deux appels on optimise grandement le programme
     //viewBlocActif(); //désactive les blocs obstrués par un mur

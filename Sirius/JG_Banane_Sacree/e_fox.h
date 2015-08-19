@@ -11,15 +11,15 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef C_WOLF_H
-#define C_WOLF_H
-#include "g_npc.h"
-
-class G_Gameboard;
+#ifndef E_FOX_H
+#define E_FOX_H
+#include "c_enemy.h"
 
 /**
- * @brief Enemy Character: Wolf
+ * @brief Enemy Character: Fox
  * @details This is a character with its own characteristics.
+ * It moves on a automatic pattern generated between two given points.
+ * His view is 3x2 blocs.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
@@ -28,7 +28,7 @@ class G_Gameboard;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class C_Wolf : public G_NPC
+class E_Fox : public C_Enemy
 {
 public:
     //Constructors
@@ -37,7 +37,7 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    C_Wolf(QList<QPoint> path, G_Gameboard *g);
+    E_Fox(QList<QPoint> path, G_Gameboard *g);
 };
 
-#endif // C_WOLF_H
+#endif // E_FOX_H
