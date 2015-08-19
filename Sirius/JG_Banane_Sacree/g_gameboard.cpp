@@ -483,7 +483,7 @@ void G_Gameboard::checkChangeView(char sens)
                 playableCharacter->emptySacoche();
                 setLevel(bloc->getNextLevel());
                 setProxy();
-                setFirstDialog();
+               // setFirstDialog();
             }
             else if(bloc->isEndLevel())
             {
@@ -928,7 +928,7 @@ void G_Gameboard::restartLevel()
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
 
-    setFirstDialog();
+    //setFirstDialog();
 }
 
 
@@ -944,7 +944,7 @@ void G_Gameboard::returnIsland()
 
     setLevel(1);
     setProxy();
-    setFirstDialog();
+    //setFirstDialog();
 
     objectListProxy->hide();
     lifeListProxy->hide();
@@ -1035,6 +1035,8 @@ void G_Gameboard::setLevel(int value)
     W_MenuStart::saveGame(playerProfil);
     saveCheckpoint();
     loadLevel();
+
+    checkPositionEvents();
 }
 
 void G_Gameboard::loadLevel()
@@ -1069,8 +1071,6 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setLevel(playerProfil->getLevel());
     setProxy();
     setTimer();
-
-    setFirstDialog();
 }
 
 void G_Gameboard::setFirstDialog()

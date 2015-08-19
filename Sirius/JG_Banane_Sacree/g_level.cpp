@@ -58,7 +58,6 @@ G_Level::G_Level(int levelNumber, G_Gameboard *game)
     QString fileName = ":/maps/maps/L";
     fileName.append(QString("%1").arg(levelNumber));
     fileName.append(".xml");
-    qDebug() << fileName;
 
     QString errorMsg;
     int errorLine, errorColumn;
