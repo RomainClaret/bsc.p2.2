@@ -113,38 +113,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_w___menu_pause.html">W_MenuPause</a>(QWidget *parent);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setUnableMenu(<span class="keywordtype">int</span> levelValue);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QFormLayout *layoutMenuPause;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QLabel *titleMenuPause;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QLabel *undertitleMenuPause;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QPushButton *btnMenuPauseResume;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QPushButton *btnMenuPauseIsland;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QPushButton *btnMenuPauseQuit;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QPushButton *btnMenuPauseRestartEnigma;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    QPushButton *btnMenuPauseRestartLevel;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QString styleBtn;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QGraphicsDropShadowEffect* shadowbtn();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> paintEvent(QPaintEvent *pe);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;signals:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>    <a class="code" href="class_w___menu_pause.html#a61d951b79b548ae4f6524310ad427e99">W_MenuPause</a>(QWidget *parent);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_w___menu_pause.html#ae2c5843c3f74ea871b6fe22be99cb91b">setUnableMenu</a>(<span class="keywordtype">int</span> levelValue);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QFormLayout *layoutMenuPause;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QLabel *titleMenuPause;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    QLabel *undertitleMenuPause;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QPushButton *btnMenuPauseResume;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QPushButton *btnMenuPauseIsland;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QPushButton *btnMenuPauseQuit;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QPushButton *btnMenuPauseRestartEnigma;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    QPushButton *btnMenuPauseRestartLevel;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QString styleBtn;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // W_MENUPAUSE_H</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QGraphicsDropShadowEffect* shadowbtn();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> paintEvent(QPaintEvent *pe);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;signals:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif // W_MENUPAUSE_H</span></div>
 <div class="ttc" id="class_w___menu_pause_html"><div class="ttname"><a href="class_w___menu_pause.html">W_MenuPause</a></div><div class="ttdoc">Pause Menu, which appears when the game is paused. </div><div class="ttdef"><b>Definition:</b> w_menupause.h:42</div></div>
+<div class="ttc" id="class_w___menu_pause_html_a61d951b79b548ae4f6524310ad427e99"><div class="ttname"><a href="class_w___menu_pause.html#a61d951b79b548ae4f6524310ad427e99">W_MenuPause::W_MenuPause</a></div><div class="ttdeci">W_MenuPause(QWidget *parent)</div><div class="ttdoc">Overlay widget to display the pause menu. </div><div class="ttdef"><b>Definition:</b> w_pause.cpp:25</div></div>
+<div class="ttc" id="class_w___menu_pause_html_ae2c5843c3f74ea871b6fe22be99cb91b"><div class="ttname"><a href="class_w___menu_pause.html#ae2c5843c3f74ea871b6fe22be99cb91b">W_MenuPause::setUnableMenu</a></div><div class="ttdeci">void setUnableMenu(int levelValue)</div><div class="ttdoc">Lock and unable the pause menu. </div><div class="ttdef"><b>Definition:</b> w_pause.cpp:131</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 18 2015 23:11:17 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 19 2015 12:15:47 for James Gouin et la Banane Sacrée by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

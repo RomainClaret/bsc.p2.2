@@ -332,37 +332,37 @@ signals:
 
 public slots:
     /**
-     * @brief SLOT: Resume the Game after pause
+     * @brief Resume the Game after pause
      */
     void resumeGame();
 
     /**
-     * @brief SLOT: Slide the playable character.
+     * @brief Slide the playable character.
      */
     void slidePlayableCharacter();
 
     /**
-     * @brief SLOT: Slide blocks in the List of sliding blocks.
+     * @brief Slide blocks in the List of sliding blocks.
      */
     void slideBlock();
 
     /**
-     * @brief SLOT: Ask for profil save, and destruct self.
+     * @brief Ask for profil save, and destruct self.
      */
     void exitGame();
 
     /**
-     * @brief SLOT: Restart the level at the last checkpoint->
+     * @brief Restart the level at the last checkpoint->
      */
     void restartEnigma();
 
     /**
-     * @brief SLOT: Restart the level at the beginning
+     * @brief Restart the level at the beginning
      */
     void restartLevel();
 
     /**
-     * @brief SLOT: Load the Island Level.
+     * @brief Load the Island Level.
      */
     void returnIsland();
 };

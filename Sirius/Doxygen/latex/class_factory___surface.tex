@@ -1,38 +1,37 @@
 \hypertarget{class_factory___surface}{}\section{Factory\+\_\+\+Surface Class Reference}
 \label{class_factory___surface}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+
+
+Factory for surfaces.  
+
+
+
+
+{\ttfamily \#include $<$factory\+\_\+surface.\+h$>$}
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_factory___surface_a4ff5816e81f603caf58d47d695a505d3}{}static \hyperlink{class_g___surface}{G\+\_\+\+Surface} $\ast$ {\bfseries create\+Surface} (Q\+String type, int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_a4ff5816e81f603caf58d47d695a505d3}
-
-\item 
-\hypertarget{class_factory___surface_ab17210244006ed087a5d19da4d5fd4bd}{}static \hyperlink{class_s___ice}{S\+\_\+\+Ice} $\ast$ {\bfseries create\+Surface\+Ice} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_ab17210244006ed087a5d19da4d5fd4bd}
-
-\item 
-\hypertarget{class_factory___surface_af8c720aacff1638f3be98c43790f1623}{}static \hyperlink{class_s___snow}{S\+\_\+\+Snow} $\ast$ {\bfseries create\+Surface\+Snow} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_af8c720aacff1638f3be98c43790f1623}
-
-\item 
-\hypertarget{class_factory___surface_a00b899991e67f8b3ded65c759640d29d}{}static \hyperlink{class_s___dialog}{S\+\_\+\+Dialog} $\ast$ {\bfseries create\+Surface\+Dialog} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene, Q\+String text=\char`\"{}\char`\"{})\label{class_factory___surface_a00b899991e67f8b3ded65c759640d29d}
-
-\item 
-\hypertarget{class_factory___surface_a8f31a202ed9fae218b3f517c08f43723}{}static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ {\bfseries create\+Surface\+Door} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_a8f31a202ed9fae218b3f517c08f43723}
-
-\item 
-\hypertarget{class_factory___surface_abb875c8764cc75b19569160d84639309}{}static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ {\bfseries create\+Surface\+Door} (int xpos, int ypos, Q\+String item, int quantity, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_abb875c8764cc75b19569160d84639309}
-
-\item 
-\hypertarget{class_factory___surface_afcbdd2fb2e1ecc891d29780efb5f65cd}{}static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ {\bfseries create\+Surface\+Last\+Door} (int xpos, int ypos, int next\+Level, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_afcbdd2fb2e1ecc891d29780efb5f65cd}
-
-\item 
-\hypertarget{class_factory___surface_a80cc5865331117916b66f66336cc6233}{}static \hyperlink{class_b___movable}{B\+\_\+\+Movable} $\ast$ {\bfseries create\+Bloc\+Movable} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_a80cc5865331117916b66f66336cc6233}
-
-\item 
-\hypertarget{class_factory___surface_a80646d364778824260f5a8abc075801b}{}static \hyperlink{class_b___wall}{B\+\_\+\+Wall} $\ast$ {\bfseries create\+Bloc\+Wall} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_a80646d364778824260f5a8abc075801b}
-
-\item 
-\hypertarget{class_factory___surface_a03d1d937a82ce191f4699d1eb2635425}{}static \hyperlink{class_b___water}{B\+\_\+\+Water} $\ast$ {\bfseries create\+Bloc\+Water} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)\label{class_factory___surface_a03d1d937a82ce191f4699d1eb2635425}
-
-\end{DoxyCompactItemize}
+static \hyperlink{class_g___surface}{G\+\_\+\+Surface} $\ast$ \hyperlink{class_factory___surface_a4ff5816e81f603caf58d47d695a505d3}{create\+Surface} (Q\+String type, int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add given item to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___ice}{S\+\_\+\+Ice} $\ast$ \hyperlink{class_factory___surface_ab17210244006ed087a5d19da4d5fd4bd}{create\+Surface\+Ice} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Ice Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___snow}{S\+\_\+\+Snow} $\ast$ \hyperlink{class_factory___surface_af8c720aacff1638f3be98c43790f1623}{create\+Surface\+Snow} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Snow Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___dialog}{S\+\_\+\+Dialog} $\ast$ \hyperlink{class_factory___surface_a00b899991e67f8b3ded65c759640d29d}{create\+Surface\+Dialog} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene, Q\+String text=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Dialog Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ \hyperlink{class_factory___surface_a8f31a202ed9fae218b3f517c08f43723}{create\+Surface\+Door} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Door Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ \hyperlink{class_factory___surface_abb875c8764cc75b19569160d84639309}{create\+Surface\+Door} (int xpos, int ypos, Q\+String item, int quantity, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Door Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_s___door}{S\+\_\+\+Door} $\ast$ \hyperlink{class_factory___surface_afcbdd2fb2e1ecc891d29780efb5f65cd}{create\+Surface\+Last\+Door} (int xpos, int ypos, int next\+Level, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Door Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_b___movable}{B\+\_\+\+Movable} $\ast$ \hyperlink{class_factory___surface_a80cc5865331117916b66f66336cc6233}{create\+Bloc\+Movable} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Movable Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_b___wall}{B\+\_\+\+Wall} $\ast$ \hyperlink{class_factory___surface_a80646d364778824260f5a8abc075801b}{create\+Bloc\+Wall} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Wall Surface to scene. \end{DoxyCompactList}\item 
+static \hyperlink{class_b___water}{B\+\_\+\+Water} $\ast$ \hyperlink{class_factory___surface_a03d1d937a82ce191f4699d1eb2635425}{create\+Bloc\+Water} (int xpos, int ypos, Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Creates, returns and add a Water Surface to scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,6 +56,295 @@
 \hypertarget{class_factory___surface_ad30fd833d02d4c18834829d1cd8b5317}{}static Q\+String {\bfseries B\+L\+O\+C\+\_\+\+W\+A\+T\+E\+R} = \char`\"{}W\+A\+T\+E\+R\char`\"{}\label{class_factory___surface_ad30fd833d02d4c18834829d1cd8b5317}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory for surfaces. 
+
+Design pattern Factory for surfaces. Using a methode to create a specific surface and add it to the given scene. \begin{DoxyAuthor}{Author}
+Claret Romain, \href{mailto:romain.claret@rocla.ch}{\tt romain.\+claret@rocla.\+ch} 
+
+Divernois Margaux, \href{mailto:margaux.divernois@gmail.com}{\tt margaux.\+divernois@gmail.\+com} 
+
+Visinand Steve, \href{mailto:visinandst@gmail.com}{\tt visinandst@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Custom License + N\+D\+A 
+\end{DoxyCopyright}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 August 2015 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_factory___surface_a80cc5865331117916b66f66336cc6233}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Bloc\+Movable@{create\+Bloc\+Movable}}
+\index{create\+Bloc\+Movable@{create\+Bloc\+Movable}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Bloc\+Movable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+\_\+\+Movable} $\ast$ Factory\+\_\+\+Surface\+::create\+Bloc\+Movable (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a80cc5865331117916b66f66336cc6233}
+
+
+Creates, returns and add a Movable Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+\_\+\+Movable$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_a80646d364778824260f5a8abc075801b}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Bloc\+Wall@{create\+Bloc\+Wall}}
+\index{create\+Bloc\+Wall@{create\+Bloc\+Wall}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Bloc\+Wall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+\_\+\+Wall} $\ast$ Factory\+\_\+\+Surface\+::create\+Bloc\+Wall (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a80646d364778824260f5a8abc075801b}
+
+
+Creates, returns and add a Wall Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+\_\+\+Wall$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_a03d1d937a82ce191f4699d1eb2635425}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Bloc\+Water@{create\+Bloc\+Water}}
+\index{create\+Bloc\+Water@{create\+Bloc\+Water}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Bloc\+Water}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+\_\+\+Water} $\ast$ Factory\+\_\+\+Surface\+::create\+Bloc\+Water (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a03d1d937a82ce191f4699d1eb2635425}
+
+
+Creates, returns and add a Water Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+\_\+\+Water$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_a4ff5816e81f603caf58d47d695a505d3}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface@{create\+Surface}}
+\index{create\+Surface@{create\+Surface}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+\_\+\+Surface} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{type, }
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a4ff5816e81f603caf58d47d695a505d3}
+
+
+Creates, returns and add given item to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & type of the item to add \\
+\hline
+{\em xpos} & x-\/axis position of the item to add \\
+\hline
+{\em ypos} & y-\/axis position of the item to add \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+\_\+\+Surface$\ast$ of created item
+\end{DoxyReturn}
+Returns N\+U\+L\+L if the given type is not found. \hypertarget{class_factory___surface_a00b899991e67f8b3ded65c759640d29d}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Dialog@{create\+Surface\+Dialog}}
+\index{create\+Surface\+Dialog@{create\+Surface\+Dialog}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Dialog} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Dialog (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+String}]{text = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a00b899991e67f8b3ded65c759640d29d}
+
+
+Creates, returns and add a Dialog Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+{\em text} & text to display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Dialog$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_a8f31a202ed9fae218b3f517c08f43723}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Door@{create\+Surface\+Door}}
+\index{create\+Surface\+Door@{create\+Surface\+Door}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Door}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Door} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Door (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_a8f31a202ed9fae218b3f517c08f43723}
+
+
+Creates, returns and add a Door Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Door$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_abb875c8764cc75b19569160d84639309}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Door@{create\+Surface\+Door}}
+\index{create\+Surface\+Door@{create\+Surface\+Door}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Door}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Door} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Door (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+String}]{item, }
+\item[{int}]{quantity, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_abb875c8764cc75b19569160d84639309}
+
+
+Creates, returns and add a Door Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em item} & name of the item required \\
+\hline
+{\em quantity} & number of items required \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Door$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_ab17210244006ed087a5d19da4d5fd4bd}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Ice@{create\+Surface\+Ice}}
+\index{create\+Surface\+Ice@{create\+Surface\+Ice}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Ice}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Ice} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Ice (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_ab17210244006ed087a5d19da4d5fd4bd}
+
+
+Creates, returns and add a Ice Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Ice$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_afcbdd2fb2e1ecc891d29780efb5f65cd}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Last\+Door@{create\+Surface\+Last\+Door}}
+\index{create\+Surface\+Last\+Door@{create\+Surface\+Last\+Door}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Last\+Door}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Door} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Last\+Door (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{int}]{next\+Level, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_afcbdd2fb2e1ecc891d29780efb5f65cd}
+
+
+Creates, returns and add a Door Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em next\+Level} & level to move the player to \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Door$\ast$ of created item 
+\end{DoxyReturn}
+\hypertarget{class_factory___surface_af8c720aacff1638f3be98c43790f1623}{}\index{Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}!create\+Surface\+Snow@{create\+Surface\+Snow}}
+\index{create\+Surface\+Snow@{create\+Surface\+Snow}!Factory\+\_\+\+Surface@{Factory\+\_\+\+Surface}}
+\subsubsection[{create\+Surface\+Snow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+\_\+\+Snow} $\ast$ Factory\+\_\+\+Surface\+::create\+Surface\+Snow (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{Q\+Graphics\+Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_factory___surface_af8c720aacff1638f3be98c43790f1623}
+
+
+Creates, returns and add a Snow Surface to scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & x-\/axis position of the item \\
+\hline
+{\em ypos} & y-\/axis position of the item \\
+\hline
+{\em scene} & scene to add the surface to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+Snow$\ast$ of created item 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

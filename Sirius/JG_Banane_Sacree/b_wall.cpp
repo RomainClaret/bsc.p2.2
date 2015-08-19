@@ -28,6 +28,7 @@ B_Wall::B_Wall(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
 }
+
 void B_Wall::setDesign()
 {
     //QBrush brush;

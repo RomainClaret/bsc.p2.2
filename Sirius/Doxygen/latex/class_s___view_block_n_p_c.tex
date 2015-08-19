@@ -18,34 +18,29 @@ Inheritance diagram for S\+\_\+\+View\+Block\+N\+P\+C\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_s___view_block_n_p_c_a31fc7d9d84317a99cdd50c93cd413c1d}{}{\bfseries S\+\_\+\+View\+Block\+N\+P\+C} (int ligne, int colonne, \hyperlink{class_g___n_p_c}{G\+\_\+\+N\+P\+C} $\ast$owner, Q\+Graphics\+Item $\ast$parent=0)\label{class_s___view_block_n_p_c_a31fc7d9d84317a99cdd50c93cd413c1d}
+\hyperlink{class_s___view_block_n_p_c_a505d9eb8092ca4fdf3a8662418dd6511}{S\+\_\+\+View\+Block\+N\+P\+C} (int line, int column, \hyperlink{class_c___enemy}{C\+\_\+\+Enemy} $\ast$owner, Q\+Graphics\+Item $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor to position this vision block to given enemy. \end{DoxyCompactList}\item 
+int \hyperlink{class_s___view_block_n_p_c_a32c2bf2773dfb42611e5b029a98f9b3f}{get\+Line} ()
+\begin{DoxyCompactList}\small\item\em Get the line of self in the matrix view of the enemy. \end{DoxyCompactList}\item 
+int \hyperlink{class_s___view_block_n_p_c_ab6a88434bbcb808b801994bc320b5981}{get\+Colonne} ()
+\begin{DoxyCompactList}\small\item\em Get the column of self in the matrix view of the enemy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_s___view_block_n_p_c_a59c007ce0c4eaae6e361f65bb7782289}{is\+Active} ()
+\begin{DoxyCompactList}\small\item\em Get if self is active for detection. \end{DoxyCompactList}\item 
+void \hyperlink{class_s___view_block_n_p_c_aa8cc7f8d5958a998ce6eb7db6b20031a}{set\+Active} (bool actif)
+\begin{DoxyCompactList}\small\item\em Set self vision. \end{DoxyCompactList}\item 
+\hypertarget{class_s___view_block_n_p_c_aaa7984976e743660e694b860cc6122de}{}void \hyperlink{class_s___view_block_n_p_c_aaa7984976e743660e694b860cc6122de}{playable\+Character\+On} ()\label{class_s___view_block_n_p_c_aaa7984976e743660e694b860cc6122de}
 
-\item 
-\hypertarget{class_s___view_block_n_p_c_a32c2bf2773dfb42611e5b029a98f9b3f}{}int {\bfseries get\+Line} ()\label{class_s___view_block_n_p_c_a32c2bf2773dfb42611e5b029a98f9b3f}
+\begin{DoxyCompactList}\small\item\em The playable character has been detected. \end{DoxyCompactList}\item 
+\hypertarget{class_s___view_block_n_p_c_a97f4bbd45d4768a2cf7b31ec36197ef1}{}void \hyperlink{class_s___view_block_n_p_c_a97f4bbd45d4768a2cf7b31ec36197ef1}{block\+On} ()\label{class_s___view_block_n_p_c_a97f4bbd45d4768a2cf7b31ec36197ef1}
 
-\item 
-\hypertarget{class_s___view_block_n_p_c_ab6a88434bbcb808b801994bc320b5981}{}int {\bfseries get\+Colonne} ()\label{class_s___view_block_n_p_c_ab6a88434bbcb808b801994bc320b5981}
+\begin{DoxyCompactList}\small\item\em A block has been detected. \end{DoxyCompactList}\item 
+\hypertarget{class_s___view_block_n_p_c_a8b5b1c08526115e555f49c292fabb59f}{}void \hyperlink{class_s___view_block_n_p_c_a8b5b1c08526115e555f49c292fabb59f}{set\+Style\+Playable\+Character\+On} ()\label{class_s___view_block_n_p_c_a8b5b1c08526115e555f49c292fabb59f}
 
-\item 
-\hypertarget{class_s___view_block_n_p_c_a59c007ce0c4eaae6e361f65bb7782289}{}bool {\bfseries is\+Active} ()\label{class_s___view_block_n_p_c_a59c007ce0c4eaae6e361f65bb7782289}
-
-\item 
-\hypertarget{class_s___view_block_n_p_c_aa8cc7f8d5958a998ce6eb7db6b20031a}{}void {\bfseries set\+Active} (bool actif)\label{class_s___view_block_n_p_c_aa8cc7f8d5958a998ce6eb7db6b20031a}
-
-\item 
-\hypertarget{class_s___view_block_n_p_c_aaa7984976e743660e694b860cc6122de}{}void {\bfseries playable\+Character\+On} ()\label{class_s___view_block_n_p_c_aaa7984976e743660e694b860cc6122de}
-
-\item 
-\hypertarget{class_s___view_block_n_p_c_a97f4bbd45d4768a2cf7b31ec36197ef1}{}void {\bfseries block\+On} ()\label{class_s___view_block_n_p_c_a97f4bbd45d4768a2cf7b31ec36197ef1}
-
-\item 
-\hypertarget{class_s___view_block_n_p_c_a8b5b1c08526115e555f49c292fabb59f}{}void {\bfseries set\+Style\+Playable\+Character\+On} ()\label{class_s___view_block_n_p_c_a8b5b1c08526115e555f49c292fabb59f}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Change self skin if playable character has been detected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_s___view_block_n_p_c_ac708a8c5d42dab068c4053fdd369a550}{}\hyperlink{class_g___n_p_c}{G\+\_\+\+N\+P\+C} $\ast$ {\bfseries owner}\label{class_s___view_block_n_p_c_ac708a8c5d42dab068c4053fdd369a550}
+\hypertarget{class_s___view_block_n_p_c_a1e212dd605da3a0a20ed8bce81ea5c70}{}\hyperlink{class_c___enemy}{C\+\_\+\+Enemy} $\ast$ {\bfseries owner}\label{class_s___view_block_n_p_c_a1e212dd605da3a0a20ed8bce81ea5c70}
 
 \end{DoxyCompactItemize}
 
@@ -69,6 +64,101 @@ Custom License + N\+D\+A
 \begin{DoxyDate}{Date}
 18 August 2015 
 \end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s___view_block_n_p_c_a505d9eb8092ca4fdf3a8662418dd6511}{}\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\subsubsection[{S\+\_\+\+View\+Block\+N\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}S\+\_\+\+View\+Block\+N\+P\+C\+::\+S\+\_\+\+View\+Block\+N\+P\+C (
+\begin{DoxyParamCaption}
+\item[{int}]{line, }
+\item[{int}]{column, }
+\item[{{\bf C\+\_\+\+Enemy} $\ast$}]{owner, }
+\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_s___view_block_n_p_c_a505d9eb8092ca4fdf3a8662418dd6511}
+
+
+Constructor to position this vision block to given enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & set the postion on the x-\/axis \\
+\hline
+{\em ypos} & set the postion on the y-\/axis \\
+\hline
+{\em parent} & Q\+Graphics\+Item parent \\
+\hline
+{\em line} & lign in the matix \\
+\hline
+{\em column} & column in the matrix \\
+\hline
+{\em owner} & enemy the vison is attached to \\
+\hline
+{\em parent} & Q\+Graphics\+Item parent if need \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s___view_block_n_p_c_ab6a88434bbcb808b801994bc320b5981}{}\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!get\+Colonne@{get\+Colonne}}
+\index{get\+Colonne@{get\+Colonne}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\subsubsection[{get\+Colonne}]{\setlength{\rightskip}{0pt plus 5cm}int S\+\_\+\+View\+Block\+N\+P\+C\+::get\+Colonne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s___view_block_n_p_c_ab6a88434bbcb808b801994bc320b5981}
+
+
+Get the column of self in the matrix view of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+column number 
+\end{DoxyReturn}
+\hypertarget{class_s___view_block_n_p_c_a32c2bf2773dfb42611e5b029a98f9b3f}{}\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!get\+Line@{get\+Line}}
+\index{get\+Line@{get\+Line}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\subsubsection[{get\+Line}]{\setlength{\rightskip}{0pt plus 5cm}int S\+\_\+\+View\+Block\+N\+P\+C\+::get\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s___view_block_n_p_c_a32c2bf2773dfb42611e5b029a98f9b3f}
+
+
+Get the line of self in the matrix view of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+line number 
+\end{DoxyReturn}
+\hypertarget{class_s___view_block_n_p_c_a59c007ce0c4eaae6e361f65bb7782289}{}\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!is\+Active@{is\+Active}}
+\index{is\+Active@{is\+Active}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\subsubsection[{is\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+\_\+\+View\+Block\+N\+P\+C\+::is\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s___view_block_n_p_c_a59c007ce0c4eaae6e361f65bb7782289}
+
+
+Get if self is active for detection. 
+
+\begin{DoxyReturn}{Returns}
+true if self is currently active 
+\end{DoxyReturn}
+\hypertarget{class_s___view_block_n_p_c_aa8cc7f8d5958a998ce6eb7db6b20031a}{}\index{S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}!set\+Active@{set\+Active}}
+\index{set\+Active@{set\+Active}!S\+\_\+\+View\+Block\+N\+P\+C@{S\+\_\+\+View\+Block\+N\+P\+C}}
+\subsubsection[{set\+Active}]{\setlength{\rightskip}{0pt plus 5cm}void S\+\_\+\+View\+Block\+N\+P\+C\+::set\+Active (
+\begin{DoxyParamCaption}
+\item[{bool}]{actif}
+\end{DoxyParamCaption}
+)}\label{class_s___view_block_n_p_c_aa8cc7f8d5958a998ce6eb7db6b20031a}
+
+
+Set self vision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actif} & true if active \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

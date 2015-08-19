@@ -33,31 +33,128 @@
 class G_Profil
 {
 public:
+    //Constructors
+    /**
+     * @brief Default constructor
+     */
     G_Profil();
+
+    /**
+     * @brief Constructor with username
+     * @param username Name of the player
+     */
     G_Profil(const QString &username);
 
+    /**
+     * @brief Get the username from self.
+     * @return username
+     */
     QString getUsername();
+
+    /**
+     * @brief Get the start date from self.
+     * @return start date
+     */
     QString getStartDate();
+
+    /**
+     * @brief Get the save date from self.
+     * @return save date
+     */
     QString getSaveDate();
+
+    /**
+     * @brief Get the game time from self.
+     * @return game time
+     */
     QString getGameTime();
+
+    /**
+     * @brief Get the load date from self.
+     * @return load date
+     */
     QString getLoadDate();
+
+    /**
+     * @brief Get the level from self.
+     * @return level
+     */
     int getLevel();
+
+    /**
+     * @brief Get the powers from self.
+     * @return list of powers
+     */
     QList<int> getPower();
+
+    /**
+     * @brief Get the number of lives from self.
+     * @return lives
+     */
     int getNbLive();
+
+    /**
+     * @brief Get the difficulty from self.
+     * @return difficulty
+     */
     int getDifficulty();
 
+    /**
+     * @brief Set the username to self.
+     */
     void setUsername(QString);
+
+    /**
+     * @brief Set the start date to self.
+     */
     void setStartDate(QString);
+
+    /**
+     * @brief Set the save date to self.
+     */
     void setSaveDate(QString);
+
+    /**
+     * @brief Set the game time to self.
+     */
     void setGameTime(QString);
+
+    /**
+     * @brief Set the level to self.
+     */
     void setLevel(int);
+
+    /**
+     * @brief Set the powers to self.
+     */
     void setPower(QList<int>);
+
+    /**
+     * @brief Set the lives to self.
+     */
     void setNbLive(int);
+
+    /**
+     * @brief Set the difficulty to self.
+     */
     void setDifficulty(int);
 
+    /**
+     * @brief Read a JSON file.
+     * @param json file
+     */
     void read(const QJsonObject &json);
+
+    /**
+     * @brief Write in a JSON file.
+     * @param json file
+     */
     void write(QJsonObject &json) const;
-    void print();
+
+    /**
+     * @brief Print informations in the debug
+     */
+    void printDebug();
 
     static int NBMAXVIE;
 

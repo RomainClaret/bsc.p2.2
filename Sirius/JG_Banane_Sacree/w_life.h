@@ -30,8 +30,22 @@ class W_Life : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Overlay widget to display lifes of the player.
+     * @param parent if need
+     */
     W_Life(QWidget *parent = 0);
+
+    /**
+     * @brief Listen to the paint event
+     */
     void paintEvent(QPaintEvent *);
+
+    /**
+     * @brief Update the life amount to given.
+     * @param value the amount to change to
+     */
     void updateHearts(int value);
 
 signals:

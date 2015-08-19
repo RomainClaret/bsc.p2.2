@@ -10,8 +10,8 @@
 
 S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
-    this->ligne = ligne;
-    this->colonne = colonne;
+    this->line = ligne;
+    this->column = colonne;
     this->owner = proprietaire;
     this->setZValue(2);
 
@@ -35,12 +35,12 @@ void S_ViewBlockNPC::setActive(bool actif)
 
 int S_ViewBlockNPC::getLine()
 {
-    return ligne;
+    return line;
 }
 
 int S_ViewBlockNPC::getColonne()
 {
-    return colonne;
+    return column;
 }
 
 bool S_ViewBlockNPC::isActive()
@@ -48,7 +48,7 @@ bool S_ViewBlockNPC::isActive()
     return actif;
 }
 
-//le pinguoin s'est déplacé sur un bloc de détection
+//the playable character moved on the block of detection
 void S_ViewBlockNPC::playableCharacterOn()
 {
     if(actif)
@@ -60,7 +60,7 @@ void S_ViewBlockNPC::playableCharacterOn()
 
 void S_ViewBlockNPC::blockOn()
 {
-    //recalcul le champs de vision de l'ennemi
+    //recalculated the view field of the enemy
     if(actif)
     {
         owner->viewBlockActive();

@@ -121,7 +121,7 @@ void W_MenuStart::loadGame(QString value)
     G_Profil* user = new G_Profil();
 
     user->read(object[value].toObject());
-    user->print();
+    user->printDebug();
 
     loadFile.close();
 
@@ -171,7 +171,7 @@ void W_MenuStart::newGame()
         QJsonObject gameObject;
         QJsonObject playerObject;
         newProfil->write(playerObject);
-        newProfil->print();
+        newProfil->printDebug();
 
         gameObject = object;
         gameObject[newProfil->getUsername()] = playerObject;
@@ -236,7 +236,7 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     QJsonObject playerObject;
 
     currentUser->write(playerObject);
-    currentUser->print();
+    currentUser->printDebug();
 
     gameObject = object;
     gameObject[currentUser->getUsername()] = playerObject;

@@ -44,6 +44,11 @@ class W_MenuStart : public QWidget
 {
     Q_OBJECT
 public:
+    //Constructor
+    /**
+     * @brief Overlay widget to display the start menu.
+     * @param parent if need
+     */
     explicit W_MenuStart(QWidget *parent = 0);
 
     QList<QPushButton*> *listButtonProfil;
@@ -53,16 +58,44 @@ public:
     QPushButton* validate;
     QLabel *textPseudo;
 
+    /**
+     * @brief Save the current level to the given profil.
+     * @param currentUser profil to save into
+     */
     static void saveGame(G_Profil* currentUser);
+
+    /**
+     * @brief Load the profil.
+     * @return true if it worked
+     */
     bool getProfil();
 
 signals:
+    /**
+     * @brief Start the game with with G_Profil
+     */
     void startGame(G_Profil*);
+
+    /**
+     * @brief Reload the game menu on maingame.
+     */
     void refreshGameMenu();
 
 public slots:
+    /**
+     * @brief Load the given level.
+     * @param value number of the level to load.
+     */
     void loadGame(QString value);
+
+    /**
+     * @brief Create a new game, and its profil.
+     */
     void newGame();
+
+    /**
+     * @brief Display of hide the interaction to create a new game.
+     */
     void newGameForm();
 
 private :

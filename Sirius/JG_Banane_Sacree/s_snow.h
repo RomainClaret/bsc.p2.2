@@ -30,10 +30,25 @@ class QGraphicsItem;
 class S_Snow : public G_Surface
 {
 public:
+    //Constructors
+    /**
+     * @brief Constructor with position setup.
+     * @param xpos set the postion on the x-axis
+     * @param ypos set the postion on the y-axis
+     * @param parent QGraphicsItem parent
+     */
     S_Snow(int xpos, int ypos, QGraphicsItem *parent = 0);
+
+    /**
+     * @brief Constructor without position setup.
+     * @param parent QGraphicsItem to depend on
+     */
     S_Snow(QGraphicsItem *parent = 0);
 
 private:
+    /**
+     * @brief Set the design of self.
+     */
     void setDesign();
 };
 
