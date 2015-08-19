@@ -681,7 +681,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_W || event->key() == Qt::Key_Up)
             {
-                playableCharacter->setPlayerOrientation("up"); //definir l'orientation du joueur
+                playableCharacter->setPlayerOrientation('t'); //definir l'orientation du joueur
 
                 if(movePlayableCharacterPingouinToTop())
                 {
@@ -704,7 +704,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_S || event->key() == Qt::Key_Down)
             {
-                playableCharacter->setPlayerOrientation("down");
+                playableCharacter->setPlayerOrientation('b');
 
                 if(movePlayableCharacterToBottom())
                 {
@@ -726,7 +726,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_A || event->key() == Qt::Key_Left)
             {
-                playableCharacter->setPlayerOrientation("left");
+                playableCharacter->setPlayerOrientation('l');
 
                 if(movePlayableCharacterPingouinToLeft())
                 {
@@ -749,7 +749,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
             if(event->key() == Qt::Key_D || event->key() == Qt::Key_Right)
             {
-                playableCharacter->setPlayerOrientation("right");
+                playableCharacter->setPlayerOrientation('r');
 
                 if(movePlayableCharacterPingouinToRight())
                 {
@@ -1048,7 +1048,7 @@ void G_Gameboard::loadLevel()
     playableCharacter->addToScene(mainScene);
 
     playableCharacter->removeTempFromSacoche();
-    playableCharacter->setPlayerOrientation("down");
+    playableCharacter->setPlayerOrientation('b');
     loadCheckpoint();
     setTimer();
 }
