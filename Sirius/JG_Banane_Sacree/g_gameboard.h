@@ -260,6 +260,12 @@ private:
      */
     void removeAllItems();
 
+    /**
+     * @brief Show the dialog "popup" with the text in param
+     * @param text Will be written in the popup
+     */
+    void showDialog(QString text);
+
     /*
      * ATTRIBUTES
     */
