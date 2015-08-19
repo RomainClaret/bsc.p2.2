@@ -72,7 +72,5 @@ void W_Object::reloadObjectList(QList<G_Object*> objectList)
     }
 
     this->resize(map.size()*G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
-
-    qDebug() << "Call Update";
     update();
 }

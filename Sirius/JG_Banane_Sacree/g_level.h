@@ -27,6 +27,16 @@ class QStringList;
 #include <QDomElement>
 #include <QDomDocument>
 
+/**
+ * @brief Level. Where the level informations are read (from XML) and stored.
+ * @details This is the level which will contain the level information and generate the Scene with all items.
+ * @author Claret Romain, romain.claret@rocla.ch
+ * @author Divernois Margaux, margaux.divernois@gmail.com
+ * @author Visinand Steve, visinandst@gmail.com
+ * @copyright Custom License + NDA
+ * @version 1.0
+ * @date 19 August 2015
+ */
 class G_Level
 {
 public:

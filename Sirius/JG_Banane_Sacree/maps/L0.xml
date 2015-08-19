@@ -850,6 +850,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="20">
+   <DIALOG text="Docteur Douceur, le méchant Singe, a volé la banane Sacrée ! Il est de ton devoir de la récupérer. Pour cela, nous t'envoyons en mission sur le très dangereux Iceberg glacé, la base du monstrueux singe Docteur Douceur! Tu as deux jours avant qu'il n'utilise la banane sacrée pour faire un délicieux banana split. Empêche-le ! Dans 1min, ce message glacé s'auto-fondera. Nous nierons tout lien avec cette mission. Vous êtes maintenant seul. Bonne chance. Indice: Si tu te perds, suit les flèches ;)" />
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="21">
@@ -947,7 +948,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="21">
-    <BLOC type="SNOW"/>
+	<BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>

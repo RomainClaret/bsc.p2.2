@@ -327,11 +327,7 @@ void G_Gameboard::fixMovable(B_Movable *b)
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
             QString text = tr("Tu as bloqué ta sortie!");
-            setWidgetPositionCenter(dialog);
-            dialogProxy->show();
-            dialog->setText(text,2);
-
-            dialogToogle = true;
+            showDialog(text);
 
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
@@ -353,10 +349,7 @@ void G_Gameboard::fixMovable(B_Movable *b)
                 QString text = tr("OUCH! Ce bloc vient d'écraser un ");
                 text.append(objet->getName());
                 text.append(tr("! Tu recommences au dernier checkpoint! "));
-                setWidgetPositionCenter(dialog);
-                dialogProxy->show();
-                dialog->setText(text,2);
-                dialogToogle = true;
+                showDialog(text);
             }
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
@@ -397,10 +390,7 @@ void G_Gameboard::checkPositionEvents()
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
-                    setWidgetPositionCenter(dialog);
-                    dialogProxy->show();
-                    dialog->setText(text,2);
-                    dialogToogle = true;
+                    showDialog(text);
                 }
             }
 
@@ -413,28 +403,23 @@ void G_Gameboard::checkPositionEvents()
             S_Dialog *item = dynamic_cast<S_Dialog*>(CollidingItems.at(i));
             mainScene->removeItem(CollidingItems.at(i));
 
-            setWidgetPositionCenter(dialog);
-            dialogProxy->show();
-            dialog->setText(item->getText(),1);
-            dialogToogle = true;
+            showDialog(item->getText());
+
+            qDebug() << "DIALOG";
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
             restartEnigma();
 
-            setWidgetPositionCenter(dialog);
-            dialogProxy->show();
-            dialog->setText("Plouf, dans l'eau! Tu recommences au dernier checkpoint",2);
-            dialogToogle = true;
+            QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
+            showDialog(text);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(E_Fox).name() || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name())
         {
             restartEnigma();
 
-            setWidgetPositionCenter(dialog);
-            dialogProxy->show();
-            dialog->setText("Tu t'es fait repéré par un ennemi",2);
-            dialogToogle = true;
+            QString text = "Tu t'es fait repéré par un ennemi";
+            showDialog(text);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
         {
@@ -483,7 +468,7 @@ void G_Gameboard::checkChangeView(char sens)
                 playableCharacter->emptySacoche();
                 setLevel(bloc->getNextLevel());
                 setProxy();
-                setFirstDialog();
+                //setFirstDialog();
             }
             else if(bloc->isEndLevel())
             {
@@ -519,11 +504,7 @@ void G_Gameboard::checkChangeView(char sens)
                     text.append((bloc->getNeededItem()));
                     text.append(tr("\" pour aller plus loin ;) "));
 
-                    setWidgetPositionCenter(dialog);
-                    dialogProxy->show();
-                    dialog->setText(text,2);
-
-                    dialogToogle = true;
+                    showDialog(text);
 
                     playableCharacter->moveBack();
                 }
@@ -570,6 +551,7 @@ void G_Gameboard::changeView(char sens)
 
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
     loadCheckpoint();
+    checkPositionEvents();
 
     setViewPosition();
     playerView->setSceneRect(viewPositionX,viewPositionY,windowSizeX,windowSizeY);
@@ -908,10 +890,8 @@ void G_Gameboard::restartEnigma()
         playerProfil->setNbLive(4);
         restartLevel();
 
-        setWidgetPositionCenter(dialog);
-        dialogProxy->show();
-        dialog->setText(tr("Tu as perdu toutes tes vies! Tu recommences au début du niveau."),1);
-        dialogToogle = true;
+        QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+        showDialog(text);
     }
 }
 
@@ -928,7 +908,7 @@ void G_Gameboard::restartLevel()
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
 
-    setFirstDialog();
+    //setFirstDialog();
 }
 
 
@@ -944,7 +924,7 @@ void G_Gameboard::returnIsland()
 
     setLevel(1);
     setProxy();
-    setFirstDialog();
+    //setFirstDialog();
 
     objectListProxy->hide();
     lifeListProxy->hide();
@@ -990,7 +970,6 @@ void G_Gameboard::saveCheckpoint()
 void G_Gameboard::loadCheckpoint()
 {
     playableCharacter->setPos((checkpoint->x()+gameSquares)/gameSquares,(checkpoint->y()+gameSquares)/gameSquares);
-    checkPositionEvents();
 }
 
 void G_Gameboard::setProxy()
@@ -1020,6 +999,9 @@ void G_Gameboard::setProxy()
     dialogProxy->hide();
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
+
+    qDebug() << "PROXY";
+    checkPositionEvents();
 }
 
 /**
@@ -1069,8 +1051,6 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setLevel(playerProfil->getLevel());
     setProxy();
     setTimer();
-
-    setFirstDialog();
 }
 
 void G_Gameboard::setFirstDialog()
@@ -1108,4 +1088,13 @@ int G_Gameboard::getSizeX()
 int G_Gameboard::getSizeY()
 {
     return sizeY;
+}
+
+void G_Gameboard::showDialog(QString text)
+{
+    qDebug() << "DIALOG SHOW";
+    setWidgetPositionCenter(dialog);
+    dialogProxy->show();
+    dialog->setText(text,1);
+    dialogToogle = true;
 }
