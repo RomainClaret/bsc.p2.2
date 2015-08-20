@@ -11,9 +11,9 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "e_fox.h"
-#include "g_gameboard.h"
-#include "surface/s_viewblocknpc.h"
+#include "../character/e_fox.h"
+#include "../g_gameboard.h"
+#include "../surface/s_viewblocknpc.h"
 
 /**
  * @details Set the skin, speed at 10, Z value at 2 and default orientation to top.

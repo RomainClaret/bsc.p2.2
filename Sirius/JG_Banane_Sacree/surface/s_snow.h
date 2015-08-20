@@ -13,7 +13,7 @@
 
 #ifndef S_SNOW_H
 #define S_SNOW_H
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 
 class QGraphicsItem;
 

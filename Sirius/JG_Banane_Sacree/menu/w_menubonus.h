@@ -31,24 +31,34 @@ class W_Menu;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 19 August 2015
- * @todo code all the class
+ * @version 1.1
+ * @date 20 August 2015
  */
 class W_MenuBonus : public QWidget
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructor
+     * @param parent (W_Menu*)
+     */
     W_MenuBonus(QWidget *parent);
+
+    /**
+     * @brief Set the W_Menu title and subtitle
+     */
     void setTitleParent();
 
 private:
+    //Layout
     QFormLayout *layoutMenuPause;
 
+    //Buttons
     QPushButton *btnBonusCode;
     QPushButton *btnBonusCredits;
     QPushButton *btnBonusReturn;
 
+    //Parent
     W_Menu* parent;
 
 signals:

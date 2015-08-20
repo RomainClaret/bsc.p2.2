@@ -1,6 +1,6 @@
 #ifndef STATE_ENEMYPATROL_H
 #define STATE_ENEMYPATROL_H
-#include "state_enemy.h"
+#include "../state/state_enemy.h"
 class C_Enemy;
 
 /**

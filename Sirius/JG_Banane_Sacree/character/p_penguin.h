@@ -13,8 +13,8 @@
 
 #ifndef P_PENGUIN_H
 #define P_PENGUIN_H
-#include "c_player.h"
-#include "g_object.h"
+#include "../character/c_player.h"
+#include "../g_object.h"
 #include <QList>
 
 class QGraphicsItem;

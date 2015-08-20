@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_menubonus.h"
+#include "../menu/w_menubonus.h"
 #include <QGraphicsDropShadowEffect>
 #include <QGraphicsEffect>
 #include <QFrame>
@@ -20,7 +20,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QFormLayout>
-#include "w_menu.h"
+#include "../menu/w_menu.h"
 
 W_MenuBonus::W_MenuBonus(QWidget *parent)
 {
@@ -35,8 +35,8 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
    btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
 
-//    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(exitGame()));
-//    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(resumeGame()));
+    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
+    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(loadCredits()));
     connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
 
    layoutMenuPause = new QFormLayout;

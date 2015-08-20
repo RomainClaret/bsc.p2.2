@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "b_wall.h"
+#include "../surface/b_wall.h"
 
 #include <QBrush>
 #include <QGraphicsItem>

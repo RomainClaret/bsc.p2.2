@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_menubonus.h"
+#include "../menu/w_menubonus.h"
 #include <QGraphicsDropShadowEffect>
 #include <QGraphicsEffect>
 #include <QFrame>
@@ -20,36 +20,98 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QFormLayout>
-#include "w_menu.h"
+#include "../menu/w_menu.h"
+#include <QLineEdit>
+#include <QDebug>
+#include <QKeyEvent>
+#include "menu/w_menucode_lineedit.h"
+#include <QLabel>
 
 W_MenuCode::W_MenuCode(QWidget *parent)
 {
    this->parent = (W_Menu*)parent;
    setTitleParent();
 
-   btnBonusCode = new QPushButton(tr("Entrer un code spécial"));
-   btnBonusCredits = new QPushButton(tr("Voir les crédits"));
-   btnBonusReturn = new QPushButton(tr("Retourner au menu pause"));
+   btnCodeValidate = new QPushButton(tr("Valider le code"));
+   lineEditCode = new W_MenuCode_LineEdit;
+   lineEditCode->setEnabled(true);
+   lineEditCode->setFocusPolicy(Qt::StrongFocus);
 
-   btnBonusCode->setStyleSheet(W_Menu::styleBtn);
-   btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
+   btnBonusReturn = new QPushButton(tr("Retourner aux Bonus"));
+   labelCodeResult = new QLabel("");
+   labelCodeResult->setStyleSheet("border: none;");
+
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
+   btnCodeValidate->setStyleSheet(W_Menu::styleBtn);
 
-//    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(exitGame()));
-//    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(resumeGame()));
-    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
+
+   connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadBonus()));
+   connect(btnCodeValidate, SIGNAL(clicked()),this, SLOT(validateCode()));
 
    layoutMenuPause = new QFormLayout;
-   layoutMenuPause->addRow(btnBonusCode);
-   layoutMenuPause->addRow(btnBonusCredits);
+   layoutMenuPause->addRow(labelCodeResult);
+   layoutMenuPause->addRow(lineEditCode);
+   layoutMenuPause->addRow(btnCodeValidate);
    layoutMenuPause->addRow(btnBonusReturn);
 
     this->resize(400,400);
     this->setLayout(layoutMenuPause);
+
+   hash.insert("Hello World!",1);
+   hash.insert("Je veux des bananes",2);
+   hash.insert("Happy Feet",3);
+   hash.insert("Ici, il fait chaud",4);
+   hash.insert("I am not from Madagascar",5);
+   hash.insert("I am a secret agent",6);
+
 }
 
 void W_MenuCode::setTitleParent()
 {
-    parent->setTitle(tr("Secret Code"));
-    parent->setSubTitle(tr("Chut..."));
+    parent->setTitle(tr("Chut..."));
+    parent->setSubTitle(tr("Entrez votre code spécial afin d'obtenir des bonus"));
 }
+
+void W_MenuCode::keyPressEvent(QKeyEvent *event)
+{
+    lineEditCode->keyPressEvent(event);
+}
+
+void W_MenuCode::validateCode()
+{
+    QString code = lineEditCode->text();
+    qDebug() << code;
+
+    if(hash.contains(code))
+    {
+        acceptCode();
+        switch(hash[code])
+        {
+        case W_MenuCode::CODE_HELLO: qDebug() << "HELLO WORLD"; break;
+        case W_MenuCode::CODE_BANANA: qDebug() << "BANANA"; BANANASPECIAL = true; break;
+        case W_MenuCode::CODE_HAPPYFEET: qDebug() << "HAPPY FEET"; break;
+        case W_MenuCode::CODE_HOTHOTHOT: qDebug() << "HOTHOTHOT"; break;
+        case W_MenuCode::CODE_MADAGASCAR: qDebug() << "madagascar"; break;
+        case W_MenuCode::CODE_SECRETAGENT: qDebug() << "secret agent"; break;
+        default: refuseCode();
+        }
+    }
+    else
+    {
+        refuseCode();
+    }
+
+
+}
+
+void W_MenuCode::refuseCode()
+{
+    labelCodeResult->setText("Try again...");
+}
+
+void W_MenuCode::acceptCode()
+{
+    labelCodeResult->setText("Code validé! Découvre son action sur ton jeu ;)");
+}
+
+bool W_MenuCode::BANANASPECIAL = false;

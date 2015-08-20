@@ -15,9 +15,10 @@
 #define W_MENU_H
 
 #include <QWidget>
-#include "w_menupause.h"
-#include "w_menubonus.h"
-#include "w_menucode.h"
+#include "../menu/w_menupause.h"
+#include "../menu/w_menubonus.h"
+#include "../menu/w_menucode.h"
+#include "../menu/w_menucredits.h"
 
 class QLabel;
 class QPushButton;
@@ -25,51 +26,93 @@ class QFormLayout;
 class QGraphicsDropShadowEffect;
 
 /**
- * @brief Bonus Menu, which appears when the bonus button is clicked on Pause Menu.
- * @details It allows the user to:
- * Use Bonus Codes,
- * ...
+ * @brief Menu, which will contain Menu Widget.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 19 August 2015
- * @todo code all the class
+ * @version 1.1
+ * @date 20 August 2015
  */
 class W_Menu : public QWidget
 {
     Q_OBJECT
+
 public:
     W_Menu(QWidget *parent);
 
+    // Styling Strings for buttons
     static QString styleBtn;
     static QString styleBtnUnable;
 
+    /**
+     * @brief KeyPressEvent
+     * @param event
+     */
+    void keyPressEvent(QKeyEvent *event);
+
+    /**
+     * @brief PaintEvent used for the bordering
+     */
+    void paintEvent(QPaintEvent *);
+
+    /**
+     * @brief Set the Menu Title with param's value
+     * @param title QString containing the new title
+     */
     void setTitle(QString title);
+
+    /**
+     * @brief Set the Menu Subtitle with param's value
+     * @param subTitle QString containing the new subtitle
+     */
     void setSubTitle(QString subTitle);
 
+    /**
+     * @brief ShowEvent called when the widget is hidded or shown.
+     */
     void showEvent(QShowEvent*);
 
+    /**
+     * @brief Immediately link to the W_MenuPause's setUnableMenu method
+     * @param levelValue Int containing the level's number
+     */
     void setUnableMenu(int levelValue);
 
 private:
+    //Layout
     QFormLayout *layoutMenuPause;
     QLabel *titleMenuPause;
     QLabel *undertitleMenuPause;
 
+    //Different Menu Widget inside
     W_MenuPause* menuPause;
     W_MenuBonus* menuBonus;
     W_MenuCode* menuCode;
-
-    QGraphicsDropShadowEffect* shadowbtn();
-    void paintEvent(QPaintEvent *pe);
+    W_MenuCredits* menuCredits;
 
 signals:
 
 public slots:
+    /**
+     * @brief SLOT: Called when Bonus Widget need to be placed in the menu
+     */
     void loadBonus();
+
+    /**
+     * @brief SLOT: Called when Pause Widget need to be placed in the menu
+     */
     void loadPause();
+
+    /**
+     * @brief SLOT: Called when Code Widget need to be placed in the menu
+     */
+    void loadCode();
+
+    /**
+     * @brief SLOT: Called when Credits Widget need to be placed in the menu
+     */
+    void loadCredits();
 
 };
 

@@ -11,10 +11,10 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_object.h"
-#include "g_object.h"
-#include "character/p_penguin.h"
-#include "g_gameboard.h"
+#include "../widget/w_object.h"
+#include "../g_object.h"
+#include "../character/p_penguin.h"
+#include "../g_gameboard.h"
 #include <QWidget>
 #include <QDebug>
 //#include <QList>

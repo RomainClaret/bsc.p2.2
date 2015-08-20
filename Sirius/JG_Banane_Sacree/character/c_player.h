@@ -13,7 +13,7 @@
 
 #ifndef C_PLAYER_H
 #define C_PLAYER_H
-#include "g_character.h"
+#include "../character/g_character.h"
 #include <QGraphicsItem>
 class QPainter;
 class QRectF;

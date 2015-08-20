@@ -1,4 +1,4 @@
-#include "factory_surface.h"
+#include "../surface/factory_surface.h"
 
 #include <QGraphicsScene>
 

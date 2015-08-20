@@ -15,7 +15,7 @@
 #define W_OBJECT_H
 
 #include <QWidget>
-#include "g_object.h"
+#include "../g_object.h"
 #include <QList>
 #include <QMap>
 

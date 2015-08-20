@@ -61,7 +61,10 @@ SOURCES += \
     widget/w_dialog.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
-    character/g_character.cpp \
+    menu/w_menucode_lineedit.cpp \
+    menu/w_menucredits.cpp \
+    tools/verticalscrollarea.cpp \
+ 	character/g_character.cpp \
     character/t_charactermover.cpp \
     character/t_charactertimermover.cpp
 
@@ -100,6 +103,9 @@ HEADERS  += \
     widget/w_dialog.h \
     widget/w_life.h \
     widget/w_object.h \
+    menu/w_menucode_lineedit.h \
+    menu/w_menucredits.h \
+    tools/verticalscrollarea.h \
     character/g_character.h \
     character/t_charactermover.h \
     character/t_charactertimermover.h

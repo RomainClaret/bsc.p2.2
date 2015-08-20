@@ -4,7 +4,7 @@
 #include <QDebug>
 #include <QRectF>
 
-#include "g_gameboard.h"
+#include "../g_gameboard.h"
 
 G_Character::G_Character()
 {

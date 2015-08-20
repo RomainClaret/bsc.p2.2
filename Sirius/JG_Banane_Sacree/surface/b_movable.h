@@ -13,7 +13,7 @@
 
 #ifndef B_MOVABLE_H
 #define B_MOVABLE_H
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 #include <QList>
 
 class QGraphicsRectItem;

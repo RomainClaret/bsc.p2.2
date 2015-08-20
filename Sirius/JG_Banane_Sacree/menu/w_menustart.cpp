@@ -11,8 +11,8 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_menustart.h"
-#include "g_profil.h"
+#include "../menu/w_menustart.h"
+#include "../g_profil.h"
 
 #include <QPushButton>
 #include <QList>
@@ -30,8 +30,8 @@
 #include <QDir>
 #include <QDateTime>
 
-#include "w_menupause.h"
-#include "g_gameboard.h"
+#include "../menu/w_menupause.h"
+#include "../g_gameboard.h"
 
 W_MenuStart::W_MenuStart(QWidget *parent) :
     QWidget(parent)

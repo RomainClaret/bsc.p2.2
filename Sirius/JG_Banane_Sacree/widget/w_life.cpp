@@ -11,15 +11,17 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_life.h"
-#include "g_object.h"
-#include "g_gameboard.h"
+#include "../widget/w_life.h"
+#include "../g_object.h"
+#include "../g_gameboard.h"
 
 #include <QPainter>
 #include <QBrush>
 #include <QFont>
 #include <QWidget>
 #include <QDebug>
+
+#include <menu/w_menucode.h>
 
 W_Life::W_Life(QWidget *parent)
 {
@@ -32,7 +34,16 @@ void W_Life::paintEvent(QPaintEvent *)
 {
     QPainter paint(this);
 
-    QString img = ":/items/items/egg.png";
+    QString img;
+    if(W_MenuCode::BANANASPECIAL)
+    {
+        img = ":/items/items/banana.png";
+    }
+    else
+    {
+        img = ":/items/items/egg.png";
+    }
+
     QString totalLifeString = QString::number(totalLife);
     totalLifeString.append("x");
 
@@ -48,13 +59,6 @@ void W_Life::paintEvent(QPaintEvent *)
     paint.setBrush(brush);
     paint.setFont(font);
     paint.drawText(G_Gameboard::getGameSquares()+5, G_Gameboard::getGameSquares()/2+5, totalLifeString);
-
-//    for(int i = 0; i<totalLife; i++)
-//    {
-//        qDebug() << i*Gameboard::getGameSquares();
-//        paint.drawPixmap(i*Gameboard::getGameSquares(),0,Gameboard::getGameSquares(),
-//                         Gameboard::getGameSquares(),QPixmap(img));
-//    }
 }
 
 void W_Life::updateHearts(int value)

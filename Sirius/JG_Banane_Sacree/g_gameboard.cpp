@@ -791,6 +791,10 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             }
         }
     }
+    else
+    {
+        menuPauseInGame->keyPressEvent(event);
+    }
     if(event->key() == Qt::Key_Escape)
     {
         pauseMenu();
