@@ -54,14 +54,16 @@ SOURCES += \
     character/e_fox.cpp \
     character/e_wolf.cpp \
     character/factory_character.cpp \
-    character/g_character.cpp \
     character/p_penguin.cpp \
     state/state_npcpatrol.cpp \
     state/state_npcpause.cpp \
     state/state_npcsleep.cpp \
     widget/w_dialog.cpp \
     widget/w_life.cpp \
-    widget/w_object.cpp
+    widget/w_object.cpp \
+    character/g_character.cpp \
+    character/t_charactermover.cpp \
+    character/t_charactertimermover.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -90,7 +92,6 @@ HEADERS  += \
     character/e_fox.h \
     character/e_wolf.h \
     character/factory_character.h \
-    character/g_character.h \
     character/p_penguin.h \
     state/state_enemy.h \
     state/state_enemypatrol.h \
@@ -98,7 +99,10 @@ HEADERS  += \
     state/state_enemysleep.h \
     widget/w_dialog.h \
     widget/w_life.h \
-    widget/w_object.h
+    widget/w_object.h \
+    character/g_character.h \
+    character/t_charactermover.h \
+    character/t_charactertimermover.h
 
 RESOURCES += \
     images.qrc \

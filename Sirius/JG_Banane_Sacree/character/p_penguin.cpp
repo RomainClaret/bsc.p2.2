@@ -47,6 +47,8 @@ P_Penguin::P_Penguin() : C_Player()
 
     slideAble = true;
 
+    this->mover = new t_CharacterMover(this);
+
 }
 void P_Penguin::setPos(int x, int y)
 {
@@ -61,22 +63,37 @@ void P_Penguin::setPos(int x, int y)
     topCollideBox->setPos(xPos+1, yPos-G_Gameboard::getGameSquares()+1);
 }
 
-void P_Penguin::moveBy(int x, int y)
+void P_Penguin::moveWithThread(char orientation)
+{
+    mover->moveCharacter(orientation);
+}
+
+void P_Penguin::moveWithTimer(char orientation)
 {
 
+}
 
-//    QPropertyAnimation *animation = new QPropertyAnimation(this, "pos");
-//    animation->setDuration(1000);
-//    animation->setStartValue(QPoint(this->pos().x(), this->pos().y()));
-//    animation->setEndValue(QPoint(this->pos().x() + x*gameSquare, this->pos().y() + y*gameSquare));
-
-//    animation->start();
+void P_Penguin::moveBy(int x, int y)
+{
 
     C_Player::moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     leftCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     rightCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     bottomCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
     topCollideBox->moveBy(x*G_Gameboard::getGameSquares(),y*G_Gameboard::getGameSquares());
+
+    lastMove->setX(x);
+    lastMove->setY(y);
+}
+
+
+void P_Penguin::moveByPixel(int x, int y)
+{
+    C_Player::moveBy(x,y);
+    leftCollideBox->moveBy(x,y);
+    rightCollideBox->moveBy(x,y);
+    bottomCollideBox->moveBy(x,y);
+    topCollideBox->moveBy(x,y);
 
     lastMove->setX(x);
     lastMove->setY(y);

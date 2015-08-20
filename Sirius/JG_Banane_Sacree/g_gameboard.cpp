@@ -49,6 +49,10 @@
 #include <QTimer>
 #include <QGraphicsProxyWidget>
 
+#include <QPropertyAnimation>
+
+#include "character/t_charactermover.h"
+
 #define SLIDE_SPEED (80)
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
@@ -763,6 +767,19 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             if(event->key() == Qt::Key_0)
             {
                 restartEnigma();
+            }
+            if(event->key() == Qt::Key_B)
+            {
+                //test
+                qDebug() << "B";
+
+//                QPropertyAnimation animation(playableCharacter, "pos");
+//                animation.setDuration(1000);
+//                animation.setStartValue(QPointF(playableCharacter->getPosOnGame().x()*32, playableCharacter->getPosOnGame().y()*32));
+//                animation.setEndValue(QPointF(playableCharacter->getPosOnGame().x()*32+50, playableCharacter->getPosOnGame().y()*32));
+//                animation.start();
+
+                playableCharacter->moveWithThread('r');
             }
         }
         else
