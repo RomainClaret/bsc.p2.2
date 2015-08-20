@@ -18,9 +18,13 @@
 #include <QFormLayout>
 #include <QLabel>
 #include <QStyleOption>
+#include <QMediaPlayer>
 
 W_Dialog::W_Dialog(QWidget *parent)
 {
+    player = new QMediaPlayer;
+    player->setMedia(QUrl("Sound-Eggtimer-SystemNotification.wav"));
+
     resize(300,200);
     this->setStyleSheet(
                         "text-align: center;"
@@ -85,3 +89,12 @@ void W_Dialog::paintEvent(QPaintEvent *pe)
   QStyle::PE_Widget, &o, &p, this);
 }
 
+void W_Dialog::showEvent(QShowEvent *)
+{
+    player->play();
+}
+
+void W_Dialog::hideEvent(QHideEvent *)
+{
+    player->play();
+}

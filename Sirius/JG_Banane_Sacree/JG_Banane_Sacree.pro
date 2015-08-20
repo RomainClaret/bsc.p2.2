@@ -17,7 +17,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml
+QT       += core gui xml multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -109,4 +109,5 @@ HEADERS  += \
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
-    icons.qrc
+    icons.qrc \
+    music.qrc
