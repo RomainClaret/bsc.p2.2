@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "w_menupause.h"
+#include "../menu/w_menupause.h"
 #include <QGraphicsDropShadowEffect>
 #include <QGraphicsEffect>
 #include <QFrame>
@@ -20,7 +20,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QFormLayout>
-#include "w_menu.h"
+#include "../menu/w_menu.h"
 #include <QDebug>
 
 W_MenuPause::W_MenuPause(QWidget *parent, G_Gameboard* gameboard)

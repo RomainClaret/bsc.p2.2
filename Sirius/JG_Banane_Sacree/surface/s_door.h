@@ -14,7 +14,7 @@
 #ifndef S_DOOR_H
 #define S_DOOR_H
 
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 
 class QGraphicsItem;
 

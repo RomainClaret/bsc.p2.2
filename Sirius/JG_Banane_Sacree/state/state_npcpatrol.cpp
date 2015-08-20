@@ -1,6 +1,5 @@
 #include "state_enemypatrol.h"
 #include "character/c_enemy.h"
-
 State_EnemyPatrol::State_EnemyPatrol() : State_Enemy()
 {
 }

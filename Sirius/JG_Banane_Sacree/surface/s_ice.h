@@ -13,7 +13,7 @@
 
 #ifndef S_ICE_H
 #define S_ICE_H
-#include "g_surface.h"
+#include "../surface/g_surface.h"
 
 class QGraphicsItem;
 

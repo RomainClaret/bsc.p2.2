@@ -13,7 +13,7 @@
 
 #ifndef E_FOX_H
 #define E_FOX_H
-#include "c_enemy.h"
+#include "../character/c_enemy.h"
 
 /**
  * @brief Enemy Character: Fox

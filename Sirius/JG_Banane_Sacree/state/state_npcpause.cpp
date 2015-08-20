@@ -1,6 +1,6 @@
-#include "state_enemypause.h"
-#include "character/c_enemy.h"
 
+#include "../state/state_enemypause.h"
+#include "../character/c_enemy.h"
 State_EnemyPause::State_EnemyPause() : State_Enemy()
 {
 }

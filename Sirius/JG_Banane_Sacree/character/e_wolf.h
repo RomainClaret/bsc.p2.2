@@ -13,7 +13,7 @@
 
 #ifndef E_WOLF_H
 #define E_WOLF_H
-#include "c_enemy.h"
+#include "../character/c_enemy.h"
 
 class G_Gameboard;
 

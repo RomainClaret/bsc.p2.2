@@ -15,7 +15,7 @@
 #define W_MENUPAUSE_H
 
 #include <QWidget>
-#include "g_gameboard.h"
+#include "../g_gameboard.h"
 
 class QLabel;
 class QPushButton;

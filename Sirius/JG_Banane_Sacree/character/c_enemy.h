@@ -15,9 +15,9 @@
 #define C_ENEMY_H
 
 #include <QGraphicsItem>
-#include "state/state_enemy.h"
+#include "../state/state_enemy.h"
 
-#include "g_character.h"
+#include "../character/g_character.h"
 
 class QPoint;
 class QGraphicsRectItem;

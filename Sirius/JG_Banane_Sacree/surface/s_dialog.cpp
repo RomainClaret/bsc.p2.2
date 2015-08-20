@@ -11,7 +11,7 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "s_dialog.h"
+#include "../surface/s_dialog.h"
 
 #include <QBrush>
 

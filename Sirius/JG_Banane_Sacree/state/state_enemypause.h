@@ -1,7 +1,7 @@
 #ifndef STATE_ENEMYPAUSE_H
 #define STATE_ENEMYPAUSE_H
 
-#include "state_enemy.h"
+#include "../state/state_enemy.h"
 class C_Enemy;
 
 /**
