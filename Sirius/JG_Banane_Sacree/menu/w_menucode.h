@@ -31,21 +31,41 @@ class QLabel;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 19 August 2015
- * @todo code all the class
+ * @version 1.1
+ * @date 20 August 2015
  */
 class W_MenuCode : public QWidget
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructor
+     * @param parent (W_Menu*)
+     */
     W_MenuCode(QWidget *parent);
+
+    /**
+     * @brief Set the W_Menu title and subtitle
+     */
     void setTitleParent();
+
+    /**
+     * @brief Refuse the code inserted  in the QLineEdit
+     */
     void refuseCode();
+
+    /**
+     * @brief Accept the code inserted in the QLineEdit
+     */
     void acceptCode();
 
+    /**
+     * @brief KeyPressEvent, used to send events to the QLineEdit
+     * @param event
+     */
     void keyPressEvent(QKeyEvent *event);
 
+    //Static Const Element
     static const int CODE_HELLO = 1;
     static const int CODE_BANANA = 2;
     static const int CODE_HAPPYFEET = 3;
@@ -56,20 +76,29 @@ public:
     static bool BANANASPECIAL;
 
 private:
+    // Layout
     QFormLayout *layoutMenuPause;
 
+    // Elements
     QPushButton *btnBonusReturn;
     QPushButton *btnCodeValidate;
     QLabel* labelCodeResult;
 
+    // Personnal QLineEdit
     W_MenuCode_LineEdit* lineEditCode;
 
+    // Parent
     W_Menu* parent;
+
+    // Hash <Code, Value>
     QHash<QString,int> hash;
 
 signals:
 
 public slots:
+    /**
+     * @brief SLOT: Check if the code is validate or not
+     */
     void validateCode();
 
 };

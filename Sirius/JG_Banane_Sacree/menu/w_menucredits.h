@@ -14,22 +14,40 @@ class W_MenuCredits: public QWidget
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructor
+     * @param parent
+     */
     W_MenuCredits(QWidget *parent);
+
+    /**
+     * @brief Set the W_Menu title and subtitle
+     */
     void setTitleParent();
 
+    /**
+     * @brief showEvent
+     */
     void showEvent(QShowEvent*);
 
 private:
+    // Layout
     QFormLayout *layoutMenuPause;
-    QPushButton *btnBonusReturn;
-    W_Menu* parent;
 
+    // Element
+    QPushButton *btnBonusReturn;
     QLabel* textCredits;
     VerticalScrollArea* scrollArea;
     QTimer* timer;
 
+    // Parent
+    W_Menu* parent;
+
 public slots:
-        void moveCredits();
+    /**
+     * @brief SLOT: Move the credits
+     */
+    void moveCredits();
 };
 
 #endif // W_MENUCREDITS_H
