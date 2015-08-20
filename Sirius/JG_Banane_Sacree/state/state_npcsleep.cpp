@@ -1,6 +1,7 @@
-#include "../state/state_enemysleep.h"
-#include "../character/c_enemy.h"
-#include "../surface/s_viewblocknpc.h"
+#include "state_enemysleep.h"
+#include "character/c_enemy.h"
+#include "surface/s_viewblocknpc.h"
+
 State_EnemySleep::State_EnemySleep() : State_Enemy()
 {
     initialisation = true;
