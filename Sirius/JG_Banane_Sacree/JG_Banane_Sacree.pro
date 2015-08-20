@@ -61,7 +61,8 @@ SOURCES += \
     state/state_npcsleep.cpp \
     widget/w_dialog.cpp \
     widget/w_life.cpp \
-    widget/w_object.cpp
+    widget/w_object.cpp \
+    menu/w_menucode_lineedit.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -98,7 +99,8 @@ HEADERS  += \
     state/state_enemysleep.h \
     widget/w_dialog.h \
     widget/w_life.h \
-    widget/w_object.h
+    widget/w_object.h \
+    menu/w_menucode_lineedit.h
 
 RESOURCES += \
     images.qrc \

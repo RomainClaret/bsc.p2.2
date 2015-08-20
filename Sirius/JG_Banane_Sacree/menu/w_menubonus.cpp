@@ -35,7 +35,7 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
    btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
 
-//    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(exitGame()));
+    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
 //    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(resumeGame()));
     connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
 

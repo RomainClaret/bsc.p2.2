@@ -96,7 +96,7 @@ W_Menu::W_Menu(QWidget *parent)
    this->setLayout(layoutMenuPause);
 }
 
-void W_Menu::paintEvent(QPaintEvent *pe)
+void W_Menu::paintEvent(QPaintEvent *)
 {
   QStyleOption o;
   o.initFrom(this);
@@ -118,6 +118,7 @@ void W_Menu::setSubTitle(QString subTitle)
 void W_Menu::loadBonus()
 {
     menuPause->setVisible(false);
+    menuCode->setVisible(false);
     menuBonus->setVisible(true);
     menuBonus->setTitleParent();
     adjustSize();
@@ -126,11 +127,24 @@ void W_Menu::loadBonus()
 void W_Menu::loadPause()
 {
     menuPause->setVisible(true);
+    menuCode->setVisible(false);
     menuBonus->setVisible(false);
     menuPause->setTitleParent();
     adjustSize();
 }
 
+void W_Menu::loadCode()
+{
+    menuCode->setVisible(true);
+    menuPause->setVisible(false);
+    menuBonus->setVisible(false);
+    menuCode->setTitleParent();
+    adjustSize();
+}
+
+/**
+ * @details Call loadPause() method
+ */
 void W_Menu::showEvent(QShowEvent*)
 {
     loadPause();
@@ -139,4 +153,9 @@ void W_Menu::showEvent(QShowEvent*)
 void W_Menu::setUnableMenu(int levelValue)
 {
     menuPause->setUnableMenu(levelValue);
+}
+
+void W_Menu::keyPressEvent(QKeyEvent *event)
+{
+    menuCode->keyPressEvent(event);
 }

@@ -21,6 +21,7 @@ class QPushButton;
 class QFormLayout;
 class QGraphicsDropShadowEffect;
 class W_Menu;
+class W_MenuCode_LineEdit;
 
 /**
  * @brief Code Menu, which appears when the "Code" button is clicked on Bonus Menu.
@@ -39,12 +40,15 @@ public:
     W_MenuCode(QWidget *parent);
     void setTitleParent();
 
+    void keyPressEvent(QKeyEvent *event);
+
 private:
     QFormLayout *layoutMenuPause;
 
-    QPushButton *btnBonusCode;
-    QPushButton *btnBonusCredits;
     QPushButton *btnBonusReturn;
+    QPushButton *btnCodeValidate;
+
+    W_MenuCode_LineEdit* lineEditCode;
 
     W_Menu* parent;
 

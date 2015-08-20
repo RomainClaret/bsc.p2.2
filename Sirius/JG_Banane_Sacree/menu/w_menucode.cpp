@@ -20,28 +20,33 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QFormLayout>
+#include <QLineEdit>
 #include "w_menu.h"
+
+#include <QDebug>
+#include <QKeyEvent>
+#include "menu/w_menucode_lineedit.h"
 
 W_MenuCode::W_MenuCode(QWidget *parent)
 {
    this->parent = (W_Menu*)parent;
    setTitleParent();
 
-   btnBonusCode = new QPushButton(tr("Entrer un code spécial"));
-   btnBonusCredits = new QPushButton(tr("Voir les crédits"));
-   btnBonusReturn = new QPushButton(tr("Retourner au menu pause"));
+   btnCodeValidate = new QPushButton(tr("Valider le code"));
+   lineEditCode = new W_MenuCode_LineEdit;
+   lineEditCode->setEnabled(true);
+   lineEditCode->setFocusPolicy(Qt::StrongFocus);
 
-   btnBonusCode->setStyleSheet(W_Menu::styleBtn);
-   btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
+   btnBonusReturn = new QPushButton(tr("Retourner aux Bonus"));
+
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
+   btnCodeValidate->setStyleSheet(W_Menu::styleBtn);
 
-//    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(exitGame()));
-//    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(resumeGame()));
-    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
+   connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadBonus()));
 
    layoutMenuPause = new QFormLayout;
-   layoutMenuPause->addRow(btnBonusCode);
-   layoutMenuPause->addRow(btnBonusCredits);
+   layoutMenuPause->addRow(lineEditCode);
+   layoutMenuPause->addRow(btnCodeValidate);
    layoutMenuPause->addRow(btnBonusReturn);
 
     this->resize(400,400);
@@ -50,6 +55,11 @@ W_MenuCode::W_MenuCode(QWidget *parent)
 
 void W_MenuCode::setTitleParent()
 {
-    parent->setTitle(tr("Secret Code"));
-    parent->setSubTitle(tr("Chut..."));
+    parent->setTitle(tr("Chut..."));
+    parent->setSubTitle(tr("Entrez votre code spécial afin d'obtenir des bonus"));
+}
+
+void W_MenuCode::keyPressEvent(QKeyEvent *event)
+{
+    lineEditCode->keyPressEvent(event);
 }

@@ -1,6 +1,6 @@
 #include "state_enemysleep.h"
-#include "c_enemy.h"
-#include "s_viewblocknpc.h"
+#include "character/c_enemy.h"
+#include "surface/s_viewblocknpc.h"
 
 State_EnemySleep::State_EnemySleep() : State_Enemy()
 {
