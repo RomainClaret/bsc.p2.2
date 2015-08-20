@@ -20,36 +20,50 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QFormLayout>
+<<<<<<< HEAD
+#include <QLineEdit>
+#include "w_menu.h"
+=======
 #include "../menu/w_menu.h"
+>>>>>>> 86b56e25fc3239aa933315eb84c976a051cc1c1c
 
-W_MenuBonus::W_MenuBonus(QWidget *parent)
+#include <QDebug>
+#include <QKeyEvent>
+#include "menu/w_menucode_lineedit.h"
+
+W_MenuCode::W_MenuCode(QWidget *parent)
 {
    this->parent = (W_Menu*)parent;
    setTitleParent();
 
-   btnBonusCode = new QPushButton(tr("Entrer un code spécial"));
-   btnBonusCredits = new QPushButton(tr("Voir les crédits"));
-   btnBonusReturn = new QPushButton(tr("Retourner au menu pause"));
+   btnCodeValidate = new QPushButton(tr("Valider le code"));
+   lineEditCode = new W_MenuCode_LineEdit;
+   lineEditCode->setEnabled(true);
+   lineEditCode->setFocusPolicy(Qt::StrongFocus);
 
-   btnBonusCode->setStyleSheet(W_Menu::styleBtn);
-   btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
+   btnBonusReturn = new QPushButton(tr("Retourner aux Bonus"));
+
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
+   btnCodeValidate->setStyleSheet(W_Menu::styleBtn);
 
-    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
-    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(loadCredits()));
-    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
+   connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadBonus()));
 
    layoutMenuPause = new QFormLayout;
-   layoutMenuPause->addRow(btnBonusCode);
-   layoutMenuPause->addRow(btnBonusCredits);
+   layoutMenuPause->addRow(lineEditCode);
+   layoutMenuPause->addRow(btnCodeValidate);
    layoutMenuPause->addRow(btnBonusReturn);
 
     this->resize(400,400);
     this->setLayout(layoutMenuPause);
 }
 
-void W_MenuBonus::setTitleParent()
+void W_MenuCode::setTitleParent()
 {
-    parent->setTitle(tr("Bonus"));
-    parent->setSubTitle(tr("James Gouin profite des Bonus..."));
+    parent->setTitle(tr("Chut..."));
+    parent->setSubTitle(tr("Entrez votre code spécial afin d'obtenir des bonus"));
+}
+
+void W_MenuCode::keyPressEvent(QKeyEvent *event)
+{
+    lineEditCode->keyPressEvent(event);
 }

@@ -21,6 +21,7 @@
         <file>items/fish4.png</file>
         <file>items/fish5.png</file>
         <file>items/shoes.png</file>
+        <file>items/banana.png</file>
     </qresource>
     <qresource prefix="/maps">
         <file>maps/0.png</file>

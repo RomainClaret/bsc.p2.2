@@ -81,14 +81,18 @@ W_Menu::W_Menu(QWidget *parent)
    menuPause = new W_MenuPause(this, (G_Gameboard*)parent);
    menuBonus = new W_MenuBonus(this);
    menuCode = new W_MenuCode(this);
+   menuCredits = new W_MenuCredits(this);
+
    menuBonus->setVisible(false);
    menuCode->setVisible(false);
+   menuCredits->setVisible(false);
 
    layoutMenuPause->addRow(titleMenuPause);
    layoutMenuPause->addRow(undertitleMenuPause);
    layoutMenuPause->addRow(menuPause);
    layoutMenuPause->addRow(menuBonus);
    layoutMenuPause->addRow(menuCode);
+   layoutMenuPause->addRow(menuCredits);
 
    this->setMinimumWidth(400);
    this->setMinimumHeight(400);
@@ -120,6 +124,7 @@ void W_Menu::loadBonus()
     menuPause->setVisible(false);
     menuCode->setVisible(false);
     menuBonus->setVisible(true);
+    menuCredits->setVisible(false);
     menuBonus->setTitleParent();
     adjustSize();
 }
@@ -129,6 +134,7 @@ void W_Menu::loadPause()
     menuPause->setVisible(true);
     menuCode->setVisible(false);
     menuBonus->setVisible(false);
+    menuCredits->setVisible(false);
     menuPause->setTitleParent();
     adjustSize();
 }
@@ -138,7 +144,18 @@ void W_Menu::loadCode()
     menuCode->setVisible(true);
     menuPause->setVisible(false);
     menuBonus->setVisible(false);
+    menuCredits->setVisible(false);
     menuCode->setTitleParent();
+    adjustSize();
+}
+
+void W_Menu::loadCredits()
+{
+    menuCode->setVisible(false);
+    menuPause->setVisible(false);
+    menuBonus->setVisible(false);
+    menuCredits->setVisible(true);
+    menuCredits->setTitleParent();
     adjustSize();
 }
 

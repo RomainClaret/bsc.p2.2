@@ -18,6 +18,7 @@
 #include "../menu/w_menupause.h"
 #include "../menu/w_menubonus.h"
 #include "../menu/w_menucode.h"
+#include "../menu/w_menucredits.h"
 
 class QLabel;
 class QPushButton;
@@ -79,6 +80,7 @@ private:
     W_MenuPause* menuPause;
     W_MenuBonus* menuBonus;
     W_MenuCode* menuCode;
+    W_MenuCredits* menuCredits;
 
     /**
      * @brief PaintEvent used for the bordering
@@ -102,6 +104,11 @@ public slots:
      * @brief SLOT: Called when Code Widget need to be placed in the menu
      */
     void loadCode();
+
+    /**
+     * @brief SLOT: Called when Credits Widget need to be placed in the menu
+     */
+    void loadCredits();
 
 };
 

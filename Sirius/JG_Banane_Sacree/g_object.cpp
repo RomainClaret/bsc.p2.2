@@ -15,6 +15,10 @@
 #include "surface/g_surface.h"
 #include <QBrush>
 #include <QGraphicsItem>
+#include <QPaintEvent>
+#include <menu/w_menucode.h>
+
+#include <QDebug>
 
 G_Object::G_Object(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
@@ -42,7 +46,6 @@ void G_Object::setDesign()
     img.append(this->nom->toLower());
     img.append(".png");
     objectSkin->setTexture(QPixmap(img));
-
     setBrush(*objectSkin);
 }
 
@@ -56,6 +59,18 @@ QPixmap G_Object::getTexture()
     return objectSkin->texture();
 }
 
+void G_Object::repaintElement()
+{
+    if(W_MenuCode::BANANASPECIAL && this->nom == OBJECT_EGG)
+    {
+        qDebug() << "PAINT";
+        this->nom = new QString(OBJECT_BANANA);
+        setDesign();
+    }
+    update();
+}
+
 QString G_Object::OBJECT_EGG = "EGG";
 QString G_Object::OBJECT_SHOES = "SHOES";
 QString G_Object::OBJECT_FISH = "FISH";
+QString G_Object::OBJECT_BANANA = "BANANA";

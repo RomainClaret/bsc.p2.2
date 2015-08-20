@@ -62,7 +62,9 @@ SOURCES += \
     widget/w_dialog.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
-    menu/w_menucode_lineedit.cpp
+    menu/w_menucode_lineedit.cpp \
+    menu/w_menucredits.cpp \
+    tools/verticalscrollarea.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -100,7 +102,9 @@ HEADERS  += \
     widget/w_dialog.h \
     widget/w_life.h \
     widget/w_object.h \
-    menu/w_menucode_lineedit.h
+    menu/w_menucode_lineedit.h \
+    menu/w_menucredits.h \
+    tools/verticalscrollarea.h
 
 RESOURCES += \
     images.qrc \

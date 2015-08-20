@@ -15,6 +15,7 @@
 #define W_MENUCODE_H
 
 #include <QWidget>
+#include <QHash>
 
 class QLabel;
 class QPushButton;
@@ -22,6 +23,7 @@ class QFormLayout;
 class QGraphicsDropShadowEffect;
 class W_Menu;
 class W_MenuCode_LineEdit;
+class QLabel;
 
 /**
  * @brief Code Menu, which appears when the "Code" button is clicked on Bonus Menu.
@@ -39,22 +41,36 @@ class W_MenuCode : public QWidget
 public:
     W_MenuCode(QWidget *parent);
     void setTitleParent();
+    void refuseCode();
+    void acceptCode();
 
     void keyPressEvent(QKeyEvent *event);
+
+    static const int CODE_HELLO = 1;
+    static const int CODE_BANANA = 2;
+    static const int CODE_HAPPYFEET = 3;
+    static const int CODE_HOTHOTHOT = 4;
+    static const int CODE_MADAGASCAR = 5;
+    static const int CODE_SECRETAGENT = 6;
+
+    static bool BANANASPECIAL;
 
 private:
     QFormLayout *layoutMenuPause;
 
     QPushButton *btnBonusReturn;
     QPushButton *btnCodeValidate;
+    QLabel* labelCodeResult;
 
     W_MenuCode_LineEdit* lineEditCode;
 
     W_Menu* parent;
+    QHash<QString,int> hash;
 
 signals:
 
 public slots:
+    void validateCode();
 
 };
 

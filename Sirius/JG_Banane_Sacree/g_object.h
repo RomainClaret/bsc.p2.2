@@ -21,6 +21,7 @@ class QGraphicsItem;
 class QPixmap;
 class QGraphicsPixmapItem;
 class QBrush;
+class QPaintEvent;
 
 /**
  * @brief Object from the game
@@ -78,9 +79,12 @@ public:
      */
     QPixmap getTexture();
 
+    void repaintElement();
+
     static QString OBJECT_EGG;
     static QString OBJECT_SHOES;
     static QString OBJECT_FISH;
+    static QString OBJECT_BANANA;
 
 private:
     QBrush* objectSkin;
