@@ -24,12 +24,8 @@
 #include <QLineEdit>
 #include <QDebug>
 #include <QKeyEvent>
-<<<<<<< HEAD
 #include "../menu/w_menucode_lineedit.h"
-=======
-#include "menu/w_menucode_lineedit.h"
 #include <QLabel>
->>>>>>> 7d83fae59b84777c03c4ea0dfee643624523c1ea
 
 W_MenuCode::W_MenuCode(QWidget *parent)
 {
