@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>music/MagneDjupvik-PenguinParty.mp3</file>
+    </qresource>
+</RCC>

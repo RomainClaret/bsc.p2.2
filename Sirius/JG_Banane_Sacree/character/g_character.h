@@ -1,7 +1,7 @@
 #ifndef G_CHARACTER_H
 #define G_CHARACTER_H
 
-#include <QGraphicsItem>
+#include <QGraphicsObject>
 
 /**
  * @brief The Character class
@@ -13,8 +13,11 @@
  * @version 1.0
  * @date 19 august 2015
  */
-class G_Character : public QGraphicsItem
+class G_Character : public QGraphicsObject
 {
+    Q_OBJECT
+    Q_PROPERTY(QPointF pos READ pos WRITE setPos)
+
 public:
     G_Character();
     virtual ~G_Character(){}

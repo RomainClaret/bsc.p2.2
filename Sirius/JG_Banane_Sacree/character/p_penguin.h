@@ -21,6 +21,9 @@ class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
 
+#include "t_charactermover.h"
+#include <QTimer>
+
 /**
  * @brief Playable character: Penguin.
  * @details This character is playable.
@@ -55,12 +58,18 @@ private:
 
     int nbLives;
 
+    t_CharacterMover* mover;
+
 public:
     P_Penguin();
 
     void setPos(int, int);
     void moveBy(int, int);
+    void moveByPixel(int, int);
+    void moveWithThread(char orientation);
     void moveBack();
+
+    void moveWithTimer(char orientation);
 
     void addToScene(QGraphicsScene*);
     void addObjectToBag(G_Object *object);
@@ -89,6 +98,7 @@ public:
     QGraphicsRectItem* getTopCB();
     QGraphicsRectItem* getBottomCB();
     C_Player* getPlayer();
+
 
 };
 

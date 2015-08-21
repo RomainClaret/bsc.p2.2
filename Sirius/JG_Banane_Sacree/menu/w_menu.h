@@ -18,6 +18,7 @@
 #include "../menu/w_menupause.h"
 #include "../menu/w_menubonus.h"
 #include "../menu/w_menucode.h"
+#include "../menu/w_menucredits.h"
 
 class QLabel;
 class QPushButton;
@@ -30,8 +31,8 @@ class QGraphicsDropShadowEffect;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 19 August 2015
+ * @version 1.1
+ * @date 20 August 2015
  */
 class W_Menu : public QWidget
 {
@@ -44,7 +45,16 @@ public:
     static QString styleBtn;
     static QString styleBtnUnable;
 
+    /**
+     * @brief KeyPressEvent
+     * @param event
+     */
     void keyPressEvent(QKeyEvent *event);
+
+    /**
+     * @brief PaintEvent used for the bordering
+     */
+    void paintEvent(QPaintEvent *);
 
     /**
      * @brief Set the Menu Title with param's value
@@ -79,11 +89,7 @@ private:
     W_MenuPause* menuPause;
     W_MenuBonus* menuBonus;
     W_MenuCode* menuCode;
-
-    /**
-     * @brief PaintEvent used for the bordering
-     */
-    void paintEvent(QPaintEvent *);
+    W_MenuCredits* menuCredits;
 
 signals:
 
@@ -102,6 +108,11 @@ public slots:
      * @brief SLOT: Called when Code Widget need to be placed in the menu
      */
     void loadCode();
+
+    /**
+     * @brief SLOT: Called when Credits Widget need to be placed in the menu
+     */
+    void loadCredits();
 
 };
 

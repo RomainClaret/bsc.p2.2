@@ -16,6 +16,7 @@
 
 #include <QWidget>
 class QLabel;
+class QMediaPlayer;
 
 /**
  * @brief Dialog popup.
@@ -58,6 +59,9 @@ public:
      */
     void paintEvent(QPaintEvent *pe);
 
+    void showEvent(QShowEvent *);
+    void hideEvent(QHideEvent *);
+
 signals:
 
 public slots:
@@ -67,6 +71,7 @@ private:
     QLabel* title;
     QLabel* text;
     QLabel* escapeText;
+    QMediaPlayer* player;
 
 };
 

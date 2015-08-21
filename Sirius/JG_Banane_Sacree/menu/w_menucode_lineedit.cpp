@@ -2,7 +2,7 @@
 
 W_MenuCode_LineEdit::W_MenuCode_LineEdit(QWidget *parent) : QLineEdit(parent)
 {
-//    setEchoMode(QLineEdit::Password);
+
 }
 
 void W_MenuCode_LineEdit::keyPressEvent(QKeyEvent *event)

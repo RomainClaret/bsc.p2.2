@@ -36,7 +36,7 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
 
     connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
-//    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(resumeGame()));
+    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(loadCredits()));
     connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
 
    layoutMenuPause = new QFormLayout;

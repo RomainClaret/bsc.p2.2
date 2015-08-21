@@ -5584,7 +5584,7 @@
    <LIGNE position="25">
     <ITEM type="FISH"/>
     <BLOC type="SNOW"/>
-    <DIALOG position="5" text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas � droite se trouve ta sacoche, elle te pr�sentera la liste des objets que tu poss�des. "/>
+    <DIALOG position="5" text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas à droite se trouve ta sacoche, elle te présentera la liste des objets que tu possèdes. "/>
    </LIGNE>
   </COLONNE>
  </LEVELITEM>

@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+#include "state_enemypause.h"
+#include "character/c_enemy.h"
+=======
+#include "../state/state_enemypause.h"
+#include "../character/c_enemy.h"
+>>>>>>> 86b56e25fc3239aa933315eb84c976a051cc1c1c
+
+State_EnemyPause::State_EnemyPause() : State_Enemy()
+{
+}
+
+/**
+ * @details Freeze the enemy
+ */
+void State_EnemyPause::step(C_Enemy* ennemi)
+{
+    //nothing
+}

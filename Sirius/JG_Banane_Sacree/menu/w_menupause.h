@@ -39,7 +39,6 @@ class G_Gameboard;
  * @version 2.0
  * @date 19 August 2015
  */
-
 class W_MenuPause : public QWidget
 {
     Q_OBJECT
@@ -62,10 +61,14 @@ public:
 private:
     G_Gameboard *gameboard;
 
+    //Layout
     QFormLayout *layoutMenuPause;
+
+    //Labels
     QLabel *titleMenuPause;
     QLabel *undertitleMenuPause;
 
+    //Buttons
     QPushButton *btnMenuPauseResume;
     QPushButton *btnMenuPauseIsland;
     QPushButton *btnMenuPauseQuit;
@@ -74,12 +77,6 @@ private:
     QPushButton *btnMenuPauseBonus;
 
     W_Menu* parent;
-
-    /**
-     * @brief Creates a shadow effect on buttons.
-     * @return QGraphicsDropShadowEffect
-     */
-    QGraphicsDropShadowEffect* shadowbtn();
 
 signals:
 
