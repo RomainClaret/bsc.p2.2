@@ -66,7 +66,8 @@ SOURCES += \
     tools/verticalscrollarea.cpp \
  	character/g_character.cpp \
     character/t_charactermover.cpp \
-    character/t_charactertimermover.cpp
+    character/t_charactertimermover.cpp \
+    character/c_ai.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -108,7 +109,8 @@ HEADERS  += \
     tools/verticalscrollarea.h \
     character/g_character.h \
     character/t_charactermover.h \
-    character/t_charactertimermover.h
+    character/t_charactertimermover.h \
+    character/c_ai.h
 
 RESOURCES += \
     images.qrc \
