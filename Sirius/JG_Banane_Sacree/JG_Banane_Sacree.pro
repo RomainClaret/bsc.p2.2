@@ -28,7 +28,6 @@ win32:RC_FILE = winIcon.rc
 
 SOURCES += \
     main.cpp \
-    g_npc.cpp \
     g_gameboard.cpp \
     g_level.cpp \
     g_maingame.cpp \
@@ -66,7 +65,9 @@ SOURCES += \
     tools/verticalscrollarea.cpp \
  	character/g_character.cpp \
     character/t_charactermover.cpp \
-    character/t_charactertimermover.cpp
+    character/t_charactertimermover.cpp \
+    character/c_enemy.cpp \
+    surface/s_surfaceautotexture.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -108,7 +109,8 @@ HEADERS  += \
     tools/verticalscrollarea.h \
     character/g_character.h \
     character/t_charactermover.h \
-    character/t_charactertimermover.h
+    character/t_charactertimermover.h \
+    surface/s_surfaceautotexture.h
 
 RESOURCES += \
     images.qrc \

@@ -47,7 +47,7 @@ public:
 
 private:
     /**
-     * @brief Set the design of self.
+     * @brief Set the design of self and the pictures for the annimation
      */
     void setDesign();
 };

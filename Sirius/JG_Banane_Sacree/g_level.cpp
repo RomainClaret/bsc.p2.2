@@ -17,6 +17,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QGraphicsScene>
+#include <QList>
 
 #include "observer_npc.h"
 #include "character/factory_character.h"
@@ -30,6 +31,7 @@
 #include "surface/s_ice.h"
 #include "surface/s_door.h"
 #include "surface/s_dialog.h"
+#include "surface/s_surfaceautotexture.h"
 #include "g_object.h"
 
 #include "character/e_wolf.h"
@@ -42,6 +44,8 @@
 #include <QDomNodeList>
 #include <QDomElement>
 #include <QDomDocument>
+
+int G_Level::S_SNOW = 1;
 
 /**
  * @details Create Level according to levelNumber and read the basics XML level informations
@@ -85,6 +89,12 @@ G_Level::G_Level(int levelNumber, Observer_NPC* observer, G_Gameboard *game)
     {
         addLevelInformation(elem);
     }
+
+    mapSurfaces = (int**)calloc(maxBlocksWidth, sizeof(int*));
+    for(int i=0; i<maxBlocksWidth; i++)
+    {
+        mapSurfaces[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
+    }
 }
 
 QPoint* G_Level::getStartingPoint()
@@ -121,6 +131,17 @@ QGraphicsScene* G_Level::populateScene()
             }
         }
     }
+
+    //Calculate the autoTextures
+    qDebug() << "nombre de texture automatiques : " << listAutoTextures.size();
+    int i = 0;
+    foreach (S_SurfaceAutoTexture* surfaceAuto, listAutoTextures) {
+        i++;
+        qDebug() << "bloc :" << i;
+        surfaceAuto->calculateTextures(mapSurfaces, maxBlocksWidth, maxBlocksHeight);
+    }
+
+
     return scene;
 }
 
@@ -159,8 +180,20 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
 {
     QString tagName = elem.tagName();
     if(tagName == "BLOC")
-    {       
-        Factory_Surface::createSurface(elem.attribute("type"),x,y,scene);
+    {
+        G_Surface* surface = Factory_Surface::createSurface(elem.attribute("type"), x, y, scene);
+
+        if(elem.attribute("type") == Factory_Surface::BLOC_WATER)
+        {
+            S_SurfaceAutoTexture *autoSurface = dynamic_cast<S_SurfaceAutoTexture*>(surface);
+            listAutoTextures.append(autoSurface);
+        }
+
+        if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW)
+        {
+            //(mapSurfaces.at(x)).at(y) = G_Level::S_SNOW;
+            mapSurfaces[x][y] = G_Level::S_SNOW;
+        }
     }
     else if(tagName == "ITEM")
     {
