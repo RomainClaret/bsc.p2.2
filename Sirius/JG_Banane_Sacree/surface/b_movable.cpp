@@ -22,6 +22,7 @@
 #include "../character/c_enemy.h"
 #include "../character/e_fox.h"
 #include "../character/e_wolf.h"
+#include "../character/e_walrus.h"
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
 
@@ -130,9 +131,10 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
     for(int i=0; i<l.length(); i++)
     {
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
-           typeid(*l.at(i)).name() == typeid(B_Movable).name() ||
+           typeid(*l.at(i)).name() == typeid(B_MovableSimple).name() ||
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Wolf).name())
+           typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||
+           typeid(*l.at(i)).name() == typeid(E_Walrus).name())
         {
             return false;
         }

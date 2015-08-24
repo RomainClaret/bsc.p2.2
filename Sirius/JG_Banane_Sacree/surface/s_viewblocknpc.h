@@ -77,10 +77,16 @@ public:
      */
     void setStylePlayableCharacterOn();
 
+    /**
+     * @brief Set no skin of self
+     */
+    void setStyleNone();
+
 private:
     int line;      //.. -2, -1, 0, 1, 2 ..
     int column;    // 0,1,2..
     bool actif;
+    bool hasStyling;
 
     /**
      * @brief Set the desactivated skin of self.

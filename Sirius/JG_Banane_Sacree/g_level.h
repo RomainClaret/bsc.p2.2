@@ -26,7 +26,7 @@ class S_SurfaceAutoTexture;
 #include <QList>
 #include <QVector>
 
-#include "widget/w_dialog.h"
+#include "widget/dialog/w_dialog.h"
 #include <QDomElement>
 #include <QDomDocument>
 
@@ -97,6 +97,11 @@ public:
 
 
     static int S_SNOW;
+
+    /**
+     * @brief loadInformation
+     */
+    void loadInformation();
 
 private:
     // Level Playing Informations

@@ -57,17 +57,25 @@ SOURCES += \
     state/state_npcpatrol.cpp \
     state/state_npcpause.cpp \
     state/state_npcsleep.cpp \
-    widget/w_dialog.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
     menu/w_menucode_lineedit.cpp \
     menu/w_menucredits.cpp \
     tools/verticalscrollarea.cpp \
- 	character/g_character.cpp \
+    character/g_character.cpp \
     character/t_charactermover.cpp \
     character/t_charactertimermover.cpp \
-    character/c_enemy.cpp \
-    surface/s_surfaceautotexture.cpp
+    widget/dialog/w_dialog.cpp \
+    widget/dialog/w_dialog_image.cpp \
+    widget/dialog/w_dialog_text.cpp \
+    widget/dialog/w_dialog_container.cpp \
+    surface/b_movable_simple.cpp \
+    surface/b_movable_throw.cpp \
+    character/e_walrus.cpp \
+    state/state_enemywalrus.cpp \
+    t_movesurface.cpp \
+    character/c_ai.cpp\
+	character/c_enemy.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -85,7 +93,6 @@ HEADERS  += \
     surface/b_wall.h \
     surface/b_water.h \
     surface/g_surface.h \
-    surface/s_dialog.h \
     surface/s_door.h \
     surface/s_ice.h \
     surface/s_snow.h \
@@ -110,7 +117,17 @@ HEADERS  += \
     character/g_character.h \
     character/t_charactermover.h \
     character/t_charactertimermover.h \
-    surface/s_surfaceautotexture.h
+    widget/dialog/w_dialog.h \
+    widget/dialog/w_dialog_image.h \
+    widget/dialog/w_dialog_text.h \
+    widget/dialog/w_dialog_container.h \
+    surface/b_movable_simple.h \
+    surface/b_movable_throw.h \
+    character/e_walrus.h \
+    state/state_enemywalrus.h \
+    t_movesurface.h \
+	character/c_ai.h \
+	surface/s_surfaceautotexture.h
 
 RESOURCES += \
     images.qrc \

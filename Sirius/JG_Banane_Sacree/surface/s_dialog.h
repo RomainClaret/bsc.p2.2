@@ -26,8 +26,8 @@ class QGraphicsItem;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 27 January 2015
+ * @version 2.0
+ * @date 21 August 2015
  */
 class S_Dialog : public G_Surface
 {
@@ -71,6 +71,18 @@ public:
      */
     QString getText();
 
+    /**
+     * @brief Set the name of the character picture
+     * @param imageName QString containing the name
+     */
+    void setImage(QString imageName);
+
+    /**
+     * @brief getImageName
+     * @return Name of the picture stored in imageName
+     */
+    QString getImageName();
+
 private:
     /**
      * @brief Set the design of self.
@@ -79,6 +91,7 @@ private:
 
     int dialogNumber;
     QString text;
+    QString imageName;
 
 };
 

@@ -5,6 +5,15 @@
 #include "state/state_enemypatrol.h"
 #include "state/state_enemypause.h"
 #include "state/state_enemysleep.h"
+#include "state/state_enemywalrus.h"
+
+#include "character/e_walrus.h"
+
+#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+#else
+    #include <typeinfo.h>
+#endif
+
 /**
  * @details Desactivate the view of the ennemi at the first run and do nothing after
  */
@@ -65,7 +74,6 @@ void Observer_NPC::changeNPCState(QString state, QPoint posPlayer)
                 && (posEnemy.y() < phaseY*gameY && posEnemy.y() > (phaseY-1)*gameY))
         {
             qDebug() << "---Change one state in pos " << phaseX << ", " << phaseY << " to "<< state;
-
 
             if(state == STATE_PATROL)
             {

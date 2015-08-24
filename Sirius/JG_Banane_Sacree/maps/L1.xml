@@ -789,8 +789,7 @@
     <END nextLevel="130"/>
    </LIGNE>
    <LIGNE position="7">
-    <BLOC type="WALL"/>
-    <END nextLevel="130"/>
+    <END nextLevel="3"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="17">
