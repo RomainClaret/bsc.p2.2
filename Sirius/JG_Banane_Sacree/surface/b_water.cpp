@@ -17,7 +17,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 #include <QDebug>
-#include <g_level.h>
+#include "../g_level.h"
 
 B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
 {

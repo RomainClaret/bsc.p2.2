@@ -13,7 +13,7 @@
 
 #ifndef B_WATER_H
 #define B_WATER_H
-#include "../surface/s_surfaceautotexture.h"
+#include "s_surfaceautotexture.h"
 
 class QGraphicsRectItem;
 #include <QVector>

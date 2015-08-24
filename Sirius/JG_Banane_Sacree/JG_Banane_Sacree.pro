@@ -75,7 +75,8 @@ SOURCES += \
     state/state_enemywalrus.cpp \
     t_movesurface.cpp \
     character/c_ai.cpp\
-	character/c_enemy.cpp
+    character/c_enemy.cpp\
+    surface/s_surfaceautotexture.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -126,8 +127,8 @@ HEADERS  += \
     character/e_walrus.h \
     state/state_enemywalrus.h \
     t_movesurface.h \
-	character/c_ai.h \
-	surface/s_surfaceautotexture.h
+    character/c_ai.h \
+    surface/s_surfaceautotexture.h
 
 RESOURCES += \
     images.qrc \
