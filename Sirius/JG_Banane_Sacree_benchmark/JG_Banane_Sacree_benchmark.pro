@@ -70,7 +70,8 @@ SOURCES += main.cpp\
     ../JG_Banane_Sacree/g_object.cpp \
     ../JG_Banane_Sacree/g_player.cpp \
     ../JG_Banane_Sacree/g_profil.cpp \
-    ../JG_Banane_Sacree/observer_npc.cpp
+    ../JG_Banane_Sacree/observer_npc.cpp \
+    ../JG_Banane_Sacree/menu/w_menucode_lineedit.cpp
 
 HEADERS  += t_level.h \
     ../JG_Banane_Sacree_V1/s_door_v1.h \
@@ -130,4 +131,5 @@ HEADERS  += t_level.h \
     ../JG_Banane_Sacree/g_maingame.h \
     ../JG_Banane_Sacree/g_object.h \
     ../JG_Banane_Sacree/g_profil.h \
-    ../JG_Banane_Sacree/observer_npc.h
+    ../JG_Banane_Sacree/observer_npc.h \
+    ../JG_Banane_Sacree/menu/w_menucode_lineedit.h
