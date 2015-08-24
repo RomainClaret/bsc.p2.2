@@ -63,9 +63,9 @@ SOURCES += \
     menu/w_menucode_lineedit.cpp \
     menu/w_menucredits.cpp \
     tools/verticalscrollarea.cpp \
- 	character/g_character.cpp \
+    character/g_character.cpp \
     character/t_charactermover.cpp \
-haracter/t_charactertimermover.cpp \
+    character/t_charactertimermover.cpp \
     widget/dialog/w_dialog.cpp \
     widget/dialog/w_dialog_image.cpp \
     widget/dialog/w_dialog_text.cpp \
@@ -74,7 +74,9 @@ haracter/t_charactertimermover.cpp \
     surface/b_movable_throw.cpp \
     character/e_walrus.cpp \
     state/state_enemywalrus.cpp \
-    t_movesurface.cpp \character/c_ai.cpp
+    t_movesurface.cpp \
+    character/c_ai.cpp
+
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
