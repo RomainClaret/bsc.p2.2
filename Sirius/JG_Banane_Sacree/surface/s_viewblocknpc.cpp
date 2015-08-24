@@ -14,6 +14,7 @@ S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QG
     this->column = colonne;
     this->owner = proprietaire;
     this->setZValue(2);
+    this->hasStyling = true;
 
     setStyleActivated();
 }
@@ -69,41 +70,58 @@ void S_ViewBlockNPC::blockOn()
 
 void S_ViewBlockNPC::setStylePlayableCharacterOn()
 {
-    QBrush brush;
-    brush.setStyle(Qt::DiagCrossPattern);
-    brush.setColor(Qt::yellow);
+    if(hasStyling)
+    {
+        QBrush brush;
+        brush.setStyle(Qt::DiagCrossPattern);
+        brush.setColor(Qt::yellow);
 
-    QPen pen;
-    pen.setStyle(Qt::SolidLine);
-    pen.setColor(Qt::yellow);
+        QPen pen;
+        pen.setStyle(Qt::SolidLine);
+        pen.setColor(Qt::yellow);
 
-    this->setBrush(brush);
-    this->setPen(pen);
+        this->setBrush(brush);
+        this->setPen(pen);
+    }
 }
 
 void S_ViewBlockNPC::setStyleDesactivated()
 {
-    QBrush brush;
-    brush.setStyle(Qt::Dense6Pattern);
-    brush.setColor(Qt::green);
+    if(hasStyling)
+    {
+        QBrush brush;
+        brush.setStyle(Qt::Dense6Pattern);
+        brush.setColor(Qt::green);
 
-    QPen pen;
-    pen.setStyle(Qt::NoPen);
+        QPen pen;
+        pen.setStyle(Qt::NoPen);
 
-    this->setBrush(brush);
-    this->setPen(pen);
+        this->setBrush(brush);
+        this->setPen(pen);
+     }
 }
 
 void S_ViewBlockNPC::setStyleActivated()
 {
-    QBrush brush;
-    brush.setStyle(Qt::DiagCrossPattern);
-    brush.setColor(Qt::red);
+    if(hasStyling)
+    {
+        QBrush brush;
+        brush.setStyle(Qt::DiagCrossPattern);
+        brush.setColor(Qt::red);
 
-    QPen pen;
-    pen.setStyle(Qt::SolidLine);
-    pen.setColor(Qt::red);
+        QPen pen;
+        pen.setStyle(Qt::SolidLine);
+        pen.setColor(Qt::red);
 
-    this->setBrush(brush);
-    this->setPen(pen);
+        this->setBrush(brush);
+        this->setPen(pen);
+    }
 }
+
+void S_ViewBlockNPC::setStyleNone()
+{
+    this->setBrush(Qt::NoBrush);
+    this->setPen(Qt::NoPen);
+    hasStyling = false;
+}
+

@@ -24,7 +24,6 @@ void t_CharacterMover::run()
         switch (orientation) {
         case 'r':
 
-
             while(character->pos().x() < startPos.x() + gs)
             {
                 i++;
@@ -36,7 +35,6 @@ void t_CharacterMover::run()
 
             break;
         case 'l':
-
             while(character->pos().x() > startPos.x() - gs)
             {
                 character->moveBy(-1,0);

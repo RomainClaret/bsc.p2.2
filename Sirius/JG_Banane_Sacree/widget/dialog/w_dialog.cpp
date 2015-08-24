@@ -11,33 +11,34 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#include "../widget/w_dialog.h"
+#include "w_dialog.h"
+#include "w_dialog_image.h"
+#include "w_dialog_container.h"
 #include <QPainter>
 #include <QDebug>
 
-#include <QFormLayout>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QMediaPlayer>
 #include <QLabel>
 #include <QStyleOption>
-#include <QMediaPlayer>
 
 W_Dialog::W_Dialog(QWidget *parent)
 {
     player = new QMediaPlayer;
-    player->setMedia(QUrl("Sound-Eggtimer-SystemNotification.wav"));
+    player->setMedia(QUrl("Sound-Blop-MarkDiAngelo.mp3"));
 
-    resize(300,200);
-    this->setStyleSheet(
-                        "text-align: center;"
-                        "color: #2e2e2e;"
-                        "background-color: #ffffff;"
-                        "border-style: solid;"
-                        "border-color: #d3d3d3;"
-                        "border-width: 1px;"
-                        "border-radius: 8px;"
-                        "font-family: Century Gothic;"
-                        );
+    image = new W_DialogImage("loutre.png", this);
+    textWidget = new W_DialogContainer(this);
 
     QVBoxLayout* layout = new QVBoxLayout;
+    layout->addStretch();
+    layout->addWidget(textWidget);
+    layout->addWidget(image);
+    layout->setSpacing(0);
+
+    this->setLayout(layout);
+
     title = new QLabel(tr("Ordre de mission de James Gouin"));
     title->setStyleSheet(
                 "font: bold 20px;"
@@ -61,32 +62,29 @@ W_Dialog::W_Dialog(QWidget *parent)
 
     title->setAlignment(Qt::AlignCenter);
 
-    layout->addWidget(title);
-    layout->addWidget(text);
-    layout->addStretch(1);
-    layout->addWidget(escapeText);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 
-    this->setLayout(layout);
+    setAttribute(Qt::WA_NoSystemBackground);
+    setAttribute(Qt::WA_TranslucentBackground);
+    setAttribute(Qt::WA_PaintOnScreen);
+
+    setAttribute(Qt::WA_TransparentForMouseEvents);
 }
 
 void W_Dialog::setText(QString text, int type)
 {
-    this->type = type;
-    this->text->setText(text);
+    textWidget->setText(text, type);
+}
+
+void W_Dialog::setImage(QString imageName)
+{
+    image->setImage(imageName);
+    update();
 }
 
 QString W_Dialog::getText()
 {
-    return this->text->text();
-}
-
-void W_Dialog::paintEvent(QPaintEvent *pe)
-{
-  QStyleOption o;
-  o.initFrom(this);
-  QPainter p(this);
-  style()->drawPrimitive(
-  QStyle::PE_Widget, &o, &p, this);
+    return textWidget->getText();
 }
 
 void W_Dialog::showEvent(QShowEvent *)

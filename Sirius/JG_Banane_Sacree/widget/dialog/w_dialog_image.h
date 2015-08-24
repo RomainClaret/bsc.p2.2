@@ -11,12 +11,12 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef W_DIALOG_H
-#define W_DIALOG_H
+#ifndef W_DIALOG_IMAGE_H
+#define W_DIALOG_IMAGE_H
 
 #include <QWidget>
-class QLabel;
 class QMediaPlayer;
+class QLabel;
 
 /**
  * @brief Dialog popup.
@@ -26,10 +26,10 @@ class QMediaPlayer;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 27 January 2015
+ * @version 1.1
+ * @date 21 August 2015
  */
-class W_Dialog : public QWidget
+class W_DialogImage : public QWidget
 {
     Q_OBJECT
 public:
@@ -38,41 +38,18 @@ public:
      * @brief Overlay widget to display the dialog.
      * @param parent if need
      */
-    W_Dialog(QWidget *parent = 0);
+    W_DialogImage(QString imageName, QWidget *parent= 0);
 
-    /**
-     * @brief Set text to self.
-     * @param text text to set
-     * @param type type of the text
-     */
-    void setText(QString text, int type);
-
-    /**
-     * @brief Get the text from self.
-     * @return text of the dialog
-     */
-    QString getText();
-
-    /**
-     * @brief Listen to the paint event
-     * @param pe event
-     */
-    void paintEvent(QPaintEvent *pe);
-
-    void showEvent(QShowEvent *);
-    void hideEvent(QHideEvent *);
+    void setImage(QString new_imageName);
 
 signals:
 
 public slots:
 
 private:
-    int type;
-    QLabel* title;
-    QLabel* text;
-    QLabel* escapeText;
-    QMediaPlayer* player;
+    QString imageName;
+    QLabel* myimage;
 
 };
 
-#endif // W_DIALOG_H
+#endif // W_DIALOG_IMAGE_H

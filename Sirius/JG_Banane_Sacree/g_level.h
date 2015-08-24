@@ -24,7 +24,7 @@ class Observer_NPC;
 
 #include <QList>
 
-#include "widget/w_dialog.h"
+#include "widget/dialog/w_dialog.h"
 #include <QDomElement>
 #include <QDomDocument>
 
@@ -92,6 +92,11 @@ public:
      * @param y yPosition
      */
     void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
+
+    /**
+     * @brief loadInformation
+     */
+    void loadInformation();
 
 private:
     // Level Playing Informations

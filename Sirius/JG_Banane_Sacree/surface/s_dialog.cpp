@@ -51,3 +51,13 @@ QString S_Dialog::getText()
 {
     return this->text;
 }
+
+void S_Dialog::setImage(QString imageName)
+{
+    this->imageName = imageName;
+}
+
+QString S_Dialog::getImageName()
+{
+    return this->imageName;
+}

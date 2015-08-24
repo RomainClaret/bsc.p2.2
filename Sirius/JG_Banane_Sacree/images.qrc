@@ -29,5 +29,11 @@
         <file>maps/-1.png</file>
         <file>maps/2.png</file>
         <file>maps/0Ouvert.png</file>
+        <file>maps/3.png</file>
+    </qresource>
+    <qresource prefix="/dialog">
+        <file>dialog/loutre.png</file>
+        <file>dialog/loutrePoisson.png</file>
+        <file>dialog/empty.png</file>
     </qresource>
 </RCC>

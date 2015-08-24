@@ -184,21 +184,10 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
         }
 
         Factory_Character::createEnemy(ennemiType, move, game, observerEnemy, scene);
-
-//        if(ennemiType == "FOX")
-//        {
-//            E_Fox *item2 = new E_Fox(move, game);
-//            item2->addToScene(scene);
-//        }
-//        else if(ennemiType == "WOLF")
-//        {
-//            E_Wolf *item2 = new E_Wolf(move, game);
-//            item2->addToScene(scene);
-//        }
     }
     else if(tagName == "DIALOG")
     {
-        Factory_Surface::createSurfaceDialog(x, y, scene, elem.attribute("text"));
+        Factory_Surface::createSurfaceDialog(x, y, scene, elem.attribute("text"), elem.attribute("image"));
     }
 }
 

@@ -11,25 +11,28 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef S_DIALOG_H
-#define S_DIALOG_H
+#ifndef B_MOVABLE_THROW_H
+#define B_MOVABLE_THROW_H
+#include "b_movable.h"
+#include <QList>
 
-#include "../surface/g_surface.h"
-
-class QGraphicsItem;
-
+class QGraphicsRectItem;
+class QGraphicsScene;
 
 /**
- * @brief Dialog blocks.
- * @details Surface with a dialog to interact with the player.
+ * @brief Movable block
+ * @details This block can be moved with characters.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 2.0
- * @date 21 August 2015
+ * @version 1.0
+ * @date 27 January 2015
+ * @todo integrate with DP Factory
  */
-class S_Dialog : public G_Surface
+//@bug no bugs
+//@warning no warnings
+class B_MovableThrow : public B_Movable
 {
 public:
     //Constructors
@@ -39,60 +42,28 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Dialog(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_MovableThrow(int xpos, int ypos, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    S_Dialog(QGraphicsItem *parent = 0);
+    B_MovableThrow(QGraphicsItem *parent = 0);
 
     /**
-     * @brief Set the number of the dialog.
-     * @param value
+     * @brief Check if self should slide
+     * @return true if self collides with a specific block.
      */
-    void setDialogNumber(int value);
+    bool isSlide();
+    bool isMovable();
 
-    /**
-     * @brief Get the number of the dialog of self.
-     * @param value
-     */
-    int getDialogNumber();
-
-    /**
-     * @brief Set the dialog of self.
-     * @param text
-     */
-    void addDialogText(QString text);
-
-    /**
-     * @brief Get the dialog of self.
-     * @return text of the dialog
-     */
-    QString getText();
-
-    /**
-     * @brief Set the name of the character picture
-     * @param imageName QString containing the name
-     */
-    void setImage(QString imageName);
-
-    /**
-     * @brief getImageName
-     * @return Name of the picture stored in imageName
-     */
-    QString getImageName();
+protected:
+    void advance(int step);
 
 private:
-    /**
-     * @brief Set the design of self.
-     */
-    void setDesign();
-
-    int dialogNumber;
-    QString text;
-    QString imageName;
+    int speed;
+    int time;
 
 };
 
-#endif // S_DIALOG_H
+#endif // B_MOVABLE_THROW_H

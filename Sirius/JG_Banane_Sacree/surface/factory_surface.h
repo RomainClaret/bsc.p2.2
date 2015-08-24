@@ -10,6 +10,8 @@
 #include "../surface/s_door.h"
 
 #include "../surface/b_movable.h"
+#include "../surface/b_movable_simple.h"
+#include "../surface/b_movable_throw.h"
 #include "../surface/b_wall.h"
 #include "../surface/b_water.h"
 
@@ -22,8 +24,8 @@ class QGraphicsScene;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 18 August 2015
+ * @version 1.5
+ * @date 21 August 2015
  */
 class Factory_Surface
 {
@@ -71,9 +73,10 @@ public:
      * @param ypos y-axis position of the item
      * @param scene scene to add the surface to
      * @param text text to display
+     * @param image image to display
      * @return S_Dialog* of created item
      */
-    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text = "");
+    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text = "", QString image="");
 
     /**
      * @brief Creates, returns and add a Door Surface to scene.
@@ -112,7 +115,16 @@ public:
      * @param scene scene to add the surface to
      * @return B_Movable* of created item
      */
-    static B_Movable* createBlocMovable(int xpos, int ypos, QGraphicsScene* scene);
+    static B_MovableSimple* createBlocMovable(int xpos, int ypos, QGraphicsScene* scene);
+
+    /**
+     * @brief Creates, returns and add a Movable Throw Surface to scene.
+     * @param xpos x-axis position of the item
+     * @param ypos y-axis position of the item
+     * @param scene scene to add the surface to
+     * @return B_Movable* of created item
+     */
+    static B_MovableThrow* createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene);
 
     /**
      * @brief Creates, returns and add a Wall Surface to scene.

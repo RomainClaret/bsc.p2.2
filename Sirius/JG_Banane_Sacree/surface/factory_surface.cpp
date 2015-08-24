@@ -1,5 +1,5 @@
 #include "../surface/factory_surface.h"
-
+#include "t_movesurface.h"
 #include <QGraphicsScene>
 
 QString Factory_Surface::SURFACE_ICE = "ICE";
@@ -60,10 +60,11 @@ S_Snow* Factory_Surface::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* s
     return s;
 }
 
-S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text)
+S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text, QString image)
 {
     S_Dialog *d = new S_Dialog(xpos, ypos);
     d->addDialogText(text);
+    d->setImage(image);
     scene->addItem(d);
     return d;
 }
@@ -95,10 +96,18 @@ S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel
     return d;
 }
 
-B_Movable* Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
+B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
 {
-    B_Movable* m = new B_Movable(xpos,ypos);
+    B_MovableSimple* m = new B_MovableSimple(xpos,ypos);
     m->addToScene(scene);
+    return m;
+}
+
+B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene)
+{
+    B_MovableThrow* m = new B_MovableThrow(xpos,ypos);
+    m->addToScene(scene);
+    T_MoveSurface timer(m,scene);
     return m;
 }
 
