@@ -60,6 +60,7 @@ private:
 
     t_CharacterMover* mover;
 
+
 public:
     P_Penguin();
 
@@ -68,8 +69,6 @@ public:
     void moveByPixel(int, int);
     void moveWithThread(char orientation);
     void moveBack();
-
-    void moveWithTimer(char orientation);
 
     void addToScene(QGraphicsScene*);
     void addObjectToBag(G_Object *object);
