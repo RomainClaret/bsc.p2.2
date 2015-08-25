@@ -95,7 +95,6 @@ void B_Water::calculateTextures(int** mapSurfaces, int width, int height)
         addTexture(QPixmap(":/surfaces/surfaces/water_rbOnly_collideSnow.png"));
     }
 
-
     //qDebug() << "calculating a texture...";
 //    if(isCollidingWithWater(leftTopCollideBox))
 //    {

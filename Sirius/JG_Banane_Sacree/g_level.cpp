@@ -134,10 +134,8 @@ QGraphicsScene* G_Level::populateScene()
 
     //Calculate the autoTextures
     qDebug() << "nombre de texture automatiques : " << listAutoTextures.size();
-    int i = 0;
-    foreach (S_SurfaceAutoTexture* surfaceAuto, listAutoTextures) {
-        i++;
-        qDebug() << "bloc :" << i;
+    foreach (S_SurfaceAutoTexture* surfaceAuto, listAutoTextures)
+    {
         surfaceAuto->calculateTextures(mapSurfaces, maxBlocksWidth, maxBlocksHeight);
     }
 

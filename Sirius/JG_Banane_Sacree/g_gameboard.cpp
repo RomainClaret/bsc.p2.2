@@ -314,11 +314,13 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         {
             qDebug() << "Sink it ! : " << p.x() << " " << p.y();
 
+            S_Snow *sunk = new S_Snow(p.x(),p.y());
+            //sunk->setColor("white");
+            sunk->setMovableSunk(b);
+
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-            S_Snow *sunk = new S_Snow(p.x(),p.y());
-            sunk->setColor("white");
             mainScene->addItem(sunk);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())

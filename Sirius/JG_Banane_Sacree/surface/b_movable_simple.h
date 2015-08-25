@@ -56,6 +56,15 @@ public:
      */
     bool isSlide();
 
+    /**
+     * @brief getRotated get the rotation of the texture
+     * @return
+     */
+    int getRotationTexture();
+
+private:
+    int rotationTexture;
+
 };
 
 #endif // B_MOVABLE_SIMPLE_H

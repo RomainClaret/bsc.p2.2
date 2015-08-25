@@ -15,6 +15,8 @@
 #include <QDebug>
 #include <QGraphicsRectItem>
 #include <QGraphicsScene>
+#include <QTransform>
+#include <tgmath.h>
 
 #include "../surface/b_wall.h"
 #include "../surface/b_movable.h"
@@ -37,6 +39,37 @@
  */
 B_MovableSimple::B_MovableSimple(int xpos, int ypos, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
 {
+    int iRand = rand() % 3;
+    QPixmap pixmap;
+
+    switch (iRand) {
+    case 0:
+        pixmap = QPixmap(":/surfaces/surfaces/movable_init.png");
+        break;
+    case 1:
+        pixmap = QPixmap(":/surfaces/surfaces/movable_init_01.png");
+        break;
+    case 2:
+        pixmap = QPixmap(":/surfaces/surfaces/movable_init_02.png");
+        break;
+    default:
+        break;
+    }
+
+    int iRandRotate = rand() % 4;
+    rotationTexture = 90*iRandRotate;
+
+    QTransform transform;
+    //QTransform trans = transform.scale(sqrt(pixmap.size().width()), sqrt(pixmap.size().height()));
+    QTransform trans = transform.rotate(rotationTexture);
+
+    setTexture(QPixmap(pixmap.transformed(trans)));
+
+}
+
+int B_MovableSimple::getRotationTexture()
+{
+    return this->rotationTexture;
 }
 
 /**
@@ -45,6 +78,7 @@ B_MovableSimple::B_MovableSimple(int xpos, int ypos, QGraphicsItem *parent) : B_
  */
 B_MovableSimple::B_MovableSimple(QGraphicsItem *parent) : B_Movable(0, 0, parent)
 {
+    setTexture(QPixmap(":/surfaces/surfaces/movable_init.png"));
 }
 
 /**
