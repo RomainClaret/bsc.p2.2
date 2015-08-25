@@ -2,6 +2,8 @@
 #include "t_movesurface.h"
 #include <QGraphicsScene>
 
+#include <QDebug>
+
 QString Factory_Surface::SURFACE_ICE = "ICE";
 QString Factory_Surface::SURFACE_SNOW = "SNOW";
 QString Factory_Surface::SURFACE_DIALOG = "DIALOG";
@@ -9,6 +11,7 @@ QString Factory_Surface::SURFACE_DOOR = "DOOR";
 QString Factory_Surface::BLOC_MOVABLE = "MOVABLE";
 QString Factory_Surface::BLOC_WALL = "WALL";
 QString Factory_Surface::BLOC_WATER = "WATER";
+QString Factory_Surface::BLOC_FIRE = "FIRE";
 
 /**
  * @details Returns NULL if the given type is not found.
@@ -42,6 +45,10 @@ G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGra
     else if(type == BLOC_WATER)
     {
         return createBlocWater(xpos, ypos, scene);
+    }
+    else if(type == BLOC_FIRE)
+    {
+        return createBlocFire(xpos, ypos, scene);
     }
     return NULL;
 }
@@ -103,9 +110,9 @@ B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphic
     return m;
 }
 
-B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene)
+B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game)
 {
-    B_MovableThrow* m = new B_MovableThrow(xpos,ypos);
+    B_MovableThrow* m = new B_MovableThrow(xpos,ypos, game);
     m->addToScene(scene);
     T_MoveSurface timer(m,scene);
     return m;
@@ -123,4 +130,11 @@ B_Water* Factory_Surface::createBlocWater(int xpos, int ypos, QGraphicsScene* sc
     B_Water *w = new B_Water(xpos, ypos);
     scene->addItem(w);
     return w;
+}
+
+S_Fire* Factory_Surface::createBlocFire(int xpos, int ypos, QGraphicsScene* scene)
+{
+    S_Fire *f = new S_Fire(xpos, ypos);
+    scene->addItem(f);
+    return f;
 }

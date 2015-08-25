@@ -27,6 +27,8 @@
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
 
+#include "g_gameboard.h"
+
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
 #include <typeinfo.h>
@@ -36,10 +38,19 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_MovableThrow::B_MovableThrow(int xpos, int ypos, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
+B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
 {
-    speed = 10;
+    this->game = game;
+
+    int val = rand() % 10+3;
+    speed = val;
     time = 0;
+
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor("black");
+    setBrush(brush);
+
 }
 
 /**
@@ -48,16 +59,8 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, QGraphicsItem *parent) : B_Mo
  */
 B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, parent) //obligé de donner une position fictive
 {
-    speed = 300;
+    speed = 7;
     time = 0;
-}
-
-/**
- * @details Check if the cross of detection collides with S_Ice.
- */
-bool B_MovableThrow::isSlide()
-{
-    return true;
 }
 
 void B_MovableThrow::advance(int step)
@@ -67,23 +70,20 @@ void B_MovableThrow::advance(int step)
         time ++;
         if(time % speed == 0)
         {
-            qDebug() <<"MOVE";
-            qDebug() << this->pos().x() << " : " << this->pos().y();
             this->setPos(this->pos().x()/32,(this->pos().y()+32)/32);
-            qDebug() << this->pos().x() << " : " << this->pos().y();
         }
 
-        isMovable();
+        checkPosition();
     }
 
 }
 
-bool B_MovableThrow::isMovable()
+void B_MovableThrow::checkPosition()
 {
     QList<QGraphicsItem *> l = this->collidingItems();
     for(int i=0; i<l.length(); i++)
     {
-        // DIE
+        //BREAK
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
            typeid(*l.at(i)).name() == typeid(B_Water).name() ||
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name())
@@ -92,9 +92,8 @@ bool B_MovableThrow::isMovable()
         }
         if(typeid(*l.at(i)).name() == typeid(P_Penguin).name())
         {
-            return false;
+            game->restartEnigma();
         }
     }
-    return true;
 }
 

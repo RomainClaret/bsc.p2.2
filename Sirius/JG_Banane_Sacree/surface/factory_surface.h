@@ -8,12 +8,15 @@
 #include "../surface/s_snow.h"
 #include "../surface/s_viewblocknpc.h"
 #include "../surface/s_door.h"
+#include "../surface/s_fire.h"
 
 #include "../surface/b_movable.h"
 #include "../surface/b_movable_simple.h"
 #include "../surface/b_movable_throw.h"
 #include "../surface/b_wall.h"
 #include "../surface/b_water.h"
+
+#include "g_gameboard.h"
 
 class QGraphicsScene;
 
@@ -38,6 +41,7 @@ public:
     static QString BLOC_MOVABLE;
     static QString BLOC_WALL;
     static QString BLOC_WATER;
+    static QString BLOC_FIRE;
 
     /**
      * @brief Creates, returns and add given item to scene.
@@ -124,7 +128,7 @@ public:
      * @param scene scene to add the surface to
      * @return B_Movable* of created item
      */
-    static B_MovableThrow* createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene);
+    static B_MovableThrow* createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game);
 
     /**
      * @brief Creates, returns and add a Wall Surface to scene.
@@ -143,6 +147,15 @@ public:
      * @return B_Water* of created item
      */
     static B_Water* createBlocWater(int xpos, int ypos, QGraphicsScene* scene);
+
+    /**
+     * @brief Creates, returns and add a Fire Surface to scene.
+     * @param xpos x-axis position of the item
+     * @param ypos y-axis position of the item
+     * @param scene scene to add the surface to
+     * @return S_Fire* of created item
+     */
+    static S_Fire* createBlocFire(int xpos, int ypos, QGraphicsScene* scene);
 };
 
 #endif // FACTORY_SURFACE_H

@@ -159,7 +159,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
 {
     QString tagName = elem.tagName();
     if(tagName == "BLOC")
-    {       
+    {
         Factory_Surface::createSurface(elem.attribute("type"),x,y,scene);
     }
     else if(tagName == "ITEM")

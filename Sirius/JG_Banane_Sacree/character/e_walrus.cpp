@@ -29,7 +29,7 @@ E_Walrus::E_Walrus(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     this->gameBoard = g;
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
-    speed = 10; //vitesse par défaut
+    speed = 8; //vitesse par défaut
 
     leftSkin = ":/characters/characters/renard_front.png";
     rightSkin = ":/characters/characters/renard_front.png";
@@ -49,7 +49,11 @@ E_Walrus::E_Walrus(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
 
 void E_Walrus::action()
 {
-    Factory_Surface::createBlocMovableThrow(pos().x()/32, pos().y()/32+1, gameBoard->getGraphicsScene());
+    int val = rand() % 2;
+    if(val == 1)
+    {
+        Factory_Surface::createBlocMovableThrow(pos().x()/32, pos().y()/32+1, gameBoard->getGraphicsScene(), gameBoard);
+    }
 }
 
 void E_Walrus::changeState(State_Enemy* newState)

@@ -16,6 +16,7 @@
 #include "surface/b_wall.h"
 #include "surface/b_movable.h"
 #include "surface/b_movable_simple.h"
+#include "surface/b_movable_throw.h"
 #include "surface/b_water.h"
 #include "g_object.h"
 #include "surface/s_door.h"
@@ -23,6 +24,7 @@
 #include "surface/s_snow.h"
 #include "surface/s_ice.h"
 #include "surface/s_dialog.h"
+#include "surface/s_fire.h"
 #include "g_level.h"
 #include "character/c_enemy.h"
 #include "character/e_fox.h"
@@ -415,6 +417,13 @@ void G_Gameboard::checkPositionEvents()
             restartEnigma();
 
             QString text = "Tu t'es fait repéré par un ennemi";
+            showDialog(text,"");
+        }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(B_MovableThrow).name())
+        {
+            restartEnigma();
+
+            QString text = "Tu t'es fait assomé par un bloc de glace";
             showDialog(text,"");
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
@@ -846,6 +855,10 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
             bMove = true;
+        }
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
+        {
+            bMove = false;
         }
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))

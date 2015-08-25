@@ -25,6 +25,7 @@
 #include "../character/e_walrus.h"
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
+#include "../surface/s_fire.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -133,7 +134,8 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name() ||
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
            typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Walrus).name())
+           typeid(*l.at(i)).name() == typeid(E_Walrus).name()||
+           typeid(*l.at(i)).name() == typeid(S_Fire).name())
         {
             return false;
         }

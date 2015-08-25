@@ -17,11 +17,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml multimediawidgets
+QT       += core gui xml multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = JG_Banane_Sacree
+TARGET = JG_Banane_Sacrees
 TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
@@ -75,7 +75,8 @@ SOURCES += \
     character/e_walrus.cpp \
     state/state_enemywalrus.cpp \
     t_movesurface.cpp \
-    character/c_ai.cpp
+    character/c_ai.cpp \
+    surface/s_fire.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -125,7 +126,10 @@ HEADERS  += \
     surface/b_movable_throw.h \
     character/e_walrus.h \
     state/state_enemywalrus.h \
-    t_movesurface.h \  character/c_ai.h
+    t_movesurface.h \
+   character/c_ai.h \
+    surface/s_fire.h
+
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
