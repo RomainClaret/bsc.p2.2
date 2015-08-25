@@ -127,7 +127,9 @@ HEADERS  += \
     t_movesurface.h \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
-    surface/s_fire.hRESOURCES += \
+    surface/s_fire.h
+
+RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \

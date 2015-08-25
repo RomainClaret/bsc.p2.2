@@ -31,7 +31,7 @@ void G_Character::moveWithTimer(char orientation)
 
 void G_Character::stepMove()
 {
-    qDebug() << "step";
+
     switch (currentMove) {
     case 'l':
 
@@ -40,7 +40,7 @@ void G_Character::stepMove()
         if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
         {
             this->moveByPixel(1,0);
-            qDebug() << "move";
+
         }
         else
         {

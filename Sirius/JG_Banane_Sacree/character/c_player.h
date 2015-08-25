@@ -40,7 +40,10 @@ public:
     QPoint *getPos();
     QPoint getPosOnGame();
 
-    void moveByPixel(int x, int y){}
+    void moveByPixel(int x, int y)
+    {
+        //rien, temporaire
+    }
 
 protected:
     int xPos;
