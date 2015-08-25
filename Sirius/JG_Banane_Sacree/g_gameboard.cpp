@@ -335,15 +335,18 @@ void G_Gameboard::fixMovable(B_Movable *b)
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
+            dialog->setSound("lose_life");
+            dialog->playSound();
+            restartEnigma();
             QString text = tr("Tu as bloqué ta sortie!");
             showDialog(text);
 
-            b->removeFromScene(mainScene);
-            mainScene->removeItem(CollidingItems.at(i));
+//            b->removeFromScene(mainScene);
+//            mainScene->removeItem(CollidingItems.at(i));
 
-            B_Wall *wall = new B_Wall(p.x(),p.y());
-            wall->setColor("gray");
-            mainScene->addItem(wall);
+//            B_Wall *wall = new B_Wall(p.x(),p.y());
+//            wall->setColor("gray");
+//            mainScene->addItem(wall);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(G_Object).name())
         {
@@ -353,11 +356,12 @@ void G_Gameboard::fixMovable(B_Movable *b)
 
             if(objet->getName() != G_Object::OBJECT_EGG)
             {
-                restartEnigma();
-
                 QString text = tr("OUCH! Ce bloc vient d'écraser un ");
                 text.append(objet->getName());
                 text.append(tr("! Tu recommences au dernier checkpoint! "));
+                dialog->setSound("lose_life");
+                dialog->playSound();
+                restartEnigma();
                 showDialog(text);
             }
         }
@@ -399,7 +403,7 @@ void G_Gameboard::checkPositionEvents()
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
-                    showDialog(text);
+                    showDialog(text, "open");
                 }
             }
 
@@ -421,14 +425,14 @@ void G_Gameboard::checkPositionEvents()
             restartEnigma();
 
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
-            showDialog(text);
+            showDialog(text, "lose_life");
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(E_Fox).name() || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name())
         {
             restartEnigma();
 
             QString text = "Tu t'es fait repéré par un ennemi";
-            showDialog(text);
+            showDialog(text, "lose_life");
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
         {
@@ -513,7 +517,7 @@ void G_Gameboard::checkChangeView(char sens)
                     text.append((bloc->getNeededItem()));
                     text.append(tr("\" pour aller plus loin ;) "));
 
-                    showDialog(text);
+                    showDialog(text, "lose_life");
 
                     playableCharacter->moveBack();
                 }
@@ -926,7 +930,7 @@ void G_Gameboard::restartEnigma()
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text);
+        showDialog(text, "lose_life");
     }
 
     observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
@@ -1046,6 +1050,7 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
+    dialog->setPlayable(true);
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
@@ -1108,6 +1113,7 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
 void G_Gameboard::setFirstDialog()
 {
     setWidgetPositionCenter(dialog);
+    dialog->setSound("start_game");
     dialogProxy->show();
     dialog->setText("OK",1);
     dialogToogle = true;
@@ -1146,6 +1152,16 @@ void G_Gameboard::showDialog(QString text)
 {
     qDebug() << "DIALOG SHOW";
     setWidgetPositionCenter(dialog);
+    dialogProxy->show();
+    dialog->setText(text,1);
+    dialogToogle = true;
+}
+
+void G_Gameboard::showDialog(QString text, QString sound)
+{
+    qDebug() << "DIALOG SHOW with Sound";
+    setWidgetPositionCenter(dialog);
+    dialog->setSound(sound);
     dialogProxy->show();
     dialog->setText(text,1);
     dialogToogle = true;

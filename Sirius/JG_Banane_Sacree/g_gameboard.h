@@ -264,6 +264,13 @@ private:
      */
     void showDialog(QString text);
 
+    /**
+     * @brief Show the dialog "popup" with the text and sound in param
+     * @param text Will be written in the popup
+     * @param sound name of the sound to play
+     */
+    void showDialog(QString text, QString sound);
+
     /*
      * ATTRIBUTES
     */

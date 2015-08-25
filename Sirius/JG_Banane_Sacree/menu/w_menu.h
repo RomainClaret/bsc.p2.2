@@ -20,6 +20,12 @@
 #include "../menu/w_menucode.h"
 #include "../menu/w_menucredits.h"
 
+#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+    #define MY_OS "UNIX"
+#else
+    #define MY_OS "OTHER"
+#endif
+
 class QLabel;
 class QPushButton;
 class QFormLayout;

@@ -1,2 +1,8 @@
-<RCC/>
-
+<RCC>
+    <qresource prefix="/">
+        <file>sound/important.wav</file>
+        <file>sound/dialog_interaction.wav</file>
+        <file>sound/start_game.wav</file>
+        <file>sound/lose_life.wav</file>
+    </qresource>
+</RCC>

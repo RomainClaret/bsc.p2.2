@@ -17,7 +17,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml multimediawidgets
+QT       += core gui xml multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,6 +25,7 @@ TARGET = JG_Banane_Sacree
 TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
+QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
     main.cpp \
@@ -116,4 +117,5 @@ RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \
+    sound.qrc \
     music.qrc
