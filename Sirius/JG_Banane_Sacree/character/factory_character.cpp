@@ -6,11 +6,14 @@
 #include "../character/c_enemy.h"
 #include "../character/e_fox.h"
 #include "../character/e_wolf.h"
+#include "../character/e_walrus.h"
 #include "../character/c_player.h"
 #include "../observer_npc.h"
+#include "../state/state_enemywalrus.h"
 
 QString Factory_Character::ENEMY_WOLF = "WOLF";
 QString Factory_Character::ENEMY_FOX = "FOX";
+QString Factory_Character::ENEMY_WALRUS = "WALRUS";
 
 C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_NPC* observer, QGraphicsScene* scene)
 {
@@ -27,6 +30,13 @@ C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Game
         observer->addNPCObserver(fox);
         fox->addToScene(scene);
         return fox;
+    }
+    else if(type == ENEMY_WALRUS)
+    {
+        E_Walrus* walrus = new E_Walrus(path, g);
+        observer->addNPCObserver(walrus);
+        walrus->addToScene(scene);
+        return walrus;
     }
     else
     {

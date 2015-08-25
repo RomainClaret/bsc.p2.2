@@ -99,6 +99,10 @@ QPoint C_Enemy::getNPCPos()
     return convertPosPoint(this->pos());
 }
 
+void C_Enemy::moveByPixel(int x, int y)
+{
+    //todo
+}
 void C_Enemy::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;
@@ -122,7 +126,7 @@ void C_Enemy::viewBlockActive()
         bool bUnactivate = false;
 
         foreach (QGraphicsItem *item, CollidingItems) {
-            if(typeid(*item).name() == typeid(B_Movable).name()
+            if(typeid(*item).name() == typeid(B_MovableSimple).name()
             || typeid(*item).name() == typeid(B_Wall).name()
             || typeid(*item).name() == typeid(C_Enemy).name())
             {
@@ -213,7 +217,7 @@ bool C_Enemy::collide()
         {
             return true;
         }
-        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_Movable).name())
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_MovableSimple).name())
         {
             return true;
         }

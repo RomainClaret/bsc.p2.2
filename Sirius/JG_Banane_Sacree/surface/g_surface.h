@@ -77,6 +77,13 @@ public:
      * @param brushColor color name
      */
     void setColor(QString brushColor);
+
+protected:
+    /**
+     * @brief call by the scene to redraw
+     * @param step
+     */
+    void advance(int step);
 };
 
 #endif // G_SURFACE_H

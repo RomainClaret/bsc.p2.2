@@ -14,6 +14,7 @@
 #ifndef C_ENEMY_H
 #define C_ENEMY_H
 
+#include <QDebug>
 #include <QGraphicsItem>
 #include "../state/state_enemy.h"
 #include "../character/c_ai.h"
@@ -30,6 +31,7 @@ class State_Enemy;
 class State_EnemyPatrol;
 class State_EnemySleep;
 class State_EnemyPause;
+class State_EnemyWalrus;
 
 /**
  * @brief Enemy Class
@@ -49,6 +51,7 @@ class C_Enemy : public G_Character
     friend class State_EnemyPatrol;
     friend class State_EnemySleep;
     friend class State_EnemyPause;
+    friend class State_EnemyWalrus;
 
     friend class C_AI;
 
@@ -119,7 +122,11 @@ public:
      * @brief changeState replace the state of the enemy with newState
      * @param newState
      */
-    void changeState(State_Enemy* newState);
+    virtual void changeState(State_Enemy* newState);
+
+    virtual void action() { }
+
+    void moveByPixel(int x, int y);
 
 protected:
     /**
@@ -140,6 +147,8 @@ protected:
     void setPosViewBloc(S_ViewBlockNPC* block, QPoint p);
 
     C_AI *brain;
+
+    State_Enemy* state;
 
 private:
     int iDestPoint;
@@ -186,10 +195,6 @@ private:
     void playableCharacterDetection();
 
     G_Gameboard *game;
-
-    State_Enemy* state;
-
-
 };
 
 #endif // C_ENEMY_H

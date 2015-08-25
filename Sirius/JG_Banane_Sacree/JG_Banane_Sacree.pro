@@ -21,7 +21,7 @@ QT       += core gui xml multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = JG_Banane_Sacree
+TARGET = JG_Banane_Sacrees
 TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
@@ -29,7 +29,6 @@ QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
     main.cpp \
-    g_npc.cpp \
     g_gameboard.cpp \
     g_level.cpp \
     g_maingame.cpp \
@@ -59,16 +58,27 @@ SOURCES += \
     state/state_npcpatrol.cpp \
     state/state_npcpause.cpp \
     state/state_npcsleep.cpp \
-    widget/w_dialog.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
     menu/w_menucode_lineedit.cpp \
     menu/w_menucredits.cpp \
     tools/verticalscrollarea.cpp \
- 	character/g_character.cpp \
+    character/g_character.cpp \
     character/t_charactermover.cpp \
-    character/t_charactertimermover.cpp \
-    character/c_ai.cpp
+    widget/dialog/w_dialog.cpp \
+    widget/dialog/w_dialog_image.cpp \
+    widget/dialog/w_dialog_text.cpp \
+    widget/dialog/w_dialog_container.cpp \
+    surface/b_movable_simple.cpp \
+    surface/b_movable_throw.cpp \
+    character/e_walrus.cpp \
+    state/state_enemywalrus.cpp \
+    t_movesurface.cpp \
+    character/c_ai.cpp\
+    character/c_enemy.cpp\
+    surface/s_surfaceautotexture.cpp\
+    surface/s_fire.cpp \
+    surface/s_stone.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -86,7 +96,6 @@ HEADERS  += \
     surface/b_wall.h \
     surface/b_water.h \
     surface/g_surface.h \
-    surface/s_dialog.h \
     surface/s_door.h \
     surface/s_ice.h \
     surface/s_snow.h \
@@ -110,8 +119,19 @@ HEADERS  += \
     tools/verticalscrollarea.h \
     character/g_character.h \
     character/t_charactermover.h \
-    character/t_charactertimermover.h \
-    character/c_ai.h
+    widget/dialog/w_dialog.h \
+    widget/dialog/w_dialog_image.h \
+    widget/dialog/w_dialog_text.h \
+    widget/dialog/w_dialog_container.h \
+    surface/b_movable_simple.h \
+    surface/b_movable_throw.h \
+    character/e_walrus.h \
+    state/state_enemywalrus.h \
+    t_movesurface.h \
+    character/c_ai.h \
+    surface/s_surfaceautotexture.h \
+    surface/s_fire.h \
+    surface/s_stone.h
 
 RESOURCES += \
     images.qrc \

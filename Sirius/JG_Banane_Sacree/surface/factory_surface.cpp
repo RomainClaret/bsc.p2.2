@@ -1,6 +1,8 @@
 #include "../surface/factory_surface.h"
-
+#include "t_movesurface.h"
 #include <QGraphicsScene>
+
+#include <QDebug>
 
 QString Factory_Surface::SURFACE_ICE = "ICE";
 QString Factory_Surface::SURFACE_SNOW = "SNOW";
@@ -9,6 +11,8 @@ QString Factory_Surface::SURFACE_DOOR = "DOOR";
 QString Factory_Surface::BLOC_MOVABLE = "MOVABLE";
 QString Factory_Surface::BLOC_WALL = "WALL";
 QString Factory_Surface::BLOC_WATER = "WATER";
+QString Factory_Surface::BLOC_FIRE = "FIRE";
+QString Factory_Surface::BLOC_STONE = "STONE";
 
 /**
  * @details Returns NULL if the given type is not found.
@@ -43,6 +47,14 @@ G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGra
     {
         return createBlocWater(xpos, ypos, scene);
     }
+    else if(type == BLOC_FIRE)
+    {
+        return createBlocFire(xpos, ypos, scene);
+    }
+    else if(type == BLOC_STONE)
+    {
+        return createBlocStone(xpos, ypos, scene);
+    }
     return NULL;
 }
 
@@ -60,10 +72,11 @@ S_Snow* Factory_Surface::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* s
     return s;
 }
 
-S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text)
+S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text, QString image)
 {
     S_Dialog *d = new S_Dialog(xpos, ypos);
     d->addDialogText(text);
+    d->setImage(image);
     scene->addItem(d);
     return d;
 }
@@ -95,10 +108,18 @@ S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel
     return d;
 }
 
-B_Movable* Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
+B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
 {
-    B_Movable* m = new B_Movable(xpos,ypos);
+    B_MovableSimple* m = new B_MovableSimple(xpos,ypos);
     m->addToScene(scene);
+    return m;
+}
+
+B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game)
+{
+    B_MovableThrow* m = new B_MovableThrow(xpos,ypos, game);
+    m->addToScene(scene);
+    T_MoveSurface timer(m,scene);
     return m;
 }
 
@@ -112,6 +133,20 @@ B_Wall* Factory_Surface::createBlocWall(int xpos, int ypos, QGraphicsScene* scen
 B_Water* Factory_Surface::createBlocWater(int xpos, int ypos, QGraphicsScene* scene)
 {
     B_Water *w = new B_Water(xpos, ypos);
-    scene->addItem(w);
+    w->addToScene(scene);
     return w;
+}
+
+S_Fire* Factory_Surface::createBlocFire(int xpos, int ypos, QGraphicsScene* scene)
+{
+    S_Fire *f = new S_Fire(xpos, ypos);
+    scene->addItem(f);
+    return f;
+}
+
+S_Stone* Factory_Surface::createBlocStone(int xpos, int ypos, QGraphicsScene* scene)
+{
+    S_Stone *s = new S_Stone(xpos, ypos);
+    scene->addItem(s);
+    return s;
 }

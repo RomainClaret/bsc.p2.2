@@ -22,8 +22,11 @@
 #include "../character/c_enemy.h"
 #include "../character/e_fox.h"
 #include "../character/e_wolf.h"
+#include "../character/e_walrus.h"
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
+#include "../surface/s_fire.h"
+#include "../surface/s_stone.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -37,7 +40,7 @@
 B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
    setDesign(xpos, ypos);
-   setZValue(1);
+   setZValue(3);
 }
 
 /**
@@ -47,7 +50,7 @@ B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos
 B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
-    setZValue(1);
+    setZValue(3);
 }
 
 void B_Movable::setPos(int x, int y)
@@ -63,12 +66,6 @@ void B_Movable::setPos(int x, int y)
  */
 void B_Movable::setDesign(int xpos, int ypos)
 {
-    QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor("gray");
-
-    setBrush(brush);
-
     int size = G_Gameboard::getGameSquares();
 
     setPos(xpos,ypos);
@@ -81,6 +78,13 @@ void B_Movable::setDesign(int xpos, int ypos)
     rightCollideBox->setPen(Qt::NoPen);
     bottomCollideBox->setPen(Qt::NoPen);
     topCollideBox->setPen(Qt::NoPen);
+}
+
+void B_Movable::setTexture(QPixmap pixmap)
+{
+    QBrush brush;
+    brush.setTexture(pixmap);
+    setBrush(brush);
 }
 
 /**
@@ -129,9 +133,12 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
     for(int i=0; i<l.length(); i++)
     {
         if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
-           typeid(*l.at(i)).name() == typeid(B_Movable).name() ||
+           typeid(*l.at(i)).name() == typeid(B_MovableSimple).name() ||
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
-           typeid(*l.at(i)).name() == typeid(E_Wolf).name())
+           typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||
+           typeid(*l.at(i)).name() == typeid(E_Walrus).name()||
+           typeid(*l.at(i)).name() == typeid(S_Fire).name() ||
+           typeid(*l.at(i)).name() == typeid(S_Stone).name()     )
         {
             return false;
         }

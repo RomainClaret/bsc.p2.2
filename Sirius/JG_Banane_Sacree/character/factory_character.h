@@ -31,6 +31,7 @@ class Factory_Character
 public:
     static QString ENEMY_WOLF;
     static QString ENEMY_FOX;
+    static QString ENEMY_WALRUS;
 
     /**
      * @brief createEnemy generate a Enemy, add it to the scene and to the observer

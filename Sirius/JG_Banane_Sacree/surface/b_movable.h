@@ -40,6 +40,7 @@ public:
      * @brief Constructor with position setup.
      * @param xpos set the postion on the x-axis
      * @param ypos set the postion on the y-axis
+     * @texture texture of the object
      * @param parent QGraphicsItem parent
      */
     B_Movable(int xpos, int ypos, QGraphicsItem *parent = 0);
@@ -140,8 +141,13 @@ public:
      */
     QGraphicsRectItem *topCollideBox;
 
-private:
+    /**
+     * @brief setTexture complement of setDesign, call it to set a texture
+     * @param pixmap the texture
+     */
+    void setTexture(QPixmap pixmap);
 
+private:
     /**
      * @brief Check if self is movable.
      * @param l QList of QGraphicsItem
@@ -155,7 +161,6 @@ private:
      * @param ypos position of the item on the y-axis
      */
     void setDesign(int xpos, int ypos);
-
 
 };
 

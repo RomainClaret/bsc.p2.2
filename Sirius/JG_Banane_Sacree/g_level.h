@@ -21,12 +21,17 @@ class QPoint;
 class G_Gameboard;
 class QStringList;
 class Observer_NPC;
+class S_SurfaceAutoTexture;
 
 #include <QList>
+#include <QVector>
 
-#include "widget/w_dialog.h"
+#include "widget/dialog/w_dialog.h"
 #include <QDomElement>
+#include <QList>
 #include <QDomDocument>
+
+class S_Door;
 
 /**
  * @brief Where the level informations are read (from XML) and stored.
@@ -93,6 +98,15 @@ public:
      */
     void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
 
+    void unlock();
+
+    static int S_SNOW;
+
+    /**
+     * @brief loadInformation
+     */
+    void loadInformation();
+
 private:
     // Level Playing Informations
     int levelNumber;
@@ -111,6 +125,13 @@ private:
     // XML Informations Files
     QString fileName;
     QDomDocument* doc;
+
+    QList<S_SurfaceAutoTexture* > listAutoTextures;
+    int** mapSurfaces;
+
+    QList<S_Door*> doorList;
+
+
 };
 
 #endif // G_LEVEL_H

@@ -21,10 +21,11 @@
 #include "menu/w_menupause.h"
 #include "g_level.h"
 #include "widget/w_object.h"
-#include "widget/w_dialog.h"
+#include "widget/dialog/w_dialog.h"
 #include "g_profil.h"
 #include "widget/w_life.h"
 #include "observer_npc.h"
+#include "surface/b_movable_simple.h"
 
 class W_Menu;
 class QGraphicsProxyWidget;
@@ -48,7 +49,7 @@ class QTimer;
  * @todo integrate with DP Factory
  */
 struct SlidingBlock{
-    B_Movable *slidingMovable;
+    B_MovableSimple* slidingMovable;
     char direction; //l, r, t, b
 };
 
@@ -102,6 +103,8 @@ public:
      * @param playerProfil Profil of the player
      */
     void setPlayerProfil(G_Profil* playerProfil);
+
+    QGraphicsScene* getGraphicsScene();
 
 private:
 
@@ -164,12 +167,6 @@ private:
      * @brief Get last checkpoint.
      */
     void loadCheckpoint();
-
-    /**
-     * @brief Display a dialog when the level is loaded
-     * @todo Redo the first dialog, shoing OK at the moment
-     */
-    void setFirstDialog();
 
     //Methods related to proxy management (overlay of widgets)
     /**
@@ -234,7 +231,7 @@ private:
      * @brief Validate the place of a movable block.
      * @param b block to validate
      */
-    void fixMovable(B_Movable *b);
+    void fixMovable(B_MovableSimple *b);
 
     /**
      * @brief Check if the conditions required to change view is validated.
@@ -261,8 +258,9 @@ private:
     /**
      * @brief Show the dialog "popup" with the text in param
      * @param text Will be written in the popup
+     * @param image Will be shown under the popup
      */
-    void showDialog(QString text);
+    void showDialog(QString text, QString image);
 
     /**
      * @brief Show the dialog "popup" with the text and sound in param
@@ -312,7 +310,7 @@ private:
     //Sliding & Displacement
     char directionPlayableCharacter;
     bool isSliding;
-    B_Movable *movable;
+    B_MovableSimple *movable;
     QList<SlidingBlock> listSlindingBlocks;
     QTimer *timer;
     QTimer *timerPlayableCharacterSlide;

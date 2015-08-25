@@ -28,14 +28,14 @@ G_Object::G_Object(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, 
 G_Object::G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     this->nom = new QString(name);
-    setZValue(2);
+    setZValue(3);
     setDesign();
 }
 
 G_Object::G_Object(QString name, QGraphicsItem *parent): G_Surface(0, 0, parent)
 {
     this->nom = new QString(name);
-    setZValue(2);
+    setZValue(3);
     setDesign();
 }
 

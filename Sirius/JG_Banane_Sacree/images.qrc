@@ -22,6 +22,7 @@
         <file>items/fish5.png</file>
         <file>items/shoes.png</file>
         <file>items/banana.png</file>
+        <file>items/tonneau.png</file>
     </qresource>
     <qresource prefix="/maps">
         <file>maps/0.png</file>
@@ -29,5 +30,43 @@
         <file>maps/-1.png</file>
         <file>maps/2.png</file>
         <file>maps/0Ouvert.png</file>
+        <file>maps/3.png</file>
     </qresource>
+    <qresource prefix="/dialog">
+        <file>dialog/loutre.png</file>
+        <file>dialog/loutrePoisson.png</file>
+        <file>dialog/empty.png</file>
+    </qresource>
+    <qresource prefix="/surfaces">
+        <file>surfaces/movable_init.png</file>
+        <file>surfaces/water_b_collideSnow.png</file>
+        <file>surfaces/water_r_collideSnow.png</file>
+        <file>surfaces/water_rtAnd_collideSnow.png</file>
+        <file>surfaces/water_rbAnd_collideSnow.png</file>
+        <file>surfaces/water_lbAnd_collideSnow.png</file>
+        <file>surfaces/water_t_collideSnow.png</file>
+        <file>surfaces/water_l_collideSnow.png</file>
+        <file>surfaces/water_rtOnly_collideSnow.png</file>
+        <file>surfaces/water_lbOnly_collideSnow.png</file>
+        <file>surfaces/water_ltOnly_collideSnow.png</file>
+        <file>surfaces/water_rbOnly_collideSnow.png</file>
+        <file>surfaces/water_ltAnd_collideSnow.png</file>
+        <file>surfaces/water_init_01.png</file>
+        <file>surfaces/water_init_03.png</file>
+        <file>surfaces/water_init_05.png</file>
+        <file>surfaces/water_init_07.png</file>
+        <file>surfaces/water_init_09.png</file>
+        <file>surfaces/water_init_11.png</file>
+        <file>surfaces/water_init_13.png</file>
+        <file>surfaces/water_init_14.png</file>
+        <file>surfaces/water_init_12.png</file>
+        <file>surfaces/water_init_10.png</file>
+        <file>surfaces/water_init_08.png</file>
+        <file>surfaces/water_init_06.png</file>
+        <file>surfaces/water_init_04.png</file>
+        <file>surfaces/water_init_02.png</file>
+        <file>surfaces/water_init_00.png</file>
+		<file>surfaces/door.png</file>        <file>surfaces/movable_init_02.png</file>
+        <file>surfaces/movable_init_01.png</file>
+        <file>surfaces/movable_snow.png</file>    </qresource>
 </RCC>
