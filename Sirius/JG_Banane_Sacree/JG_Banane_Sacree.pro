@@ -77,7 +77,9 @@ SOURCES += \
     character/c_ai.cpp\
     character/c_enemy.cpp\
     surface/s_surfaceautotexture.cpp\
-    surface/s_fire.cpp
+    surface/s_fire.cpp \
+    surface/s_stone.cpp
+
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -129,7 +131,10 @@ HEADERS  += \
     t_movesurface.h \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
-    surface/s_fire.hRESOURCES += \
+    surface/s_fire.h \
+    surface/s_stone.h
+
+RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \

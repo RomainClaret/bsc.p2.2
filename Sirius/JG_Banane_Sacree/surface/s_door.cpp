@@ -14,6 +14,9 @@
 #include "../surface/s_door.h"
 
 #include <QGraphicsItem>
+#include <QBrush>
+
+#include <QDebug>
 
 
 S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
@@ -41,6 +44,23 @@ void S_Door::setDesign()
 //    setBrush(brush);
 }
 
+void S_Door::setBackground(bool state)
+{
+    //True = OPEN, False = CLOSED
+    if(state)
+    {
+        setBrush(Qt::NoBrush);
+    }
+    else
+    {
+        qDebug() << "setBackground";
+        QBrush brush;
+        QPixmap pixmap(":/surface/door.png");
+        brush.setTexture(pixmap);
+        setBrush(brush);
+    }
+}
+
 bool S_Door::isEndLevel()
 {
     return this->levelEnd;
@@ -48,6 +68,7 @@ bool S_Door::isEndLevel()
 
 void S_Door::setLevelEnd(bool value)
 {
+    setBackground(!value);
     this->levelEnd = value;
 }
 

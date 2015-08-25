@@ -18,6 +18,7 @@
 #include "surface/b_movable_simple.h"
 #include "surface/b_movable_throw.h"
 #include "surface/b_water.h"
+#include "surface/s_stone.h"
 #include "g_object.h"
 #include "surface/s_door.h"
 #include "surface/s_viewblocknpc.h"
@@ -410,6 +411,13 @@ void G_Gameboard::checkPositionEvents()
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
             showDialog(text,"");
         }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
+        {
+            restartEnigma();
+
+            QString text = "Chaud! Chaud! Le feu est dangereux pour les pieds de notre pingouin";
+            showDialog(text,"");
+        }
         if(typeid(*CollidingItems.at(i)).name() == typeid(E_Fox).name()
                 || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name()
                 || typeid(*CollidingItems.at(i)).name() == typeid(E_Walrus).name())
@@ -439,7 +447,7 @@ void G_Gameboard::checkPositionEvents()
     {
         qDebug() << "UNLOCKEND";
 
-        int levelNumber = currentLevel->getLevelNumber();
+        /*int levelNumber = currentLevel->getLevelNumber();
         QString background = ":/maps/maps/";
         background.append(QString("%1").arg(levelNumber));
         background.append("Ouvert");
@@ -449,7 +457,9 @@ void G_Gameboard::checkPositionEvents()
         if(!pixmapBackground.isNull())
         {
             mainScene->setBackgroundBrush(pixmapBackground);
-        }
+        }*/
+
+        currentLevel->unlock();
 
         endable = true;
     }
@@ -856,7 +866,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = true;
         }
-        else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Stone).name())
         {
             bMove = false;
         }

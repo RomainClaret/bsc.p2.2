@@ -22,6 +22,7 @@
         <file>items/fish5.png</file>
         <file>items/shoes.png</file>
         <file>items/banana.png</file>
+        <file>items/tonneau.png</file>
     </qresource>
     <qresource prefix="/maps">
         <file>maps/0.png</file>
@@ -65,5 +66,6 @@
         <file>surfaces/water_init_04.png</file>
         <file>surfaces/water_init_02.png</file>
         <file>surfaces/water_init_00.png</file>
+        <file>surfaces/door.png</file>
     </qresource>
 </RCC>

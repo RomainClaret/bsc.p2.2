@@ -429,7 +429,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="14">
-    <DOOR />
+    <DOOR/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -861,11 +861,9 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="27">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="28">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="29">
@@ -960,11 +958,9 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="27">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="28">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="29">
@@ -1003,6 +999,9 @@
    <LIGNE position="15">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -1020,9 +1019,6 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="16">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="17">
@@ -1097,6 +1093,15 @@
    <LIGNE position="15">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -1115,15 +1120,6 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="18">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="19">
@@ -1192,6 +1188,18 @@
    <LIGNE position="15">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -1209,18 +1217,6 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="19">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="20">
@@ -1951,6 +1947,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -1959,10 +1961,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="MOVABLE"/>
@@ -1993,10 +1991,6 @@
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="MOVABLE"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2061,6 +2055,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2069,10 +2069,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="MOVABLE"/>
@@ -2099,10 +2095,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2165,6 +2157,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2173,10 +2171,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
@@ -2202,10 +2196,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2267,6 +2257,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2275,10 +2271,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
@@ -2302,10 +2294,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2371,6 +2359,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2379,10 +2373,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
@@ -2407,10 +2397,6 @@
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="MOVABLE"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2476,6 +2462,9 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="3">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2500,6 +2489,9 @@
    <LIGNE position="10">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2508,14 +2500,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
     <BLOC type="WALL"/>
@@ -2580,6 +2564,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2588,10 +2578,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="MOVABLE"/>
@@ -2619,10 +2605,6 @@
    </LIGNE>
    <LIGNE position="10">
     <ITEM type="BONUS"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2683,6 +2665,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2691,10 +2679,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
@@ -2720,10 +2704,6 @@
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="MOVABLE"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -2786,6 +2766,12 @@
    <LIGNE position="1">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="12">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -2794,10 +2780,6 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
@@ -2821,10 +2803,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
@@ -4892,7 +4870,7 @@
    </LIGNE>
    <LIGNE position="29">
     <BLOC type="SNOW"/>
-    <END nextLevel="79"/>
+    <END nextLevel="1"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="11">
@@ -4988,7 +4966,7 @@
    </LIGNE>
    <LIGNE position="29">
     <BLOC type="SNOW"/>
-    <END nextLevel="80"/>
+    <END nextLevel="1"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="15">
@@ -5022,6 +5000,12 @@
    <LIGNE position="15">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -5035,12 +5019,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="5">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="18">
@@ -5192,7 +5170,7 @@
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="SNOW"/>
-    <ENEMY type="FOX">
+    <ENEMY type="WOLF">
      <MOVE x="15" y="6" i="1"/>
     </ENEMY>
    </LIGNE>
@@ -5336,10 +5314,11 @@
    <LIGNE position="14">
     <BLOC type="WATER"/>
    </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="WATER"/>
-   </LIGNE>
    <LIGNE position="6">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
     <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -5405,6 +5384,12 @@
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="0">
     <BLOC type="WATER"/>
     <BLOC type="WALL"/>
@@ -5424,10 +5409,6 @@
    <LIGNE position="14">
     <BLOC type="WATER"/>
     <BLOC type="WALL"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="WALL"/>
@@ -5454,10 +5435,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
     <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -5765,23 +5742,23 @@
    <LIGNE position="15">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="19">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="20">
@@ -5858,7 +5835,7 @@
     <BLOC type="WATER"/>
    </LIGNE>
    <LIGNE position="5">
-    <DOOR/>
+    <DOOR />
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="6">

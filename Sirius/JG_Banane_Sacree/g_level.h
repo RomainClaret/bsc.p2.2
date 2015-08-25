@@ -28,7 +28,10 @@ class S_SurfaceAutoTexture;
 
 #include "widget/dialog/w_dialog.h"
 #include <QDomElement>
+#include <QList>
 #include <QDomDocument>
+
+class S_Door;
 
 /**
  * @brief Where the level informations are read (from XML) and stored.
@@ -95,6 +98,7 @@ public:
      */
     void addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y);
 
+    void unlock();
 
     static int S_SNOW;
 
@@ -124,6 +128,10 @@ private:
 
     QList<S_SurfaceAutoTexture* > listAutoTextures;
     int** mapSurfaces;
+
+    QList<S_Door*> doorList;
+
+
 };
 
 #endif // G_LEVEL_H
