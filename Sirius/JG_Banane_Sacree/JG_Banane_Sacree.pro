@@ -28,7 +28,6 @@ win32:RC_FILE = winIcon.rc
 
 SOURCES += \
     main.cpp \
-    g_npc.cpp \
     g_gameboard.cpp \
     g_level.cpp \
     g_maingame.cpp \
@@ -75,9 +74,10 @@ SOURCES += \
     character/e_walrus.cpp \
     state/state_enemywalrus.cpp \
     t_movesurface.cpp \
-    character/c_ai.cpp \
+    character/c_ai.cpp\
+    character/c_enemy.cpp\
+    surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp
-
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -127,10 +127,9 @@ HEADERS  += \
     character/e_walrus.h \
     state/state_enemywalrus.h \
     t_movesurface.h \
-   character/c_ai.h \
-    surface/s_fire.h
-
-RESOURCES += \
+    character/c_ai.h \
+    surface/s_surfaceautotexture.h \
+    surface/s_fire.hRESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \

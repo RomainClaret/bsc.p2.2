@@ -128,7 +128,7 @@ B_Wall* Factory_Surface::createBlocWall(int xpos, int ypos, QGraphicsScene* scen
 B_Water* Factory_Surface::createBlocWater(int xpos, int ypos, QGraphicsScene* scene)
 {
     B_Water *w = new B_Water(xpos, ypos);
-    scene->addItem(w);
+    w->addToScene(scene);
     return w;
 }
 

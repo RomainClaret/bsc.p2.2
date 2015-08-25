@@ -13,9 +13,10 @@
 
 #ifndef B_WATER_H
 #define B_WATER_H
-#include "../surface/g_surface.h"
+#include "s_surfaceautotexture.h"
 
 class QGraphicsRectItem;
+#include <QVector>
 
 /**
  * @brief Water block
@@ -28,7 +29,7 @@ class QGraphicsRectItem;
  * @date 27 January 2015
  * @todo integrate with DP Factory
  */
-class B_Water : public G_Surface
+class B_Water : public S_SurfaceAutoTexture
 {
 public:
     //Constructors
@@ -39,6 +40,9 @@ public:
      * @param parent QGraphicsItem to depend on
      */
     B_Water(int xpos, int ypos, QGraphicsItem *parent = 0);
+
+    void calculateTextures(int** mapSurfaces, int width, int height);
+//    bool isCollidingWithWater(QGraphicsRectItem* bloc);
 
     /**
      * @brief Constructor without position setup

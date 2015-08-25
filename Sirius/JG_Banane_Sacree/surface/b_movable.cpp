@@ -66,8 +66,9 @@ void B_Movable::setPos(int x, int y)
 void B_Movable::setDesign(int xpos, int ypos)
 {
     QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor("gray");
+
+    QString img = ":/surfaces/surfaces/movable_init.png";
+    brush.setTexture(QPixmap(img));
 
     setBrush(brush);
 
