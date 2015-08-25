@@ -35,6 +35,8 @@ public:
      */
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
+    void moveWithTimer(char orientation);
+    virtual void moveByPixel(int x, int y)=0;
 protected:
     QString leftSkin;
     QString rightSkin;
@@ -45,6 +47,16 @@ protected:
 
     //Skins are the pictures given to self
     QBrush *skin;
+
+private slots:
+    void stepMove();
+
+private:
+
+    QTimer* timerMover;
+    QPointF startCurrentMove;
+    char currentMove;
+
 
 };
 

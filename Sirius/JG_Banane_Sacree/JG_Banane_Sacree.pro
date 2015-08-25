@@ -64,7 +64,6 @@ SOURCES += \
     tools/verticalscrollarea.cpp \
     character/g_character.cpp \
     character/t_charactermover.cpp \
-    character/t_charactertimermover.cpp \
     widget/dialog/w_dialog.cpp \
     widget/dialog/w_dialog_image.cpp \
     widget/dialog/w_dialog_text.cpp \
@@ -119,7 +118,6 @@ HEADERS  += \
     tools/verticalscrollarea.h \
     character/g_character.h \
     character/t_charactermover.h \
-    character/t_charactertimermover.h \
     widget/dialog/w_dialog.h \
     widget/dialog/w_dialog_image.h \
     widget/dialog/w_dialog_text.h \

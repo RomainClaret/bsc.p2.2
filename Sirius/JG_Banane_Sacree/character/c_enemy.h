@@ -123,6 +123,8 @@ public:
 
     virtual void action() { }
 
+    void moveByPixel(int x, int y);
+
 protected:
     /**
      * @brief Moves self by an amount.

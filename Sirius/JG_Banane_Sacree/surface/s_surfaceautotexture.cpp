@@ -156,6 +156,7 @@ void S_SurfaceAutoTexture::addTexture(QPixmap pixmap)
     texture->setBrush(brush);
 
     texture->setPen(Qt::NoPen);
+    texture->setZValue(2);
 
     addedTextures.append(texture);
 

@@ -68,10 +68,7 @@ void P_Penguin::moveWithThread(char orientation)
     mover->moveCharacter(orientation);
 }
 
-void P_Penguin::moveWithTimer(char orientation)
-{
 
-}
 
 void P_Penguin::moveBy(int x, int y)
 {

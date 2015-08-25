@@ -16,6 +16,7 @@
 #include "../surface/g_surface.h"
 
 class QGraphicsItem;
+class B_MovableSimple;
 
 /**
  * @brief Snow Surface.
@@ -44,6 +45,12 @@ public:
      * @param parent QGraphicsItem to depend on
      */
     S_Snow(QGraphicsItem *parent = 0);
+
+    /**
+     * @brief setMovableSunk show the snow like a sunk movable
+     * @param b
+     */
+    void setMovableSunk(B_MovableSimple *b);
 
 private:
     /**

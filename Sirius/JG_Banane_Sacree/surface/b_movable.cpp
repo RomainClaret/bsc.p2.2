@@ -40,7 +40,7 @@
 B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
    setDesign(xpos, ypos);
-   setZValue(1);
+   setZValue(3);
 }
 
 /**
@@ -50,7 +50,7 @@ B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos
 B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
-    setZValue(1);
+    setZValue(3);
 }
 
 void B_Movable::setPos(int x, int y)
@@ -66,13 +66,6 @@ void B_Movable::setPos(int x, int y)
  */
 void B_Movable::setDesign(int xpos, int ypos)
 {
-    QBrush brush;
-
-    QString img = ":/surfaces/surfaces/movable_init.png";
-    brush.setTexture(QPixmap(img));
-
-    setBrush(brush);
-
     int size = G_Gameboard::getGameSquares();
 
     setPos(xpos,ypos);
@@ -85,6 +78,13 @@ void B_Movable::setDesign(int xpos, int ypos)
     rightCollideBox->setPen(Qt::NoPen);
     bottomCollideBox->setPen(Qt::NoPen);
     topCollideBox->setPen(Qt::NoPen);
+}
+
+void B_Movable::setTexture(QPixmap pixmap)
+{
+    QBrush brush;
+    brush.setTexture(pixmap);
+    setBrush(brush);
 }
 
 /**

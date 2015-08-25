@@ -97,6 +97,10 @@ QPoint C_Enemy::getNPCPos()
     return convertPosPoint(this->pos());
 }
 
+void C_Enemy::moveByPixel(int x, int y)
+{
+    //todo
+}
 void C_Enemy::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;

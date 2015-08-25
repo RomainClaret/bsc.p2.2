@@ -66,6 +66,7 @@
         <file>surfaces/water_init_04.png</file>
         <file>surfaces/water_init_02.png</file>
         <file>surfaces/water_init_00.png</file>
-        <file>surfaces/door.png</file>
-    </qresource>
+		<file>surfaces/door.png</file>        <file>surfaces/movable_init_02.png</file>
+        <file>surfaces/movable_init_01.png</file>
+        <file>surfaces/movable_snow.png</file>    </qresource>
 </RCC>
