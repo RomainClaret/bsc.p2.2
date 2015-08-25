@@ -11,29 +11,23 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef B_MOVABLE_THROW_H
-#define B_MOVABLE_THROW_H
-#include "b_movable.h"
-#include <QList>
+#ifndef S_FIRE_H
+#define S_FIRE_H
+#include "../surface/g_surface.h"
 
 class QGraphicsRectItem;
-class QGraphicsScene;
-class G_Gameboard;
 
 /**
- * @brief Movable block
- * @details This block can be moved with characters.
+ * @brief Fire Surface
+ * @details Only the throw movable blocks can traverse this surface.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
- * @todo integrate with DP Factory
+ * @date 24 August 2015
  */
-//@bug no bugs
-//@warning no warnings
-class B_MovableThrow : public B_Movable
+class S_Fire : public G_Surface
 {
 public:
     //Constructors
@@ -41,29 +35,21 @@ public:
      * @brief Constructor with position setup.
      * @param xpos set the postion on the x-axis
      * @param ypos set the postion on the y-axis
-     * @param parent QGraphicsItem parent
-     */
-    B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
-
-    /**
-     * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    B_MovableThrow(QGraphicsItem *parent = 0);
+    S_Fire(int xpos, int ypos, QGraphicsItem *parent = 0);
 
     /**
-     * @brief Check the position of the movable block after moving
+     * @brief Constructor without position setup
+     * @param parent QGraphicsItem parent
      */
-    void checkPosition();
-
-protected:
-    void advance(int step);
+    S_Fire(QGraphicsItem *parent = 0);
 
 private:
-    int speed;
-    int time;
-    G_Gameboard* game;
-
+    /**
+     * @brief Set the skin of the block.
+     */
+    void setDesign();
 };
 
-#endif // B_MOVABLE_THROW_H
+#endif // S_FIRE_H
