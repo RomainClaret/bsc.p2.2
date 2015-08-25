@@ -761,7 +761,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 //                animation.setEndValue(QPointF(playableCharacter->getPosOnGame().x()*32+50, playableCharacter->getPosOnGame().y()*32));
 //                animation.start();
 
-                playableCharacter->moveWithThread('r');
+                playableCharacter->moveWithTimer('r');
             }
         }
         else
