@@ -17,6 +17,9 @@
 
 W_DialogContainer::W_DialogContainer(QWidget *parent)
 {  
+    //Warning killer
+    parent = NULL;
+
     textWidget = new W_DialogText(this);
 
     QHBoxLayout* box = new QHBoxLayout(this);
