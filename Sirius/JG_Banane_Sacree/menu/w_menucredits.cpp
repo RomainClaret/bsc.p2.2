@@ -40,6 +40,16 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
 //    player->setMedia(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3"));
     player->setMedia(QMediaContent(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3")));
 
+    if (MY_OS == "UNIX")
+    {
+        player->setMedia(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3"));
+    }
+    else
+    {
+        player->setMedia(QUrl("MagneDjupvik-PenguinParty.mp3"));
+    }
+
+
     layoutMenuPause = new QFormLayout;
     layoutMenuPause->addRow(scrollArea);
     layoutMenuPause->addRow(btnBonusReturn);

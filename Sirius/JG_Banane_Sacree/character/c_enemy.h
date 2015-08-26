@@ -17,6 +17,7 @@
 #include <QDebug>
 #include <QGraphicsItem>
 #include "../state/state_enemy.h"
+#include "../character/c_ai.h"
 
 #include "../character/g_character.h"
 
@@ -51,6 +52,8 @@ class C_Enemy : public G_Character
     friend class State_EnemySleep;
     friend class State_EnemyPause;
     friend class State_EnemyWalrus;
+
+    friend class C_AI;
 
 public:
     //Constructors
@@ -142,6 +145,8 @@ protected:
      * @param p
      */
     void setPosViewBloc(S_ViewBlockNPC* block, QPoint p);
+
+    C_AI *brain;
 
     State_Enemy* state;
 

@@ -1,17 +1,27 @@
 #ifndef C_AI_H
 #define C_AI_H
 
-#include <QWidget>
+class C_Enemy;
 
-class C_AI : public QWidget
+#include <QList>
+class QString;
+
+class C_AI
 {
-    Q_OBJECT
 public:
-    explicit C_AI(QWidget *parent = 0);
+    C_AI();
 
-signals:
+    /**
+     * @brief Set the brain of the character
+     * @param brain name of the behavior to take
+     * @return true if the behavior is correct
+     */
+    bool setBrain(QString brain);
 
-public slots:
+private:
+    QString brain;
+    QList<QString> brainsList;
+
 };
 
 #endif // C_AI_H

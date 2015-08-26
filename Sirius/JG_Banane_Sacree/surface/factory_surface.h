@@ -9,6 +9,7 @@
 #include "../surface/s_viewblocknpc.h"
 #include "../surface/s_door.h"
 #include "../surface/s_fire.h"
+#include "../surface/s_stone.h"
 
 #include "../surface/b_movable.h"
 #include "../surface/b_movable_simple.h"
@@ -42,6 +43,7 @@ public:
     static QString BLOC_WALL;
     static QString BLOC_WATER;
     static QString BLOC_FIRE;
+    static QString BLOC_STONE;
 
     /**
      * @brief Creates, returns and add given item to scene.
@@ -156,6 +158,15 @@ public:
      * @return S_Fire* of created item
      */
     static S_Fire* createBlocFire(int xpos, int ypos, QGraphicsScene* scene);
+
+    /**
+     * @brief Creates, returns and add a Stone Surface to scene.
+     * @param xpos x-axis position of the item
+     * @param ypos y-axis position of the item
+     * @param scene scene to add the surface to
+     * @return S_Stone* of created item
+     */
+    static S_Stone* createBlocStone(int xpos, int ypos, QGraphicsScene* scene);
 };
 
 #endif // FACTORY_SURFACE_H

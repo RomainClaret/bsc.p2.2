@@ -102,6 +102,8 @@ public:
      */
     int getNextLevel();
 
+    void setBackground(bool state);
+
 private:
     /**
      * @brief Set the design of self.

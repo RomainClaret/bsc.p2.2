@@ -25,6 +25,7 @@ TARGET = JG_Banane_Sacrees
 TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
+QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
     main.cpp \
@@ -75,7 +76,9 @@ SOURCES += \
     character/c_ai.cpp\
     character/c_enemy.cpp\
     surface/s_surfaceautotexture.cpp\
-    surface/s_fire.cpp
+    surface/s_fire.cpp \
+    surface/s_stone.cpp
+
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -125,10 +128,12 @@ HEADERS  += \
     t_movesurface.h \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
-    surface/s_fire.h
+    surface/s_fire.h \
+    surface/s_stone.h
 
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \
+    sound.qrc \
     music.qrc

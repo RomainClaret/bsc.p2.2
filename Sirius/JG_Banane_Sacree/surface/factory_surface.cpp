@@ -12,6 +12,7 @@ QString Factory_Surface::BLOC_MOVABLE = "MOVABLE";
 QString Factory_Surface::BLOC_WALL = "WALL";
 QString Factory_Surface::BLOC_WATER = "WATER";
 QString Factory_Surface::BLOC_FIRE = "FIRE";
+QString Factory_Surface::BLOC_STONE = "STONE";
 
 /**
  * @details Returns NULL if the given type is not found.
@@ -49,6 +50,10 @@ G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGra
     else if(type == BLOC_FIRE)
     {
         return createBlocFire(xpos, ypos, scene);
+    }
+    else if(type == BLOC_STONE)
+    {
+        return createBlocStone(xpos, ypos, scene);
     }
     return NULL;
 }
@@ -137,4 +142,11 @@ S_Fire* Factory_Surface::createBlocFire(int xpos, int ypos, QGraphicsScene* scen
     S_Fire *f = new S_Fire(xpos, ypos);
     scene->addItem(f);
     return f;
+}
+
+S_Stone* Factory_Surface::createBlocStone(int xpos, int ypos, QGraphicsScene* scene)
+{
+    S_Stone *s = new S_Stone(xpos, ypos);
+    scene->addItem(s);
+    return s;
 }

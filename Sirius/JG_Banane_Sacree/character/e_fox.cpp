@@ -25,6 +25,9 @@ E_Fox::E_Fox(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     // 1 étant très rapide, 100 étant très lent
     speed = 10; //vitesse par défaut
 
+    //set self behavior brain
+    brain->setBrain("killer2");
+
     leftSkin = ":/characters/characters/renard_left.png";
     rightSkin = ":/characters/characters/renard_right.png";
     upSkin = ":/characters/characters/renard_back.png";

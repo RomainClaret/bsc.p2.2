@@ -236,3 +236,11 @@ int G_Level::getLevelNumber()
 {
     return this->levelNumber;
 }
+
+void G_Level::unlock()
+{
+    for(int i=0; i<doorList.count(); ++i)
+    {
+        doorList[i]->setBackground(true);
+    }
+}

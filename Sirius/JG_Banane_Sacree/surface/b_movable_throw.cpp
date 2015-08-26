@@ -40,6 +40,7 @@
  */
 B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
 {
+    qDebug() << "THROW";
     this->game = game;
 
     int val = rand() % 10+3;
@@ -48,7 +49,8 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsI
 
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor("black");
+    brush.setColor("pink");
+    brush.setTexture(QPixmap(":/item/tonneau.png"));
     setBrush(brush);
 
 }

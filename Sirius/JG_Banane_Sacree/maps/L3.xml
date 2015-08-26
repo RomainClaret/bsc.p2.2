@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <DATA>
  <LEVEL>
-  <SIZE width="20" height="15"/>
+  <SIZE height="15" width="20"/>
   <POSITION x="1" y="1"/>
   <START x="20" y="14"/>
   <END x="0" y="0"/>
@@ -57,47 +57,61 @@
   <COLONNE position="19">
    <LIGNE position="0">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="2">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="4">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="7">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="8">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="11">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="12">
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="WALL"/>
-   </LIGNE>
-   <LIGNE position="13">
     <BLOC type="SNOW"/>
    </LIGNE>
   </COLONNE>
@@ -132,28 +146,29 @@
    <LIGNE position="13">
     <BLOC type="SNOW"/>
    </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="STONE"/>
+   </LIGNE>
    <LIGNE position="3">
-    <BLOC type="ICE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="4">
-    <BLOC type="ICE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="5">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="2">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -189,18 +204,19 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="3">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -236,18 +252,19 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="4">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -283,18 +300,19 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="5">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -320,10 +338,10 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="13">
+    <BLOC type="MOVABLE"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
-    <BLOC type="MOVABLE"/>
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="4">
@@ -334,21 +352,22 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="6">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -378,24 +397,25 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="7">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -425,24 +445,25 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="8">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -472,22 +493,19 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="9">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
    </LIGNE>
@@ -518,25 +536,30 @@
    <LIGNE position="5">
     <BLOC type="ICE"/>
    </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <END nextLevel="1"/>
+   </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="10">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -566,30 +589,24 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="11">
    <LIGNE position="14">
     <BLOC type="WATER"/>
    </LIGNE>
-   <LIGNE position="1">
-	 <ENEMY type="WALRUS">
-	 <MOVE x="18" y="1" i="1"/>
-	 <MOVE x="1" y="1" i="2"/>
-	 </ENEMY>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="2">
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="7">
@@ -616,28 +633,38 @@
    <LIGNE position="5">
     <BLOC type="ICE"/>
    </LIGNE>
-   <LIGNE position="0">
+   <LIGNE position="1">
     <BLOC type="SNOW"/>
-    <END nextLevel="119"/>
+    <ENEMY type="WALRUS">
+     <MOVE x="1" y="1" i="1"/>
+     <MOVE x="18" y="1" i="2"/>
+    </ENEMY>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="12">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
    </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
    <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="7">
@@ -664,25 +691,23 @@
    <LIGNE position="5">
     <BLOC type="ICE"/>
    </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="FIRE"/>
-   </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="13">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -718,24 +743,25 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="9">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="14">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -768,21 +794,22 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="15">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -815,21 +842,22 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="16">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -862,21 +890,22 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="17">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -909,21 +938,22 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="18">
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-   </LIGNE>
    <LIGNE position="14">
     <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
@@ -956,13 +986,13 @@
     <BLOC type="ICE"/>
    </LIGNE>
    <LIGNE position="2">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="6">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="FIRE"/>
+    <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
  </LEVELITEM>
