@@ -21,6 +21,9 @@
 
 W_DialogText::W_DialogText(QWidget *parent)
 {
+    //Warning killer
+    parent = NULL;
+
     resize(300,200);
     this->setStyleSheet(
                         "text-align: center;"
@@ -82,6 +85,9 @@ QString W_DialogText::getText()
 
 void W_DialogText::paintEvent(QPaintEvent *pe)
 {
+    //Warning killer
+    pe = NULL;
+
   QStyleOption o;
   o.initFrom(this);
   QPainter p(this);
