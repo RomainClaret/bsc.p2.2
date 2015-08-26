@@ -60,10 +60,10 @@ E_Otter::E_Otter(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     viewField.append(vb7);
     viewField.append(vb8);
 
-    foreach(S_ViewBlockNPC* vb, viewField)
-    {
-        setActive(false);
-    }
+//    foreach(S_ViewBlockNPC* vb, viewField)
+//    {
+//        setActive(false);
+//    }
 
     //il lui faut une orientation de base
     setOrientation_top();

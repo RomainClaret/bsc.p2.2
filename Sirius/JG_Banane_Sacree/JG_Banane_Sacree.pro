@@ -78,8 +78,10 @@ SOURCES += \
     observer_enemy.cpp \
     state/state_enemypatrol.cpp \
     state/state_enemypause.cpp \
-    state/state_enemysleep.cpp \    character/e_otter.cpp \
+    state/state_enemysleep.cpp \
+    character/e_otter.cpp \
     state/state_enemyfriendly.cpp
+
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -133,6 +135,7 @@ HEADERS  += \
     state/state_enemyfriendly.h \
     singleton_sound.h \
     observer_enemy.h
+
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
