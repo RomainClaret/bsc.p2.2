@@ -47,12 +47,7 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsI
     speed = val;
     time = 0;
 
-    QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor("pink");
-    brush.setTexture(QPixmap(":/item/tonneau.png"));
-    setBrush(brush);
-
+    setTexture(QPixmap(":/items/items/tonneau.png"));
 }
 
 /**

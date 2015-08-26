@@ -11,47 +11,36 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef C_PLAYER_H
-#define C_PLAYER_H
-#include "../character/g_character.h"
-#include <QGraphicsItem>
-class QPainter;
-class QRectF;
+#ifndef E_OTTER_H
+#define E_OTTER_H
+#include "../character/c_enemy.h"
 
 /**
- * @brief Playable characters.
- * @details Contains the skin, orientation, and position.
+ * @brief Enemy Character: Otter
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
+ * @date 25 August 2015
  */
-
-class C_Player : public G_Character
+class E_Otter : public C_Enemy
 {
-
 public:
-    C_Player();
-
-    void setPlayerOrientation(char orientation);
-    char getPlayerOrientation();
-    QPoint *getPos();
-    QPoint getPosOnGame();
-
-    void moveByPixel(int, int)
-    {
-        //rien, temporaire
-    }
-
-protected:
-    int xPos;
-    int yPos;
+    //Constructors
+    /**
+     * @brief Constructor with path setup.
+     * @param path QList of QPoint for the path
+     * @param g Gameboard to depend on
+     */
+    E_Otter(QList<QPoint> path, G_Gameboard *g);
 
 private:
-    //Les skins sont les images attribué au personnage
+    void playableCharacterDetection();
+    void changeState(State_Enemy* newState);
+    bool collide();
+    void checkPenguin();
 
 };
 
-#endif // C_PLAYER_H
+#endif // E_OTTER_H

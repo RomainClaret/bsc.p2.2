@@ -36,7 +36,7 @@ E_Walrus::E_Walrus(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     upSkin = ":/characters/characters/renard_front.png";
     downSkin = ":/characters/characters/renard_front.png";
 
-    setZValue(2);
+    setZValue(3);
 
     //Création du champs de vue
     S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this);

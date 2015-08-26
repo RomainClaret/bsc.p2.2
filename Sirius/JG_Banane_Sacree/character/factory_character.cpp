@@ -3,17 +3,24 @@
 #include <QGraphicsScene>
 
 #include "../g_gameboard.h"
+
+#include "../character/c_player.h"
 #include "../character/c_enemy.h"
+
 #include "../character/e_fox.h"
 #include "../character/e_wolf.h"
 #include "../character/e_walrus.h"
-#include "../character/c_player.h"
+#include "../character/e_otter.h"
+
 #include "../observer_npc.h"
 #include "../state/state_enemywalrus.h"
+
+#include <QDebug>
 
 QString Factory_Character::ENEMY_WOLF = "WOLF";
 QString Factory_Character::ENEMY_FOX = "FOX";
 QString Factory_Character::ENEMY_WALRUS = "WALRUS";
+QString Factory_Character::ENEMY_OTTER = "OTTER";
 
 C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_NPC* observer, QGraphicsScene* scene)
 {
@@ -37,6 +44,13 @@ C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Game
         observer->addNPCObserver(walrus);
         walrus->addToScene(scene);
         return walrus;
+    }
+    else if(type == ENEMY_OTTER)
+    {
+        E_Otter* otter = new E_Otter(path, g);
+        observer->addNPCObserver(otter);
+        otter->addToScene(scene);
+        return otter;
     }
     else
     {

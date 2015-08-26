@@ -77,7 +77,9 @@ SOURCES += \
     character/c_enemy.cpp\
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
-    surface/s_stone.cpp
+    surface/s_stone.cpp \
+    character/e_otter.cpp \
+    state/state_enemyfriendly.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -130,7 +132,9 @@ HEADERS  += \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
     surface/s_fire.h \
-    surface/s_stone.h
+    surface/s_stone.h \
+    character/e_otter.h \
+    state/state_enemyfriendly.h
 
 RESOURCES += \
     images.qrc \

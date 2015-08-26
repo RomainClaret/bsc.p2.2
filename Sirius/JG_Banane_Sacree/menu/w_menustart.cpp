@@ -33,8 +33,7 @@
 #include "../menu/w_menupause.h"
 #include "../g_gameboard.h"
 
-W_MenuStart::W_MenuStart(QWidget *parent) :
-    QWidget(parent)
+W_MenuStart::W_MenuStart(QWidget *parent) : QWidget(parent)
 {
 
     this->setStyleSheet(
@@ -245,6 +244,30 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     saveFile.write(saveDoc.toJson());
     saveFile.close();
     loadFile.close();
-
 }
 
+void W_MenuStart::deleteGame(G_Profil* currentUser)
+{
+    qDebug() << "DELETE";
+
+    // LIS LE FICHIER POUR GARDER LES DONNEES
+    QFile loadFile("save.json");
+    loadFile.open(QIODevice::ReadOnly);
+
+    QByteArray loadData = loadFile.readAll();
+    QJsonDocument loadDoc(QJsonDocument::fromJson(loadData));
+    QJsonObject object = loadDoc.object();
+
+    // LIS LE FICHIER POUR ENREGISTRER
+    QFile saveFile(QStringLiteral("save.json"));
+    saveFile.open(QIODevice::WriteOnly);
+
+    QJsonObject gameObject;
+    gameObject = object;
+    gameObject.remove(currentUser->getUsername());
+
+    QJsonDocument saveDoc(gameObject);
+    saveFile.write(saveDoc.toJson());
+    saveFile.close();
+    loadFile.close();
+}

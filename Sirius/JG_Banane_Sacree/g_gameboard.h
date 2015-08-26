@@ -106,6 +106,14 @@ public:
 
     QGraphicsScene* getGraphicsScene();
 
+    /**
+     * @brief Show the dialog "popup" with the text in param
+     * @param text Will be written in the popup
+     * @param image Will be shown under the popup
+     */
+    void showDialog(QString text, QString image);
+
+
 private:
 
     /*
@@ -255,13 +263,6 @@ private:
      */
     void removeAllItems();
 
-    /**
-     * @brief Show the dialog "popup" with the text in param
-     * @param text Will be written in the popup
-     * @param image Will be shown under the popup
-     */
-    void showDialog(QString text, QString image);
-
     /*
      * ATTRIBUTES
     */
@@ -325,6 +326,8 @@ protected:
 
 signals:
 
+    void refreshMenu();
+
 public slots:
     /**
      * @brief SLOT: Resume the Game after pause
@@ -370,6 +373,11 @@ public slots:
      * @brief SLOT: Enable the pause menu.
      */
     void pauseMenu();
+
+    /**
+     * @brief SLOT: Called when the user want to delete his party
+     */
+    void deleteGame();
 };
 
 #endif // G_GAMEBOARD_H

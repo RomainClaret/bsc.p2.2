@@ -13,7 +13,7 @@ S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QG
     this->line = ligne;
     this->column = colonne;
     this->owner = proprietaire;
-    this->setZValue(2);
+    this->setZValue(3);
     this->hasStyling = true;
 
     setStyleActivated();
@@ -56,6 +56,11 @@ void S_ViewBlockNPC::playableCharacterOn()
     {
         setStylePlayableCharacterOn();
         owner->playableCharacterOnViewBlock(); //relai de l'info
+    }
+    else
+    {
+        //TEST FOR THE OTTER
+        owner->playableCharacterOnViewBlock();
     }
 }
 

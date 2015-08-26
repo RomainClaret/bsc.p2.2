@@ -349,3 +349,8 @@ void C_Enemy::addToScene(QGraphicsScene* scene)
         scene->addItem(vb);
     }
 }
+
+void C_Enemy::checkPenguin()
+{
+
+}

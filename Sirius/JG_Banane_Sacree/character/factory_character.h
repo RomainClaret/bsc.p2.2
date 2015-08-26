@@ -32,6 +32,7 @@ public:
     static QString ENEMY_WOLF;
     static QString ENEMY_FOX;
     static QString ENEMY_WALRUS;
+    static QString ENEMY_OTTER;
 
     /**
      * @brief createEnemy generate a Enemy, add it to the scene and to the observer
