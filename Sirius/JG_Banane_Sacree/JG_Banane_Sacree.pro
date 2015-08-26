@@ -110,7 +110,6 @@ HEADERS  += \
     state/state_enemypatrol.h \
     state/state_enemypause.h \
     state/state_enemysleep.h \
-    widget/w_dialog.h \
     widget/w_life.h \
     widget/w_object.h \
     menu/w_menucode_lineedit.h \
