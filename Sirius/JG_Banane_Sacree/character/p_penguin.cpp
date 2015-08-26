@@ -28,7 +28,7 @@
 #include <typeinfo.h>
 #endif
 
-P_Penguin::P_Penguin() : C_Player()
+P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
 {
     int BlocsSizeX = G_Gameboard::getGameSquares()-2;
     int BlocsSizeY = G_Gameboard::getGameSquares()-2;
@@ -47,7 +47,7 @@ P_Penguin::P_Penguin() : C_Player()
 
     slideAble = true;
 
-    this->mover = new t_CharacterMover(this);
+    setZValue(10);
 
 }
 void P_Penguin::setPos(int x, int y)
@@ -63,12 +63,64 @@ void P_Penguin::setPos(int x, int y)
     topCollideBox->setPos(xPos+1, yPos-G_Gameboard::getGameSquares()+1);
 }
 
-void P_Penguin::moveWithThread(char orientation)
+void P_Penguin::stepMoveCharacter()
 {
-    mover->moveCharacter(orientation);
+    int pas = 4;
+        switch (currentMove) {
+        case 'l':
+            if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
+            {
+                this->moveByPixel(-pas,0);
+            }
+            else
+            {
+                game->endMoveCheck(currentMove);
+                currentMove = 'n';
+                timerMover->stop();
+            }
+            break;
+        case 'r':
+            if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
+            {
+                this->moveByPixel(pas,0);
+            }
+            else
+            {
+                game->endMoveCheck(currentMove);
+                currentMove = 'n';
+                timerMover->stop();
+            }
+            break;
+        case 't':
+            if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
+            {
+                this->moveByPixel(0,-pas);
+            }
+            else
+            {
+                game->endMoveCheck(currentMove);
+                currentMove = 'n';
+                timerMover->stop();
+            }
+            break;
+        case 'b':
+            if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
+            {
+                this->moveByPixel(0,pas);
+            }
+            else
+            {
+                game->endMoveCheck(currentMove);
+                currentMove = 'n';
+                timerMover->stop();
+            }
+            break;
+        default:
+            currentMove = 'n';
+            timerMover->stop();
+            break;
+        }
 }
-
-
 
 void P_Penguin::moveBy(int x, int y)
 {
@@ -82,7 +134,6 @@ void P_Penguin::moveBy(int x, int y)
     lastMove->setX(x);
     lastMove->setY(y);
 }
-
 
 void P_Penguin::moveByPixel(int x, int y)
 {

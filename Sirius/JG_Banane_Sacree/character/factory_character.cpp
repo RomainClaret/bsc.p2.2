@@ -44,9 +44,9 @@ C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Game
     }
 }
 
-C_Player* Factory_Character::createPlayer(QGraphicsScene* scene)
+C_Player* Factory_Character::createPlayer(QGraphicsScene* scene, G_Gameboard* game)
 {
-    C_Player* player = new C_Player();
+    P_Penguin* player = new P_Penguin(game);
     scene->addItem(player);
     return player;
 }

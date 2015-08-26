@@ -104,6 +104,8 @@ public:
      */
     void setPlayerProfil(G_Profil* playerProfil);
 
+    void endMoveCheck(char sens);
+
     QGraphicsScene* getGraphicsScene();
 
 private:

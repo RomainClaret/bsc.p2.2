@@ -30,7 +30,6 @@ E_Wolf::E_Wolf(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     upSkin = ":/characters/characters/loup_back.png";
     downSkin = ":/characters/characters/loup_front.png";
 
-        setZValue(2);
 
     //Création du champs de vue
     for(int i=1; i<=5; i++)

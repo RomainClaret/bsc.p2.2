@@ -35,4 +35,6 @@ void S_Fire::setDesign()
     brush.setStyle(Qt::SolidPattern);
     brush.setColor(Qt::red);
     setBrush(brush);
+
+    setZValue(4);
 }

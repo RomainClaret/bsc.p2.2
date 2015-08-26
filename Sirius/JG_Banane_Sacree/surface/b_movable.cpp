@@ -40,7 +40,7 @@
 B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
    setDesign(xpos, ypos);
-   setZValue(3);
+   setZValue(11);
 }
 
 /**
@@ -50,7 +50,7 @@ B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos
 B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
-    setZValue(3);
+    setZValue(11);
 }
 
 void B_Movable::setPos(int x, int y)

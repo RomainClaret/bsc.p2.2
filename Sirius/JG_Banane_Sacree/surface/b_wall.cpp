@@ -31,9 +31,11 @@ B_Wall::B_Wall(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 
 void B_Wall::setDesign()
 {
-    //QBrush brush;
-    //brush.setStyle(Qt::SolidPattern);
-    //brush.setColor(Qt::red);
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(Qt::gray);
 
-//    setBrush(brush);
+    setBrush(brush);
+
+    setZValue(4);
 }

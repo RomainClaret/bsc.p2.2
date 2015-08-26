@@ -49,7 +49,7 @@ public:
      * @param scene
      * @return a player
      */
-    static C_Player* createPlayer(QGraphicsScene* scene);
+    static C_Player* createPlayer(QGraphicsScene* scene, G_Gameboard* game);
 
 };
 
