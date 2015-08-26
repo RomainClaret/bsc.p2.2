@@ -11,7 +11,7 @@
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 19 august 2015
+ * @date 26 august 2015
  */
 class G_Character : public QGraphicsObject
 {
@@ -35,7 +35,17 @@ public:
      */
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
+    /**
+     * @brief moveWithTimer move the character with a annimation, start timer on stepMove();
+     * @param orientation direction of the move
+     */
     void moveWithTimer(char orientation);
+
+    /**
+     * @brief moveByPixel move the character by nb pixel
+     * @param x x pixels
+     * @param y y pixels
+     */
     virtual void moveByPixel(int x, int y)=0;
 
 protected:
@@ -56,9 +66,15 @@ protected:
     QTimer* timerMover;
 
 private slots:
+    /**
+     * @brief stepMove connect the timer on it and call stepMoveCharacter() (different in each character)
+     */
     void stepMove();
 
 private:
+    /**
+     * @brief stepMoveCharactera step of the character
+     */
     virtual void stepMoveCharacter()=0;
 
 };

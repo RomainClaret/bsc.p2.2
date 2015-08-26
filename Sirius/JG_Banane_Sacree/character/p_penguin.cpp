@@ -65,61 +65,60 @@ void P_Penguin::setPos(int x, int y)
 
 void P_Penguin::stepMoveCharacter()
 {
-    int pas = 4;
-        switch (currentMove) {
-        case 'l':
-            if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
-            {
-                this->moveByPixel(-pas,0);
-            }
-            else
-            {
-                game->endMoveCheck(currentMove);
-                currentMove = 'n';
-                timerMover->stop();
-            }
-            break;
-        case 'r':
-            if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
-            {
-                this->moveByPixel(pas,0);
-            }
-            else
-            {
-                game->endMoveCheck(currentMove);
-                currentMove = 'n';
-                timerMover->stop();
-            }
-            break;
-        case 't':
-            if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
-            {
-                this->moveByPixel(0,-pas);
-            }
-            else
-            {
-                game->endMoveCheck(currentMove);
-                currentMove = 'n';
-                timerMover->stop();
-            }
-            break;
-        case 'b':
-            if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
-            {
-                this->moveByPixel(0,pas);
-            }
-            else
-            {
-                game->endMoveCheck(currentMove);
-                currentMove = 'n';
-                timerMover->stop();
-            }
-            break;
-        default:
-            currentMove = 'n';
-            timerMover->stop();
-            break;
+    int pas = 2;
+    switch (currentMove) {
+    case 'l':
+        if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
+        {
+            this->moveByPixel(-pas,0);
         }
+        else
+        {
+            endMove();
+        }
+        break;
+    case 'r':
+        if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
+        {
+            this->moveByPixel(pas,0);
+        }
+        else
+        {
+            endMove();
+        }
+        break;
+    case 't':
+        if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
+        {
+            this->moveByPixel(0,-pas);
+        }
+        else
+        {
+            endMove();
+        }
+        break;
+    case 'b':
+        if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
+        {
+            this->moveByPixel(0,pas);
+        }
+        else
+        {
+            endMove();
+        }
+        break;
+    default:
+        currentMove = 'n';
+        timerMover->stop();
+        break;
+    }
+}
+
+void P_Penguin::endMove()
+{
+    game->endMoveCheck(currentMove);
+    currentMove = 'n';
+    timerMover->stop();
 }
 
 void P_Penguin::moveBy(int x, int y)

@@ -34,7 +34,6 @@ SOURCES += \
     g_maingame.cpp \
     g_object.cpp \
     observer_npc.cpp \
-    g_player.cpp \
     g_profil.cpp \
     menu/w_menu.cpp \
     menu/w_menubonus.cpp \
@@ -77,7 +76,8 @@ SOURCES += \
     character/c_enemy.cpp\
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
-    surface/s_stone.cpp
+    surface/s_stone.cpp \
+    character/c_player.cpp
 
 HEADERS  += \
     g_gameboard.h \

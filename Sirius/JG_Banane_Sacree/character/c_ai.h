@@ -4,7 +4,7 @@
 class C_Enemy;
 
 #include <QList>
-class QString;
+#include <QString>
 
 class C_AI
 {

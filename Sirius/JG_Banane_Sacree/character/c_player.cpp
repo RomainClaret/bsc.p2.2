@@ -34,7 +34,10 @@ C_Player::C_Player(G_Gameboard* game)
 
 void C_Player::setPlayerOrientation(char orientation)
 {
-    this->orientation = orientation;
+    if(!this->timerMover->isActive())
+    {
+        this->orientation = orientation;
+    }
 }
 
 char C_Player::getPlayerOrientation()

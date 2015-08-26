@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
         <file>music/MagneDjupvik-PenguinParty.mp3</file>
-        <file>music/Sound-Eggtimer-SystemNotification.wav</file>
     </qresource>
 </RCC>

@@ -53,6 +53,11 @@ private:
     QList<G_Object *> tempSacoche;
     QPoint* lastMove;
 
+    /**
+     * @brief endMove call when the step with the timer is complete
+     */
+    void endMove();
+
     bool slideAble;
 
     int nbLives;
@@ -62,6 +67,7 @@ public:
 
     void setPos(int, int);
     void moveBy(int, int);
+
     void moveByPixel(int, int);
 
     void moveBack();
