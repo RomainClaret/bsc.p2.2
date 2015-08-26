@@ -21,7 +21,7 @@
 #include <QList>
 #include <QPoint>
 
-class Observer_NPC
+class Observer_Enemy
 {
 public:
     static QString STATE_PATROL;
@@ -30,12 +30,12 @@ public:
     /**
      * @brief ObservablesNPC Constructor of ObservablesNPCs
      */
-    Observer_NPC();
+    Observer_Enemy();
 
     /**
      * @brief ObservablesEnnemis Destuctor delete all the npcs
      */
-    ~Observer_NPC();
+    ~Observer_Enemy();
 
     /**
      * @brief addEnnemiObserver add npc as observer

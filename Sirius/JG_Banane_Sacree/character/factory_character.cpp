@@ -8,14 +8,14 @@
 #include "../character/e_wolf.h"
 #include "../character/e_walrus.h"
 #include "../character/c_player.h"
-#include "../observer_npc.h"
+#include "../observer_enemy.h"
 #include "../state/state_enemywalrus.h"
 
 QString Factory_Character::ENEMY_WOLF = "WOLF";
 QString Factory_Character::ENEMY_FOX = "FOX";
 QString Factory_Character::ENEMY_WALRUS = "WALRUS";
 
-C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_NPC* observer, QGraphicsScene* scene)
+C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene)
 {
     if(type == ENEMY_WOLF)
     {

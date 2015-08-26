@@ -24,7 +24,7 @@
 #include "widget/dialog/w_dialog.h"
 #include "g_profil.h"
 #include "widget/w_life.h"
-#include "observer_npc.h"
+#include "observer_enemy.h"
 #include "surface/b_movable_simple.h"
 
 class W_Menu;
@@ -41,6 +41,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
+class Singleton_Sound;
 
 
 /**
@@ -269,11 +270,14 @@ private:
      * @param text Will be written in the popup
      * @param sound name of the sound to play
      */
-//    void showDialog(QString text, QString sound);
+    void showDialog(QString text, QString image, QString sound);
 
     /*
      * ATTRIBUTES
     */
+
+    //Sound Singelton
+    Singleton_Sound *soundSingleton;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;
@@ -286,7 +290,7 @@ private:
 
     //Positioning and level management
     G_Level* currentLevel;
-    Observer_NPC* observerEnemy;
+    Observer_Enemy* observerEnemy;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;
@@ -336,47 +340,54 @@ signals:
 
 public slots:
     /**
-     * @brief SLOT: Resume the Game after pause
+     * @brief Resume the Game after pause
      */
     void resumeGame();
 
     /**
-     * @brief SLOT: Slide the playable character.
+     * @brief Slide the playable character.
      */
     void slidePlayableCharacter();
 
     /**
-     * @brief SLOT: Slide blocks in the List of sliding blocks.
+     * @brief Slide blocks in the List of sliding blocks.
      */
     void slideBlock();
 
     /**
-     * @brief SLOT: Ask for profil save, and destruct self.
+     * @brief Ask for profil save, and destruct self.
      */
     void exitGame();
 
     /**
-     * @brief SLOT: Restart the level at the last checkpoint->
+     * @brief Restart the level at the last checkpoint->
      */
     void restartEnigma();
 
     /**
-     * @brief SLOT: Restart the level at the beginning
+     * @brief Restart the level at the last checkpoint with a custom text and sound if life left
+     * @param text to display
+     * @param sound to play
+     */
+    void restartEnigma(QString text, QString sound);
+
+    /**
+     * @brief Restart the level at the beginning
      */
     void restartLevel();
 
     /**
-     * @brief SLOT: Load the Island Level.
+     * @brief Load the Island Level.
      */
     void returnIsland();
 
     /**
-     * @brief SLOT: Change the usual menu into the "Bonus" menu
+     * @brief Change the usual menu into the "Bonus" menu
      */
     void loadBonus();
 
     /**
-     * @brief SLOT: Enable the pause menu.
+     * @brief Enable the pause menu.
      */
     void pauseMenu();
 };

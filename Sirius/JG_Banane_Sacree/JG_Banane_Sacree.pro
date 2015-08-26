@@ -33,7 +33,6 @@ SOURCES += \
     g_level.cpp \
     g_maingame.cpp \
     g_object.cpp \
-    observer_npc.cpp \
     g_player.cpp \
     g_profil.cpp \
     menu/w_menu.cpp \
@@ -55,9 +54,6 @@ SOURCES += \
     character/e_wolf.cpp \
     character/factory_character.cpp \
     character/p_penguin.cpp \
-    state/state_npcpatrol.cpp \
-    state/state_npcpause.cpp \
-    state/state_npcsleep.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
     menu/w_menucode_lineedit.cpp \
@@ -77,7 +73,12 @@ SOURCES += \
     character/c_enemy.cpp\
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
-    surface/s_stone.cpp
+    surface/s_stone.cpp \
+    singleton_sound.cpp \
+    observer_enemy.cpp \
+    state/state_enemypatrol.cpp \
+    state/state_enemypause.cpp \
+    state/state_enemysleep.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -85,7 +86,6 @@ HEADERS  += \
     g_maingame.h \
     g_object.h \
     g_profil.h \
-    observer_npc.h \
     menu/w_menu.h \
     menu/w_menubonus.h \
     menu/w_menupause.h \
@@ -128,7 +128,9 @@ HEADERS  += \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
     surface/s_fire.h \
-    surface/s_stone.h
+    surface/s_stone.h \
+    singleton_sound.h \
+    observer_enemy.h
 
 RESOURCES += \
     images.qrc \

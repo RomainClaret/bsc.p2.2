@@ -13,7 +13,7 @@
 
 #include "g_maingame.h"
 #include "g_profil.h"
-#include "observer_npc.h"
+#include "observer_enemy.h"
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -31,7 +31,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     toggleGameCreated = false;
     toggleFirstStart = true;
 
-    currentLevel = new G_Level(-1, new Observer_NPC(), NULL);
+    currentLevel = new G_Level(-1, new Observer_Enemy(), NULL);
 
     // Default variables from the game
     windowTitle = tr("James Gouin et la Banane Sacrée");

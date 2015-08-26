@@ -20,7 +20,7 @@ class QPixmap;
 class QPoint;
 class G_Gameboard;
 class QStringList;
-class Observer_NPC;
+class Observer_Enemy;
 class S_SurfaceAutoTexture;
 
 #include <QList>
@@ -51,7 +51,7 @@ public:
      * @param levelNumber int containing the Level Number
      * @param game Gameboard*
      */
-    G_Level(int levelNumber, Observer_NPC* observer, G_Gameboard *game);
+    G_Level(int levelNumber, Observer_Enemy* observer, G_Gameboard *game);
 
     /**
      * @brief Populate the QGraphicsScene according to XML Level File
@@ -116,7 +116,7 @@ private:
 
     // Game
     G_Gameboard *game;
-    Observer_NPC *observerEnemy;
+    Observer_Enemy *observerEnemy;
 
     // Level Size
     int maxBlocksHeight;

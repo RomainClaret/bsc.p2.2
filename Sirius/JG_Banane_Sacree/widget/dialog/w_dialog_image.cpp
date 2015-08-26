@@ -33,7 +33,9 @@ W_DialogImage::W_DialogImage(QString imageName, QWidget *)
 
 void W_DialogImage::setImage(QString new_imageName)
 {
-    this->imageName = ":/dialog/dialog/";
+//    this->imageName = ":/dialog/dialog/";
+    this->imageName = "qrc:/dialog/dialog/";
+
     if(new_imageName.isEmpty())
     {
         qDebug() << "OK";

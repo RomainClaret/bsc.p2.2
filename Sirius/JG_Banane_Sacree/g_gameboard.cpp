@@ -36,6 +36,7 @@
 #include "menu/w_menubonus.h"
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
+#include "singleton_sound.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -69,6 +70,8 @@ int G_Gameboard::sizeY = 15;
 
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
+    soundSingleton = Singleton_Sound::getInstance();
+
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
     windowSizeX = sizeX*gameSquares;
@@ -86,7 +89,7 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
 
-    observerEnemy = new Observer_NPC();
+    observerEnemy = new Observer_Enemy();
     currentLevel = new G_Level(0, observerEnemy, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -406,10 +409,9 @@ void G_Gameboard::checkPositionEvents()
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-            restartEnigma();
-
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
-            showDialog(text,"");
+            restartEnigma(text, "water_fall");
+
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
         {
@@ -571,8 +573,8 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE); //all in pause
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -773,6 +775,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_Space)
             {
+                soundSingleton->setSound("dialog_interaction");
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -891,7 +894,7 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
-        observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE, playableCharacter->getPosOnGame());
+        observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
 
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
@@ -905,7 +908,7 @@ void G_Gameboard::pauseMenu()
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
 
         //TODO : return to the state before PAUSE !
-        observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+        observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
     }
 }
 
@@ -933,10 +936,38 @@ void G_Gameboard::restartEnigma()
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"");
+        showDialog(text,"","lose_life");
     }
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+}
+
+
+void G_Gameboard::restartEnigma(QString text, QString sound)
+{
+    if(playerProfil->getNbLive()>0)
+    {
+        removeAllItems();
+        disconnectTimer();
+
+        playerProfil->setNbLive(playerProfil->getNbLive()-1);
+        lifeList->updateHearts(playerProfil->getNbLive());
+
+        loadLevel();
+        setProxy();
+
+        showDialog(text,"",sound);
+    }
+    else
+    {
+        playerProfil->setNbLive(4);
+        restartLevel();
+
+        text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+        showDialog(text,"","restart_level");
+    }
+
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -1053,6 +1084,7 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
+    soundSingleton->setPlayable(true); //activate sounds after the proxy got shown and hidden
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
@@ -1092,7 +1124,7 @@ void G_Gameboard::loadLevel()
     loadCheckpoint();
     setTimer();
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::setTimer()
@@ -1146,6 +1178,16 @@ void G_Gameboard::showDialog(QString text, QString image)
 {
     dialog->setText(text,1);
     dialog->setImage(image);
+    setWidgetPositionCenter(dialog);
+    dialogProxy->show();
+    dialogToogle = true;
+}
+
+void G_Gameboard::showDialog(QString text, QString image, QString sound)
+{
+    dialog->setText(text,1);
+    dialog->setImage(image);
+    soundSingleton->setSound(sound);
     setWidgetPositionCenter(dialog);
     dialogProxy->show();
     dialogToogle = true;
