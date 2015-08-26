@@ -44,7 +44,6 @@ void W_DialogImage::setImage(QString new_imageName)
 
     if(new_imageName.isEmpty())
     {
-        qDebug() << "OK";
         new_imageName = "empty.png";
     }
 

@@ -63,7 +63,6 @@ void G_Object::repaintElement()
 {
     if(W_MenuCode::BANANASPECIAL && this->nom == OBJECT_EGG)
     {
-        qDebug() << "PAINT";
         this->nom = new QString(OBJECT_BANANA);
         setDesign();
     }
