@@ -63,7 +63,6 @@ SOURCES += \
     menu/w_menucredits.cpp \
     tools/verticalscrollarea.cpp \
     character/g_character.cpp \
-    character/t_charactermover.cpp \
     widget/dialog/w_dialog.cpp \
     widget/dialog/w_dialog_image.cpp \
     widget/dialog/w_dialog_text.cpp \
@@ -115,7 +114,6 @@ HEADERS  += \
     menu/w_menucredits.h \
     tools/verticalscrollarea.h \
     character/g_character.h \
-    character/t_charactermover.h \
     widget/dialog/w_dialog.h \
     widget/dialog/w_dialog_image.h \
     widget/dialog/w_dialog_text.h \

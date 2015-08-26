@@ -146,6 +146,11 @@ protected:
     State_Enemy* state;
 
 private:
+    void stepMoveCharacter()
+    {
+        //rien temporaire
+    }
+
     int iDestPoint;
     bool direction;
     bool detectPlayableCharacter;

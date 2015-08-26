@@ -27,9 +27,10 @@ S_Ice::S_Ice(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 
 void S_Ice::setDesign()
 {
-//    QBrush brush;
-//    brush.setStyle(Qt::SolidPattern);
-//    brush.setColor(Qt::yellow);
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(Qt::yellow);
 
-//    setBrush(brush);
+    setBrush(brush);
+    setZValue(4);
 }

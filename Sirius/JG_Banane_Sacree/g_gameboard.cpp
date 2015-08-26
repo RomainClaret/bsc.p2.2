@@ -55,8 +55,6 @@
 
 #include <QPropertyAnimation>
 
-#include "character/t_charactermover.h"
-
 #define SLIDE_SPEED (80)
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
@@ -83,7 +81,7 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 
     mainScene = new QGraphicsScene(this);
     playerView = new QGraphicsView(this);
-    playableCharacter = new P_Penguin();
+    playableCharacter = new P_Penguin(this);
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
 
@@ -671,21 +669,21 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 
                 if(movePlayableCharacterPingouinToTop())
                 {
-                    playableCharacter->moveBy(0, -1);
+                    //playableCharacter->moveBy(0, -1);
+                    playableCharacter->moveWithTimer('t');
+//                    checkPositionEvents();
+//                    checkChangeView('t');
 
-                    checkPositionEvents();
-                    checkChangeView('t');
-
-                    if(movable != NULL)
-                    {
-                        moveBlock('t');
-                    }
-                    if(playableCharacter->isSlide())
-                    {
-                        isSliding=true;
-                        directionPlayableCharacter = 't';
-                        timerPlayableCharacterSlide->start(SLIDE_SPEED);
-                    }
+//                    if(movable != NULL)
+//                    {
+//                        moveBlock('t');
+//                    }
+//                    if(playableCharacter->isSlide())
+//                    {
+//                        isSliding=true;
+//                        directionPlayableCharacter = 't';
+//                        timerPlayableCharacterSlide->start(SLIDE_SPEED);
+//                    }
                 }
             }
             if(event->key() == Qt::Key_S || event->key() == Qt::Key_Down)
@@ -694,20 +692,20 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 
                 if(movePlayableCharacterToBottom())
                 {
-                    playableCharacter->moveBy(0, 1);
-
-                    checkPositionEvents();
-                    checkChangeView('b');
-                    if(movable != NULL)
-                    {
-                        moveBlock('b');
-                    }
-                    if(playableCharacter->isSlide())
-                    {
-                        isSliding=true;
-                        directionPlayableCharacter = 'b';
-                        timerPlayableCharacterSlide->start(SLIDE_SPEED);
-                    }
+                    //playableCharacter->moveBy(0, 1);
+                    playableCharacter->moveWithTimer('b');
+//                    checkPositionEvents();
+//                    checkChangeView('b');
+//                    if(movable != NULL)
+//                    {
+//                        moveBlock('b');
+//                    }
+//                    if(playableCharacter->isSlide())
+//                    {
+//                        isSliding=true;
+//                        directionPlayableCharacter = 'b';
+//                        timerPlayableCharacterSlide->start(SLIDE_SPEED);
+//                    }
                 }
             }
             if(event->key() == Qt::Key_A || event->key() == Qt::Key_Left)
@@ -716,20 +714,20 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 
                 if(movePlayableCharacterPingouinToLeft())
                 {
-                    playableCharacter->moveBy(-1, 0);
-
-                        checkPositionEvents();
-                        checkChangeView('l');
-                        if(movable != NULL)
-                        {
-                            moveBlock('l');
-                        }
-                        if(playableCharacter->isSlide())
-                        {
-                            isSliding=true;
-                            directionPlayableCharacter = 'l';
-                            timerPlayableCharacterSlide->start(SLIDE_SPEED);
-                        }
+                    //playableCharacter->moveBy(-1, 0);
+                    playableCharacter->moveWithTimer('l');
+//                        checkPositionEvents();
+//                        checkChangeView('l');
+//                        if(movable != NULL)
+//                        {
+//                            moveBlock('l');
+//                        }
+//                        if(playableCharacter->isSlide())
+//                        {
+//                            isSliding=true;
+//                            directionPlayableCharacter = 'l';
+//                            timerPlayableCharacterSlide->start(SLIDE_SPEED);
+//                        }
                 }
             }
             if(event->key() == Qt::Key_D || event->key() == Qt::Key_Right)
@@ -738,40 +736,28 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 
                 if(movePlayableCharacterPingouinToRight())
                 {
-                    playableCharacter->moveBy(1, 0);
+                    //playableCharacter->moveBy(1, 0);
+                    playableCharacter->moveWithTimer('r');
 
-
-                        checkPositionEvents();
-                        checkChangeView('r');
-                        if(movable != NULL)
-                        {
-                            moveBlock('r');
-                        }
-                        if(playableCharacter->isSlide())
-                        {
-                            isSliding=true;
-                            directionPlayableCharacter = 'r';
-                            timerPlayableCharacterSlide->start(SLIDE_SPEED);
-                        }
+//                        checkPositionEvents();
+//                        checkChangeView('r');
+//                        if(movable != NULL)
+//                        {
+//                            moveBlock('r');
+//                        }
+//                        if(playableCharacter->isSlide())
+//                        {
+//                            isSliding=true;
+//                            directionPlayableCharacter = 'r';
+//                            timerPlayableCharacterSlide->start(SLIDE_SPEED);
+//                        }
                 }
             }
             if(event->key() == Qt::Key_0)
             {
                 restartEnigma();
             }
-            if(event->key() == Qt::Key_B)
-            {
-                //test
-                qDebug() << "B";
 
-//                QPropertyAnimation animation(playableCharacter, "pos");
-//                animation.setDuration(1000);
-//                animation.setStartValue(QPointF(playableCharacter->getPosOnGame().x()*32, playableCharacter->getPosOnGame().y()*32));
-//                animation.setEndValue(QPointF(playableCharacter->getPosOnGame().x()*32+50, playableCharacter->getPosOnGame().y()*32));
-//                animation.start();
-
-                playableCharacter->moveWithTimer('r');
-            }
         }
         else
         {
@@ -789,6 +775,22 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
     if(event->key() == Qt::Key_Escape)
     {
         pauseMenu();
+    }
+}
+
+void G_Gameboard::endMoveCheck(char sens)
+{
+    checkPositionEvents();
+    checkChangeView(sens);
+    if(movable != NULL)
+    {
+        moveBlock(sens);
+    }
+    if(playableCharacter->isSlide())
+    {
+        isSliding=true;
+        directionPlayableCharacter = sens;
+        timerPlayableCharacterSlide->start(SLIDE_SPEED);
     }
 }
 
