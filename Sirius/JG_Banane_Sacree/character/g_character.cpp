@@ -13,6 +13,7 @@ G_Character::G_Character()
     this->timerMover = new QTimer();
     connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
 
+    setZValue(10);
 }
 
 void G_Character::moveWithTimer(char orientation)
@@ -21,7 +22,8 @@ void G_Character::moveWithTimer(char orientation)
     {
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
-        timerMover->start(1);
+        timerMover->start(3);
+
     }
     else
     {
@@ -29,35 +31,62 @@ void G_Character::moveWithTimer(char orientation)
     }
 }
 
+void G_Character::advance(int step)
+{
+//    if(step == 1)
+//    {
+//        int pas = 16;
+//        switch (currentMove) {
+//        case 'l':
+//            if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
+//            {
+//                this->moveByPixel(-pas,0);
+//            }
+//            else
+//            {
+//                currentMove = 'n';
+//            }
+//            break;
+//        case 'r':
+//            if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
+//            {
+//                this->moveByPixel(pas,0);
+//            }
+//            else
+//            {
+//                currentMove = 'n';
+//            }
+//            break;
+//        case 't':
+//            if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
+//            {
+//                this->moveByPixel(0,-pas);
+//            }
+//            else
+//            {
+//                currentMove = 'n';
+//            }
+//            break;
+//        case 'b':
+//            if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
+//            {
+//                this->moveByPixel(0,pas);
+//            }
+//            else
+//            {
+//                currentMove = 'n';
+//            }
+//            break;
+//        default:
+//            currentMove = 'n';
+//            break;
+//        }
+//    }
+}
+
 void G_Character::stepMove()
 {
-
-    switch (currentMove) {
-    case 'l':
-
-        break;
-    case 'r':
-        if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
-        {
-            this->moveByPixel(1,0);
-
-        }
-        else
-        {
-            currentMove = 'n';
-            timerMover->stop();
-        }
-        break;
-    case 't':
-
-        break;
-    case 'b':
-
-        break;
-    default:
-        timerMover->stop();
-        break;
-    }
+    stepMoveCharacter();
 }
 
 void G_Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)

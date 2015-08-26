@@ -17,6 +17,7 @@
 #include <QGraphicsItem>
 class QPainter;
 class QRectF;
+class G_Gameboard;
 
 /**
  * @brief Playable characters.
@@ -33,24 +34,23 @@ class C_Player : public G_Character
 {
 
 public:
-    C_Player();
+    C_Player(G_Gameboard* game);
 
     void setPlayerOrientation(char orientation);
     char getPlayerOrientation();
     QPoint *getPos();
     QPoint getPosOnGame();
 
-    void moveByPixel(int, int)
-    {
-        //rien, temporaire
-    }
-
+    void moveByPixel(int x, int y) = 0;
+    void stepMoveCharacter() = 0;
 protected:
     int xPos;
     int yPos;
+    G_Gameboard *game;
 
 private:
     //Les skins sont les images attribué au personnage
+
 
 };
 

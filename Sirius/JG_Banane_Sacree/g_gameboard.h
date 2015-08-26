@@ -24,7 +24,8 @@
 #include "widget/dialog/w_dialog.h"
 #include "g_profil.h"
 #include "widget/w_life.h"
-#include "observer_npc.h"
+
+#include "observer_enemy.h"
 #include "surface/b_movable_simple.h"
 
 class W_Menu;
@@ -41,6 +42,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
+class Singleton_Sound;
 
 
 /**
@@ -103,6 +105,8 @@ public:
      * @param playerProfil Profil of the player
      */
     void setPlayerProfil(G_Profil* playerProfil);
+
+    void endMoveCheck(char sens);
 
     QGraphicsScene* getGraphicsScene();
 
@@ -263,9 +267,20 @@ private:
      */
     void removeAllItems();
 
+
+    /**
+     * @brief Show the dialog "popup" with the text and sound in param
+     * @param text Will be written in the popup
+     * @param sound name of the sound to play
+     */
+    void showDialog(QString text, QString image, QString sound);
+
     /*
      * ATTRIBUTES
     */
+
+    //Sound Singelton
+    Singleton_Sound *soundSingleton;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;
@@ -278,7 +293,7 @@ private:
 
     //Positioning and level management
     G_Level* currentLevel;
-    Observer_NPC* observerEnemy;
+    Observer_Enemy* observerEnemy;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;
@@ -353,6 +368,13 @@ public slots:
      * @brief SLOT: Restart the level at the last checkpoint->
      */
     void restartEnigma();
+
+    /**
+     * @brief Restart the level at the last checkpoint with a custom text and sound if life left
+     * @param text to display
+     * @param sound to play
+     */
+    void restartEnigma(QString text, QString sound);
 
     /**
      * @brief SLOT: Restart the level at the beginning

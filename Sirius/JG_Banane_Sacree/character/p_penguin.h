@@ -21,7 +21,6 @@ class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
 
-#include "t_charactermover.h"
 #include <QTimer>
 
 /**
@@ -58,16 +57,13 @@ private:
 
     int nbLives;
 
-    t_CharacterMover* mover;
-
-
 public:
-    P_Penguin();
+    P_Penguin(G_Gameboard* game);
 
     void setPos(int, int);
     void moveBy(int, int);
     void moveByPixel(int, int);
-    void moveWithThread(char orientation);
+
     void moveBack();
 
     void addToScene(QGraphicsScene*);
@@ -98,6 +94,8 @@ public:
     QGraphicsRectItem* getBottomCB();
     C_Player* getPlayer();
 
+private:
+    void stepMoveCharacter();
 
 };
 

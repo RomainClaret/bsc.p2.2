@@ -17,6 +17,7 @@
 #include <QDebug>
 #include <QGraphicsItem>
 #include "../state/state_enemy.h"
+#include "../character/c_ai.h"
 #include "../character/g_character.h"
 
 class QPoint;
@@ -52,6 +53,8 @@ class C_Enemy : public G_Character
     friend class State_EnemyPause;
     friend class State_EnemyWalrus;
     friend class State_EnemyFriendly;
+
+    friend class C_AI;
 
 public:
     //Constructors
@@ -146,11 +149,18 @@ protected:
      */
     void setPosViewBloc(S_ViewBlockNPC* block, QPoint p);
 
+    C_AI *brain;
+
     State_Enemy* state;
     bool detectPlayableCharacter;
     G_Gameboard *game;
 
 private:
+    void stepMoveCharacter()
+    {
+        //rien temporaire
+    }
+
     int iDestPoint;
     bool direction;
     int time;
@@ -180,6 +190,7 @@ private:
      * @brief Check of collison with self.
      * @return true if self collides
      */
+
     virtual bool collide();
 
     /**
@@ -192,6 +203,7 @@ private:
      * @brief Detect if the Playable character Pingouin is in the vision.
      */
     virtual void playableCharacterDetection();
+
 };
 
 #endif // C_ENEMY_H

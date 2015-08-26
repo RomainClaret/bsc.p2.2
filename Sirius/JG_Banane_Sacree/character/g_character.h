@@ -37,26 +37,29 @@ public:
 
     void moveWithTimer(char orientation);
     virtual void moveByPixel(int x, int y)=0;
+
 protected:
     QString leftSkin;
     QString rightSkin;
     QString upSkin;
     QString downSkin;
 
+    void advance(int step);
+
     char orientation;
 
     //Skins are the pictures given to self
     QBrush *skin;
 
+    QPointF startCurrentMove;
+    char currentMove;
+    QTimer* timerMover;
+
 private slots:
     void stepMove();
 
 private:
-
-    QTimer* timerMover;
-    QPointF startCurrentMove;
-    char currentMove;
-
+    virtual void stepMoveCharacter()=0;
 
 };
 

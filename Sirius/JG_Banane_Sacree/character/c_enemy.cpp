@@ -55,6 +55,8 @@ C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
 {
     game = g;
 
+    brain = new C_AI();
+
     direction = true;
     detectPlayableCharacter = false;
 
@@ -64,7 +66,7 @@ C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
     time = rand() % speed;
 
     setPath(path);
-    setZValue(2);
+    setZValue(11);
 
 
     //default state
@@ -101,6 +103,7 @@ void C_Enemy::moveByPixel(int x, int y)
 {
     //todo
 }
+
 void C_Enemy::setPath(QList<QPoint> path)
 {
     iDestPoint = 0;
@@ -308,7 +311,7 @@ void C_Enemy::setOrientation_right()
 
 //Défini la position d'un bloc "viewBloc" en fonction de sa ligne et sa colonne
 /**
- * @details Define the poistion of the block S_ViewBlocEnnemi in function of its line and column.
+ * @details Define the position of the block S_ViewBlocEnnemi in function of its line and column.
  */
 void C_Enemy::setPosViewBloc(S_ViewBlockNPC* bloc, QPoint p)
 {

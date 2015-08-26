@@ -12,7 +12,7 @@
 #include "../character/e_walrus.h"
 #include "../character/e_otter.h"
 
-#include "../observer_npc.h"
+#include "../observer_enemy.h"
 #include "../state/state_enemywalrus.h"
 
 #include <QDebug>
@@ -22,7 +22,8 @@ QString Factory_Character::ENEMY_FOX = "FOX";
 QString Factory_Character::ENEMY_WALRUS = "WALRUS";
 QString Factory_Character::ENEMY_OTTER = "OTTER";
 
-C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_NPC* observer, QGraphicsScene* scene)
+
+C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene)
 {
     if(type == ENEMY_WOLF)
     {
@@ -58,9 +59,10 @@ C_Enemy* Factory_Character::createEnemy(QString type, QList<QPoint> path, G_Game
     }
 }
 
-C_Player* Factory_Character::createPlayer(QGraphicsScene* scene)
+
+C_Player* Factory_Character::createPlayer(QGraphicsScene* scene, G_Gameboard* game)
 {
-    C_Player* player = new C_Player();
+    P_Penguin* player = new P_Penguin(game);
     scene->addItem(player);
     return player;
 }

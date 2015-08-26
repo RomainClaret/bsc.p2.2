@@ -25,6 +25,7 @@ TARGET = JG_Banane_Sacrees
 TEMPLATE = app
 macx:ICON = $${PWD}/icons/logo.icns
 win32:RC_FILE = winIcon.rc
+QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
     main.cpp \
@@ -32,7 +33,6 @@ SOURCES += \
     g_level.cpp \
     g_maingame.cpp \
     g_object.cpp \
-    observer_npc.cpp \
     g_player.cpp \
     g_profil.cpp \
     menu/w_menu.cpp \
@@ -54,16 +54,12 @@ SOURCES += \
     character/e_wolf.cpp \
     character/factory_character.cpp \
     character/p_penguin.cpp \
-    state/state_npcpatrol.cpp \
-    state/state_npcpause.cpp \
-    state/state_npcsleep.cpp \
     widget/w_life.cpp \
     widget/w_object.cpp \
     menu/w_menucode_lineedit.cpp \
     menu/w_menucredits.cpp \
     tools/verticalscrollarea.cpp \
     character/g_character.cpp \
-    character/t_charactermover.cpp \
     widget/dialog/w_dialog.cpp \
     widget/dialog/w_dialog_image.cpp \
     widget/dialog/w_dialog_text.cpp \
@@ -78,16 +74,18 @@ SOURCES += \
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
     surface/s_stone.cpp \
-    character/e_otter.cpp \
+    singleton_sound.cpp \
+    observer_enemy.cpp \
+    state/state_enemypatrol.cpp \
+    state/state_enemypause.cpp \
+    state/state_enemysleep.cpp \    character/e_otter.cpp \
     state/state_enemyfriendly.cpp
-
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
     g_maingame.h \
     g_object.h \
     g_profil.h \
-    observer_npc.h \
     menu/w_menu.h \
     menu/w_menubonus.h \
     menu/w_menupause.h \
@@ -112,14 +110,12 @@ HEADERS  += \
     state/state_enemypatrol.h \
     state/state_enemypause.h \
     state/state_enemysleep.h \
-    widget/w_dialog.h \
     widget/w_life.h \
     widget/w_object.h \
     menu/w_menucode_lineedit.h \
     menu/w_menucredits.h \
     tools/verticalscrollarea.h \
     character/g_character.h \
-    character/t_charactermover.h \
     widget/dialog/w_dialog.h \
     widget/dialog/w_dialog_image.h \
     widget/dialog/w_dialog_text.h \
@@ -134,10 +130,12 @@ HEADERS  += \
     surface/s_fire.h \
     surface/s_stone.h \
     character/e_otter.h \
-    state/state_enemyfriendly.h
-
+    state/state_enemyfriendly.h \
+    singleton_sound.h \
+    observer_enemy.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \
+    sound.qrc \
     music.qrc

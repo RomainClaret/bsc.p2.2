@@ -35,12 +35,8 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
     scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     scrollArea->setEnabled(false);
 
-    player = new QMediaPlayer();
-//    player->setMedia(QUrl("MagneDjupvik-PenguinParty.mp3"));
-    player->setMedia(QUrl("qrc:/music/Sound-Eggtimer-SystemNotification.wav"));
-//    player->setMedia(QMediaContent(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3")));
-//    player->setMedia(QMediaContent(QMediaResource(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3"))));
-    player->setVolume(10);
+    player = new QMediaPlayer;
+    player->setMedia(QUrl("qrc:/music/MagneDjupvik-PenguinParty.wav"));
 
     layoutMenuPause = new QFormLayout;
     layoutMenuPause->addRow(scrollArea);
