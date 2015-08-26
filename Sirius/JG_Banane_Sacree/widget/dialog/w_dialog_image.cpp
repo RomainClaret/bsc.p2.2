@@ -29,6 +29,12 @@ W_DialogImage::W_DialogImage(QString imageName, QWidget *)
     setLayout(layout);
 
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    setAttribute(Qt::WA_NoSystemBackground);
+    setAttribute(Qt::WA_TranslucentBackground);
+    setAttribute(Qt::WA_PaintOnScreen);
+
+    setAttribute(Qt::WA_TransparentForMouseEvents);
+
 }
 
 void W_DialogImage::setImage(QString new_imageName)
@@ -46,4 +52,5 @@ void W_DialogImage::setImage(QString new_imageName)
 
     QPixmap pix(this->imageName);
     myimage->setPixmap(pix);
+
 }

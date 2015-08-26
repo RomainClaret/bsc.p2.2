@@ -66,6 +66,7 @@ W_DialogText::W_DialogText(QWidget *parent)
 
     setMinimumSize(300,200);
     setMaximumWidth(500);
+
 }
 
 void W_DialogText::setText(QString text, int type)
