@@ -26,6 +26,7 @@ S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos
     nextLevel = 0;
     neededItem = new QString("");
     needItem = false;
+    this->setZValue(3);
 }
 S_Door::S_Door(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
@@ -53,9 +54,8 @@ void S_Door::setBackground(bool state)
     }
     else
     {
-        qDebug() << "setBackground";
         QBrush brush;
-        QPixmap pixmap(":/surface/door.png");
+        QPixmap pixmap(":/surfaces/surfaces/door.png");
         brush.setTexture(pixmap);
         setBrush(brush);
     }

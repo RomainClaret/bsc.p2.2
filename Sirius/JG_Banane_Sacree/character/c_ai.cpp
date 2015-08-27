@@ -2,12 +2,9 @@
 
 #include <QDebug>
 
-#include <QString>
-
 C_AI::C_AI()
 {
     brainsList << "killer" << "chase" << "follow";
-
 }
 
 bool C_AI::setBrain(QString brain)

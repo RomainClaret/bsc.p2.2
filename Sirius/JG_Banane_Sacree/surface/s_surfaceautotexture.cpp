@@ -6,7 +6,6 @@
 
 S_SurfaceAutoTexture::S_SurfaceAutoTexture(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
-    int size = G_Gameboard::getGameSquares();
     iCurrentTexture = 0;
     speed = 5;
     time = 0;

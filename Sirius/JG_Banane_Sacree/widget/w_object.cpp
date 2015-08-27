@@ -29,7 +29,6 @@ W_Object::W_Object(QWidget *)
 
 void W_Object::paintEvent(QPaintEvent *)
 {
-    qDebug() << "PaintEvent";
     QPainter paint(this);
 
     int j = 0;
@@ -38,7 +37,6 @@ void W_Object::paintEvent(QPaintEvent *)
     {
          QString img = ":/items/items/";
          img.append(i.key().toLower());
-         qDebug() << i.key();
          if(i.value()>1)
          {
             img.append(QString::number(i.value()));

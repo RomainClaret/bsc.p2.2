@@ -12,6 +12,8 @@ TARGET = Convertisseur_Map
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    convertisseur.cpp
 
-HEADERS  +=
+HEADERS  += \
+    convertisseur.h

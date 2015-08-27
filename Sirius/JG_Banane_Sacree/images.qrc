@@ -12,6 +12,7 @@
         <file>characters/loup_front.png</file>
         <file>characters/loup_back.png</file>
         <file>characters/loup_right.png</file>
+        <file>characters/loutre.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>
@@ -66,7 +67,9 @@
         <file>surfaces/water_init_04.png</file>
         <file>surfaces/water_init_02.png</file>
         <file>surfaces/water_init_00.png</file>
-		<file>surfaces/door.png</file>        <file>surfaces/movable_init_02.png</file>
+        <file>surfaces/door.png</file>
+        <file>surfaces/movable_init_02.png</file>
         <file>surfaces/movable_init_01.png</file>
-        <file>surfaces/movable_snow.png</file>    </qresource>
+        <file>surfaces/movable_snow.png</file>
+    </qresource>
 </RCC>

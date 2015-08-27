@@ -18,7 +18,6 @@
 #include <QGraphicsItem>
 #include "../state/state_enemy.h"
 #include "../character/c_ai.h"
-
 #include "../character/g_character.h"
 
 class QPoint;
@@ -32,6 +31,7 @@ class State_EnemyPatrol;
 class State_EnemySleep;
 class State_EnemyPause;
 class State_EnemyWalrus;
+class State_EnemyFriendly;
 
 /**
  * @brief Enemy Class
@@ -52,6 +52,7 @@ class C_Enemy : public G_Character
     friend class State_EnemySleep;
     friend class State_EnemyPause;
     friend class State_EnemyWalrus;
+    friend class State_EnemyFriendly;
 
     friend class C_AI;
 
@@ -128,6 +129,8 @@ public:
 
     void moveByPixel(int x, int y);
 
+    virtual void checkPenguin();
+
 protected:
     /**
      * @brief Moves self by an amount.
@@ -149,6 +152,8 @@ protected:
     C_AI *brain;
 
     State_Enemy* state;
+    bool detectPlayableCharacter;
+    G_Gameboard *game;
 
 private:
     void stepMoveCharacter()
@@ -158,7 +163,6 @@ private:
 
     int iDestPoint;
     bool direction;
-    bool detectPlayableCharacter;
     int time;
 
     /**
@@ -186,7 +190,8 @@ private:
      * @brief Check of collison with self.
      * @return true if self collides
      */
-    bool collide();
+
+    virtual bool collide();
 
     /**
      * @brief Get the next point in the list.
@@ -197,9 +202,8 @@ private:
     /**
      * @brief Detect if the Playable character Pingouin is in the vision.
      */
-    void playableCharacterDetection();
+    virtual void playableCharacterDetection();
 
-    G_Gameboard *game;
 };
 
 #endif // C_ENEMY_H

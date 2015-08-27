@@ -203,7 +203,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "END")
     {
-        Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+        doorList.append(Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene));
     }
     else if(tagName == "ENEMY")
     {
@@ -243,4 +243,5 @@ void G_Level::unlock()
     {
         doorList[i]->setBackground(true);
     }
+    doorList.clear();
 }

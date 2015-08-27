@@ -26,6 +26,7 @@
 #include "surface/s_ice.h"
 #include "surface/s_dialog.h"
 #include "surface/s_fire.h"
+#include "character/e_otter.h"
 #include "g_level.h"
 #include "character/c_enemy.h"
 #include "character/e_fox.h"
@@ -438,31 +439,21 @@ void G_Gameboard::checkPositionEvents()
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
         {
+            //The player moved into an enemy's viewblock
+
             S_ViewBlockNPC *vb;
             vb = dynamic_cast<S_ViewBlockNPC*>(CollidingItems.at(i));
 
-            vb->playableCharacterOn();
-            //qDebug() << "---------Je me suis déplacé sur le champs de vue d'un ennemi";
+            if(typeid(vb->owner).name() == typeid(E_Otter).name())
+            {
+                vb->playableCharacterOn();
+            }
         }
     }
     if(playableCharacter->x() == currentLevel->getUnlockEndPoint().x() && playableCharacter->y() == currentLevel->getUnlockEndPoint().y())
     {
         qDebug() << "UNLOCKEND";
-
-        /*int levelNumber = currentLevel->getLevelNumber();
-        QString background = ":/maps/maps/";
-        background.append(QString("%1").arg(levelNumber));
-        background.append("Ouvert");
-        background.append(".png");
-        QPixmap pixmapBackground(background);
-
-        if(!pixmapBackground.isNull())
-        {
-            mainScene->setBackgroundBrush(pixmapBackground);
-        }*/
-
         currentLevel->unlock();
-
         endable = true;
     }
 }
@@ -879,6 +870,10 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(E_Otter).name())
+        {
+            bMove = false;
+        }
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {
@@ -1201,4 +1196,27 @@ void G_Gameboard::showDialog(QString text, QString image, QString sound)
 QGraphicsScene* G_Gameboard::getGraphicsScene()
 {
     return this->mainScene;
+}
+
+void G_Gameboard::deleteGame()
+{
+    QMessageBox msgBox;
+    msgBox.setText(tr("Suppression de la partie"));
+    msgBox.setInformativeText(tr("Voulez-vous vraiment supprimer cette partie?"));
+    msgBox.addButton(tr("Supprimer"), QMessageBox::AcceptRole);
+    msgBox.addButton(tr("Annuler"), QMessageBox::RejectRole);
+
+    int ret = msgBox.exec();
+    switch (ret) {
+    case QMessageBox::AcceptRole:
+        W_MenuStart::deleteGame(playerProfil);
+        emit(refreshMenu());
+        close();
+        break;
+    case QMessageBox::RejectRole:
+        break;
+    default:
+        // should never be reached
+        break;
+    }
 }

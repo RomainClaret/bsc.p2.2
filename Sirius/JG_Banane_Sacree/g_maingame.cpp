@@ -104,6 +104,7 @@ G_MainGame::~G_MainGame()
 void G_MainGame::startGame(G_Profil* user)
 {
     theGame = new G_Gameboard();
+    connect(theGame,SIGNAL(refreshMenu()),this,SLOT(refreshGameMenu()));
     refreshGameMenu();
     theGame->setParent(this);
     theGame->setPlayerProfil(user);
@@ -141,7 +142,6 @@ void G_MainGame::resizeEvent(QResizeEvent * event) {
         {
             theGame->setGeometry(event->size().width()/2-windowSizeX/2,event->size().height()/2-windowSizeY/2,windowSizeX,windowSizeY);
         }
-
     }
 }
 

@@ -78,7 +78,9 @@ SOURCES += \
     state/state_enemypatrol.cpp \
     state/state_enemypause.cpp \
     state/state_enemysleep.cpp \
-    singleton_audio.cpp
+	singleton_audio.cpp \
+    character/e_otter.cpp \
+    state/state_enemyfriendly.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -129,8 +131,10 @@ HEADERS  += \
     surface/s_surfaceautotexture.h \
     surface/s_fire.h \
     surface/s_stone.h \
-    observer_enemy.h \
-    singleton_audio.h
+    character/e_otter.h \
+    state/state_enemyfriendly.h \
+    singleton_audio.h \
+    observer_enemy.h
 
 RESOURCES += \
     images.qrc \
