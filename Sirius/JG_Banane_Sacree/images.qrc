@@ -100,5 +100,7 @@
         <file>surfaces/ice_rbOut.png</file>
         <file>surfaces/ice_lbOut.png</file>
         <file>surfaces/snowSpark.png</file>
+        <file>surfaces/wall_rock01.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>
