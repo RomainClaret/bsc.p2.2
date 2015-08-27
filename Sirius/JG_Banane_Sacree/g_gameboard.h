@@ -260,7 +260,7 @@ private:
     /**
      * @brief Check event of self position.
      */
-    void checkPositionEvents();
+    void checkPositionEvents(char);
 
     /**
      * @brief Delete all items from self.

@@ -13,6 +13,8 @@
 
 #include "../surface/s_snow.h"
 #include "../surface/b_movable_simple.h"
+#include "../surface/s_footstep.h"
+#include "../g_gameboard.h"
 
 #include <QBrush>
 #include <QGraphicsItem>
@@ -54,7 +56,8 @@ void S_Snow::setDesign()
     setBrush(brush);
 }
 
-void S_Snow::showFootPrint(char sens)
+S_Footstep* S_Snow::showFootPrint(char sens)
 {
-
+    S_Footstep* footstep = new S_Footstep(this->getPos().x(), this->getPos().y(), sens, 30);
+    return footstep;
 }

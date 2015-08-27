@@ -17,6 +17,7 @@
 
 class QGraphicsItem;
 class B_MovableSimple;
+class S_Footstep;
 
 /**
  * @brief Snow Surface.
@@ -56,7 +57,7 @@ public:
      * @brief showFootPrint display the foot step on the snow
      * @param sens direction of the character
      */
-    void showFootPrint(char sens);
+    S_Footstep* showFootPrint(char sens);
 
 private:
     /**
