@@ -42,7 +42,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
-class Singleton_Sound;
+class Singleton_Audio;
 
 
 /**
@@ -280,7 +280,7 @@ private:
     */
 
     //Sound Singelton
-    Singleton_Sound *soundSingleton;
+    Singleton_Audio *soundSingleton;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;

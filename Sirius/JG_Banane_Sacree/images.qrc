@@ -12,6 +12,17 @@
         <file>characters/loup_front.png</file>
         <file>characters/loup_back.png</file>
         <file>characters/loup_right.png</file>
+        <file>characters/player_front_step02.png</file>
+        <file>characters/player_front_step01.png</file>
+        <file>characters/player_back_step02.png</file>
+        <file>characters/player_back_step01.png</file>
+        <file>characters/player_left_step01.png</file>
+        <file>characters/player_right_step01.png</file>
+        <file>characters/player_anim05.png</file>
+        <file>characters/player_anim04.png</file>
+        <file>characters/player_anim03.png</file>
+        <file>characters/player_anim02.png</file>
+        <file>characters/player_anim01.png</file>
         <file>characters/loutre.png</file>
     </qresource>
     <qresource prefix="/items">

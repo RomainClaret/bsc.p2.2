@@ -55,7 +55,7 @@ void E_Walrus::action()
     }
 }
 
-void E_Walrus::changeState(State_Enemy* newState)
+void E_Walrus::changeState(State_Enemy *)
 {
     delete state;
     this->state = new State_EnemyWalrus();

@@ -37,7 +37,7 @@
 #include "menu/w_menubonus.h"
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
-#include "singleton_sound.h"
+#include "singleton_audio.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -71,7 +71,7 @@ int G_Gameboard::sizeY = 15;
 
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
-    soundSingleton = Singleton_Sound::getInstance();
+    soundSingleton = Singleton_Audio::getInstance();
 
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
@@ -597,6 +597,8 @@ void G_Gameboard::setWidgetPositionTopLeft(QWidget* widget)
  */
 void G_Gameboard::moveBlock(char sens)
 {
+    soundSingleton->playSound("movable_moving");
+
     switch(sens)
     {
         case 't':
@@ -1079,7 +1081,7 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
-    soundSingleton->setPlayable(true); //activate sounds after the proxy got shown and hidden
+    soundSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
@@ -1120,6 +1122,9 @@ void G_Gameboard::loadLevel()
     setTimer();
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+
+    soundSingleton->setMusicPlaylist("tutorial");
+    soundSingleton->playMusicPlaylist();
 }
 
 void G_Gameboard::setTimer()

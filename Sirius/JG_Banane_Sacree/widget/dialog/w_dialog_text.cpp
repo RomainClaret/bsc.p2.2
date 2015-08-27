@@ -19,11 +19,8 @@
 #include <QLabel>
 #include <QStyleOption>
 
-W_DialogText::W_DialogText(QWidget *parent)
+W_DialogText::W_DialogText(QWidget *)
 {
-    //Warning killer
-    parent = NULL;
-
     resize(300,200);
     this->setStyleSheet(
                         "text-align: center;"
@@ -83,11 +80,8 @@ QString W_DialogText::getText()
     return this->text->text();
 }
 
-void W_DialogText::paintEvent(QPaintEvent *pe)
+void W_DialogText::paintEvent(QPaintEvent *)
 {
-    //Warning killer
-    pe = NULL;
-
   QStyleOption o;
   o.initFrom(this);
   QPainter p(this);

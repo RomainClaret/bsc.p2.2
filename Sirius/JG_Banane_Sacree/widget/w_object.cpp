@@ -21,7 +21,7 @@
 //#include <QMap>
 #include <QPainter>
 
-W_Object::W_Object(QWidget *parent)
+W_Object::W_Object(QWidget *)
 {
     this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     this->setAttribute(Qt::WA_TranslucentBackground);

@@ -19,17 +19,13 @@
 #include "../menu/w_menubonus.h"
 #include "../menu/w_menucode.h"
 #include "../menu/w_menucredits.h"
-
-#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
-    #define MY_OS "UNIX"
-#else
-    #define MY_OS "OTHER"
-#endif
+#include "../singleton_audio.h"
 
 class QLabel;
 class QPushButton;
 class QFormLayout;
 class QGraphicsDropShadowEffect;
+class Singleton_Audio;
 
 /**
  * @brief Menu, which will contain Menu Widget.
@@ -96,6 +92,8 @@ private:
     W_MenuBonus* menuBonus;
     W_MenuCode* menuCode;
     W_MenuCredits* menuCredits;
+
+    Singleton_Audio *audioSingleton;
 
 signals:
 

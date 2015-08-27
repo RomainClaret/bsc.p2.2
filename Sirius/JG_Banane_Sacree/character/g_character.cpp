@@ -22,8 +22,7 @@ void G_Character::moveWithTimer(char orientation)
     {
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
-        timerMover->start(3);
-
+        timerMover->start(5);
     }
     else
     {
@@ -31,57 +30,9 @@ void G_Character::moveWithTimer(char orientation)
     }
 }
 
-void G_Character::advance(int step)
+void G_Character::advance(int)
 {
-//    if(step == 1)
-//    {
-//        int pas = 16;
-//        switch (currentMove) {
-//        case 'l':
-//            if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
-//            {
-//                this->moveByPixel(-pas,0);
-//            }
-//            else
-//            {
-//                currentMove = 'n';
-//            }
-//            break;
-//        case 'r':
-//            if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
-//            {
-//                this->moveByPixel(pas,0);
-//            }
-//            else
-//            {
-//                currentMove = 'n';
-//            }
-//            break;
-//        case 't':
-//            if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
-//            {
-//                this->moveByPixel(0,-pas);
-//            }
-//            else
-//            {
-//                currentMove = 'n';
-//            }
-//            break;
-//        case 'b':
-//            if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
-//            {
-//                this->moveByPixel(0,pas);
-//            }
-//            else
-//            {
-//                currentMove = 'n';
-//            }
-//            break;
-//        default:
-//            currentMove = 'n';
-//            break;
-//        }
-//    }
+    //Todo
 }
 
 void G_Character::stepMove()

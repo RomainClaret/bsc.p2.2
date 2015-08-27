@@ -15,13 +15,15 @@
 #define P_PENGUIN_H
 #include "../character/c_player.h"
 #include "../g_object.h"
-#include <QList>
 
 class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
 
+#include <QList>
 #include <QTimer>
+#include <QPixmap>
+#include <QVector>
 
 /**
  * @brief Playable character: Penguin.
@@ -53,15 +55,24 @@ private:
     QList<G_Object *> tempSacoche;
     QPoint* lastMove;
 
+    /**
+     * @brief endMove call when the step with the timer is complete
+     */
+    void endMove();
+
     bool slideAble;
 
     int nbLives;
+
+protected:
+    void advance(int step);
 
 public:
     P_Penguin(G_Gameboard* game);
 
     void setPos(int, int);
     void moveBy(int, int);
+
     void moveByPixel(int, int);
 
     void moveBack();
@@ -96,6 +107,18 @@ public:
 
 private:
     void stepMoveCharacter();
+
+    QVector<QString> stepsBottom;
+    QVector<QString> stepsLeft;
+    QVector<QString> stepsRight;
+    QVector<QString> stepsTop;
+    int iStep;
+    int iStepCompteur;
+
+    QVector<QString> animSteps;
+    int iTimer;
+    int iAdvanceSpeed;
+    int iWaitAnim;
 
 };
 
