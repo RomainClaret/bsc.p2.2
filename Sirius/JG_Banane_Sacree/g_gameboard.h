@@ -280,7 +280,7 @@ private:
     */
 
     //Sound Singelton
-    Singleton_Audio *soundSingleton;
+    Singleton_Audio *audioSingleton;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;

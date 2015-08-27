@@ -6,5 +6,8 @@
         <file>sound/restart_level.wav</file>
         <file>sound/water_fall.wav</file>
         <file>sound/movable_moving.wav</file>
+        <file>sound/walking_in_snow.wav</file>
+        <file>sound/get_object.wav</file>
+        <file>sound/movable_sliding.wav</file>
     </qresource>
 </RCC>

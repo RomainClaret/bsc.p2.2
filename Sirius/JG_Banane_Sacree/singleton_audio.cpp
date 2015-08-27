@@ -1,20 +1,21 @@
 #include "singleton_audio.h"
+#include "a_music.h"
+#include "a_sound.h"
+#include "a_musicplaylist.h"
 
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QTimer>
 #include <QDebug>
+#include <QThread>
 
 Singleton_Audio* Singleton_Audio::instance = NULL;
 
 Singleton_Audio::Singleton_Audio()
 {
-    soundPlayer = new QMediaPlayer;
-    musicPlayer = new QMediaPlayer;
-    musicPlaylist = new QMediaPlaylist;
-    setSound("");
-    setMusic("");
-    setMusicPlaylist("");
+    soundThread = new A_Sound();
+    musicThread = new A_Music();
+    musicPlaylistThread = new A_MusicPlaylist();
 }
 
 Singleton_Audio::~Singleton_Audio()
@@ -38,126 +39,84 @@ void Singleton_Audio::setPlayableSounds(bool playable)
 
 void Singleton_Audio::setSound(QString sound)
 {
-    this->soundQUrl = "qrc:/sound/";
-
-    if(sound.isEmpty())
-    {
-        sound = "dialog_interaction";
-    }
-
-    this->soundQUrl.append(sound);
-    this->soundQUrl.append(".wav");
-
-    soundPlayer->setMedia(QUrl(this->soundQUrl));
+    soundThread->setSound(sound);
 }
 
 void Singleton_Audio::playSound()
 {
-    soundPlayer->play();
+    soundThread->playSound();
 }
 
 void Singleton_Audio::playSound(QString sound)
 {
-    setSound(sound);
-    soundPlayer->play();
+    A_Sound *tmpSoundThread = new A_Sound();
+    tmpSoundThread->playSound(sound);
+}
+
+void Singleton_Audio::stopSound()
+{
+    soundThread->stopSound();
 }
 
 void Singleton_Audio::stopMusic()
 {
-    musicPlayer->stop();
+    musicThread->stopMusic();
+}
+
+void Singleton_Audio::pauseMusic()
+{
+    musicThread->pauseMusic();
 }
 
 void Singleton_Audio::playMusic()
 {
-    musicPlayer->play();
+    musicThread->playMusic();
 }
 
 void Singleton_Audio::playMusic(QString music)
 {
-    setMusic(music);
-    musicPlayer->play();
+    musicThread->setMusic(music);
+    musicThread->playMusic();
 }
 
 void Singleton_Audio::setMusic(QString music)
 {
-    if (MY_OS == "UNIX")
-    {
-        this->musicQUrl = "qrc:/music/";
-    }
-    else
-    {
-        this->musicQUrl = "music/";
-    }
-
-    if(music.isEmpty())
-    {
-        music = "Igazi_Jazz";
-    }
-
-    this->musicQUrl.append(music);
-    this->musicQUrl.append(".mp3");
-    musicPlayer->setMedia(QUrl(this->musicQUrl));
+    musicThread->setMusic(music);
 }
 
 void Singleton_Audio::setMusicPlaylist(QString playlist)
 {
-    if (MY_OS == "UNIX")
-    {
-        this->musicQUrl = "qrc:/music/";
-    }
-    else
-    {
-        this->musicQUrl = "music/";
-    }
-
-    if(playlist.isEmpty())
-    {
-        playlist = "tutorial";
-    }
-
-    if (playlist == "tutorial")
-    {
-        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
-        musicPlaylist->setCurrentIndex(0);
-    }
+    musicPlaylistThread->setMusicPlaylist(playlist);
 }
 
 void Singleton_Audio::playMusicPlaylist()
 {
-    musicPlayer->setPlaylist(musicPlaylist);
-    musicPlayer->play();
+    musicPlaylistThread->playMusicPlaylist();
+}
+
+void Singleton_Audio::playMusicPlaylist(QString playlist)
+{
+    musicPlaylistThread->playMusicPlaylist(playlist);
 }
 
 void Singleton_Audio::playMusicPlaylistWithIntro()
 {
-    musicPlayer->setPlaylist(musicPlaylist);
-    musicPlayer->play();
+    musicPlaylistThread->playMusicPlaylist();
 }
 
 void Singleton_Audio::pauseMusicPlaylist()
 {
-    musicPlayer->pause();
+    musicPlaylistThread->pauseMusicPlaylist();
 }
 
 void Singleton_Audio::resumeMusicPlaylist()
 {
-    musicPlayer->play();
+    musicPlaylistThread->playMusicPlaylist();
 }
 
 void Singleton_Audio::musicPlaylistRemoveIntro()
 {
-    musicPlaylist->removeMedia(0);
+    musicPlaylistThread->musicPlaylistRemoveIntro();
 }
 
 bool Singleton_Audio::getPlaybleSound()

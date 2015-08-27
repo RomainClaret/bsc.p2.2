@@ -81,7 +81,10 @@ SOURCES += \
     character/e_otter.cpp \
     state/state_enemyfriendly.cpp \
     surface/s_footstep.cpp \
-    character/c_player.cpp
+    character/c_player.cpp \
+    a_sound.cpp \
+    a_music.cpp \
+    a_musicplaylist.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -136,7 +139,10 @@ HEADERS  += \
     state/state_enemyfriendly.h \
     singleton_audio.h \
     observer_enemy.h\
-    surface/s_footstep.h
+    surface/s_footstep.h \
+    a_sound.h \
+    a_music.h \
+    a_musicplaylist.h
 
 RESOURCES += \
     images.qrc \

@@ -3,6 +3,8 @@
 
 #include <QGraphicsObject>
 
+class Singleton_Audio;
+
 /**
  * @brief The Character class
  * @details Abstract class
@@ -76,6 +78,8 @@ private:
      * @brief stepMoveCharactera step of the character
      */
     virtual void stepMoveCharacter()=0;
+
+    Singleton_Audio *audioSingleton;
 
 };
 

@@ -234,6 +234,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     {
         Factory_Surface::createSurfaceDialog(x, y, scene, elem.attribute("text"), elem.attribute("image"));
     }
+
 }
 
 QPoint G_Level::getViewStart()

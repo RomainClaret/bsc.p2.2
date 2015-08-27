@@ -35,9 +35,7 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
     scrollArea->setEnabled(false);
 
     audioSingleton = Singleton_Audio::getInstance();
-//    audioSingleton->setMusic("Penguin_Party");
-    audioSingleton->setMusic("");
-//    audioSingleton->setMusicPlaylist("");
+    audioSingleton->setMusic("Penguin_Party");
 
     layoutMenuPause = new QFormLayout;
     layoutMenuPause->addRow(scrollArea);
@@ -70,8 +68,8 @@ void W_MenuCredits::moveCredits()
 
 void W_MenuCredits::showEvent(QShowEvent *)
 {
+//    audioSingleton->setMusic("Penguin_Party");
     audioSingleton->playMusic();
-//    audioSingleton->playMusicPlaybackWithIntro();
     scrollArea->verticalScrollBar()->setValue(0);
     timer->start(100);
 }

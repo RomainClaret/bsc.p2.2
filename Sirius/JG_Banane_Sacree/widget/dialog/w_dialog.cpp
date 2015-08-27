@@ -91,18 +91,19 @@ QString W_Dialog::getText()
 
 void W_Dialog::showEvent(QShowEvent *)
 {
-    if (audioSingleton->getPlaybleSound())
-    {
-        audioSingleton->playSound();
-    }
+//    if (audioSingleton->getPlaybleSound())
+//    {
+//        audioSingleton->stopSound();
+//        audioSingleton->playSound();
+//    }
 
 }
 
 void W_Dialog::hideEvent(QHideEvent *)
 {
-    if(audioSingleton->getPlaybleSound())
-    {
-        audioSingleton->playSound();
-    }
+//    if(audioSingleton->getPlaybleSound())
+//    {
+//        audioSingleton->playSound();
+//    }
 
 }

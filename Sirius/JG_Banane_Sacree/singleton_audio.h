@@ -3,14 +3,11 @@
 
 #include <QString>
 
-#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
-    #define MY_OS "UNIX"
-#else
-    #define MY_OS "OTHER"
-#endif
-
 class QMediaPlayer;
 class QMediaPlaylist;
+class A_Sound;
+class A_Music;
+class A_MusicPlaylist;
 
 class Singleton_Audio
 {
@@ -24,6 +21,7 @@ public:
     void playSound(QString soundQUrl);
     void playMusic();
     void playMusic(QString music);
+    void pauseMusic();
     void stopMusic();
     bool getPlaybleSound();
     void setMusicPlaylist(QString playlist);
@@ -31,8 +29,8 @@ public:
     void playMusicPlaylistWithIntro();
     void pauseMusicPlaylist();
     void resumeMusicPlaylist();
-
-
+    void stopSound();
+    void playMusicPlaylist(QString playlist);
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}
@@ -40,12 +38,11 @@ private:
     Singleton_Audio();
     virtual ~Singleton_Audio();
 
-    QMediaPlayer* soundPlayer;
-    QMediaPlayer* musicPlayer;
-    QMediaPlaylist* musicPlaylist;
+    A_Sound *soundThread;
+    A_Music *musicThread;
+    A_MusicPlaylist *musicPlaylistThread;
     bool playableSound;
-    QString soundQUrl;
-    QString musicQUrl;
+
     void musicPlaylistRemoveIntro();
 
 };
