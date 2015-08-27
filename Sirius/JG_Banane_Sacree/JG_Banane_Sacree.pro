@@ -33,7 +33,6 @@ SOURCES += \
     g_level.cpp \
     g_maingame.cpp \
     g_object.cpp \
-    g_player.cpp \
     g_profil.cpp \
     menu/w_menu.cpp \
     menu/w_menubonus.cpp \
@@ -78,10 +77,11 @@ SOURCES += \
     state/state_enemypatrol.cpp \
     state/state_enemypause.cpp \
     state/state_enemysleep.cpp \
-	singleton_audio.cpp \
+    singleton_audio.cpp \
     character/e_otter.cpp \
     state/state_enemyfriendly.cpp \
-	surface/s_footstep.cpp
+    surface/s_footstep.cpp \
+    character/c_player.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -136,7 +136,7 @@ HEADERS  += \
     state/state_enemyfriendly.h \
     singleton_audio.h \
     observer_enemy.h\
-	surface/s_footstep.h
+    surface/s_footstep.h
 
 RESOURCES += \
     images.qrc \
