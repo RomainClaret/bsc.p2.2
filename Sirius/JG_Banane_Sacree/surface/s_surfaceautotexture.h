@@ -141,6 +141,12 @@ protected:
      */
     void addTexture(QPixmap pixmap);
 
+    /**
+     * @brief changeTexture change the texture of the surface
+     * @param pixmap
+     */
+    void changeTexture(QPixmap pixmap);
+
 //    void destroyCollidingBoxes();
 
 //    QPixmap texture_l_Collide;

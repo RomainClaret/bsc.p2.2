@@ -14,6 +14,7 @@
 #ifndef S_ICE_H
 #define S_ICE_H
 #include "../surface/g_surface.h"
+#include "../surface/s_surfaceautotexture.h"
 
 class QGraphicsItem;
 
@@ -27,7 +28,7 @@ class QGraphicsItem;
  * @version 1.0
  * @date 27 January 2015
  */
-class S_Ice : public G_Surface
+class S_Ice : public S_SurfaceAutoTexture
 {
 public:
     //Constructors
@@ -39,11 +40,9 @@ public:
      */
     S_Ice(int xpos, int ypos, QGraphicsItem *parent = 0);
 
-    /**
-     * @brief Constructor without position setup.
-     * @param parent QGraphicsItem to depend on
-     */
     S_Ice(QGraphicsItem *parent = 0);
+
+    void calculateTextures(int** mapSurfaces, int width, int height);
 
 private:
     /**

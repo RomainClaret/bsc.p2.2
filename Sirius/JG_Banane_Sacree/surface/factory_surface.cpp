@@ -61,7 +61,7 @@ G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGra
 S_Ice* Factory_Surface::createSurfaceIce(int xpos, int ypos, QGraphicsScene* scene)
 {
     S_Ice* i = new S_Ice(xpos, ypos);
-    scene->addItem(i);
+    i->addToScene(scene);
     return i;
 }
 

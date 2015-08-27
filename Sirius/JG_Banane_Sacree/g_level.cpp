@@ -181,13 +181,13 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     {
         G_Surface* surface = Factory_Surface::createSurface(elem.attribute("type"), x, y, scene);
 
-        if(elem.attribute("type") == Factory_Surface::BLOC_WATER)
+        if(elem.attribute("type") == Factory_Surface::BLOC_WATER || elem.attribute("type") == Factory_Surface::SURFACE_ICE)
         {
             S_SurfaceAutoTexture *autoSurface = dynamic_cast<S_SurfaceAutoTexture*>(surface);
             listAutoTextures.append(autoSurface);
         }
 
-        if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW)
+        if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW || elem.attribute("type") == Factory_Surface::BLOC_WALL)
         {
             //(mapSurfaces.at(x)).at(y) = G_Level::S_SNOW;
             mapSurfaces[x][y] = G_Level::S_SNOW;
