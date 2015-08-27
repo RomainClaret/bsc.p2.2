@@ -29,7 +29,7 @@ void A_MusicPlaylist::playMusicPlaylist(int value)
 
 void A_MusicPlaylist::run()
 {
-    musicPlayer->play();
+//    musicPlayer->play();
 }
 
 void A_MusicPlaylist::stopMusicPlaylist()

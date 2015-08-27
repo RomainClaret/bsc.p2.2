@@ -27,7 +27,7 @@ void A_Sound::playSound(QString sound)
 
 void A_Sound::run()
 {
-    soundPlayer->play();
+//    soundPlayer->play();
 }
 
 void A_Sound::setSound(QString sound)

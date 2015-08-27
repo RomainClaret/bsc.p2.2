@@ -20,7 +20,7 @@ void A_Music::run()
 
 void A_Music::stopMusic()
 {
-    musicPlayer->stop();
+//    musicPlayer->stop();
 }
 
 void A_Music::pauseMusic()
