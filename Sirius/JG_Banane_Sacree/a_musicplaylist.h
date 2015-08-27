@@ -24,6 +24,8 @@ public:
     void playMusicPlaylist();
     void playMusicPlaylist(QString playlist);
 
+    void playMusicPlaylist(int value);
+    void setMusicPlaylist(int value);
 signals:
 
 public slots:

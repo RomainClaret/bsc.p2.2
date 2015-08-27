@@ -31,6 +31,10 @@ public:
     void resumeMusicPlaylist();
     void stopSound();
     void playMusicPlaylist(QString playlist);
+    void setPlayableMusicPlaylist(bool playable);
+    bool getPlaybleMusicPlaylist();
+
+    void playMusicPlaylist(int value);
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}
@@ -42,7 +46,8 @@ private:
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistThread;
     bool playableSound;
-
+    bool playableMusic;
+    bool playableMusicPlaylist;
     void musicPlaylistRemoveIntro();
 
 };

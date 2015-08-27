@@ -23,7 +23,7 @@ void G_Character::moveWithTimer(char orientation)
 {
     if(currentMove == 'n')
     {
-//        audioSingleton->playSound("walking_in_snow");
+        audioSingleton->playSound("walking_in_snow");
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
         timerMover->start(5);

@@ -26,8 +26,6 @@ private:
 
     QMediaPlayer* soundPlayer;
     QString soundQUrl;
-    bool useOfSound;
-    QThread *currentThread;
 
 signals:
 

@@ -899,6 +899,7 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
+        audioSingleton->pauseMusicPlaylist();
         observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
 
         timerPlayableCharacterSlide->stop();
@@ -907,7 +908,7 @@ void G_Gameboard::pauseMenu()
         proxy->show();
         toggleMenuPause = true;
     }else{
-
+        audioSingleton->playMusicPlaylist();
         proxy->hide();
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
@@ -1109,8 +1110,9 @@ void G_Gameboard::setLevel(int value)
     viewRequested = currentLevel->getViewStart();
     W_MenuStart::saveGame(playerProfil);
     saveCheckpoint();
-    audioSingleton->playMusicPlaylist("tutorial");
     loadLevel();
+
+    audioSingleton->playMusicPlaylist(value);
 
 }
 

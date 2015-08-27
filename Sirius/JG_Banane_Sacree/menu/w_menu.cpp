@@ -167,9 +167,7 @@ void W_Menu::loadCredits()
  */
 void W_Menu::showEvent(QShowEvent*)
 {
-//    audioSingleton->pauseMusicPlaylist();
     loadPause();
-
 }
 
 void W_Menu::setUnableMenu(int levelValue)

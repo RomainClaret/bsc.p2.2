@@ -99,6 +99,11 @@ void Singleton_Audio::playMusicPlaylist(QString playlist)
     musicPlaylistThread->playMusicPlaylist(playlist);
 }
 
+void Singleton_Audio::playMusicPlaylist(int value)
+{
+    musicPlaylistThread->playMusicPlaylist(value);
+}
+
 void Singleton_Audio::playMusicPlaylistWithIntro()
 {
     musicPlaylistThread->playMusicPlaylist();
@@ -122,4 +127,14 @@ void Singleton_Audio::musicPlaylistRemoveIntro()
 bool Singleton_Audio::getPlaybleSound()
 {
     return playableSound;
+}
+
+bool Singleton_Audio::getPlaybleMusicPlaylist()
+{
+    return playableMusicPlaylist;
+}
+
+void Singleton_Audio::setPlayableMusicPlaylist(bool playable)
+{
+    this->playableMusicPlaylist = playable;
 }
