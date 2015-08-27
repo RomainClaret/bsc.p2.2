@@ -6,6 +6,8 @@
 #include <QFormLayout>
 #include <QSpinBox>
 
+#include <QTextCodec>
+
 #include <QMessageBox>
 
 Convertisseur::Convertisseur(QWidget *parent) : QWidget(parent)
@@ -109,6 +111,7 @@ void Convertisseur::convert()
         if(fHeader.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             QTextStream t(&fHeader);
+            t.setCodec(QTextCodec::codecForName("UTF-8"));
             QString line[1000];
             int line_count=0;
 
@@ -695,6 +698,7 @@ void Convertisseur::convert()
         doc.appendChild(data);
 
         QTextStream out(&fileWrite);
+        out.setCodec(QTextCodec::codecForName("UTF-8"));
         out << doc.toString();
 
         QMessageBox msgBox;
@@ -737,7 +741,6 @@ void Convertisseur::readXML(QDomDocument doc, QDomElement lvlElement)
             QDomElement ligneN = findElement(doc, colonneN,"LIGNE","position",ligne.attribute("position"));
             for(QDomElement item = ligne.firstChildElement(); !item.isNull(); item = item.nextSiblingElement())
             {
-                qDebug() << item.tagName();
                 ligneN.appendChild(item);
             }
             colonneN.appendChild(ligneN);

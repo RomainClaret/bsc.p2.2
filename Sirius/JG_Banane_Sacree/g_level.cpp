@@ -40,6 +40,7 @@
 #include <QPoint>
 #include <QDebug>
 #include <QList>
+#include <QStringList>
 
 #include <QDomNodeList>
 #include <QDomElement>
@@ -207,19 +208,33 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "ENEMY")
     {
+        QStringList list;
         QString ennemiType = elem.attribute("type");
         QList<QPoint> move;
-        for(QDomElement moveElement = elem.firstChildElement(); !moveElement.isNull(); moveElement = moveElement.nextSiblingElement())
+        for(QDomElement child = elem.firstChildElement(); !child.isNull(); child = child.nextSiblingElement())
         {
-           move.append(QPoint(moveElement.attribute("x").toInt(),moveElement.attribute("y").toInt()));
+           if(child.tagName() == "DIALOG")
+           {
+                list.append(child.attribute("text"));
+           }
+           else if(child.tagName() == "MOVE")
+           {
+                move.append(QPoint(child.attribute("x").toInt(),child.attribute("y").toInt()));
+           }
         }
 
-        Factory_Character::createEnemy(ennemiType, move, game, observerEnemy, scene);
+        C_Enemy* enemy = Factory_Character::createEnemy(ennemiType, move, game, observerEnemy, scene);
+
+        for(int i=0; i<list.count(); ++i )
+        {
+            enemy->addDialog(list.at(i));
+        }
     }
     else if(tagName == "DIALOG")
     {
         Factory_Surface::createSurfaceDialog(x, y, scene, elem.attribute("text"), elem.attribute("image"));
     }
+
 }
 
 QPoint G_Level::getViewStart()

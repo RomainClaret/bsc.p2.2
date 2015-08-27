@@ -3,6 +3,7 @@
 #include <QPainter>
 #include <QDebug>
 #include <QRectF>
+#include "singleton_audio.h"
 
 #include "../g_gameboard.h"
 
@@ -14,19 +15,22 @@ G_Character::G_Character()
     connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
 
     setZValue(10);
+
+    audioSingleton = Singleton_Audio::getInstance();
 }
 
 void G_Character::moveWithTimer(char orientation)
 {
     if(currentMove == 'n')
     {
+//        audioSingleton->playSound("walking_in_snow");
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
         timerMover->start(5);
     }
     else
     {
-        qDebug() << "mouvement en cours";
+//        qDebug() << "mouvement en cours";
     }
 }
 

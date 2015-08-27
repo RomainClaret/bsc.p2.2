@@ -72,7 +72,7 @@ int G_Gameboard::sizeY = 15;
 
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
-    soundSingleton = Singleton_Audio::getInstance();
+    audioSingleton = Singleton_Audio::getInstance();
 
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
@@ -379,8 +379,11 @@ void G_Gameboard::checkPositionEvents(char sens)
             G_Object *objet = dynamic_cast<G_Object*>(CollidingItems.at(i));
             playableCharacter->addObjectToBag(new G_Object(objet->getName()));
             mainScene->removeItem(CollidingItems.at(i));
-
-            if(objet->getName() == G_Object::OBJECT_SHOES)
+            if(objet->getName() == G_Object::OBJECT_FISH)
+            {
+                audioSingleton->playSound("get_object");
+            }
+            else if(objet->getName() == G_Object::OBJECT_SHOES)
             {
                 playableCharacter->setSlideAble(false);
             }
@@ -388,12 +391,14 @@ void G_Gameboard::checkPositionEvents(char sens)
             {
                 if(playerProfil->getNbLive()<G_Profil::NBMAXVIE)
                 {
+                    audioSingleton->playSound("get_object");
                     playerProfil->setNbLive(playerProfil->getNbLive()+1);
                     lifeList->updateHearts(playerProfil->getNbLive());
                 }
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
+                    audioSingleton->playSound("dialog_interaction");
                     showDialog(text, "");
                 }
             }
@@ -407,13 +412,14 @@ void G_Gameboard::checkPositionEvents(char sens)
             S_Dialog *item = dynamic_cast<S_Dialog*>(CollidingItems.at(i));
             mainScene->removeItem(CollidingItems.at(i));
 
+            audioSingleton->playSound("dialog_interaction");
+
             showDialog(item->getText(),item->getImageName());
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
             restartEnigma(text, "water_fall");
-
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
         {
@@ -608,8 +614,6 @@ void G_Gameboard::setWidgetPositionTopLeft(QWidget* widget)
  */
 void G_Gameboard::moveBlock(char sens)
 {
-    soundSingleton->playSound("movable_moving");
-
     switch(sens)
     {
         case 't':
@@ -628,9 +632,9 @@ void G_Gameboard::moveBlock(char sens)
 
     fixMovable(movable);
 
-
     if(movable->isSlide())
     {
+        audioSingleton->playSound("movable_sliding");
         SlidingBlock sb;
         sb.slidingMovable = movable;
         sb.direction = sens;
@@ -638,6 +642,10 @@ void G_Gameboard::moveBlock(char sens)
         listSlindingBlocks.append(sb);
 
         timerBlockDisplacementSlide->start(SLIDE_SPEED);
+    }
+    else
+    {
+        audioSingleton->playSound("movable_moving");
     }
 
     movable = NULL;
@@ -779,7 +787,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_Space)
             {
-                soundSingleton->setSound("dialog_interaction");
+                audioSingleton->playSound("dialog_interaction");
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -1092,7 +1100,7 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
-    soundSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
+    audioSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
@@ -1112,7 +1120,9 @@ void G_Gameboard::setLevel(int value)
     viewRequested = currentLevel->getViewStart();
     W_MenuStart::saveGame(playerProfil);
     saveCheckpoint();
+    audioSingleton->playMusicPlaylist("tutorial");
     loadLevel();
+
 }
 
 void G_Gameboard::loadLevel()
@@ -1134,8 +1144,6 @@ void G_Gameboard::loadLevel()
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 
-    soundSingleton->setMusicPlaylist("tutorial");
-    soundSingleton->playMusicPlaylist();
 }
 
 void G_Gameboard::setTimer()
@@ -1196,9 +1204,9 @@ void G_Gameboard::showDialog(QString text, QString image)
 
 void G_Gameboard::showDialog(QString text, QString image, QString sound)
 {
+    audioSingleton->playSound(sound);
     dialog->setText(text,1);
     dialog->setImage(image);
-    soundSingleton->setSound(sound);
     setWidgetPositionCenter(dialog);
     dialogProxy->show();
     dialogToogle = true;

@@ -19,6 +19,7 @@
 class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
+class Singleton_Audio;
 
 #include <QList>
 #include <QTimer>
@@ -45,6 +46,8 @@ class P_Penguin  : public C_Player
 //    Q_PROPERTY(QPoint pos READ pos WRITE setPos)
 
 private:
+
+    Singleton_Audio* audioSingleton;
 
     QGraphicsRectItem *leftCollideBox;
     QGraphicsRectItem *rightCollideBox;

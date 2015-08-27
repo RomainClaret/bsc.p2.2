@@ -20,6 +20,7 @@
 #include <QDebug>
 #include "../surface/s_ice.h"
 #include "../g_object.h"
+#include "../singleton_audio.h"
 
 #include <QPropertyAnimation>
 
@@ -30,6 +31,8 @@
 
 P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
 {
+    audioSingleton = Singleton_Audio::getInstance();
+
     int BlocsSizeX = G_Gameboard::getGameSquares()-2;
     int BlocsSizeY = G_Gameboard::getGameSquares()-2;
 
