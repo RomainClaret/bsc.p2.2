@@ -357,3 +357,8 @@ void C_Enemy::checkPenguin()
 {
 
 }
+
+void C_Enemy::addDialog(QString text)
+{
+    dialogList.append(text);
+}

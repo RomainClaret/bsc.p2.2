@@ -83,8 +83,8 @@ void E_Otter::playableCharacterDetection()
                 if(typeid(*CollidingItems.at(i)).name() == typeid(P_Penguin).name())
                 {
                     detectPlayableCharacter = true;
-                    QString text = tr("N'oubliez pas mes poissons");
-                    game->showDialog(text,"");
+                    int val = rand() % dialogList.size();
+                    game->showDialog(dialogList.at(val),"");
                 }
             }
         }
@@ -149,5 +149,3 @@ bool E_Otter::collide()
     }
     return false;
 }
-
-

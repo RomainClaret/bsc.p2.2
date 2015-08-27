@@ -5408,8 +5408,11 @@
    <LIGNE position="28">
     <BLOC type="SNOW"/>
     <ENEMY type="OTTER">
-     <MOVE x="9" y="28" i="1"/>
-     <MOVE x="12" y="28" i="2"/>
+     <MOVE x="9" y="28" i="2"/>
+     <MOVE x="12" y="28" i="1"/>
+	 <DIALOG text="N'oubliez pas de me ramener mes poissons" /> 
+		<DIALOG text="Je ne te laisserai pas passer sans un cadeau... " />
+		<DIALOG text="Qu'est-ce que j'ai faim!" />
     </ENEMY>
    </LIGNE>
   </COLONNE>

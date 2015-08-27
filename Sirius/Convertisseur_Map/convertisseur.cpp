@@ -741,11 +741,6 @@ void Convertisseur::readXML(QDomDocument doc, QDomElement lvlElement)
             QDomElement ligneN = findElement(doc, colonneN,"LIGNE","position",ligne.attribute("position"));
             for(QDomElement item = ligne.firstChildElement(); !item.isNull(); item = item.nextSiblingElement())
             {
-                qDebug() << item.tagName();
-                if(item.tagName() == "DIALOG")
-                {
-                    qDebug() << item.attribute("text");
-                }
                 ligneN.appendChild(item);
             }
             colonneN.appendChild(ligneN);

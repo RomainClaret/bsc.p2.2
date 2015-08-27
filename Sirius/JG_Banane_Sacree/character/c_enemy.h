@@ -20,6 +20,8 @@
 #include "../character/c_ai.h"
 #include "../character/g_character.h"
 
+#include <QStringList>
+
 class QPoint;
 class QGraphicsRectItem;
 class G_Gameboard;
@@ -131,6 +133,8 @@ public:
 
     virtual void checkPenguin();
 
+    void addDialog(QString text);
+
 protected:
     /**
      * @brief Moves self by an amount.
@@ -154,6 +158,7 @@ protected:
     State_Enemy* state;
     bool detectPlayableCharacter;
     G_Gameboard *game;
+    QStringList dialogList;
 
 private:
     void stepMoveCharacter()
