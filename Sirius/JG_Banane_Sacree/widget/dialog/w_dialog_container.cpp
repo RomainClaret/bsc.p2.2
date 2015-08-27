@@ -15,11 +15,8 @@
 #include "w_dialog_text.h"
 #include <QHBoxLayout>
 
-W_DialogContainer::W_DialogContainer(QWidget *parent)
+W_DialogContainer::W_DialogContainer(QWidget *)
 {  
-    //Warning killer
-    parent = NULL;
-
     textWidget = new W_DialogText(this);
 
     QHBoxLayout* box = new QHBoxLayout(this);

@@ -21,6 +21,7 @@
 #include <QPushButton>
 #include <QFormLayout>
 #include <QDebug>
+#include "singleton_audio.h"
 
 QString W_Menu::styleBtn = "border-style: none;"
         "border-radius: 5px;"
@@ -44,6 +45,8 @@ QString W_Menu::styleBtnUnable = "border-style: none;"
 
 W_Menu::W_Menu(QWidget *parent)
 {
+    audioSingleton = Singleton_Audio::getInstance();
+
     this->setStyleSheet(
                         "text-align: center;"
                         "color: #2e2e2e;"
@@ -164,7 +167,9 @@ void W_Menu::loadCredits()
  */
 void W_Menu::showEvent(QShowEvent*)
 {
+    audioSingleton->pauseMusicPlaylist();
     loadPause();
+
 }
 
 void W_Menu::setUnableMenu(int levelValue)

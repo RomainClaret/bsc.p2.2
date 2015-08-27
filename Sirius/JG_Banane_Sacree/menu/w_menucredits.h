@@ -9,7 +9,7 @@ class QPushButton;
 class QFormLayout;
 class QTimer;
 class QLabel;
-class QMediaPlayer;
+class Singleton_Audio;
 
 class W_MenuCredits: public QWidget
 {
@@ -29,7 +29,7 @@ public:
     /**
      * @brief showEvent
      */
-    void showEvent(QShowEvent*);
+    void showEvent(QShowEvent *);
 
     /**
      * @brief hideEvent
@@ -45,7 +45,7 @@ private:
     QLabel* textCredits;
     VerticalScrollArea* scrollArea;
     QTimer* timer;
-    QMediaPlayer* player;
+    Singleton_Audio* audioSingleton;
 
     // Parent
     W_Menu* parent;

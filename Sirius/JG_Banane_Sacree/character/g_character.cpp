@@ -31,7 +31,7 @@ void G_Character::moveWithTimer(char orientation)
     }
 }
 
-void G_Character::advance(int step)
+void G_Character::advance(int)
 {
 //    if(step == 1)
 //    {

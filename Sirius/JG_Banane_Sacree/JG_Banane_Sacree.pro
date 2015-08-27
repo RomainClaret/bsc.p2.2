@@ -74,11 +74,11 @@ SOURCES += \
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
     surface/s_stone.cpp \
-    singleton_sound.cpp \
     observer_enemy.cpp \
     state/state_enemypatrol.cpp \
     state/state_enemypause.cpp \
-    state/state_enemysleep.cpp
+    state/state_enemysleep.cpp \
+    singleton_audio.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -129,8 +129,8 @@ HEADERS  += \
     surface/s_surfaceautotexture.h \
     surface/s_fire.h \
     surface/s_stone.h \
-    singleton_sound.h \
-    observer_enemy.h
+    observer_enemy.h \
+    singleton_audio.h
 
 RESOURCES += \
     images.qrc \
