@@ -48,6 +48,37 @@ P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
     slideAble = true;
 
     setZValue(10);
+    iStepCompteur = -1;
+    iStep = 0;
+    stepsBottom.append(":/characters/characters/player_front_step01.png");
+    stepsBottom.append(":/characters/characters/player_front_step02.png");
+
+    stepsTop.append(":/characters/characters/player_back_step01.png");
+    stepsTop.append(":/characters/characters/player_back_step02.png");
+
+    stepsLeft.append(":/characters/characters/player_left_step01.png");
+    stepsLeft.append(":/characters/characters/player_left.png");
+
+    stepsRight.append(":/characters/characters/player_right_step01.png");
+    stepsRight.append(":/characters/characters/player_right.png");
+
+    iTimer = 0;
+    iWaitAnim = 40;
+    animSteps.append(":/characters/characters/player_front.png");
+    animSteps.append(":/characters/characters/player_anim01.png");
+    animSteps.append(":/characters/characters/player_anim02.png");
+    animSteps.append(":/characters/characters/player_anim03.png");
+    animSteps.append(":/characters/characters/player_anim04.png");
+    animSteps.append(":/characters/characters/player_anim05.png");
+    animSteps.append(":/characters/characters/player_front.png");
+    animSteps.append(":/characters/characters/player_anim01.png");
+    animSteps.append(":/characters/characters/player_anim02.png");
+    animSteps.append(":/characters/characters/player_anim03.png");
+    animSteps.append(":/characters/characters/player_anim04.png");
+    animSteps.append(":/characters/characters/player_anim05.png");
+    animSteps.append(":/characters/characters/player_front.png");
+
+    iAdvanceSpeed = 0;
 
 }
 void P_Penguin::setPos(int x, int y)
@@ -63,13 +94,43 @@ void P_Penguin::setPos(int x, int y)
     topCollideBox->setPos(xPos+1, yPos-G_Gameboard::getGameSquares()+1);
 }
 
+void P_Penguin::advance(int step)
+{
+    if(step == 1)
+    {
+        iAdvanceSpeed++;
+        if(iAdvanceSpeed % 2 == 0)
+        {
+            iTimer++;
+            if(iTimer >= iWaitAnim && iTimer < iWaitAnim+animSteps.size())
+            {
+                downSkin = animSteps.at(iTimer-iWaitAnim);
+                setPlayerOrientation('b');
+                update();
+            }
+            else if(iTimer > iWaitAnim+animSteps.size())
+            {
+                iTimer = 0;
+            }
+        }
+    }
+}
+
 void P_Penguin::stepMoveCharacter()
 {
+    iTimer = 0;
     int pas = 2;
     switch (currentMove) {
     case 'l':
         if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
         {
+            iStepCompteur ++;
+            if(iStepCompteur % 7 == 0)
+            {
+            iStep = (iStep + 1) % stepsLeft.length();
+            leftSkin = stepsLeft.at(iStep);
+            }
+
             this->moveByPixel(-pas,0);
         }
         else
@@ -80,6 +141,13 @@ void P_Penguin::stepMoveCharacter()
     case 'r':
         if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
         {
+            iStepCompteur ++;
+            if(iStepCompteur % 7 == 0)
+            {
+            iStep = (iStep + 1) % stepsRight.length();
+            rightSkin = stepsRight.at(iStep);
+            }
+
             this->moveByPixel(pas,0);
         }
         else
@@ -87,9 +155,17 @@ void P_Penguin::stepMoveCharacter()
             endMove();
         }
         break;
+
     case 't':
         if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
         {
+            iStepCompteur ++;
+            if(iStepCompteur % 7 == 0)
+            {
+            iStep = (iStep + 1) % stepsTop.length();
+            upSkin = stepsTop.at(iStep);
+            }
+
             this->moveByPixel(0,-pas);
         }
         else
@@ -100,6 +176,13 @@ void P_Penguin::stepMoveCharacter()
     case 'b':
         if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
         {
+            iStepCompteur ++;
+            if(iStepCompteur % 7 == 0)
+            {
+            iStep = (iStep + 1) % stepsBottom.length();
+            downSkin = stepsBottom.at(iStep);
+            }
+
             this->moveByPixel(0,pas);
         }
         else
@@ -119,6 +202,7 @@ void P_Penguin::endMove()
     game->endMoveCheck(currentMove);
     currentMove = 'n';
     timerMover->stop();
+    iStepCompteur = -1;
 }
 
 void P_Penguin::moveBy(int x, int y)

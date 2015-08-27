@@ -53,3 +53,8 @@ void S_Snow::setDesign()
 
     setBrush(brush);
 }
+
+void S_Snow::showFootPrint(char sens)
+{
+
+}

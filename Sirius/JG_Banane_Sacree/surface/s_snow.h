@@ -52,6 +52,12 @@ public:
      */
     void setMovableSunk(B_MovableSimple *b);
 
+    /**
+     * @brief showFootPrint display the foot step on the snow
+     * @param sens direction of the character
+     */
+    void showFootPrint(char sens);
+
 private:
     /**
      * @brief Set the design of self and the pictures for the annimation

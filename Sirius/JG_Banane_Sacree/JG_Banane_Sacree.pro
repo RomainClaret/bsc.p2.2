@@ -77,7 +77,8 @@ SOURCES += \
     surface/s_surfaceautotexture.cpp\
     surface/s_fire.cpp \
     surface/s_stone.cpp \
-    character/c_player.cpp
+    character/c_player.cpp \
+    surface/s_footstep.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -129,7 +130,8 @@ HEADERS  += \
     character/c_ai.h \
     surface/s_surfaceautotexture.h \
     surface/s_fire.h \
-    surface/s_stone.h
+    surface/s_stone.h \
+    surface/s_footstep.h
 
 RESOURCES += \
     images.qrc \

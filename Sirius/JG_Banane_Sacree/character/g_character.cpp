@@ -22,8 +22,7 @@ void G_Character::moveWithTimer(char orientation)
     {
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
-        timerMover->start(3);
-
+        timerMover->start(5);
     }
     else
     {
