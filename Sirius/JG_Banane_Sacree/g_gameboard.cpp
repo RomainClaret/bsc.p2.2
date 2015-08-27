@@ -38,6 +38,7 @@
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
 #include "singleton_audio.h"
+#include "surface/s_footstep.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -193,7 +194,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToTop() && playableCharacter->isSlide())
         {
             playableCharacter->moveBy(0, -1);
-            checkPositionEvents();
+            checkPositionEvents('t');
             checkChangeView(directionPlayableCharacter);
 
             if(movable != NULL)
@@ -211,7 +212,7 @@ void G_Gameboard::slidePlayableCharacter()
 
         if(movePlayableCharacterToBottom() && playableCharacter->isSlide())
         {
-            checkPositionEvents();
+            checkPositionEvents('b');
             playableCharacter->moveBy(0, 1);
             checkChangeView(directionPlayableCharacter);
 
@@ -231,7 +232,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToLeft() && playableCharacter->isSlide())
         {
             playableCharacter->moveBy(-1, 0);
-            checkPositionEvents();
+            checkPositionEvents('l');
             checkChangeView(directionPlayableCharacter);
 
             if(movable != NULL)
@@ -250,7 +251,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToRight() && playableCharacter->isSlide())
         {
            playableCharacter->moveBy(1, 0);
-           checkPositionEvents();
+           checkPositionEvents('r');
            checkChangeView(directionPlayableCharacter);
 
            if(movable != NULL)
@@ -269,7 +270,7 @@ void G_Gameboard::slidePlayableCharacter()
 
     if(endSlide)
     {
-        checkPositionEvents();
+        checkPositionEvents(directionPlayableCharacter);
         checkChangeView(directionPlayableCharacter);
         timerPlayableCharacterSlide->stop();
         isSliding=false;
@@ -319,7 +320,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         {
             qDebug() << "Sink it ! : " << p.x() << " " << p.y();
 
-            S_Snow *sunk = new S_Snow(p.x(),p.y());
+            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
             //sunk->setColor("white");
             sunk->setMovableSunk(b);
 
@@ -367,7 +368,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
     }
 }
 
-void G_Gameboard::checkPositionEvents()
+void G_Gameboard::checkPositionEvents(char sens)
 {
     QList<QGraphicsItem *> CollidingItems = playableCharacter->CollidesCenter();
 
@@ -455,6 +456,16 @@ void G_Gameboard::checkPositionEvents()
                 vb->playableCharacterOn();
             }
         }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_Snow).name())
+        {
+            //The player moved into an enemy's viewblock
+
+           S_Snow *snow;
+           snow = dynamic_cast<S_Snow*>(CollidingItems.at(i));
+
+           S_Footstep* step = snow->showFootPrint(sens);
+           mainScene->addItem(step);
+       }
     }
     if(playableCharacter->x() == currentLevel->getUnlockEndPoint().x() && playableCharacter->y() == currentLevel->getUnlockEndPoint().y())
     {
@@ -560,7 +571,7 @@ void G_Gameboard::changeView(char sens)
 
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
     loadCheckpoint();
-    checkPositionEvents();
+    checkPositionEvents(directionPlayableCharacter);
 
     setViewPosition();
     playerView->setSceneRect(viewPositionX,viewPositionY,windowSizeX,windowSizeY);
@@ -794,7 +805,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
 
 void G_Gameboard::endMoveCheck(char sens)
 {
-    checkPositionEvents();
+    checkPositionEvents(sens);
     checkChangeView(sens);
     if(movable != NULL)
     {
@@ -1094,7 +1105,7 @@ void G_Gameboard::setProxy()
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
-    checkPositionEvents();
+    checkPositionEvents(directionPlayableCharacter);
 }
 
 /**

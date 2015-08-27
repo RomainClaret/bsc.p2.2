@@ -17,6 +17,10 @@
 
 class QGraphicsItem;
 class B_MovableSimple;
+class S_Footstep;
+class QGraphicsScene;
+
+#include <QList>
 
 /**
  * @brief Snow Surface.
@@ -38,13 +42,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Snow(int xpos, int ypos, QGraphicsItem *parent = 0);
+    S_Snow(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    S_Snow(QGraphicsItem *parent = 0);
+    S_Snow(QGraphicsScene* scene, QGraphicsItem *parent = 0);
 
     /**
      * @brief setMovableSunk show the snow like a sunk movable
@@ -56,13 +60,23 @@ public:
      * @brief showFootPrint display the foot step on the snow
      * @param sens direction of the character
      */
-    void showFootPrint(char sens);
+    S_Footstep* showFootPrint(char sens);
+
+
+protected:
+    void advance(int step);
 
 private:
     /**
      * @brief Set the design of self and the pictures for the annimation
      */
     void setDesign();
+
+    QGraphicsScene* scene;
+    int iTime;
+    int speed;
+
+    bool movableSunk;
 };
 
 #endif // S_SNOW_H

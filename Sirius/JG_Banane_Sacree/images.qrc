@@ -24,6 +24,10 @@
         <file>characters/player_anim02.png</file>
         <file>characters/player_anim01.png</file>
         <file>characters/loutre.png</file>
+        <file>characters/player_step_t.png</file>
+        <file>characters/player_step_b.png</file>
+        <file>characters/player_step_r.png</file>
+        <file>characters/player_step_l.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>
@@ -82,5 +86,21 @@
         <file>surfaces/movable_init_02.png</file>
         <file>surfaces/movable_init_01.png</file>
         <file>surfaces/movable_snow.png</file>
+        <file>surfaces/ice_r.png</file>
+        <file>surfaces/ice_l.png</file>
+        <file>surfaces/ice_rb.png</file>
+        <file>surfaces/ice_lb.png</file>
+        <file>surfaces/ice_t.png</file>
+        <file>surfaces/ice_rt.png</file>
+        <file>surfaces/ice_lt.png</file>
+        <file>surfaces/ice_init.png</file>
+        <file>surfaces/ice_b.png</file>
+        <file>surfaces/ice_rtOut.png</file>
+        <file>surfaces/ice_ltOut.png</file>
+        <file>surfaces/ice_rbOut.png</file>
+        <file>surfaces/ice_lbOut.png</file>
+        <file>surfaces/snowSpark.png</file>
+        <file>surfaces/wall_rock01.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>
