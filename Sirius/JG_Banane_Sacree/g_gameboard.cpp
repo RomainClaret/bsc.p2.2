@@ -320,7 +320,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         {
             qDebug() << "Sink it ! : " << p.x() << " " << p.y();
 
-            S_Snow *sunk = new S_Snow(p.x(),p.y());
+            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
             //sunk->setColor("white");
             sunk->setMovableSunk(b);
 

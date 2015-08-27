@@ -99,5 +99,6 @@
         <file>surfaces/ice_ltOut.png</file>
         <file>surfaces/ice_rbOut.png</file>
         <file>surfaces/ice_lbOut.png</file>
+        <file>surfaces/snowSpark.png</file>
     </qresource>
 </RCC>

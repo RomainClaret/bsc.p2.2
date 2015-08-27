@@ -67,7 +67,7 @@ S_Ice* Factory_Surface::createSurfaceIce(int xpos, int ypos, QGraphicsScene* sce
 
 S_Snow* Factory_Surface::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene)
 {
-    S_Snow* s = new S_Snow(xpos, ypos);
+    S_Snow* s = new S_Snow(xpos, ypos, scene);
     scene->addItem(s);
     return s;
 }
