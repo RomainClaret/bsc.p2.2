@@ -8,8 +8,6 @@
 #include <QLabel>
 #include <QTimer>
 
-#include <QMediaPlayer>
-
 W_MenuCredits::W_MenuCredits(QWidget *parent)
 {
     this->parent = (W_Menu*)parent;
@@ -20,7 +18,8 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
 
     connect(btnBonusReturn, SIGNAL(clicked()),this, SLOT(close()));
 
-    textCredits = new QLabel("Bonjour à tous !\n\n MUSIC\nPenguin Party by Magne Djupvik");
+    textCredits = new QLabel("Bonjour à tous !\n\n "
+                             "MUSIC\nPenguin Party by Magne Djupvik");
     textCredits->setWordWrap(true);
     textCredits->setAlignment(Qt::AlignCenter);
 
@@ -35,27 +34,17 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
     scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     scrollArea->setEnabled(false);
 
-    player = new QMediaPlayer;
-//    player->setMedia(QUrl("MagneDjupvik-PenguinParty.mp3"));
-//    player->setMedia(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3"));
-    player->setMedia(QMediaContent(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3")));
-
-    if (MY_OS == "UNIX")
-    {
-        player->setMedia(QUrl("qrc:/music/MagneDjupvik-PenguinParty.mp3"));
-    }
-    else
-    {
-        player->setMedia(QUrl("MagneDjupvik-PenguinParty.mp3"));
-    }
-
+    audioSingleton = Singleton_Audio::getInstance();
+//    audioSingleton->setMusic("Penguin_Party");
+    audioSingleton->setMusic("");
+//    audioSingleton->setMusicPlaylist("");
 
     layoutMenuPause = new QFormLayout;
     layoutMenuPause->addRow(scrollArea);
     layoutMenuPause->addRow(btnBonusReturn);
 
-     this->resize(400,400);
-     this->setLayout(layoutMenuPause);
+    this->resize(400,400);
+    this->setLayout(layoutMenuPause);
 
     timer = new QTimer();
     QObject::connect(timer, SIGNAL(timeout()), this, SLOT(moveCredits()));
@@ -79,21 +68,22 @@ void W_MenuCredits::moveCredits()
     }
 }
 
-void W_MenuCredits::showEvent(QShowEvent*)
+void W_MenuCredits::showEvent(QShowEvent *)
 {
-    player->play();
+    audioSingleton->playMusic();
+//    audioSingleton->playMusicPlaybackWithIntro();
     scrollArea->verticalScrollBar()->setValue(0);
     timer->start(100);
 }
 
 void W_MenuCredits::hideEvent(QHideEvent *)
 {
-    player->stop();
+    audioSingleton->stopMusic();
     timer->stop();
 }
 
 void W_MenuCredits::close()
 {
-    player->stop();
+    audioSingleton->stopMusic();
     parent->loadBonus();
 }

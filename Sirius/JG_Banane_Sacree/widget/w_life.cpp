@@ -23,7 +23,7 @@
 
 #include <menu/w_menucode.h>
 
-W_Life::W_Life(QWidget *parent)
+W_Life::W_Life(QWidget *)
 {
     totalLife = 0;
     this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());

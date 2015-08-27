@@ -5,7 +5,7 @@ class G_Character;
 class C_Enemy;
 class C_Player;
 class QGraphicsScene;
-class Observer_NPC;
+class Observer_Enemy;
 class G_Gameboard;
 
 #include <QString>
@@ -32,6 +32,7 @@ public:
     static QString ENEMY_WOLF;
     static QString ENEMY_FOX;
     static QString ENEMY_WALRUS;
+    static QString ENEMY_OTTER;
 
     /**
      * @brief createEnemy generate a Enemy, add it to the scene and to the observer
@@ -42,7 +43,7 @@ public:
      * @param scene
      * @return an enemy
      */
-    static C_Enemy* createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_NPC* observer, QGraphicsScene* scene);
+    static C_Enemy* createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene);
 
     /**
      * @brief createPlayer generate a Player and add it to the scene

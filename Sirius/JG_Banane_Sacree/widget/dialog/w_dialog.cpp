@@ -14,6 +14,7 @@
 #include "w_dialog.h"
 #include "w_dialog_image.h"
 #include "w_dialog_container.h"
+#include "../../singleton_audio.h"
 #include <QPainter>
 #include <QDebug>
 
@@ -23,10 +24,11 @@
 #include <QLabel>
 #include <QStyleOption>
 
-W_Dialog::W_Dialog(QWidget *parent)
+W_Dialog::W_Dialog(QWidget *)
 {
-    player = new QMediaPlayer;
-    player->setMedia(QUrl("Sound-Blop-MarkDiAngelo.mp3"));
+    audioSingleton = Singleton_Audio::getInstance();
+    audioSingleton->setSound("dialog_interaction");
+    audioSingleton->setPlayableSounds(false); //avoid to have a sounds at map loading while it's opening and hiding
 
     image = new W_DialogImage("loutre.png", this);
     textWidget = new W_DialogContainer(this);
@@ -89,10 +91,18 @@ QString W_Dialog::getText()
 
 void W_Dialog::showEvent(QShowEvent *)
 {
-    player->play();
+    if (audioSingleton->getPlaybleSound())
+    {
+        audioSingleton->playSound();
+    }
+
 }
 
 void W_Dialog::hideEvent(QHideEvent *)
 {
-    player->play();
+    if(audioSingleton->getPlaybleSound())
+    {
+        audioSingleton->playSound();
+    }
+
 }

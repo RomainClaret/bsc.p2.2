@@ -23,6 +23,7 @@
         <file>characters/player_anim03.png</file>
         <file>characters/player_anim02.png</file>
         <file>characters/player_anim01.png</file>
+        <file>characters/loutre.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>

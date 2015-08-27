@@ -19,7 +19,7 @@
 #include <QLabel>
 #include <QStyleOption>
 
-W_DialogText::W_DialogText(QWidget *parent)
+W_DialogText::W_DialogText(QWidget *)
 {
     resize(300,200);
     this->setStyleSheet(
@@ -66,6 +66,7 @@ W_DialogText::W_DialogText(QWidget *parent)
 
     setMinimumSize(300,200);
     setMaximumWidth(500);
+
 }
 
 void W_DialogText::setText(QString text, int type)
@@ -79,7 +80,7 @@ QString W_DialogText::getText()
     return this->text->text();
 }
 
-void W_DialogText::paintEvent(QPaintEvent *pe)
+void W_DialogText::paintEvent(QPaintEvent *)
 {
   QStyleOption o;
   o.initFrom(this);

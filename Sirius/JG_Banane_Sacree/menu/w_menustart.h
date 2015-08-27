@@ -65,6 +65,12 @@ public:
     static void saveGame(G_Profil* currentUser);
 
     /**
+     * @brief Delete current game from JSON Save file
+     * @param currentUser
+     */
+    static void deleteGame(G_Profil* currentUser);
+
+    /**
      * @brief Load the profil.
      * @return true if it worked
      */

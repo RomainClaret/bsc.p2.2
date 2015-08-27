@@ -13,7 +13,7 @@
 
 #include "g_maingame.h"
 #include "g_profil.h"
-#include "observer_npc.h"
+#include "observer_enemy.h"
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -31,7 +31,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     toggleGameCreated = false;
     toggleFirstStart = true;
 
-    currentLevel = new G_Level(-1, new Observer_NPC(), NULL);
+    currentLevel = new G_Level(-1, new Observer_Enemy(), NULL);
 
     // Default variables from the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
@@ -104,6 +104,7 @@ G_MainGame::~G_MainGame()
 void G_MainGame::startGame(G_Profil* user)
 {
     theGame = new G_Gameboard();
+    connect(theGame,SIGNAL(refreshMenu()),this,SLOT(refreshGameMenu()));
     refreshGameMenu();
     theGame->setParent(this);
     theGame->setPlayerProfil(user);
@@ -141,7 +142,6 @@ void G_MainGame::resizeEvent(QResizeEvent * event) {
         {
             theGame->setGeometry(event->size().width()/2-windowSizeX/2,event->size().height()/2-windowSizeY/2,windowSizeX,windowSizeY);
         }
-
     }
 }
 

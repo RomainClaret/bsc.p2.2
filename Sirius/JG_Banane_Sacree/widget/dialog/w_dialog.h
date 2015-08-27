@@ -19,6 +19,7 @@ class QLabel;
 class QMediaPlayer;
 class W_DialogContainer;
 class W_DialogImage;
+class Singleton_Audio;
 
 /**
  * @brief Dialog popup.
@@ -69,9 +70,9 @@ private:
     QLabel* title;
     QLabel* text;
     QLabel* escapeText;
-    QMediaPlayer* player;
     W_DialogContainer* textWidget;
     W_DialogImage* image;
+    Singleton_Audio *audioSingleton;
 
 };
 

@@ -26,6 +26,7 @@
 #include "surface/s_ice.h"
 #include "surface/s_dialog.h"
 #include "surface/s_fire.h"
+#include "character/e_otter.h"
 #include "g_level.h"
 #include "character/c_enemy.h"
 #include "character/e_fox.h"
@@ -36,6 +37,7 @@
 #include "menu/w_menubonus.h"
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
+#include "singleton_audio.h"
 
 #include <QtWidgets>
 #include <QList>
@@ -69,6 +71,8 @@ int G_Gameboard::sizeY = 15;
 
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
+    soundSingleton = Singleton_Audio::getInstance();
+
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
     windowSizeX = sizeX*gameSquares;
@@ -86,7 +90,7 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     checkpoint = new QPoint(0,0);
     playerProfil = new G_Profil();
 
-    observerEnemy = new Observer_NPC();
+    observerEnemy = new Observer_Enemy();
     currentLevel = new G_Level(0, observerEnemy, this);
 
     playerView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -406,10 +410,9 @@ void G_Gameboard::checkPositionEvents()
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-            restartEnigma();
-
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
-            showDialog(text,"");
+            restartEnigma(text, "water_fall");
+
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
         {
@@ -436,31 +439,21 @@ void G_Gameboard::checkPositionEvents()
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
         {
+            //The player moved into an enemy's viewblock
+
             S_ViewBlockNPC *vb;
             vb = dynamic_cast<S_ViewBlockNPC*>(CollidingItems.at(i));
 
-            vb->playableCharacterOn();
-            //qDebug() << "---------Je me suis déplacé sur le champs de vue d'un ennemi";
+            if(typeid(vb->owner).name() == typeid(E_Otter).name())
+            {
+                vb->playableCharacterOn();
+            }
         }
     }
     if(playableCharacter->x() == currentLevel->getUnlockEndPoint().x() && playableCharacter->y() == currentLevel->getUnlockEndPoint().y())
     {
         qDebug() << "UNLOCKEND";
-
-        /*int levelNumber = currentLevel->getLevelNumber();
-        QString background = ":/maps/maps/";
-        background.append(QString("%1").arg(levelNumber));
-        background.append("Ouvert");
-        background.append(".png");
-        QPixmap pixmapBackground(background);
-
-        if(!pixmapBackground.isNull())
-        {
-            mainScene->setBackgroundBrush(pixmapBackground);
-        }*/
-
         currentLevel->unlock();
-
         endable = true;
     }
 }
@@ -571,8 +564,8 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE); //all in pause
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -604,6 +597,8 @@ void G_Gameboard::setWidgetPositionTopLeft(QWidget* widget)
  */
 void G_Gameboard::moveBlock(char sens)
 {
+    soundSingleton->playSound("movable_moving");
+
     switch(sens)
     {
         case 't':
@@ -773,6 +768,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_Space)
             {
+                soundSingleton->setSound("dialog_interaction");
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -874,6 +870,10 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(E_Otter).name())
+        {
+            bMove = false;
+        }
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {
@@ -891,7 +891,7 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
-        observerEnemy->changeNPCState(Observer_NPC::STATE_PAUSE, playableCharacter->getPosOnGame());
+        observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
 
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
@@ -905,7 +905,7 @@ void G_Gameboard::pauseMenu()
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
 
         //TODO : return to the state before PAUSE !
-        observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+        observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
     }
 }
 
@@ -933,10 +933,38 @@ void G_Gameboard::restartEnigma()
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"");
+        showDialog(text,"","lose_life");
     }
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+}
+
+
+void G_Gameboard::restartEnigma(QString text, QString sound)
+{
+    if(playerProfil->getNbLive()>0)
+    {
+        removeAllItems();
+        disconnectTimer();
+
+        playerProfil->setNbLive(playerProfil->getNbLive()-1);
+        lifeList->updateHearts(playerProfil->getNbLive());
+
+        loadLevel();
+        setProxy();
+
+        showDialog(text,"",sound);
+    }
+    else
+    {
+        playerProfil->setNbLive(4);
+        restartLevel();
+
+        text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+        showDialog(text,"","restart_level");
+    }
+
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -1053,6 +1081,7 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
+    soundSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
@@ -1092,7 +1121,10 @@ void G_Gameboard::loadLevel()
     loadCheckpoint();
     setTimer();
 
-    observerEnemy->changeNPCState(Observer_NPC::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+
+    soundSingleton->setMusicPlaylist("tutorial");
+    soundSingleton->playMusicPlaylist();
 }
 
 void G_Gameboard::setTimer()
@@ -1151,7 +1183,40 @@ void G_Gameboard::showDialog(QString text, QString image)
     dialogToogle = true;
 }
 
+void G_Gameboard::showDialog(QString text, QString image, QString sound)
+{
+    dialog->setText(text,1);
+    dialog->setImage(image);
+    soundSingleton->setSound(sound);
+    setWidgetPositionCenter(dialog);
+    dialogProxy->show();
+    dialogToogle = true;
+}
+
 QGraphicsScene* G_Gameboard::getGraphicsScene()
 {
     return this->mainScene;
+}
+
+void G_Gameboard::deleteGame()
+{
+    QMessageBox msgBox;
+    msgBox.setText(tr("Suppression de la partie"));
+    msgBox.setInformativeText(tr("Voulez-vous vraiment supprimer cette partie?"));
+    msgBox.addButton(tr("Supprimer"), QMessageBox::AcceptRole);
+    msgBox.addButton(tr("Annuler"), QMessageBox::RejectRole);
+
+    int ret = msgBox.exec();
+    switch (ret) {
+    case QMessageBox::AcceptRole:
+        W_MenuStart::deleteGame(playerProfil);
+        emit(refreshMenu());
+        close();
+        break;
+    case QMessageBox::RejectRole:
+        break;
+    default:
+        // should never be reached
+        break;
+    }
 }

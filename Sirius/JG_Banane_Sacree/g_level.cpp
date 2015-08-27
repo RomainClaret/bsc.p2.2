@@ -19,7 +19,7 @@
 #include <QGraphicsScene>
 #include <QList>
 
-#include "observer_npc.h"
+#include "observer_enemy.h"
 #include "character/factory_character.h"
 
 #include "surface/g_surface.h"
@@ -50,7 +50,7 @@ int G_Level::S_SNOW = 1;
 /**
  * @details Create Level according to levelNumber and read the basics XML level informations
  */
-G_Level::G_Level(int levelNumber, Observer_NPC* observer, G_Gameboard *game)
+G_Level::G_Level(int levelNumber, Observer_Enemy* observer, G_Gameboard *game)
 {
     this->game = game;
     this->levelNumber = levelNumber;
@@ -203,7 +203,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "END")
     {
-        Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+        doorList.append(Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene));
     }
     else if(tagName == "ENEMY")
     {
@@ -243,4 +243,5 @@ void G_Level::unlock()
     {
         doorList[i]->setBackground(true);
     }
+    doorList.clear();
 }

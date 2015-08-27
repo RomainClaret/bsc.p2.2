@@ -43,7 +43,6 @@ public:
 
     void moveByPixel(int x, int y) = 0;
     void stepMoveCharacter() = 0;
-
 protected:
     int xPos;
     int yPos;

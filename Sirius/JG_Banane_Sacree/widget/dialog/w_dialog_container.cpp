@@ -15,7 +15,7 @@
 #include "w_dialog_text.h"
 #include <QHBoxLayout>
 
-W_DialogContainer::W_DialogContainer(QWidget *parent)
+W_DialogContainer::W_DialogContainer(QWidget *)
 {  
     textWidget = new W_DialogText(this);
 
@@ -24,6 +24,12 @@ W_DialogContainer::W_DialogContainer(QWidget *parent)
     box->addWidget(textWidget);
     box->addStretch();
     box->setSpacing(0);
+
+    setAttribute(Qt::WA_NoSystemBackground);
+    setAttribute(Qt::WA_TranslucentBackground);
+    setAttribute(Qt::WA_PaintOnScreen);
+
+    setAttribute(Qt::WA_TransparentForMouseEvents);
 }
 
 void W_DialogContainer::setText(QString text, int type)

@@ -52,7 +52,7 @@ void G_Surface::setColor(QString brushColor)
     setBrush(brush);
 }
 
-void G_Surface::advance(int step)
+void G_Surface::advance(int)
 {
     //qDebug() << "advance call";
 }

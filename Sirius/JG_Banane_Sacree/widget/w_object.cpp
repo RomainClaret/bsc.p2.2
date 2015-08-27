@@ -21,7 +21,7 @@
 //#include <QMap>
 #include <QPainter>
 
-W_Object::W_Object(QWidget *parent)
+W_Object::W_Object(QWidget *)
 {
     this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     this->setAttribute(Qt::WA_TranslucentBackground);
@@ -29,7 +29,6 @@ W_Object::W_Object(QWidget *parent)
 
 void W_Object::paintEvent(QPaintEvent *)
 {
-    qDebug() << "PaintEvent";
     QPainter paint(this);
 
     int j = 0;
@@ -38,7 +37,6 @@ void W_Object::paintEvent(QPaintEvent *)
     {
          QString img = ":/items/items/";
          img.append(i.key().toLower());
-         qDebug() << i.key();
          if(i.value()>1)
          {
             img.append(QString::number(i.value()));

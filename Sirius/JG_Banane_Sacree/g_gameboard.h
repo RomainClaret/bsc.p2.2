@@ -24,7 +24,8 @@
 #include "widget/dialog/w_dialog.h"
 #include "g_profil.h"
 #include "widget/w_life.h"
-#include "observer_npc.h"
+
+#include "observer_enemy.h"
 #include "surface/b_movable_simple.h"
 
 class W_Menu;
@@ -41,6 +42,7 @@ class QLabel;
 class QPushButton;
 class QPoint;
 class QTimer;
+class Singleton_Audio;
 
 
 /**
@@ -107,6 +109,14 @@ public:
     void endMoveCheck(char sens);
 
     QGraphicsScene* getGraphicsScene();
+
+    /**
+     * @brief Show the dialog "popup" with the text in param
+     * @param text Will be written in the popup
+     * @param image Will be shown under the popup
+     */
+    void showDialog(QString text, QString image);
+
 
 private:
 
@@ -257,23 +267,20 @@ private:
      */
     void removeAllItems();
 
-    /**
-     * @brief Show the dialog "popup" with the text in param
-     * @param text Will be written in the popup
-     * @param image Will be shown under the popup
-     */
-    void showDialog(QString text, QString image);
 
     /**
      * @brief Show the dialog "popup" with the text and sound in param
      * @param text Will be written in the popup
      * @param sound name of the sound to play
      */
-    //void showDialog(QString text, QString sound);
+    void showDialog(QString text, QString image, QString sound);
 
     /*
      * ATTRIBUTES
     */
+
+    //Sound Singelton
+    Singleton_Audio *soundSingleton;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;
@@ -286,7 +293,7 @@ private:
 
     //Positioning and level management
     G_Level* currentLevel;
-    Observer_NPC* observerEnemy;
+    Observer_Enemy* observerEnemy;
     QPoint* checkpoint;
     QPoint viewRequested;
     int viewPositionX;
@@ -334,6 +341,8 @@ protected:
 
 signals:
 
+    void refreshMenu();
+
 public slots:
     /**
      * @brief SLOT: Resume the Game after pause
@@ -361,6 +370,13 @@ public slots:
     void restartEnigma();
 
     /**
+     * @brief Restart the level at the last checkpoint with a custom text and sound if life left
+     * @param text to display
+     * @param sound to play
+     */
+    void restartEnigma(QString text, QString sound);
+
+    /**
      * @brief SLOT: Restart the level at the beginning
      */
     void restartLevel();
@@ -379,6 +395,11 @@ public slots:
      * @brief SLOT: Enable the pause menu.
      */
     void pauseMenu();
+
+    /**
+     * @brief SLOT: Called when the user want to delete his party
+     */
+    void deleteGame();
 };
 
 #endif // G_GAMEBOARD_H

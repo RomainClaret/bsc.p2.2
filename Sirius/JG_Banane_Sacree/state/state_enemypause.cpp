@@ -8,7 +8,7 @@ State_EnemyPause::State_EnemyPause() : State_Enemy()
 /**
  * @details Freeze the enemy
  */
-void State_EnemyPause::step(C_Enemy* ennemi)
+void State_EnemyPause::step(C_Enemy*)
 {
     //nothing
 }
