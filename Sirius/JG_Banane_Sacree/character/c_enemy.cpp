@@ -30,7 +30,8 @@
 
 #include "g_gameboard.h"
 
-#include "surface/b_wall.h"
+#include "surface/b_wall_alone.h"
+#include "surface/b_wall_group.h"
 #include "surface/b_water.h"
 #include "surface/b_movable.h"
 #include "surface/s_viewblocknpc.h"
@@ -128,7 +129,8 @@ void C_Enemy::viewBlockActive()
 
         foreach (QGraphicsItem *item, CollidingItems) {
             if(typeid(*item).name() == typeid(B_MovableSimple).name()
-            || typeid(*item).name() == typeid(B_Wall).name()
+            || typeid(*item).name() == typeid(B_Wall_Alone).name()
+            || typeid(*item).name() == typeid(B_Wall_Group).name()
             || typeid(*item).name() == typeid(C_Enemy).name())
             {
                 bUnactivate = true;
@@ -222,7 +224,7 @@ bool C_Enemy::collide()
         {
             return true;
         }
-        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall).name())
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Alone).name() || typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Group).name())
         {
             return true;
         }

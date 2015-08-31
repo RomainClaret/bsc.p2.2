@@ -20,6 +20,8 @@
 
 #include "../surface/b_wall.h"
 #include "../surface/b_movable.h"
+#include "../surface/b_wall_alone.h"
+#include "../surface/b_wall_group.h"
 #include "../surface/b_water.h"
 #include "../character/c_enemy.h"
 #include "../character/e_fox.h"
@@ -72,7 +74,6 @@ void B_MovableThrow::advance(int step)
 
         checkPosition();
     }
-
 }
 
 void B_MovableThrow::checkPosition()
@@ -81,7 +82,8 @@ void B_MovableThrow::checkPosition()
     for(int i=0; i<l.length(); i++)
     {
         //BREAK
-        if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
+        if(typeid(*l.at(i)).name() == typeid(B_Wall_Alone).name() ||
+           typeid(*l.at(i)).name() == typeid(B_Wall_Group).name() ||
            typeid(*l.at(i)).name() == typeid(B_Water).name() ||
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name())
         {

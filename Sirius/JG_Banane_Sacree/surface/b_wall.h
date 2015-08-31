@@ -14,21 +14,21 @@
 #ifndef B_WALL_H
 #define B_WALL_H
 #include "../surface/g_surface.h"
+#include "../surface/s_surfaceautotexture.h"
 
 class QGraphicsRectItem;
 
 /**
- * @brief Wall block
+ * @brief Wall block abstract type
  * @details This block can not be moved with characters.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
- * @todo integrate with DP Factory
+ * @date 31 august 2015
  */
-class B_Wall : public G_Surface
+class B_Wall : public S_SurfaceAutoTexture
 {
 public:
     //Constructors
@@ -46,11 +46,14 @@ public:
      */
     B_Wall(QGraphicsItem *parent = 0);
 
-private:
     /**
-     * @brief Set the skin of the block.
+     * @brief calculateTextures determinate the texture with the collisions
+     * @param mapSurfaces
+     * @param width
+     * @param height
      */
-    void setDesign();
+    void calculateTextures(int** mapSurfaces, int width, int height)=0;
+
 };
 
 #endif // B_WALL_H

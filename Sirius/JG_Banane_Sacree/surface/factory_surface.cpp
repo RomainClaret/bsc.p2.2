@@ -9,7 +9,8 @@ QString Factory_Surface::SURFACE_SNOW = "SNOW";
 QString Factory_Surface::SURFACE_DIALOG = "DIALOG";
 QString Factory_Surface::SURFACE_DOOR = "DOOR";
 QString Factory_Surface::BLOC_MOVABLE = "MOVABLE";
-QString Factory_Surface::BLOC_WALL = "WALL";
+QString Factory_Surface::BLOC_WALL_ALONE = "WALL";
+QString Factory_Surface::BLOC_WALL_GROUP = "WALL_GROUP";
 QString Factory_Surface::BLOC_WATER = "WATER";
 QString Factory_Surface::BLOC_FIRE = "FIRE";
 QString Factory_Surface::BLOC_STONE = "STONE";
@@ -39,9 +40,13 @@ G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGra
     {
         return createBlocMovable(xpos, ypos, scene);
     }
-    else if(type == BLOC_WALL)
+    else if(type == BLOC_WALL_ALONE)
     {
-        return createBlocWall(xpos, ypos, scene);
+        return createBlocWallAlone(xpos, ypos, scene);
+    }
+    else if(type == BLOC_WALL_GROUP)
+    {
+        return createBlocWallGroup(xpos, ypos, scene);
     }
     else if(type == BLOC_WATER)
     {
@@ -123,10 +128,17 @@ B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGra
     return m;
 }
 
-B_Wall* Factory_Surface::createBlocWall(int xpos, int ypos, QGraphicsScene* scene)
+B_Wall_Alone* Factory_Surface::createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene)
 {
-    B_Wall* w = new B_Wall(xpos, ypos);
+    B_Wall_Alone* w = new B_Wall_Alone(xpos, ypos);
     scene->addItem(w);
+    return w;
+}
+
+B_Wall_Group* Factory_Surface::createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene)
+{
+    B_Wall_Group* w = new B_Wall_Group(xpos, ypos);
+    w->addToScene(scene);
     return w;
 }
 
