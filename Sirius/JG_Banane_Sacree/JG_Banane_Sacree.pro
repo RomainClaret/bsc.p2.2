@@ -82,7 +82,9 @@ SOURCES += \
     character/c_player.cpp \
     a_sound.cpp \
     a_music.cpp \
-    a_musicplaylist.cpp
+    a_musicplaylist.cpp \
+    surface/b_wall_alone.cpp \
+    surface/b_wall_group.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -140,7 +142,9 @@ HEADERS  += \
     surface/s_footstep.h \
     a_sound.h \
     a_music.h \
-    a_musicplaylist.h
+    a_musicplaylist.h \
+    surface/b_wall_alone.h \
+    surface/b_wall_group.h
 
 RESOURCES += \
     images.qrc \

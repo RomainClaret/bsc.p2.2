@@ -101,6 +101,18 @@
         <file>surfaces/ice_lbOut.png</file>
         <file>surfaces/snowSpark.png</file>
         <file>surfaces/wall_rock01.png</file>
+        <file>surfaces/wall_rock04.png</file>
+        <file>surfaces/wall_rock03.png</file>
+        <file>surfaces/wall_rock02.png</file>
+        <file>surfaces/wallGroup_lt.png</file>
+        <file>surfaces/wallGroup_rt.png</file>
+        <file>surfaces/wallGroup_t.png</file>
+        <file>surfaces/wallGroup_l.png</file>
+        <file>surfaces/wallGroup_r.png</file>
+        <file>surfaces/wallGroup_init.png</file>
+        <file>surfaces/wallGroup_lb.png</file>
+        <file>surfaces/wallGroup_rb.png</file>
+        <file>surfaces/wallGroup_b.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

@@ -47,6 +47,7 @@
 #include <QDomDocument>
 
 int G_Level::S_SNOW = 1;
+int G_Level::B_WALL_GROUP = 2;
 
 /**
  * @details Create Level according to levelNumber and read the basics XML level informations
@@ -91,10 +92,13 @@ G_Level::G_Level(int levelNumber, Observer_Enemy* observer, G_Gameboard *game)
         addLevelInformation(elem);
     }
 
-    mapSurfaces = (int**)calloc(maxBlocksWidth, sizeof(int*));
+    //allocating the matrixes
+    mapSurfacesSnow = (int**)calloc(maxBlocksWidth, sizeof(int*));
+    mapSurfacesWallGroup = (int**)calloc(maxBlocksWidth, sizeof(int*));
     for(int i=0; i<maxBlocksWidth; i++)
     {
-        mapSurfaces[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
+        mapSurfacesSnow[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
+        mapSurfacesWallGroup[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
     }
 }
 
@@ -137,7 +141,13 @@ QGraphicsScene* G_Level::populateScene()
     qDebug() << "nombre de texture automatiques : " << listAutoTextures.size();
     foreach (S_SurfaceAutoTexture* surfaceAuto, listAutoTextures)
     {
-        surfaceAuto->calculateTextures(mapSurfaces, maxBlocksWidth, maxBlocksHeight);
+        surfaceAuto->calculateTextures(mapSurfacesSnow, maxBlocksWidth, maxBlocksHeight);
+    }
+
+     qDebug() << "nombre de wallGroup : " << listWallGroup.size();
+    foreach (B_Wall_Group* surfaceAuto, listWallGroup)
+    {
+        surfaceAuto->calculateTextures(mapSurfacesWallGroup, maxBlocksWidth, maxBlocksHeight);
     }
 
 
@@ -182,16 +192,29 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     {
         G_Surface* surface = Factory_Surface::createSurface(elem.attribute("type"), x, y, scene);
 
-        if(elem.attribute("type") == Factory_Surface::BLOC_WATER || elem.attribute("type") == Factory_Surface::SURFACE_ICE)
+        if(elem.attribute("type") == Factory_Surface::BLOC_WATER
+                || elem.attribute("type") == Factory_Surface::SURFACE_ICE)
         {
             S_SurfaceAutoTexture *autoSurface = dynamic_cast<S_SurfaceAutoTexture*>(surface);
             listAutoTextures.append(autoSurface);
         }
-
-        if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW || elem.attribute("type") == Factory_Surface::BLOC_WALL)
+        else if(elem.attribute("type") == Factory_Surface::BLOC_WALL_GROUP)
         {
-            //(mapSurfaces.at(x)).at(y) = G_Level::S_SNOW;
-            mapSurfaces[x][y] = G_Level::S_SNOW;
+            B_Wall_Group *autoSurface = dynamic_cast<B_Wall_Group*>(surface);
+            listWallGroup.append(autoSurface);
+        }
+
+        //wall is like snow for the water
+        if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW
+                || elem.attribute("type") == Factory_Surface::BLOC_WALL_ALONE
+                || elem.attribute("type") == Factory_Surface::BLOC_WALL_GROUP)
+        {
+            mapSurfacesSnow[x][y] = G_Level::S_SNOW;
+        }
+
+        if(elem.attribute("type") == Factory_Surface::BLOC_WALL_GROUP)
+        {
+            mapSurfacesWallGroup[x][y] = G_Level::B_WALL_GROUP;
         }
     }
     else if(tagName == "ITEM")

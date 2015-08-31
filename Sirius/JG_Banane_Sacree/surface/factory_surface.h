@@ -16,6 +16,8 @@
 #include "../surface/b_movable_throw.h"
 #include "../surface/b_wall.h"
 #include "../surface/b_water.h"
+#include "../surface/b_wall_alone.h"
+#include "../surface/b_wall_group.h"
 
 #include "g_gameboard.h"
 
@@ -28,8 +30,8 @@ class QGraphicsScene;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.5
- * @date 21 August 2015
+ * @version 1.6
+ * @date 31 August 2015
  */
 class Factory_Surface
 {
@@ -40,7 +42,8 @@ public:
     static QString SURFACE_DIALOG;
     static QString SURFACE_DOOR;
     static QString BLOC_MOVABLE;
-    static QString BLOC_WALL;
+    static QString BLOC_WALL_ALONE;
+    static QString BLOC_WALL_GROUP;
     static QString BLOC_WATER;
     static QString BLOC_FIRE;
     static QString BLOC_STONE;
@@ -137,9 +140,19 @@ public:
      * @param xpos x-axis position of the item
      * @param ypos y-axis position of the item
      * @param scene scene to add the surface to
-     * @return B_Wall* of created item
+     * @return B_Wall_Alone* of created item
      */
-    static B_Wall* createBlocWall(int xpos, int ypos, QGraphicsScene* scene);
+    static B_Wall_Alone* createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene);
+
+    /**
+     * @brief Creates, returns and add a Wall Surface to scene.
+     * @param xpos x-axis position of the item
+     * @param ypos y-axis position of the item
+     * @param scene scene to add the surface to
+     * @return B_Wall_Group* of created item
+     */
+    static B_Wall_Group* createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene);
+
 
     /**
      * @brief Creates, returns and add a Water Surface to scene.

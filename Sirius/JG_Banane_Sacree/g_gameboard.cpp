@@ -26,6 +26,8 @@
 #include "surface/s_ice.h"
 #include "surface/s_dialog.h"
 #include "surface/s_fire.h"
+#include "surface/b_wall_alone.h"
+#include "surface/b_wall_group.h"
 #include "character/e_otter.h"
 #include "g_level.h"
 #include "character/c_enemy.h"
@@ -339,7 +341,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-            B_Wall *wall = new B_Wall(p.x(),p.y());
+            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y());
             wall->setColor("gray");
             mainScene->addItem(wall);
         }
@@ -850,7 +852,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
     bool bMove = true;
     for(int i=0; i<CollidingItems.length(); i++)
     {
-        if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall).name())
+        if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Alone).name() || typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Group).name())
         {
             bMove = false;
         }
