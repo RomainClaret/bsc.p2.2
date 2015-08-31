@@ -23,8 +23,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = JG_Banane_Sacrees
 TEMPLATE = app
-macx:ICON = $${PWD}/icons/logo.icns
-win32:RC_FILE = winIcon.rc
 QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
@@ -148,5 +146,13 @@ RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \
-    sound.qrc \
-    music.qrc
+    sound.qrc
+
+unix{
+    ICON = $${PWD}/icons/logo.icns
+    RESOURCES += music.qrc
+}
+
+win32{
+    RC_FILE = winIcon.rc
+}
