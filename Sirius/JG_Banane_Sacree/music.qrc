@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>music/Igazi_Jazz.mp3</file>
-        <file>music/Penguin_Party.mp3</file>
-        <file>music/Joyful_Jubilee_with_intro.mp3</file>
-        <file>music/Joyful_Jubilee.mp3</file>
+        <file>music/Igazi_Jazz.wav</file>
+        <file>music/Joyful_Jubilee.wav</file>
+        <file>music/Joyful_Jubilee_with_intro.wav</file>
+        <file>music/Penguin_Party.wav</file>
+        <file>music/Positive_Thinking.wav</file>
     </qresource>
 </RCC>
