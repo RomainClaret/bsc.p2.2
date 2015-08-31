@@ -29,7 +29,7 @@ void A_MusicPlaylist::playMusicPlaylist(int value)
 
 void A_MusicPlaylist::run()
 {
-    musicPlayer->play();
+//    musicPlayer->play();
 }
 
 void A_MusicPlaylist::stopMusicPlaylist()
@@ -56,10 +56,10 @@ void A_MusicPlaylist::setMusicPlaylist(QString playlist)
     if (playlist == "tutorial")
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.mp3"));
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.wav"));
         for (int i = 0; i<5; i++)
         {
-            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
+            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.wav"));
         }
         musicPlaylist->setCurrentIndex(1);
     }
@@ -85,10 +85,10 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
     if (value == -1)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.mp3"));
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.wav"));
         for (int i = 0; i<5; i++)
         {
-            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.mp3"));
+            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.wav"));
         }
         musicPlaylist->setCurrentIndex(1);
     }

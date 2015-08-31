@@ -58,3 +58,5 @@ Sirius/build-JG_Banane_Sacree_v1-Desktop_Qt_5_5_0_clang_64bit2-Debug/JG_Banane_S
 Sirius/build-JG_Banane_Sacree_v1-Desktop_Qt_5_5_0_clang_64bit2-Debug/JG_Banane_Sacree.app/Contents/Resources/empty.lproj
 Sirius/build-JG_Banane_Sacree_v1-Desktop_Qt_5_5_0_clang_64bit2-Debug/JG_Banane_Sacree.app/Contents/Resources/logo.icns
 *.orig
+*.o
+Sirius/build-JG_Banane_Sacree-Desktop_Qt_5_4_2_MinGW_32bit-Debug/

@@ -20,7 +20,7 @@ void A_Music::run()
 
 void A_Music::stopMusic()
 {
-    musicPlayer->stop();
+//    musicPlayer->stop();
 }
 
 void A_Music::pauseMusic()
@@ -45,7 +45,7 @@ void A_Music::setMusic(QString music)
     }
 
     this->musicQUrl.append(music);
-    this->musicQUrl.append(".mp3");
+    this->musicQUrl.append(".wav");
     musicPlayer->setMedia(QUrl(this->musicQUrl));
 }
 
