@@ -37,6 +37,11 @@ public:
     void playSoundBlockSliding();
     void playSoundBlockStopSliding();
     void playSoundPlayerSliding();
+    void playSoundGetObject();
+    void playSoundSunk();
+    void playSoundEventRestartCheckpoint();
+    void playSoundEventLostLevel();
+    void playSoundEventStartGame();
 
     void playMusicPlaylist(int value);
 private:
@@ -50,6 +55,8 @@ private:
     A_Sound *soundThreadWalking;
     A_Sound *soundThreadMovableSliding;
     A_Sound *soundThreadMovableMoving;
+    A_Sound *soundThreadObject;
+    A_Sound *soundThreadSunk;
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistThread;
     bool playableSound;

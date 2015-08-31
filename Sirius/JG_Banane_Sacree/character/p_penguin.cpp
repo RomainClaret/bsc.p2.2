@@ -268,7 +268,7 @@ bool P_Penguin::isSlide()
     }
     if (slide)
     {
-        audioSingleton->playSoundPlayerSliding();
+        //audioSingleton->playSoundPlayerSliding();
     }
     return slide;
 }
