@@ -27,6 +27,7 @@
 #include "../character/e_wolf.h"
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
+#include "../singleton_audio.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -39,6 +40,8 @@
  */
 B_MovableSimple::B_MovableSimple(int xpos, int ypos, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
 {
+    audioSingleton = Singleton_Audio::getInstance();
+
     int iRand = rand() % 3;
     QPixmap pixmap;
 

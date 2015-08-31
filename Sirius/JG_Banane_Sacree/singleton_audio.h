@@ -33,6 +33,15 @@ public:
     void playMusicPlaylist(QString playlist);
     void setPlayableMusicPlaylist(bool playable);
     bool getPlaybleMusicPlaylist();
+    void playSoundPlayerWalking();
+    void playSoundBlockSliding();
+    void playSoundBlockStopSliding();
+    void playSoundPlayerSliding();
+    void playSoundGetObject();
+    void playSoundSunk();
+    void playSoundEventRestartCheckpoint();
+    void playSoundEventLostLevel();
+    void playSoundEventStartGame();
 
     void playMusicPlaylist(int value);
 private:
@@ -43,11 +52,17 @@ private:
     virtual ~Singleton_Audio();
 
     A_Sound *soundThread;
+    A_Sound *soundThreadWalking;
+    A_Sound *soundThreadMovableSliding;
+    A_Sound *soundThreadMovableMoving;
+    A_Sound *soundThreadObject;
+    A_Sound *soundThreadSunk;
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistThread;
     bool playableSound;
     bool playableMusic;
     bool playableMusicPlaylist;
+
     void musicPlaylistRemoveIntro();
 
 };

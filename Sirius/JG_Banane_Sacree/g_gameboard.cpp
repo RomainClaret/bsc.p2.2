@@ -188,12 +188,14 @@ void G_Gameboard::slideBlock()
 
     if(listSlindingBlocks.size() == 0)
     {
+        audioSingleton->playSoundBlockStopSliding();
         timerBlockDisplacementSlide->stop();
     }
 }
 
 void G_Gameboard::slidePlayableCharacter()
 {
+
     bool endSlide = true;
 
     switch (directionPlayableCharacter)
@@ -327,6 +329,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         QPoint p = b->getPos();
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
+            audioSingleton->playSoundSunk();
             qDebug() << "Sink it ! : " << p.x() << " " << p.y();
 
             S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
@@ -340,6 +343,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
+            audioSingleton->playSoundEventLostLevel();
             QString text = tr("Tu as bloqué ta sortie!");
             showDialog(text,"");
 
@@ -390,7 +394,7 @@ void G_Gameboard::checkPositionEvents(char sens)
             mainScene->removeItem(CollidingItems.at(i));
             if(objet->getName() == G_Object::OBJECT_FISH)
             {
-                audioSingleton->playSound("get_object");
+                audioSingleton->playSoundGetObject();
             }
             else if(objet->getName() == G_Object::OBJECT_SHOES)
             {
@@ -400,7 +404,7 @@ void G_Gameboard::checkPositionEvents(char sens)
             {
                 if(playerProfil->getNbLive()<G_Profil::NBMAXVIE)
                 {
-                    audioSingleton->playSound("get_object");
+                    audioSingleton->playSoundGetObject();
                     playerProfil->setNbLive(playerProfil->getNbLive()+1);
                     lifeList->updateHearts(playerProfil->getNbLive());
                 }
@@ -643,7 +647,7 @@ void G_Gameboard::moveBlock(char sens)
 
     if(movable->isSlide())
     {
-        audioSingleton->playSound("movable_sliding");
+        audioSingleton->playSoundBlockSliding();
         SlidingBlock sb;
         sb.slidingMovable = movable;
         sb.direction = sens;
@@ -822,6 +826,7 @@ void G_Gameboard::endMoveCheck(char sens)
     }
     if(playableCharacter->isSlide())
     {
+        audioSingleton->playSoundPlayerSliding();
         isSliding=true;
         directionPlayableCharacter = sens;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
@@ -947,6 +952,7 @@ void G_Gameboard::restartEnigma()
 {
     if(playerProfil->getNbLive()>0)
     {
+        audioSingleton->playSoundEventRestartCheckpoint();
         removeAllItems();
         disconnectTimer();
 
@@ -958,6 +964,7 @@ void G_Gameboard::restartEnigma()
     }
     else
     {
+        audioSingleton->playSoundEventLostLevel();
         playerProfil->setNbLive(4);
         restartLevel();
 
@@ -1008,6 +1015,8 @@ void G_Gameboard::restartLevel()
 
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
+
+
 
     //setFirstDialog();
 }
@@ -1131,6 +1140,8 @@ void G_Gameboard::setLevel(int value)
     W_MenuStart::saveGame(playerProfil);
     saveCheckpoint();
     loadLevel();
+
+    audioSingleton->playSoundEventStartGame();
 
     audioSingleton->playMusicPlaylist(value);
 

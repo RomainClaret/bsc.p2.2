@@ -1,13 +1,17 @@
 <RCC>
     <qresource prefix="/">
-        <file>sound/important.wav</file>
+        <file>sound/lost_level.wav</file>
         <file>sound/dialog_interaction.wav</file>
         <file>sound/start_game.wav</file>
-        <file>sound/restart_level.wav</file>
+        <file>sound/restart_checkpoint.wav</file>
         <file>sound/water_fall.wav</file>
         <file>sound/movable_moving.wav</file>
         <file>sound/walking_in_snow.wav</file>
         <file>sound/get_object.wav</file>
         <file>sound/movable_sliding.wav</file>
+        <file>sound/test.wav</file>
+        <file>sound/movable_stop_sliding.wav</file>
+        <file>sound/player_sliding.wav</file>
+        <file>sound/movable_in_water.wav</file>
     </qresource>
 </RCC>
