@@ -13,7 +13,11 @@ Singleton_Audio* Singleton_Audio::instance = NULL;
 
 Singleton_Audio::Singleton_Audio()
 {
+    soundThreadWalking = new A_Sound();
+    soundThreadMovableSliding = new A_Sound();
+    soundThreadMovableMoving = new A_Sound();
     soundThread = new A_Sound();
+
     musicThread = new A_Music();
     musicPlaylistThread = new A_MusicPlaylist();
 }
@@ -49,8 +53,27 @@ void Singleton_Audio::playSound()
 
 void Singleton_Audio::playSound(QString sound)
 {
-    A_Sound *tmpSoundThread = new A_Sound();
-    tmpSoundThread->playSound(sound);
+    soundThread->playSound(sound);
+}
+
+void Singleton_Audio::playSoundBlockSliding()
+{
+    soundThreadMovableSliding->playSound("movable_sliding");
+}
+
+void Singleton_Audio::playSoundBlockStopSliding()
+{
+    soundThreadMovableSliding->playSound("movable_stop_sliding");
+}
+
+void Singleton_Audio::playSoundPlayerSliding()
+{
+    soundThreadMovableSliding->playSound("player_sliding");
+}
+
+void Singleton_Audio::playSoundPlayerWalking()
+{
+    soundThreadWalking->playSound("walking_in_snow");
 }
 
 void Singleton_Audio::stopSound()

@@ -9,5 +9,8 @@
         <file>sound/walking_in_snow.wav</file>
         <file>sound/get_object.wav</file>
         <file>sound/movable_sliding.wav</file>
+        <file>sound/test.wav</file>
+        <file>sound/movable_stop_sliding.wav</file>
+        <file>sound/player_sliding.wav</file>
     </qresource>
 </RCC>

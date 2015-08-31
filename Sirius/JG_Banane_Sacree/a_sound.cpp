@@ -9,6 +9,11 @@ A_Sound::A_Sound()
     connect(this, SIGNAL(finished()), this, SLOT(terminate()));
 }
 
+A_Sound::~A_Sound()
+{
+    delete soundPlayer;
+}
+
 void A_Sound::playSound()
 {
     start();
@@ -21,6 +26,7 @@ void A_Sound::stopSound()
 
 void A_Sound::playSound(QString sound)
 {
+    this->wait();
     setSound(sound);
     start();
 }

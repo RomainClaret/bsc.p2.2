@@ -15,6 +15,7 @@ class A_Sound : public QThread
 {
 public:
     A_Sound();
+    ~A_Sound();
 
     void playSound();
     void playSound(QString sound);

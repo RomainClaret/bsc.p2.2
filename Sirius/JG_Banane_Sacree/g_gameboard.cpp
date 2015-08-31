@@ -179,12 +179,14 @@ void G_Gameboard::slideBlock()
 
     if(listSlindingBlocks.size() == 0)
     {
+        audioSingleton->playSoundBlockStopSliding();
         timerBlockDisplacementSlide->stop();
     }
 }
 
 void G_Gameboard::slidePlayableCharacter()
 {
+
     bool endSlide = true;
 
     switch (directionPlayableCharacter)
@@ -634,7 +636,7 @@ void G_Gameboard::moveBlock(char sens)
 
     if(movable->isSlide())
     {
-        audioSingleton->playSound("movable_sliding");
+        audioSingleton->playSoundBlockSliding();
         SlidingBlock sb;
         sb.slidingMovable = movable;
         sb.direction = sens;
