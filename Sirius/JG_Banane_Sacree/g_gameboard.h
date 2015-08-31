@@ -28,6 +28,8 @@
 #include "observer_enemy.h"
 #include "surface/b_movable_simple.h"
 
+#include <QGLWidget>
+
 class W_Menu;
 class QGraphicsProxyWidget;
 class QGraphicsScene;

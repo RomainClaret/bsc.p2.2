@@ -17,7 +17,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml multimedia
+QT       += core gui xml multimedia opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

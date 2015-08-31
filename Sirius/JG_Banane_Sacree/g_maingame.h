@@ -18,6 +18,7 @@
 #include "g_gameboard.h"
 #include "menu/w_menustart.h"
 #include "g_profil.h"
+#include <QGLWidget>
 
 class QGraphicsView;
 class QLabel;
@@ -73,8 +74,11 @@ public:
 
     //Destructor
     ~G_MainGame();
-
+protected:
+    void paintEvent(QPaintEvent *event);
 private:
+
+    QGLWidget* w;
 
     //Button to quit completly the game.
     QPushButton* quitGame;

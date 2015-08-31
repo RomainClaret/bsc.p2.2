@@ -115,6 +115,13 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     timer = new QTimer();
     setTimer();
     timer->start(100); //10 fois par sec
+
+    //OPEN GL
+//    QGLWidget* w = new QGLWidget(QGLFormat(QGL::SampleBuffers | QGL::DirectRendering));
+//    playerView->setViewport(w);
+//    playerView->setViewportUpdateMode(QGraphicsView::SmartViewportUpdate);
+
+//    setWindowOpacity(0.99);
 }
 
 void G_Gameboard::slideBlock()
