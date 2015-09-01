@@ -23,7 +23,9 @@ Singleton_Audio::Singleton_Audio()
     musicThread = new A_Music();
     musicPlaylistThread = new A_MusicPlaylist();
 
-    usableAll(false);
+    usableAll(true);
+    //usableMusics(true);
+    //usableSounds(true);
 }
 
 Singleton_Audio::~Singleton_Audio()

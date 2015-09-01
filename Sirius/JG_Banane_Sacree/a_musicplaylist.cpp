@@ -66,7 +66,7 @@ void A_MusicPlaylist::setMusicPlaylist(QString playlist)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.wav"));
-        for (int i = 0; i<5; i++)
+        for (int i = 0; i<2; i++)
         {
             musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.wav"));
         }
