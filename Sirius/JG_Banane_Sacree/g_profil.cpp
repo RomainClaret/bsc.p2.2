@@ -14,11 +14,14 @@
 #include "g_profil.h"
 #include <qDebug>
 #include <QDateTime>
+#include "./singleton_audio.h"
 
 int G_Profil::NBMAXVIE = 99;
 
 G_Profil::G_Profil()
 {
+    audioSingleton = Singleton_Audio::getInstance();
+
     this->username = "Nouveau";
     QDateTime current = QDateTime::currentDateTime();
     this->startDate = current.toString("dd:MM:yyyy:hh:mm");
@@ -28,6 +31,8 @@ G_Profil::G_Profil()
     this->level = 0;
     this->nbLive = 1;
     this->difficulty = 1;
+    this->volumeMusics = 100;
+    this->volumeSounds = 100;
 
     for(int i = 0; i < 8; i++)
     {
@@ -37,6 +42,8 @@ G_Profil::G_Profil()
 
 G_Profil::G_Profil(const QString &username)
 {
+    audioSingleton = Singleton_Audio::getInstance();
+
     this->username = username;
 }
 
@@ -134,6 +141,8 @@ void G_Profil::read(const QJsonObject &json)
     this->level = json["level"].toInt();
     this->nbLive = json["nbLive"].toInt();
     this->difficulty = json["difficulty"].toInt();
+    this->volumeMusics = json["volumeMusics"].toInt();
+    this->volumeSounds = json["volumeSounds"].toInt();
 
     QString strpower = json["power"].toString();
     QStringList list = strpower.split("");
@@ -155,12 +164,35 @@ void G_Profil::printDebug()
     qDebug() << "Level : " << this->level;
     qDebug() << "Nb Live : " << this->nbLive;
     qDebug() << "Difficulté : " << this->difficulty;
+    qDebug() << "Volume Musics : " << this->volumeMusics;
+    qDebug() << "Volume Sounds : " << this->volumeSounds;
     qDebug() << "Power : " << power;
+}
+
+void G_Profil::setMusicsVolume(int value)
+{
+    this->volumeMusics = value;
+}
+
+void G_Profil::setSoundsVolume(int value)
+{
+    this->volumeSounds = value;
+}
+
+int G_Profil::getMusicsVolume()
+{
+    return audioSingleton->getMusicsVolume();
+}
+
+int G_Profil::getSoundsVolume()
+{
+    return audioSingleton->getSoundsVolume();
 }
 
 
 void G_Profil::write(QJsonObject &json) const
 {
+
     json["username"] = username;
     json["startDate"] = startDate;
     json["gameTime"] = gameTime;
@@ -168,6 +200,8 @@ void G_Profil::write(QJsonObject &json) const
     json["level"] = level;
     json["nbLive"] = nbLive;
     json["difficulty"] = difficulty;
+    json["volumeMusics"] = volumeMusics;
+    json["volumeSounds"] = volumeSounds;
 
     QString strpower;
     for(int i = 0; i < power.length(); i++)

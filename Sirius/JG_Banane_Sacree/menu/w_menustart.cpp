@@ -223,6 +223,8 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     qDebug() << newGameTime;
 
     currentUser->setGameTime(newGameTime);
+    currentUser->setMusicsVolume(currentUser->getMusicsVolume());
+    currentUser->setSoundsVolume(currentUser->getSoundsVolume());
 
     //    Profil* user = new Profil();
     //    user->read(object[currentUser->getUsername()].toObject());
