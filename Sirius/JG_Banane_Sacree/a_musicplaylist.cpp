@@ -119,6 +119,28 @@ void A_MusicPlaylist::setUsable(bool usable)
     usableMusicPlaylist = usable;
 }
 
+void A_MusicPlaylist::setMusicVolume(int value)
+{
+    if(usableMusicPlaylist && value > 0)
+    {
+       musicPlayer->setVolume(value);
+    }
+    else if(value == 0)
+    {
+        setUsable(false);
+    }
+    else
+    {
+        setUsable(true);
+        musicPlayer->setVolume(value);
+    }
+}
+
+int A_MusicPlaylist::getMusicVolume()
+{
+    return musicPlayer->volume();
+}
+
 void A_MusicPlaylist::pauseMusicPlaylist()
 {
     musicPlayer->pause();

@@ -43,6 +43,28 @@ void A_Sound::setUsable(bool usable)
     usableSound = usable;
 }
 
+void A_Sound::setSoundVolume(int value)
+{
+    if(usableSound && value > 0)
+    {
+       soundPlayer->setVolume(value);
+    }
+    else if(value == 0)
+    {
+        setUsable(false);
+    }
+    else
+    {
+        setUsable(true);
+        soundPlayer->setVolume(value);
+    }
+}
+
+int A_Sound::getSoundVolume()
+{
+    return soundPlayer->volume();
+}
+
 
 void A_Sound::playSound(QString sound)
 {

@@ -20,6 +20,7 @@
 #include "../menu/w_menucode.h"
 #include "../menu/w_menucredits.h"
 #include "../singleton_audio.h"
+#include "../menu/w_menuaudio.h"
 
 class QLabel;
 class QPushButton;
@@ -92,12 +93,19 @@ private:
     W_MenuBonus* menuBonus;
     W_MenuCode* menuCode;
     W_MenuCredits* menuCredits;
+    W_MenuAudio* menuAudio;
 
     Singleton_Audio *audioSingleton;
 
 signals:
 
 public slots:
+
+    /**
+     * @brief SLOT: Called when Audio Settings Widget need to be placed in the menu
+     */
+    void loadAudio();
+
     /**
      * @brief SLOT: Called when Bonus Widget need to be placed in the menu
      */

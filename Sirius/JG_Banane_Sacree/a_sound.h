@@ -24,6 +24,8 @@ public:
     void muteSound();
     void unmuteSound();
     void setUsable(bool usable);
+    void setSoundVolume(int value);
+    int getSoundVolume();
 
 private:
     void run();

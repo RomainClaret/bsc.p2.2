@@ -52,8 +52,15 @@ public:
     void usableMusics(bool status);
     void usableSounds(bool status);
     void usableAll(bool status);
-
     void playSoundPlayerSlidingStop();
+
+    int getMusicsVolume();
+    int getSoundsVolume();
+
+    void setMusicsVolume(int value);
+    void setMusicPlaylistVolume(int value);
+    void setSoundsVolume(int value);
+
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}

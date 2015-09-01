@@ -24,6 +24,8 @@ public:
     void muteMusic();
     void unmuteMusic();
     void setUsable(bool usable);
+    void setMusicVolume(int value);
+    int getMusicVolume();
 
 private:
    void run();

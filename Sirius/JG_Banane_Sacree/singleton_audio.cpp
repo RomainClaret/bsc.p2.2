@@ -168,6 +168,45 @@ void Singleton_Audio::playSoundPlayerSlidingStop()
     soundThread->playSound("player_stop_sliding");
 }
 
+int Singleton_Audio::getMusicsVolume()
+{
+    int value = musicThread->getMusicVolume();
+    musicPlaylistThread->setMusicVolume(value);
+    return value;
+}
+
+int Singleton_Audio::getSoundsVolume()
+{
+    int value = soundThread->getSoundVolume();
+    soundThreadWalking->setSoundVolume(value);
+    soundThreadMovableSliding->setSoundVolume(value);
+    soundThreadMovableMoving->setSoundVolume(value);
+    soundThreadObject->setSoundVolume(value);
+    soundThreadSunk->setSoundVolume(value);
+    return value;
+}
+
+void Singleton_Audio::setMusicsVolume(int value)
+{
+    musicThread->setMusicVolume(value);
+    setMusicPlaylistVolume(value);
+}
+
+void Singleton_Audio::setMusicPlaylistVolume(int value)
+{
+    musicPlaylistThread->setMusicVolume(value);
+}
+
+void Singleton_Audio::setSoundsVolume(int value)
+{
+    soundThreadWalking->setSoundVolume(value);
+    soundThreadMovableSliding->setSoundVolume(value);
+    soundThreadMovableMoving->setSoundVolume(value);
+    soundThreadObject->setSoundVolume(value);
+    soundThreadSunk->setSoundVolume(value);
+    soundThread->setSoundVolume(value);
+}
+
 void Singleton_Audio::muteMusics(bool status)
 {
     if(status)

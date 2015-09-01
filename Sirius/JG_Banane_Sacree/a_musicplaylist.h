@@ -31,6 +31,9 @@ public:
     void unmuteMusicPlaylist();
 
     void setUsable(bool usable);
+
+    void setMusicVolume(int value);
+    int getMusicVolume();
 signals:
 
 public slots:
