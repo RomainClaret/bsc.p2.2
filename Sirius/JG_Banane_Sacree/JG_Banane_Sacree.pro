@@ -84,7 +84,8 @@ SOURCES += \
     a_music.cpp \
     a_musicplaylist.cpp \
     surface/b_wall_alone.cpp \
-    surface/b_wall_group.cpp
+    surface/b_wall_group.cpp \
+    menu/w_menuaudio.cpp
 
 HEADERS  += \
     g_gameboard.h \
@@ -144,7 +145,8 @@ HEADERS  += \
     a_music.h \
     a_musicplaylist.h \
     surface/b_wall_alone.h \
-    surface/b_wall_group.h
+    surface/b_wall_group.h \
+    menu/w_menuaudio.h
 
 RESOURCES += \
     images.qrc \

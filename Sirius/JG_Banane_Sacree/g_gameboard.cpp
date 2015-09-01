@@ -281,6 +281,7 @@ void G_Gameboard::slidePlayableCharacter()
 
     if(endSlide)
     {
+        audioSingleton->playSoundPlayerSlidingStop();
         checkPositionEvents(directionPlayableCharacter);
         checkChangeView(directionPlayableCharacter);
         timerPlayableCharacterSlide->stop();
@@ -920,6 +921,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
+
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {

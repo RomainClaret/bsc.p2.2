@@ -11,22 +11,23 @@
 * Written by Visinand Steve <visinandst@gmail.com>, 27 January 2015
 **********************************************************************************/
 
-#ifndef W_MENUBONUS_H
-#define W_MENUBONUS_H
+#ifndef W_MENUAUDIO_H
+#define W_MENUAUDIO_H
 
 #include <QWidget>
+#include <QHash>
 
 class QLabel;
 class QPushButton;
-class QFormLayout;
+class QGridLayout;
 class QGraphicsDropShadowEffect;
 class W_Menu;
+class QLabel;
+class QSlider;
+class Singleton_Audio;
 
 /**
- * @brief Bonus Menu, which appears when the bonus button is clicked on Pause Menu.
- * @details It allows the user to:
- * Use Bonus Codes,
- * ...
+ * @brief Code Menu, which appears when the "Code" button is clicked on Bonus Menu.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
@@ -34,7 +35,7 @@ class W_Menu;
  * @version 1.1
  * @date 20 August 2015
  */
-class W_MenuBonus : public QWidget
+class W_MenuAudio : public QWidget
 {
     Q_OBJECT
 public:
@@ -42,7 +43,7 @@ public:
      * @brief Constructor
      * @param parent (W_Menu*)
      */
-    W_MenuBonus(QWidget *parent);
+    W_MenuAudio(QWidget *parent);
 
     /**
      * @brief Set the W_Menu title and subtitle
@@ -50,22 +51,32 @@ public:
     void setTitleParent();
 
 private:
-    //Layout
-    QFormLayout *layoutMenuPause;
+    // Layout
+    QGridLayout *layoutMenuPause;
 
-    //Buttons
-    QPushButton *btnBonusCode;
-    QPushButton *btnBonusCredits;
+    // Elements
     QPushButton *btnBonusReturn;
-    QPushButton *btnBonusAudio;
+    QSlider *sldMusics;
+    QSlider *sldSounds;
+    QLabel *lbMusics;
+    QLabel *lbSounds;
+    QLabel *lbMusicsValue;
+    QLabel *lbSoundsValue;
 
-    //Parent
+    // Parent
     W_Menu* parent;
+    Singleton_Audio *audioSingleton;
+
+    int getSoundsVolume();
+    int getMusicsVolume();
+
 
 signals:
 
 public slots:
+    void setValueMusicsVolume(int value);
+    void setValueSoundsVolume(int value);
 
 };
 
-#endif // W_MENUBONUS_H
+#endif // W_MENUAUDIO_H

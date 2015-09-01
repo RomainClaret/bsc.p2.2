@@ -4,13 +4,17 @@
 
 A_Music::A_Music()
 {
+    setUsable(true);
     musicPlayer = new QMediaPlayer;
     setMusic("");
 }
 
 void A_Music::playMusic()
 {
-    start();
+    if (usableMusic)
+    {
+        start();
+    }
 }
 
 void A_Music::run()
@@ -20,12 +24,49 @@ void A_Music::run()
 
 void A_Music::stopMusic()
 {
-//    musicPlayer->stop();
+    musicPlayer->stop();
 }
 
 void A_Music::pauseMusic()
 {
     musicPlayer->pause();
+}
+
+void A_Music::muteMusic()
+{
+    musicPlayer->setMuted(true);
+}
+
+void A_Music::unmuteMusic()
+{
+    musicPlayer->setMuted(false);
+}
+
+void A_Music::setUsable(bool usable)
+{
+    usableMusic = usable;
+}
+
+void A_Music::setMusicVolume(int value)
+{
+    if(usableMusic && value > 0)
+    {
+       musicPlayer->setVolume(value);
+    }
+    else if(value == 0)
+    {
+        setUsable(false);
+    }
+    else
+    {
+        setUsable(true);
+        musicPlayer->setVolume(value);
+    }
+}
+
+int A_Music::getMusicVolume()
+{
+    return musicPlayer->volume();
 }
 
 void A_Music::setMusic(QString music)

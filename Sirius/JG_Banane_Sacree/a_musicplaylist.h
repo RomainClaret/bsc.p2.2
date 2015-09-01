@@ -26,6 +26,14 @@ public:
 
     void playMusicPlaylist(int value);
     void setMusicPlaylist(int value);
+
+    void muteMusicPlaylist();
+    void unmuteMusicPlaylist();
+
+    void setUsable(bool usable);
+
+    void setMusicVolume(int value);
+    int getMusicVolume();
 signals:
 
 public slots:
@@ -34,6 +42,8 @@ private:
     QMediaPlayer* musicPlayer;
     QMediaPlaylist* musicPlaylist;
     QString musicQUrl;
+
+    bool usableMusicPlaylist;
 
     void run();
 };

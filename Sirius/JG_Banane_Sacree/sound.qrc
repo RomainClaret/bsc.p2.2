@@ -13,5 +13,7 @@
         <file>sound/movable_stop_sliding.wav</file>
         <file>sound/player_sliding.wav</file>
         <file>sound/movable_in_water.wav</file>
+        <file>sound/player_sliding_movable.wav</file>
+        <file>sound/player_stop_sliding.wav</file>
     </qresource>
 </RCC>
