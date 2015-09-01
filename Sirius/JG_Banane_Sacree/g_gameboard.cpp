@@ -1150,6 +1150,7 @@ void G_Gameboard::setProxy()
  */
 void G_Gameboard::setLevel(int value)
 {
+    audioSingleton->stopMusicPlaylist();
     delete currentLevel;
     playerProfil->setLevel(value);
 

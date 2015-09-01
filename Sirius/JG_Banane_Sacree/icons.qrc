@@ -3,5 +3,9 @@
         <file>icons/logo.icns</file>
         <file>icons/logo.ico</file>
         <file>icons/logo.png</file>
+        <file>icons/audio_off.png</file>
+        <file>icons/audio_on.png</file>
+        <file>icons/audio_on60x60.png</file>
+        <file>icons/audio_off60x60.png</file>
     </qresource>
 </RCC>

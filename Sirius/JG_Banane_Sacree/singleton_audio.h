@@ -62,8 +62,12 @@ public:
     void playMusicPlaylistMenu();
     void playMusicPlaylistMenu(int value);
     void pauseMusicPlaylistMenu();
+    void stopMusicPlaylist();
+
+    bool getUsableMusicsPlaylistMenu();
+    void setUsableMusicPlaylistMenu(int value);
 private:
-//    Singleton_Audio& operator= (const Singleton_Audio&){}
+
     Singleton_Audio (const Singleton_Audio&){}
     static Singleton_Audio* instance;
     Singleton_Audio();
@@ -75,6 +79,9 @@ private:
     A_Sound *soundThreadMovableMoving;
     A_Sound *soundThreadObject;
     A_Sound *soundThreadSunk;
+    A_Sound *soundThreadSlidingMovable;
+    A_Sound *soundThreadSlidingStop;
+
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistInGameThread;
     A_MusicPlaylist *musicPlaylistMenuThread;

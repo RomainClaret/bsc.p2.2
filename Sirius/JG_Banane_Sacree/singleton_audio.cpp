@@ -19,6 +19,8 @@ Singleton_Audio::Singleton_Audio()
     soundThreadObject = new A_Sound();
     soundThreadSunk = new A_Sound();
     soundThread = new A_Sound();
+    soundThreadSlidingMovable = new A_Sound();
+    soundThreadSlidingStop = new A_Sound();
 
     musicThread = new A_Music();
     musicPlaylistMenuThread = new A_MusicPlaylist();
@@ -166,12 +168,12 @@ void Singleton_Audio::pauseMusicPlaylistMenu()
 
 void Singleton_Audio::playSoundPlayerSlidingMovable()
 {
-    soundThread->playSound("player_sliding_movable");
+    soundThreadSlidingMovable->playSound("player_sliding_movable");
 }
 
 void Singleton_Audio::playSoundPlayerSlidingStop()
 {
-    soundThread->playSound("player_stop_sliding");
+    soundThreadSlidingStop->playSound("player_stop_sliding");
 }
 
 int Singleton_Audio::getMusicsVolume()
@@ -190,6 +192,8 @@ int Singleton_Audio::getSoundsVolume()
     soundThreadMovableMoving->setSoundVolume(value);
     soundThreadObject->setSoundVolume(value);
     soundThreadSunk->setSoundVolume(value);
+    soundThreadSlidingMovable->setSoundVolume(value);
+    soundThreadSlidingStop->setSoundVolume(value);
     return value;
 }
 
@@ -197,6 +201,11 @@ void Singleton_Audio::setMusicsVolume(int value)
 {
     musicThread->setMusicVolume(value);
     setMusicPlaylistVolume(value);
+}
+
+void Singleton_Audio::setUsableMusicPlaylistMenu(int value)
+{
+    musicPlaylistMenuThread->setUsable(value);
 }
 
 void Singleton_Audio::setMusicPlaylistVolume(int value)
@@ -213,6 +222,8 @@ void Singleton_Audio::setSoundsVolume(int value)
     soundThreadObject->setSoundVolume(value);
     soundThreadSunk->setSoundVolume(value);
     soundThread->setSoundVolume(value);
+    soundThreadSlidingMovable->setSoundVolume(value);
+    soundThreadSlidingStop->setSoundVolume(value);
 }
 
 void Singleton_Audio::muteMusics(bool status)
@@ -241,6 +252,8 @@ void Singleton_Audio::muteSounds(bool status)
         soundThreadObject->muteSound();
         soundThreadSunk->muteSound();
         soundThread->muteSound();
+        soundThreadSlidingMovable->muteSound();
+        soundThreadSlidingStop->muteSound();
     }
     else
     {
@@ -250,7 +263,14 @@ void Singleton_Audio::muteSounds(bool status)
         soundThreadObject->unmuteSound();
         soundThreadSunk->unmuteSound();
         soundThread->unmuteSound();
+        soundThreadSlidingMovable->unmuteSound();
+        soundThreadSlidingStop->unmuteSound();
     }
+}
+
+bool Singleton_Audio::getUsableMusicsPlaylistMenu()
+{
+    return musicPlaylistMenuThread->getMusicUsablePlaylist();
 }
 
 void Singleton_Audio::muteAll(bool status)
@@ -274,12 +294,19 @@ void Singleton_Audio::usableSounds(bool status)
     soundThreadObject->setUsable(status);
     soundThreadSunk->setUsable(status);
     soundThread->setUsable(status);
+    soundThreadSlidingMovable->setUsable(status);
+    soundThreadSlidingStop->setUsable(status);
 }
 
 void Singleton_Audio::usableAll(bool status)
 {
     usableMusics(status);
     usableSounds(status);
+}
+
+void Singleton_Audio::stopMusicPlaylist()
+{
+    musicPlaylistInGameThread->stopMusicPlaylist();
 }
 
 void Singleton_Audio::playMusicPlaylistWithIntro()

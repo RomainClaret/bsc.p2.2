@@ -32,6 +32,9 @@ public:
 
     void setMusicVolume(int value);
     int getMusicVolume();
+
+    bool getMusicUsablePlaylist();
+
 signals:
 
 public slots:
