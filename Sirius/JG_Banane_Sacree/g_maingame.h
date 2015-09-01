@@ -22,6 +22,7 @@
 
 class QGraphicsView;
 class QLabel;
+class Singleton_Audio;
 
 
 /**
@@ -77,6 +78,7 @@ public:
 
 private:
 
+    Singleton_Audio *audioSingleton;
     QGLWidget* w;
 
     //Button to quit completly the game.

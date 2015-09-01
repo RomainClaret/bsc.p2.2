@@ -21,7 +21,8 @@ Singleton_Audio::Singleton_Audio()
     soundThread = new A_Sound();
 
     musicThread = new A_Music();
-    musicPlaylistThread = new A_MusicPlaylist();
+    musicPlaylistMenuThread = new A_MusicPlaylist();
+    musicPlaylistInGameThread = new A_MusicPlaylist();
 
     usableAll(true);
     //usableMusics(true);
@@ -138,24 +139,29 @@ void Singleton_Audio::setMusic(QString music)
     musicThread->setMusic(music);
 }
 
-void Singleton_Audio::setMusicPlaylist(QString playlist)
-{
-    musicPlaylistThread->setMusicPlaylist(playlist);
-}
-
 void Singleton_Audio::playMusicPlaylist()
 {
-    musicPlaylistThread->playMusicPlaylist();
-}
-
-void Singleton_Audio::playMusicPlaylist(QString playlist)
-{
-    musicPlaylistThread->playMusicPlaylist(playlist);
+    musicPlaylistInGameThread->playMusicPlaylist();
 }
 
 void Singleton_Audio::playMusicPlaylist(int value)
 {
-    musicPlaylistThread->playMusicPlaylist(value);
+    musicPlaylistInGameThread->playMusicPlaylist(value);
+}
+
+void Singleton_Audio::playMusicPlaylistMenu()
+{
+    musicPlaylistMenuThread->playMusicPlaylist();
+}
+
+void Singleton_Audio::playMusicPlaylistMenu(int value)
+{
+    musicPlaylistMenuThread->playMusicPlaylist(value);
+}
+
+void Singleton_Audio::pauseMusicPlaylistMenu()
+{
+    musicPlaylistMenuThread->pauseMusicPlaylist();
 }
 
 void Singleton_Audio::playSoundPlayerSlidingMovable()
@@ -171,7 +177,8 @@ void Singleton_Audio::playSoundPlayerSlidingStop()
 int Singleton_Audio::getMusicsVolume()
 {
     int value = musicThread->getMusicVolume();
-    musicPlaylistThread->setMusicVolume(value);
+    musicPlaylistInGameThread->setMusicVolume(value);
+    musicPlaylistMenuThread->setMusicVolume(value);
     return value;
 }
 
@@ -194,7 +201,8 @@ void Singleton_Audio::setMusicsVolume(int value)
 
 void Singleton_Audio::setMusicPlaylistVolume(int value)
 {
-    musicPlaylistThread->setMusicVolume(value);
+    musicPlaylistInGameThread->setMusicVolume(value);
+    musicPlaylistMenuThread->setMusicVolume(value);
 }
 
 void Singleton_Audio::setSoundsVolume(int value)
@@ -211,12 +219,14 @@ void Singleton_Audio::muteMusics(bool status)
 {
     if(status)
     {
-        musicPlaylistThread->muteMusicPlaylist();
+        musicPlaylistInGameThread->muteMusicPlaylist();
+        musicPlaylistMenuThread->muteMusicPlaylist();
         musicThread->muteMusic();
     }
     else
     {
-        musicPlaylistThread->unmuteMusicPlaylist();
+        musicPlaylistInGameThread->unmuteMusicPlaylist();
+        musicPlaylistMenuThread->unmuteMusicPlaylist();
         musicThread->unmuteMusic();
     }
 }
@@ -251,7 +261,8 @@ void Singleton_Audio::muteAll(bool status)
 
 void Singleton_Audio::usableMusics(bool status)
 {
-    musicPlaylistThread->setUsable(status);
+    musicPlaylistInGameThread->setUsable(status);
+    musicPlaylistMenuThread->setUsable(status);
     musicThread->setUsable(status);
 }
 
@@ -273,22 +284,22 @@ void Singleton_Audio::usableAll(bool status)
 
 void Singleton_Audio::playMusicPlaylistWithIntro()
 {
-    musicPlaylistThread->playMusicPlaylist();
+    musicPlaylistInGameThread->playMusicPlaylist();
 }
 
 void Singleton_Audio::pauseMusicPlaylist()
 {
-    musicPlaylistThread->pauseMusicPlaylist();
+    musicPlaylistInGameThread->pauseMusicPlaylist();
 }
 
 void Singleton_Audio::resumeMusicPlaylist()
 {
-    musicPlaylistThread->playMusicPlaylist();
+    musicPlaylistInGameThread->playMusicPlaylist();
 }
 
 void Singleton_Audio::musicPlaylistRemoveIntro()
 {
-    musicPlaylistThread->musicPlaylistRemoveIntro();
+    musicPlaylistInGameThread->musicPlaylistRemoveIntro();
 }
 
 bool Singleton_Audio::getPlaybleSound()

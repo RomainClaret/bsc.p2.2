@@ -51,9 +51,7 @@ public:
      */
     virtual void moveByPixel(int x, int y)=0;
 
-    bool isMoving();
-
-protected:
+virtual void setPosition(int xpos, int ypos);bool isMoving();protected:
     QString leftSkin;
     QString rightSkin;
     QString upSkin;

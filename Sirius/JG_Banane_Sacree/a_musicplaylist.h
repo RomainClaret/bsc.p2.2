@@ -18,11 +18,9 @@ public:
     A_MusicPlaylist();
 
     void stopMusicPlaylist();
-    void setMusicPlaylist(QString Playlist);
     void pauseMusicPlaylist();
     void musicPlaylistRemoveIntro();
     void playMusicPlaylist();
-    void playMusicPlaylist(QString playlist);
 
     void playMusicPlaylist(int value);
     void setMusicPlaylist(int value);

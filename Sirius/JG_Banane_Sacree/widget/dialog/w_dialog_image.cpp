@@ -31,8 +31,6 @@ W_DialogImage::W_DialogImage(QString imageName, QWidget *)
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     setAttribute(Qt::WA_NoSystemBackground);
     setAttribute(Qt::WA_TranslucentBackground);
-    setAttribute(Qt::WA_PaintOnScreen);
-
     setAttribute(Qt::WA_TransparentForMouseEvents);
 
 }

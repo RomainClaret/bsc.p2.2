@@ -35,7 +35,7 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
     scrollArea->setEnabled(false);
 
     audioSingleton = Singleton_Audio::getInstance();
-    audioSingleton->setMusic("Penguin_Party");
+    audioSingleton->setMusic("credits");
 
     layoutMenuPause = new QFormLayout;
     layoutMenuPause->addRow(scrollArea);

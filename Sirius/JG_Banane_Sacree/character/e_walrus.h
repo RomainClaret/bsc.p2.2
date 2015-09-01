@@ -35,7 +35,9 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    E_Walrus(QList<QPoint> path, G_Gameboard *g);
+    E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g);
+
+    ~E_Walrus();
 
     void action();
     void changeState(State_Enemy* newState);

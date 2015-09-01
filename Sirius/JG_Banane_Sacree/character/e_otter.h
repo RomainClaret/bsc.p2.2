@@ -33,7 +33,7 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    E_Otter(QList<QPoint> path, G_Gameboard *g);
+    E_Otter(QString position, QList<QPoint> path, G_Gameboard *g);
 
 private:
     void playableCharacterDetection();

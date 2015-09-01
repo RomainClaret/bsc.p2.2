@@ -38,7 +38,6 @@ W_Dialog::W_Dialog(QWidget *)
     layout->addWidget(textWidget);
     layout->addWidget(image);
     layout->setSpacing(0);
-
     this->setLayout(layout);
 
     title = new QLabel(tr("Ordre de mission de James Gouin"));
@@ -61,15 +60,12 @@ W_Dialog::W_Dialog(QWidget *)
                 );
 
     escapeText->setAlignment(Qt::AlignCenter);
-
     title->setAlignment(Qt::AlignCenter);
 
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 
     setAttribute(Qt::WA_NoSystemBackground);
     setAttribute(Qt::WA_TranslucentBackground);
-    setAttribute(Qt::WA_PaintOnScreen);
-
     setAttribute(Qt::WA_TransparentForMouseEvents);
 }
 

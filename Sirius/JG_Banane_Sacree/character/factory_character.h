@@ -43,14 +43,14 @@ public:
      * @param scene
      * @return an enemy
      */
-    static C_Enemy* createEnemy(QString type, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene);
+    static C_Enemy* createEnemy(QString type, QString position, QPoint* startPoint, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene);
 
     /**
      * @brief createPlayer generate a Player and add it to the scene
      * @param scene
      * @return a player
      */
-    static C_Player* createPlayer(QGraphicsScene* scene, G_Gameboard* game);
+    static C_Player* createPlayer(int x, int y, QGraphicsScene* scene, G_Gameboard* game);
 
 };
 

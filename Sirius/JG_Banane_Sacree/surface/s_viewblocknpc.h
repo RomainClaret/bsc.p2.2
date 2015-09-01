@@ -82,12 +82,6 @@ public:
      */
     void setStyleNone();
 
-private:
-    int line;      //.. -2, -1, 0, 1, 2 ..
-    int column;    // 0,1,2..
-    bool actif;
-    bool hasStyling;
-
     /**
      * @brief Set the desactivated skin of self.
      */
@@ -97,6 +91,12 @@ private:
      * @brief Set the activated skin of self.
      */
     void setStyleActivated();
+
+private:
+    int line;      //.. -2, -1, 0, 1, 2 ..
+    int column;    // 0,1,2..
+    bool actif;
+    bool hasStyling;
 
 };
 

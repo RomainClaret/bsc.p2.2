@@ -123,9 +123,7 @@ public:
      * @brief Move self to given direction
      * @param direction direction to move to
      */
-    void moveBlock(char direction);
-
-    /**
+    void moveBlock(char direction);/**
      * @brief isMovableSet determinate if the penguin is in contact with a movable
      * @return true if the attribut "movable" is not NULL
      */
@@ -139,7 +137,11 @@ public:
 
     void setIsMoving(bool isSliding);
 
-private:
+ void showProxy();void linkProxy();
+    /**
+     * @brief Stop the time recording
+     */
+    void disconnectTimer();private:
 
     /*
      * PRIVATE METHODS
@@ -172,11 +174,6 @@ private:
      * @brief Set the time already spent in-game
      */
     void setTimer();
-
-    /**
-     * @brief Stop the time recording
-     */
-    void disconnectTimer();
 
     //Methods related to positioning and level management
     /**
@@ -253,7 +250,6 @@ private:
      */
     bool movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, char directionDepl);
 
-    //Methods related to the playable character sliding
 
     /**
      * @brief Validate the place of a movable block.

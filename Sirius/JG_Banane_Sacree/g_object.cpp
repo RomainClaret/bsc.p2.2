@@ -17,6 +17,7 @@
 #include <QGraphicsItem>
 #include <QPaintEvent>
 #include <menu/w_menucode.h>
+#include "memento.h"
 
 #include <QDebug>
 
@@ -28,15 +29,17 @@ G_Object::G_Object(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, 
 G_Object::G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     this->nom = new QString(name);
-    setZValue(11);
+    setZValue(5);
     setDesign();
+    Memento::getInstance()->setPosSurface(this,new QPoint(xpos, ypos));
 }
 
 G_Object::G_Object(QString name, QGraphicsItem *parent): G_Surface(0, 0, parent)
 {
     this->nom = new QString(name);
-    setZValue(11);
+    setZValue(5);
     setDesign();
+    Memento::getInstance()->setPosSurface(this,new QPoint(0, 0));
 }
 
 void G_Object::setDesign()

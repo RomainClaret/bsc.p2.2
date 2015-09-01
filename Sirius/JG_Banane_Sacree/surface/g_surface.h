@@ -78,6 +78,10 @@ public:
      */
     void setColor(QString brushColor);
 
+    virtual void setPosition(int xpos, int ypos);
+
+    virtual void addToScene(QGraphicsScene* scene);
+
 protected:
     /**
      * @brief call by the scene to redraw
