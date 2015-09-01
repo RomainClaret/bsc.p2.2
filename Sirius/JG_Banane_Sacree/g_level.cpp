@@ -185,7 +185,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
                 || elem.attribute("type") == Factory_Surface::BLOC_WALL_ALONE
                 || elem.attribute("type") == Factory_Surface::BLOC_WALL_GROUP)
         {
-            mapSurfaces[x][y] = G_Level::S_SNOW;
+            mapSurfacesSnow[x][y] = G_Level::S_SNOW;
         }
 
         if(elem.attribute("type") == Factory_Surface::BLOC_WALL_GROUP)

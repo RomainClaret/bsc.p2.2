@@ -16,7 +16,6 @@ void A_MusicPlaylist::playMusicPlaylist()
     {
         start();
     }
-
 }
 
 void A_MusicPlaylist::playMusicPlaylist(int value)
@@ -26,7 +25,6 @@ void A_MusicPlaylist::playMusicPlaylist(int value)
         setMusicPlaylist(value);
         start();
     }
-
 }
 
 void A_MusicPlaylist::run()

@@ -997,17 +997,16 @@ void G_Gameboard::restartEnigma()
 {
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
-          disconnectTimer();
-          Memento::getInstance()->restartLevel(mainScene);
-          loadCheckpoint();
-          playableCharacter->removeTempFromSacoche();
-
+    {
+        disconnectTimer();
+        Memento::getInstance()->restartLevel(mainScene);
+        loadCheckpoint();
+        playableCharacter->removeTempFromSacoche();
 
         lifeList->updateHearts(playerProfil->getNbLive());
 
-
-          showProxy();
-          setTimer();
+        showProxy();
+        setTimer();
     }
     else
     {
@@ -1028,8 +1027,8 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
-
-	    disconnectTimer();        Memento::getInstance()->restartLevel(mainScene);
+        disconnectTimer();
+        Memento::getInstance()->restartLevel(mainScene);
         loadCheckpoint();
 
         playableCharacter->removeTempFromSacoche();
@@ -1037,8 +1036,8 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
 
-
         showDialog(text,"",sound);
+        setTimer();
     }
     else
     {
@@ -1054,7 +1053,6 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
 
 void G_Gameboard::restartLevel()
 {
-
     disconnectTimer();
 
     playableCharacter->emptySacoche();
@@ -1067,8 +1065,8 @@ void G_Gameboard::restartLevel()
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
 
-
-Memento::getInstance()->saveCheckpoint();
+    Memento::getInstance()->saveCheckpoint();
+    setTimer();
 }
 
 void G_Gameboard::loadBonus()
@@ -1194,7 +1192,7 @@ void G_Gameboard::showProxy()
 
     setWidgetPositionBottomRight(objectList);
 
-    checkPositionEvents();
+    checkPositionEvents(directionPlayableCharacter);
 }
 
 void G_Gameboard::linkProxy()
@@ -1210,11 +1208,9 @@ void G_Gameboard::linkProxy()
  */
 void G_Gameboard::setLevel(int value)
 {
-
     currentLevel->loadLevel(value);
     observerEnemy->clear();
     mainScene = currentLevel->populateScene();
-
 
     playableCharacter = new P_Penguin(this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
@@ -1228,21 +1224,16 @@ void G_Gameboard::setLevel(int value)
     W_MenuStart::saveGame(playerProfil);
 
     saveCheckpoint();
+    Memento::getInstance()->saveCheckpoint();
 
     audioSingleton->playSoundEventStartGame();
-
     audioSingleton->playMusicPlaylist(value);
-        setViewPosition();
 
+    setViewPosition();
     playerView->setScene(mainScene);
     playerView->setSceneRect(viewPositionX,viewPositionY,sizeX*gameSquares,sizeY*gameSquares);
 
-    setTimer();
-
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
-
-
-    Memento::getInstance()->saveCheckpoint();
 }
 
 void G_Gameboard::setTimer()
