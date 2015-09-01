@@ -158,6 +158,16 @@ void Singleton_Audio::playMusicPlaylist(int value)
     musicPlaylistThread->playMusicPlaylist(value);
 }
 
+void Singleton_Audio::playSoundPlayerSlidingMovable()
+{
+    soundThread->playSound("player_sliding_movable");
+}
+
+void Singleton_Audio::playSoundPlayerSlidingStop()
+{
+    soundThread->playSound("player_stop_sliding");
+}
+
 void Singleton_Audio::muteMusics(bool status)
 {
     if(status)

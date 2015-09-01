@@ -75,6 +75,7 @@ int G_Gameboard::sizeY = 15;
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
     audioSingleton = Singleton_Audio::getInstance();
+    soundStepCounter = 0;
 
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
@@ -281,6 +282,7 @@ void G_Gameboard::slidePlayableCharacter()
 
     if(endSlide)
     {
+        audioSingleton->playSoundPlayerSlidingStop();
         checkPositionEvents(directionPlayableCharacter);
         checkChangeView(directionPlayableCharacter);
         timerPlayableCharacterSlide->stop();
@@ -868,6 +870,11 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(B_MovableSimple).name())
         {
+//            if (soundStepCounter == 0)
+//            {
+//                audioSingleton->playSoundPlayerSlidingMovable();
+//                soundStepCounter++;
+//            }
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
@@ -907,6 +914,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
+
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {

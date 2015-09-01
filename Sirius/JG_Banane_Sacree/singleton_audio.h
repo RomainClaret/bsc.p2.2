@@ -43,6 +43,7 @@ public:
     void playSoundEventLostLevel();
     void playSoundEventStartGame();
     void playMusicPlaylist(int value);
+    void playSoundPlayerSlidingMovable();
 
     void muteMusics(bool status);
     void muteSounds(bool status);
@@ -52,6 +53,7 @@ public:
     void usableSounds(bool status);
     void usableAll(bool status);
 
+    void playSoundPlayerSlidingStop();
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}

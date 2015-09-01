@@ -283,6 +283,7 @@ private:
 
     //Sound Singelton
     Singleton_Audio *audioSingleton;
+    int soundStepCounter;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;
