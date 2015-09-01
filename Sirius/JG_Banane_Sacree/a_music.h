@@ -21,12 +21,17 @@ public:
     void stopMusic();
     void setMusic(QString music);
     void pauseMusic();
+    void muteMusic();
+    void unmuteMusic();
+    void setUsable(bool usable);
 
 private:
    void run();
 
    QMediaPlayer* musicPlayer;
    QString musicQUrl;
+
+   bool usableMusic;
 
 signals:
 

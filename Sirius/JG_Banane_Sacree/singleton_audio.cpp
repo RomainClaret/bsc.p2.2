@@ -22,6 +22,8 @@ Singleton_Audio::Singleton_Audio()
 
     musicThread = new A_Music();
     musicPlaylistThread = new A_MusicPlaylist();
+
+    usableAll(false);
 }
 
 Singleton_Audio::~Singleton_Audio()
@@ -152,6 +154,70 @@ void Singleton_Audio::playMusicPlaylist(QString playlist)
 void Singleton_Audio::playMusicPlaylist(int value)
 {
     musicPlaylistThread->playMusicPlaylist(value);
+}
+
+void Singleton_Audio::muteMusics(bool status)
+{
+    if(status)
+    {
+        musicPlaylistThread->muteMusicPlaylist();
+        musicThread->muteMusic();
+    }
+    else
+    {
+        musicPlaylistThread->unmuteMusicPlaylist();
+        musicThread->unmuteMusic();
+    }
+}
+
+void Singleton_Audio::muteSounds(bool status)
+{
+    if(status)
+    {
+        soundThreadWalking->muteSound();
+        soundThreadMovableSliding->muteSound();
+        soundThreadMovableMoving->muteSound();
+        soundThreadObject->muteSound();
+        soundThreadSunk->muteSound();
+        soundThread->muteSound();
+    }
+    else
+    {
+        soundThreadWalking->unmuteSound();
+        soundThreadMovableSliding->unmuteSound();
+        soundThreadMovableMoving->unmuteSound();
+        soundThreadObject->unmuteSound();
+        soundThreadSunk->unmuteSound();
+        soundThread->unmuteSound();
+    }
+}
+
+void Singleton_Audio::muteAll(bool status)
+{
+    muteMusics(status);
+    muteSounds(status);
+}
+
+void Singleton_Audio::usableMusics(bool status)
+{
+    musicPlaylistThread->setUsable(status);
+    musicThread->setUsable(status);
+}
+
+void Singleton_Audio::usableSounds(bool status)
+{
+    soundThreadWalking->setUsable(status);
+    soundThreadMovableSliding->setUsable(status);
+    soundThreadMovableMoving->setUsable(status);
+    soundThreadObject->setUsable(status);
+    soundThreadSunk->setUsable(status);
+    soundThread->setUsable(status);
+}
+
+void Singleton_Audio::usableAll(bool status)
+{
+    usableMusics(status);
+    usableSounds(status);
 }
 
 void Singleton_Audio::playMusicPlaylistWithIntro()

@@ -42,8 +42,16 @@ public:
     void playSoundEventRestartCheckpoint();
     void playSoundEventLostLevel();
     void playSoundEventStartGame();
-
     void playMusicPlaylist(int value);
+
+    void muteMusics(bool status);
+    void muteSounds(bool status);
+    void muteAll(bool status);
+
+    void usableMusics(bool status);
+    void usableSounds(bool status);
+    void usableAll(bool status);
+
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}
@@ -62,6 +70,10 @@ private:
     bool playableSound;
     bool playableMusic;
     bool playableMusicPlaylist;
+
+    bool muteMusicsToggle;
+    bool muteSoundsToggle;
+    bool muteAllToggle;
 
     void musicPlaylistRemoveIntro();
 
