@@ -103,6 +103,15 @@ void B_Movable::moveBy(int x, int y)
     topCollideBox->moveBy(x*gameSquare,y*gameSquare);
 }
 
+void B_Movable::moveByPixel(int x, int y)
+{
+    QGraphicsRectItem::moveBy(x,y);
+    leftCollideBox->moveBy(x,y);
+    rightCollideBox->moveBy(x,y);
+    bottomCollideBox->moveBy(x,y);
+    topCollideBox->moveBy(x,y);
+}
+
 /**
  * @details Add self and the cross for colliding detectection.
  */

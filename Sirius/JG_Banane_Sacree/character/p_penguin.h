@@ -21,6 +21,8 @@ class QPoint;
 class QGraphicsScene;
 class Singleton_Audio;
 
+class B_MovableSimple;
+
 #include <QList>
 #include <QTimer>
 #include <QPixmap>
@@ -124,6 +126,8 @@ private:
     int iTimer;
     int iAdvanceSpeed;
     int iWaitAnim;
+
+    B_MovableSimple* blocMove;
 
 };
 

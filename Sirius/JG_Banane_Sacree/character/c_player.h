@@ -46,7 +46,6 @@ public:
 protected:
     int xPos;
     int yPos;
-    G_Gameboard *game;
 
 private:
     //Les skins sont les images attribué au personnage

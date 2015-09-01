@@ -7,7 +7,7 @@
 
 #include "../g_gameboard.h"
 
-G_Character::G_Character()
+G_Character::G_Character(G_Gameboard* game)
 {
     currentMove='c';
 
@@ -17,17 +17,25 @@ G_Character::G_Character()
     setZValue(10);
 
     audioSingleton = Singleton_Audio::getInstance();
+
+    this->game = game;
 }
 
 void G_Character::moveWithTimer(char orientation)
 {
     if(currentMove == 'n')
     {
-//        audioSingleton->playSoundPlayerWalking();
+        //        audioSingleton->playSoundPlayerWalking();
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
+        game->setIsSliding(true);
         timerMover->start(5);
     }
+}
+
+bool G_Character::isMoving()
+{
+    return !(currentMove == 'n');
 }
 
 void G_Character::stepMove()

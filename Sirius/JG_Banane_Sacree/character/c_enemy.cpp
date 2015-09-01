@@ -52,9 +52,8 @@
  * @details Set the speed at 100, Z value at 2, detectPinguin to false, sens to true and the path given.
  * For the speed: 1 is really fast, 100 is really slow.
  */
-C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
+C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g) : G_Character(g)
 {
-    game = g;
 
     brain = new C_AI();
 

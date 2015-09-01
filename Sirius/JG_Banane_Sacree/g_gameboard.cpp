@@ -621,26 +621,31 @@ void G_Gameboard::setWidgetPositionTopLeft(QWidget* widget)
     widget->setGeometry(viewPositionX,viewPositionY,width,height);
 }
 
+B_MovableSimple* G_Gameboard::getMovable()
+{
+    return movable;
+}
+
 /**
  * @details Directions: "l":left, "r":right, "t":top, "b":bottom.
  */
 void G_Gameboard::moveBlock(char sens)
 {
-    switch(sens)
-    {
-        case 't':
-            movable->moveBy(0,-1);
-        break;
-        case 'b':
-            movable->moveBy(0,1);
-        break;
-        case 'l':
-            movable->moveBy(-1,0);
-        break;
-        case 'r':
-            movable->moveBy(1,0);
-        break;
-    }
+//    switch(sens)
+//    {
+//        case 't':
+//            movable->moveBy(0,-1);
+//        break;
+//        case 'b':
+//            movable->moveBy(0,1);
+//        break;
+//        case 'l':
+//            movable->moveBy(-1,0);
+//        break;
+//        case 'r':
+//            movable->moveBy(1,0);
+//        break;
+//    }
 
     fixMovable(movable);
 
@@ -690,6 +695,10 @@ bool G_Gameboard::checkPosition(QGraphicsItem *object)
     }
 
     return true;
+}
+void G_Gameboard::setIsSliding(bool isSliding)
+{
+    this->isSliding = isSliding;
 }
 
 //http://doc.qt.digia.com/4.6/qt.html#Key-enum
@@ -813,6 +822,11 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
     {
         pauseMenu();
     }
+}
+
+bool G_Gameboard::isMovableSet()
+{
+    return (movable != NULL);
 }
 
 void G_Gameboard::endMoveCheck(char sens)
