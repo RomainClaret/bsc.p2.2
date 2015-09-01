@@ -125,6 +125,7 @@ void P_Penguin::advance(int step)
 
 void P_Penguin::stepMoveCharacter()
 {
+    qDebug() << "step " << iTimer;
     iTimer = 0;
 
     switch (currentMove) {
@@ -273,7 +274,7 @@ void P_Penguin::endMove()
     currentMove = 'n';
     timerMover->stop();
     iStepCompteur = -1;
-    game->setIsSliding(false);
+    game->setIsMoving(false);
 }
 
 void P_Penguin::moveBy(int x, int y)

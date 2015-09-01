@@ -28,7 +28,7 @@ void G_Character::moveWithTimer(char orientation)
         //        audioSingleton->playSoundPlayerWalking();
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
-        game->setIsSliding(true);
+        game->setIsMoving(true);
         timerMover->start(5);
     }
 }

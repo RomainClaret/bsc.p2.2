@@ -102,6 +102,7 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     setProxy();
 
     isSliding = false;
+    isMoving = false;
     movable = NULL;
     endable = false;
 
@@ -697,15 +698,15 @@ bool G_Gameboard::checkPosition(QGraphicsItem *object)
 
     return true;
 }
-void G_Gameboard::setIsSliding(bool isSliding)
+void G_Gameboard::setIsMoving(bool isMoving)
 {
-    this->isSliding = isSliding;
+    this->isMoving = isMoving;
 }
 
 //http://doc.qt.digia.com/4.6/qt.html#Key-enum
 void G_Gameboard::keyPressEvent(QKeyEvent *event)
 {
-    if(!toggleMenuPause && !isSliding)
+    if(!toggleMenuPause && !isSliding && !isMoving)
     {
         if(!dialogToogle)
         {

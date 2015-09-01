@@ -137,7 +137,7 @@ public:
      */
     B_MovableSimple* getMovable();
 
-    void setIsSliding(bool isSliding);
+    void setIsMoving(bool isSliding);
 
 private:
 
@@ -337,6 +337,7 @@ private:
     //Sliding & Displacement
     char directionPlayableCharacter;
     bool isSliding;
+    bool isMoving;
     B_MovableSimple *movable;
     QList<SlidingBlock> listSlindingBlocks;
     QTimer *timer;
