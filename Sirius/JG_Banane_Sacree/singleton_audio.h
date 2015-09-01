@@ -24,13 +24,11 @@ public:
     void pauseMusic();
     void stopMusic();
     bool getPlaybleSound();
-    void setMusicPlaylist(QString playlist);
     void playMusicPlaylist();
     void playMusicPlaylistWithIntro();
     void pauseMusicPlaylist();
     void resumeMusicPlaylist();
     void stopSound();
-    void playMusicPlaylist(QString playlist);
     void setPlayableMusicPlaylist(bool playable);
     bool getPlaybleMusicPlaylist();
     void playSoundPlayerWalking();
@@ -61,6 +59,9 @@ public:
     void setMusicPlaylistVolume(int value);
     void setSoundsVolume(int value);
 
+    void playMusicPlaylistMenu();
+    void playMusicPlaylistMenu(int value);
+    void pauseMusicPlaylistMenu();
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}
@@ -75,7 +76,8 @@ private:
     A_Sound *soundThreadObject;
     A_Sound *soundThreadSunk;
     A_Music *musicThread;
-    A_MusicPlaylist *musicPlaylistThread;
+    A_MusicPlaylist *musicPlaylistInGameThread;
+    A_MusicPlaylist *musicPlaylistMenuThread;
     bool playableSound;
     bool playableMusic;
     bool playableMusicPlaylist;

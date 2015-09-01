@@ -926,6 +926,7 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
+        audioSingleton->playMusicPlaylistMenu();
         audioSingleton->pauseMusicPlaylist();
         observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
 
@@ -935,6 +936,7 @@ void G_Gameboard::pauseMenu()
         proxy->show();
         toggleMenuPause = true;
     }else{
+        audioSingleton->pauseMusicPlaylistMenu();
         audioSingleton->playMusicPlaylist();
         proxy->hide();
         toggleMenuPause = false;
@@ -1070,6 +1072,7 @@ void G_Gameboard::exitGame()
         qDebug() << "Accept";
         W_MenuStart::saveGame(playerProfil);
         close();
+        audioSingleton->playMusicPlaylistMenu();
         break;
     case QMessageBox::RejectRole:
         qDebug() << "Reject";
@@ -1077,6 +1080,7 @@ void G_Gameboard::exitGame()
     case QMessageBox::DestructiveRole:
         qDebug() << "Destruct";
         close();
+        audioSingleton->playMusicPlaylistMenu();
         break;
     default:
         // should never be reached

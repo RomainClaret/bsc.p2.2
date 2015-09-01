@@ -22,6 +22,7 @@
 
 class QGraphicsView;
 class QLabel;
+class Singleton_Audio;
 
 
 /**
@@ -78,6 +79,7 @@ protected:
     void paintEvent(QPaintEvent *event);
 private:
 
+    Singleton_Audio *audioSingleton;
     QGLWidget* w;
 
     //Button to quit completly the game.

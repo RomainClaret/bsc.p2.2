@@ -14,6 +14,7 @@
 #include "g_maingame.h"
 #include "g_profil.h"
 #include "observer_enemy.h"
+#include "singleton_audio.h"
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -29,6 +30,10 @@
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 {
 //    connect(this,SIGNAL(closeEvent()),this,SLOT(G_Gameboard::exitGame()));
+
+    audioSingleton = Singleton_Audio::getInstance();
+
+    audioSingleton->playMusicPlaylistMenu(-2);
 
     toggleGameCreated = false;
     toggleFirstStart = true;
@@ -121,6 +126,7 @@ void G_MainGame::paintEvent(QPaintEvent *event)
 }
 void G_MainGame::startGame(G_Profil* user)
 {
+    audioSingleton->pauseMusicPlaylistMenu();
     theGame = new G_Gameboard();
     connect(theGame,SIGNAL(refreshMenu()),this,SLOT(refreshGameMenu()));
     refreshGameMenu();

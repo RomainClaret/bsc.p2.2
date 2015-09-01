@@ -8,7 +8,6 @@ A_MusicPlaylist::A_MusicPlaylist()
     setUsable(true);
     musicPlayer = new QMediaPlayer;
     musicPlaylist = new QMediaPlaylist;
-    setMusicPlaylist("");
 }
 
 void A_MusicPlaylist::playMusicPlaylist()
@@ -18,12 +17,6 @@ void A_MusicPlaylist::playMusicPlaylist()
         start();
     }
 
-}
-
-void A_MusicPlaylist::playMusicPlaylist(QString playlist)
-{
-    setMusicPlaylist(playlist);
-    start();
 }
 
 void A_MusicPlaylist::playMusicPlaylist(int value)
@@ -46,37 +39,9 @@ void A_MusicPlaylist::stopMusicPlaylist()
 
 }
 
-void A_MusicPlaylist::setMusicPlaylist(QString playlist)
-{
-    if (MY_OS == "UNIX")
-    {
-        this->musicQUrl = "qrc:/music/";
-    }
-    else
-    {
-        this->musicQUrl = "music/";
-    }
-
-    if(playlist.isEmpty())
-    {
-        playlist = "tutorial";
-    }
-
-    if (playlist == "tutorial")
-    {
-        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.wav"));
-        for (int i = 0; i<2; i++)
-        {
-            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.wav"));
-        }
-        musicPlaylist->setCurrentIndex(1);
-    }
-    musicPlayer->setPlaylist(musicPlaylist);
-}
-
 void A_MusicPlaylist::setMusicPlaylist(int value)
 {
+    qDebug() << "value: " << value;
     if (MY_OS == "UNIX")
     {
         this->musicQUrl = "qrc:/music/";
@@ -86,21 +51,33 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
         this->musicQUrl = "music/";
     }
 
-    if(value != -1)
+    if (value == -2)
     {
-        value = -1;
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "menu.wav"));
+        musicPlaylist->setCurrentIndex(1);
     }
 
     if (value == -1)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
-        musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee_with_intro.wav"));
-        for (int i = 0; i<5; i++)
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "menu.wav"));
+        musicPlaylist->setCurrentIndex(1);
+    }
+
+    if (value == 0)
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_tutorial_with_intro.wav"));
+        for (int i = 0; i<2; i++)
         {
-            musicPlaylist->addMedia(QUrl(this->musicQUrl + "Joyful_Jubilee.wav"));
+            musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_tutorial.wav"));
         }
         musicPlaylist->setCurrentIndex(1);
     }
+
+
+
     musicPlayer->setPlaylist(musicPlaylist);
 }
 
