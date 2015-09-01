@@ -75,8 +75,7 @@ public:
 
     //Destructor
     ~G_MainGame();
-protected:
-    void paintEvent(QPaintEvent *event);
+
 private:
 
     Singleton_Audio *audioSingleton;

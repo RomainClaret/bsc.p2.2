@@ -31,6 +31,8 @@
 
 P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
 {
+    currentMove = 'n';
+    pas = 2;
     audioSingleton = Singleton_Audio::getInstance();
 
     int BlocsSizeX = G_Gameboard::getGameSquares()-2;
@@ -66,7 +68,7 @@ P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
     stepsRight.append(":/characters/characters/player_right.png");
 
     iTimer = 0;
-    iWaitAnim = 40;
+    iWaitAnim = 30;
     animSteps.append(":/characters/characters/player_front.png");
     animSteps.append(":/characters/characters/player_anim01.png");
     animSteps.append(":/characters/characters/player_anim02.png");
@@ -82,6 +84,8 @@ P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
     animSteps.append(":/characters/characters/player_front.png");
 
     iAdvanceSpeed = 0;
+
+    blocMove = NULL;
 
 }
 void P_Penguin::setPos(int x, int y)
@@ -99,13 +103,13 @@ void P_Penguin::setPos(int x, int y)
 
 void P_Penguin::advance(int step)
 {
-    if(step == 1)
+    if(step == 0)
     {
         iAdvanceSpeed++;
         if(iAdvanceSpeed % 2 == 0)
         {
             iTimer++;
-            if(iTimer >= iWaitAnim && iTimer < iWaitAnim+animSteps.size())
+            if(iTimer >= iWaitAnim && iTimer < iWaitAnim + animSteps.size())
             {
                 downSkin = animSteps.at(iTimer-iWaitAnim);
                 setPlayerOrientation('b');
@@ -122,7 +126,7 @@ void P_Penguin::advance(int step)
 void P_Penguin::stepMoveCharacter()
 {
     iTimer = 0;
-    int pas = 2;
+
     switch (currentMove) {
     case 'l':
         if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
@@ -134,7 +138,21 @@ void P_Penguin::stepMoveCharacter()
             leftSkin = stepsLeft.at(iStep);
             }
 
-            this->moveByPixel(-pas,0);
+            if(game->isMovableSet() && blocMove == NULL)
+            {
+                blocMove = game->getMovable();
+            }
+            int pasEffectif = pas;
+            if(blocMove != NULL)
+            {
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(-pasEffectif,0);
+            }
+
+            this->moveByPixel(-pasEffectif,0);
         }
         else
         {
@@ -147,11 +165,25 @@ void P_Penguin::stepMoveCharacter()
             iStepCompteur ++;
             if(iStepCompteur % 7 == 0)
             {
-            iStep = (iStep + 1) % stepsRight.length();
-            rightSkin = stepsRight.at(iStep);
+                iStep = (iStep + 1) % stepsRight.length();
+                rightSkin = stepsRight.at(iStep);
             }
 
-            this->moveByPixel(pas,0);
+            if(game->isMovableSet() && blocMove == NULL)
+            {
+                blocMove = game->getMovable();
+            }
+            int pasEffectif = pas;
+            if(blocMove != NULL)
+            {
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(pasEffectif,0);
+            }
+
+            this->moveByPixel(pasEffectif,0);
         }
         else
         {
@@ -169,7 +201,21 @@ void P_Penguin::stepMoveCharacter()
             upSkin = stepsTop.at(iStep);
             }
 
-            this->moveByPixel(0,-pas);
+            if(game->isMovableSet() && blocMove == NULL)
+            {
+                blocMove = game->getMovable();
+            }
+            int pasEffectif = pas;
+            if(blocMove != NULL)
+            {
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(0,-pasEffectif);
+            }
+
+            this->moveByPixel(0,-pasEffectif);
         }
         else
         {
@@ -186,7 +232,21 @@ void P_Penguin::stepMoveCharacter()
             downSkin = stepsBottom.at(iStep);
             }
 
-            this->moveByPixel(0,pas);
+            if(game->isMovableSet() && blocMove == NULL)
+            {
+                blocMove = game->getMovable();
+            }
+            int pasEffectif = pas;
+            if(blocMove != NULL)
+            {
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(0,pasEffectif);
+            }
+
+            this->moveByPixel(0,pasEffectif);
         }
         else
         {
@@ -202,10 +262,18 @@ void P_Penguin::stepMoveCharacter()
 
 void P_Penguin::endMove()
 {
+    blocMove = NULL;
     game->endMoveCheck(currentMove);
+
+//    if(game->isMovableSet())
+//    {
+//       game->moveBlock(currentMove);
+//    }
+
     currentMove = 'n';
     timerMover->stop();
     iStepCompteur = -1;
+    game->setIsSliding(false);
 }
 
 void P_Penguin::moveBy(int x, int y)

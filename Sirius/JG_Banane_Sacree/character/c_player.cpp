@@ -19,7 +19,7 @@
 #include <QRectF>
 
 
-C_Player::C_Player(G_Gameboard* game)
+C_Player::C_Player(G_Gameboard* game) : G_Character(game)
 {
     leftSkin = ":/characters/characters/player_left.png";
     rightSkin = ":/characters/characters/player_right.png";
@@ -28,8 +28,6 @@ C_Player::C_Player(G_Gameboard* game)
     orientation = 'b'; //Orientation de depart du joueur
 
     setZValue(10);
-
-    this->game = game;
 }
 
 void C_Player::setPlayerOrientation(char orientation)

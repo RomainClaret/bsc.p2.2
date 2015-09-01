@@ -119,6 +119,25 @@ public:
      */
     void showDialog(QString text, QString image);
 
+    /**
+     * @brief Move self to given direction
+     * @param direction direction to move to
+     */
+    void moveBlock(char direction);
+
+    /**
+     * @brief isMovableSet determinate if the penguin is in contact with a movable
+     * @return true if the attribut "movable" is not NULL
+     */
+    bool isMovableSet();
+
+    /**
+     * @brief getMovable get the attribut "movable"
+     * @return
+     */
+    B_MovableSimple* getMovable();
+
+    void setIsSliding(bool isSliding);
 
 private:
 
@@ -235,11 +254,6 @@ private:
     bool movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, char directionDepl);
 
     //Methods related to the playable character sliding
-    /**
-     * @brief Move self to given direction
-     * @param direction direction to move to
-     */
-    void moveBlock(char direction);
 
     /**
      * @brief Validate the place of a movable block.
@@ -276,6 +290,7 @@ private:
      * @param sound name of the sound to play
      */
     void showDialog(QString text, QString image, QString sound);
+
 
     /*
      * ATTRIBUTES

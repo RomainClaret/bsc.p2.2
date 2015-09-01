@@ -71,6 +71,13 @@ public:
     void moveBy(int x, int y);
 
     /**
+     * @brief Move self by x and y values with pixel value.
+     * @param x move this amount on the x-axis
+     * @param y move this amount on the y-axis
+     */
+    void moveByPixel(int x, int y);
+
+    /**
      * @brief Set the position of self with the x and y values.
      * @param x set the postion on the x-axis
      * @param y set the postion on the y-axis

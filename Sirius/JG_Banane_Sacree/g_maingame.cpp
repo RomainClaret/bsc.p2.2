@@ -78,7 +78,6 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 //    gameView->setViewport(new QGLWidget(QGLFormat(QGL::SampleBuffers)));
 
 
-
     gameTitle = new QLabel(this);
     gameTitle->setText(tr("James Gouin et la Banane Sacrée"));
 
@@ -115,15 +114,6 @@ G_MainGame::~G_MainGame()
 
 }
 
-
-void G_MainGame::paintEvent(QPaintEvent *event)
-{
-
-//    gameView->update();
-//    w->update();
-
-
-}
 void G_MainGame::startGame(G_Profil* user)
 {
     audioSingleton->pauseMusicPlaylistMenu();

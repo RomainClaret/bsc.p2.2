@@ -7,9 +7,9 @@
 
 #include "../g_gameboard.h"
 
-G_Character::G_Character()
+G_Character::G_Character(G_Gameboard* game)
 {
-    currentMove='n';
+    currentMove='c';
 
     this->timerMover = new QTimer();
     connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
@@ -17,26 +17,25 @@ G_Character::G_Character()
     setZValue(10);
 
     audioSingleton = Singleton_Audio::getInstance();
+
+    this->game = game;
 }
 
 void G_Character::moveWithTimer(char orientation)
 {
     if(currentMove == 'n')
     {
-        audioSingleton->playSoundPlayerWalking();
+        //        audioSingleton->playSoundPlayerWalking();
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
+        game->setIsSliding(true);
         timerMover->start(5);
-    }
-    else
-    {
-//        qDebug() << "mouvement en cours";
     }
 }
 
-void G_Character::advance(int)
+bool G_Character::isMoving()
 {
-    //Todo
+    return !(currentMove == 'n');
 }
 
 void G_Character::stepMove()
