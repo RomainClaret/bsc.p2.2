@@ -31,6 +31,8 @@
 
 P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
 {
+    currentMove = 'n';
+    pas = 2;
     audioSingleton = Singleton_Audio::getInstance();
 
     int BlocsSizeX = G_Gameboard::getGameSquares()-2;
@@ -66,7 +68,7 @@ P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
     stepsRight.append(":/characters/characters/player_right.png");
 
     iTimer = 0;
-    iWaitAnim = 40;
+    iWaitAnim = 30;
     animSteps.append(":/characters/characters/player_front.png");
     animSteps.append(":/characters/characters/player_anim01.png");
     animSteps.append(":/characters/characters/player_anim02.png");
@@ -99,13 +101,13 @@ void P_Penguin::setPos(int x, int y)
 
 void P_Penguin::advance(int step)
 {
-    if(step == 1)
+    if(step == 0)
     {
         iAdvanceSpeed++;
         if(iAdvanceSpeed % 2 == 0)
         {
             iTimer++;
-            if(iTimer >= iWaitAnim && iTimer < iWaitAnim+animSteps.size())
+            if(iTimer >= iWaitAnim && iTimer < iWaitAnim + animSteps.size())
             {
                 downSkin = animSteps.at(iTimer-iWaitAnim);
                 setPlayerOrientation('b');
@@ -122,7 +124,7 @@ void P_Penguin::advance(int step)
 void P_Penguin::stepMoveCharacter()
 {
     iTimer = 0;
-    int pas = 2;
+
     switch (currentMove) {
     case 'l':
         if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())

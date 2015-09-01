@@ -74,23 +74,23 @@ S_Footstep* S_Snow::showFootPrint(char sens)
 
 void S_Snow::advance(int step)
 {
-    if(step = 1 && !movableSunk)
-    {
-        if(rand() % 2 == 1)
-        {
-            iTime ++;
-            if(iTime % speed == 0)
-            {
-                QBrush brush;
+//    if(step = 1 && !movableSunk)
+//    {
+//        if(rand() % 2 == 1)
+//        {
+//            iTime ++;
+//            if(iTime % speed == 0)
+//            {
+//                QBrush brush;
 
-                int iRandRotate = 90*(rand() % 4);
+//                int iRandRotate = 90*(rand() % 4);
 
-                QTransform transform;
-                QTransform trans = transform.rotate(iRandRotate);
-                brush.setTexture(QPixmap(QPixmap(":/surfaces/surfaces/snowSpark.png").transformed(trans)));
+//                QTransform transform;
+//                QTransform trans = transform.rotate(iRandRotate);
+//                brush.setTexture(QPixmap(QPixmap(":/surfaces/surfaces/snowSpark.png").transformed(trans)));
 
-                setBrush(brush);
-            }
-        }
-    }
+//                setBrush(brush);
+//            }
+//        }
+//    }
 }

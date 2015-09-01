@@ -67,6 +67,8 @@ private:
 
     int nbLives;
 
+    int pas = 2;
+
 protected:
     void advance(int step);
 

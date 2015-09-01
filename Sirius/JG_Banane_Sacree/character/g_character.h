@@ -56,8 +56,6 @@ protected:
     QString upSkin;
     QString downSkin;
 
-    void advance(int step);
-
     char orientation;
 
     //Skins are the pictures given to self

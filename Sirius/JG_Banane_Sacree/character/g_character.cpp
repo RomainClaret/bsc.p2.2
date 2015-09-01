@@ -9,7 +9,7 @@
 
 G_Character::G_Character()
 {
-    currentMove='n';
+    currentMove='c';
 
     this->timerMover = new QTimer();
     connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
@@ -23,20 +23,11 @@ void G_Character::moveWithTimer(char orientation)
 {
     if(currentMove == 'n')
     {
-        audioSingleton->playSoundPlayerWalking();
+//        audioSingleton->playSoundPlayerWalking();
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
         timerMover->start(5);
     }
-    else
-    {
-//        qDebug() << "mouvement en cours";
-    }
-}
-
-void G_Character::advance(int)
-{
-    //Todo
 }
 
 void G_Character::stepMove()
