@@ -247,6 +247,34 @@ void Convertisseur::convert()
                         line[line_count]=t.readLine();
                     }
                 }
+                qDebug() << line[line_count];
+                if(line[line_count].contains("type=Walls_Blocks_Groups"))
+                {
+                    qDebug() << "TYPE OK";
+                    line_count ++;
+                    line[line_count]=t.readLine();
+                    line_count ++;
+                    line[line_count]=t.readLine();
+                    for (matY = 0; matY < maxBlocksHeight; matY++)
+                    {
+                        QStringList values = line[line_count].split(",");
+                        for (matX = 0; matX < maxBlocksWidth; matX++)
+                        {
+                            if(values.at(matX).toInt() != 0)
+                            {
+                                qDebug() << "WALLGROUP";
+                                colonne = findElement(doc, lvl_elements,"COLONNE","position",QString::number(matX));
+                                ligne = findElement(doc, colonne,"LIGNE","position",QString::number(matY));
+                                element = findElement(doc, ligne,"BLOC","type","WALLGROUP");
+                                ligne.appendChild(element);
+                                colonne.appendChild(ligne);
+                                lvl_elements.appendChild(colonne);
+                            }
+                        }
+                        line_count++;
+                        line[line_count]=t.readLine();
+                    }
+                }
                 if(line[line_count].contains("type=Solid_Blocks"))
                 {
                     line_count ++;
@@ -741,10 +769,10 @@ void Convertisseur::readXML(QDomDocument doc, QDomElement lvlElement)
             QDomElement ligneN = findElement(doc, colonneN,"LIGNE","position",ligne.attribute("position"));
             for(QDomElement item = ligne.firstChildElement(); !item.isNull(); item = item.nextSiblingElement())
             {
-                qDebug() << item.tagName();
+//                qDebug() << item.tagName();
                 if(item.tagName() == "DIALOG")
                 {
-                    qDebug() << item.attribute("text");
+                    //qDebug() << item.attribute("text");
                 }
                 ligneN.appendChild(item);
             }

@@ -73,12 +73,10 @@ this->defaultOrientation = orientation;
 
 C_Enemy::~C_Enemy()
 {
-    qDebug() << "DELETE ENEMY";
     foreach (S_ViewBlockNPC* vb, viewField)
     {
         game->getGraphicsScene()->removeItem(vb);
         delete vb;
-        qDebug() << "VB";
     }
     delete state;
 }
@@ -159,7 +157,6 @@ void C_Enemy::viewBlockActive()
             }
         }
     }
-
 }
 
 void C_Enemy::playableCharacterDetection()
@@ -192,6 +189,12 @@ void C_Enemy::playableCharacterOnViewBlock()
     this->detectPlayableCharacter = true;
     game->disconnectTimer();
     game->restartEnigma();
+    this->detectPlayableCharacter = false;
+
+    foreach (S_ViewBlockNPC* vb, viewField)
+    {
+        vb->setStyleActivated();
+    }
 }
 
 QPoint C_Enemy::convertPosPoint(QPointF psrc)
@@ -391,8 +394,11 @@ void C_Enemy::setDetectPlayableCharacter(bool value)
 {
     detectPlayableCharacter = value;
 
-    foreach (S_ViewBlockNPC* vb, viewField)
+    if(!value)
     {
-        vb->setStyleActivated();
+        foreach (S_ViewBlockNPC* vb, viewField)
+        {
+            vb->setStyleActivated();
+        }
     }
 }

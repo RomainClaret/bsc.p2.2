@@ -179,7 +179,6 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
             listWallGroup.append(autoSurface);
         }
 
-
         //wall is like snow for the water
         if(elem.attribute("type") == Factory_Surface::SURFACE_SNOW
                 || elem.attribute("type") == Factory_Surface::BLOC_WALL_ALONE
