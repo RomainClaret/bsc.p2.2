@@ -24,7 +24,7 @@
  * @details Set the skin, speed at 10, Z value at 2 and default orientation to top.
  * Vision of the enemy is created here.
  */
-E_Walrus::E_Walrus(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
+E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(position, path, g)
 {
     this->gameBoard = g;
     //vitesse entre 1 et 100
@@ -36,14 +36,17 @@ E_Walrus::E_Walrus(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
     upSkin = ":/characters/characters/renard_front.png";
     downSkin = ":/characters/characters/renard_front.png";
 
-
     //Création du champs de vue
     S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this);
-    vb->setStyleNone();
+    //vb->setStyleNone();
     viewField.append(vb);
 
-    //il lui faut une orientation de base
-    setOrientation_bottom();
+    resetDefaultOrientation();
+}
+
+E_Walrus::~E_Walrus()
+{
+    qDebug() << "E_WALRUS DELETE";
 }
 
 void E_Walrus::action()

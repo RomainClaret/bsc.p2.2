@@ -38,7 +38,7 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_MovableSimple::B_MovableSimple(int xpos, int ypos, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
+B_MovableSimple::B_MovableSimple(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent) : B_Movable(xpos, ypos, scene, parent)
 {
     audioSingleton = Singleton_Audio::getInstance();
 
@@ -79,7 +79,7 @@ int B_MovableSimple::getRotationTexture()
  * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_MovableSimple::B_MovableSimple(QGraphicsItem *parent) : B_Movable(0, 0, parent)
+B_MovableSimple::B_MovableSimple(QGraphicsItem *parent) : B_Movable(0, 0, NULL, parent)
 {
     setTexture(QPixmap(":/surfaces/surfaces/movable_init.png"));
 }

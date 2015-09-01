@@ -32,6 +32,9 @@ class B_Wall_Group;
 #include <QList>
 #include <QDomDocument>
 
+#include "character/p_penguin.h"
+#include "character/c_player.h"
+
 class S_Door;
 
 /**
@@ -109,6 +112,10 @@ public:
      */
     void loadInformation();
 
+    void clearScene();
+
+    void loadLevel(int levelNumber);
+
 private:
     // Level Playing Informations
     int levelNumber;
@@ -135,6 +142,7 @@ private:
 
     QList<S_Door*> doorList;
 
+    QGraphicsScene* scene;
 
 };
 

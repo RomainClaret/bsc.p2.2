@@ -28,7 +28,8 @@ void G_Character::moveWithTimer(char orientation)
         //        audioSingleton->playSoundPlayerWalking();
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
-        game->setIsSliding(true);
+        game->setIsMoving(true);
+        qDebug() << "-----------------I will start the timer";
         timerMover->start(5);
     }
 }
@@ -40,6 +41,7 @@ bool G_Character::isMoving()
 
 void G_Character::stepMove()
 {
+    qDebug() << "CHARACTER : StepMove()";
     stepMoveCharacter();
 }
 
@@ -77,4 +79,12 @@ void G_Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
 QRectF G_Character::boundingRect() const
 {
     return QRectF(1,1,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
+}
+
+void G_Character::setPosition(int xpos, int ypos)
+{
+    qDebug() << "xpos " << xpos << "ypos" << ypos;
+    qDebug() << "x " << pos().x() << "y" << pos().y();
+
+    moveBy(xpos - pos().x(), ypos - pos().y());
 }

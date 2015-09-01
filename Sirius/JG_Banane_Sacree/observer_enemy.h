@@ -43,6 +43,8 @@ public:
      */
     void addNPCObserver(C_Enemy* ennemi);
 
+    void removeNPCObserver(C_Enemy* ennemi);
+
     /**
      * @brief changeNPCState change the state of the npcs in the LEVEL PHASE
      * @param state the state, check the static attr for differents states

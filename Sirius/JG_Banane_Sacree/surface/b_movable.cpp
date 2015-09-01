@@ -39,8 +39,9 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_Movable::B_Movable(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
+B_Movable::B_Movable(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
 {
+   this->scene = scene;
    setDesign(xpos, ypos);
    setZValue(11);
 }
@@ -53,6 +54,19 @@ B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGa
 {
     setDesign(0, 0);
     setZValue(11);
+}
+
+B_Movable::~B_Movable()
+{
+//    scene->removeItem(topCollideBox);
+//    scene->removeItem(bottomCollideBox);
+//    scene->removeItem(leftCollideBox);
+//    scene->removeItem(rightCollideBox);
+
+//    delete topCollideBox;
+//    delete bottomCollideBox;
+//    delete leftCollideBox;
+//    delete rightCollideBox;
 }
 
 void B_Movable::setPos(int x, int y)
@@ -80,6 +94,33 @@ void B_Movable::setDesign(int xpos, int ypos)
     rightCollideBox->setPen(Qt::NoPen);
     bottomCollideBox->setPen(Qt::NoPen);
     topCollideBox->setPen(Qt::NoPen);
+
+    //BRUSH COLLIDE
+    /*
+    QBrush brushCollide;
+    brushCollide.setStyle(Qt::Dense4Pattern);
+    brushCollide.setColor("black");
+    leftCollideBox->setBrush(brushCollide);
+    rightCollideBox->setBrush(brushCollide);
+    bottomCollideBox->setBrush(brushCollide);
+    topCollideBox->setBrush(brushCollide);
+    leftCollideBox->setZValue(50);
+    rightCollideBox->setZValue(50);
+    bottomCollideBox->setZValue(50);
+    topCollideBox->setZValue(50);
+    */
+}
+
+void B_Movable::setPosition(int xpos, int ypos)
+{
+    int size = G_Gameboard::getGameSquares();
+    int x = this->pos().x()/size;
+    int y = this->pos().y()/size;
+
+    int dx = xpos - x;
+    int dy = ypos - y;
+
+    moveBy(dx,dy);
 }
 
 void B_Movable::setTexture(QPixmap pixmap)

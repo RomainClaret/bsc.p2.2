@@ -149,7 +149,6 @@ void W_MenuStart::newGameForm()
 
 void W_MenuStart::newGame()
 {
-//    qDebug() << "NEW";
     if (username->text() != "")
     {
         G_Profil* newProfil = new G_Profil();
@@ -193,7 +192,7 @@ void W_MenuStart::newGame()
 
 void W_MenuStart::saveGame(G_Profil* currentUser)
 {
-    qDebug() << "SAVE";
+    //qDebug() << "SAVE";
 
     // LIS LE FICHIER POUR GARDER LES DONNEES
     QFile loadFile("save.json");
@@ -204,23 +203,23 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     QJsonObject object = loadDoc.object();
 
     QStringList loadDate = currentUser->getLoadDate().split(":");
-    qDebug() << "LoadDate :" << loadDate;
+    //qDebug() << "LoadDate :" << loadDate;
     QStringList saveDate = currentUser->getGameTime().split(":");
-    qDebug() << "SaveDate :" << saveDate;
+    //qDebug() << "SaveDate :" << saveDate;
 
     QDateTime current = QDateTime::currentDateTime();
     QStringList currentDate = current.toString("dd:MM:yyyy:hh:mm").split(":");
-    qDebug() << "CurrentDate" << currentDate;
+    //qDebug() << "CurrentDate" << currentDate;
 
     int dd = saveDate.at(0).toInt() + currentDate.at(0).toInt() - loadDate.at(0).toInt();
     int MM = saveDate.at(1).toInt() + currentDate.at(1).toInt() - loadDate.at(1).toInt();
     int yyyy = saveDate.at(2).toInt() + currentDate.at(2).toInt() - loadDate.at(2).toInt();
     int hh = saveDate.at(3).toInt() + currentDate.at(3).toInt() - loadDate.at(3).toInt();
     int mm = saveDate.at(4).toInt() + currentDate.at(4).toInt() - loadDate.at(4).toInt();
-    qDebug() << dd << ":" << MM << ":" << yyyy << ":" << hh << ":" << mm;
+    //qDebug() << dd << ":" << MM << ":" << yyyy << ":" << hh << ":" << mm;
 
     QString newGameTime = QString("%1:%2:%3:%4:%5").arg(dd,2,2, QLatin1Char('0')).arg(MM,2,2,QLatin1Char('0')).arg(yyyy,4,4, QLatin1Char('0')).arg(hh,2,2, QLatin1Char('0')).arg(mm,2,2, QLatin1Char('0'));
-    qDebug() << newGameTime;
+    //qDebug() << newGameTime;
 
     currentUser->setGameTime(newGameTime);
     currentUser->setMusicsVolume(currentUser->getMusicsVolume());
@@ -237,7 +236,7 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     QJsonObject playerObject;
 
     currentUser->write(playerObject);
-    currentUser->printDebug();
+    //currentUser->printDebug();
 
     gameObject = object;
     gameObject[currentUser->getUsername()] = playerObject;

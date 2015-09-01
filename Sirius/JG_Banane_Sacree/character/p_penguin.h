@@ -69,7 +69,7 @@ private:
 
     int nbLives;
 
-    int pas = 2;
+    int pas;
 
 protected:
     void advance(int step);

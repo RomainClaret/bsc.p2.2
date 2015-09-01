@@ -28,6 +28,7 @@
 #include "../character/e_wolf.h"
 #include "../g_gameboard.h"
 #include "../surface/s_ice.h"
+#include "../memento.h"
 
 #include "g_gameboard.h"
 
@@ -40,9 +41,9 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, parent)
+
+B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, game->getGraphicsScene(), parent)
 {
-    qDebug() << "THROW";
     this->game = game;
 
     int val = rand() % 10+3;
@@ -56,7 +57,8 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsI
  * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, parent) //obligé de donner une position fictive
+
+B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, NULL, parent) //obligé de donner une position fictive
 {
     speed = 7;
     time = 0;
@@ -69,7 +71,8 @@ void B_MovableThrow::advance(int step)
         time ++;
         if(time % speed == 0)
         {
-            this->setPos(this->pos().x()/32,(this->pos().y()+32)/32);
+
+            moveBy(0,1);
         }
 
         checkPosition();
@@ -81,16 +84,18 @@ void B_MovableThrow::checkPosition()
     QList<QGraphicsItem *> l = this->collidingItems();
     for(int i=0; i<l.length(); i++)
     {
-        //BREAK
+
         if(typeid(*l.at(i)).name() == typeid(B_Wall_Alone).name() ||
            typeid(*l.at(i)).name() == typeid(B_Wall_Group).name() ||
            typeid(*l.at(i)).name() == typeid(B_Water).name() ||
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name())
         {
+            Memento::getInstance()->removeSpecialEventSurface(game->getGraphicsScene(), this);
             delete this;
         }
         if(typeid(*l.at(i)).name() == typeid(P_Penguin).name())
         {
+            game->disconnectTimer();
             game->restartEnigma();
         }
     }

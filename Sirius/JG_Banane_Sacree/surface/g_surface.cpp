@@ -14,6 +14,7 @@
 #include "../surface/g_surface.h"
 #include "../g_gameboard.h"
 #include <QGraphicsItem>
+#include <QGraphicsScene>
 #include <QPoint>
 #include <QPen>
 
@@ -29,7 +30,10 @@ G_Surface::G_Surface(int xpos, int ypos, int width, int height, QGraphicsItem *p
     setPen(Qt::NoPen);
     setPos(xpos, ypos);
 }
-G_Surface::~G_Surface(){}
+G_Surface::~G_Surface()
+{
+    //qDebug() << "DELETE SURFACE";
+}
 
 void G_Surface::setPos(int x, int y)
 {
@@ -55,4 +59,14 @@ void G_Surface::setColor(QString brushColor)
 void G_Surface::advance(int)
 {
     //qDebug() << "advance call";
+}
+
+void G_Surface::setPosition(int xpos, int ypos)
+{
+    setPos(xpos, ypos);
+}
+
+void G_Surface::addToScene(QGraphicsScene* scene)
+{
+    scene->addItem(this);
 }

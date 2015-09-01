@@ -65,7 +65,7 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    C_Enemy(QList<QPoint> path, G_Gameboard *g);
+    C_Enemy(QString orientation, QList<QPoint> path, G_Gameboard *g);
 
     //Destructor
     /**
@@ -135,6 +135,17 @@ public:
 
     void addDialog(QString text);
 
+    void resetDefaultOrientation();
+
+    /**
+     * @brief Set the position of self with the x and y values.
+     * @param x set the postion on the x-axis
+     * @param y set the postion on the y-axis
+     */
+    void setPos(int x, int y);
+
+    void setDetectPlayableCharacter(bool value);
+
 protected:
     /**
      * @brief Moves self by an amount.
@@ -177,13 +188,6 @@ private:
     void moveBy(int x, int y);
 
     /**
-     * @brief Set the position of self with the x and y values.
-     * @param x set the postion on the x-axis
-     * @param y set the postion on the y-axis
-     */
-    void setPos(int x, int y);
-
-    /**
      * @brief Convert QPointF to QPoint.
      * @param psrc QPointF to convet
      * @return converted QPoint
@@ -208,6 +212,7 @@ private:
      */
     virtual void playableCharacterDetection();
 
+    QString defaultOrientation;
 };
 
 #endif // C_ENEMY_H

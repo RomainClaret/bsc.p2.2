@@ -43,7 +43,9 @@ public:
      * @texture texture of the object
      * @param parent QGraphicsItem parent
      */
-    B_Movable(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_Movable(int xpos, int ypos, QGraphicsScene *scene, QGraphicsItem *parent = 0);
+
+    ~B_Movable();
 
     /**
      * @brief Constructor without position setup.
@@ -154,6 +156,8 @@ public:
      */
     void setTexture(QPixmap pixmap);
 
+    void setPosition(int xpos, int ypos);
+
 private:
     /**
      * @brief Check if self is movable.
@@ -168,6 +172,8 @@ private:
      * @param ypos position of the item on the y-axis
      */
     void setDesign(int xpos, int ypos);
+
+    QGraphicsScene *scene;
 
 };
 

@@ -80,13 +80,13 @@ SOURCES += \
     state/state_enemyfriendly.cpp \
     surface/s_footstep.cpp \
     character/c_player.cpp \
+    memento.cpp \
     a_sound.cpp \
     a_music.cpp \
     a_musicplaylist.cpp \
     surface/b_wall_alone.cpp \
     surface/b_wall_group.cpp \
     menu/w_menuaudio.cpp
-
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -141,13 +141,13 @@ HEADERS  += \
     singleton_audio.h \
     observer_enemy.h\
     surface/s_footstep.h \
+    memento.h \
     a_sound.h \
     a_music.h \
     a_musicplaylist.h \
     surface/b_wall_alone.h \
     surface/b_wall_group.h \
     menu/w_menuaudio.h
-
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
