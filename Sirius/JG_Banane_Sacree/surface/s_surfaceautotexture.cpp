@@ -161,3 +161,9 @@ void S_SurfaceAutoTexture::addTexture(QPixmap pixmap)
 
     scene->addItem(texture);
 }
+void S_SurfaceAutoTexture::changeTexture(QPixmap pixmap)
+{
+    QBrush brush;
+    brush.setTexture(pixmap);
+    setBrush(brush);
+}

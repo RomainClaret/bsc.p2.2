@@ -17,14 +17,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml multimedia
+QT       += core gui xml multimedia opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = JG_Banane_Sacrees
 TEMPLATE = app
-macx:ICON = $${PWD}/icons/logo.icns
-win32:RC_FILE = winIcon.rc
 QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 
 SOURCES += \
@@ -82,8 +80,13 @@ SOURCES += \
     state/state_enemyfriendly.cpp \
     surface/s_footstep.cpp \
     character/c_player.cpp \
-    memento.cpp
-
+    memento.cpp \
+    a_sound.cpp \
+    a_music.cpp \
+    a_musicplaylist.cpp \
+    surface/b_wall_alone.cpp \
+    surface/b_wall_group.cpp \
+    menu/w_menuaudio.cpp
 HEADERS  += \
     g_gameboard.h \
     g_level.h \
@@ -138,11 +141,24 @@ HEADERS  += \
     singleton_audio.h \
     observer_enemy.h\
     surface/s_footstep.h \
-    memento.h
-
+    memento.h \
+    a_sound.h \
+    a_music.h \
+    a_musicplaylist.h \
+    surface/b_wall_alone.h \
+    surface/b_wall_group.h \
+    menu/w_menuaudio.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \
     icons.qrc \
-    sound.qrc \
-    music.qrc
+    sound.qrc
+
+unix{
+    ICON = $${PWD}/icons/logo.icns
+    RESOURCES += music.qrc
+}
+
+win32{
+    RC_FILE = winIcon.rc
+}

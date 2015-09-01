@@ -17,6 +17,8 @@
 #include "widget/w_object.h"
 #include "g_maingame.h"
 
+
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -25,6 +27,8 @@ int main(int argc, char *argv[])
 //    WidgetObject w;
     G_MainGame w;
     w.show();
+
+
 
     return a.exec();
 }

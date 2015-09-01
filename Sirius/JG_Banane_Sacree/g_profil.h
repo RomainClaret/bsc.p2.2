@@ -18,6 +18,8 @@
 #include <QJsonObject>
 #include <QList>
 
+class Singleton_Audio;
+
 /**
  * @brief Player's profil management.
  * @details Read and write a json file for the profils, which are the saves for the game.
@@ -156,6 +158,11 @@ public:
      */
     void printDebug();
 
+    void setMusicsVolume(int value);
+    void setSoundsVolume(int value);
+    int getMusicsVolume();
+    int getSoundsVolume();
+
     static int NBMAXVIE;
 
 private :
@@ -168,6 +175,9 @@ private :
     QList<int> power;
     int nbLive;
     int difficulty;
+    int volumeMusics;
+    int volumeSounds;
+    Singleton_Audio *audioSingleton;
 };
 
 #endif // G_PROFIL_H

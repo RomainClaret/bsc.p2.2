@@ -18,6 +18,7 @@
 
 class QGraphicsRectItem;
 class QGraphicsScene;
+class Singleton_Audio;
 
 /**
  * @brief Movable block
@@ -64,6 +65,7 @@ public:
 
 private:
     int rotationTexture;
+    Singleton_Audio *audioSingleton;
 
 };
 

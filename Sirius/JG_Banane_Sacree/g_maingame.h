@@ -18,9 +18,11 @@
 #include "g_gameboard.h"
 #include "menu/w_menustart.h"
 #include "g_profil.h"
+#include <QGLWidget>
 
 class QGraphicsView;
 class QLabel;
+class Singleton_Audio;
 
 
 /**
@@ -75,6 +77,9 @@ public:
     ~G_MainGame();
 
 private:
+
+    Singleton_Audio *audioSingleton;
+    QGLWidget* w;
 
     //Button to quit completly the game.
     QPushButton* quitGame;

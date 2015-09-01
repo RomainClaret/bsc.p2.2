@@ -22,6 +22,7 @@ class G_Gameboard;
 class QStringList;
 class Observer_Enemy;
 class S_SurfaceAutoTexture;
+class B_Wall_Group;
 
 #include <QList>
 #include <QVector>
@@ -104,6 +105,7 @@ public:
     void unlock();
 
     static int S_SNOW;
+    static int B_WALL_GROUP;
 
     /**
      * @brief loadInformation
@@ -134,7 +136,9 @@ private:
     QDomDocument* doc;
 
     QList<S_SurfaceAutoTexture* > listAutoTextures;
-    int** mapSurfaces;
+    QList<B_Wall_Group* > listWallGroup;
+    int** mapSurfacesSnow;
+    int** mapSurfacesWallGroup;
 
     QList<S_Door*> doorList;
 

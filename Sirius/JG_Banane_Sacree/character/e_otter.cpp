@@ -15,7 +15,8 @@
 #include "../g_gameboard.h"
 #include "../surface/s_viewblocknpc.h"
 #include "../state/state_enemyfriendly.h"
-#include "../surface/b_wall.h"
+#include "../surface/b_wall_alone.h"
+#include "../surface/b_wall_group.h"
 #include "../surface/b_water.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
@@ -137,7 +138,7 @@ bool E_Otter::collide()
         {
             return true;
         }
-        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall).name())
+        else if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Alone).name() || typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Group).name())
         {
             return true;
         }

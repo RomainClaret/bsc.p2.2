@@ -20,6 +20,8 @@
 
 #include "../surface/b_wall.h"
 #include "../surface/b_movable.h"
+#include "../surface/b_wall_alone.h"
+#include "../surface/b_wall_group.h"
 #include "../surface/b_water.h"
 #include "../character/c_enemy.h"
 #include "../character/e_fox.h"
@@ -39,6 +41,7 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
+
 B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, game->getGraphicsScene(), parent)
 {
     this->game = game;
@@ -54,6 +57,7 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsI
  * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
+
 B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, NULL, parent) //obligé de donner une position fictive
 {
     speed = 7;
@@ -67,12 +71,12 @@ void B_MovableThrow::advance(int step)
         time ++;
         if(time % speed == 0)
         {
+
             moveBy(0,1);
         }
 
         checkPosition();
     }
-
 }
 
 void B_MovableThrow::checkPosition()
@@ -80,7 +84,9 @@ void B_MovableThrow::checkPosition()
     QList<QGraphicsItem *> l = this->collidingItems();
     for(int i=0; i<l.length(); i++)
     {
-        if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
+
+        if(typeid(*l.at(i)).name() == typeid(B_Wall_Alone).name() ||
+           typeid(*l.at(i)).name() == typeid(B_Wall_Group).name() ||
            typeid(*l.at(i)).name() == typeid(B_Water).name() ||
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name())
         {

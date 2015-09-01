@@ -13,29 +13,19 @@
 
 #include "../surface/b_wall.h"
 
-#include <QBrush>
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
-B_Wall::B_Wall(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+
+B_Wall::B_Wall(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
 {
-    setDesign();
+    //rien
 }
+
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Wall::B_Wall(QGraphicsItem *parent) : G_Surface(0, 0, parent)
+B_Wall::B_Wall(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
 {
-    setDesign();
-}
-
-void B_Wall::setDesign()
-{
-    QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::gray);
-
-    setBrush(brush);
-
-    setZValue(4);
+    //rien
 }

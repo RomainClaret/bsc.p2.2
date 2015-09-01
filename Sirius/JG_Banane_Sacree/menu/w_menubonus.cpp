@@ -29,17 +29,21 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
 
    btnBonusCode = new QPushButton(tr("Entrer un code spécial"));
    btnBonusCredits = new QPushButton(tr("Voir les crédits"));
+   btnBonusAudio = new QPushButton(tr("Paramètres Audios"));
    btnBonusReturn = new QPushButton(tr("Retourner au menu pause"));
 
    btnBonusCode->setStyleSheet(W_Menu::styleBtn);
    btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
+   btnBonusAudio->setStyleSheet(W_Menu::styleBtn);
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
 
    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(loadCredits()));
+   connect(btnBonusAudio, SIGNAL(clicked()),parent, SLOT(loadAudio()));
    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
 
    layoutMenuPause = new QFormLayout;
+   layoutMenuPause->addRow(btnBonusAudio);
    layoutMenuPause->addRow(btnBonusCode);
    layoutMenuPause->addRow(btnBonusCredits);
    layoutMenuPause->addRow(btnBonusReturn);
@@ -50,6 +54,6 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
 
 void W_MenuBonus::setTitleParent()
 {
-    parent->setTitle(tr("Bonus"));
-    parent->setSubTitle(tr("James Gouin profite des Bonus..."));
+    parent->setTitle(tr("Un petit plus"));
+    parent->setSubTitle(tr("James Gouin profite des plus et des Bonus..."));
 }

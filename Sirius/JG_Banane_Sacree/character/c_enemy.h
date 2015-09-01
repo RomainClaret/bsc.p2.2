@@ -168,7 +168,6 @@ protected:
 
     State_Enemy* state;
     bool detectPlayableCharacter;
-    G_Gameboard *game;
     QStringList dialogList;
 
 private:

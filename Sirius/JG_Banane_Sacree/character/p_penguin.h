@@ -19,6 +19,9 @@
 class QGraphicsItem;
 class QPoint;
 class QGraphicsScene;
+class Singleton_Audio;
+
+class B_MovableSimple;
 
 #include <QList>
 #include <QTimer>
@@ -46,6 +49,8 @@ class P_Penguin  : public C_Player
 
 private:
 
+    Singleton_Audio* audioSingleton;
+
     QGraphicsRectItem *leftCollideBox;
     QGraphicsRectItem *rightCollideBox;
     QGraphicsRectItem *bottomCollideBox;
@@ -63,6 +68,8 @@ private:
     bool slideAble;
 
     int nbLives;
+
+    int pas = 2;
 
 protected:
     void advance(int step);
@@ -119,6 +126,8 @@ private:
     int iTimer;
     int iAdvanceSpeed;
     int iWaitAnim;
+
+    B_MovableSimple* blocMove;
 
 };
 

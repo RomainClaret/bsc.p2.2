@@ -57,6 +57,7 @@ private:
     QPushButton *btnBonusCode;
     QPushButton *btnBonusCredits;
     QPushButton *btnBonusReturn;
+    QPushButton *btnBonusAudio;
 
     //Parent
     W_Menu* parent;

@@ -28,6 +28,8 @@
 #include "observer_enemy.h"
 #include "surface/b_movable_simple.h"
 
+#include <QGLWidget>
+
 class W_Menu;
 class QGraphicsProxyWidget;
 class QGraphicsScene;
@@ -117,16 +119,29 @@ public:
      */
     void showDialog(QString text, QString image);
 
-    void showProxy();
+    /**
+     * @brief Move self to given direction
+     * @param direction direction to move to
+     */
+    void moveBlock(char direction);/**
+     * @brief isMovableSet determinate if the penguin is in contact with a movable
+     * @return true if the attribut "movable" is not NULL
+     */
+    bool isMovableSet();
 
-    void linkProxy();
+    /**
+     * @brief getMovable get the attribut "movable"
+     * @return
+     */
+    B_MovableSimple* getMovable();
 
+    void setIsSliding(bool isSliding);
+
+ void showProxy();void linkProxy();
     /**
      * @brief Stop the time recording
      */
-    void disconnectTimer();
-
-private:
+    void disconnectTimer();private:
 
     /*
      * PRIVATE METHODS
@@ -235,12 +250,6 @@ private:
      */
     bool movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, char directionDepl);
 
-    //Methods related to the playable character sliding
-    /**
-     * @brief Move self to given direction
-     * @param direction direction to move to
-     */
-    void moveBlock(char direction);
 
     /**
      * @brief Validate the place of a movable block.
@@ -263,7 +272,7 @@ private:
     /**
      * @brief Check event of self position.
      */
-    void checkPositionEvents();
+    void checkPositionEvents(char);
 
     /**
      * @brief Delete all items from self.
@@ -278,12 +287,14 @@ private:
      */
     void showDialog(QString text, QString image, QString sound);
 
+
     /*
      * ATTRIBUTES
     */
 
     //Sound Singelton
-    Singleton_Audio *soundSingleton;
+    Singleton_Audio *audioSingleton;
+    int soundStepCounter;
 
     //Scene & Playable Character
     QGraphicsScene *mainScene;

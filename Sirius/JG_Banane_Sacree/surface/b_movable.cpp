@@ -17,6 +17,8 @@
 #include <QGraphicsScene>
 
 #include "../surface/b_wall.h"
+#include "../surface/b_wall_alone.h"
+#include "../surface/b_wall_group.h"
 #include "../surface/b_movable.h"
 #include "../surface/b_water.h"
 #include "../character/c_enemy.h"
@@ -139,6 +141,15 @@ void B_Movable::moveBy(int x, int y)
     topCollideBox->moveBy(x*gameSquare,y*gameSquare);
 }
 
+void B_Movable::moveByPixel(int x, int y)
+{
+    QGraphicsRectItem::moveBy(x,y);
+    leftCollideBox->moveBy(x,y);
+    rightCollideBox->moveBy(x,y);
+    bottomCollideBox->moveBy(x,y);
+    topCollideBox->moveBy(x,y);
+}
+
 /**
  * @details Add self and the cross for colliding detectection.
  */
@@ -170,7 +181,8 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
 {
     for(int i=0; i<l.length(); i++)
     {
-        if(typeid(*l.at(i)).name() == typeid(B_Wall).name() ||
+        if(typeid(*l.at(i)).name() == typeid(B_Wall_Alone).name() ||
+           typeid(*l.at(i)).name() == typeid(B_Wall_Group).name() ||
            typeid(*l.at(i)).name() == typeid(B_MovableSimple).name() ||
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
            typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||

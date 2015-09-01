@@ -85,7 +85,9 @@ W_Menu::W_Menu(QWidget *parent)
    menuBonus = new W_MenuBonus(this);
    menuCode = new W_MenuCode(this);
    menuCredits = new W_MenuCredits(this);
+   menuAudio = new W_MenuAudio(this);
 
+   menuAudio->setVisible(false);
    menuBonus->setVisible(false);
    menuCode->setVisible(false);
    menuCredits->setVisible(false);
@@ -96,6 +98,7 @@ W_Menu::W_Menu(QWidget *parent)
    layoutMenuPause->addRow(menuBonus);
    layoutMenuPause->addRow(menuCode);
    layoutMenuPause->addRow(menuCredits);
+   layoutMenuPause->addRow(menuAudio);
 
    this->setMinimumWidth(400);
    this->setMinimumHeight(400);
@@ -124,6 +127,7 @@ void W_Menu::setSubTitle(QString subTitle)
 
 void W_Menu::loadBonus()
 {
+    menuAudio->setVisible(false);
     menuPause->setVisible(false);
     menuCode->setVisible(false);
     menuBonus->setVisible(true);
@@ -134,6 +138,7 @@ void W_Menu::loadBonus()
 
 void W_Menu::loadPause()
 {
+    menuAudio->setVisible(false);
     menuPause->setVisible(true);
     menuCode->setVisible(false);
     menuBonus->setVisible(false);
@@ -144,6 +149,7 @@ void W_Menu::loadPause()
 
 void W_Menu::loadCode()
 {
+    menuAudio->setVisible(false);
     menuCode->setVisible(true);
     menuPause->setVisible(false);
     menuBonus->setVisible(false);
@@ -154,6 +160,7 @@ void W_Menu::loadCode()
 
 void W_Menu::loadCredits()
 {
+    menuAudio->setVisible(false);
     menuCode->setVisible(false);
     menuPause->setVisible(false);
     menuBonus->setVisible(false);
@@ -167,14 +174,23 @@ void W_Menu::loadCredits()
  */
 void W_Menu::showEvent(QShowEvent*)
 {
-    audioSingleton->pauseMusicPlaylist();
     loadPause();
-
 }
 
 void W_Menu::setUnableMenu(int levelValue)
 {
     menuPause->setUnableMenu(levelValue);
+}
+
+void W_Menu::loadAudio()
+{
+    menuAudio->setVisible(true);
+    menuCode->setVisible(false);
+    menuPause->setVisible(false);
+    menuBonus->setVisible(false);
+    menuCredits->setVisible(false);
+    menuAudio->setTitleParent();
+    adjustSize();
 }
 
 void W_Menu::keyPressEvent(QKeyEvent *event)

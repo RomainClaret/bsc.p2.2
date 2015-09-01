@@ -3,14 +3,11 @@
 
 #include <QString>
 
-#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
-    #define MY_OS "UNIX"
-#else
-    #define MY_OS "OTHER"
-#endif
-
 class QMediaPlayer;
 class QMediaPlaylist;
+class A_Sound;
+class A_Music;
+class A_MusicPlaylist;
 
 class Singleton_Audio
 {
@@ -24,15 +21,47 @@ public:
     void playSound(QString soundQUrl);
     void playMusic();
     void playMusic(QString music);
+    void pauseMusic();
     void stopMusic();
     bool getPlaybleSound();
-    void setMusicPlaylist(QString playlist);
     void playMusicPlaylist();
     void playMusicPlaylistWithIntro();
     void pauseMusicPlaylist();
     void resumeMusicPlaylist();
+    void stopSound();
+    void setPlayableMusicPlaylist(bool playable);
+    bool getPlaybleMusicPlaylist();
+    void playSoundPlayerWalking();
+    void playSoundBlockSliding();
+    void playSoundBlockStopSliding();
+    void playSoundPlayerSliding();
+    void playSoundGetObject();
+    void playSoundSunk();
+    void playSoundEventRestartCheckpoint();
+    void playSoundEventLostLevel();
+    void playSoundEventStartGame();
+    void playMusicPlaylist(int value);
+    void playSoundPlayerSlidingMovable();
 
+    void muteMusics(bool status);
+    void muteSounds(bool status);
+    void muteAll(bool status);
 
+    void usableMusics(bool status);
+    void usableSounds(bool status);
+    void usableAll(bool status);
+    void playSoundPlayerSlidingStop();
+
+    int getMusicsVolume();
+    int getSoundsVolume();
+
+    void setMusicsVolume(int value);
+    void setMusicPlaylistVolume(int value);
+    void setSoundsVolume(int value);
+
+    void playMusicPlaylistMenu();
+    void playMusicPlaylistMenu(int value);
+    void pauseMusicPlaylistMenu();
 private:
 //    Singleton_Audio& operator= (const Singleton_Audio&){}
     Singleton_Audio (const Singleton_Audio&){}
@@ -40,12 +69,23 @@ private:
     Singleton_Audio();
     virtual ~Singleton_Audio();
 
-    QMediaPlayer* soundPlayer;
-    QMediaPlayer* musicPlayer;
-    QMediaPlaylist* musicPlaylist;
+    A_Sound *soundThread;
+    A_Sound *soundThreadWalking;
+    A_Sound *soundThreadMovableSliding;
+    A_Sound *soundThreadMovableMoving;
+    A_Sound *soundThreadObject;
+    A_Sound *soundThreadSunk;
+    A_Music *musicThread;
+    A_MusicPlaylist *musicPlaylistInGameThread;
+    A_MusicPlaylist *musicPlaylistMenuThread;
     bool playableSound;
-    QString soundQUrl;
-    QString musicQUrl;
+    bool playableMusic;
+    bool playableMusicPlaylist;
+
+    bool muteMusicsToggle;
+    bool muteSoundsToggle;
+    bool muteAllToggle;
+
     void musicPlaylistRemoveIntro();
 
 };

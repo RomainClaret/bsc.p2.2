@@ -26,6 +26,8 @@
 #include "surface/s_ice.h"
 #include "surface/s_dialog.h"
 #include "surface/s_fire.h"
+#include "surface/b_wall_alone.h"
+#include "surface/b_wall_group.h"
 #include "character/e_otter.h"
 #include "g_level.h"
 #include "character/c_enemy.h"
@@ -38,6 +40,7 @@
 #include "menu/w_menupause.h"
 #include "menu/w_menu.h"
 #include "singleton_audio.h"
+#include "surface/s_footstep.h"
 
 #include "character/factory_character.h"
 
@@ -75,7 +78,7 @@ int G_Gameboard::sizeY = 15;
 
 G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
 {
-    soundSingleton = Singleton_Audio::getInstance();
+    audioSingleton = Singleton_Audio::getInstance();
 
     // Default variables of the game
     windowTitle = tr("James Gouin et la Banane Sacrée");
@@ -116,6 +119,13 @@ G_Gameboard::G_Gameboard(QWidget *parent) : QWidget(parent)
     timer = new QTimer();
     setTimer();
     timer->start(100); //10 fois par sec
+
+    //OPEN GL
+//    QGLWidget* w = new QGLWidget(QGLFormat(QGL::SampleBuffers | QGL::DirectRendering));
+//    playerView->setViewport(w);
+//    playerView->setViewportUpdateMode(QGraphicsView::SmartViewportUpdate);
+
+//    setWindowOpacity(0.99);
 }
 
 void G_Gameboard::slideBlock()
@@ -182,12 +192,14 @@ void G_Gameboard::slideBlock()
 
     if(listSlindingBlocks.size() == 0)
     {
+        audioSingleton->playSoundBlockStopSliding();
         timerBlockDisplacementSlide->stop();
     }
 }
 
 void G_Gameboard::slidePlayableCharacter()
 {
+
     bool endSlide = true;
 
     switch (directionPlayableCharacter)
@@ -197,7 +209,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToTop() && playableCharacter->isSlide())
         {
             playableCharacter->moveBy(0, -1);
-            checkPositionEvents();
+            checkPositionEvents('t');
             checkChangeView(directionPlayableCharacter);
 
             if(movable != NULL)
@@ -215,7 +227,7 @@ void G_Gameboard::slidePlayableCharacter()
 
         if(movePlayableCharacterToBottom() && playableCharacter->isSlide())
         {
-            checkPositionEvents();
+            checkPositionEvents('b');
             playableCharacter->moveBy(0, 1);
             checkChangeView(directionPlayableCharacter);
 
@@ -235,7 +247,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToLeft() && playableCharacter->isSlide())
         {
             playableCharacter->moveBy(-1, 0);
-            checkPositionEvents();
+            checkPositionEvents('l');
             checkChangeView(directionPlayableCharacter);
 
             if(movable != NULL)
@@ -254,7 +266,7 @@ void G_Gameboard::slidePlayableCharacter()
         if(movePlayableCharacterPingouinToRight() && playableCharacter->isSlide())
         {
            playableCharacter->moveBy(1, 0);
-           checkPositionEvents();
+           checkPositionEvents('r');
            checkChangeView(directionPlayableCharacter);
 
            if(movable != NULL)
@@ -273,7 +285,8 @@ void G_Gameboard::slidePlayableCharacter()
 
     if(endSlide)
     {
-        checkPositionEvents();
+        audioSingleton->playSoundPlayerSlidingStop();
+        checkPositionEvents(directionPlayableCharacter);
         checkChangeView(directionPlayableCharacter);
         timerPlayableCharacterSlide->stop();
         isSliding=false;
@@ -320,7 +333,9 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         QPoint p = b->getPos();
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-            S_Snow *sunk = new S_Snow(p.x(),p.y());
+
+            audioSingleton->playSoundSunk();
+            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
             sunk->setMovableSunk(b);
 
             b->removeFromScene(mainScene);
@@ -334,13 +349,15 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
+            audioSingleton->playSoundEventLostLevel();
             QString text = tr("Tu as bloqué ta sortie!");
             showDialog(text,"");
 
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-            B_Wall *wall = new B_Wall(p.x(),p.y());
+
+            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y());
             wall->setColor("gray");
             mainScene->addItem(wall);
 
@@ -375,7 +392,8 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
     }
 }
 
-void G_Gameboard::checkPositionEvents()
+
+void G_Gameboard::checkPositionEvents(char sens)
 {
     QList<QGraphicsItem *> CollidingItems = playableCharacter->CollidesCenter();
 
@@ -387,7 +405,11 @@ void G_Gameboard::checkPositionEvents()
             playableCharacter->addObjectToBag(new G_Object(objet->getName()));
             mainScene->removeItem(CollidingItems.at(i));
 
-            if(objet->getName() == G_Object::OBJECT_SHOES)
+            if(objet->getName() == G_Object::OBJECT_FISH)
+            {
+                audioSingleton->playSoundGetObject();
+            }
+            else if(objet->getName() == G_Object::OBJECT_SHOES)
             {
                 playableCharacter->setSlideAble(false);
             }
@@ -395,12 +417,14 @@ void G_Gameboard::checkPositionEvents()
             {
                 if(playerProfil->getNbLive()<G_Profil::NBMAXVIE)
                 {
+                    audioSingleton->playSoundGetObject();
                     playerProfil->setNbLive(playerProfil->getNbLive()+1);
                     lifeList->updateHearts(playerProfil->getNbLive());
                 }
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
+                    audioSingleton->playSound("dialog_interaction");
                     showDialog(text, "");
                 }
             }
@@ -414,13 +438,14 @@ void G_Gameboard::checkPositionEvents()
             S_Dialog *item = dynamic_cast<S_Dialog*>(CollidingItems.at(i));
             mainScene->removeItem(CollidingItems.at(i));
 
+            audioSingleton->playSound("dialog_interaction");
+
             showDialog(item->getText(),item->getImageName());
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
             restartEnigma(text, "water_fall");
-
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
         {
@@ -463,6 +488,15 @@ void G_Gameboard::checkPositionEvents()
                 vb->playableCharacterOn();
             }
         }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_Snow).name())
+        {
+            //The player moved into an enemy's viewblock
+           S_Snow *snow;
+           snow = dynamic_cast<S_Snow*>(CollidingItems.at(i));
+
+           S_Footstep* step = snow->showFootPrint(sens);
+           mainScene->addItem(step);
+       }
     }
     if(playableCharacter->x() == currentLevel->getUnlockEndPoint().x() && playableCharacter->y() == currentLevel->getUnlockEndPoint().y())
     {
@@ -490,6 +524,7 @@ void G_Gameboard::checkChangeView(char sens)
                 playableCharacter->emptySacoche();
                 setLevel(bloc->getNextLevel());
                 setProxy();
+
             }
             else if(bloc->isEndLevel())
             {
@@ -572,7 +607,8 @@ void G_Gameboard::changeView(char sens)
 
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
     loadCheckpoint();
-    checkPositionEvents();
+
+    checkPositionEvents(directionPlayableCharacter);
 
     setViewPosition();
     playerView->setSceneRect(viewPositionX,viewPositionY,windowSizeX,windowSizeY);
@@ -610,34 +646,38 @@ void G_Gameboard::setWidgetPositionTopLeft(QWidget* widget)
     widget->setGeometry(viewPositionX,viewPositionY,width,height);
 }
 
+B_MovableSimple* G_Gameboard::getMovable()
+{
+    return movable;
+}
+
 /**
  * @details Directions: "l":left, "r":right, "t":top, "b":bottom.
  */
 void G_Gameboard::moveBlock(char sens)
 {
-    soundSingleton->playSound("movable_moving");
+//    switch(sens)
+//    {
+//        case 't':
+//            movable->moveBy(0,-1);
+//        break;
+//        case 'b':
+//            movable->moveBy(0,1);
+//        break;
+//        case 'l':
+//            movable->moveBy(-1,0);
+//        break;
+//        case 'r':
+//            movable->moveBy(1,0);
+//        break;
+//    }
 
-    switch(sens)
-    {
-        case 't':
-            movable->moveBy(0,-1);
-        break;
-        case 'b':
-            movable->moveBy(0,1);
-        break;
-        case 'l':
-            movable->moveBy(-1,0);
-        break;
-        case 'r':
-            movable->moveBy(1,0);
-        break;
-    }
-
+    
     fixMovable(movable);
-
 
     if(movable->isSlide())
     {
+        audioSingleton->playSoundBlockSliding();
         SlidingBlock sb;
         sb.slidingMovable = movable;
         sb.direction = sens;
@@ -645,6 +685,10 @@ void G_Gameboard::moveBlock(char sens)
         listSlindingBlocks.append(sb);
 
         timerBlockDisplacementSlide->start(SLIDE_SPEED);
+    }
+    else
+    {
+        audioSingleton->playSound("movable_moving");
     }
 
     movable = NULL;
@@ -677,6 +721,10 @@ bool G_Gameboard::checkPosition(QGraphicsItem *object)
     }
 
     return true;
+}
+void G_Gameboard::setIsSliding(bool isSliding)
+{
+    this->isSliding = isSliding;
 }
 
 //http://doc.qt.digia.com/4.6/qt.html#Key-enum
@@ -786,7 +834,8 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_Space)
             {
-                soundSingleton->setSound("dialog_interaction");
+
+                audioSingleton->playSound("dialog_interaction");
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -802,9 +851,15 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
     }
 }
 
+bool G_Gameboard::isMovableSet()
+{
+    return (movable != NULL);
+}
+
 void G_Gameboard::endMoveCheck(char sens)
 {
-    checkPositionEvents();
+
+    checkPositionEvents(sens);
     checkChangeView(sens);
     if(movable != NULL)
     {
@@ -812,6 +867,7 @@ void G_Gameboard::endMoveCheck(char sens)
     }
     if(playableCharacter->isSlide())
     {
+        audioSingleton->playSoundPlayerSliding();
         isSliding=true;
         directionPlayableCharacter = sens;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
@@ -847,7 +903,8 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
     bool bMove = true;
     for(int i=0; i<CollidingItems.length(); i++)
     {
-        if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall).name())
+
+        if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Alone).name() || typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Group).name())
         {
             bMove = false;
         }
@@ -892,6 +949,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
+
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {
@@ -909,6 +967,8 @@ void G_Gameboard::pauseMenu()
 {
     if(!toggleMenuPause)
     {
+        audioSingleton->playMusicPlaylistMenu();
+        audioSingleton->pauseMusicPlaylist();
         observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
 
         timerPlayableCharacterSlide->stop();
@@ -917,7 +977,8 @@ void G_Gameboard::pauseMenu()
         proxy->show();
         toggleMenuPause = true;
     }else{
-
+        audioSingleton->pauseMusicPlaylistMenu();
+        audioSingleton->playMusicPlaylist();
         proxy->hide();
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
@@ -936,19 +997,21 @@ void G_Gameboard::restartEnigma()
 {
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
-    {   
+          disconnectTimer();
           Memento::getInstance()->restartLevel(mainScene);
           loadCheckpoint();
           playableCharacter->removeTempFromSacoche();
 
-          playerProfil->setNbLive(playerProfil->getNbLive()-1);
-          lifeList->updateHearts(playerProfil->getNbLive());
+
+        lifeList->updateHearts(playerProfil->getNbLive());
+
 
           showProxy();
           setTimer();
     }
     else
     {
+        audioSingleton->playSoundEventLostLevel();
         playerProfil->setNbLive(4);
         restartLevel();
 
@@ -965,13 +1028,15 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
-        Memento::getInstance()->restartLevel(mainScene);
+
+	    disconnectTimer();        Memento::getInstance()->restartLevel(mainScene);
         loadCheckpoint();
 
         playableCharacter->removeTempFromSacoche();
 
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
+
 
         showDialog(text,"",sound);
     }
@@ -989,6 +1054,7 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
 
 void G_Gameboard::restartLevel()
 {
+
     disconnectTimer();
 
     playableCharacter->emptySacoche();
@@ -1001,7 +1067,8 @@ void G_Gameboard::restartLevel()
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
 
-    Memento::getInstance()->saveCheckpoint();
+
+Memento::getInstance()->saveCheckpoint();
 }
 
 void G_Gameboard::loadBonus()
@@ -1051,6 +1118,7 @@ void G_Gameboard::exitGame()
         currentLevel->clearScene();
         W_MenuStart::saveGame(playerProfil);
         close();
+        audioSingleton->playMusicPlaylistMenu();
         break;
     case QMessageBox::RejectRole:
         qDebug() << "Reject";
@@ -1059,6 +1127,7 @@ void G_Gameboard::exitGame()
         qDebug() << "Destruct";
         currentLevel->clearScene();
         close();
+        audioSingleton->playMusicPlaylistMenu();
         break;
     default:
         // should never be reached
@@ -1105,11 +1174,13 @@ void G_Gameboard::setProxy()
     dialogProxy = mainScene->addWidget(dialog);
     dialogProxy->setZValue(90);
     dialogProxy->hide();
-    soundSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
+
+    audioSingleton->setPlayableSounds(true); //activate sounds after the proxy got shown and hidden
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
-    checkPositionEvents();
+
+    checkPositionEvents(directionPlayableCharacter);
 }
 
 void G_Gameboard::showProxy()
@@ -1139,9 +1210,11 @@ void G_Gameboard::linkProxy()
  */
 void G_Gameboard::setLevel(int value)
 {
+
     currentLevel->loadLevel(value);
     observerEnemy->clear();
     mainScene = currentLevel->populateScene();
+
 
     playableCharacter = new P_Penguin(this);
     playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
@@ -1155,7 +1228,11 @@ void G_Gameboard::setLevel(int value)
     W_MenuStart::saveGame(playerProfil);
 
     saveCheckpoint();
-    setViewPosition();
+
+    audioSingleton->playSoundEventStartGame();
+
+    audioSingleton->playMusicPlaylist(value);
+        setViewPosition();
 
     playerView->setScene(mainScene);
     playerView->setSceneRect(viewPositionX,viewPositionY,sizeX*gameSquares,sizeY*gameSquares);
@@ -1164,8 +1241,6 @@ void G_Gameboard::setLevel(int value)
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 
-    soundSingleton->setMusicPlaylist("tutorial");
-    soundSingleton->playMusicPlaylist();
 
     Memento::getInstance()->saveCheckpoint();
 }
@@ -1187,6 +1262,7 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setProxy();
     setTimer();
 }
+
 
 /**
  * @details return the size X
@@ -1214,9 +1290,9 @@ void G_Gameboard::showDialog(QString text, QString image)
 
 void G_Gameboard::showDialog(QString text, QString image, QString sound)
 {
+    audioSingleton->playSound(sound);
     dialog->setText(text,1);
     dialog->setImage(image);
-    soundSingleton->setSound(sound);
     setWidgetPositionCenter(dialog);
     dialogProxy->show();
     dialogToogle = true;

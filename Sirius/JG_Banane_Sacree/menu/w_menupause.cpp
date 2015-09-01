@@ -34,7 +34,7 @@ W_MenuPause::W_MenuPause(QWidget *parent, G_Gameboard* gameboard)
     btnMenuPauseRestartLevel = new QPushButton(tr("Redémarrer la partie"));
     btnMenuPauseIsland = new QPushButton(tr("Aller sur l'île"));
     btnMenuPauseQuit = new QPushButton(tr("Quitter la partie"));
-    btnMenuPauseBonus = new QPushButton(tr("Bonus"));
+    btnMenuPauseBonus = new QPushButton(tr("Plus"));
     btnMenuPauseDelete = new QPushButton(tr("Supprimer la partie"));
 
     btnMenuPauseResume->setStyleSheet(W_Menu::styleBtn);

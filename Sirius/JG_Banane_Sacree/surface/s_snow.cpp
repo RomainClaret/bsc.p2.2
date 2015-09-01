@@ -13,18 +13,28 @@
 
 #include "../surface/s_snow.h"
 #include "../surface/b_movable_simple.h"
+#include "../surface/s_footstep.h"
+#include "../g_gameboard.h"
 
 #include <QBrush>
 #include <QGraphicsItem>
+#include <QGraphicsScene>
+#include <QGraphicsEllipseItem>
 
-S_Snow::S_Snow(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Snow::S_Snow(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
     setDesign();
+    this->scene = scene;
     this->setZValue(2);
+
+    speed = 20;
+    iTime = rand() % 50;
+    movableSunk = false;
 }
-S_Snow::S_Snow(QGraphicsItem *parent) : G_Surface(0, 0, parent)
+S_Snow::S_Snow(QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
     setDesign();
+    this->scene = scene;
     this->setZValue(2);
 }
 
@@ -43,6 +53,8 @@ void S_Snow::setMovableSunk(B_MovableSimple *b)
     setBrush(brush);
 
     this->setZValue(1);
+
+    movableSunk = true;
 }
 
 void S_Snow::setDesign()
@@ -54,7 +66,31 @@ void S_Snow::setDesign()
     setBrush(brush);
 }
 
-void S_Snow::showFootPrint(char sens)
+S_Footstep* S_Snow::showFootPrint(char sens)
 {
+    S_Footstep* footstep = new S_Footstep(this->getPos().x(), this->getPos().y(), sens, 30);
+    return footstep;
+}
 
+void S_Snow::advance(int step)
+{
+//    if(step = 1 && !movableSunk)
+//    {
+//        if(rand() % 2 == 1)
+//        {
+//            iTime ++;
+//            if(iTime % speed == 0)
+//            {
+//                QBrush brush;
+
+//                int iRandRotate = 90*(rand() % 4);
+
+//                QTransform transform;
+//                QTransform trans = transform.rotate(iRandRotate);
+//                brush.setTexture(QPixmap(QPixmap(":/surfaces/surfaces/snowSpark.png").transformed(trans)));
+
+//                setBrush(brush);
+//            }
+//        }
+//    }
 }

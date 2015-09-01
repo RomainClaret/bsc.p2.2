@@ -3,6 +3,9 @@
 
 #include <QGraphicsObject>
 
+class Singleton_Audio;
+class G_Gameboard;
+
 /**
  * @brief The Character class
  * @details Abstract class
@@ -19,7 +22,7 @@ class G_Character : public QGraphicsObject
     Q_PROPERTY(QPointF pos READ pos WRITE setPos)
 
 public:
-    G_Character();
+    G_Character(G_Gameboard* game);
     virtual ~G_Character(){}
     /**
      * @brief boundingRect must be implement to be a QGraphicsItem
@@ -48,17 +51,11 @@ public:
      */
     virtual void moveByPixel(int x, int y)=0;
 
-    virtual void setPosition(int xpos, int ypos);
-
-    //virtual void setPos(int x, int y) {}
-
-protected:
+virtual void setPosition(int xpos, int ypos);bool isMoving();protected:
     QString leftSkin;
     QString rightSkin;
     QString upSkin;
     QString downSkin;
-
-    void advance(int step);
 
     char orientation;
 
@@ -68,6 +65,8 @@ protected:
     QPointF startCurrentMove;
     char currentMove;
     QTimer* timerMover;
+
+    G_Gameboard* game;
 
 private slots:
     /**
@@ -80,6 +79,8 @@ private:
      * @brief stepMoveCharactera step of the character
      */
     virtual void stepMoveCharacter()=0;
+
+    Singleton_Audio *audioSingleton;
 
 };
 

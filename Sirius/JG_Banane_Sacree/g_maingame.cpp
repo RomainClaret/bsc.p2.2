@@ -14,6 +14,7 @@
 #include "g_maingame.h"
 #include "g_profil.h"
 #include "observer_enemy.h"
+#include "singleton_audio.h"
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -22,11 +23,17 @@
 #include <QResizeEvent>
 #include <QPushButton>
 #include <QFormLayout>
+#include <QGLWidget>
+#include <QtCore>
 
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 {
 //    connect(this,SIGNAL(closeEvent()),this,SLOT(G_Gameboard::exitGame()));
+
+    audioSingleton = Singleton_Audio::getInstance();
+
+    audioSingleton->playMusicPlaylistMenu(-2);
 
     toggleGameCreated = false;
     toggleFirstStart = true;
@@ -62,7 +69,13 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     gameView->setSceneRect(viewPositionX,viewPositionY,theGame->sizeX*G_Gameboard::getGameSquares(),theGame->sizeY*G_Gameboard::getGameSquares());
 
     //Set the view position
+    //gameView->setViewport(new QGLWidget);
     gameView->setScene(gameScene);
+
+
+//    gameView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+//    gameView->setViewport(new QGLWidget(QGLFormat(QGL::SampleBuffers)));
+
 
     gameTitle = new QLabel(this);
     gameTitle->setText(tr("James Gouin et la Banane Sacrée"));
@@ -101,6 +114,7 @@ G_MainGame::~G_MainGame()
 
 void G_MainGame::startGame(G_Profil* user)
 {
+    audioSingleton->pauseMusicPlaylistMenu();
     theGame = new G_Gameboard();
     connect(theGame,SIGNAL(refreshMenu()),this,SLOT(refreshGameMenu()));
     refreshGameMenu();
@@ -109,7 +123,15 @@ void G_MainGame::startGame(G_Profil* user)
     theGame->show();
     theGame->setGeometry(this->size().width()/2-windowSizeX/2,this->size().height()/2-windowSizeY/2,windowSizeX,windowSizeY);
     toggleGameCreated = true;
+
+    //OPEN GL
+//    w = new QGLWidget(QGLFormat(QGL::SampleBuffers | QGL::DirectRendering));
+//    gameView->setViewport(w);
+//    gameView->setViewportUpdateMode(QGraphicsView::SmartViewportUpdate);
+//    gameView->update();
+//    w->updateGL();
 }
+
 
 void G_MainGame::refreshGameMenu()
 {
