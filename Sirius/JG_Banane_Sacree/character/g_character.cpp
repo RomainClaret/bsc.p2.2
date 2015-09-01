@@ -29,6 +29,7 @@ void G_Character::moveWithTimer(char orientation)
         startCurrentMove = QPointF(this->pos().x(),this->pos().y());
         currentMove = orientation;
         game->setIsMoving(true);
+        qDebug() << "-----------------I will start the timer";
         timerMover->start(5);
     }
 }
@@ -40,6 +41,7 @@ bool G_Character::isMoving()
 
 void G_Character::stepMove()
 {
+    qDebug() << "CHARACTER : StepMove()";
     stepMoveCharacter();
 }
 
