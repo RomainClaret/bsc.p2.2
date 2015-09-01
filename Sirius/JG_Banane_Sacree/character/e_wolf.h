@@ -37,7 +37,7 @@ public:
      * @param path QList of QPoint for the path
      * @param g Gameboard to depend on
      */
-    E_Wolf(QList<QPoint> path, G_Gameboard *g);
+    E_Wolf(QString position, QList<QPoint> path, G_Gameboard *g);
 };
 
 #endif // E_WOLF_H

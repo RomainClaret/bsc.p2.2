@@ -36,6 +36,9 @@
 
 #include "character/e_wolf.h"
 #include "character/e_fox.h"
+#include "character/e_walrus.h"
+
+#include "memento.h"
 
 #include <QPoint>
 #include <QDebug>
@@ -45,6 +48,11 @@
 #include <QDomNodeList>
 #include <QDomElement>
 #include <QDomDocument>
+
+#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+#else
+    #include <typeinfo.h>
+#endif
 
 int G_Level::S_SNOW = 1;
 
@@ -64,38 +72,10 @@ G_Level::G_Level(int levelNumber, Observer_Enemy* observer, G_Gameboard *game)
     viewStart = new QPoint(0,0);
     unlockEnd = new QPoint(0,0);
 
-    QString fileName = ":/maps/maps/L";
-    fileName.append(QString("%1").arg(levelNumber));
-    fileName.append(".xml");
+    scene = new QGraphicsScene();
 
-    QString errorMsg;
-    int errorLine, errorColumn;
-    doc = new QDomDocument(fileName);
-    QFile file(fileName);
-    if (!file.open(QIODevice::ReadOnly))
-        return;
-    if (!doc->setContent(&file, &errorMsg, &errorLine, &errorColumn))
-    {
-        file.close();
-        qDebug() << "ERROR";
-        qDebug() << "Parsing error, line " << errorLine
-                << " column " << errorColumn
-                << ": " << qPrintable(errorMsg) << endl;
-        return;
-    }
-    file.close();
-
-    QDomElement levelInformation = doc->firstChildElement().firstChildElement();
-    for(QDomElement elem = levelInformation.firstChildElement(); !elem.isNull(); elem = elem.nextSiblingElement())
-    {
-        addLevelInformation(elem);
-    }
-
-    mapSurfaces = (int**)calloc(maxBlocksWidth, sizeof(int*));
-    for(int i=0; i<maxBlocksWidth; i++)
-    {
-        mapSurfaces[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
-    }
+    loadLevel(levelNumber);
+    qDebug() << "NEW!";
 }
 
 QPoint* G_Level::getStartingPoint()
@@ -108,7 +88,7 @@ QPoint* G_Level::getStartingPoint()
  */
 QGraphicsScene* G_Level::populateScene()
 {
-    QGraphicsScene* scene = new QGraphicsScene();
+    clearScene();
 
     QString background = ":/maps/maps/";
     background.append(QString("%1").arg(levelNumber));
@@ -135,11 +115,10 @@ QGraphicsScene* G_Level::populateScene()
 
     //Calculate the autoTextures
     qDebug() << "nombre de texture automatiques : " << listAutoTextures.size();
-    foreach (S_SurfaceAutoTexture* surfaceAuto, listAutoTextures)
+    foreach(S_SurfaceAutoTexture* surfaceAuto, listAutoTextures)
     {
         surfaceAuto->calculateTextures(mapSurfaces, maxBlocksWidth, maxBlocksHeight);
     }
-
 
     return scene;
 }
@@ -196,7 +175,8 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "ITEM")
     {
-        scene->addItem(new G_Object(elem.attribute("type"),x,y));
+        G_Object* item = new G_Object(elem.attribute("type"),x,y);
+        scene->addItem(item);
     }
     else if(tagName == "DOOR")
     {
@@ -204,11 +184,13 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "END")
     {
-        doorList.append(Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene));
+        S_Door* door = Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+        doorList.append(door);
     }
     else if(tagName == "ENEMY")
     {
         QStringList list;
+        QString orientation = "TOP";
         QString ennemiType = elem.attribute("type");
         QList<QPoint> move;
         for(QDomElement child = elem.firstChildElement(); !child.isNull(); child = child.nextSiblingElement())
@@ -221,9 +203,13 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
            {
                 move.append(QPoint(child.attribute("x").toInt(),child.attribute("y").toInt()));
            }
+           else if(child.tagName() == "ORIENTATION")
+           {
+               orientation = child.attribute("value");
+           }
         }
 
-        C_Enemy* enemy = Factory_Character::createEnemy(ennemiType, move, game, observerEnemy, scene);
+        C_Enemy* enemy = Factory_Character::createEnemy(ennemiType, orientation, new QPoint(x,y),move, game, observerEnemy, scene);
 
         for(int i=0; i<list.count(); ++i )
         {
@@ -258,4 +244,60 @@ void G_Level::unlock()
         doorList[i]->setBackground(true);
     }
     doorList.clear();
+}
+
+void G_Level::clearScene()
+{
+    observerEnemy->clear();
+    listAutoTextures.clear();
+    Memento::getInstance()->clear();
+    //scene->clear();
+
+    QList<QGraphicsItem*> itemsList = scene->items();
+    QList<QGraphicsItem*>::iterator iter = itemsList.begin();
+    QList<QGraphicsItem*>::iterator end = itemsList.end();
+    while(iter != end)
+    {
+        QGraphicsItem* item = (*iter);
+        scene->removeItem(item);
+        iter++;
+    }
+}
+
+void G_Level::loadLevel(int levelNumber)
+{
+    this->levelNumber = levelNumber;
+
+    QString fileName = ":/maps/maps/L";
+    fileName.append(QString("%1").arg(levelNumber));
+    fileName.append(".xml");
+
+    QString errorMsg;
+    int errorLine, errorColumn;
+    doc = new QDomDocument(fileName);
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly))
+        return;
+    if (!doc->setContent(&file, &errorMsg, &errorLine, &errorColumn))
+    {
+        file.close();
+        qDebug() << "ERROR";
+        qDebug() << "Parsing error, line " << errorLine
+                << " column " << errorColumn
+                << ": " << qPrintable(errorMsg) << endl;
+        return;
+    }
+    file.close();
+
+    QDomElement levelInformation = doc->firstChildElement().firstChildElement();
+    for(QDomElement elem = levelInformation.firstChildElement(); !elem.isNull(); elem = elem.nextSiblingElement())
+    {
+        addLevelInformation(elem);
+    }
+
+    mapSurfaces = (int**)calloc(maxBlocksWidth, sizeof(int*));
+    for(int i=0; i<maxBlocksWidth; i++)
+    {
+        mapSurfaces[i] = (int*)calloc(maxBlocksHeight, sizeof(int));
+    }
 }

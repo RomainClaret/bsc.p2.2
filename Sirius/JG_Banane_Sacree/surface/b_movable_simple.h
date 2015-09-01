@@ -42,7 +42,7 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    B_MovableSimple(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_MovableSimple(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup.

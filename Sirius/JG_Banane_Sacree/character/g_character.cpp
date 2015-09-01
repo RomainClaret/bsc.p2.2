@@ -75,3 +75,11 @@ QRectF G_Character::boundingRect() const
 {
     return QRectF(1,1,G_Gameboard::getGameSquares()-2,G_Gameboard::getGameSquares()-2);
 }
+
+void G_Character::setPosition(int xpos, int ypos)
+{
+    qDebug() << "xpos " << xpos << "ypos" << ypos;
+    qDebug() << "x " << pos().x() << "y" << pos().y();
+
+    moveBy(xpos - pos().x(), ypos - pos().y());
+}

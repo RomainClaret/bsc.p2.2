@@ -1,7 +1,7 @@
 #include "../surface/factory_surface.h"
 #include "t_movesurface.h"
 #include <QGraphicsScene>
-
+#include "memento.h"
 #include <QDebug>
 
 QString Factory_Surface::SURFACE_ICE = "ICE";
@@ -78,6 +78,8 @@ S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScen
     d->addDialogText(text);
     d->setImage(image);
     scene->addItem(d);
+
+    Memento::getInstance()->setPosSurface(d,new QPoint(xpos, ypos));
     return d;
 }
 
@@ -86,6 +88,8 @@ S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QGraphicsScene* s
     S_Door* d = new S_Door(xpos,ypos);
     d->setLevelEnd(false);
     scene->addItem(d);
+
+    Memento::getInstance()->setPosSurface(d,new QPoint(xpos, ypos));
     return d;
 }
 
@@ -96,6 +100,9 @@ S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QString item, int
     d->setNeededItem(item);
     d->setNbItem(quantity);
     scene->addItem(d);
+
+    Memento::getInstance()->setPosSurface(d,new QPoint(xpos, ypos));
+
     return d;
 }
 
@@ -105,13 +112,17 @@ S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel
     d->setLevelEnd(true);
     d->setNextLevel(nextLevel);
     scene->addItem(d);
+
+    Memento::getInstance()->setPosSurface(d,new QPoint(xpos, ypos));
+
     return d;
 }
 
 B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
 {
-    B_MovableSimple* m = new B_MovableSimple(xpos,ypos);
+    B_MovableSimple* m = new B_MovableSimple(xpos,ypos, scene);
     m->addToScene(scene);
+    Memento::getInstance()->setPosSurface(m,new QPoint(xpos, ypos));
     return m;
 }
 
@@ -119,7 +130,7 @@ B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGra
 {
     B_MovableThrow* m = new B_MovableThrow(xpos,ypos, game);
     m->addToScene(scene);
-    T_MoveSurface timer(m,scene);
+   // Memento::getInstance()->addSpecialEventSurface(m);
     return m;
 }
 

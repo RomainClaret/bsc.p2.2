@@ -19,7 +19,7 @@
  * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
  * Vision of the enemy is created here.
  */
-E_Wolf::E_Wolf(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
+E_Wolf::E_Wolf(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(position, path, g)
 {
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
@@ -38,7 +38,5 @@ E_Wolf::E_Wolf(QList<QPoint> path, G_Gameboard *g) : C_Enemy(path, g)
         viewField.append(vb);
     }
 
-    //il lui faut une orientation de base
-    setOrientation_top();
-
+    resetDefaultOrientation();
 }

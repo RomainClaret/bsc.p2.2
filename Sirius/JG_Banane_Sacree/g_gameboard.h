@@ -117,6 +117,14 @@ public:
      */
     void showDialog(QString text, QString image);
 
+    void showProxy();
+
+    void linkProxy();
+
+    /**
+     * @brief Stop the time recording
+     */
+    void disconnectTimer();
 
 private:
 
@@ -151,11 +159,6 @@ private:
      * @brief Set the time already spent in-game
      */
     void setTimer();
-
-    /**
-     * @brief Stop the time recording
-     */
-    void disconnectTimer();
 
     //Methods related to positioning and level management
     /**

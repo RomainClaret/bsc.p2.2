@@ -28,10 +28,10 @@ Observer_Enemy::Observer_Enemy()
 
 Observer_Enemy::~Observer_Enemy()
 {
-    foreach (C_Enemy* enemy, list_ennemisObserver)
-    {
-        delete enemy;
-    }
+//    foreach (C_Enemy* enemy, list_ennemisObserver)
+//    {
+//        delete enemy;
+//    }
 }
 
 /**
@@ -40,6 +40,11 @@ Observer_Enemy::~Observer_Enemy()
 void Observer_Enemy::addNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
+}
+
+void Observer_Enemy::removeNPCObserver(C_Enemy* ennemi)
+{
+    this-list_ennemisObserver.removeOne(ennemi);
 }
 
 /**
@@ -116,9 +121,15 @@ void Observer_Enemy::changeNPCState(QString state)
 
 void Observer_Enemy::clear()
 {
-    foreach (C_Enemy* enemy, list_ennemisObserver)
-    {
-        delete enemy;
-    }
+//    foreach (C_Enemy* enemy, list_ennemisObserver)
+//    {
+//        try {
+//            delete enemy;
+//        }
+//        catch(...)
+//        {
+//            // DO NOTHING
+//        }
+//    }
     list_ennemisObserver.clear();
 }

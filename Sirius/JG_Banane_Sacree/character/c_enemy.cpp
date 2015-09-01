@@ -51,8 +51,10 @@
  * @details Set the speed at 100, Z value at 2, detectPinguin to false, sens to true and the path given.
  * For the speed: 1 is really fast, 100 is really slow.
  */
-C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
+C_Enemy::C_Enemy(QString orientation, QList<QPoint> path, G_Gameboard *g)
 {
+    this->defaultOrientation = orientation;
+
     game = g;
 
     brain = new C_AI();
@@ -68,18 +70,19 @@ C_Enemy::C_Enemy(QList<QPoint> path, G_Gameboard *g)
     setPath(path);
     setZValue(11);
 
-
     //default state
     state = new State_EnemyPause();
 }
 
 C_Enemy::~C_Enemy()
 {
+    qDebug() << "DELETE ENEMY";
     foreach (S_ViewBlockNPC* vb, viewField)
     {
+        game->getGraphicsScene()->removeItem(vb);
         delete vb;
+        qDebug() << "VB";
     }
-
     delete state;
 }
 
@@ -101,7 +104,12 @@ QPoint C_Enemy::getNPCPos()
 
 void C_Enemy::moveByPixel(int x, int y)
 {
-    //todo
+    foreach (S_ViewBlockNPC* vb, viewField)
+    {
+        vb->moveBy(x,y);
+    }
+
+    QGraphicsItem::moveBy(x,y);
 }
 
 void C_Enemy::setPath(QList<QPoint> path)
@@ -189,6 +197,7 @@ void C_Enemy::playableCharacterDetection()
 void C_Enemy::playableCharacterOnViewBlock()
 {
     this->detectPlayableCharacter = true;
+    game->disconnectTimer();
     game->restartEnigma();
 }
 
@@ -323,12 +332,14 @@ void C_Enemy::setPosViewBloc(S_ViewBlockNPC* bloc, QPoint p)
 
 void C_Enemy::setPos(int x, int y)
 {
+    QGraphicsItem::setPos(x*G_Gameboard::getGameSquares()+1, y*G_Gameboard::getGameSquares()+1);
+
     foreach (S_ViewBlockNPC* vb, viewField)
     {
         setPosViewBloc(vb, QPoint(vb->getLine(), vb->getColonne()));
     }
 
-    QGraphicsItem::setPos(x*G_Gameboard::getGameSquares()+1, y*G_Gameboard::getGameSquares()+1);
+    resetDefaultOrientation();
 }
 
 void C_Enemy::moveBy(int x, int y)
@@ -361,4 +372,34 @@ void C_Enemy::checkPenguin()
 void C_Enemy::addDialog(QString text)
 {
     dialogList.append(text);
+}
+
+void C_Enemy::resetDefaultOrientation()
+{
+    if(this->defaultOrientation == "TOP")
+    {
+        setOrientation_top();
+    }
+    else if(this->defaultOrientation == "BOTTOM")
+    {
+        setOrientation_bottom();
+    }
+    else if(this->defaultOrientation == "LEFT")
+    {
+        setOrientation_left();
+    }
+    else if(this->defaultOrientation == "RIGHT")
+    {
+        setOrientation_right();
+    }
+}
+
+void C_Enemy::setDetectPlayableCharacter(bool value)
+{
+    detectPlayableCharacter = value;
+
+    foreach (S_ViewBlockNPC* vb, viewField)
+    {
+        vb->setStyleActivated();
+    }
 }

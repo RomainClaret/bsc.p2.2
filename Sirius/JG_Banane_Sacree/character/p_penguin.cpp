@@ -80,6 +80,8 @@ P_Penguin::P_Penguin(G_Gameboard* game) : C_Player(game)
 
     iAdvanceSpeed = 0;
 
+    setPlayerOrientation('b');
+
 }
 void P_Penguin::setPos(int x, int y)
 {
@@ -239,13 +241,13 @@ void P_Penguin::moveBack()
     qDebug() << "MoveBack" << x() << " " << y();
 }
 
-void P_Penguin::addToScene(QGraphicsScene* Scene)
+void P_Penguin::addToScene(QGraphicsScene* scene)
 {
-    Scene->addItem(this);
-    Scene->addItem(topCollideBox);
-    Scene->addItem(bottomCollideBox);
-    Scene->addItem(leftCollideBox);
-    Scene->addItem(rightCollideBox);
+    scene->addItem(this);
+    scene->addItem(topCollideBox);
+    scene->addItem(bottomCollideBox);
+    scene->addItem(leftCollideBox);
+    scene->addItem(rightCollideBox);
 }
 
 bool P_Penguin::isSlide()

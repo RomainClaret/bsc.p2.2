@@ -12,6 +12,7 @@ void State_EnemyWalrus::step(C_Enemy* ennemi)
 {
     if(ennemi->time % ennemi->speed == 0 && !ennemi->detectPlayableCharacter)
     {
+        qDebug() << "MOVE";
         ennemi->time = 0;
         QPoint posEnnemi = ennemi->convertPosPoint(ennemi->pos());
 

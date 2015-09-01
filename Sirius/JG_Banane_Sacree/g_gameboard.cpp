@@ -39,6 +39,10 @@
 #include "menu/w_menu.h"
 #include "singleton_audio.h"
 
+#include "character/factory_character.h"
+
+#include "memento.h"
+
 #include <QtWidgets>
 #include <QList>
 #include <QDebug>
@@ -278,9 +282,8 @@ void G_Gameboard::slidePlayableCharacter()
 }
 
 G_Gameboard::~G_Gameboard(){
-    removeAllItems();
-}
 
+}
 
 void G_Gameboard::setViewPosition()
 {
@@ -317,16 +320,17 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         QPoint p = b->getPos();
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-            qDebug() << "Sink it ! : " << p.x() << " " << p.y();
-
             S_Snow *sunk = new S_Snow(p.x(),p.y());
-            //sunk->setColor("white");
             sunk->setMovableSunk(b);
 
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
-
             mainScene->addItem(sunk);
+
+            Memento::getInstance()->addSpecialEventSurface(sunk);
+            Memento::getInstance()->addRemovedSurface(b);
+            Memento::getInstance()->addRemovedSurface((B_Water*)CollidingItems.at(i));
+            Memento::getInstance()->removePosSurface(b);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
@@ -339,6 +343,10 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             B_Wall *wall = new B_Wall(p.x(),p.y());
             wall->setColor("gray");
             mainScene->addItem(wall);
+
+            Memento::getInstance()->addSpecialEventSurface(wall);
+            Memento::getInstance()->addRemovedSurface(b);
+            Memento::getInstance()->removePosSurface(b);
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(G_Object).name())
         {
@@ -425,6 +433,11 @@ void G_Gameboard::checkPositionEvents()
                 || typeid(*CollidingItems.at(i)).name() == typeid(E_Wolf).name()
                 || typeid(*CollidingItems.at(i)).name() == typeid(E_Walrus).name())
         {
+            disconnectTimer();
+
+            C_Enemy* enemy = (C_Enemy*)CollidingItems.at(i);
+            enemy->setDetectPlayableCharacter(false);
+
             restartEnigma();
 
             QString text = "Tu t'es fait repéré par un ennemi";
@@ -432,6 +445,7 @@ void G_Gameboard::checkPositionEvents()
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_MovableThrow).name())
         {
+            disconnectTimer();
             restartEnigma();
 
             QString text = "Tu t'es fait assomé par un bloc de glace";
@@ -476,7 +490,6 @@ void G_Gameboard::checkChangeView(char sens)
                 playableCharacter->emptySacoche();
                 setLevel(bloc->getNextLevel());
                 setProxy();
-                //setFirstDialog();
             }
             else if(bloc->isEndLevel())
             {
@@ -493,6 +506,8 @@ void G_Gameboard::checkChangeView(char sens)
                     }
 
                     changeView(sens);
+
+                    Memento::getInstance()->saveCheckpoint();
                 }
                 else if(bloc->isNeedingItem() && playableCharacter->checkObjectSacoche(bloc->getNeededItem(), bloc->getNbItem()))
                 {
@@ -503,6 +518,8 @@ void G_Gameboard::checkChangeView(char sens)
                     }
 
                     changeView(sens);
+
+                    Memento::getInstance()->saveCheckpoint();
                 }
                 else
                 {
@@ -526,6 +543,7 @@ void G_Gameboard::checkChangeView(char sens)
  */
 void G_Gameboard::changeView(char sens)
 {
+    Memento::getInstance()->saveCheckpoint();
     saveCheckpoint();
     playableCharacter->emptyTempBag();
 
@@ -916,16 +934,18 @@ void G_Gameboard::resumeGame()
 
 void G_Gameboard::restartEnigma()
 {
+    qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
-    {
-        removeAllItems();
-        disconnectTimer();
+    {   
+          Memento::getInstance()->restartLevel(mainScene);
+          loadCheckpoint();
+          playableCharacter->removeTempFromSacoche();
 
-        playerProfil->setNbLive(playerProfil->getNbLive()-1);
-        lifeList->updateHearts(playerProfil->getNbLive());
+          playerProfil->setNbLive(playerProfil->getNbLive()-1);
+          lifeList->updateHearts(playerProfil->getNbLive());
 
-        loadLevel();
-        setProxy();   
+          showProxy();
+          setTimer();
     }
     else
     {
@@ -942,16 +962,16 @@ void G_Gameboard::restartEnigma()
 
 void G_Gameboard::restartEnigma(QString text, QString sound)
 {
+    qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
-        removeAllItems();
-        disconnectTimer();
+        Memento::getInstance()->restartLevel(mainScene);
+        loadCheckpoint();
+
+        playableCharacter->removeTempFromSacoche();
 
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
-
-        loadLevel();
-        setProxy();
 
         showDialog(text,"",sound);
     }
@@ -969,18 +989,19 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
 
 void G_Gameboard::restartLevel()
 {
-    removeAllItems();
     disconnectTimer();
 
     playableCharacter->emptySacoche();
-
     setLevel(currentLevel->getLevelNumber());
     setProxy();
+//    linkProxy();
+//    showProxy();
+//    checkPositionEvents();
 
     playerProfil->setNbLive(playerProfil->getNbLive()-1);
     lifeList->updateHearts(playerProfil->getNbLive());
 
-    //setFirstDialog();
+    Memento::getInstance()->saveCheckpoint();
 }
 
 void G_Gameboard::loadBonus()
@@ -1023,11 +1044,11 @@ void G_Gameboard::exitGame()
     msgBox.addButton(tr("Annuler"), QMessageBox::RejectRole);
     msgBox.addButton(tr("Ne pas Sauvegarder"), QMessageBox::DestructiveRole);
 
-
     int ret = msgBox.exec();
     switch (ret) {
     case QMessageBox::AcceptRole:
         qDebug() << "Accept";
+        currentLevel->clearScene();
         W_MenuStart::saveGame(playerProfil);
         close();
         break;
@@ -1036,6 +1057,7 @@ void G_Gameboard::exitGame()
         break;
     case QMessageBox::DestructiveRole:
         qDebug() << "Destruct";
+        currentLevel->clearScene();
         close();
         break;
     default:
@@ -1043,7 +1065,6 @@ void G_Gameboard::exitGame()
         break;
     }
 }
-
 
 void G_Gameboard::saveCheckpoint()
 {
@@ -1054,6 +1075,7 @@ void G_Gameboard::saveCheckpoint()
 void G_Gameboard::loadCheckpoint()
 {
     playableCharacter->setPos((checkpoint->x()+gameSquares)/gameSquares,(checkpoint->y()+gameSquares)/gameSquares);
+    playableCharacter->setPlayerOrientation('b');
 }
 
 void G_Gameboard::setProxy()
@@ -1069,12 +1091,14 @@ void G_Gameboard::setProxy()
     objectList->reloadObjectList(playableCharacter->getBag());
     setWidgetPositionBottomRight(objectList);
     objectListProxy = mainScene->addWidget(objectList);
+    objectListProxy->setZValue(8);
     objectListProxy->show();
 
     lifeList = new W_Life(this);
     lifeList->updateHearts(playerProfil->getNbLive());
     setWidgetPositionTopLeft(lifeList);
     lifeListProxy = mainScene->addWidget(lifeList);
+    lifeListProxy->setZValue(8);
     lifeListProxy->show();
 
     dialog = new W_Dialog(this);
@@ -1088,43 +1112,62 @@ void G_Gameboard::setProxy()
     checkPositionEvents();
 }
 
+void G_Gameboard::showProxy()
+{
+    proxy->hide();
+    toggleMenuPause = false;
+    objectListProxy->show();
+    lifeListProxy->show();
+    dialogProxy->hide();
+    dialogToogle = false;
+
+    setWidgetPositionBottomRight(objectList);
+
+    checkPositionEvents();
+}
+
+void G_Gameboard::linkProxy()
+{
+    proxy = mainScene->addWidget(menuPauseInGame);
+    objectListProxy = mainScene->addWidget(objectList);
+    lifeListProxy = mainScene->addWidget(lifeList);
+    dialogProxy = mainScene->addWidget(dialog);
+}
+
 /**
  * @details -2 StartMenu, -1 tutorial, 0 main island, 1 level-1, 2 level-2, 3 level-3, 4 level-4, 5 level-5, 6 level-6, 7 final-level
  */
 void G_Gameboard::setLevel(int value)
 {
-    delete currentLevel;
-    playerProfil->setLevel(value);
-
-    currentLevel = new G_Level(value, observerEnemy, this);
-    playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
-    viewRequested = currentLevel->getViewStart();
-    W_MenuStart::saveGame(playerProfil);
-    saveCheckpoint();
-    loadLevel();
-}
-
-void G_Gameboard::loadLevel()
-{
+    currentLevel->loadLevel(value);
     observerEnemy->clear();
-
     mainScene = currentLevel->populateScene();
+
+    playableCharacter = new P_Penguin(this);
+    playableCharacter->setPos(currentLevel->getStartingPoint()->x(),currentLevel->getStartingPoint()->y());
+    playableCharacter->addToScene(mainScene);
+    playableCharacter->removeTempFromSacoche();
+    playableCharacter->setPlayerOrientation('b');
+
+    viewRequested = currentLevel->getViewStart();
+
+    playerProfil->setLevel(value);
+    W_MenuStart::saveGame(playerProfil);
+
+    saveCheckpoint();
     setViewPosition();
 
     playerView->setScene(mainScene);
     playerView->setSceneRect(viewPositionX,viewPositionY,sizeX*gameSquares,sizeY*gameSquares);
 
-    playableCharacter->addToScene(mainScene);
-
-    playableCharacter->removeTempFromSacoche();
-    playableCharacter->setPlayerOrientation('b');
-    loadCheckpoint();
     setTimer();
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 
     soundSingleton->setMusicPlaylist("tutorial");
     soundSingleton->playMusicPlaylist();
+
+    Memento::getInstance()->saveCheckpoint();
 }
 
 void G_Gameboard::setTimer()
@@ -1143,20 +1186,6 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setLevel(playerProfil->getLevel());
     setProxy();
     setTimer();
-}
-
-void G_Gameboard::removeAllItems()
-{
-    QList<QGraphicsItem*> itemsList = mainScene->items();
-    QList<QGraphicsItem*>::iterator iter = itemsList.begin();
-    QList<QGraphicsItem*>::iterator end = itemsList.end();
-    while(iter != end)
-    {
-        QGraphicsItem* item = (*iter);
-        mainScene->removeItem(item);
-        iter++;
-    }
-    mainScene->clear();
 }
 
 /**

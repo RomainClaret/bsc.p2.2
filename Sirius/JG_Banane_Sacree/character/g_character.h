@@ -48,6 +48,10 @@ public:
      */
     virtual void moveByPixel(int x, int y)=0;
 
+    virtual void setPosition(int xpos, int ypos);
+
+    //virtual void setPos(int x, int y) {}
+
 protected:
     QString leftSkin;
     QString rightSkin;

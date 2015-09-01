@@ -13,7 +13,8 @@ S_ViewBlockNPC::S_ViewBlockNPC(int ligne, int colonne, C_Enemy* proprietaire, QG
     this->line = ligne;
     this->column = colonne;
     this->owner = proprietaire;
-    this->setZValue(11);    this->hasStyling = true;
+    this->setZValue(11);
+    this->hasStyling = true;
 
     setStyleActivated();
 }
@@ -128,4 +129,3 @@ void S_ViewBlockNPC::setStyleNone()
     this->setPen(Qt::NoPen);
     hasStyling = false;
 }
-
