@@ -1027,6 +1027,8 @@ void G_Gameboard::restartEnigma()
 
 void G_Gameboard::restartEnigma(QString text, QString sound)
 {
+    audioSingleton->pauseMusicPlaylistMenu();
+    audioSingleton->playMusicPlaylist();
 
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
@@ -1059,6 +1061,9 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
 
 void G_Gameboard::restartLevel()
 {
+    audioSingleton->pauseMusicPlaylistMenu();
+    audioSingleton->playMusicPlaylist();
+
     disconnectTimer();
 
     playableCharacter->emptySacoche();
@@ -1091,6 +1096,9 @@ void G_Gameboard::loadBonus()
 
 void G_Gameboard::returnIsland()
 {
+    audioSingleton->pauseMusicPlaylistMenu();
+    audioSingleton->playMusicPlaylist();
+
     mainScene->removeItem(proxy);
     mainScene->removeItem(objectListProxy);
     mainScene->removeItem(lifeListProxy);
