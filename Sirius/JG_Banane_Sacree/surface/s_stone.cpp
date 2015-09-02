@@ -34,4 +34,6 @@ void S_Stone::setDesign()
     QBrush brush;
     brush.setTexture(QPixmap(":/surfaces/surfaces/stones_init.png"));
     setBrush(brush);
+
+    setZValue(4);
 }
