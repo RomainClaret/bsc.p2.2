@@ -80,7 +80,6 @@ void Memento::restartLevel(QGraphicsScene* mainScene)
     for(int k = 0; k < specialEventSurface.size(); ++k)
     {
         mainScene->removeItem(specialEventSurface.at(k));
-        delete specialEventSurface.at(k);
     }
 
     for(int l = 0; l < removedSurface.size(); ++l)

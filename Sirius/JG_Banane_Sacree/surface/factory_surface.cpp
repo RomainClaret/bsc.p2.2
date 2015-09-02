@@ -135,7 +135,7 @@ B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGra
 {
     B_MovableThrow* m = new B_MovableThrow(xpos,ypos, game);
     m->addToScene(scene);
-   // Memento::getInstance()->addSpecialEventSurface(m);
+    Memento::getInstance()->addSpecialEventSurface(m);
     return m;
 }
 

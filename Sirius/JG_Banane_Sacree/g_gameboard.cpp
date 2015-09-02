@@ -858,7 +858,6 @@ bool G_Gameboard::isMovableSet()
 
 void G_Gameboard::endMoveCheck(char sens)
 {
-
     checkPositionEvents(sens);
     checkChangeView(sens);
     if(movable != NULL)
