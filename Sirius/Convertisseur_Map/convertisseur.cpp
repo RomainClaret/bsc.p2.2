@@ -186,6 +186,7 @@ void Convertisseur::convert()
         QFile fLevel(tiledName);
 //        int k = 0;
 
+        qDebug() << tiledName;
         if(fLevel.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             QTextStream t(&fLevel);
@@ -248,7 +249,7 @@ void Convertisseur::convert()
                     }
                 }
                 qDebug() << line[line_count];
-                if(line[line_count].contains("type=Walls_Blocks_Groups"))
+                if(line[line_count].contains("type=WallsGroup"))
                 {
                     qDebug() << "TYPE OK";
                     line_count ++;
