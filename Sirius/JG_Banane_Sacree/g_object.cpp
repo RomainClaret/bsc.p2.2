@@ -39,7 +39,6 @@ G_Object::G_Object(QString name, QGraphicsItem *parent): G_Surface(0, 0, parent)
     this->nom = new QString(name);
     setZValue(5);
     setDesign();
-    Memento::getInstance()->setPosSurface(this,new QPoint(0, 0));
 }
 
 void G_Object::setDesign()

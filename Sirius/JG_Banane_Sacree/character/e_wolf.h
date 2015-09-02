@@ -38,6 +38,8 @@ public:
      * @param g Gameboard to depend on
      */
     E_Wolf(QString position, QList<QPoint> path, G_Gameboard *g);
+
+    void setSpecialTexture(bool value);
 };
 
 #endif // E_WOLF_H

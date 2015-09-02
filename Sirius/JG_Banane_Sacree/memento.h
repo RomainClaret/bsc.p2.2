@@ -27,6 +27,8 @@ public:
     void removeSpecialEventSurface(QGraphicsScene *scene, G_Surface *movable);
     void addRemovedSurface(G_Surface *element);
 
+    void setSpecialTextureEnemy(bool value);
+
 private:
     Memento();
     static Memento* instance;

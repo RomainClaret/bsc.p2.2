@@ -133,3 +133,12 @@ void Memento::removeSpecialEventSurface(QGraphicsScene* scene, G_Surface* movabl
         }
     }
 }
+
+void Memento::setSpecialTextureEnemy(bool value)
+{
+    QHashIterator<C_Enemy*, QPoint*> j(hashMapCharacter);
+    while (j.hasNext()) {
+        j.next();
+        j.key()->setSpecialTexture(value);
+    }
+}

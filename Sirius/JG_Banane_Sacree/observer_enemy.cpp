@@ -133,3 +133,11 @@ void Observer_Enemy::clear()
 //    }
     list_ennemisObserver.clear();
 }
+
+void Observer_Enemy::setSpecialTexture(bool value)
+{
+    foreach (C_Enemy* enemy, list_ennemisObserver)
+    {
+        enemy->setSpecialTexture(value);
+    }
+}

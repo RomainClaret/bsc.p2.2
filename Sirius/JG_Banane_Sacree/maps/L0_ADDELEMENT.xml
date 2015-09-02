@@ -98,11 +98,6 @@
     <ITEM type="FISH"/>
 	   </LIGNE>
   </COLONNE>
-      <COLONNE position="28">
-     <LIGNE position="25">
-    <ITEM type="FISH"/>
-	   </LIGNE>
-  </COLONNE>
     <COLONNE position="12">
      <LIGNE position="28">
 	<ENEMY type="OTTER">

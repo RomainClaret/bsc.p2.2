@@ -46,7 +46,6 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
 
 E_Walrus::~E_Walrus()
 {
-    qDebug() << "E_WALRUS DELETE";
 }
 
 void E_Walrus::action()
@@ -62,4 +61,23 @@ void E_Walrus::changeState(State_Enemy *)
 {
     delete state;
     this->state = new State_EnemyWalrus();
+}
+
+
+void E_Walrus::setSpecialTexture(bool value)
+{
+    if(value)
+    {
+        leftSkin = ":/characters/characters/walrus_special.png";
+        rightSkin = ":/characters/characters/walrus_special.png";
+        upSkin = ":/characters/characters/walrus_special.png";
+        downSkin = ":/characters/characters/walrus_special.png";
+    }
+    else
+    {
+        leftSkin = ":/characters/characters/walrus_front.png";
+        rightSkin = ":/characters/characters/walrus_front.png";
+        upSkin = ":/characters/characters/walrus_front.png";
+        downSkin = ":/characters/characters/walrus_front.png";
+    }
 }

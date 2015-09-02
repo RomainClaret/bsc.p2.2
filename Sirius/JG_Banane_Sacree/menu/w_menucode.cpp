@@ -27,6 +27,8 @@
 #include "../menu/w_menucode_lineedit.h"
 #include <QLabel>
 
+#include "../memento.h"
+
 W_MenuCode::W_MenuCode(QWidget *parent)
 {
    this->parent = (W_Menu*)parent;
@@ -43,7 +45,6 @@ W_MenuCode::W_MenuCode(QWidget *parent)
 
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
    btnCodeValidate->setStyleSheet(W_Menu::styleBtn);
-
 
    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadBonus()));
    connect(btnCodeValidate, SIGNAL(clicked()),this, SLOT(validateCode()));
@@ -63,7 +64,7 @@ W_MenuCode::W_MenuCode(QWidget *parent)
    hash.insert("Ici, il fait chaud",4);
    hash.insert("I am not from Madagascar",5);
    hash.insert("I am a secret agent",6);
-
+   hash.insert("Même pas peur",7);
 }
 
 void W_MenuCode::setTitleParent()
@@ -93,6 +94,9 @@ void W_MenuCode::validateCode()
         case W_MenuCode::CODE_HOTHOTHOT: qDebug() << "HOTHOTHOT"; break;
         case W_MenuCode::CODE_MADAGASCAR: qDebug() << "madagascar"; break;
         case W_MenuCode::CODE_SECRETAGENT: qDebug() << "secret agent"; break;
+        case W_MenuCode::CODE_NOTSCARED:
+            Memento::getInstance()->setSpecialTextureEnemy(true);
+            break;
         default: refuseCode();
         }
     }
@@ -100,8 +104,6 @@ void W_MenuCode::validateCode()
     {
         refuseCode();
     }
-
-
 }
 
 void W_MenuCode::refuseCode()
