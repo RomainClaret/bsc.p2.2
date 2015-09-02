@@ -23,6 +23,8 @@
 
 #include <menu/w_menucode.h>
 
+//W_Life* W_Life::instance;
+
 W_Life::W_Life(QWidget *)
 {
     totalLife = 0;
@@ -34,15 +36,7 @@ void W_Life::paintEvent(QPaintEvent *)
 {
     QPainter paint(this);
 
-    QString img;
-    if(W_MenuCode::BANANASPECIAL)
-    {
-        img = ":/items/items/banana.png";
-    }
-    else
-    {
-        img = ":/items/items/egg.png";
-    }
+    QString img = ":/items/items/egg.png";
 
     QString totalLifeString = QString::number(totalLife);
     totalLifeString.append("x");

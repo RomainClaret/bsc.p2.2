@@ -29,6 +29,15 @@
         <file>characters/player_step_r.png</file>
         <file>characters/player_step_l.png</file>
         <file>characters/walrus_front.png</file>
+        <file>characters/renard_special_back.png</file>
+        <file>characters/renard_special_front.png</file>
+        <file>characters/renard_special_left.png</file>
+        <file>characters/renard_special_right.png</file>
+        <file>characters/loup_special_back.png</file>
+        <file>characters/loup_special_front.png</file>
+        <file>characters/loup_special_left.png</file>
+        <file>characters/loup_special_right.png</file>
+        <file>characters/walrus_special.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>
@@ -120,5 +129,4 @@
         <file>surfaces/fire_init_03.png</file>
         <file>surfaces/fire_init_04.png</file>
     </qresource>
-    <qresource prefix="/"/>
 </RCC>

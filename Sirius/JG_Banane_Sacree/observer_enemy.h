@@ -63,6 +63,8 @@ public:
      */
     void clear();
 
+    void setSpecialTexture(bool value);
+
 private:
     QList<C_Enemy*> list_ennemisObserver;
 

@@ -27,6 +27,8 @@
 #include "../menu/w_menucode_lineedit.h"
 #include <QLabel>
 
+#include "../memento.h"
+
 W_MenuCode::W_MenuCode(QWidget *parent)
 {
    this->parent = (W_Menu*)parent;
@@ -43,7 +45,6 @@ W_MenuCode::W_MenuCode(QWidget *parent)
 
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
    btnCodeValidate->setStyleSheet(W_Menu::styleBtn);
-
 
    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadBonus()));
    connect(btnCodeValidate, SIGNAL(clicked()),this, SLOT(validateCode()));
@@ -63,7 +64,10 @@ W_MenuCode::W_MenuCode(QWidget *parent)
    hash.insert("Ici, il fait chaud",4);
    hash.insert("I am not from Madagascar",5);
    hash.insert("I am a secret agent",6);
-
+   hash.insert("Même pas peur",7);
+   hash.insert("May the 4th be with you",8);
+   hash.insert("Penguin's force is better",9);
+   hash.insert("Maman!!",10);
 }
 
 void W_MenuCode::setTitleParent()
@@ -88,11 +92,32 @@ void W_MenuCode::validateCode()
         switch(hash[code])
         {
         case W_MenuCode::CODE_HELLO: qDebug() << "HELLO WORLD"; break;
-        case W_MenuCode::CODE_BANANA: qDebug() << "BANANA"; BANANASPECIAL = true; break;
+
+        case W_MenuCode::CODE_BANANA:
+            Memento::getInstance()->setSpecialTextureEgg(true);
+            break;
+
         case W_MenuCode::CODE_HAPPYFEET: qDebug() << "HAPPY FEET"; break;
         case W_MenuCode::CODE_HOTHOTHOT: qDebug() << "HOTHOTHOT"; break;
         case W_MenuCode::CODE_MADAGASCAR: qDebug() << "madagascar"; break;
         case W_MenuCode::CODE_SECRETAGENT: qDebug() << "secret agent"; break;
+
+        case W_MenuCode::CODE_NOTSCARED:
+            Memento::getInstance()->setSpecialTextureEnemy(true);
+            break;
+
+        case W_MenuCode::CODE_IMSCARED:
+            Memento::getInstance()->setSpecialTextureEnemy(false);
+            break;
+
+        case W_MenuCode::CODE_THE4TH:
+            Singleton_Audio::getInstance()->playMusicCheatCode();
+            break;
+
+        case W_MenuCode::CODE_PENGUINFORCE:
+            Singleton_Audio::getInstance()->stopMusicCheatCode();
+            break;
+
         default: refuseCode();
         }
     }
@@ -100,18 +125,18 @@ void W_MenuCode::validateCode()
     {
         refuseCode();
     }
-
-
 }
 
 void W_MenuCode::refuseCode()
 {
     labelCodeResult->setText("Try again...");
+    Singleton_Audio::getInstance()->playSoundUnvalideCheatCode();
 }
 
 void W_MenuCode::acceptCode()
 {
     labelCodeResult->setText("Code validé! Découvre son action sur ton jeu ;)");
+    Singleton_Audio::getInstance()->playSoundValideCheatCode();
 }
 
 bool W_MenuCode::BANANASPECIAL = false;

@@ -68,8 +68,8 @@ public:
 
     void playMusicCheatCode();
     void stopMusicCheatCode();
-    void playSoundCheatCodeValide();
-    void playSoundCheatCodeUnvalide();
+    void playSoundValideCheatCode();
+    void playSoundUnvalideCheatCode();
 
 private:
 

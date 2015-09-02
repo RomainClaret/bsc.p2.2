@@ -356,7 +356,6 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-
             B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y());
             wall->setColor("gray");
             mainScene->addItem(wall);
@@ -386,9 +385,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             S_ViewBlockNPC *vb;
             vb = dynamic_cast<S_ViewBlockNPC*>(CollidingItems.at(i));
             vb->blockOn();
-            //qDebug() << "---- un bloc obstrue la vue";
         }
-
     }
 }
 
@@ -444,8 +441,11 @@ void G_Gameboard::checkPositionEvents(char sens)
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
+            restartEnigma();
+
             QString text = "Plouf, dans l'eau! Tu recommences au dernier checkpoint";
-            restartEnigma(text, "water_fall");
+            audioSingleton->playSoundEventWaterFall();
+            showDialog(text,"");
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
         {
@@ -566,7 +566,7 @@ void G_Gameboard::checkChangeView(char sens)
 
                     showDialog(text,"");
 
-                    playableCharacter->moveBack();
+                    //playableCharacter->moveBack();
                 }
             }
         }
@@ -903,7 +903,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
     bool bMove = true;
     for(int i=0; i<CollidingItems.length(); i++)
     {
-
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Alone).name() || typeid(*CollidingItems.at(i)).name() == typeid(B_Wall_Group).name())
         {
             bMove = false;
@@ -933,7 +932,10 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
                 movable = b;
                 bMove = true;
             }
-            else{
+            else
+            {
+//                qDebug() << "IS MOVABLE TO TOP " <<  b->isMovableToTop();
+//                qDebug() << "CHECK POSITION " << checkPosition(b->getCollideBlocPosition(direction));
                 bMove=false;
             }
         } 
@@ -943,6 +945,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Stone).name())
         {
+            qDebug() << "PROBLEM HERE 2 !!";
             bMove = false;
         }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(E_Otter).name())
@@ -995,63 +998,34 @@ void G_Gameboard::resumeGame()
 
 void G_Gameboard::restartEnigma()
 {
-    qDebug() << "RESTART ENIGMA";
-    if(playerProfil->getNbLive()>0)
-    {
-        playableCharacter->disconnectTimer();
-        disconnectTimer();
-        Memento::getInstance()->restartLevel(mainScene);
-        loadCheckpoint();
-        playableCharacter->removeTempFromSacoche();
-
-        lifeList->updateHearts(playerProfil->getNbLive());
-
-        showProxy();
-        setTimer();
-	playableCharacter->setTimer();	audioSingleton->playSoundEventRestartCheckpoint();    }
-    else
-    {
-
-
-        playerProfil->setNbLive(4);
-        restartLevel();
-
-        QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-
-        showDialog(text,"");
-        audioSingleton->playSoundEventLostLevel();
-    }
-
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
-}
-
-
-void G_Gameboard::restartEnigma(QString text, QString sound)
-{
     audioSingleton->pauseMusicPlaylistMenu();
     audioSingleton->playMusicPlaylist();
 
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
+        playableCharacter->disconnectTimer();
         disconnectTimer();
+
         Memento::getInstance()->restartLevel(mainScene);
         loadCheckpoint();
 
         playableCharacter->removeTempFromSacoche();
-
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
 
-        audioSingleton->playSoundEventRestartCheckpoint();
+        showProxy();
         setTimer();
+        playableCharacter->setTimer();
+
+        audioSingleton->playSoundEventRestartCheckpoint();
     }
     else
     {
         playerProfil->setNbLive(4);
         restartLevel();
 
-        text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+        QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
 
         showDialog(text,"");
         audioSingleton->playSoundEventLostLevel();
@@ -1192,7 +1166,6 @@ void G_Gameboard::setProxy()
     setWidgetPositionCenter(dialog);
     dialogToogle = false;
 
-
     checkPositionEvents(directionPlayableCharacter);
 }
 
@@ -1201,7 +1174,7 @@ void G_Gameboard::showProxy()
     proxy->hide();
     toggleMenuPause = false;
     objectListProxy->show();
-    lifeListProxy->show();
+    lifeListProxy->hide();
     dialogProxy->hide();
     dialogToogle = false;
 

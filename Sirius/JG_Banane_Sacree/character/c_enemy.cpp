@@ -405,3 +405,8 @@ void C_Enemy::setDetectPlayableCharacter(bool value)
         }
     }
 }
+
+void C_Enemy::setSpecialTexture(bool value)
+{
+
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DATA>
  <LEVEL>
-  <SIZE height="15" width="20"/>
+  <SIZE width="20" height="15"/>
   <POSITION x="1" y="1"/>
   <START x="20" y="14"/>
   <END x="12" y="2"/>
@@ -635,6 +635,59 @@
     <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
+  <COLONNE position="11">
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+  </COLONNE>
   <COLONNE position="12">
    <LIGNE position="14">
     <BLOC type="WATER"/>
@@ -997,63 +1050,6 @@
    <LIGNE position="12">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="11">
-   <LIGNE position="14">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="SNOW"/>
-    <ENEMY type="WALRUS">
-     <MOVE x="1" y="1" i="1"/>
-     <MOVE x="18" y="1" i="2"/>
-     <ORIENTATION value="BOTTOM"/>
-    </ENEMY>
    </LIGNE>
   </COLONNE>
  </LEVELITEM>

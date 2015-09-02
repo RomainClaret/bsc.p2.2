@@ -98,6 +98,7 @@ void Memento::clear()
     removedSurface.clear();
     hashMapSurface.clear();
     hashMapCharacter.clear();
+    eggList.clear();
 }
 
 void Memento::addSpecialEventSurface(G_Surface* element)
@@ -131,5 +132,27 @@ void Memento::removeSpecialEventSurface(QGraphicsScene* scene, G_Surface* movabl
             specialEventSurface.at(i)->removeFromScene(scene);
             specialEventSurface.removeAt(i);
         }
+    }
+}
+
+void Memento::setSpecialTextureEnemy(bool value)
+{
+    QHashIterator<C_Enemy*, QPoint*> j(hashMapCharacter);
+    while (j.hasNext()) {
+        j.next();
+        j.key()->setSpecialTexture(value);
+    }
+}
+
+void Memento::addSpecialItemEgg(G_Object *item)
+{
+    eggList.append(item);
+}
+
+void Memento::setSpecialTextureEgg(bool value)
+{
+    for(int i = 0; i < eggList.size(); ++i)
+    {
+        eggList.at(i)->setSpecialTexture(value);
     }
 }

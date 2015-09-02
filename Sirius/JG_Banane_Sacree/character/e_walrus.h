@@ -42,6 +42,8 @@ public:
     void action();
     void changeState(State_Enemy* newState);
 
+    void setSpecialTexture(bool value);
+
 private:
     G_Gameboard* gameBoard;
 };

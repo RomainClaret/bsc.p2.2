@@ -51,7 +51,6 @@ public:
      * @return a player
      */
     static C_Player* createPlayer(int x, int y, QGraphicsScene* scene, G_Gameboard* game);
-
 };
 
 #endif // FACTORY_CHARACTER_H
