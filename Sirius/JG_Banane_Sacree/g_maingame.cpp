@@ -166,7 +166,6 @@ void G_MainGame::soundMuter()
 
     if(audioSingleton->getUsableMusicsPlaylistMenu())
     {
-        qDebug() << "i am here";
         QPixmap pixmapOff(":/icons/audio_off60x60.png");
         QIcon ButtonIconOff(pixmapOff);
         btnSoundMuter->setIcon(ButtonIconOff);
@@ -176,7 +175,6 @@ void G_MainGame::soundMuter()
     }
     else
     {
-        qDebug() << "i am here too";
         QPixmap pixmapOn(":/icons/audio_on60x60.png");
         QIcon ButtonIconOn(pixmapOn);
         btnSoundMuter->setIcon(ButtonIconOn);

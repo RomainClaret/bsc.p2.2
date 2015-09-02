@@ -66,6 +66,8 @@ public:
 
     bool getUsableMusicsPlaylistMenu();
     void setUsableMusicPlaylistMenu(int value);
+    void playSoundInteraction();
+    void playSoundEventWaterFall();
 private:
 
     Singleton_Audio (const Singleton_Audio&){}
@@ -74,7 +76,12 @@ private:
     virtual ~Singleton_Audio();
 
     A_Sound *soundThread;
+    A_Sound *soundThreadLoseLife;
+    A_Sound *soundThreadRestart;
+    A_Sound *soundThreadWaterFall;
+    A_Sound *soundThreadInteraction;
     A_Sound *soundThreadWalking;
+    A_Sound *soundThreadSliding;
     A_Sound *soundThreadMovableSliding;
     A_Sound *soundThreadMovableMoving;
     A_Sound *soundThreadObject;

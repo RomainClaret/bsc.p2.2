@@ -424,7 +424,7 @@ void G_Gameboard::checkPositionEvents(char sens)
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
-                    audioSingleton->playSound("dialog_interaction");
+                    audioSingleton->playSoundInteraction();
                     showDialog(text, "");
                 }
             }
@@ -438,7 +438,7 @@ void G_Gameboard::checkPositionEvents(char sens)
             S_Dialog *item = dynamic_cast<S_Dialog*>(CollidingItems.at(i));
             mainScene->removeItem(CollidingItems.at(i));
 
-            audioSingleton->playSound("dialog_interaction");
+            audioSingleton->playSoundInteraction();
 
             showDialog(item->getText(),item->getImageName());
         }
@@ -688,7 +688,7 @@ void G_Gameboard::moveBlock(char sens)
     }
     else
     {
-        audioSingleton->playSound("movable_moving");
+        audioSingleton->playSoundBlockSliding();
     }
 
     movable = NULL;
@@ -835,7 +835,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             if(event->key() == Qt::Key_Space)
             {
 
-                audioSingleton->playSound("dialog_interaction");
+                audioSingleton->playSoundInteraction();
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -1008,16 +1008,18 @@ void G_Gameboard::restartEnigma()
 
         showProxy();
         setTimer();
-        playableCharacter->setTimer();
-    }
+	playableCharacter->setTimer();	audioSingleton->playSoundEventRestartCheckpoint();    }
     else
     {
-        audioSingleton->playSoundEventLostLevel();
+
+
         playerProfil->setNbLive(4);
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"","lose_life");
+
+        showDialog(text,"");
+        audioSingleton->playSoundEventLostLevel();
     }
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
@@ -1026,6 +1028,7 @@ void G_Gameboard::restartEnigma()
 
 void G_Gameboard::restartEnigma(QString text, QString sound)
 {
+
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
@@ -1047,7 +1050,9 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         restartLevel();
 
         text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"","restart_level");
+
+        showDialog(text,"");
+        audioSingleton->playSoundEventLostLevel();
     }
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
@@ -1286,7 +1291,8 @@ void G_Gameboard::showDialog(QString text, QString image)
 
 void G_Gameboard::showDialog(QString text, QString image, QString sound)
 {
-    audioSingleton->playSound(sound);
+
+    //audioSingleton->playSound(sound);
     dialog->setText(text,1);
     dialog->setImage(image);
     setWidgetPositionCenter(dialog);

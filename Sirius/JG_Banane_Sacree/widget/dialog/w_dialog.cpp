@@ -27,7 +27,6 @@
 W_Dialog::W_Dialog(QWidget *)
 {
     audioSingleton = Singleton_Audio::getInstance();
-    audioSingleton->setSound("dialog_interaction");
     audioSingleton->setPlayableSounds(false); //avoid to have a sounds at map loading while it's opening and hiding
 
     image = new W_DialogImage("loutre.png", this);
