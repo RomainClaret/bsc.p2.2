@@ -34,7 +34,8 @@ void A_MusicPlaylist::run()
 
 void A_MusicPlaylist::stopMusicPlaylist()
 {
-
+    musicPlayer->stop();
+    musicPlaylist->clear();
 }
 
 void A_MusicPlaylist::setMusicPlaylist(int value)
@@ -71,6 +72,27 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
         {
             musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_tutorial.wav"));
         }
+        musicPlaylist->setCurrentIndex(1);
+    }
+
+    if (value == 1)
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_island.wav"));
+        musicPlaylist->setCurrentIndex(1);
+    }
+
+    if (value == 2)
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_1.wav"));
+        musicPlaylist->setCurrentIndex(1);
+    }
+
+    if (value == 3)
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_1_boss.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
@@ -114,6 +136,11 @@ void A_MusicPlaylist::setMusicVolume(int value)
 int A_MusicPlaylist::getMusicVolume()
 {
     return musicPlayer->volume();
+}
+
+bool A_MusicPlaylist::getMusicUsablePlaylist()
+{
+    return usableMusicPlaylist;
 }
 
 void A_MusicPlaylist::pauseMusicPlaylist()

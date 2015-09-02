@@ -105,6 +105,18 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 
     QObject::connect(quitGame,SIGNAL(clicked()),this,SLOT(close()));
     quitGame->setGeometry(windowSizeX/2-quitBtnSizeX/2,windowSizeY/2+menuSizeY/2+35,quitBtnSizeX,quitBtnSizeY);
+
+    btnSoundMuter = new QPushButton(this);
+    btnSoundMuter->setStyleSheet("background: transparent;");
+    //btnSoundMuter->setStyleSheet("background-image: url(:/icons/audio_off60x60.png)");
+    QPixmap pixmap(":/icons/audio_on60x60.png");
+    QIcon ButtonIcon(pixmap);
+    btnSoundMuter->setIcon(ButtonIcon);
+    btnSoundMuter->setIconSize(pixmap.rect().size());
+    btnSoundMuter->setGeometry(windowSizeX-70,windowSizeY-70,60,60);
+
+    connect(btnSoundMuter, SIGNAL (released()), this, SLOT (soundMuter()));
+
 }
 
 G_MainGame::~G_MainGame()
@@ -147,6 +159,31 @@ void G_MainGame::refreshGameMenu()
 
     menuStart->setGeometry(this->size().width()/2-menuSizeX/2,this->size().height()/2-menuSizeY/2,menuSizeX,menuSizeY);
     menuStart->show();
+}
+
+void G_MainGame::soundMuter()
+{
+
+    if(audioSingleton->getUsableMusicsPlaylistMenu())
+    {
+        qDebug() << "i am here";
+        QPixmap pixmapOff(":/icons/audio_off60x60.png");
+        QIcon ButtonIconOff(pixmapOff);
+        btnSoundMuter->setIcon(ButtonIconOff);
+        audioSingleton->setMusicPlaylistVolume(-1);
+        audioSingleton->setUsableMusicPlaylistMenu(false);
+        audioSingleton->pauseMusicPlaylistMenu();
+    }
+    else
+    {
+        qDebug() << "i am here too";
+        QPixmap pixmapOn(":/icons/audio_on60x60.png");
+        QIcon ButtonIconOn(pixmapOn);
+        btnSoundMuter->setIcon(ButtonIconOn);
+        audioSingleton->setMusicPlaylistVolume(100);
+        audioSingleton->playMusicPlaylistMenu();
+    }
+
 }
 
 void G_MainGame::resizeEvent(QResizeEvent * event) {

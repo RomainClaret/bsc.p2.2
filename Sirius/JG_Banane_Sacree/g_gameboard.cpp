@@ -1209,6 +1209,9 @@ void G_Gameboard::linkProxy()
  */
 void G_Gameboard::setLevel(int value)
 {
+    audioSingleton->stopMusicPlaylist();
+    //delete currentLevel;
+    //playerProfil->setLevel(value);
     currentLevel->loadLevel(value);
     observerEnemy->clear();
     mainScene = currentLevel->populateScene();

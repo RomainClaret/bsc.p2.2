@@ -81,6 +81,8 @@ private:
     Singleton_Audio *audioSingleton;
     QGLWidget* w;
 
+    QPushButton *btnSoundMuter;
+
     //Button to quit completly the game.
     QPushButton* quitGame;
 
@@ -134,6 +136,8 @@ public slots:
      * @brief Reloading the Gamemenu.
      */
     void refreshGameMenu();
+
+    void soundMuter();
 
 };
 
