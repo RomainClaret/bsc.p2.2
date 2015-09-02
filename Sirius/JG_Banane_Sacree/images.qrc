@@ -28,6 +28,7 @@
         <file>characters/player_step_b.png</file>
         <file>characters/player_step_r.png</file>
         <file>characters/player_step_l.png</file>
+        <file>characters/walrus_front.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>
