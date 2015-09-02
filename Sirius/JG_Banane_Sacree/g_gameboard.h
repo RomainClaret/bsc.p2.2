@@ -326,6 +326,7 @@ public:
     char directionPlayableCharacter;
     bool isSliding;
     bool isMoving;
+
     B_MovableSimple *movable;
     QList<SlidingBlock> listSlindingBlocks;
     QTimer *timer;
@@ -400,6 +401,13 @@ public slots:
      * @brief SLOT: Called when the user want to delete his party
      */
     void deleteGame();
+
+    /**
+     * @brief isSlidingBloc say if the bloc is moving with the timer
+     * @param bloc
+     * @return
+     */
+    bool isSlidingBloc(B_MovableSimple* bloc);
 };
 
 #endif // G_GAMEBOARD_H

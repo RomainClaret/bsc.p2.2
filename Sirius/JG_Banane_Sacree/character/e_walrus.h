@@ -40,7 +40,6 @@ public:
     ~E_Walrus();
 
     void action();
-    void changeState(State_Enemy* newState);
 
     void setSpecialTexture(bool value);
 

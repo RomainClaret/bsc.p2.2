@@ -216,11 +216,14 @@ void P_Penguin::stepMoveCharacter()
             int pasEffectif = pas;
             if(blocMove != NULL)
             {
-                if(!blocMove->isSlide())
+                if(!game->isSlidingBloc(blocMove))
                 {
-                    pasEffectif = pas /2;
+                    if(!blocMove->isSlide())
+                    {
+                        pasEffectif = pas /2;
+                    }
+                    blocMove->moveByPixel(0,-pasEffectif);
                 }
-                blocMove->moveByPixel(0,-pasEffectif);
             }
 
             this->moveByPixel(0,-pasEffectif);
