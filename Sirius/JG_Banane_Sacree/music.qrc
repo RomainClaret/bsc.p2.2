@@ -7,5 +7,7 @@
         <file>music/level_1_boss.wav</file>
         <file>music/menu.wav</file>
         <file>music/level_island.wav</file>
+        <file>music/cheatcode_cantina.wav</file>
+        <file>music/cheatcode_imperialmarch.wav</file>
     </qresource>
 </RCC>

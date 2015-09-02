@@ -27,10 +27,13 @@ Singleton_Audio::Singleton_Audio()
     soundThreadStartGame = new A_Sound();
     soundThreadSlidingMovable = new A_Sound();
     soundThreadSlidingStop = new A_Sound();
+    soundThreadCheatCodeValide = new A_Sound();
+    soundThreadCheatCodeUnvalide = new A_Sound();
 
     musicThread = new A_Music();
     musicPlaylistMenuThread = new A_MusicPlaylist();
     musicPlaylistInGameThread = new A_MusicPlaylist();
+    musicPlaylistCheatCode = new A_MusicPlaylist();
 
     usableAll(true);
     //usableMusics(true);
@@ -99,6 +102,34 @@ void Singleton_Audio::playSoundEventRestartCheckpoint()
 void Singleton_Audio::playSoundEventWaterFall()
 {
     soundThreadWaterFall->playSound("water_fall");
+}
+
+void Singleton_Audio::playMusicCheatCode()
+{
+    usableMusics(false);
+    muteMusics(true);
+    pauseMusicPlaylistMenu();
+    pauseMusicPlaylist();
+    musicPlaylistCheatCode->playMusicPlaylist(42);
+}
+
+void Singleton_Audio::stopMusicCheatCode()
+{
+    usableMusics(true);
+    muteMusics(false);
+    pauseMusicPlaylistMenu();
+    pauseMusicPlaylist();
+    musicPlaylistCheatCode->stopMusicPlaylist();
+}
+
+void Singleton_Audio::playSoundValideCheatCode()
+{
+    soundThreadCheatCodeValide->playSound("cheatcode_right");
+}
+
+void Singleton_Audio::playSoundUnvalideCheatCode()
+{
+    soundThreadCheatCodeUnvalide->playSound("cheatcode_wrong");
 }
 
 void Singleton_Audio::playSoundEventLostLevel()
