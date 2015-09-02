@@ -130,13 +130,13 @@ void W_MenuCode::validateCode()
 void W_MenuCode::refuseCode()
 {
     labelCodeResult->setText("Try again...");
-    Singleton_Audio::getInstance()->playSoundCheatCodeUnvalide();
+    Singleton_Audio::getInstance()->playSoundUnvalideCheatCode();
 }
 
 void W_MenuCode::acceptCode()
 {
     labelCodeResult->setText("Code validé! Découvre son action sur ton jeu ;)");
-    Singleton_Audio::getInstance()->playSoundCheatCodeValide();
+    Singleton_Audio::getInstance()->playSoundValideCheatCode();
 }
 
 bool W_MenuCode::BANANASPECIAL = false;

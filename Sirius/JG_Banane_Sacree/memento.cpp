@@ -153,6 +153,6 @@ void Memento::setSpecialTextureEgg(bool value)
 {
     for(int i = 0; i < eggList.size(); ++i)
     {
-        eggList.setSpecialTexture(value);
+        eggList.at(i)->setSpecialTexture(value);
     }
 }

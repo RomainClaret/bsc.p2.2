@@ -77,8 +77,6 @@ public:
     static const int CODE_PENGUINFORCE = 9;
     static const int CODE_IMSCARED = 10;
 
-    static bool BANANASPECIAL;
-
 private:
     // Layout
     QFormLayout *layoutMenuPause;
