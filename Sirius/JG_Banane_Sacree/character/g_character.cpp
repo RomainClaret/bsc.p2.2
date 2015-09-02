@@ -12,13 +12,23 @@ G_Character::G_Character(G_Gameboard* game)
     currentMove='c';
 
     this->timerMover = new QTimer();
-    connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
+    setTimer();
 
     setZValue(10);
 
     audioSingleton = Singleton_Audio::getInstance();
 
     this->game = game;
+}
+
+void G_Character::setTimer()
+{
+    connect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
+}
+
+void G_Character::disconnectTimer()
+{
+    disconnect(timerMover, SIGNAL(timeout()), this, SLOT(stepMove()));
 }
 
 void G_Character::moveWithTimer(char orientation)

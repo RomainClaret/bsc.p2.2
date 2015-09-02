@@ -334,7 +334,6 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         QPoint p = b->getPos();
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-
             audioSingleton->playSoundSunk();
             S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
             sunk->setMovableSunk(b);
@@ -999,6 +998,7 @@ void G_Gameboard::restartEnigma()
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
+        playableCharacter->disconnectTimer();
         disconnectTimer();
         Memento::getInstance()->restartLevel(mainScene);
         loadCheckpoint();
@@ -1008,16 +1008,16 @@ void G_Gameboard::restartEnigma()
 
         showProxy();
         setTimer();
-
-        audioSingleton->playSoundEventRestartCheckpoint();
-    }
+	playableCharacter->setTimer();	audioSingleton->playSoundEventRestartCheckpoint();    }
     else
     {
+
 
         playerProfil->setNbLive(4);
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+
         showDialog(text,"");
         audioSingleton->playSoundEventLostLevel();
     }
@@ -1050,6 +1050,7 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         restartLevel();
 
         text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
+
         showDialog(text,"");
         audioSingleton->playSoundEventLostLevel();
     }
