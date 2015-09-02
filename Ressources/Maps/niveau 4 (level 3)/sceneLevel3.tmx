@@ -18,7 +18,7 @@
  </layer>
  <layer name="Walls_Blocks" width="60" height="30" opacity="0.47">
   <data encoding="base64" compression="zlib">
-   eJztzLENAAAIw7B+w/8f8gRTcaSsniTz7Kt4PB6Px+PxeDxen+fur+LxeDwej8fj8Xh93qcXI8c8VQ==
+   eJzt2TEOABAQRFG3cf8barSSXYXI/P+S6RSGxsYYd+ZOZ20lkiRJkv5Ae6OT5hTaXJbc7YTWl4Z2t/bNZt9s9s1m32zUvp3/rFdn1N1TNQs3tgwx
   </data>
  </layer>
  <layer name="Walls_Blocks_Groups" width="60" height="30">
@@ -53,7 +53,7 @@
  </layer>
  <layer name="Water_Blocks" width="60" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+   eJzt1VEKwCAMA9De/57eY/gxEFEGrk2qMdBf21foVsysDGqXjGZfqV2i4myjZH2jYOyj5q1BebPdjldfr+8/cjcrbzGcrPtjGzPcAbuUrFFmtgdpZjvQZrYBbWbPf5I3ou/fZNn9Tl6vIPpksX7NE/3+9cZbZzNFv8+0IqLmrVGytlGy9llxquzr3v+55mz/75oH/epxZg==
   </data>
  </layer>
  <layer name="NoMoves_Blocks" width="60" height="30">
@@ -63,7 +63,7 @@
  </layer>
  <layer name="Snow_Surface" width="60" height="30" opacity="0.53">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+   eJztlzEKwDAMxPL/B3fu5K0U6pyp7Jwgq7CW0lvrmavJ+xP1DYSmN9zL8oVT6SL7wql0kX3hpHJabwUn9dK/92rcOxv3zoW8OzJ03lkZJrdlofdW3Ebvpe8PJe5l+dR06CXf51777LNviu/rf7fyvop9s7uhqnZI5U03gtbjvw==
   </data>
  </layer>
  <layer name="Ice_Surface" width="60" height="30" opacity="0.8">
@@ -83,7 +83,7 @@
  </layer>
  <layer name="Scene_Start" width="60" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+   eJztzgEJAAAIA7AL9s9sDDlsCZYAAAAA9Nr5HgAAQJcDVHMABg==
   </data>
  </layer>
  <layer name="Enemies" width="60" height="30">
@@ -98,7 +98,7 @@
  </layer>
  <layer name="Fire_Blocks" width="60" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+   eJztmcEJwDAMA7P/Vt2sL0EfpTFBAtXyQX7hamEoTrLWO9dmVfc991ao+E7dbNg1OGT6YvJ6+eBkupx9cDJdzj44XUnLqyApr/v/ns3k7U1a3iS69dX5HKUgLW8HFH1x7nXa/Dx5OU5X/pA37byflDftPmfyevngZLqcfXDuvledwZn1qd6RTupTv2UpZ4Ib8tx2Xg==
   </data>
  </layer>
  <layer name="Stone_Blocks" width="60" height="30" opacity="0.36">
