@@ -122,10 +122,16 @@ public:
     QPoint getNPCPos();
 
     /**
+     * @brief getEnemyState return the current state of the Enemy
+     * @return State of the Enemy
+     */
+    State_Enemy* getEnemyState();
+
+    /**
      * @brief changeState replace the state of the enemy with newState
      * @param newState
      */
-    virtual void changeState(State_Enemy* newState);
+    State_Enemy* changeState(State_Enemy* newState);
 
     virtual void action() { }
 

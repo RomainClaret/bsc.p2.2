@@ -14,6 +14,7 @@
 #include "../character/e_fox.h"
 #include "../g_gameboard.h"
 #include "../surface/s_viewblocknpc.h"
+#include "../state/state_enemypatrol.h"
 
 /**
  * @details Set the skin, speed at 10, Z value at 2 and default orientation to top.
@@ -45,4 +46,6 @@ E_Fox::E_Fox(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(pos
     }
 
     resetDefaultOrientation();
+
+    state = new State_EnemyPatrol();
 }

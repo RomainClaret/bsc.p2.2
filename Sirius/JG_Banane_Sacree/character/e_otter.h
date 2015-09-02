@@ -37,7 +37,6 @@ public:
 
 private:
     void playableCharacterDetection();
-    void changeState(State_Enemy* newState);
     bool collide();
     void checkPenguin();
 

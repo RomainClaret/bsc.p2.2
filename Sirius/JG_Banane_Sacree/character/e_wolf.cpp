@@ -14,6 +14,7 @@
 #include "../character/e_wolf.h"
 #include "../g_gameboard.h"
 #include "../surface/s_viewblocknpc.h"
+#include "../state/state_enemypatrol.h"
 
 /**
  * @details Set the skin, speed at 8, Z value at 2 and default orientation to top.
@@ -39,4 +40,6 @@ E_Wolf::E_Wolf(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(p
     }
 
     resetDefaultOrientation();
+
+    state = new State_EnemyPatrol();
 }

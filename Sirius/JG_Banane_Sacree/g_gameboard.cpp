@@ -582,6 +582,9 @@ void G_Gameboard::changeView(char sens)
     saveCheckpoint();
     playableCharacter->emptyTempBag();
 
+    qDebug() << "CHANGE TO PAUSE IN THE OLD VIEW";
+    observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE, viewRequested);
+
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
 
     if(sens == 't')
@@ -618,8 +621,11 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+//    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
+//    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+
+    qDebug() << "RESTORE TO ORIGINAL IN THE CURRENT VIEW";
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -968,7 +974,8 @@ void G_Gameboard::pauseMenu()
     {
         audioSingleton->playMusicPlaylistMenu();
         audioSingleton->pauseMusicPlaylist();
-        observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
+        //observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
+        observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE, viewRequested);
 
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
@@ -982,8 +989,8 @@ void G_Gameboard::pauseMenu()
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
 
-        //TODO : return to the state before PAUSE !
-        observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+        //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+        observerEnemy->switchBackToState(viewRequested);
     }
 }
 
@@ -1021,7 +1028,7 @@ void G_Gameboard::restartEnigma()
         audioSingleton->playSoundEventLostLevel();
     }
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 
@@ -1054,7 +1061,7 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         audioSingleton->playSoundEventLostLevel();
     }
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
 }
 
 void G_Gameboard::restartLevel()
@@ -1242,7 +1249,12 @@ void G_Gameboard::setLevel(int value)
     playerView->setScene(mainScene);
     playerView->setSceneRect(viewPositionX,viewPositionY,sizeX*gameSquares,sizeY*gameSquares);
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->switchBackToState(viewRequested);
+
+    //start with all the enemies in pause
+    observerEnemy->switchAllToPause();
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::setTimer()
@@ -1262,7 +1274,6 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setProxy();
     setTimer();
 }
-
 
 /**
  * @details return the size X

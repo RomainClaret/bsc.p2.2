@@ -42,6 +42,8 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
     viewField.append(vb);
 
     resetDefaultOrientation();
+
+    state = new State_EnemyWalrus();
 }
 
 E_Walrus::~E_Walrus()
@@ -56,10 +58,4 @@ void E_Walrus::action()
     {
         Factory_Surface::createBlocMovableThrow(pos().x()/32, pos().y()/32+1, gameBoard->getGraphicsScene(), gameBoard);
     }
-}
-
-void E_Walrus::changeState(State_Enemy *)
-{
-    delete state;
-    this->state = new State_EnemyWalrus();
 }
