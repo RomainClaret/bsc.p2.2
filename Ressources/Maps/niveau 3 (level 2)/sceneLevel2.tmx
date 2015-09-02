@@ -18,12 +18,12 @@
  </layer>
  <layer name="Walls_Blocks" width="60" height="30" opacity="0.47">
   <data encoding="base64" compression="zlib">
-   eJztlmEKgCAMRrvNzu4tox/CkGzD6Vjb92AUydTXSqXrGxLarZDDGON4lYBvbuCbm2q+1dhZX++9dIXo89sNfHPz+LYhLH1Ff39Yr3Q5/bsg9kybx8Mb+P6bNrnvZPOVsKzHEZHq6zUH614n9c+vb22enPaNRjXfaoznVdQ7F6v15ee3iOw+I8I3FlV9V2L2f2vztdyDWisR
+   eJzt1kEKwCAMRNHeJmfPLbvqJlQjQqHO/AeiEBSGoBjXXDT106jl6ZBXG3m1ueV149Zf8mpzzJtlKHPs75/O+Rp5z5aD9UMtb0ftPe76qyDL/FYDsKf+V13+ri7oL3CO2Bizu72yf9UN820a3g==
   </data>
  </layer>
  <layer name="Walls_Blocks_Groups" width="60" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+   eJzt07EJACAMAEG3yf4bimBlKYLR3EFKxRfSGgAAcEPMqeLX3lhm99wrf1OtFyqrtq96gd9l3/nT79Obi95c9w0d8cIHeA==
   </data>
  </layer>
  <layer name="Solid_Blocks" width="60" height="30" visible="0">
