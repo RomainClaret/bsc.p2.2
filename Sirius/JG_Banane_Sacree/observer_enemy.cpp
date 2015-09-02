@@ -40,9 +40,7 @@ Observer_Enemy::~Observer_Enemy()
 void Observer_Enemy::addNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
-//    hash_enemyPreviousState.insert(ennemi, ennemi->getEnemyState());
-    hash_enemyPreviousState[ennemi] = ennemi->getEnemyState();
-    qDebug() << "add enemy";
+    //hash_enemyPreviousState[ennemi] = ennemi->getEnemyState();
 }
 
 void Observer_Enemy::removeNPCObserver(C_Enemy* ennemi)
@@ -92,8 +90,6 @@ void Observer_Enemy::changeNPCState(QString state, QPoint phase)
                 oldState = enemy->changeState(new State_EnemySleep());
                 delete oldState;
             }
-
-
         }
     }
 }
@@ -149,7 +145,6 @@ void Observer_Enemy::switchToState(QString state, QPoint phase)
             qDebug() << "---Save one state and change it in pos " << phaseX << ", " << phaseY << " to "<< state;
 
             //save the state
-
             hash_enemyPreviousState[enemy] = enemy->getEnemyState();
 
             //change to a new
@@ -171,18 +166,18 @@ void Observer_Enemy::switchToState(QString state, QPoint phase)
 
 void Observer_Enemy::switchAllToPause()
 {
-//    hash_enemyPreviousState.clear();
     foreach (C_Enemy* enemy, list_ennemisObserver)
     {
          qDebug() << "---Save one state and change it to Pause (ALL)";
 
-//         if(hash_enemyPreviousState[enemy] != NULL)
-//         {
-//             delete hash_enemyPreviousState[enemy];
-//         }
+         State_Enemy* OldState = hash_enemyPreviousState[enemy];
 
          hash_enemyPreviousState[enemy] = enemy->getEnemyState();
          enemy->changeState(new State_EnemySleep());
+
+         if(OldState != NULL){
+             delete OldState;
+         }
     }
 }
 
@@ -208,9 +203,6 @@ void Observer_Enemy::switchBackToState(QPoint phase)
             delete state;
         }
     }
-    qDebug() << "states switchBackToState(QPoint phase) OK";
-
-//    hash_enemyPreviousState.clear();
 }
 
 
