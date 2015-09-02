@@ -96,6 +96,14 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
         musicPlaylist->setCurrentIndex(1);
     }
 
+    if (value == 42)
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "cheatcode_cantina.wav"));
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "cheatcode_imperialmarch.wav"));
+        musicPlaylist->setCurrentIndex(1);
+    }
+
 
 
     musicPlayer->setPlaylist(musicPlaylist);

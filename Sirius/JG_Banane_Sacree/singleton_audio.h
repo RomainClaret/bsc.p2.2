@@ -65,6 +65,12 @@ public:
     void setUsableMusicPlaylistMenu(int value);
     void playSoundInteraction();
     void playSoundEventWaterFall();
+
+    void playMusicCheatCode();
+    void stopMusicCheatCode();
+    void playSoundCheatCodeValide();
+    void playSoundCheatCodeUnvalide();
+
 private:
 
     Singleton_Audio (const Singleton_Audio&){}
@@ -86,10 +92,13 @@ private:
     A_Sound *soundThreadSlidingMovable;
     A_Sound *soundThreadSlidingStop;
     A_Sound *soundThreadMovableStopSliding;
+    A_Sound *soundThreadCheatCodeValide;
+    A_Sound *soundThreadCheatCodeUnvalide;
 
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistInGameThread;
     A_MusicPlaylist *musicPlaylistMenuThread;
+    A_MusicPlaylist *musicPlaylistCheatCode;
     bool playableSound;
     bool playableMusic;
     bool playableMusicPlaylist;
