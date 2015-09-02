@@ -274,6 +274,7 @@ void C_Enemy::advance(int step)
     if(step == 1) //répond au second appel
     {
         state->step(this);
+
     }
 }
 
