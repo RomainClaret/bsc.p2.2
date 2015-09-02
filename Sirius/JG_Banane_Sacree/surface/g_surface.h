@@ -82,6 +82,12 @@ public:
 
     virtual void addToScene(QGraphicsScene* scene);
 
+    /**
+     * @brief Remove self to scene.
+     * @param Scene scene to remove self from
+     */
+    virtual void removeFromScene(QGraphicsScene* Scene);
+
 protected:
     /**
      * @brief call by the scene to redraw

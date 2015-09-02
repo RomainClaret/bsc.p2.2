@@ -137,7 +137,8 @@ public:
 
     void setIsMoving(bool isSliding);
 
- void showProxy();void linkProxy();
+    void showProxy();
+    void linkProxy();
     /**
      * @brief Stop the time recording
      */
@@ -375,13 +376,6 @@ public slots:
      * @brief SLOT: Restart the level at the last checkpoint->
      */
     void restartEnigma();
-
-    /**
-     * @brief Restart the level at the last checkpoint with a custom text and sound if life left
-     * @param text to display
-     * @param sound to play
-     */
-    void restartEnigma(QString text, QString sound);
 
     /**
      * @brief SLOT: Restart the level at the beginning

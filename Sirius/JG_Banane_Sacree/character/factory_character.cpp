@@ -24,7 +24,6 @@ QString Factory_Character::ENEMY_FOX = "FOX";
 QString Factory_Character::ENEMY_WALRUS = "WALRUS";
 QString Factory_Character::ENEMY_OTTER = "OTTER";
 
-
 C_Enemy* Factory_Character::createEnemy(QString type, QString position, QPoint* startPoint, QList<QPoint> path, G_Gameboard *g, Observer_Enemy* observer, QGraphicsScene* scene)
 {
     if(type == ENEMY_WOLF)
@@ -64,7 +63,6 @@ C_Enemy* Factory_Character::createEnemy(QString type, QString position, QPoint* 
         return NULL;
     }
 }
-
 
 C_Player* Factory_Character::createPlayer(int x, int y, QGraphicsScene* scene, G_Gameboard* game)
 {

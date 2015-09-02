@@ -27,13 +27,9 @@ E_Fox::E_Fox(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(pos
     speed = 10; //vitesse par défaut
 
     //set self behavior brain
-//    brain->setBrain("killer2");
+    //brain->setBrain("killer2");
 
-    leftSkin = ":/characters/characters/renard_left.png";
-    rightSkin = ":/characters/characters/renard_right.png";
-    upSkin = ":/characters/characters/renard_back.png";
-    downSkin = ":/characters/characters/renard_front.png";
-
+    setSpecialTexture(false);
 
     //Création du champs de vue
     for(int i=1; i<=2; i++)
@@ -48,4 +44,22 @@ E_Fox::E_Fox(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(pos
     resetDefaultOrientation();
 
     state = new State_EnemyPatrol();
+}
+
+void E_Fox::setSpecialTexture(bool value)
+{
+    if(value)
+    {
+        leftSkin = ":/characters/characters/renard_special_left.png";
+        rightSkin = ":/characters/characters/renard_special_right.png";
+        upSkin = ":/characters/characters/renard_special_back.png";
+        downSkin = ":/characters/characters/renard_special_front.png";
+    }
+    else
+    {
+        leftSkin = ":/characters/characters/renard_left.png";
+        rightSkin = ":/characters/characters/renard_right.png";
+        upSkin = ":/characters/characters/renard_back.png";
+        downSkin = ":/characters/characters/renard_front.png";
+    }
 }

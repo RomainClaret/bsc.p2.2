@@ -152,6 +152,8 @@ public:
 
     void setDetectPlayableCharacter(bool value);
 
+    virtual void setSpecialTexture(bool value);
+
 protected:
     /**
      * @brief Moves self by an amount.

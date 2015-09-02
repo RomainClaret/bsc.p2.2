@@ -228,3 +228,11 @@ void Observer_Enemy::clear()
 
     hash_enemyPreviousState.clear();
 }
+
+void Observer_Enemy::setSpecialTexture(bool value)
+{
+    foreach (C_Enemy* enemy, list_ennemisObserver)
+    {
+        enemy->setSpecialTexture(value);
+    }
+}

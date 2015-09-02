@@ -38,7 +38,7 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
 
     //Création du champs de vue
     S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this);
-    //vb->setStyleNone();
+    vb->setStyleNone();
     viewField.append(vb);
 
     resetDefaultOrientation();
@@ -48,7 +48,6 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
 
 E_Walrus::~E_Walrus()
 {
-    qDebug() << "E_WALRUS DELETE";
 }
 
 void E_Walrus::action()
@@ -57,5 +56,24 @@ void E_Walrus::action()
     if(val == 1)
     {
         Factory_Surface::createBlocMovableThrow(pos().x()/32, pos().y()/32+1, gameBoard->getGraphicsScene(), gameBoard);
+    }
+}
+
+
+void E_Walrus::setSpecialTexture(bool value)
+{
+    if(value)
+    {
+        leftSkin = ":/characters/characters/walrus_special.png";
+        rightSkin = ":/characters/characters/walrus_special.png";
+        upSkin = ":/characters/characters/walrus_special.png";
+        downSkin = ":/characters/characters/walrus_special.png";
+    }
+    else
+    {
+        leftSkin = ":/characters/characters/walrus_front.png";
+        rightSkin = ":/characters/characters/walrus_front.png";
+        upSkin = ":/characters/characters/walrus_front.png";
+        downSkin = ":/characters/characters/walrus_front.png";
     }
 }

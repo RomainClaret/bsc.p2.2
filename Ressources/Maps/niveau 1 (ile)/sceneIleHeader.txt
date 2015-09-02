@@ -1,0 +1,11 @@
+[header]
+width=20
+height=15
+viewRequestedX=1
+viewRequestedY=1
+levelStartX=11
+levelStartY=12
+unlockEndX=10
+unlockEndY=11
+tilewidth=32
+tileheight=32

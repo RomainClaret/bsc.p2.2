@@ -41,6 +41,8 @@ public:
 
     void action();
 
+    void setSpecialTexture(bool value);
+
 private:
     G_Gameboard* gameBoard;
 };

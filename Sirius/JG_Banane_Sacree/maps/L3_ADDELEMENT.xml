@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT> <COLONNE position="11">
+   <LIGNE position="1">
+    <ENEMY type="WALRUS">
+     <MOVE x="1" y="1" i="1"/>
+     <MOVE x="18" y="1" i="2"/>
+	 <ORIENTATION value="BOTTOM"/>
+    </ENEMY>
+   </LIGNE>
+</COLONNE>
+</ELEMENT>

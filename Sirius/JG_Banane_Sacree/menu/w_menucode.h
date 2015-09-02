@@ -72,8 +72,10 @@ public:
     static const int CODE_HOTHOTHOT = 4;
     static const int CODE_MADAGASCAR = 5;
     static const int CODE_SECRETAGENT = 6;
-
-    static bool BANANASPECIAL;
+    static const int CODE_NOTSCARED = 7;
+    static const int CODE_THE4TH = 8;
+    static const int CODE_PENGUINFORCE = 9;
+    static const int CODE_IMSCARED = 10;
 
 private:
     // Layout

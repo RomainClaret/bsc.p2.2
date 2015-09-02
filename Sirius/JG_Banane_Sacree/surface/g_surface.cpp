@@ -70,3 +70,9 @@ void G_Surface::addToScene(QGraphicsScene* scene)
 {
     scene->addItem(this);
 }
+
+void G_Surface::removeFromScene(QGraphicsScene* scene)
+{
+    scene->removeItem(this);
+}
+

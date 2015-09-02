@@ -59,6 +59,7 @@ public:
      * @param Scene scene to add self to
      */
     void addToScene(QGraphicsScene* Scene);
+
     /**
      * @brief Remove self to scene.
      * @param Scene scene to remove self from

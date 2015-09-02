@@ -79,7 +79,7 @@ public:
      */
     QPixmap getTexture();
 
-    void repaintElement();
+    void setSpecialTexture(bool value);
 
     static QString OBJECT_EGG;
     static QString OBJECT_SHOES;

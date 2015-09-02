@@ -4059,7 +4059,7 @@
    </LIGNE>
    <LIGNE position="29">
     <BLOC type="SNOW"/>
-    <END nextLevel="1"/>
+    <END nextLevel="79"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="11">
@@ -4209,7 +4209,6 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="15">
-   <DOOR/>
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="16">
@@ -4250,7 +4249,7 @@
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="SNOW"/>
-    <DOOR nbItem="5" item="FISH"/>
+    <DOOR item="FISH" nbItem="5"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="6">
@@ -4448,7 +4447,7 @@
    <LIGNE position="3">
     <BLOC type="SNOW"/>
     <ITEM type="FISH"/>
-    <DIALOG text="Bravo! Retourne me voir pour me donner tes poissons!" position="10" image="loutre.png"/>
+    <DIALOG position="10" text="Bravo! Retourne me voir pour me donner tes poissons!" image="loutre.png"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="19">
@@ -4557,35 +4556,20 @@
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire repérer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité" position="9" image="loutre.png"/>
+    <DIALOG position="9" text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire repérer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité" image="loutre.png"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">
-   <LIGNE position="2">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WATER"/>
-   </LIGNE>
    <LIGNE position="0">
-    <BLOC type="WATER"/>
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="1">
-    <BLOC type="WATER"/>
     <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
    </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="WATER"/>
-    <BLOC type="WALL"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="WATER"/>
-    <BLOC type="WALL"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="WATER"/>
-    <BLOC type="WALL"/>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="WALL"/>
@@ -4612,6 +4596,21 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="10">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="14">
     <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
    </LIGNE>
@@ -4673,11 +4672,11 @@
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DOOR nbItem="1" item="FISH"/>
+    <DOOR item="FISH" nbItem="1"/>
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG text="James Gouin a peur de mouiller son noeud papillon et ne peut pas nager ! Essaye de te frayer un chemin grâce aux blocs !" position="8"/>
+    <DIALOG position="8" text="James Gouin a peur de mouiller son noeud papillon et ne peut pas nager ! Essaye de te frayer un chemin grâce aux blocs !"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="54">
@@ -4771,11 +4770,11 @@
    </LIGNE>
    <LIGNE position="15">
     <BLOC type="ICE"/>
-    <DOOR nbItem="1" item="FISH"/>
+    <DOOR item="FISH" nbItem="1"/>
    </LIGNE>
    <LIGNE position="14">
     <BLOC type="SNOW"/>
-    <DIALOG text="Il fallait s'y attendre, les bottes fournies par l'organisation ne valent pas deux sous. Tu n'as désormais plus de bottes. Attention, tu dois donc gérer tes glissades !" position="7"/>
+    <DIALOG position="7" text="Il fallait s'y attendre, les bottes fournies par l'organisation ne valent pas deux sous. Tu n'as désormais plus de bottes. Attention, tu dois donc gérer tes glissades !"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="22">
@@ -4874,7 +4873,7 @@
     <ITEM type="BONUS"/>
     <BLOC type="SNOW"/>
     <ITEM type="EGG"/>
-    <DIALOG text="Ca y'est, tu as ta première vie ! Bravo ! Prends-en bien soin car tu perdras une vie à chaque fois que tu recommences un niveau à un checkpoint! Si tu perds toutes tes vies, tu recommences au tout début du niveau. Tu peux voir la quantité de vies qui te reste en haut à gauche." position="4" image="loutre.png"/>
+    <DIALOG position="4" text="Ca y'est, tu as ta première vie ! Bravo ! Prends-en bien soin car tu perdras une vie à chaque fois que tu recommences un niveau à un checkpoint! Si tu perds toutes tes vies, tu recommences au tout début du niveau. Tu peux voir la quantité de vies qui te reste en haut à gauche." image="loutre.png"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="18">
@@ -4969,7 +4968,7 @@
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une énigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te coûtera une vie à chaque fois!" position="2" image="loutre.png"/>
+    <DIALOG position="2" text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une énigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te coûtera une vie à chaque fois!" image="loutre.png"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="20">
@@ -5074,11 +5073,11 @@
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DOOR nbItem="4" item="FISH"/>
+    <DOOR item="FISH" nbItem="4"/>
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? Déplace des blocs pour accéder à ton premier poisson! Mais avant toute chose, ce voyage jusqu'à l'iceberg t'a épuisé !  Tu peux aller récupérer un petit peu de vie grâce à l'oeuf ici en haut!" position="3" image="loutre.png"/>
+    <DIALOG position="3" text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? Déplace des blocs pour accéder à ton premier poisson! Mais avant toute chose, ce voyage jusqu'à l'iceberg t'a épuisé !  Tu peux aller récupérer un petit peu de vie grâce à l'oeuf ici en haut!" image="loutre.png"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="40">
@@ -5196,11 +5195,11 @@
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DOOR nbItem="3" item="FISH"/>
+    <DOOR item="FISH" nbItem="3"/>
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG text="Ouah! De la glace! Afin de t'aider, l'organisation te mets à disposition des super bottes d'espion qui t'empêchent de glisser. Mais attention, les blocs glissent jusqu'à rencontrer un mur ou un autre bloc!" position="6"/>
+    <DIALOG position="6" text="Ouah! De la glace! Afin de t'aider, l'organisation te mets à disposition des super bottes d'espion qui t'empêchent de glisser. Mais attention, les blocs glissent jusqu'à rencontrer un mur ou un autre bloc!"/>
     <ITEM type="SHOES"/>
    </LIGNE>
   </COLONNE>
@@ -5304,7 +5303,7 @@
    </LIGNE>
    <LIGNE position="25">
     <BLOC type="SNOW"/>
-    <DIALOG text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas à droite se trouve ta sacoche, elle te présentera la liste des objets que tu possèdes. " position="5" image="loutre.png"/>
+    <DIALOG position="5" text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas à droite se trouve ta sacoche, elle te présentera la liste des objets que tu possèdes. " image="loutre.png"/>
     <ITEM type="FISH"/>
     <ITEM type="FISH"/>
    </LIGNE>
@@ -5414,7 +5413,6 @@
      <DIALOG text="N'oubliez pas de me ramener mes poissons"/>
      <DIALOG text="Je ne te laisserai pas passer sans un cadeau... "/>
      <DIALOG text="Qu'est-ce que j'ai faim!"/>
-	 <ORIENTATION value="TOP"/>
     </ENEMY>
    </LIGNE>
   </COLONNE>
@@ -5509,9 +5507,16 @@
    </LIGNE>
    <LIGNE position="6">
     <BLOC type="SNOW"/>
-	<ENEMY type="WOLF">
-     <MOVE x="15" y="6" i="1"/>
-	 <ORIENTATION value="TOP"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE x="8" y="9" i="1"/>
+     <MOVE x="5" y="9" i="2"/>
+     <MOVE x="5" y="12" i="3"/>
+     <MOVE x="8" y="12" i="4"/>
+     <MOVE x="8" y="9" i="5"/>
+     <MOVE x="11" y="9" i="6"/>
+     <MOVE x="11" y="12" i="7"/>
+     <MOVE x="8" y="12" i="8"/>
     </ENEMY>
    </LIGNE>
   </COLONNE>
@@ -5606,24 +5611,17 @@
    </LIGNE>
    <LIGNE position="1">
     <BLOC type="SNOW"/>
+    <ENEMY type=""/>
     <ENEMY type="FOX">
      <MOVE x="8" y="1" i="1"/>
      <MOVE x="8" y="7" i="2"/>
-	 <ORIENTATION value="BOTTOM"/>
     </ENEMY>
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="SNOW"/>
-	<ENEMY type="FOX">
-     <MOVE x="8" y="9" i="1"/>
-     <MOVE x="5" y="9" i="2"/>
-     <MOVE x="5" y="12" i="3"/>
-     <MOVE x="8" y="12" i="4"/>
-     <MOVE x="8" y="9" i="5"/>
-     <MOVE x="11" y="9" i="6"/>
-     <MOVE x="11" y="12" i="7"/>
-     <MOVE x="8" y="12" i="8"/>
-	 <ORIENTATION value="BOTTOM"/>
+    <ENEMY type=""/>
+    <ENEMY type="WOLF">
+     <MOVE x="15" y="6" i="1"/>
     </ENEMY>
    </LIGNE>
   </COLONNE>

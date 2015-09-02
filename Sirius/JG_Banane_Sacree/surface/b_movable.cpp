@@ -90,13 +90,13 @@ void B_Movable::setDesign(int xpos, int ypos)
     bottomCollideBox = new QGraphicsRectItem(size*xpos+1, size*ypos+size+1, size-2, size-2);
     topCollideBox = new QGraphicsRectItem(size*xpos+1, size*ypos-size+1, size-2, size-2);
 
-    leftCollideBox->setPen(Qt::NoPen);
-    rightCollideBox->setPen(Qt::NoPen);
-    bottomCollideBox->setPen(Qt::NoPen);
-    topCollideBox->setPen(Qt::NoPen);
+//    leftCollideBox->setPen(Qt::NoPen);
+//    rightCollideBox->setPen(Qt::NoPen);
+//    bottomCollideBox->setPen(Qt::NoPen);
+//    topCollideBox->setPen(Qt::NoPen);
 
     //BRUSH COLLIDE
-    /*
+
     QBrush brushCollide;
     brushCollide.setStyle(Qt::Dense4Pattern);
     brushCollide.setColor("black");
@@ -108,7 +108,7 @@ void B_Movable::setDesign(int xpos, int ypos)
     rightCollideBox->setZValue(50);
     bottomCollideBox->setZValue(50);
     topCollideBox->setZValue(50);
-    */
+
 }
 
 void B_Movable::setPosition(int xpos, int ypos)
@@ -190,9 +190,13 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
            typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||
            typeid(*l.at(i)).name() == typeid(E_Walrus).name()||
-           typeid(*l.at(i)).name() == typeid(S_Fire).name() ||
-           typeid(*l.at(i)).name() == typeid(S_Stone).name())
+           typeid(*l.at(i)).name() == typeid(S_Fire).name())
         {
+            return false;
+        }
+        else if(typeid(*l.at(i)).name() == typeid(S_Stone).name())
+        {
+            qDebug() << "PROBLEM HERE!!";
             return false;
         }
     }
