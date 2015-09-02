@@ -1275,6 +1275,18 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setTimer();
 }
 
+bool G_Gameboard::isSlidingBloc(B_MovableSimple* bloc)
+{
+    bool isSliding = false;
+    foreach (SlidingBlock slidingBloc, listSlindingBlocks) {
+        if(slidingBloc.slidingMovable == bloc)
+        {
+            isSliding = true;
+        }
+    }
+    return isSliding;
+}
+
 /**
  * @details return the size X
  */
