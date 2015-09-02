@@ -72,7 +72,7 @@ private:
     Singleton_Audio();
     virtual ~Singleton_Audio();
 
-    A_Sound *soundThread;
+    A_Sound *soundThreadStartGame;
     A_Sound *soundThreadLoseLife;
     A_Sound *soundThreadRestart;
     A_Sound *soundThreadWaterFall;
@@ -85,6 +85,7 @@ private:
     A_Sound *soundThreadSunk;
     A_Sound *soundThreadSlidingMovable;
     A_Sound *soundThreadSlidingStop;
+    A_Sound *soundThreadMovableStopSliding;
 
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistInGameThread;
