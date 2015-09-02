@@ -17,8 +17,6 @@ public:
     void setPlayableSounds(bool playableStatus);
     void setSound(QString soundQUrl);
     void setMusic(QString music);
-    void playSound();
-    void playSound(QString soundQUrl);
     void playMusic();
     void playMusic(QString music);
     void pauseMusic();
@@ -28,7 +26,6 @@ public:
     void playMusicPlaylistWithIntro();
     void pauseMusicPlaylist();
     void resumeMusicPlaylist();
-    void stopSound();
     void setPlayableMusicPlaylist(bool playable);
     bool getPlaybleMusicPlaylist();
     void playSoundPlayerWalking();
@@ -75,7 +72,7 @@ private:
     Singleton_Audio();
     virtual ~Singleton_Audio();
 
-    A_Sound *soundThread;
+    A_Sound *soundThreadStartGame;
     A_Sound *soundThreadLoseLife;
     A_Sound *soundThreadRestart;
     A_Sound *soundThreadWaterFall;
@@ -88,6 +85,7 @@ private:
     A_Sound *soundThreadSunk;
     A_Sound *soundThreadSlidingMovable;
     A_Sound *soundThreadSlidingStop;
+    A_Sound *soundThreadMovableStopSliding;
 
     A_Music *musicThread;
     A_MusicPlaylist *musicPlaylistInGameThread;

@@ -1040,7 +1040,7 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
 
-        showDialog(text,"",sound);
+        audioSingleton->playSoundEventRestartCheckpoint();
         setTimer();
     }
     else
@@ -1281,17 +1281,6 @@ int G_Gameboard::getSizeY()
 
 void G_Gameboard::showDialog(QString text, QString image)
 {
-    dialog->setText(text,1);
-    dialog->setImage(image);
-    setWidgetPositionCenter(dialog);
-    dialogProxy->show();
-    dialogToogle = true;
-}
-
-void G_Gameboard::showDialog(QString text, QString image, QString sound)
-{
-
-    //audioSingleton->playSound(sound);
     dialog->setText(text,1);
     dialog->setImage(image);
     setWidgetPositionCenter(dialog);
