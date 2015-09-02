@@ -51,7 +51,13 @@ public:
      */
     virtual void moveByPixel(int x, int y)=0;
 
-virtual void setPosition(int xpos, int ypos);bool isMoving();protected:
+    void setTimer();
+    void disconnectTimer();
+
+    virtual void setPosition(int xpos, int ypos);
+    bool isMoving();
+
+protected:
     QString leftSkin;
     QString rightSkin;
     QString upSkin;
