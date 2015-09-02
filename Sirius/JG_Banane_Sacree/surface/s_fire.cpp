@@ -17,24 +17,35 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
-S_Fire::S_Fire(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Fire::S_Fire(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
 {
     setDesign();
 }
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-S_Fire::S_Fire(QGraphicsItem *parent) : G_Surface(0, 0, parent)
+S_Fire::S_Fire(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
 {
     setDesign();
 }
 
 void S_Fire::setDesign()
 {
+    texture_init = QPixmap(":/surfaces/surfaces/fire_init_01.png");
+    texturesAnim.append(QPixmap(":/surfaces/surfaces/fire_init_02.png"));
+    texturesAnim.append(QPixmap(":/surfaces/surfaces/fire_init_03.png"));
+    texturesAnim.append(QPixmap(":/surfaces/surfaces/fire_init_04.png"));
+
+    texturesAnim.append(texture_init);
+
     QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::red);
+    brush.setTexture(texture_init);
     setBrush(brush);
 
     setZValue(4);
+}
+
+void S_Fire::calculateTextures(int** mapSurfaces, int width, int height)
+{
+    //rien
 }

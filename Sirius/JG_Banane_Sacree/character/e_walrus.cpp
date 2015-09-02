@@ -31,14 +31,14 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
     // 1 étant très rapide, 100 étant très lent
     speed = 7;
 
-    leftSkin = ":/characters/characters/renard_front.png";
-    rightSkin = ":/characters/characters/renard_front.png";
-    upSkin = ":/characters/characters/renard_front.png";
-    downSkin = ":/characters/characters/renard_front.png";
+    leftSkin = ":/characters/characters/walrus_front.png";
+    rightSkin = ":/characters/characters/walrus_front.png";
+    upSkin = ":/characters/characters/walrus_front.png";
+    downSkin = ":/characters/characters/walrus_front.png";
 
     //Création du champs de vue
     S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this);
-    //vb->setStyleNone();
+    vb->setStyleNone();
     viewField.append(vb);
 
     resetDefaultOrientation();

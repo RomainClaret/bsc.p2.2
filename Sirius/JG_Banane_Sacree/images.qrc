@@ -28,6 +28,7 @@
         <file>characters/player_step_b.png</file>
         <file>characters/player_step_r.png</file>
         <file>characters/player_step_l.png</file>
+        <file>characters/walrus_front.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>items/egg.png</file>
@@ -113,6 +114,11 @@
         <file>surfaces/wallGroup_lb.png</file>
         <file>surfaces/wallGroup_rb.png</file>
         <file>surfaces/wallGroup_b.png</file>
+        <file>surfaces/stones_init.png</file>
+        <file>surfaces/fire_init_01.png</file>
+        <file>surfaces/fire_init_02.png</file>
+        <file>surfaces/fire_init_03.png</file>
+        <file>surfaces/fire_init_04.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

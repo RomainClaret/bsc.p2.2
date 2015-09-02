@@ -32,7 +32,6 @@ S_Stone::S_Stone(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 void S_Stone::setDesign()
 {
     QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::black);
+    brush.setTexture(QPixmap(":/surfaces/surfaces/stones_init.png"));
     setBrush(brush);
 }

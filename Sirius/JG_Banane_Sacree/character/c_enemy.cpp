@@ -173,6 +173,8 @@ void C_Enemy::playableCharacterDetection()
                 if(typeid(*CollidingItems.at(i)).name() == typeid(P_Penguin).name())
                 {
                     vb->setStylePlayableCharacterOn();
+                    P_Penguin* penguin = (P_Penguin*)CollidingItems.at(i);
+                    penguin->endMove();
                     playableCharacterOnViewBlock();
                 }
             }
@@ -274,6 +276,7 @@ void C_Enemy::advance(int step)
     if(step == 1) //répond au second appel
     {
         state->step(this);
+
     }
 }
 

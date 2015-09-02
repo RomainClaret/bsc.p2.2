@@ -79,7 +79,7 @@ void Memento::restartLevel(QGraphicsScene* mainScene)
 
     for(int k = 0; k < specialEventSurface.size(); ++k)
     {
-        mainScene->removeItem(specialEventSurface.at(k));
+        specialEventSurface.at(k)->removeFromScene(mainScene);
     }
 
     for(int l = 0; l < removedSurface.size(); ++l)
@@ -128,7 +128,7 @@ void Memento::removeSpecialEventSurface(QGraphicsScene* scene, G_Surface* movabl
     {
         if(specialEventSurface.at(i) == movable)
         {
-            scene->removeItem(specialEventSurface.at(i));
+            specialEventSurface.at(i)->removeFromScene(scene);
             specialEventSurface.removeAt(i);
         }
     }
