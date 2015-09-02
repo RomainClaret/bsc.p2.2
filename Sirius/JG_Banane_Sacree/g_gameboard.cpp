@@ -334,7 +334,6 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         QPoint p = b->getPos();
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
-
             audioSingleton->playSoundSunk();
             S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
             sunk->setMovableSunk(b);
@@ -425,7 +424,7 @@ void G_Gameboard::checkPositionEvents(char sens)
                 else
                 {
                     QString text(tr("Le nombre de vies maximum de %1 a été atteint").arg(G_Profil::NBMAXVIE));
-                    audioSingleton->playSound("dialog_interaction");
+                    audioSingleton->playSoundInteraction();
                     showDialog(text, "");
                 }
             }
@@ -439,7 +438,7 @@ void G_Gameboard::checkPositionEvents(char sens)
             S_Dialog *item = dynamic_cast<S_Dialog*>(CollidingItems.at(i));
             mainScene->removeItem(CollidingItems.at(i));
 
-            audioSingleton->playSound("dialog_interaction");
+            audioSingleton->playSoundInteraction();
 
             showDialog(item->getText(),item->getImageName());
         }
@@ -689,7 +688,7 @@ void G_Gameboard::moveBlock(char sens)
     }
     else
     {
-        audioSingleton->playSound("movable_moving");
+        audioSingleton->playSoundBlockSliding();
     }
 
     movable = NULL;
@@ -836,7 +835,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
             if(event->key() == Qt::Key_Space)
             {
 
-                audioSingleton->playSound("dialog_interaction");
+                audioSingleton->playSoundInteraction();
                 dialogProxy->hide();
                 dialogToogle = false;
             }
@@ -859,7 +858,6 @@ bool G_Gameboard::isMovableSet()
 
 void G_Gameboard::endMoveCheck(char sens)
 {
-
     checkPositionEvents(sens);
     checkChangeView(sens);
     if(movable != NULL)
@@ -999,6 +997,7 @@ void G_Gameboard::restartEnigma()
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
+        playableCharacter->disconnectTimer();
         disconnectTimer();
         Memento::getInstance()->restartLevel(mainScene);
         loadCheckpoint();
@@ -1008,15 +1007,18 @@ void G_Gameboard::restartEnigma()
 
         showProxy();
         setTimer();
-    }
+	playableCharacter->setTimer();	audioSingleton->playSoundEventRestartCheckpoint();    }
     else
     {
-        audioSingleton->playSoundEventLostLevel();
+
+
         playerProfil->setNbLive(4);
         restartLevel();
 
         QString text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"","lose_life");
+
+        showDialog(text,"");
+        audioSingleton->playSoundEventLostLevel();
     }
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
@@ -1025,6 +1027,7 @@ void G_Gameboard::restartEnigma()
 
 void G_Gameboard::restartEnigma(QString text, QString sound)
 {
+
     qDebug() << "RESTART ENIGMA";
     if(playerProfil->getNbLive()>0)
     {
@@ -1037,7 +1040,7 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         playerProfil->setNbLive(playerProfil->getNbLive()-1);
         lifeList->updateHearts(playerProfil->getNbLive());
 
-        showDialog(text,"",sound);
+        audioSingleton->playSoundEventRestartCheckpoint();
         setTimer();
     }
     else
@@ -1046,7 +1049,9 @@ void G_Gameboard::restartEnigma(QString text, QString sound)
         restartLevel();
 
         text = "Tu as perdu toutes tes vies! Tu recommences au début du niveau.";
-        showDialog(text,"","restart_level");
+
+        showDialog(text,"");
+        audioSingleton->playSoundEventLostLevel();
     }
 
     observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
@@ -1276,16 +1281,6 @@ int G_Gameboard::getSizeY()
 
 void G_Gameboard::showDialog(QString text, QString image)
 {
-    dialog->setText(text,1);
-    dialog->setImage(image);
-    setWidgetPositionCenter(dialog);
-    dialogProxy->show();
-    dialogToogle = true;
-}
-
-void G_Gameboard::showDialog(QString text, QString image, QString sound)
-{
-    audioSingleton->playSound(sound);
     dialog->setText(text,1);
     dialog->setImage(image);
     setWidgetPositionCenter(dialog);

@@ -18,12 +18,12 @@
  </layer>
  <layer name="Walls_Blocks" width="60" height="30" opacity="0.47">
   <data encoding="base64" compression="zlib">
-   eJzdV20OgCAI7TZ29W7Z+ucYH6JgT97mWqXAQ0C5Lmw8wQMdko0tUBYSnu7Z21uVbyRO4SvtZeuedNDvHzi+M3FyClb21/Lt6Proudr6Gb4n7r8VzxqnanwrohpfK+ZO4jti42iOVeH7h6wsZPNF80FU7yPNieDrsUmby91ltKHBcxdahVcPvbtF6UPlG6GP07mbr2bDzB2cyrC+o+7vajxz8jLzV+tDR3w+m7NWDUO4+3823ORdstXq6znZjbzvQLYeykmqFwj1yjPXaz8K35VaLMmV4pz+z8Cu88+bmzv2l8utKH97fYpQn6OBxvdPH2u6pb5mpD/x9jrUJu7c9KzTxguYjU/9
+   eJzt1zEOwCAMBEH/hrfzS0RBC0I+hA17kttJtkuKmZUEV0XXLdXGuym9KvQy9Co9en2jN5ZHr2/0xvLo9Y3eWF6G3t++J0/0Rr7df5+Vdbtn1nXqWarh4eHh4eHh4eHh4b3n/XQNMe5WOw==
   </data>
  </layer>
  <layer name="Walls_Blocks_Groups" width="60" height="30">
   <data encoding="base64" compression="zlib">
-   eJztl9sOwiAMhnkG9VK93Hx0t6cUkjWplUrTUegOX9LELK7w98QI4eTkuFyi3RqtNS3Wk3u0Z6O1jqbXA0O0V6O1pPnFPday32oj1Ytrbsv1J9WLa24veqV1qu03Dz2B9eK8pf1cK+8Jx6nljOJ4R5uX30n7I/zWLY2DRVx6kLSnvM/kOY0DF5e9sEbv9Me8kvY2hu8+HINsz/BuzjgkvqW+NFC/VusAkvzDDFk7RzzMIole6ClJX0FucjHyMIskeqGncJ9xwP9y7wxB5sMS7/OsNpr7TMmf1aypgeb7vuTPs96joe1f7mzxnl+tXu5swXo9nLcUS70ezluKpV7NeWt9b7fUm6NU49b3dq1eLnclvb2/sbR6uXtMSa/m/vMBXhI/FA==
+   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
   </data>
  </layer>
  <layer name="Solid_Blocks" width="60" height="30" visible="0">
@@ -51,9 +51,9 @@
    eJzt10ENACAQA8GTghuS8y8IC/DqJcwIaPbbKoA/7eF7AMAMKx3As04HABDj6wPAnQNzUgGH
   </data>
  </layer>
- <layer name="Water_Blocks" width="60" height="30">
+ <layer name="Water_Blocks" width="60" height="30" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztljEOwDAIA/n/P/OP7pE6xEBTY5+UJZIhlwGxImL99HRQ1dO+HL77HVoHcelyfMO+d/pP7XejPzIjumaRfeux73nGvn1/ksW+5xn7avgygL55gm8my+abzav4VtX4Cqa3VqDqq+Js39nYdzaMO1IG5t0fQc33AYAndt8=
+   eJztlkEOACEIA/n/P/3H3j2YCFW3tJNwMSkwF+KIiPHjQoOaZ18O3/kt2yfjccJvhX3fzO8678X8zH04dYfsi8e++xn74gqNffcz9tXwZSC7cwffSpbNt5pX8UX1uAXTrghUfVWc7dsb+/aG8Y9Ugfnvn0HN9wNgw30i
   </data>
  </layer>
  <layer name="NoMoves_Blocks" width="60" height="30" visible="0">
@@ -63,7 +63,7 @@
  </layer>
  <layer name="Snow_Surface" width="60" height="30" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztkkEORCEIQ73/gWc9W+O0wFdA+JkmJgZR+pAx6uoTsLxqRkh6e6dmJ961jhfvGoviZW9E9pLV03xl82ozbXkL5c1vSL6iluTdQ0/6e5NXY0b31/MB4lZeD3n+75/393yAOKtXgXeHfY4NEGf1qvGiM60Wy8vitegpr9S7OQ/VqMaL4mhu38ir5Xfn9Vw7NTL9nXB58TLmSO9SLXTG7pz4zeLV/o75kHg9en9zVpGQPw+v0bynyvSaxWudvy68ljPWA8RbmVkT+jfG14lX87+qM6/EL91hdzvzrnumN/GyHljyqy0my59bZ+A24y6vpC68nusLpvT7vA==
+   eJztkkEOBCEIBP3/g/c8V8PQwCggmO3ExIBCFzpGbf2cl1e/KKHaKz078dI+Xrw0FsWLakTOEvXTfGXzan/aUos7N9eQfEUtybuHvsz3JK/GzN2n+cHErbwe8nzfP+87P5g46leBd4V9jg0mjvpV4+VyWi90LovXqi+80uzmc7R+RV4aQ//2Rl7p7A28nmulfpa3XS4vXsQc6V3qxeXQnR2/Wbza2yEfEq/H7E/+VU6cPw+v0by7yvSaxWv9f114LTk0A463MrMm7t0QXydezT9VZ16JX7qD7nbmpXukm3jRDCznqy0ky5tb/8BpxlVeSV14PdcDSCX1Ag==
   </data>
  </layer>
  <layer name="Ice_Surface" width="60" height="30" visible="0">

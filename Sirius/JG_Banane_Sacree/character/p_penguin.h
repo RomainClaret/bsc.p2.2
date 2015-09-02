@@ -60,11 +60,6 @@ private:
     QList<G_Object *> tempSacoche;
     QPoint* lastMove;
 
-    /**
-     * @brief endMove call when the step with the timer is complete
-     */
-    void endMove();
-
     bool slideAble;
 
     int nbLives;
@@ -111,6 +106,11 @@ public:
     QGraphicsRectItem* getTopCB();
     QGraphicsRectItem* getBottomCB();
     C_Player* getPlayer();
+
+    /**
+     * @brief endMove call when the step with the timer is complete
+     */
+    void endMove();
 
 private:
     void stepMoveCharacter();

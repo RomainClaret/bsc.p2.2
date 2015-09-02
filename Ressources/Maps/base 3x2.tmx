@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="Pokemon_Ice_tiles.png" tilewidth="32" tileheight="32">
-  <image source="../../Images/Tiles/Pokemon_Ice_tiles.png" width="320" height="416"/>
+  <image source="../Tiles/Pokemon_Ice_tiles.png" width="320" height="416"/>
  </tileset>
  <tileset firstgid="131" name="Ice_tiles.png" tilewidth="32" tileheight="32">
-  <image source="../../Images/Tiles/Ice_tiles.png" width="320" height="416"/>
+  <image source="../Tiles/Ice_tiles.png" width="320" height="416"/>
  </tileset>
  <layer name="Base" width="60" height="30" visible="0">
   <data encoding="base64" compression="zlib">

@@ -29,7 +29,7 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
     this->gameBoard = g;
     //vitesse entre 1 et 100
     // 1 étant très rapide, 100 étant très lent
-    speed = 8; //vitesse par défaut
+    speed = 7;
 
     leftSkin = ":/characters/characters/renard_front.png";
     rightSkin = ":/characters/characters/renard_front.png";

@@ -95,6 +95,9 @@ void B_MovableThrow::checkPosition()
         }
         if(typeid(*l.at(i)).name() == typeid(P_Penguin).name())
         {
+            P_Penguin* penguin = (P_Penguin*)l.at(i);
+            penguin->endMove();
+            penguin->disconnectTimer();
             game->disconnectTimer();
             game->restartEnigma();
         }
