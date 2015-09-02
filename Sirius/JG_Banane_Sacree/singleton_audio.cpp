@@ -13,7 +13,12 @@ Singleton_Audio* Singleton_Audio::instance = NULL;
 
 Singleton_Audio::Singleton_Audio()
 {
+    soundThreadWaterFall = new A_Sound();
+    soundThreadInteraction = new A_Sound();
+    soundThreadLoseLife = new A_Sound();
+    soundThreadRestart = new A_Sound();
     soundThreadWalking = new A_Sound();
+    soundThreadSliding = new A_Sound();
     soundThreadMovableSliding = new A_Sound();
     soundThreadMovableMoving = new A_Sound();
     soundThreadObject = new A_Sound();
@@ -50,24 +55,14 @@ void Singleton_Audio::setPlayableSounds(bool playable)
     this->playableSound = playable;
 }
 
-void Singleton_Audio::setSound(QString sound)
-{
-    soundThread->setSound(sound);
-}
-
-void Singleton_Audio::playSound()
-{
-    soundThread->playSound();
-}
-
-void Singleton_Audio::playSound(QString sound)
-{
-    soundThread->playSound(sound);
-}
-
 void Singleton_Audio::playSoundBlockSliding()
 {
     soundThreadMovableSliding->playSound("movable_sliding");
+}
+
+void Singleton_Audio::playSoundInteraction()
+{
+    soundThreadMovableSliding->playSound("dialog_interaction");
 }
 
 void Singleton_Audio::playSoundBlockStopSliding()
@@ -77,7 +72,7 @@ void Singleton_Audio::playSoundBlockStopSliding()
 
 void Singleton_Audio::playSoundPlayerSliding()
 {
-    soundThreadWalking->playSound("player_sliding");
+    soundThreadSliding->playSound("player_sliding");
 }
 
 void Singleton_Audio::playSoundPlayerWalking()
@@ -97,22 +92,22 @@ void Singleton_Audio::playSoundSunk()
 
 void Singleton_Audio::playSoundEventRestartCheckpoint()
 {
-    soundThread->playSound("restart_checkpoint");
+    soundThreadLoseLife->playSound("restart_checkpoint");
+}
+
+void Singleton_Audio::playSoundEventWaterFall()
+{
+    soundThreadWaterFall->playSound("water_fall");
 }
 
 void Singleton_Audio::playSoundEventLostLevel()
 {
-    soundThread->playSound("lost_level");
+    soundThreadRestart->playSound("lost_level");
 }
 
 void Singleton_Audio::playSoundEventStartGame()
 {
     soundThread->playSound("start_game");
-}
-
-void Singleton_Audio::stopSound()
-{
-    soundThread->stopSound();
 }
 
 void Singleton_Audio::stopMusic()
