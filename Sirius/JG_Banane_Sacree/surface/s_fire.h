@@ -14,6 +14,7 @@
 #ifndef S_FIRE_H
 #define S_FIRE_H
 #include "../surface/g_surface.h"
+#include "../surface/s_surfaceautotexture.h"
 
 class QGraphicsRectItem;
 
@@ -24,10 +25,10 @@ class QGraphicsRectItem;
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 24 August 2015
+ * @version 1.1
+ * @date 02 September 2015
  */
-class S_Fire : public G_Surface
+class S_Fire : public S_SurfaceAutoTexture
 {
 public:
     //Constructors
@@ -44,6 +45,8 @@ public:
      * @param parent QGraphicsItem parent
      */
     S_Fire(QGraphicsItem *parent = 0);
+
+    void calculateTextures(int** mapSurfaces, int width, int height);
 
 private:
     /**
