@@ -17,8 +17,6 @@ public:
     void setPlayableSounds(bool playableStatus);
     void setSound(QString soundQUrl);
     void setMusic(QString music);
-    void playSound();
-    void playSound(QString soundQUrl);
     void playMusic();
     void playMusic(QString music);
     void pauseMusic();
@@ -28,7 +26,6 @@ public:
     void playMusicPlaylistWithIntro();
     void pauseMusicPlaylist();
     void resumeMusicPlaylist();
-    void stopSound();
     void setPlayableMusicPlaylist(bool playable);
     bool getPlaybleMusicPlaylist();
     void playSoundPlayerWalking();
