@@ -193,7 +193,7 @@ void G_Gameboard::slideBlock()
 
     if(listSlindingBlocks.size() == 0)
     {
-        audioSingleton->playSoundBlockStopSliding();
+        //audioSingleton->playSoundBlockStopSliding();
         timerBlockDisplacementSlide->stop();
     }
 }
@@ -866,10 +866,11 @@ void G_Gameboard::endMoveCheck(char sens)
     }
     if(playableCharacter->isSlide())
     {
-        audioSingleton->playSoundPlayerSliding();
         isSliding=true;
         directionPlayableCharacter = sens;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
+
+        //audioSingleton->playSoundPlayerSliding();
     }
 }
 

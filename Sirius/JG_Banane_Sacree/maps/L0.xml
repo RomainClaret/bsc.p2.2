@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DATA>
  <LEVEL>
-  <SIZE width="60" height="30"/>
-  <POSITION y="2" x="1"/>
-  <START y="21" x="7"/>
-  <END y="3" x="4"/>
+  <SIZE height="30" width="60"/>
+  <POSITION x="1" y="2"/>
+  <START x="7" y="21"/>
+  <END x="4" y="3"/>
  </LEVEL>
  <LEVELITEM>
   <COLONNE position="0">
@@ -4210,6 +4210,7 @@
    </LIGNE>
    <LIGNE position="15">
     <BLOC type="SNOW"/>
+	<DOOR />
    </LIGNE>
    <LIGNE position="16">
     <BLOC type="SNOW"/>
@@ -4348,7 +4349,7 @@
    </LIGNE>
    <LIGNE position="20">
     <BLOC type="SNOW"/>
-    <DIALOG text="Docteur Douceur, le méchant Singe, a volé la banane Sacrée ! Il est de ton devoir de la récupérer. Pour cela, nous t'envoyons en mission sur le très dangereux Iceberg glacé, la base du monstrueux singe Docteur Douceur! Tu as deux jours avant qu'il n'utilise la banane sacrée pour faire un délicieux banana split. Empêche-le ! Dans 1min, ce message glacé s'auto-fondera. Nous nierons tout lien avec cette mission. Vous êtes maintenant seul. Bonne chance. Indice: Si tu te perds, suit les flèches ;)" image="loutre.png"/>
+    <DIALOG image="loutre.png" text="Docteur Douceur, le méchant Singe, a volé la banane Sacrée ! Il est de ton devoir de la récupérer. Pour cela, nous t'envoyons en mission sur le très dangereux Iceberg glacé, la base du monstrueux singe Docteur Douceur! Tu as deux jours avant qu'il n'utilise la banane sacrée pour faire un délicieux banana split. Empêche-le ! Dans 1min, ce message glacé s'auto-fondera. Nous nierons tout lien avec cette mission. Vous êtes maintenant seul. Bonne chance. Indice: Si tu te perds, suit les flèches ;)"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="4">
@@ -4447,7 +4448,7 @@
    <LIGNE position="3">
     <BLOC type="SNOW"/>
     <ITEM type="FISH"/>
-    <DIALOG text="Bravo! Retourne me voir pour me donner tes poissons!" image="loutre.png" position="10"/>
+    <DIALOG image="loutre.png" text="Bravo! Retourne me voir pour me donner tes poissons!" position="10"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="19">
@@ -4556,7 +4557,7 @@
    </LIGNE>
    <LIGNE position="5">
     <BLOC type="SNOW"/>
-    <DIALOG text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire repérer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité" image="loutre.png" position="9"/>
+    <DIALOG image="loutre.png" text="Les sous-fifres de Docteur Douceur sont désormais en place! Récupére le dernier poisson sans te faire repérer par les ennemis. Aide-toi des blocs pour arriver à déjouer leur champ de vision. Indice: Rouge = Danger, Vert = Sécurité" position="9"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="39">
@@ -4873,7 +4874,7 @@
     <ITEM type="BONUS"/>
     <BLOC type="SNOW"/>
     <ITEM type="EGG"/>
-    <DIALOG text="Ca y'est, tu as ta première vie ! Bravo ! Prends-en bien soin car tu perdras une vie à chaque fois que tu recommences un niveau à un checkpoint! Si tu perds toutes tes vies, tu recommences au tout début du niveau. Tu peux voir la quantité de vies qui te reste en haut à gauche." image="loutre.png" position="4"/>
+    <DIALOG image="loutre.png" text="Ca y'est, tu as ta première vie ! Bravo ! Prends-en bien soin car tu perdras une vie à chaque fois que tu recommences un niveau à un checkpoint! Si tu perds toutes tes vies, tu recommences au tout début du niveau. Tu peux voir la quantité de vies qui te reste en haut à gauche." position="4"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="18">
@@ -4968,7 +4969,7 @@
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une énigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te coûtera une vie à chaque fois!" image="loutre.png" position="2"/>
+    <DIALOG image="loutre.png" text="Oh! J'oubliais, tu peux utiliser la touche escape pour recommencer une énigme ou tout le niveau ! Mais utilise cet outil avec attention, car cela te coûtera une vie à chaque fois!" position="2"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="20">
@@ -5077,7 +5078,7 @@
    </LIGNE>
    <LIGNE position="22">
     <BLOC type="SNOW"/>
-    <DIALOG text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? Déplace des blocs pour accéder à ton premier poisson! Mais avant toute chose, ce voyage jusqu'à l'iceberg t'a épuisé !  Tu peux aller récupérer un petit peu de vie grâce à l'oeuf ici en haut!" image="loutre.png" position="3"/>
+    <DIALOG image="loutre.png" text="La loutre ne te laissera pas passer sans un don. Pourquoi ne pas lui offrir des poissons ? Déplace des blocs pour accéder à ton premier poisson! Mais avant toute chose, ce voyage jusqu'à l'iceberg t'a épuisé !  Tu peux aller récupérer un petit peu de vie grâce à l'oeuf ici en haut!" position="3"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="40">
@@ -5303,7 +5304,7 @@
    </LIGNE>
    <LIGNE position="25">
     <BLOC type="SNOW"/>
-    <DIALOG text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas à droite se trouve ta sacoche, elle te présentera la liste des objets que tu possèdes. " image="loutre.png" position="5"/>
+    <DIALOG image="loutre.png" text="Un poisson! Ne le mange pas, tu en auras besoin pour continuer ta mission. En bas à droite se trouve ta sacoche, elle te présentera la liste des objets que tu possèdes. " position="5"/>
     <ITEM type="FISH"/>
     <ITEM type="FISH"/>
    </LIGNE>
@@ -5408,8 +5409,8 @@
    <LIGNE position="28">
     <BLOC type="SNOW"/>
     <ENEMY type="OTTER">
-     <MOVE y="28" i="1" x="9"/>
-     <MOVE y="28" i="2" x="12"/>
+     <MOVE x="9" y="28" i="1"/>
+     <MOVE x="12" y="28" i="2"/>
      <DIALOG text="N'oubliez pas de me ramener mes poissons"/>
      <DIALOG text="Je ne te laisserai pas passer sans un cadeau... "/>
      <DIALOG text="Qu'est-ce que j'ai faim!"/>
@@ -5508,15 +5509,8 @@
    <LIGNE position="6">
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
-    <ENEMY type="FOX">
-     <MOVE y="9" i="1" x="8"/>
-     <MOVE y="9" i="2" x="5"/>
-     <MOVE y="12" i="3" x="5"/>
-     <MOVE y="12" i="4" x="8"/>
-     <MOVE y="9" i="5" x="8"/>
-     <MOVE y="9" i="6" x="11"/>
-     <MOVE y="12" i="7" x="11"/>
-     <MOVE y="12" i="8" x="8"/>
+    <ENEMY type="WOLF">
+     <MOVE x="15" y="6" i="1"/>
     </ENEMY>
    </LIGNE>
   </COLONNE>
@@ -5613,15 +5607,22 @@
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
     <ENEMY type="FOX">
-     <MOVE y="1" i="1" x="8"/>
-     <MOVE y="7" i="2" x="8"/>
+     <MOVE x="8" y="1" i="1"/>
+     <MOVE x="8" y="7" i="2"/>
     </ENEMY>
    </LIGNE>
    <LIGNE position="9">
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
-    <ENEMY type="WOLF">
-     <MOVE y="6" i="1" x="15"/>
+    <ENEMY type="FOX">
+     <MOVE x="8" y="9" i="1"/>
+     <MOVE x="5" y="9" i="2"/>
+     <MOVE x="5" y="12" i="3"/>
+     <MOVE x="8" y="12" i="4"/>
+     <MOVE x="8" y="9" i="5"/>
+     <MOVE x="11" y="9" i="6"/>
+     <MOVE x="11" y="12" i="7"/>
+     <MOVE x="8" y="12" i="8"/>
     </ENEMY>
    </LIGNE>
   </COLONNE>
