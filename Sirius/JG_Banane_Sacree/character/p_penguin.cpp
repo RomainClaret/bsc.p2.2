@@ -125,33 +125,26 @@ void P_Penguin::advance(int step)
 
 void P_Penguin::stepMoveCharacter()
 {
-    qDebug() << "step " << iTimer;
     iTimer = 0;
 
-    qDebug() << "currentMove = " << currentMove;
-    qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
-    qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
     switch (currentMove) {
     case 'l':
-        qDebug() << "enter in case l";
         if(this->pos().x() > startCurrentMove.x() - G_Gameboard::getGameSquares())
         {
-            qDebug() << "first if passed with :";
-            qDebug() << "currentMove = " << currentMove;
-            qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
-            qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
-            qDebug() << "this->pos().y() = " << this->pos().y();
-            qDebug() << "this->pos().x() = " << this->pos().x();
+//            qDebug() << "first if passed with :";
+//            qDebug() << "currentMove = " << currentMove;
+//            qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
+//            qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
+//            qDebug() << "this->pos().y() = " << this->pos().y();
+//            qDebug() << "this->pos().x() = " << this->pos().x();
 
             iStepCompteur ++;
             if(iStepCompteur % 7 == 0)
             {
-                qDebug() << "change skin";
                 iStep = (iStep + 1) % stepsLeft.length();
                 leftSkin = stepsLeft.at(iStep);
             }
 
-            qDebug() << "check movable";
             if(game->isMovableSet() && blocMove == NULL)
             {
                 blocMove = game->getMovable();
@@ -166,7 +159,7 @@ void P_Penguin::stepMoveCharacter()
                 blocMove->moveByPixel(-pasEffectif,0);
             }
 
-            qDebug() << "move me";
+//            qDebug() << "move me";
             this->moveByPixel(-pasEffectif,0);
         }
         else
@@ -175,25 +168,15 @@ void P_Penguin::stepMoveCharacter()
         }
         break;
     case 'r':
-        qDebug() << "enter in case r";
         if(this->pos().x() < startCurrentMove.x() + G_Gameboard::getGameSquares())
         {
-            qDebug() << "first if passed with :";
-            qDebug() << "currentMove = " << currentMove;
-            qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
-            qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
-            qDebug() << "this->pos().y() = " << this->pos().y();
-            qDebug() << "this->pos().x() = " << this->pos().x();
 
             iStepCompteur ++;
             if(iStepCompteur % 7 == 0)
             {
-                qDebug() << "change skin";
                 iStep = (iStep + 1) % stepsRight.length();
                 rightSkin = stepsRight.at(iStep);
             }
-
-            qDebug() << "check movable";
             if(game->isMovableSet() && blocMove == NULL)
             {
                 blocMove = game->getMovable();
@@ -207,8 +190,6 @@ void P_Penguin::stepMoveCharacter()
                 }
                 blocMove->moveByPixel(pasEffectif,0);
             }
-
-            qDebug() << "move me";
             this->moveByPixel(pasEffectif,0);
         }
         else
@@ -218,25 +199,16 @@ void P_Penguin::stepMoveCharacter()
         break;
 
     case 't':
-        qDebug() << "enter in case t";
+
         if(this->pos().y() > startCurrentMove.y() - G_Gameboard::getGameSquares())
         {
-            qDebug() << "first if passed with :";
-            qDebug() << "currentMove = " << currentMove;
-            qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
-            qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
-            qDebug() << "this->pos().y() = " << this->pos().y();
-            qDebug() << "this->pos().x() = " << this->pos().x();
-
             iStepCompteur ++;
             if(iStepCompteur % 7 == 0)
             {
-            qDebug() << "change skin";
             iStep = (iStep + 1) % stepsTop.length();
             upSkin = stepsTop.at(iStep);
             }
 
-            qDebug() << "check movable";
             if(game->isMovableSet() && blocMove == NULL)
             {
                 blocMove = game->getMovable();
@@ -251,7 +223,6 @@ void P_Penguin::stepMoveCharacter()
                 blocMove->moveByPixel(0,-pasEffectif);
             }
 
-            qDebug() << "move me";
             this->moveByPixel(0,-pasEffectif);
         }
         else
@@ -260,25 +231,16 @@ void P_Penguin::stepMoveCharacter()
         }
         break;
     case 'b':
-        qDebug() << "enter in case b";
         if(this->pos().y() < startCurrentMove.y() + G_Gameboard::getGameSquares())
         {
-            qDebug() << "first if passed with :";
-            qDebug() << "currentMove = " << currentMove;
-            qDebug() << "startCurrentMove.x() = " << startCurrentMove.x();
-            qDebug() << "startCurrentMove.y() = " << startCurrentMove.y();
-            qDebug() << "this->pos().y() = " << this->pos().y();
-            qDebug() << "this->pos().x() = " << this->pos().x();
 
             iStepCompteur ++;
             if(iStepCompteur % 7 == 0)
             {
-                qDebug() << "change skin";
                 iStep = (iStep + 1) % stepsBottom.length();
                 downSkin = stepsBottom.at(iStep);
             }
 
-            qDebug() << "check movable";
             if(game->isMovableSet() && blocMove == NULL)
             {
                 blocMove = game->getMovable();
@@ -293,7 +255,6 @@ void P_Penguin::stepMoveCharacter()
                 blocMove->moveByPixel(0,pasEffectif);
             }
 
-            qDebug() << "move me";
             this->moveByPixel(0,pasEffectif);
         }
         else
@@ -313,16 +274,10 @@ void P_Penguin::endMove()
     blocMove = NULL;
     game->endMoveCheck(currentMove);
 
-//    if(game->isMovableSet())
-//    {
-//       game->moveBlock(currentMove);
-//    }
-
     currentMove = 'n';
     timerMover->stop();
     iStepCompteur = -1;
     game->setIsMoving(false);
-    qDebug() << "Endmove()";
 }
 
 void P_Penguin::moveBy(int x, int y)
