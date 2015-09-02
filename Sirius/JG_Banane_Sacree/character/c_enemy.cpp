@@ -69,6 +69,11 @@ this->defaultOrientation = orientation;
 
 }
 
+State_Enemy* C_Enemy::getEnemyState()
+{
+    return state;
+}
+
 C_Enemy::~C_Enemy()
 {
     foreach (S_ViewBlockNPC* vb, viewField)
