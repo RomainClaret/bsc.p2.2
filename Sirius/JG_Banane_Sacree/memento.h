@@ -9,6 +9,7 @@
 #include <QList>
 #include "surface/b_movable.h"
 #include "surface/b_movable_throw.h"
+#include "g_object.h"
 
 class Memento
 {
@@ -27,7 +28,12 @@ public:
     void removeSpecialEventSurface(QGraphicsScene *scene, G_Surface *movable);
     void addRemovedSurface(G_Surface *element);
 
+
+    // CHEATING METHODS
     void setSpecialTextureEnemy(bool value);
+
+    void addSpecialItemEgg(G_Object* item);
+    void setSpecialTextureEgg(bool value);
 
 private:
     Memento();
@@ -36,6 +42,7 @@ private:
     QHash<C_Enemy*,QPoint*> hashMapCharacter;
     QList<G_Surface*> specialEventSurface;
     QList<G_Surface*>removedSurface;
+    QList<G_Object*> eggList;
 };
 
 #endif // MEMENTO_H

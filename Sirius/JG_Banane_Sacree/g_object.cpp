@@ -32,6 +32,11 @@ G_Object::G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : G_
     setZValue(5);
     setDesign();
     Memento::getInstance()->setPosSurface(this,new QPoint(xpos, ypos));
+
+    if(name == OBJECT_EGG)
+    {
+        Memento::getInstance()->addSpecialItemEgg(this);
+    }
 }
 
 G_Object::G_Object(QString name, QGraphicsItem *parent): G_Surface(0, 0, parent)
@@ -61,14 +66,18 @@ QPixmap G_Object::getTexture()
     return objectSkin->texture();
 }
 
-void G_Object::repaintElement()
+void G_Object::setSpecialTexture(bool value)
 {
-    if(W_MenuCode::BANANASPECIAL && this->nom == OBJECT_EGG)
+    if(value)
     {
-        this->nom = new QString(OBJECT_BANANA);
+        QString img = ":/items/items/banana.png";
+        objectSkin->setTexture(QPixmap(img));
+        setBrush(*objectSkin);
+    }
+    else
+    {
         setDesign();
     }
-    update();
 }
 
 QString G_Object::OBJECT_EGG = "EGG";

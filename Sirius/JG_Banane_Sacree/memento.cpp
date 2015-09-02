@@ -98,6 +98,7 @@ void Memento::clear()
     removedSurface.clear();
     hashMapSurface.clear();
     hashMapCharacter.clear();
+    eggList.clear();
 }
 
 void Memento::addSpecialEventSurface(G_Surface* element)
@@ -140,5 +141,18 @@ void Memento::setSpecialTextureEnemy(bool value)
     while (j.hasNext()) {
         j.next();
         j.key()->setSpecialTexture(value);
+    }
+}
+
+void Memento::addSpecialItemEgg(G_Object *item)
+{
+    eggList.append(item);
+}
+
+void Memento::setSpecialTextureEgg(bool value)
+{
+    for(int i = 0; i < eggList.size(); ++i)
+    {
+        eggList.setSpecialTexture(value);
     }
 }
