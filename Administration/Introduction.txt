@@ -1,0 +1,77 @@
+﻿Introduction
+	
+	- Définition des buts : «Avant» -> «Après»
+
+
+Etat de l'art
+	
+	- ce qui existe (layton, infiltration, rpg)
+		
+	- puzzle game, reflexion (layton) : reflexion, apprendre, s'améliorer
+		
+	- rpg : histoire, (skill)
+		
+	- infiltration : contrainte, reflexion ,habilié
+	
+	- principe du jeu
+
+
+
+Etat Avant
+	
+
+- Demo rapide
+
+
+
+But
+
+Etat 
+
+Actuel
+	
+1- Assainissement
+		
+	- Patterns
+			
+		- Memento : checkpoint
+			
+		- Observer avec State : Ennemi
+			
+		- Singleton : audio, life, memento
+			
+		- Factory surface, character (memento et observer)
+		
+	- Génération niveau (XML)
+		
+	- Optimisations (/ Structures/ dOxygen)
+
+
+
+2- Améliorations
+		
+	- Menu Pause (Crédit, Bonus)
+		
+	- Interactions acteurs
+		
+	- Graphismes, Animations (+trace de pas)
+			
+	- déplacements
+			
+	- textures "automatiques"
+				
+		-> annimation
+		
+	- Sons
+
+		
+	- Boss
+		
+	- Niveaux
+		
+	- Surfaces
+
+Demo
+
+Conclusion
+
