@@ -60,11 +60,11 @@ void B_Water::calculateTextures(int** mapSurfaces, int width, int height)
     {
         addTexture(QPixmap(":/surfaces/surfaces/water_r_collideSnow.png"));
     }
-    else if(collideTop && !collideLeft)
+    else if(collideTop)
     {
         addTexture(QPixmap(":/surfaces/surfaces/water_t_collideSnow.png"));
     }
-    else if(collideRightTop && !collideTop)
+    else if(collideRightTop)
     {
         addTexture(QPixmap(":/surfaces/surfaces/water_rtOnly_collideSnow.png"));
     }

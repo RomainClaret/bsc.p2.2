@@ -40,7 +40,7 @@ Observer_Enemy::~Observer_Enemy()
 void Observer_Enemy::addNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
-    hash_enemyPreviousState[ennemi] = ennemi->getEnemyState();
+    //hash_enemyPreviousState[ennemi] = ennemi->getEnemyState();
 }
 
 void Observer_Enemy::removeNPCObserver(C_Enemy* ennemi)
@@ -175,7 +175,7 @@ void Observer_Enemy::switchAllToPause()
          hash_enemyPreviousState[enemy] = enemy->getEnemyState();
          enemy->changeState(new State_EnemySleep());
 
-         if(OldState != NULL && hash_enemyPreviousState[enemy]  != OldState){
+         if(OldState != NULL){
              delete OldState;
          }
     }
@@ -200,11 +200,7 @@ void Observer_Enemy::switchBackToState(QPoint phase)
             qDebug() << "---Switch back to a saved state " << phaseX << ", " << phaseY;
 
             State_Enemy* state = it.key()->changeState(it.value());
-
-            if(state != it.value())
-            {
-                delete state;
-            }
+            delete state;
         }
     }
 }

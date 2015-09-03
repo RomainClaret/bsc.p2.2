@@ -42,7 +42,6 @@ W_MenuAudio::W_MenuAudio(QWidget *parent)
    lbSounds = new QLabel(tr("Modifier le volume des sons"));
    lbSoundsValue = new QLabel(QString::number(getSoundsVolume()));
 
-
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
 
    sldMusics->setTickPosition(QSlider::TicksAbove);

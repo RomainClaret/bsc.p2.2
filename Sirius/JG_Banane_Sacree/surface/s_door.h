@@ -42,11 +42,13 @@ public:
      */
     S_Door(int xpos, int ypos, QGraphicsItem *parent = 0);
 
-    /**
-     * @brief Constructor without position setup.
-     * @param parent QGraphicsItem to depend on
-     */
-    S_Door(QGraphicsItem *parent = 0);
+//    /**
+//     * @brief Constructor without position setup.
+//     * @param parent QGraphicsItem to depend on
+//     */
+//    S_Door(QGraphicsItem *parent = 0);
+
+    void setDirection(QChar direction);
 
     /**
      * @brief Toggle to know if it's the end of the current level.
@@ -108,7 +110,7 @@ private:
     /**
      * @brief Set the design of self.
      */
-    void setDesign();
+    void setDesign(QChar direction);
     bool levelEnd;
     int nextLevel;
 

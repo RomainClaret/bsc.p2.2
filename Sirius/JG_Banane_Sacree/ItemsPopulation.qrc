@@ -5,5 +5,6 @@
         <file>maps/L2.xml</file>
         <file>maps/L-1.xml</file>
         <file>maps/L3.xml</file>
+        <file>maps/L4.xml</file>
     </qresource>
 </RCC>

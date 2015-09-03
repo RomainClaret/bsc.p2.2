@@ -66,12 +66,11 @@ B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, NULL, pa
 
 void B_MovableThrow::advance(int step)
 {
-    if(step == 0)
+    if(step == 0 && !game->getPauseState())
     {
         time ++;
         if(time % speed == 0)
         {
-
             moveBy(0,1);
         }
 
