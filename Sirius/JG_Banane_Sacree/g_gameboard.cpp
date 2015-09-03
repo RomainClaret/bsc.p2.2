@@ -42,6 +42,8 @@
 #include "singleton_audio.h"
 #include "surface/s_footstep.h"
 
+#include "g_maingame.h"
+
 #include "character/factory_character.h"
 
 #include "memento.h"
@@ -918,6 +920,7 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
+            qDebug() << b->pos().x();
             if((int)(b->pos().x()-1) % getGameSquares() == 0 && (int)(b->pos().y()-1) % getGameSquares() == 0)
             {
                 if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
@@ -1089,19 +1092,10 @@ void G_Gameboard::returnIsland()
     audioSingleton->pauseMusicPlaylistMenu();
     audioSingleton->playMusicPlaylist();
 
-    mainScene->removeItem(proxy);
-    mainScene->removeItem(objectListProxy);
-    mainScene->removeItem(lifeListProxy);
-    mainScene->removeItem(dialogProxy);
-
     playableCharacter->emptySacoche();
 
     setLevel(1);
     setProxy();
-    //setFirstDialog();
-
-    objectListProxy->hide();
-    lifeListProxy->hide();
 }
 
 void G_Gameboard::exitGame()
@@ -1121,6 +1115,7 @@ void G_Gameboard::exitGame()
         W_MenuStart::saveGame(playerProfil);
         close();
         audioSingleton->playMusicPlaylistMenu();
+        ((G_MainGame*)parent())->exitGame();
         break;
     case QMessageBox::RejectRole:
         qDebug() << "Reject";
@@ -1130,6 +1125,7 @@ void G_Gameboard::exitGame()
         currentLevel->clearScene();
         close();
         audioSingleton->playMusicPlaylistMenu();
+        ((G_MainGame*)parent())->exitGame();
         break;
     default:
         // should never be reached
@@ -1165,7 +1161,7 @@ void G_Gameboard::setProxy()
     objectListProxy->setZValue(8);
     objectListProxy->show();
 
-    lifeList = W_Life::resetInstance(this);
+    lifeList = new W_Life(this);
     lifeList->updateHearts(playerProfil->getNbLive());
     setWidgetPositionTopLeft(lifeList);
     lifeListProxy = mainScene->addWidget(lifeList);
@@ -1189,7 +1185,7 @@ void G_Gameboard::showProxy()
     proxy->hide();
     toggleMenuPause = false;
     objectListProxy->show();
-    lifeListProxy->hide();
+    lifeListProxy->show();
     dialogProxy->hide();
     dialogToogle = false;
 
@@ -1327,4 +1323,9 @@ void G_Gameboard::deleteGame()
         // should never be reached
         break;
     }
+}
+
+bool G_Gameboard::getPauseState()
+{
+    return toggleMenuPause;
 }

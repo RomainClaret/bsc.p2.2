@@ -22,8 +22,9 @@
 #include <QFormLayout>
 #include "../menu/w_menu.h"
 
-W_MenuBonus::W_MenuBonus(QWidget *parent)
+W_MenuBonus::W_MenuBonus(QWidget *parent, G_Gameboard *gameboard)
 {
+   this->gameboard = gameboard;
    this->parent = (W_Menu*)parent;
    setTitleParent();
 
@@ -31,25 +32,29 @@ W_MenuBonus::W_MenuBonus(QWidget *parent)
    btnBonusCredits = new QPushButton(tr("Voir les crédits"));
    btnBonusAudio = new QPushButton(tr("Paramètres Audios"));
    btnBonusReturn = new QPushButton(tr("Retourner au menu pause"));
+   btnMenuPauseDelete = new QPushButton(tr("Supprimer la partie"));
 
    btnBonusCode->setStyleSheet(W_Menu::styleBtn);
    btnBonusCredits->setStyleSheet(W_Menu::styleBtn);
    btnBonusAudio->setStyleSheet(W_Menu::styleBtn);
    btnBonusReturn->setStyleSheet(W_Menu::styleBtn);
+   btnMenuPauseDelete->setStyleSheet(W_Menu::styleBtn);
 
    connect(btnBonusCode, SIGNAL(clicked()),parent, SLOT(loadCode()));
    connect(btnBonusCredits, SIGNAL(clicked()),parent, SLOT(loadCredits()));
    connect(btnBonusAudio, SIGNAL(clicked()),parent, SLOT(loadAudio()));
    connect(btnBonusReturn, SIGNAL(clicked()),parent, SLOT(loadPause()));
+   connect(btnMenuPauseDelete, SIGNAL(clicked()), gameboard, SLOT(deleteGame()));
 
-   layoutMenuPause = new QFormLayout;
-   layoutMenuPause->addRow(btnBonusAudio);
-   layoutMenuPause->addRow(btnBonusCode);
-   layoutMenuPause->addRow(btnBonusCredits);
-   layoutMenuPause->addRow(btnBonusReturn);
+   layoutMenu = new QFormLayout;
+   layoutMenu->addRow(btnBonusAudio);
+   layoutMenu->addRow(btnBonusCode);
+   layoutMenu->addRow(btnBonusCredits);
+   layoutMenu->addRow(btnBonusReturn);
+   layoutMenu->addRow(btnMenuPauseDelete);
 
     this->resize(400,400);
-    this->setLayout(layoutMenuPause);
+    this->setLayout(layoutMenu);
 }
 
 void W_MenuBonus::setTitleParent()

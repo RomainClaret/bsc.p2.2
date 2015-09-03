@@ -896,7 +896,7 @@
     <BLOC type="SNOW"/>
    </LIGNE>
    <LIGNE position="7">
-    <END nextLevel="1"/>
+    <END nextLevel="4"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="4">
