@@ -97,3 +97,9 @@ void W_MenuAudio::setValueSoundsVolume(int value)
     lbSoundsValue->setText(QString::number(value));
     audioSingleton->setSoundsVolume(value);
 }
+
+void W_MenuAudio::showEvent(QShowEvent *)
+{
+    sldMusics->setValue(getMusicsVolume());
+    sldSounds->setValue(getSoundsVolume());
+}

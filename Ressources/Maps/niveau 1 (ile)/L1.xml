@@ -844,7 +844,7 @@
    </LIGNE>
    <LIGNE position="10">
     <BLOC type="SNOW"/>
-    <END nextLevel="2"/>
+    <END nextLevel="130"/>
     <DOOR direction="l"/>
    </LIGNE>
   </COLONNE>
@@ -893,12 +893,12 @@
    </LIGNE>
    <LIGNE position="7">
     <BLOC type="SNOW"/>
-    <END nextLevel="3"/>
+    <END nextLevel="130"/>
     <DOOR direction="l"/>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
-    <END nextLevel="5"/>
+    <END nextLevel="130"/>
     <DOOR direction="l"/>
    </LIGNE>
   </COLONNE>
@@ -951,7 +951,7 @@
    </LIGNE>
    <LIGNE position="7">
     <BLOC type="SNOW"/>
-    <END nextLevel="-1"/>
+    <END nextLevel="120"/>
     <DOOR direction="r"/>
    </LIGNE>
   </COLONNE>
@@ -1000,10 +1000,11 @@
    <LIGNE position="3">
     <BLOC type="WALL"/>
     <BLOC type="SNOW"/>
+    <END nextLevel="120"/>
    </LIGNE>
    <LIGNE position="11">
     <BLOC type="SNOW"/>
-    <END nextLevel="4"/>
+    <END nextLevel="120"/>
     <DOOR direction="r"/>
    </LIGNE>
   </COLONNE>

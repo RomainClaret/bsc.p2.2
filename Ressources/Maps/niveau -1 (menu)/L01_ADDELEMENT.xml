@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT>
+
+	<COLONNE position="3">
+	<LIGNE position="3">
+	<ENEMY type="FOX">
+		<MOVE x="3" y="3" i="1"/>
+		<MOVE x="16" y="3" i="2"/>
+		<MOVE x="16" y="11" i="3"/>
+		<MOVE x="3" y="11" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="16">
+	<LIGNE position="3">
+	<ENEMY type="FOX">
+		<MOVE x="16" y="3" i="1"/>
+		<MOVE x="16" y="11" i="2"/>
+		<MOVE x="3" y="11" i="3"/>
+		<MOVE x="3" y="3" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="16">
+	<LIGNE position="11">
+	<ENEMY type="FOX">
+		<MOVE x="16" y="11" i="1"/>
+		<MOVE x="3" y="11" i="2"/>
+		<MOVE x="3" y="3" i="3"/>
+		<MOVE x="16" y="3" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="3">
+	<LIGNE position="11">
+	<ENEMY type="FOX">
+		<MOVE x="3" y="11" i="1"/>
+		<MOVE x="3" y="3" i="2"/>
+		<MOVE x="16" y="3" i="3"/>
+		<MOVE x="16" y="11" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+
+	
+</ELEMENT>

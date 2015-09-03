@@ -22,6 +22,7 @@ class QVBoxLayout;
 class QSignalMapper;
 class QLineEdit;
 class QLabel;
+class Singleton_Audio;
 
 /**
  * @brief Main menu, which appears at the game startup.
@@ -57,6 +58,7 @@ public:
     QLineEdit* username;
     QPushButton* validate;
     QLabel *textPseudo;
+    Singleton_Audio *audioSingleton;
 
     /**
      * @brief Save the current level to the given profil.

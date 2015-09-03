@@ -107,12 +107,10 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 
     btnSoundMuter = new QPushButton(this);
     btnSoundMuter->setStyleSheet("background: transparent;");
-    //btnSoundMuter->setStyleSheet("background-image: url(:/icons/audio_off60x60.png)");
     QPixmap pixmap(":/icons/audio_on60x60.png");
     QIcon ButtonIcon(pixmap);
     btnSoundMuter->setIcon(ButtonIcon);
     btnSoundMuter->setIconSize(pixmap.rect().size());
-    btnSoundMuter->setGeometry(windowSizeX-70,windowSizeY-70,60,60);
 
     connect(btnSoundMuter, SIGNAL (released()), this, SLOT (soundMuter()));
 }
@@ -130,6 +128,8 @@ void G_MainGame::startGame(G_Profil* user)
     refreshGameMenu();
     theGame->setParent(this);
     theGame->setPlayerProfil(user);
+    audioSingleton->setMusicsVolume(user->getMusicsVolume());
+    audioSingleton->setSoundsVolume(user->getSoundsVolume());
     theGame->show();
     theGame->setGeometry(this->size().width()/2-windowSizeX/2,this->size().height()/2-windowSizeY/2,windowSizeX,windowSizeY);
     toggleGameCreated = true;
@@ -167,7 +167,6 @@ void G_MainGame::soundMuter()
         QPixmap pixmapOff(":/icons/audio_off60x60.png");
         QIcon ButtonIconOff(pixmapOff);
         btnSoundMuter->setIcon(ButtonIconOff);
-        audioSingleton->setMusicPlaylistVolume(-1);
         audioSingleton->setUsableMusicPlaylistMenu(false);
         audioSingleton->pauseMusicPlaylistMenu();
     }
@@ -176,7 +175,7 @@ void G_MainGame::soundMuter()
         QPixmap pixmapOn(":/icons/audio_on60x60.png");
         QIcon ButtonIconOn(pixmapOn);
         btnSoundMuter->setIcon(ButtonIconOn);
-        audioSingleton->setMusicPlaylistVolume(100);
+        audioSingleton->setUsableMusicPlaylistMenu(true);
         audioSingleton->playMusicPlaylistMenu();
     }
 
@@ -191,6 +190,7 @@ void G_MainGame::resizeEvent(QResizeEvent * event) {
         gameTitle->setGeometry(event->size().width()/2-titleSizeX/2,event->size().height()/2-menuSizeY/2-50,titleSizeX,titleSizeY);
         quitGame->setGeometry(event->size().width()/2-quitBtnSizeX/2,event->size().height()/2+menuSizeY/2+35,quitBtnSizeX,quitBtnSizeY);
         menuStart->setGeometry(event->size().width()/2-menuSizeX/2,event->size().height()/2-menuSizeY/2,menuSizeX,menuSizeY);
+        btnSoundMuter->setGeometry(event->size().width()/2+menuSizeX/2+40,event->size().height()/2+menuSizeY/2+30,60,60);
         if (toggleGameCreated)
         {
             theGame->setGeometry(event->size().width()/2-windowSizeX/2,event->size().height()/2-windowSizeY/2,windowSizeX,windowSizeY);

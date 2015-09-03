@@ -21,7 +21,7 @@
 #include <QPushButton>
 #include <QFormLayout>
 #include <QDebug>
-#include "singleton_audio.h"
+#include "../singleton_audio.h"
 
 QString W_Menu::styleBtn = "border-style: none;"
         "border-radius: 5px;"

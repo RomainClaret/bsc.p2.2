@@ -1,0 +1,5559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DATA>
+ <LEVEL>
+  <SIZE width="60" height="30"/>
+  <POSITION x="1" y="1"/>
+  <START x="11" y="8"/>
+  <END x="0" y="0"/>
+ </LEVEL>
+ <LEVELITEM>
+  <COLONNE position="0">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="1">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="18">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="19">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="20">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="21">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="22">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="23">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="24">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="25">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="26">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="27">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="28">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="29">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="30">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="31">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="32">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="33">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="34">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="35">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="36">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="37">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="38">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="39">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="40">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="41">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="42">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="43">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="44">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="45">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="46">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="47">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="48">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="49">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="50">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="51">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="52">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="53">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="54">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="55">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="56">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="57">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="58">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="59">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="2">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="17">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="4">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="5">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="6">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="7">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="8">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="9">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="10">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="11">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="12">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="13">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="14">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="15">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="16">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE i="1" x="16" y="3"/>
+     <MOVE i="2" x="16" y="11"/>
+     <MOVE i="3" x="3" y="11"/>
+     <MOVE i="4" x="3" y="3"/>
+    </ENEMY>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE i="1" x="16" y="11"/>
+     <MOVE i="2" x="3" y="11"/>
+     <MOVE i="3" x="3" y="3"/>
+     <MOVE i="4" x="16" y="3"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="3">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE i="1" x="3" y="3"/>
+     <MOVE i="2" x="16" y="3"/>
+     <MOVE i="3" x="16" y="11"/>
+     <MOVE i="4" x="3" y="11"/>
+    </ENEMY>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE i="1" x="3" y="11"/>
+     <MOVE i="2" x="3" y="3"/>
+     <MOVE i="3" x="16" y="3"/>
+     <MOVE i="4" x="16" y="11"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+ </LEVELITEM>
+</DATA>

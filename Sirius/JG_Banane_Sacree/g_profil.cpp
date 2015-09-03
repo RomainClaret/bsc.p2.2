@@ -31,8 +31,9 @@ G_Profil::G_Profil()
     this->level = 0;
     this->nbLive = 1;
     this->difficulty = 1;
-    this->volumeMusics = 100;
-    this->volumeSounds = 100;
+    this->volumeMusics = 42;
+    this->volumeSounds = 42;
+    this->lastPlayed = 0;
 
     for(int i = 0; i < 8; i++)
     {
@@ -143,6 +144,7 @@ void G_Profil::read(const QJsonObject &json)
     this->difficulty = json["difficulty"].toInt();
     this->volumeMusics = json["volumeMusics"].toInt();
     this->volumeSounds = json["volumeSounds"].toInt();
+    this->lastPlayed = json["lastPlayed"].toInt();
 
     QString strpower = json["power"].toString();
     QStringList list = strpower.split("");
@@ -166,6 +168,7 @@ void G_Profil::printDebug()
     qDebug() << "Difficulté : " << this->difficulty;
     qDebug() << "Volume Musics : " << this->volumeMusics;
     qDebug() << "Volume Sounds : " << this->volumeSounds;
+    qDebug() << "Was I Played last : " << this->lastPlayed;
     qDebug() << "Power : " << power;
 }
 
@@ -181,18 +184,39 @@ void G_Profil::setSoundsVolume(int value)
 
 int G_Profil::getMusicsVolume()
 {
-    return audioSingleton->getMusicsVolume();
+    //return audioSingleton->getMusicsVolume();
+    return volumeMusics;
 }
 
 int G_Profil::getSoundsVolume()
+{
+    //return audioSingleton->getSoundsVolume();
+    return volumeSounds;
+}
+
+void G_Profil::setLastPlayed(int value)
+{
+    this->lastPlayed = value;
+}
+
+int G_Profil::getLastPlayed()
+{
+    return this->lastPlayed;
+}
+
+int G_Profil::getActualMusicsVolume()
+{
+    return audioSingleton->getMusicsVolume();
+}
+
+int G_Profil::getActualSoundsVolume()
 {
     return audioSingleton->getSoundsVolume();
 }
 
 
-void G_Profil::write(QJsonObject &json) const
+void G_Profil::write(QJsonObject &json)
 {
-
     json["username"] = username;
     json["startDate"] = startDate;
     json["gameTime"] = gameTime;
@@ -200,8 +224,9 @@ void G_Profil::write(QJsonObject &json) const
     json["level"] = level;
     json["nbLive"] = nbLive;
     json["difficulty"] = difficulty;
-    json["volumeMusics"] = volumeMusics;
-    json["volumeSounds"] = volumeSounds;
+    json["volumeMusics"] = this->getActualMusicsVolume();
+    json["volumeSounds"] = this->getActualSoundsVolume();
+    json["lastPlayed"] = lastPlayed;
 
     QString strpower;
     for(int i = 0; i < power.length(); i++)

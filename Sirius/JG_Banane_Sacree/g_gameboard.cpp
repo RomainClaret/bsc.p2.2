@@ -1110,7 +1110,7 @@ void G_Gameboard::exitGame()
         currentLevel->clearScene();
         W_MenuStart::saveGame(playerProfil);
         close();
-        audioSingleton->playMusicPlaylistMenu();
+        //audioSingleton->playMusicPlaylistMenu();
         ((G_MainGame*)parent())->exitGame();
         break;
     case QMessageBox::RejectRole:
@@ -1120,7 +1120,7 @@ void G_Gameboard::exitGame()
         qDebug() << "Destruct";
         currentLevel->clearScene();
         close();
-        audioSingleton->playMusicPlaylistMenu();
+        //audioSingleton->playMusicPlaylistMenu();
         ((G_MainGame*)parent())->exitGame();
         break;
     default:
@@ -1252,6 +1252,7 @@ void G_Gameboard::disconnectTimer()
 void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
 {
     this->playerProfil = playerProfil;
+    qDebug() << "helloworld: " << playerProfil->getMusicsVolume();
     setLevel(playerProfil->getLevel());
     setProxy();
     setTimer();

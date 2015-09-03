@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT>
+	<COLONNE position="4">
+	<LIGNE position="10">
+	<DOOR direction="l" />
+	<END nextLevel="2" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="3">
+	<LIGNE position="7">
+	<DOOR direction="l" />
+	<END nextLevel="2" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="3">
+	<LIGNE position="3">
+	<DOOR direction="l" />
+	<END nextLevel="2" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="17">
+	<LIGNE position="7">
+	<DOOR direction="r" />
+	<END nextLevel="2" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="14">
+	<LIGNE position="11">
+	<DOOR direction="r" />
+	<END nextLevel="2" />
+	</LIGNE>
+	</COLONNE>
+	
+</ELEMENT>

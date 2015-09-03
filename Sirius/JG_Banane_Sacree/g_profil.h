@@ -151,7 +151,7 @@ public:
      * @brief Write in a JSON file.
      * @param json file
      */
-    void write(QJsonObject &json) const;
+    void write(QJsonObject &json);
 
     /**
      * @brief Print informations in the debug
@@ -165,6 +165,10 @@ public:
 
     static int NBMAXVIE;
 
+    void setLastPlayed(int value);
+    int getLastPlayed();
+    int getActualSoundsVolume();
+    int getActualMusicsVolume();
 private :
     QString username;
     QString startDate;
@@ -177,6 +181,7 @@ private :
     int difficulty;
     int volumeMusics;
     int volumeSounds;
+    int lastPlayed;
     Singleton_Audio *audioSingleton;
 };
 

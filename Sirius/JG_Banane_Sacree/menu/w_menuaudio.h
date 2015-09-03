@@ -71,6 +71,7 @@ private:
     int getMusicsVolume();
 
 
+    void showEvent(QShowEvent *);
 signals:
 
 public slots:

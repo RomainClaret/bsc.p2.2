@@ -57,14 +57,14 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == -1)
+    else if (value == -1)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "menu.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 0)
+    else if (value == 0)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_tutorial_with_intro.wav"));
@@ -75,46 +75,52 @@ void A_MusicPlaylist::setMusicPlaylist(int value)
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 1)
+    else if (value == 1)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_island.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 2)
+    else if (value == 2)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_1.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 3)
+    else if (value == 3)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_1_boss.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 4)
+    else if (value == 4)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_2.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 5)
+    else if (value == 5)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_3.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 
-    if (value == 42)
+    else if (value == 42)
     {
         musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "cheatcode_cantina.wav"));
         musicPlaylist->addMedia(QUrl(this->musicQUrl + "cheatcode_imperialmarch.wav"));
+        musicPlaylist->setCurrentIndex(1);
+    }
+    else
+    {
+        musicPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+        musicPlaylist->addMedia(QUrl(this->musicQUrl + "level_island.wav"));
         musicPlaylist->setCurrentIndex(1);
     }
 

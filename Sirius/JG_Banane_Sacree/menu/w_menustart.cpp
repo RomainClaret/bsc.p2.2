@@ -32,9 +32,11 @@
 
 #include "../menu/w_menupause.h"
 #include "../g_gameboard.h"
+#include "../singleton_audio.h"
 
 W_MenuStart::W_MenuStart(QWidget *parent) : QWidget(parent)
 {
+    audioSingleton = Singleton_Audio::getInstance();
 
     this->setStyleSheet(
                         "color: #2e2e2e;"
@@ -118,8 +120,11 @@ void W_MenuStart::loadGame(QString value)
     QJsonDocument loadDoc(QJsonDocument::fromJson(saveData));
     QJsonObject object = loadDoc.object();
     G_Profil* user = new G_Profil();
-
     user->read(object[value].toObject());
+    //user->setMusicsVolume(42);
+    //user->setSoundsVolume(42);
+    qDebug() << user->getMusicsVolume();
+
     user->printDebug();
 
     loadFile.close();
@@ -224,6 +229,7 @@ void W_MenuStart::saveGame(G_Profil* currentUser)
     currentUser->setGameTime(newGameTime);
     currentUser->setMusicsVolume(currentUser->getMusicsVolume());
     currentUser->setSoundsVolume(currentUser->getSoundsVolume());
+    currentUser->setLastPlayed(currentUser->getLastPlayed());
 
     //    Profil* user = new Profil();
     //    user->read(object[currentUser->getUsername()].toObject());

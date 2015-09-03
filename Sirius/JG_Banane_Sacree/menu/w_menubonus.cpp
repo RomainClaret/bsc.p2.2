@@ -50,8 +50,8 @@ W_MenuBonus::W_MenuBonus(QWidget *parent, G_Gameboard *gameboard)
    layoutMenu->addRow(btnBonusAudio);
    layoutMenu->addRow(btnBonusCode);
    layoutMenu->addRow(btnBonusCredits);
-   layoutMenu->addRow(btnBonusReturn);
    layoutMenu->addRow(btnMenuPauseDelete);
+   layoutMenu->addRow(btnBonusReturn);
 
     this->resize(400,400);
     this->setLayout(layoutMenu);
