@@ -481,18 +481,14 @@ void G_Gameboard::checkPositionEvents(char sens)
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_ViewBlockNPC).name()) //collision avec le champs de vue d'un ennemi
         {
             //The player moved into an enemy's viewblock
-
+            qDebug() << "The player moved into an enemy's viewblock";
             S_ViewBlockNPC *vb;
             vb = dynamic_cast<S_ViewBlockNPC*>(CollidingItems.at(i));
 
-            if(typeid(vb->owner).name() == typeid(E_Otter).name())
-            {
-                vb->playableCharacterOn();
-            }
+            vb->playableCharacterOn();
         }
         if(typeid(*CollidingItems.at(i)).name() == typeid(S_Snow).name())
         {
-            //The player moved into an enemy's viewblock
            S_Snow *snow;
            snow = dynamic_cast<S_Snow*>(CollidingItems.at(i));
 
