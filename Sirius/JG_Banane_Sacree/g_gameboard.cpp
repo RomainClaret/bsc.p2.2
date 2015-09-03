@@ -918,7 +918,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
-            qDebug() << b->pos().x();
             if((int)(b->pos().x()-1) % getGameSquares() == 0 && (int)(b->pos().y()-1) % getGameSquares() == 0)
             {
                 if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
