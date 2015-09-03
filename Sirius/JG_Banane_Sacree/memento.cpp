@@ -155,4 +155,5 @@ void Memento::setSpecialTextureEgg(bool value)
     {
         eggList.at(i)->setSpecialTexture(value);
     }
+    W_Life::getInstance()->setSpecialTexture(value);
 }

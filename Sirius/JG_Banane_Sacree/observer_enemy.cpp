@@ -44,7 +44,7 @@ void Observer_Enemy::addNPCObserver(C_Enemy* ennemi)
 
 void Observer_Enemy::removeNPCObserver(C_Enemy* ennemi)
 {
-    this-list_ennemisObserver.removeOne(ennemi);
+    this->list_ennemisObserver.removeOne(ennemi);
 }
 
 /**
