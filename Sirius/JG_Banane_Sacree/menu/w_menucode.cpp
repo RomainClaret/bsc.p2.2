@@ -138,4 +138,3 @@ void W_MenuCode::acceptCode()
     labelCodeResult->setText("Code validé! Découvre son action sur ton jeu ;)");
     Singleton_Audio::getInstance()->playSoundValideCheatCode();
 }
-
