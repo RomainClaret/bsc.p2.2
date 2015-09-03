@@ -4,6 +4,7 @@
 	<COLONNE position="3">
 	<LIGNE position="3">
 	<ENEMY type="FOX">
+		<ORIENTATION value="LEFT"/>
 		<MOVE x="3" y="3" i="1"/>
 		<MOVE x="16" y="3" i="2"/>
 		<MOVE x="16" y="11" i="3"/>
@@ -15,6 +16,7 @@
 	<COLONNE position="16">
 	<LIGNE position="3">
 	<ENEMY type="FOX">
+		<ORIENTATION value="LEFT"/>
 		<MOVE x="16" y="3" i="1"/>
 		<MOVE x="16" y="11" i="2"/>
 		<MOVE x="3" y="11" i="3"/>
@@ -26,6 +28,7 @@
 	<COLONNE position="16">
 	<LIGNE position="11">
 	<ENEMY type="FOX">
+		<ORIENTATION value="RIGHT"/>
 		<MOVE x="16" y="11" i="1"/>
 		<MOVE x="3" y="11" i="2"/>
 		<MOVE x="3" y="3" i="3"/>
@@ -37,6 +40,7 @@
 	<COLONNE position="3">
 	<LIGNE position="11">
 	<ENEMY type="FOX">
+		<ORIENTATION value="RIGHT"/>
 		<MOVE x="3" y="11" i="1"/>
 		<MOVE x="3" y="3" i="2"/>
 		<MOVE x="16" y="3" i="3"/>

@@ -225,6 +225,13 @@
    </LIGNE>
    <LIGNE position="2">
     <BLOC type="SNOW"/>
+    <ENEMY type="FOX">
+		<ORIENTATION value="LEFT"/>
+		<MOVE x="3" y="3" i="1"/>
+		<MOVE x="16" y="3" i="2"/>
+		<MOVE x="16" y="11" i="3"/>
+		<MOVE x="3" y="11" i="4"/>
+	</ENEMY>
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>

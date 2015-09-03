@@ -5432,6 +5432,7 @@
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
     <ENEMY type="FOX">
+    	<ORIENTATION value="RIGHT"/>
      <MOVE i="1" x="16" y="3"/>
      <MOVE i="2" x="16" y="11"/>
      <MOVE i="3" x="3" y="11"/>
@@ -5442,6 +5443,7 @@
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
     <ENEMY type="FOX">
+    	<ORIENTATION value="RIGHT"/>
      <MOVE i="1" x="16" y="11"/>
      <MOVE i="2" x="3" y="11"/>
      <MOVE i="3" x="3" y="3"/>
@@ -5536,8 +5538,8 @@
    </LIGNE>
    <LIGNE position="3">
     <BLOC type="SNOW"/>
-    <ENEMY type=""/>
     <ENEMY type="FOX">
+    	<ORIENTATION value="LEFT"/>
      <MOVE i="1" x="3" y="3"/>
      <MOVE i="2" x="16" y="3"/>
      <MOVE i="3" x="16" y="11"/>
@@ -5548,6 +5550,7 @@
     <BLOC type="SNOW"/>
     <ENEMY type=""/>
     <ENEMY type="FOX">
+    	<ORIENTATION value="LEFT"/>
      <MOVE i="1" x="3" y="11"/>
      <MOVE i="2" x="3" y="3"/>
      <MOVE i="3" x="16" y="3"/>
