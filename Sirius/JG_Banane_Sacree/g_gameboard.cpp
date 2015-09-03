@@ -1161,7 +1161,7 @@ void G_Gameboard::setProxy()
     objectListProxy->setZValue(8);
     objectListProxy->show();
 
-    lifeList = new W_Life(this);
+    lifeList = W_Life::resetInstance(this);
     lifeList->updateHearts(playerProfil->getNbLive());
     setWidgetPositionTopLeft(lifeList);
     lifeListProxy = mainScene->addWidget(lifeList);

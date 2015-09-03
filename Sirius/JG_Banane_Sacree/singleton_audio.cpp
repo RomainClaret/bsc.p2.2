@@ -377,6 +377,12 @@ void Singleton_Audio::pauseMusicPlaylist()
     musicPlaylistInGameThread->pauseMusicPlaylist();
 }
 
+void Singleton_Audio::pauseMusicPlaylists()
+{
+    musicPlaylistInGameThread->pauseMusicPlaylist();
+    musicPlaylistMenuThread->pauseMusicPlaylist();
+}
+
 void Singleton_Audio::resumeMusicPlaylist()
 {
     musicPlaylistInGameThread->playMusicPlaylist();

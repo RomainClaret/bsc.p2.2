@@ -71,6 +71,7 @@ public:
     void playSoundValideCheatCode();
     void playSoundUnvalideCheatCode();
 
+    void pauseMusicPlaylists();
 private:
 
     Singleton_Audio (const Singleton_Audio&){}

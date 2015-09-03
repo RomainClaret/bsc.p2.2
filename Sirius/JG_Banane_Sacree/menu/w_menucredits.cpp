@@ -133,6 +133,7 @@ void W_MenuCredits::moveCredits()
 
 void W_MenuCredits::showEvent(QShowEvent *)
 {
+    audioSingleton->pauseMusicPlaylistMenu();
 //    audioSingleton->setMusic("Penguin_Party");
     audioSingleton->playMusic();
     scrollArea->verticalScrollBar()->setValue(0);
@@ -141,12 +142,14 @@ void W_MenuCredits::showEvent(QShowEvent *)
 
 void W_MenuCredits::hideEvent(QHideEvent *)
 {
+
     audioSingleton->stopMusic();
     timer->stop();
 }
 
 void W_MenuCredits::close()
 {
+    audioSingleton->playMusicPlaylistMenu();
     audioSingleton->stopMusic();
     parent->loadBonus();
 }
