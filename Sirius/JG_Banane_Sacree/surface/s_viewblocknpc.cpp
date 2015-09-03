@@ -57,11 +57,6 @@ void S_ViewBlockNPC::playableCharacterOn()
         setStylePlayableCharacterOn();
         owner->playableCharacterOnViewBlock(); //relai de l'info
     }
-    else
-    {
-        //TEST FOR THE OTTER
-        owner->playableCharacterOnViewBlock();
-    }
 }
 
 void S_ViewBlockNPC::blockOn()
