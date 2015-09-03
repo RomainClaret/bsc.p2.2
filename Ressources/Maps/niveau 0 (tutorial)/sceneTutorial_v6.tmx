@@ -21,7 +21,7 @@
    eJzdV20OgCAI7TZ29W7Z+ucYH6JgT97mWqXAQ0C5Lmw8wQMdko0tUBYSnu7Z21uVbyRO4SvtZeuedNDvHzi+M3FyClb21/Lt6Proudr6Gb4n7r8VzxqnanwrohpfK+ZO4jti42iOVeH7h6wsZPNF80FU7yPNieDrsUmby91ltKHBcxdahVcPvbtF6UPlG6GP07mbr2bDzB2cyrC+o+7vajxz8jLzV+tDR3w+m7NWDUO4+3823ORdstXq6znZjbzvQLYeykmqFwj1yjPXaz8K35VaLMmV4pz+z8Cu88+bmzv2l8utKH97fYpQn6OBxvdPH2u6pb5mpD/x9jrUJu7c9KzTxguYjU/9
   </data>
  </layer>
- <layer name="Walls_Blocks_Groups" width="60" height="30">
+ <layer name="WallsGroup" width="60" height="30">
   <data encoding="base64" compression="zlib">
    eJztl9sOwiAMhnkG9VK93Hx0t6cUkjWplUrTUegOX9LELK7w98QI4eTkuFyi3RqtNS3Wk3u0Z6O1jqbXA0O0V6O1pPnFPday32oj1Ytrbsv1J9WLa24veqV1qu03Dz2B9eK8pf1cK+8Jx6nljOJ4R5uX30n7I/zWLY2DRVx6kLSnvM/kOY0DF5e9sEbv9Me8kvY2hu8+HINsz/BuzjgkvqW+NFC/VusAkvzDDFk7RzzMIole6ClJX0FucjHyMIskeqGncJ9xwP9y7wxB5sMS7/OsNpr7TMmf1aypgeb7vuTPs96joe1f7mzxnl+tXu5swXo9nLcUS70ezluKpV7NeWt9b7fUm6NU49b3dq1eLnclvb2/sbR6uXtMSa/m/vMBXhI/FA==
   </data>
