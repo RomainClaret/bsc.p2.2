@@ -90,24 +90,24 @@ void B_Movable::setDesign(int xpos, int ypos)
     bottomCollideBox = new QGraphicsRectItem(size*xpos+1, size*ypos+size+1, size-2, size-2);
     topCollideBox = new QGraphicsRectItem(size*xpos+1, size*ypos-size+1, size-2, size-2);
 
-    leftCollideBox->setPen(Qt::NoPen);
-    rightCollideBox->setPen(Qt::NoPen);
-    bottomCollideBox->setPen(Qt::NoPen);
-    topCollideBox->setPen(Qt::NoPen);
+//    leftCollideBox->setPen(Qt::NoPen);
+//    rightCollideBox->setPen(Qt::NoPen);
+//    bottomCollideBox->setPen(Qt::NoPen);
+//    topCollideBox->setPen(Qt::NoPen);
 
     //BRUSH COLLIDE
 
-//    QBrush brushCollide;
-//    brushCollide.setStyle(Qt::Dense4Pattern);
-//    brushCollide.setColor("black");
-//    leftCollideBox->setBrush(brushCollide);
-//    rightCollideBox->setBrush(brushCollide);
-//    bottomCollideBox->setBrush(brushCollide);
-//    topCollideBox->setBrush(brushCollide);
-//    leftCollideBox->setZValue(50);
-//    rightCollideBox->setZValue(50);
-//    bottomCollideBox->setZValue(50);
-//    topCollideBox->setZValue(50);
+    QBrush brushCollide;
+    brushCollide.setStyle(Qt::Dense4Pattern);
+    brushCollide.setColor("black");
+    leftCollideBox->setBrush(brushCollide);
+    rightCollideBox->setBrush(brushCollide);
+    bottomCollideBox->setBrush(brushCollide);
+    topCollideBox->setBrush(brushCollide);
+    leftCollideBox->setZValue(50);
+    rightCollideBox->setZValue(50);
+    bottomCollideBox->setZValue(50);
+    topCollideBox->setZValue(50);
 
 }
 

@@ -21,53 +21,28 @@
 
 S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
-    setDesign('x');
+    setDesign();
     levelEnd = false;
     nextLevel = 0;
     neededItem = new QString("");
     needItem = false;
     this->setZValue(3);
 }
-
-//S_Door::S_Door(QGraphicsItem *parent) : G_Surface(0, 0, parent)
-//{
-//    setDesign();
-//    levelEnd = false;
-//    nextLevel = 0;
-//    neededItem = new QString("");
-//    needItem = false;
-//}
-
-void S_Door::setDirection(QChar direction)
+S_Door::S_Door(QGraphicsItem *parent) : G_Surface(0, 0, parent)
 {
-    setDesign(direction);
+    setDesign();
+    levelEnd = false;
+    nextLevel = 0;
+    neededItem = new QString("");
+    needItem = false;
 }
 
-void S_Door::setDesign(QChar direction)
+void S_Door::setDesign()
 {
-    QBrush brush;
-    if(direction == 't')
-    {
-        qDebug() << "TOP";
-        QPixmap pixmap(":/surfaces/surfaces/door-t.png");
-        brush.setTexture(pixmap);
-    }
-    else if(direction == 'b')
-    {
-        QPixmap pixmap(":/surfaces/surfaces/door-b.png");
-        brush.setTexture(pixmap);
-    }
-    else if(direction == 'l')
-    {
-        QPixmap pixmap(":/surfaces/surfaces/door-l.png");
-        brush.setTexture(pixmap);
-    }
-    else if(direction == 'r')
-    {
-        QPixmap pixmap(":/surfaces/surfaces/door-r.png");
-        brush.setTexture(pixmap);
-    }
-    setBrush(brush);
+//    QBrush brush;
+//    brush.setStyle(Qt::Dense7Pattern);
+//    brush.setColor(Qt::blue);
+//    setBrush(brush);
 }
 
 void S_Door::setBackground(bool state)
@@ -75,7 +50,7 @@ void S_Door::setBackground(bool state)
     //True = OPEN, False = CLOSED
     if(state)
     {
-        //setBrush(Qt::NoBrush);
+        setBrush(Qt::NoBrush);
     }
     else
     {

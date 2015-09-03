@@ -128,9 +128,5 @@
         <file>surfaces/fire_init_02.png</file>
         <file>surfaces/fire_init_03.png</file>
         <file>surfaces/fire_init_04.png</file>
-        <file>surfaces/door-b.png</file>
-        <file>surfaces/door-l.png</file>
-        <file>surfaces/door-r.png</file>
-        <file>surfaces/door-t.png</file>
     </qresource>
 </RCC>

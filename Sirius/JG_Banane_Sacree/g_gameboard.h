@@ -110,8 +110,6 @@ public:
 
     void endMoveCheck(char sens);
 
-    bool getPauseState();
-
     QGraphicsScene* getGraphicsScene();
 
     /**

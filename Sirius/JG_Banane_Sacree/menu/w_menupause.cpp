@@ -35,12 +35,14 @@ W_MenuPause::W_MenuPause(QWidget *parent, G_Gameboard* gameboard)
     btnMenuPauseIsland = new QPushButton(tr("Aller sur l'île"));
     btnMenuPauseQuit = new QPushButton(tr("Quitter la partie"));
     btnMenuPauseBonus = new QPushButton(tr("Plus"));
+    btnMenuPauseDelete = new QPushButton(tr("Supprimer la partie"));
 
     btnMenuPauseResume->setStyleSheet(W_Menu::styleBtn);
     btnMenuPauseRestartEnigma->setStyleSheet(W_Menu::styleBtn);
     btnMenuPauseQuit->setStyleSheet(W_Menu::styleBtn);
     btnMenuPauseIsland->setStyleSheet(W_Menu::styleBtn);
     btnMenuPauseRestartLevel->setStyleSheet(W_Menu::styleBtn);
+    btnMenuPauseDelete->setStyleSheet(W_Menu::styleBtn);
     btnMenuPauseBonus->setStyleSheet(W_Menu::styleBtn);
 
     connect(btnMenuPauseQuit, SIGNAL(clicked()),gameboard, SLOT(exitGame()));
@@ -49,12 +51,14 @@ W_MenuPause::W_MenuPause(QWidget *parent, G_Gameboard* gameboard)
     connect(btnMenuPauseRestartLevel, SIGNAL(clicked()),gameboard, SLOT(restartLevel()));
     connect(btnMenuPauseIsland, SIGNAL(clicked()),gameboard, SLOT(returnIsland()));
     connect(btnMenuPauseBonus, SIGNAL(clicked()), (W_Menu*)parent, SLOT(loadBonus()));
+    connect(btnMenuPauseDelete, SIGNAL(clicked()), gameboard, SLOT(deleteGame()));
 
     layoutMenuPause->addRow(btnMenuPauseResume);
     layoutMenuPause->addRow(btnMenuPauseRestartEnigma);
     layoutMenuPause->addRow(btnMenuPauseRestartLevel);
     layoutMenuPause->addRow(btnMenuPauseIsland);
     layoutMenuPause->addRow(btnMenuPauseBonus);
+    layoutMenuPause->addRow(btnMenuPauseDelete);
     layoutMenuPause->addRow(btnMenuPauseQuit);
 
     this->resize(400,400);

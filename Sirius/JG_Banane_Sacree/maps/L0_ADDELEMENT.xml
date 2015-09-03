@@ -2,32 +2,32 @@
 <ELEMENT>
 	<COLONNE position="5">
 		<LIGNE position="14">
-			<DOOR direction="b" nbItem="5" item="FISH"/>
+			<DOOR nbItem="5" item="FISH"/>
 		</LIGNE>
 	</COLONNE>
 	  <COLONNE position="40">
 	   <LIGNE position="5">
-    <DOOR direction="l" nbItem="3" item="FISH"/>
+    <DOOR nbItem="3" item="FISH"/>
 	</LIGNE>
 	</COLONNE>
 	  <COLONNE position="19">
 	   <LIGNE position="22">
-    <DOOR direction="r" />
+    <DOOR />
    </LIGNE>
    </COLONNE>
      <COLONNE position="39">
       <LIGNE position="22">
-    <DOOR direction="r" nbItem="1" item="FISH"/>
+    <DOOR nbItem="1" item="FISH"/>
    </LIGNE>
    </COLONNE>
      <COLONNE position="54">
    <LIGNE position="15">
-    <DOOR direction="t" nbItem="2" item="FISH"/>
+    <DOOR nbItem="1" item="FISH"/>
    </LIGNE>
      </COLONNE>
 	   <COLONNE position="20">
 	   <LIGNE position="5">
-    <DOOR direction="l" nbItem="4" item="FISH"/>
+    <DOOR nbItem="4" item="FISH"/>
    </LIGNE>
 	</COLONNE> 
 	<COLONNE position="6">

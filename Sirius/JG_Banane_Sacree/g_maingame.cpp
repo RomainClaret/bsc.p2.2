@@ -29,13 +29,14 @@
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 {
+//    connect(this,SIGNAL(closeEvent()),this,SLOT(G_Gameboard::exitGame()));
+
     audioSingleton = Singleton_Audio::getInstance();
+
     audioSingleton->playMusicPlaylistMenu(-2);
 
     toggleGameCreated = false;
     toggleFirstStart = true;
-
-    theGame = NULL;
 
     currentLevel = new G_Level(-1, new Observer_Enemy(), NULL);
 
@@ -115,6 +116,7 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     btnSoundMuter->setGeometry(windowSizeX-70,windowSizeY-70,60,60);
 
     connect(btnSoundMuter, SIGNAL (released()), this, SLOT (soundMuter()));
+
 }
 
 G_MainGame::~G_MainGame()
@@ -200,18 +202,12 @@ void G_MainGame::resizeEvent(QResizeEvent * event) {
 
 void G_MainGame::closeEvent (QCloseEvent *event)
 {
-    if(theGame != NULL)
-    {
+    QMessageBox::StandardButton resBtn = QMessageBox::warning( this, tr("Quitter de cette manière?"),
+                                                                tr("En quittant de ce manière, vous allez perdre votre progression. Si vous souhaitez sauvegarder votre partie, annulez et quittez depuis le menu Escape.\n"),
+                                                                QMessageBox::Cancel | QMessageBox::Yes);
+    if (resBtn != QMessageBox::Yes) {
         event->ignore();
-        theGame->exitGame();
-    }
-    else
-    {
+    } else {
         event->accept();
     }
-}
-
-void G_MainGame::exitGame()
-{
-    theGame = NULL;
 }
