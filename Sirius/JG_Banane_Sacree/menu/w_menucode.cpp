@@ -139,4 +139,3 @@ void W_MenuCode::acceptCode()
     Singleton_Audio::getInstance()->playSoundValideCheatCode();
 }
 
-bool W_MenuCode::BANANASPECIAL = false;
