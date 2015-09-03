@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DATA>
  <LEVEL>
-  <SIZE width="60" height="30"/>
+  <SIZE height="30" width="60"/>
   <POSITION x="1" y="1"/>
   <START x="1" y="8"/>
   <END x="0" y="20"/>
@@ -214,105 +214,6 @@
    </LIGNE>
    <LIGNE position="28">
     <BLOC type="ICE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="30">
-   <LIGNE position="0">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-    <ENEMY type=""/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="46">
@@ -994,102 +895,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="12">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="7">
-   <LIGNE position="26">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-    <ENEMY type=""/>
-   </LIGNE>
-   <LIGNE position="0">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
    </LIGNE>
@@ -2502,104 +2307,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
-  <COLONNE position="34">
-   <LIGNE position="10">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
   <COLONNE position="35">
    <LIGNE position="9">
     <BLOC type="WATER"/>
@@ -3287,109 +2994,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="20">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="51">
-   <LIGNE position="28">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="SNOW"/>
-    <ENEMY type=""/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="15">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
    </LIGNE>
@@ -4403,103 +4007,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
-  <COLONNE position="44">
-   <LIGNE position="16">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALL"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
   <COLONNE position="56">
    <LIGNE position="23">
     <BLOC type="WATER"/>
@@ -4594,331 +4101,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="22">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="39">
-   <LIGNE position="8">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="40">
-   <LIGNE position="8">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="0">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="19">
-   <LIGNE position="0">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="WALLGROUP"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="25">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
    </LIGNE>
@@ -5236,106 +4418,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
    <LIGNE position="28">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
-  <COLONNE position="11">
-   <LIGNE position="0">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="SNOW"/>
-    <ENEMY type=""/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="29">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
    </LIGNE>
@@ -5834,106 +4916,6 @@
     <BLOC type="STONE"/>
    </LIGNE>
   </COLONNE>
-  <COLONNE position="17">
-   <LIGNE position="0">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="1">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="2">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="3">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="4">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="5">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="6">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="7">
-    <BLOC type="WATER"/>
-   </LIGNE>
-   <LIGNE position="9">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="10">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="11">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="14">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="15">
-    <BLOC type="SNOW"/>
-   </LIGNE>
-   <LIGNE position="13">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="16">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="17">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="18">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="19">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="20">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="21">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="22">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="23">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="24">
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="25">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="26">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="27">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="28">
-    <BLOC type="MOVABLE"/>
-    <BLOC type="ICE"/>
-   </LIGNE>
-   <LIGNE position="8">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="12">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-   <LIGNE position="29">
-    <BLOC type="SNOW"/>
-    <BLOC type="STONE"/>
-   </LIGNE>
-  </COLONNE>
   <COLONNE position="18">
    <LIGNE position="0">
     <BLOC type="WATER"/>
@@ -6029,6 +5011,1054 @@
    <LIGNE position="29">
     <BLOC type="SNOW"/>
     <BLOC type="STONE"/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="17">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+    <DOOR/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="19">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="SNOW"/>
+    <DOOR/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="39">
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+    <DOOR/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="44">
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+    <DOOR/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="40">
+   <LIGNE position="8">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+    <DOOR/>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="7">
+   <LIGNE position="26">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE x="7" y="2" i="1"/>
+     <MOVE x="7" y="10" i="2"/>
+     <MOVE x="2" y="10" i="3"/>
+     <MOVE x="2" y="2" i="4"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="11">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE x="11" y="10" i="1"/>
+     <MOVE x="11" y="3" i="2"/>
+     <MOVE x="9" y="3" i="3"/>
+     <MOVE x="9" y="10" i="4"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="51">
+   <LIGNE position="28">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE x="51" y="23" i="1"/>
+     <MOVE x="51" y="27" i="2"/>
+     <MOVE x="42" y="27" i="3"/>
+     <MOVE x="42" y="23" i="4"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="30">
+   <LIGNE position="0">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WALLGROUP"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="10">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="MOVABLE"/>
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+    <ENEMY type=""/>
+    <ENEMY type="FOX">
+     <MOVE x="30" y="6" i="1"/>
+     <MOVE x="30" y="2" i="2"/>
+     <MOVE x="38" y="2" i="3"/>
+     <MOVE x="38" y="6" i="4"/>
+    </ENEMY>
+   </LIGNE>
+  </COLONNE>
+  <COLONNE position="34">
+   <LIGNE position="10">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="11">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="12">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="13">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="14">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="15">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="16">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="17">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="18">
+    <BLOC type="WATER"/>
+   </LIGNE>
+   <LIGNE position="1">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="2">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="3">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="5">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="6">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="7">
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="29">
+    <BLOC type="WALL"/>
+    <BLOC type="SNOW"/>
+   </LIGNE>
+   <LIGNE position="21">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="22">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="23">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="24">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="25">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="26">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="27">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="28">
+    <BLOC type="ICE"/>
+   </LIGNE>
+   <LIGNE position="0">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="8">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="9">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="19">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="20">
+    <BLOC type="SNOW"/>
+    <BLOC type="STONE"/>
+   </LIGNE>
+   <LIGNE position="4">
+    <BLOC type="SNOW"/>
+    <ITEM type="EGG"/>
    </LIGNE>
   </COLONNE>
  </LEVELITEM>

@@ -4059,7 +4059,7 @@
    </LIGNE>
    <LIGNE position="29">
     <BLOC type="SNOW"/>
-    <END nextLevel="79"/>
+    <END nextLevel="1"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="11">
@@ -4155,7 +4155,7 @@
    </LIGNE>
    <LIGNE position="29">
     <BLOC type="SNOW"/>
-    <END nextLevel="80"/>
+    <END nextLevel="1"/>
    </LIGNE>
   </COLONNE>
   <COLONNE position="5">
