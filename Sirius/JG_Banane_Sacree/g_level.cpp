@@ -198,11 +198,21 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "DOOR")
     {
-        Factory_Surface::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene);
+       S_Door* door = Factory_Surface::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene);
+       if(!elem.attribute("direction").isEmpty())
+       {
+           qDebug() << "BOUH";
+           door->setDirection(elem.attribute("direction").at(0));
+       }
     }
     else if(tagName == "END")
     {
-        doorList.append(Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene));
+        S_Door* door = Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+        if(!elem.attribute("direction").isEmpty())
+        {
+            door->setDirection(elem.attribute("direction").at(0));
+        }
+        doorList.append(door);
     }
     else if(tagName == "ENEMY")
     {
@@ -268,6 +278,7 @@ void G_Level::clearScene()
 {
     observerEnemy->clear();
     listAutoTextures.clear();
+    listWallGroup.clear();
     Memento::getInstance()->clear();
     //scene->clear();
 

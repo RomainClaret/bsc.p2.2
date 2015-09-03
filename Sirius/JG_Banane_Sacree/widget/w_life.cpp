@@ -23,20 +23,34 @@
 
 #include <menu/w_menucode.h>
 
-//W_Life* W_Life::instance;
+W_Life* W_Life::instance = NULL;
+
+W_Life* W_Life::getInstance(QWidget* parent)
+{
+    if(instance == NULL)
+    {
+        instance = new W_Life(parent);
+    }
+    return instance;
+}
+
+W_Life* W_Life::resetInstance(QWidget* parent)
+{
+    instance = new W_Life(parent);
+    return instance;
+}
 
 W_Life::W_Life(QWidget *)
 {
     totalLife = 0;
     this->resize(G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     this->setAttribute(Qt::WA_TranslucentBackground);
+    setSpecialTexture(false);
 }
 
 void W_Life::paintEvent(QPaintEvent *)
 {
     QPainter paint(this);
-
-    QString img = ":/items/items/egg.png";
 
     QString totalLifeString = QString::number(totalLife);
     totalLifeString.append("x");
@@ -58,6 +72,20 @@ void W_Life::paintEvent(QPaintEvent *)
 void W_Life::updateHearts(int value)
 {
     this->totalLife = value;
+    this->resize(value*G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
+    update();
+}
+
+void W_Life::setSpecialTexture(bool value)
+{
+    if(value)
+    {
+        img = ":/items/items/banana.png";
+    }
+    else
+    {
+        img = ":/items/items/egg.png";
+    }
     this->resize(value*G_Gameboard::getGameSquares(),G_Gameboard::getGameSquares());
     update();
 }

@@ -76,6 +76,8 @@ public:
     //Destructor
     ~G_MainGame();
 
+    void exitGame();
+
 private:
 
     Singleton_Audio *audioSingleton;

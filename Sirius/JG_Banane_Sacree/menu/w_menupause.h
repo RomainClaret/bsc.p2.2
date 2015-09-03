@@ -75,7 +75,6 @@ private:
     QPushButton *btnMenuPauseRestartEnigma;
     QPushButton *btnMenuPauseRestartLevel;
     QPushButton *btnMenuPauseBonus;
-    QPushButton *btnMenuPauseDelete;
 
     W_Menu* parent;
 

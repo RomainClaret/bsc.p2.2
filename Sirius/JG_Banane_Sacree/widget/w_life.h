@@ -24,18 +24,18 @@
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
  * @version 1.0
- * @date 27 January 2015
+ * @date 02 Septembre 2015
  */
 class W_Life : public QWidget
 {
     Q_OBJECT
 public:
-    //Constructor
-    /**
-     * @brief Overlay widget to display lifes of the player.
-     * @param parent if need
-     */
-    W_Life(QWidget *parent = 0);
+
+    static W_Life* getInstance(QWidget* parent = 0);
+
+    static W_Life* resetInstance(QWidget* parent = 0);
+
+    void setSpecialTexture(bool value);
 
     /**
      * @brief Listen to the paint event
@@ -53,7 +53,17 @@ signals:
 public slots:
 
 private:
+    static W_Life* instance;
+    QString img;
+
     int totalLife;
+
+    //Constructor
+    /**
+     * @brief Overlay widget to display lifes of the player.
+     * @param parent if need
+     */
+    W_Life(QWidget *parent = 0);
 
 };
 
