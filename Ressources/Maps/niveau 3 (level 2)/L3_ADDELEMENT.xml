@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT>	
+	<COLONNE position="17">
+	<LIGNE position="14">
+	<DOOR />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="19">
+	<LIGNE position="17">
+	<DOOR />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="39">
+	<LIGNE position="24">
+	<DOOR />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="44">
+	<LIGNE position="15">
+	<DOOR />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="40">
+	<LIGNE position="4">
+	<DOOR />
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="7">
+	<LIGNE position="2">
+	<ENEMY type="FOX">
+		<MOVE x="7" y="2" i="1"/>
+		<MOVE x="7" y="10" i="2"/>
+		<MOVE x="2" y="10" i="3"/>
+		<MOVE x="2" y="2" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="11">
+	<LIGNE position="10">
+	<ENEMY type="FOX">
+		<MOVE x="11" y="10" i="1"/>
+		<MOVE x="11" y="3" i="2"/>
+		<MOVE x="9" y="3" i="3"/>
+		<MOVE x="9" y="10" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="51">
+	<LIGNE position="23">
+	<ENEMY type="FOX">
+		<MOVE x="51" y="23" i="1"/>
+		<MOVE x="51" y="27" i="2"/>
+		<MOVE x="42" y="27" i="3"/>
+		<MOVE x="42" y="23" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="30">
+	<LIGNE position="6">
+	<ENEMY type="FOX">
+		<MOVE x="30" y="6" i="1"/>
+		<MOVE x="30" y="2" i="2"/>
+		<MOVE x="38" y="2" i="3"/>
+		<MOVE x="38" y="6" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="34">
+	<LIGNE position="4">
+	<ITEM type="EGG" />
+	</LIGNE>
+	</COLONNE>
+	
+</ELEMENT>

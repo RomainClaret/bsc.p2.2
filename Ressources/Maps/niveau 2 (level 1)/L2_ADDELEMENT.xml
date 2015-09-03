@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT>
+	<COLONNE position="59">
+		<LIGNE position="7">
+			<ITEM type="SHOES" />
+		</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="48">
+	<LIGNE position="14">
+	<DOOR direction="b" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="40">
+	<LIGNE position="21">
+	<DOOR direction="l" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="34">
+	<LIGNE position="15">
+	<DOOR direction="t" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="20">
+	<LIGNE position="10">
+	<DOOR direction="l" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="10">
+	<LIGNE position="14">
+	<DOOR direction="b" />
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="6">
+	<LIGNE position="4">
+	<ENEMY type="FOX">
+		<MOVE x="6" y="4" i="1"/>
+		<MOVE x="13" y="4" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="4">
+	<LIGNE position="10">
+	<ENEMY type="FOX">
+		<MOVE x="4" y="10" i="1"/>
+		<MOVE x="4" y="4" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="15">
+	<LIGNE position="4">
+	<ENEMY type="FOX">
+		<MOVE x="15" y="4" i="1"/>
+		<MOVE x="15" y="10" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="13">
+	<LIGNE position="10">
+	<ENEMY type="FOX">
+		<MOVE x="13" y="10" i="1"/>
+		<MOVE x="6" y="10" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="6">
+	<LIGNE position="6">
+	<ENEMY type="FOX">
+		<MOVE x="6" y="6" i="1"/>
+		<MOVE x="13" y="6" i="2"/>
+		<MOVE x="13" y="8" i="3"/>
+		<MOVE x="6" y="8" i="4"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="12">
+	<LIGNE position="23">
+	<ENEMY type="FOX">
+		<MOVE x="12" y="23" i="1"/>
+		<MOVE x="10" y="23" i="2"/>
+		<MOVE x="10" y="25" i="3"/>
+		<MOVE x="12" y="25" i="4"/>
+		<MOVE x="12" y="27" i="5"/>
+		<MOVE x="10" y="27" i="6"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="2">
+	<LIGNE position="25">
+	<ENEMY type="FOX">
+		<MOVE x="2" y="25" i="1"/>
+		<MOVE x="5" y="25" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="7">
+	<LIGNE position="23">
+	<ENEMY type="FOX">
+		<MOVE x="7" y="23" i="1"/>
+		<MOVE x="7" y="27" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="17">
+	<LIGNE position="25">
+	<ENEMY type="FOX">
+		<MOVE x="17" y="25" i="1"/>
+		<MOVE x="14" y="25" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	
+</ELEMENT>
