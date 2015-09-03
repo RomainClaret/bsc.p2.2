@@ -150,7 +150,7 @@ void P_Penguin::stepMoveCharacter()
                 blocMove = game->getMovable();
             }
             int pasEffectif = pas;
-            if(blocMove != NULL)
+            if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
                 if(!blocMove->isSlide())
                 {
@@ -182,7 +182,7 @@ void P_Penguin::stepMoveCharacter()
                 blocMove = game->getMovable();
             }
             int pasEffectif = pas;
-            if(blocMove != NULL)
+            if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
                 if(!blocMove->isSlide())
                 {
@@ -214,16 +214,13 @@ void P_Penguin::stepMoveCharacter()
                 blocMove = game->getMovable();
             }
             int pasEffectif = pas;
-            if(blocMove != NULL)
+            if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
-                if(!game->isSlidingBloc(blocMove))
-                {
                     if(!blocMove->isSlide())
                     {
                         pasEffectif = pas /2;
                     }
                     blocMove->moveByPixel(0,-pasEffectif);
-                }
             }
 
             this->moveByPixel(0,-pasEffectif);
@@ -249,7 +246,7 @@ void P_Penguin::stepMoveCharacter()
                 blocMove = game->getMovable();
             }
             int pasEffectif = pas;
-            if(blocMove != NULL)
+            if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
                 if(!blocMove->isSlide())
                 {

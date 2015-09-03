@@ -918,33 +918,41 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
-            if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
+            qDebug() << b->pos().x();
+            if((int)(b->pos().x()-1) % getGameSquares() == 0 && (int)(b->pos().y()-1) % getGameSquares() == 0)
             {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 'r' && b->isMovableToRight() && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 't' && b->isMovableToTop() && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 'b' && b->isMovableToBottom()  && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
+                if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 'r' && b->isMovableToRight() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 't' && b->isMovableToTop() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 'b' && b->isMovableToBottom()  && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else
+                {
+    //                qDebug() << "IS MOVABLE TO TOP " <<  b->isMovableToTop();
+    //                qDebug() << "CHECK POSITION " << checkPosition(b->getCollideBlocPosition(direction));
+                    bMove=false;
+                }
             }
             else
             {
-//                qDebug() << "IS MOVABLE TO TOP " <<  b->isMovableToTop();
-//                qDebug() << "CHECK POSITION " << checkPosition(b->getCollideBlocPosition(direction));
                 bMove=false;
             }
-        } 
+        }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
             bMove = true;
@@ -1039,6 +1047,7 @@ void G_Gameboard::restartEnigma()
     }
 
     //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::restartLevel()
