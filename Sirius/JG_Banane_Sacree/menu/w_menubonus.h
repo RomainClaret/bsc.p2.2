@@ -16,6 +16,8 @@
 
 #include <QWidget>
 
+#include "../g_gameboard.h"
+
 class QLabel;
 class QPushButton;
 class QFormLayout;
@@ -40,9 +42,9 @@ class W_MenuBonus : public QWidget
 public:
     /**
      * @brief Constructor
-     * @param parent (W_Menu*)
+     * @param parent (W_Menu*), gameboard
      */
-    W_MenuBonus(QWidget *parent);
+    W_MenuBonus(QWidget *parent, G_Gameboard *gameboard);
 
     /**
      * @brief Set the W_Menu title and subtitle
@@ -51,16 +53,18 @@ public:
 
 private:
     //Layout
-    QFormLayout *layoutMenuPause;
+    QFormLayout *layoutMenu;
 
     //Buttons
     QPushButton *btnBonusCode;
     QPushButton *btnBonusCredits;
     QPushButton *btnBonusReturn;
     QPushButton *btnBonusAudio;
+    QPushButton *btnMenuPauseDelete;
 
     //Parent
     W_Menu* parent;
+    G_Gameboard* gameboard;
 
 signals:
 

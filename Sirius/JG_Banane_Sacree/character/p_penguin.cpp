@@ -103,7 +103,7 @@ void P_Penguin::setPos(int x, int y)
 
 void P_Penguin::advance(int step)
 {
-    if(step == 0)
+    if(step == 0 && !game->getPauseState())
     {
         iAdvanceSpeed++;
         if(iAdvanceSpeed % 2 == 0)
@@ -149,14 +149,18 @@ void P_Penguin::stepMoveCharacter()
             {
                 blocMove = game->getMovable();
             }
-
+            int pasEffectif = pas;
             if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
-                blocMove->moveByPixel(-pas,0);
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(-pasEffectif,0);
             }
 
 //            qDebug() << "move me";
-            this->moveByPixel(-pas,0);
+            this->moveByPixel(-pasEffectif,0);
         }
         else
         {
@@ -177,12 +181,16 @@ void P_Penguin::stepMoveCharacter()
             {
                 blocMove = game->getMovable();
             }
-
+            int pasEffectif = pas;
             if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
-                blocMove->moveByPixel(pas,0);
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(pasEffectif,0);
             }
-            this->moveByPixel(pas,0);
+            this->moveByPixel(pasEffectif,0);
         }
         else
         {
@@ -205,13 +213,17 @@ void P_Penguin::stepMoveCharacter()
             {
                 blocMove = game->getMovable();
             }
-
+            int pasEffectif = pas;
             if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
-                    blocMove->moveByPixel(0,-pas);
+                    if(!blocMove->isSlide())
+                    {
+                        pasEffectif = pas /2;
+                    }
+                    blocMove->moveByPixel(0,-pasEffectif);
             }
 
-            this->moveByPixel(0,-pas);
+            this->moveByPixel(0,-pasEffectif);
         }
         else
         {
@@ -233,13 +245,17 @@ void P_Penguin::stepMoveCharacter()
             {
                 blocMove = game->getMovable();
             }
-
+            int pasEffectif = pas;
             if(blocMove != NULL && !game->isSlidingBloc(blocMove))
             {
-                blocMove->moveByPixel(0,pas);
+                if(!blocMove->isSlide())
+                {
+                    pasEffectif = pas /2;
+                }
+                blocMove->moveByPixel(0,pasEffectif);
             }
 
-            this->moveByPixel(0,pas);
+            this->moveByPixel(0,pasEffectif);
         }
         else
         {

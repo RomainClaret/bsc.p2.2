@@ -82,7 +82,7 @@ W_Menu::W_Menu(QWidget *parent)
                                  );
 
    menuPause = new W_MenuPause(this, (G_Gameboard*)parent);
-   menuBonus = new W_MenuBonus(this);
+   menuBonus = new W_MenuBonus(this, (G_Gameboard*)parent);
    menuCode = new W_MenuCode(this);
    menuCredits = new W_MenuCredits(this);
    menuAudio = new W_MenuAudio(this);

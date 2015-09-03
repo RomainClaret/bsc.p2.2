@@ -144,6 +144,8 @@ void G_Profil::read(const QJsonObject &json)
     this->volumeMusics = json["volumeMusics"].toInt();
     this->volumeSounds = json["volumeSounds"].toInt();
 
+    qDebug() << volumeMusics << " - " << volumeSounds;
+
     QString strpower = json["power"].toString();
     QStringList list = strpower.split("");
     power.clear();
@@ -192,7 +194,6 @@ int G_Profil::getSoundsVolume()
 
 void G_Profil::write(QJsonObject &json) const
 {
-
     json["username"] = username;
     json["startDate"] = startDate;
     json["gameTime"] = gameTime;
@@ -202,6 +203,8 @@ void G_Profil::write(QJsonObject &json) const
     json["difficulty"] = difficulty;
     json["volumeMusics"] = volumeMusics;
     json["volumeSounds"] = volumeSounds;
+
+    qDebug() << volumeMusics << " - " << volumeSounds;
 
     QString strpower;
     for(int i = 0; i < power.length(); i++)
