@@ -40,32 +40,26 @@ Observer_Enemy::~Observer_Enemy()
 void Observer_Enemy::addNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.append(ennemi);
+    hash_enemyPreviousState[ennemi] = ennemi->getEnemyState();
 }
 
 void Observer_Enemy::removeNPCObserver(C_Enemy* ennemi)
 {
     this->list_ennemisObserver.removeOne(ennemi);
+    this->hash_enemyPreviousState.remove(ennemi);
 }
 
 /**
  * @details changeEnnemiState change the state of the ennemis in the LEVEL PHASE
  */
-void Observer_Enemy::changeNPCState(QString state, QPoint posPlayer)
+void Observer_Enemy::changeNPCState(QString state, QPoint phase)
 {
     //find the player's zone
+    int phaseX = phase.x();
+    int phaseY = phase.y();
+
     int gameX = G_Gameboard::getSizeX();
     int gameY = G_Gameboard::getSizeY();
-
-    int phaseX = 1;
-    while(posPlayer.x() > phaseX*gameX)
-    {
-        phaseX++;
-    }
-    int phaseY = 1;
-    while(posPlayer.y() > phaseY*gameY)
-    {
-        phaseY++;
-    }
 
     //  1,1  2,1  3,1
     //  1,2  2,2  3,2
@@ -80,6 +74,80 @@ void Observer_Enemy::changeNPCState(QString state, QPoint posPlayer)
         {
             qDebug() << "---Change one state in pos " << phaseX << ", " << phaseY << " to "<< state;
 
+            State_Enemy* oldState;
+            if(state == STATE_PATROL)
+            {
+                 oldState = enemy->changeState(new State_EnemyPatrol());
+                 delete oldState;
+            }
+            else if(state == STATE_PAUSE)
+            {
+                oldState = enemy->changeState(new State_EnemyPause());
+                delete oldState;
+            }
+            else if(state == STATE_SLEEP)
+            {
+                oldState = enemy->changeState(new State_EnemySleep());
+                delete oldState;
+            }
+        }
+    }
+}
+
+/**
+ * @details changeEnnemiState change the state of all ennemis in the LEVEL
+ */
+void Observer_Enemy::changeNPCState(QString state)
+{
+    foreach (C_Enemy* enemy, list_ennemisObserver) {
+        qDebug() << "---Change one state in the lvl" << " to "<< state;
+
+        State_Enemy* oldState;
+        if(state == STATE_PATROL)
+        {
+            oldState = enemy->changeState(new State_EnemyPatrol());
+            delete oldState;
+        }
+        else if(state == STATE_PAUSE)
+        {
+            oldState = enemy->changeState(new State_EnemyPause());
+            delete oldState;
+        }
+        else if(state == STATE_SLEEP)
+        {
+            oldState = enemy->changeState(new State_EnemySleep());
+            delete oldState;
+        }
+    }
+}
+
+void Observer_Enemy::switchToState(QString state, QPoint phase)
+{
+    int phaseX = phase.x();
+    int phaseY = phase.y();
+
+    int gameX = G_Gameboard::getSizeX();
+    int gameY = G_Gameboard::getSizeY();
+
+     qDebug() << "phaseX" << phaseX;
+     qDebug() << "phaseY" << phaseY;
+
+    //  1,1  2,1  3,1
+    //  1,2  2,2  3,2
+    //change the state of the enemies in this zone
+    foreach (C_Enemy* enemy, list_ennemisObserver)
+    {
+        QPoint posEnemy = enemy->getNPCPos();
+
+        if((posEnemy.x() < phaseX*gameX && posEnemy.x() > (phaseX-1)*gameX)
+                && (posEnemy.y() < phaseY*gameY && posEnemy.y() > (phaseY-1)*gameY))
+        {
+            qDebug() << "---Save one state and change it in pos " << phaseX << ", " << phaseY << " to "<< state;
+
+            //save the state
+            hash_enemyPreviousState[enemy] = enemy->getEnemyState();
+
+            //change to a new
             if(state == STATE_PATROL)
             {
                 enemy->changeState(new State_EnemyPatrol());
@@ -96,28 +164,51 @@ void Observer_Enemy::changeNPCState(QString state, QPoint posPlayer)
     }
 }
 
-/**
- * @details changeEnnemiState change the state of all ennemis in the LEVEL
- */
-void Observer_Enemy::changeNPCState(QString state)
+void Observer_Enemy::switchAllToPause()
 {
-    foreach (C_Enemy* enemy, list_ennemisObserver) {
-        qDebug() << "---Change one state in the lvl" << " to "<< state;
+    foreach (C_Enemy* enemy, list_ennemisObserver)
+    {
+         qDebug() << "---Save one state and change it to Pause (ALL)";
 
-        if(state == STATE_PATROL)
+         State_Enemy* OldState = hash_enemyPreviousState[enemy];
+
+         hash_enemyPreviousState[enemy] = enemy->getEnemyState();
+         enemy->changeState(new State_EnemySleep());
+
+         if(OldState != NULL && hash_enemyPreviousState[enemy]  != OldState){
+             delete OldState;
+         }
+    }
+}
+
+void Observer_Enemy::switchBackToState(QPoint phase)
+{
+    int phaseX = phase.x();
+    int phaseY = phase.y();
+
+    int gameX = G_Gameboard::getSizeX();
+    int gameY = G_Gameboard::getSizeY();
+
+    QHashIterator<C_Enemy*, State_Enemy*> it(hash_enemyPreviousState);
+    while (it.hasNext())
+    {
+        it.next();
+        QPoint posEnemy = it.key()->getNPCPos();
+        if((posEnemy.x() < phaseX*gameX && posEnemy.x() > (phaseX-1)*gameX)
+                && (posEnemy.y() < phaseY*gameY && posEnemy.y() > (phaseY-1)*gameY))
         {
-            enemy->changeState(new State_EnemyPatrol());
-        }
-        else if(state == STATE_PAUSE)
-        {
-            enemy->changeState(new State_EnemyPause());
-        }
-        else if(state == STATE_SLEEP)
-        {
-            enemy->changeState(new State_EnemySleep());
+            qDebug() << "---Switch back to a saved state " << phaseX << ", " << phaseY;
+
+            State_Enemy* state = it.key()->changeState(it.value());
+
+            if(state != it.value())
+            {
+                delete state;
+            }
         }
     }
 }
+
 
 void Observer_Enemy::clear()
 {
@@ -132,6 +223,14 @@ void Observer_Enemy::clear()
 //        }
 //    }
     list_ennemisObserver.clear();
+
+    QList<State_Enemy*> listStates = hash_enemyPreviousState.values();
+    foreach (State_Enemy* state, listStates)
+    {
+        delete state;
+    }
+
+    hash_enemyPreviousState.clear();
 }
 
 void Observer_Enemy::setSpecialTexture(bool value)

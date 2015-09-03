@@ -18,6 +18,7 @@
 #include "../surface/b_wall_alone.h"
 #include "../surface/b_wall_group.h"
 #include "../surface/b_water.h"
+#include "../state/state_enemyfriendly.h"
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
@@ -67,6 +68,8 @@ E_Otter::E_Otter(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy
 //    }
 
     resetDefaultOrientation();
+
+    state = new State_EnemyFriendly();
 }
 
 void E_Otter::playableCharacterDetection()
@@ -109,13 +112,6 @@ void E_Otter::checkPenguin()
             }
         }
     }
-}
-
-void E_Otter::changeState(State_Enemy* newState)
-{
-    delete newState;
-    delete state;
-    this->state = new State_EnemyFriendly();
 }
 
 bool E_Otter::collide()

@@ -67,8 +67,11 @@ this->defaultOrientation = orientation;
     setPath(path);
     setZValue(11);
 
-    //default state
-    state = new State_EnemyPause();
+}
+
+State_Enemy* C_Enemy::getEnemyState()
+{
+    return state;
 }
 
 C_Enemy::~C_Enemy()
@@ -84,10 +87,11 @@ C_Enemy::~C_Enemy()
 /**
  * @detail replace the state of the enemy with newState
  */
-void C_Enemy::changeState(State_Enemy* newState)
+State_Enemy* C_Enemy::changeState(State_Enemy* newState)
 {
-    delete state;
+    State_Enemy* oldState =  state; // deleted in the obsever ;)
     this->state = newState;
+    return oldState;
 }
 /**
  * @detail getEnemyPos return the position with the correct coords on the map

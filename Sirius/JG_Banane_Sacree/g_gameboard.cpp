@@ -582,6 +582,9 @@ void G_Gameboard::changeView(char sens)
     saveCheckpoint();
     playableCharacter->emptyTempBag();
 
+    qDebug() << "CHANGE TO PAUSE IN THE OLD VIEW";
+    observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE, viewRequested);
+
     qDebug() << "ViewRequested : " << viewRequested.x() << " " << viewRequested.y();
 
     if(sens == 't')
@@ -618,8 +621,11 @@ void G_Gameboard::changeView(char sens)
     setWidgetPositionCenter(dialog);
     setWidgetPositionTopLeft(lifeList);
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+//    observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE); //all in pause
+//    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame()); //the current in action
+
+    qDebug() << "RESTORE TO ORIGINAL IN THE CURRENT VIEW";
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::setWidgetPositionBottomRight(QWidget* widget)
@@ -912,33 +918,40 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
-            if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
+            if((int)(b->pos().x()-1) % getGameSquares() == 0 && (int)(b->pos().y()-1) % getGameSquares() == 0)
             {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 'r' && b->isMovableToRight() && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 't' && b->isMovableToTop() && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
-            }
-            else if(direction == 'b' && b->isMovableToBottom()  && checkPosition(b->getCollideBlocPosition(direction)))
-            {
-                movable = b;
-                bMove = true;
+                if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 'r' && b->isMovableToRight() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 't' && b->isMovableToTop() && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else if(direction == 'b' && b->isMovableToBottom()  && checkPosition(b->getCollideBlocPosition(direction)))
+                {
+                    movable = b;
+                    bMove = true;
+                }
+                else
+                {
+    //                qDebug() << "IS MOVABLE TO TOP " <<  b->isMovableToTop();
+    //                qDebug() << "CHECK POSITION " << checkPosition(b->getCollideBlocPosition(direction));
+                    bMove=false;
+                }
             }
             else
             {
-//                qDebug() << "IS MOVABLE TO TOP " <<  b->isMovableToTop();
-//                qDebug() << "CHECK POSITION " << checkPosition(b->getCollideBlocPosition(direction));
                 bMove=false;
             }
-        } 
+        }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Door).name())
         {
             bMove = true;
@@ -972,7 +985,8 @@ void G_Gameboard::pauseMenu()
     {
         audioSingleton->playMusicPlaylistMenu();
         audioSingleton->pauseMusicPlaylist();
-        observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
+        //observerEnemy->changeNPCState(Observer_Enemy::STATE_PAUSE, playableCharacter->getPosOnGame());
+        observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE, viewRequested);
 
         timerPlayableCharacterSlide->stop();
         menuPauseInGame->setUnableMenu(currentLevel->getLevelNumber());
@@ -986,8 +1000,8 @@ void G_Gameboard::pauseMenu()
         toggleMenuPause = false;
         timerPlayableCharacterSlide->start(SLIDE_SPEED);
 
-        //TODO : return to the state before PAUSE !
-        observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+        //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+        observerEnemy->switchBackToState(viewRequested);
     }
 }
 
@@ -1031,7 +1045,8 @@ void G_Gameboard::restartEnigma()
         audioSingleton->playSoundEventLostLevel();
     }
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::restartLevel()
@@ -1224,7 +1239,12 @@ void G_Gameboard::setLevel(int value)
     playerView->setScene(mainScene);
     playerView->setSceneRect(viewPositionX,viewPositionY,sizeX*gameSquares,sizeY*gameSquares);
 
-    observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->changeNPCState(Observer_Enemy::STATE_PATROL, playableCharacter->getPosOnGame());
+    //observerEnemy->switchBackToState(viewRequested);
+
+    //start with all the enemies in pause
+    observerEnemy->switchAllToPause();
+    observerEnemy->switchBackToState(viewRequested);
 }
 
 void G_Gameboard::setTimer()
@@ -1245,6 +1265,17 @@ void G_Gameboard::setPlayerProfil(G_Profil *playerProfil)
     setTimer();
 }
 
+bool G_Gameboard::isSlidingBloc(B_MovableSimple* bloc)
+{
+    bool isSliding = false;
+    foreach (SlidingBlock slidingBloc, listSlindingBlocks) {
+        if(slidingBloc.slidingMovable == bloc)
+        {
+            isSliding = true;
+        }
+    }
+    return isSliding;
+}
 
 /**
  * @details return the size X
