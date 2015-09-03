@@ -2,31 +2,31 @@
 <ELEMENT>	
 	<COLONNE position="17">
 	<LIGNE position="14">
-	<DOOR />
+	<DOOR  direction="b" />
 	</LIGNE>
 	</COLONNE>
 	
 	<COLONNE position="19">
 	<LIGNE position="17">
-	<DOOR />
+	<DOOR  direction="r" />
 	</LIGNE>
 	</COLONNE>
 	
 	<COLONNE position="39">
 	<LIGNE position="24">
-	<DOOR />
+	<DOOR  direction="r" />
 	</LIGNE>
 	</COLONNE>
 	
 	<COLONNE position="44">
 	<LIGNE position="15">
-	<DOOR />
+	<DOOR  direction="t" />
 	</LIGNE>
 	</COLONNE>
 	
 	<COLONNE position="40">
 	<LIGNE position="4">
-	<DOOR />
+	<DOOR  direction="l" />
 	</LIGNE>
 	</COLONNE>
 

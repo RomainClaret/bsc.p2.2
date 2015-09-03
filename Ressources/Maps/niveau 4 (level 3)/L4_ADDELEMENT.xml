@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ELEMENT>	
+	<COLONNE position="44">
+	<LIGNE position="15">
+	<DOOR direction="t" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="40">
+	<LIGNE position="13">
+	<DOOR direction="l" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="20">
+	<LIGNE position="13">
+	<DOOR direction="l" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="13">
+	<LIGNE position="14">
+	<DOOR direction="b" />
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="19">
+	<LIGNE position="27">
+	<DOOR direction="r" />
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="1">
+	<LIGNE position="6">
+	<ENEMY type="WOLF">
+		<MOVE x="1" y="6" i="1"/>
+		<MOVE x="18" y="6" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="18">
+	<LIGNE position="5">
+	<ENEMY type="FOX">
+		<MOVE x="18" y="5" i="1"/>
+		<MOVE x="1" y="5" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="5">
+	<LIGNE position="16">
+	<ENEMY type="FOX">
+		<MOVE x="5" y="16" i="1"/>
+		<MOVE x="5" y="28" i="2"/>
+	</ENEMY>
+	</LIGNE>
+	</COLONNE>
+	
+	<COLONNE position="41">
+	<LIGNE position="1">
+	<ITEM type="EGG" />
+	</LIGNE>
+	</COLONNE>
+
+	<COLONNE position="26">
+	<LIGNE position="10">
+	<ITEM type="EGG" />
+	</LIGNE>
+	</COLONNE>
+	
+</ELEMENT>
