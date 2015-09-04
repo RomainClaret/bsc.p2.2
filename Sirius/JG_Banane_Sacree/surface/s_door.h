@@ -117,6 +117,8 @@ private:
     bool needItem;
     int nbItem;
     QString* neededItem;
+
+    QChar direction;
 };
 
 #endif // S_DOOR_H

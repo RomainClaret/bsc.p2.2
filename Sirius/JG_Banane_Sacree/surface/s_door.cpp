@@ -21,6 +21,7 @@
 
 S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
 {
+    this->direction = 'x';
     setDesign('x');
     levelEnd = false;
     nextLevel = 0;
@@ -40,6 +41,7 @@ S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos
 
 void S_Door::setDirection(QChar direction)
 {
+    this->direction = direction;
     setDesign(direction);
 }
 
@@ -75,7 +77,7 @@ void S_Door::setBackground(bool state)
     //True = OPEN, False = CLOSED
     if(state)
     {
-        //setBrush(Qt::NoBrush);
+        setDesign(this->direction);
     }
     else
     {

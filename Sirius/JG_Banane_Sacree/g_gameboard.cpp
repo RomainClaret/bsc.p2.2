@@ -957,7 +957,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(S_Stone).name())
         {
-            qDebug() << "PROBLEM HERE 2 !!";
             bMove = false;
         }
         else if(typeid(*CollidingItems.at(i)).name() == typeid(E_Otter).name())
@@ -1204,10 +1203,13 @@ void G_Gameboard::linkProxy()
 void G_Gameboard::setLevel(int value)
 {
     audioSingleton->stopMusicPlaylist();
+
     //delete currentLevel;
     //playerProfil->setLevel(value);
     currentLevel->loadLevel(value);
+
     observerEnemy->clear();
+
     mainScene = currentLevel->populateScene();
 
     playableCharacter = new P_Penguin(this);
