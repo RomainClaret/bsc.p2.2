@@ -43,12 +43,12 @@
    eJztybEJAAAIBLHfxv03tLTSXkjgqksAAABg1NL1AQAA+KMBXnUBrg==
   </data>
  </layer>
- <layer name="Snow_Surface" width="60" height="30" visible="0">
+ <layer name="Snow_Surface" width="60" height="30">
   <data encoding="base64" compression="zlib">
    eJztVdsOxSAI86P3/9m7oVCl8zoSkx1lpaUH95RSnsuWKkbhedyZM1V8hVdruE1vFq/eQ7WsPkd4Cn6MzyxfpJflY/FTRfbOadG7m7/R+4gf0sLkzNbL9OMkf5Hf3izsNL9KvSv5y+ZFPZnFL4OHZvLXi8++5KfGy/COZvRfZyxVeHg99VB+L/eRerN41rP12+vFSv5a5wq96FkRGbyMXpbTTv4qON2g16qxGx7qnTfXDD+r11H+iO9RlK/Sm+GX0RvpQDWYu7reY7CY/in19kaLv94eg+f1Er3P6G25B2fOL3MfKz1V/Ucs7FYeCjymzo3rBY15SXw=
   </data>
  </layer>
- <layer name="Ice_Surface" width="60" height="30">
+ <layer name="Ice_Surface" width="60" height="30" visible="0">
   <data encoding="base64" compression="zlib">
    eJztk1EOxCAIRLnX3v9e+08YGAXRaEmalKrDPKEi78Wv6OnS87wza6fzaobXeCv9ieBauq51djWvrs9GxMv62ck7cv62/lbwRn09jZfNb+mvzpGOxcv6uYU3ik7e2XtBa93+MnqW74/3bt5RvS/ujo55nqmH9s967+TN6lnvVu7dRSev5wOtW0yjvOh9d38zvDMzcnp/Kzy9wFs1fzv10N3p7yj36rH9yfa34v6qeTP+MrwRxwwv0mW0LL2VvNX/h9fTaD/Li7QFnEHa0V0wGmiemf1MXaQX5ZmeMv6r52V0vlfxvhR/4iv3EQ==
   </data>

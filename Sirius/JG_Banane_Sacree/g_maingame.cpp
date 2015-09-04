@@ -67,6 +67,8 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     gameView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     gameView->setSceneRect(viewPositionX,viewPositionY,theGame->sizeX*G_Gameboard::getGameSquares(),theGame->sizeY*G_Gameboard::getGameSquares());
 
+
+
     //Set the view position
     //gameView->setViewport(new QGLWidget);
     gameView->setScene(gameScene);
