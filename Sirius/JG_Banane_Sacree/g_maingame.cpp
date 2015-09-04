@@ -26,6 +26,8 @@
 #include <QGLWidget>
 #include <QtCore>
 #include <QTimer>
+#include <QList>
+#include <QString>
 
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
@@ -72,8 +74,13 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     connect(timerSplash, SIGNAL(timeout()), this, SLOT(splashScreenShow()));
     timerSplash->start(3000); //3 secondes
 
-    QGraphicsScene* sceneSplash = new QGraphicsScene(this);
-    sceneSplash->addPixmap(QPixmap(":/maps/maps/splashscreen.png"));
+    QGraphicsScene *sceneSplash = new QGraphicsScene(this);
+    QList<QString> *splashList = new QList<QString>();
+    splashList->append(":/maps/maps/splashscreen.png");
+
+    int splashNumber = (qrand() % (splashList->size() - 0 + 1)) + 0;
+
+    sceneSplash->addPixmap(QPixmap(splashList->at(splashNumber)));
     gameView->setScene(sceneSplash);
 
 
