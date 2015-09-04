@@ -17,6 +17,7 @@
 #include "../surface/g_surface.h"
 
 class QGraphicsItem;
+class G_Gameboard;
 
 
 /**
@@ -39,13 +40,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Dialog(int xpos, int ypos, QGraphicsItem *parent = 0);
+    S_Dialog(int xpos, int ypos, G_Gameboard *game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    S_Dialog(QGraphicsItem *parent = 0);
+    S_Dialog(G_Gameboard *game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Set the number of the dialog.

@@ -3,6 +3,7 @@
 
 #include "b_wall.h"
 class QGraphicsItem;
+class G_Gameboard;
 /**
  * @brief Wall block alone with random apparence
  * @details This block can not be moved with characters.
@@ -23,13 +24,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem to depend on
      */
-    B_Wall_Alone(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_Wall_Alone(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup
      * @param parent QGraphicsItem parent
      */
-    B_Wall_Alone(QGraphicsItem *parent = 0);
+    B_Wall_Alone(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief calculateTextures determinate the texture with the collisions

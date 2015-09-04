@@ -37,7 +37,7 @@ E_Walrus::E_Walrus(QString position, QList<QPoint> path, G_Gameboard *g) : C_Ene
     downSkin = ":/characters/characters/walrus_front.png";
 
     //Création du champs de vue
-    S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this);
+    S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, 1, this, game);
     vb->setStyleNone();
     viewField.append(vb);
 

@@ -56,7 +56,7 @@ public:
      * @param scene scene to add the surface to
      * @return G_Surface* of created item
      */
-    static G_Surface* createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene);
+    static G_Surface* createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Ice Surface to scene.
@@ -65,7 +65,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Ice* of created item
      */
-    static S_Ice* createSurfaceIce(int xpos, int ypos, QGraphicsScene *scene);
+    static S_Ice* createSurfaceIce(int xpos, int ypos, QGraphicsScene *scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Snow Surface to scene.
@@ -74,7 +74,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Snow* of created item
      */
-    static S_Snow* createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene);
+    static S_Snow* createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Dialog Surface to scene.
@@ -85,7 +85,7 @@ public:
      * @param image image to display
      * @return S_Dialog* of created item
      */
-    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text = "", QString image="");
+    static S_Dialog* createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game, QString text = "", QString image="");
 
     /**
      * @brief Creates, returns and add a Door Surface to scene.
@@ -94,7 +94,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Door* of created item
      */
-    static S_Door* createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene);
+    static S_Door* createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Door Surface to scene.
@@ -105,7 +105,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Door* of created item
      */
-    static S_Door* createSurfaceDoor(int xpos, int ypos, QString item, int quantity, QGraphicsScene* scene);
+    static S_Door* createSurfaceDoor(int xpos, int ypos, QString item, int quantity, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Door Surface to scene.
@@ -115,7 +115,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Door* of created item
      */
-    static S_Door* createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene);
+    static S_Door* createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Movable Surface to scene.
@@ -124,7 +124,7 @@ public:
      * @param scene scene to add the surface to
      * @return B_Movable* of created item
      */
-    static B_MovableSimple* createBlocMovable(int xpos, int ypos, QGraphicsScene* scene);
+    static B_MovableSimple* createBlocMovable(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Movable Throw Surface to scene.
@@ -142,7 +142,7 @@ public:
      * @param scene scene to add the surface to
      * @return B_Wall_Alone* of created item
      */
-    static B_Wall_Alone* createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene);
+    static B_Wall_Alone* createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Wall Surface to scene.
@@ -151,7 +151,7 @@ public:
      * @param scene scene to add the surface to
      * @return B_Wall_Group* of created item
      */
-    static B_Wall_Group* createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene);
+    static B_Wall_Group* createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
 
     /**
@@ -161,7 +161,7 @@ public:
      * @param scene scene to add the surface to
      * @return B_Water* of created item
      */
-    static B_Water* createBlocWater(int xpos, int ypos, QGraphicsScene* scene);
+    static B_Water* createBlocWater(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Fire Surface to scene.
@@ -170,7 +170,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Fire* of created item
      */
-    static S_Fire* createBlocFire(int xpos, int ypos, QGraphicsScene* scene);
+    static S_Fire* createBlocFire(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 
     /**
      * @brief Creates, returns and add a Stone Surface to scene.
@@ -179,7 +179,7 @@ public:
      * @param scene scene to add the surface to
      * @return S_Stone* of created item
      */
-    static S_Stone* createBlocStone(int xpos, int ypos, QGraphicsScene* scene);
+    static S_Stone* createBlocStone(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game);
 };
 
 #endif // FACTORY_SURFACE_H

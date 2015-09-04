@@ -337,7 +337,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
             audioSingleton->playSoundSunk();
-            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
+            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene, this);
             sunk->setMovableSunk(b);
 
             b->removeFromScene(mainScene);
@@ -358,7 +358,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y());
+            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y(), this);
             wall->setColor("gray");
             mainScene->addItem(wall);
 
@@ -401,7 +401,7 @@ void G_Gameboard::checkPositionEvents(char sens)
         if(typeid(*CollidingItems.at(i)).name() == typeid(G_Object).name())
         {
             G_Object *objet = dynamic_cast<G_Object*>(CollidingItems.at(i));
-            playableCharacter->addObjectToBag(new G_Object(objet->getName()));
+            playableCharacter->addObjectToBag(new G_Object(objet->getName(), this));
             mainScene->removeItem(CollidingItems.at(i));
 
             if(objet->getName() == G_Object::OBJECT_FISH)
@@ -1208,6 +1208,7 @@ void G_Gameboard::setLevel(int value)
     //playerProfil->setLevel(value);
     currentLevel->loadLevel(value);
     observerEnemy->clear();
+
     mainScene = currentLevel->populateScene();
 
     playableCharacter = new P_Penguin(this);

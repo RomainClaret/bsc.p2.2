@@ -4,7 +4,7 @@
 #include <QPen>
 #include <QDebug>
 
-S_SurfaceAutoTexture::S_SurfaceAutoTexture(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_SurfaceAutoTexture::S_SurfaceAutoTexture(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     iCurrentTexture = 0;
     speed = 5;
@@ -45,7 +45,7 @@ void S_SurfaceAutoTexture::advance(int step)
 
 bool S_SurfaceAutoTexture::collideLeft(int type, int** mapSurfaces)
 {
-    if(this->getPos().x()-1 > 0)
+    if(this->getPos().x()-1 >= 0)
     {
         return (mapSurfaces[this->getPos().x()-1][this->getPos().y()] == type); //collide left
     }
@@ -61,7 +61,7 @@ bool S_SurfaceAutoTexture::collideRight(int type, int** mapSurfaces, int width)
 }
 bool S_SurfaceAutoTexture::collideTop(int type, int** mapSurfaces)
 {
-    if(this->getPos().y() - 1 > 0)
+    if(this->getPos().y() - 1 >= 0)
     {
         return (mapSurfaces[this->getPos().x()][this->getPos().y()-1] == type); //collide top
     }
@@ -78,7 +78,7 @@ bool S_SurfaceAutoTexture::collideBottom(int type, int** mapSurfaces, int height
 
 bool S_SurfaceAutoTexture::collideLeftTop(int type, int** mapSurfaces)
 {
-    if(this->getPos().y()-1 > 0 && this->getPos().x()-1 > 0)
+    if(this->getPos().y()-1 >= 0 && this->getPos().x()-1 >= 0)
     {
         return (mapSurfaces[this->getPos().x()-1][this->getPos().y()-1] == type); //collide left-top
     }
@@ -86,7 +86,7 @@ bool S_SurfaceAutoTexture::collideLeftTop(int type, int** mapSurfaces)
 }
 bool S_SurfaceAutoTexture::collideLeftBottom(int type, int** mapSurfaces, int height)
 {
-    if(this->getPos().y()+1 <= height && this->getPos().x()-1 > 0)
+    if(this->getPos().y()+1 <= height && this->getPos().x()-1 >= 0)
     {
         return (mapSurfaces[this->getPos().x()-1][this->getPos().y()+1] == type); //collide left-bottom
     }
@@ -94,7 +94,7 @@ bool S_SurfaceAutoTexture::collideLeftBottom(int type, int** mapSurfaces, int he
 }
 bool S_SurfaceAutoTexture::collideRightTop(int type, int** mapSurfaces, int width)
 {
-    if(this->getPos().y()-1 > 0 && this->getPos().x() + 1 < width)
+    if(this->getPos().y()-1 >= 0 && this->getPos().x() + 1 < width)
     {
         return (mapSurfaces[this->getPos().x()+1][this->getPos().y()-1] == type); //collide right-top
     }

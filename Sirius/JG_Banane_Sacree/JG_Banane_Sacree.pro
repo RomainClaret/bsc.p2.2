@@ -147,7 +147,8 @@ HEADERS  += \
     a_musicplaylist.h \
     surface/b_wall_alone.h \
     surface/b_wall_group.h \
-    menu/w_menuaudio.h
+    menu/w_menuaudio.h \
+    surface/s_dialog.h
 RESOURCES += \
     images.qrc \
     ItemsPopulation.qrc \

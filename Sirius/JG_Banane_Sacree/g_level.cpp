@@ -164,7 +164,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     QString tagName = elem.tagName();
     if(tagName == "BLOC")
     {
-        G_Surface* surface = Factory_Surface::createSurface(elem.attribute("type"), x, y, scene);
+        G_Surface* surface = Factory_Surface::createSurface(elem.attribute("type"), x, y, scene, game);
 
 
         if(elem.attribute("type") == Factory_Surface::BLOC_WATER
@@ -194,11 +194,11 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "ITEM")
     {
-        scene->addItem(new G_Object(elem.attribute("type"),x,y));
+        scene->addItem(new G_Object(elem.attribute("type"),x,y,game));
     }
     else if(tagName == "DOOR")
     {
-       S_Door* door = Factory_Surface::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene);
+       S_Door* door = Factory_Surface::createSurfaceDoor(x,y,elem.attribute("item"),elem.attribute("nbItem").toInt(),scene,game);
        if(!elem.attribute("direction").isEmpty())
        {
            qDebug() << "BOUH";
@@ -207,7 +207,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "END")
     {
-        S_Door* door = Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene);
+        S_Door* door = Factory_Surface::createSurfaceLastDoor(x,y,elem.attribute("nextLevel").toInt(),scene,game);
         if(!elem.attribute("direction").isEmpty())
         {
             door->setDirection(elem.attribute("direction").at(0));
@@ -245,7 +245,7 @@ void G_Level::addLevelItem(QGraphicsScene* scene, QDomElement elem, int x, int y
     }
     else if(tagName == "DIALOG")
     {
-        Factory_Surface::createSurfaceDialog(x, y, scene, elem.attribute("text"), elem.attribute("image"));
+        Factory_Surface::createSurfaceDialog(x, y, scene, game, elem.attribute("text"), elem.attribute("image"));
     }
 
 }

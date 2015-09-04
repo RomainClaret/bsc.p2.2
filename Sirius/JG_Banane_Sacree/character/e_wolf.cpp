@@ -31,7 +31,7 @@ E_Wolf::E_Wolf(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(p
     //Création du champs de vue
     for(int i=1; i<=5; i++)
     {
-        S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, i, this);
+        S_ViewBlockNPC* vb = new S_ViewBlockNPC(0, i, this, game);
         viewField.append(vb);
     }
 

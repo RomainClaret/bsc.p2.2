@@ -1,7 +1,7 @@
 #include "s_footstep.h"
 #include <QBrush>
 #include <QDebug>
-S_Footstep::S_Footstep(int xpos, int ypos, char sens, int lifetime, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Footstep::S_Footstep(int xpos, int ypos, char sens, int lifetime, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     this->lifetime = lifetime;
     this->itime = 0;

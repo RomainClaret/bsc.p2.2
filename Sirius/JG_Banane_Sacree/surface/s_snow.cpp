@@ -21,7 +21,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsEllipseItem>
 
-S_Snow::S_Snow(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Snow::S_Snow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     setDesign();
     this->scene = scene;
@@ -31,7 +31,7 @@ S_Snow::S_Snow(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent)
     iTime = rand() % 50;
     movableSunk = false;
 }
-S_Snow::S_Snow(QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(0, 0, parent)
+S_Snow::S_Snow(QGraphicsScene* scene, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(0, 0, game, parent)
 {
     setDesign();
     this->scene = scene;
@@ -68,7 +68,7 @@ void S_Snow::setDesign()
 
 S_Footstep* S_Snow::showFootPrint(char sens)
 {
-    S_Footstep* footstep = new S_Footstep(this->getPos().x(), this->getPos().y(), sens, 30);
+    S_Footstep* footstep = new S_Footstep(this->getPos().x(), this->getPos().y(), sens, 30, game);
     return footstep;
 }
 

@@ -19,7 +19,7 @@
 #include <QDebug>
 #include "../g_level.h"
 
-B_Water::B_Water(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
+B_Water::B_Water(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, game, parent)
 {
     setDesign();
 }
@@ -154,7 +154,7 @@ void B_Water::calculateTextures(int** mapSurfaces, int width, int height)
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Water::B_Water(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
+B_Water::B_Water(G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, game, parent)
 {
     setDesign();
 }

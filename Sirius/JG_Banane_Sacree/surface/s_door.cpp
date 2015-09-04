@@ -19,7 +19,7 @@
 #include <QDebug>
 
 
-S_Door::S_Door(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Door::S_Door(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     setDesign('x');
     levelEnd = false;

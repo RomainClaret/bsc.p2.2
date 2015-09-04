@@ -19,6 +19,7 @@ class QGraphicsItem;
 class B_MovableSimple;
 class S_Footstep;
 class QGraphicsScene;
+class G_Gameboard;
 
 #include <QList>
 
@@ -42,13 +43,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Snow(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent = 0);
+    S_Snow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    S_Snow(QGraphicsScene* scene, QGraphicsItem *parent = 0);
+    S_Snow(QGraphicsScene* scene,G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief setMovableSunk show the snow like a sunk movable
