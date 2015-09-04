@@ -30,6 +30,8 @@
 #include "../surface/s_fire.h"
 #include "../surface/s_stone.h"
 
+#include "../memento.h"
+
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
 #include <typeinfo.h>
@@ -196,6 +198,8 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
         }
         else if(typeid(*l.at(i)).name() == typeid(S_Fire).name())
         {
+            Memento::getInstance()->addRemovedSurface(this);
+            Memento::getInstance()->removePosSurface(this);
             removeFromScene(scene);
             return true;
         }
