@@ -1,0 +1,27 @@
+﻿Creer un bundle exportable de l’application:
+
+
+
+	Il faut une version Release de l’application.
+
+
+	Et l’ajouter avec toutes les DLLs au dossier:
+
+
+
+<directory-to>/P2/Deploy/JG Game Windows/
+
+
+
+	
+Pour la compression de l’executable ou des sources (autre chose est possible mais il faut un 7z):
+
+C:\Qt\QtIFW2.0.1\bin\archivegen.exe "Z:\Clouds\OneDrive\HE-Arc\Projet Qt\P2\Deploy\Installeur Windows\packages\ch.he.arc.dlm2.p2.banana.rocket.james.gouin.banane.sacree.exec\data\exec.7z" "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\JG Game Windows"
+
+	
+
+Pour la compilation de l’installeur:
+
+
+
+C:\Qt\QtIFW2.0.1\bin\binarycreator.exe --offline-only -t C:\Qt\QtIFW2.0.1\bin\installerbase.exe -p "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\Installeur Windows\packages" -c "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\Installeur Windows\config\config.xml" "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\Installeur Windows\Installer"

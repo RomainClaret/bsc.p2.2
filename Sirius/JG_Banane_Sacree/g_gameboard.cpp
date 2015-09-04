@@ -846,7 +846,7 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
                 audioSingleton->playSoundInteraction();
                 dialogProxy->hide();
                 dialogToogle = false;
-                observerEnemy->switchBackToState(viewRequested);
+                //observerEnemy->switchBackToState(viewRequested);
             }
         }
     }
@@ -1298,7 +1298,7 @@ void G_Gameboard::showDialog(QString text, QString image)
     dialogProxy->show();
     dialogToogle = true;
 
-    observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE,viewRequested);
+    //observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE,viewRequested);
 }
 
 QGraphicsScene* G_Gameboard::getGraphicsScene()
