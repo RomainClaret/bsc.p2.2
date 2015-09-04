@@ -5,7 +5,7 @@
 #include <QHash>
 #include <QList>
 
-B_Wall_Alone::B_Wall_Alone(int xpos, int ypos, QGraphicsItem *parent) : B_Wall(xpos, ypos, parent)
+B_Wall_Alone::B_Wall_Alone(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Wall(xpos, ypos, game, parent)
 {
     setDesign();
 }
@@ -13,7 +13,7 @@ B_Wall_Alone::B_Wall_Alone(int xpos, int ypos, QGraphicsItem *parent) : B_Wall(x
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Wall_Alone::B_Wall_Alone(QGraphicsItem *parent) : B_Wall(parent)
+B_Wall_Alone::B_Wall_Alone(G_Gameboard* game, QGraphicsItem *parent) : B_Wall(0,0,game,parent)
 {
     setDesign();
 }

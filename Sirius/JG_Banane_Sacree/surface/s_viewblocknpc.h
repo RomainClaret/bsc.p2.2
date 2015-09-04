@@ -4,6 +4,7 @@
 class QGraphicsRectItem;
 class QGraphicsItem;
 class C_Enemy;
+class G_Gameboard;
 
 #include "../surface/g_surface.h"
 
@@ -34,7 +35,7 @@ public:
      * @param owner enemy the vison is attached to
      * @param parent QGraphicsItem parent if need
      */
-    S_ViewBlockNPC(int line, int column, C_Enemy* owner, QGraphicsItem *parent = 0);
+    S_ViewBlockNPC(int line, int column, C_Enemy* owner, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Get the line of self in the matrix view of the enemy.

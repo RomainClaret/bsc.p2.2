@@ -17,6 +17,7 @@
 #include "../surface/s_surfaceautotexture.h"
 
 class QGraphicsItem;
+class G_Gameboard;
 
 /**
  * @brief Ice Surface.
@@ -38,9 +39,9 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Ice(int xpos, int ypos, QGraphicsItem *parent = 0);
+    S_Ice(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
-    S_Ice(QGraphicsItem *parent = 0);
+    S_Ice(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     void calculateTextures(int** mapSurfaces, int width, int height);
 

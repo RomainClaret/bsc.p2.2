@@ -49,7 +49,7 @@ public:
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    B_MovableThrow(QGraphicsItem *parent = 0);
+    B_MovableThrow(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Check the position of the movable block after moving
@@ -62,7 +62,6 @@ protected:
 private:
     int speed;
     int time;
-    G_Gameboard* game;
 
 };
 

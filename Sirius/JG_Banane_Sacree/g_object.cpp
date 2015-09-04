@@ -21,12 +21,12 @@
 
 #include <QDebug>
 
-G_Object::G_Object(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+G_Object::G_Object(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     setDesign();
 }
 
-G_Object::G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+G_Object::G_Object(QString name, int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     this->nom = new QString(name);
     setZValue(5);
@@ -39,7 +39,7 @@ G_Object::G_Object(QString name, int xpos, int ypos, QGraphicsItem *parent) : G_
     }
 }
 
-G_Object::G_Object(QString name, QGraphicsItem *parent): G_Surface(0, 0, parent)
+G_Object::G_Object(QString name, G_Gameboard* game, QGraphicsItem *parent): G_Surface(0, 0, game, parent)
 {
     this->nom = new QString(name);
     setZValue(5);

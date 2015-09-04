@@ -5,7 +5,7 @@
 #include <QList>
 #include "../g_level.h"
 
-B_Wall_Group::B_Wall_Group(int xpos, int ypos, QGraphicsItem *parent) : B_Wall(xpos, ypos, parent)
+B_Wall_Group::B_Wall_Group(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Wall(xpos, ypos, game, parent)
 {
     setDesign();
 }
@@ -13,7 +13,7 @@ B_Wall_Group::B_Wall_Group(int xpos, int ypos, QGraphicsItem *parent) : B_Wall(x
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Wall_Group::B_Wall_Group(QGraphicsItem *parent) : B_Wall(parent)
+B_Wall_Group::B_Wall_Group(G_Gameboard* game, QGraphicsItem *parent) : B_Wall(0, 0, game, parent)
 {
     setDesign();
 }

@@ -17,6 +17,7 @@
 #include "../surface/s_surfaceautotexture.h"
 
 class QGraphicsRectItem;
+class G_Gameboard;
 
 /**
  * @brief Fire Surface
@@ -38,13 +39,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem to depend on
      */
-    S_Fire(int xpos, int ypos, QGraphicsItem *parent = 0);
+    S_Fire(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup
      * @param parent QGraphicsItem parent
      */
-    S_Fire(QGraphicsItem *parent = 0);
+    S_Fire(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     void calculateTextures(int** mapSurfaces, int width, int height);
 

@@ -41,7 +41,7 @@
  * @details Uses setDesign(xpos, ypos) to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_Movable::B_Movable(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent)
+B_Movable::B_Movable(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, game, parent)
 {
    this->scene = scene;
    setDesign(xpos, ypos);
@@ -52,7 +52,7 @@ B_Movable::B_Movable(int xpos, int ypos, QGraphicsScene* scene, QGraphicsItem *p
  * @details The use FICTIVE positions x and y to create the cross of box around self to check collisions.
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
-B_Movable::B_Movable(QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, parent) //obligé de donner une position fictive
+B_Movable::B_Movable(G_Gameboard* game, QGraphicsItem *parent) : G_Surface(0, 0, G_Gameboard::getGameSquares()-2, G_Gameboard::getGameSquares()-2, game, parent) //obligé de donner une position fictive
 {
     setDesign(0, 0);
     setZValue(11);
