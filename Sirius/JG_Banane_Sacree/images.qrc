@@ -57,6 +57,7 @@
         <file>maps/2.png</file>
         <file>maps/0Ouvert.png</file>
         <file>maps/3.png</file>
+        <file>maps/splashscreen.png</file>
     </qresource>
     <qresource prefix="/dialog">
         <file>dialog/loutre.png</file>
