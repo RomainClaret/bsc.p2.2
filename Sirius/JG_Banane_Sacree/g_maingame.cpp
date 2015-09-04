@@ -78,21 +78,20 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     QGraphicsScene *sceneSplash = new QGraphicsScene(this);
     QList<QString> *splashList = new QList<QString>();
     splashList->append(":/splashs/splashs/00Gouin.png");
-    splashList->append(":/splashs/splashs/darthGouin.jpg");
-    splashList->append(":/splashs/splashs/frozenGouin.JPG");
-    splashList->append(":/splashs/splashs/mexicanGouin.png");
-    splashList->append(":/splashs/splashs/nerdGouin.png");
-    splashList->append(":/splashs/splashs/ninjaGouin.JPG");
-    splashList->append(":/splashs/splashs/peaceAndGouin.JPG");
-    splashList->append(":/splashs/splashs/spaceGouin.png");
+//    splashList->append(":/splashs/splashs/darthGouin.jpg");
+//    splashList->append(":/splashs/splashs/frozenGouin.JPG");
+//    splashList->append(":/splashs/splashs/mexicanGouin.png");
+//    splashList->append(":/splashs/splashs/nerdGouin.png");
+//    splashList->append(":/splashs/splashs/ninjaGouin.JPG");
+//    splashList->append(":/splashs/splashs/peaceAndGouin.JPG");
+//    splashList->append(":/splashs/splashs/spaceGouin.png");
 
-    srand(time(NULL));
-    int splashNumber = rand() % splashList->size();
+//    srand(time(NULL));
+//    int splashNumber = rand() % splashList->size();
+//    sceneSplash->addPixmap(QPixmap(splashList->at(splashNumber)));
 
-    sceneSplash->addPixmap(QPixmap(splashList->at(splashNumber)));
+    sceneSplash->addPixmap(QPixmap(":/splashs/splashs/00Gouin.png"));
     gameView->setScene(sceneSplash);
-
-
 
     //Set the view position
     //gameView->setViewport(new QGLWidget);
