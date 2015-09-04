@@ -31,8 +31,8 @@ G_Profil::G_Profil()
     this->level = 0;
     this->nbLive = 1;
     this->difficulty = 1;
-    this->volumeMusics = 42;
-    this->volumeSounds = 42;
+    this->volumeMusics = 100;
+    this->volumeSounds = 100;
     this->lastPlayed = 0;
 
     for(int i = 0; i < 8; i++)

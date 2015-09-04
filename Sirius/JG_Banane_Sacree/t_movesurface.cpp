@@ -5,7 +5,7 @@
 #include "surface/g_surface.h"
 #include "g_gameboard.h"
 
-T_MoveSurface::T_MoveSurface(G_Surface* surface, QGraphicsScene* scene, QObject *parent): QObject(parent)
+T_MoveSurface::T_MoveSurface(G_Surface*, QGraphicsScene*, QObject *parent): QObject(parent)
 {
 //    this->surface = surface;
 

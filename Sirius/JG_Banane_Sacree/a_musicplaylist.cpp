@@ -41,7 +41,7 @@ void A_MusicPlaylist::stopMusicPlaylist()
 void A_MusicPlaylist::setMusicPlaylist(int value)
 {
     qDebug() << "value: " << value;
-    if (MY_OS == "UNIX")
+    if (MY_OS == 0)
     {
         this->musicQUrl = "qrc:/music/";
     }

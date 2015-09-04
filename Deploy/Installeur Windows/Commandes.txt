@@ -9,7 +9,7 @@
 
 
 
-<directory-to>/P2/Deploy/JG Game Windows/
+<directory-to>/Deploy/JG Game Windows/
 
 
 

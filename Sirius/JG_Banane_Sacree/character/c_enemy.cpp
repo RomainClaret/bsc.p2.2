@@ -101,7 +101,7 @@ QPoint C_Enemy::getNPCPos()
     return convertPosPoint(this->pos());
 }
 
-void C_Enemy::moveByPixel(int x, int y)
+void C_Enemy::moveByPixel(int, int)
 {
     //todo
 }
@@ -410,7 +410,7 @@ void C_Enemy::setDetectPlayableCharacter(bool value)
     }
 }
 
-void C_Enemy::setSpecialTexture(bool value)
+void C_Enemy::setSpecialTexture(bool)
 {
 
 }

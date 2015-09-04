@@ -57,7 +57,7 @@ void B_Wall_Alone::setDesign()
     setZValue(4);
 }
 
-void B_Wall_Alone::calculateTextures(int** mapSurfaces, int width, int height)
+void B_Wall_Alone::calculateTextures(int**, int, int)
 {
     //rien
 }

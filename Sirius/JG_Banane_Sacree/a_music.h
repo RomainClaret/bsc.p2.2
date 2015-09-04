@@ -6,9 +6,9 @@ class QMediaPlayer;
 #include <QThread>
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
-    #define MY_OS "UNIX"
+    #define MY_OS 0
 #else
-    #define MY_OS "OTHER"
+    #define MY_OS 1
 #endif
 
 class A_Music : public QThread

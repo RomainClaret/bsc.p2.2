@@ -45,7 +45,7 @@ void S_Fire::setDesign()
     setZValue(4);
 }
 
-void S_Fire::calculateTextures(int** mapSurfaces, int width, int height)
+void S_Fire::calculateTextures(int**, int, int)
 {
     //rien
 }

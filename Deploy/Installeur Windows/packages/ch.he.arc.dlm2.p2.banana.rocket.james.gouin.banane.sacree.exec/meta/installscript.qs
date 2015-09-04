@@ -65,7 +65,7 @@ Component.prototype.createOperations = function()
         
         component.addOperation("CreateShortcut", "@TargetDir@/JG Game Windows/James Gouin et la Banane Sacree.exe", "@StartMenuDir@/JG Holy Banana.lnk");
             
-        component.addOperation("CreateShortcut", "@TargetDir@/Uninstaller JG Holy Banana.exe", "@StartMenuDir@/Uninstall JG.lnk");
+        component.addOperation("CreateShortcut", "@TargetDir@/maintenancetool.exe", "@StartMenuDir@/Uninstall JG.lnk");
     }
     
     

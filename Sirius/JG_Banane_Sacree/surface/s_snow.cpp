@@ -72,7 +72,7 @@ S_Footstep* S_Snow::showFootPrint(char sens)
     return footstep;
 }
 
-void S_Snow::advance(int step)
+void S_Snow::advance(int)
 {
 //    if(step = 1 && !movableSunk)
 //    {

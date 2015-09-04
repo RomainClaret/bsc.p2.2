@@ -71,7 +71,7 @@ int A_Music::getMusicVolume()
 
 void A_Music::setMusic(QString music)
 {
-    if (MY_OS == "UNIX")
+    if (MY_OS == 0)
     {
         this->musicQUrl = "qrc:/music/";
     }
