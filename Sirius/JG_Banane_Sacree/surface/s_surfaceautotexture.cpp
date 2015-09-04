@@ -30,7 +30,7 @@ S_SurfaceAutoTexture::S_SurfaceAutoTexture(int xpos, int ypos, G_Gameboard* game
 
 void S_SurfaceAutoTexture::advance(int step)
 {
-    if(step == 0)
+    if(step == 0 && !game->getPauseDialogState())
     {
         time ++;
         if(!texturesAnim.empty() && time % speed == 0)
