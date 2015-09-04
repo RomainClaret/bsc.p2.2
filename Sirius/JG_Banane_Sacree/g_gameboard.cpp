@@ -963,7 +963,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
-
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {
@@ -1324,7 +1323,7 @@ void G_Gameboard::deleteGame()
     }
 }
 
-bool G_Gameboard::getPauseState()
+bool G_Gameboard::getPauseDialogState()
 {
-    return toggleMenuPause;
+    return (toggleMenuPause || dialogToogle);
 }

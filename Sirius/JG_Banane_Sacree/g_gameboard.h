@@ -110,7 +110,7 @@ public:
 
     void endMoveCheck(char sens);
 
-    bool getPauseState();
+    bool getPauseDialogState();
 
     QGraphicsScene* getGraphicsScene();
 
