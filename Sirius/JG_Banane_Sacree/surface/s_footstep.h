@@ -1,6 +1,7 @@
 #ifndef S_FOOTSTEP_H
 #define S_FOOTSTEP_H
 #include "g_surface.h"
+class G_Gameboard;
 
 /**
  * @brief Penguin footsteps
@@ -21,9 +22,10 @@ public:
      * @param ypos pos Y on Scene
      * @param sens Scene
      * @param lifetime time before fade out
+     * @param game is the gameboard
      * @param parent dad or mom ;)
      */
-    S_Footstep(int xpos, int ypos, char sens, int lifetime, QGraphicsItem *parent = 0);
+    S_Footstep(int xpos, int ypos, char sens, int lifetime, G_Gameboard* game, QGraphicsItem *parent = 0);
 
 private:
     int lifetime;

@@ -17,6 +17,7 @@
 
 class QGraphicsRectItem;
 #include <QVector>
+class G_Gameboard;
 
 /**
  * @brief Water block
@@ -39,7 +40,7 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem to depend on
      */
-    B_Water(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_Water(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     void calculateTextures(int** mapSurfaces, int width, int height);
 //    bool isCollidingWithWater(QGraphicsRectItem* bloc);
@@ -48,7 +49,7 @@ public:
      * @brief Constructor without position setup
      * @param parent QGraphicsItem parent
      */
-    B_Water(QGraphicsItem *parent = 0);
+    B_Water(G_Gameboard* game, QGraphicsItem *parent = 0);
 
 private:
     /**

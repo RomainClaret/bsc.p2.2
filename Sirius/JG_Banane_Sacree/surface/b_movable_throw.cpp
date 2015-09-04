@@ -42,9 +42,8 @@
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
 
-B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, game->getGraphicsScene(), parent)
+B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : B_Movable(xpos, ypos, game->getGraphicsScene(), game, parent)
 {
-    this->game = game;
 
     int val = rand() % 10+3;
     speed = val;
@@ -58,7 +57,7 @@ B_MovableThrow::B_MovableThrow(int xpos, int ypos, G_Gameboard* game, QGraphicsI
  * Sets the position on the Z-axis to 1 to be on top of the scene which is at 0.
  */
 
-B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, NULL, parent) //obligé de donner une position fictive
+B_MovableThrow::B_MovableThrow(G_Gameboard* game, QGraphicsItem *parent) : B_Movable(0, 0, NULL, game, parent) //obligé de donner une position fictive
 {
     speed = 7;
     time = 0;
@@ -66,7 +65,7 @@ B_MovableThrow::B_MovableThrow(QGraphicsItem *parent) : B_Movable(0, 0, NULL, pa
 
 void B_MovableThrow::advance(int step)
 {
-    if(step == 0 && !game->getPauseState())
+    if(step == 0 && !game->getPauseDialogState())
     {
         time ++;
         if(time % speed == 0)

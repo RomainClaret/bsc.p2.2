@@ -16,16 +16,17 @@
 
 #include <QGraphicsRectItem>
 class QPoint;
+class G_Gameboard;
 
 /**
- * @brief Walking blocks.
+ * @brief blocks.
  * @details Surfaces are blocks that allows the player to move on.
  * @author Claret Romain, romain.claret@rocla.ch
  * @author Divernois Margaux, margaux.divernois@gmail.com
  * @author Visinand Steve, visinandst@gmail.com
  * @copyright Custom License + NDA
- * @version 1.0
- * @date 27 January 2015
+ * @version 1.6
+ * @date 04 september 2015
  */
 class G_Surface : public QGraphicsRectItem
 {
@@ -37,7 +38,7 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem to depend on
      */
-    G_Surface(int xpos, int ypos, QGraphicsItem *parent = 0);
+    G_Surface(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor with setup position and size.
@@ -47,7 +48,7 @@ public:
      * @param height set the size of self
      * @param parent QGraphicsItem to depend on
      */
-    G_Surface(int xpos, int ypos, int width, int height, QGraphicsItem *parent = 0);
+    G_Surface(int xpos, int ypos, int width, int height, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     //Destructor
     ~G_Surface();
@@ -94,6 +95,8 @@ protected:
      * @param step
      */
     void advance(int step);
+
+    G_Gameboard* game;
 };
 
 #endif // G_SURFACE_H

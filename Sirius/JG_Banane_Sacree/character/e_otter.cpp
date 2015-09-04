@@ -42,14 +42,14 @@ E_Otter::E_Otter(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy
 
     setZValue(3);
 
-    S_ViewBlockNPC* vb1 = new S_ViewBlockNPC(0, 1, this);
-    S_ViewBlockNPC* vb2 = new S_ViewBlockNPC(0, -1, this);
-    S_ViewBlockNPC* vb3 = new S_ViewBlockNPC(1, -1, this);
-    S_ViewBlockNPC* vb4 = new S_ViewBlockNPC(1, 0, this);
-    S_ViewBlockNPC* vb5 = new S_ViewBlockNPC(1, 1, this);
-    S_ViewBlockNPC* vb6 = new S_ViewBlockNPC(-1, -1, this);
-    S_ViewBlockNPC* vb7 = new S_ViewBlockNPC(-1, 0, this);
-    S_ViewBlockNPC* vb8 = new S_ViewBlockNPC(-1, 1, this);
+    S_ViewBlockNPC* vb1 = new S_ViewBlockNPC(0, 1, this, game);
+    S_ViewBlockNPC* vb2 = new S_ViewBlockNPC(0, -1, this, game);
+    S_ViewBlockNPC* vb3 = new S_ViewBlockNPC(1, -1, this, game);
+    S_ViewBlockNPC* vb4 = new S_ViewBlockNPC(1, 0, this, game);
+    S_ViewBlockNPC* vb5 = new S_ViewBlockNPC(1, 1, this, game);
+    S_ViewBlockNPC* vb6 = new S_ViewBlockNPC(-1, -1, this, game);
+    S_ViewBlockNPC* vb7 = new S_ViewBlockNPC(-1, 0, this, game);
+    S_ViewBlockNPC* vb8 = new S_ViewBlockNPC(-1, 1, this, game);
 
     //vb->setStyleNone();
 

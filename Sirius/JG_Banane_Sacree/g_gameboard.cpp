@@ -337,7 +337,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
         if(typeid(*CollidingItems.at(i)).name() == typeid(B_Water).name())
         {
             audioSingleton->playSoundSunk();
-            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene);
+            S_Snow *sunk = new S_Snow(p.x(),p.y(), mainScene, this);
             sunk->setMovableSunk(b);
 
             b->removeFromScene(mainScene);
@@ -358,7 +358,7 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             b->removeFromScene(mainScene);
             mainScene->removeItem(CollidingItems.at(i));
 
-            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y());
+            B_Wall_Alone *wall = new B_Wall_Alone(p.x(),p.y(), this);
             wall->setColor("gray");
             mainScene->addItem(wall);
 
@@ -401,7 +401,7 @@ void G_Gameboard::checkPositionEvents(char sens)
         if(typeid(*CollidingItems.at(i)).name() == typeid(G_Object).name())
         {
             G_Object *objet = dynamic_cast<G_Object*>(CollidingItems.at(i));
-            playableCharacter->addObjectToBag(new G_Object(objet->getName()));
+            playableCharacter->addObjectToBag(new G_Object(objet->getName(), this));
             mainScene->removeItem(CollidingItems.at(i));
 
             if(objet->getName() == G_Object::OBJECT_FISH)
@@ -963,7 +963,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
         {
             bMove = false;
         }
-
     }
     if(bMove && (!checkPosition(playableCharacter->getCollideBloc(direction))))
     {
@@ -1324,7 +1323,7 @@ void G_Gameboard::deleteGame()
     }
 }
 
-bool G_Gameboard::getPauseState()
+bool G_Gameboard::getPauseDialogState()
 {
-    return toggleMenuPause;
+    return (toggleMenuPause || dialogToogle);
 }

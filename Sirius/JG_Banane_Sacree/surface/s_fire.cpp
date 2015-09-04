@@ -17,14 +17,14 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
-S_Fire::S_Fire(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
+S_Fire::S_Fire(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, game, parent)
 {
     setDesign();
 }
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-S_Fire::S_Fire(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
+S_Fire::S_Fire(G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, game, parent)
 {
     setDesign();
 }

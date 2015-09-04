@@ -18,68 +18,68 @@ QString Factory_Surface::BLOC_STONE = "STONE";
 /**
  * @details Returns NULL if the given type is not found.
  */
-G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene)
+G_Surface* Factory_Surface::createSurface(QString type, int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
     if(type == SURFACE_ICE)
     {
-        return createSurfaceIce(xpos, ypos, scene);
+        return createSurfaceIce(xpos, ypos, scene, game);
     }
     else if(type == SURFACE_SNOW)
     {
-        return createSurfaceSnow(xpos, ypos, scene);
+        return createSurfaceSnow(xpos, ypos, scene, game);
     }
     else if(type == SURFACE_DIALOG)
     {
-        return createSurfaceDialog(xpos, ypos, scene);
+        return createSurfaceDialog(xpos, ypos, scene, game);
     }
     else if(type == SURFACE_DOOR)
     {
-        return createSurfaceDoor(xpos, ypos, scene);
+        return createSurfaceDoor(xpos, ypos, scene, game);
     }
     else if(type == BLOC_MOVABLE)
     {
-        return createBlocMovable(xpos, ypos, scene);
+        return createBlocMovable(xpos, ypos, scene, game);
     }
     else if(type == BLOC_WALL_ALONE)
     {
-        return createBlocWallAlone(xpos, ypos, scene);
+        return createBlocWallAlone(xpos, ypos, scene, game);
     }
     else if(type == BLOC_WALL_GROUP)
     {
-        return createBlocWallGroup(xpos, ypos, scene);
+        return createBlocWallGroup(xpos, ypos, scene, game);
     }
     else if(type == BLOC_WATER)
     {
-        return createBlocWater(xpos, ypos, scene);
+        return createBlocWater(xpos, ypos, scene, game);
     }
     else if(type == BLOC_FIRE)
     {
-        return createBlocFire(xpos, ypos, scene);
+        return createBlocFire(xpos, ypos, scene, game);
     }
     else if(type == BLOC_STONE)
     {
-        return createBlocStone(xpos, ypos, scene);
+        return createBlocStone(xpos, ypos, scene, game);
     }
     return NULL;
 }
 
-S_Ice* Factory_Surface::createSurfaceIce(int xpos, int ypos, QGraphicsScene* scene)
+S_Ice* Factory_Surface::createSurfaceIce(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Ice* i = new S_Ice(xpos, ypos);
+    S_Ice* i = new S_Ice(xpos, ypos,game);
     i->addToScene(scene);
     return i;
 }
 
-S_Snow* Factory_Surface::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene)
+S_Snow* Factory_Surface::createSurfaceSnow(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Snow* s = new S_Snow(xpos, ypos, scene);
+    S_Snow* s = new S_Snow(xpos, ypos, scene,game);
     scene->addItem(s);
     return s;
 }
 
-S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, QString text, QString image)
+S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game, QString text, QString image)
 {
-    S_Dialog *d = new S_Dialog(xpos, ypos);
+    S_Dialog *d = new S_Dialog(xpos, ypos,game);
     d->addDialogText(text);
     d->setImage(image);
     scene->addItem(d);
@@ -88,9 +88,9 @@ S_Dialog* Factory_Surface::createSurfaceDialog(int xpos, int ypos, QGraphicsScen
     return d;
 }
 
-S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene)
+S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Door* d = new S_Door(xpos,ypos);
+    S_Door* d = new S_Door(xpos,ypos,game);
     d->setLevelEnd(false);
     scene->addItem(d);
 
@@ -98,9 +98,9 @@ S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QGraphicsScene* s
     return d;
 }
 
-S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QString item, int quantity, QGraphicsScene* scene)
+S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QString item, int quantity, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Door* d = new S_Door(xpos,ypos);
+    S_Door* d = new S_Door(xpos,ypos,game);
     d->setLevelEnd(false);
     d->setNeededItem(item);
     d->setNbItem(quantity);
@@ -111,9 +111,9 @@ S_Door* Factory_Surface::createSurfaceDoor(int xpos, int ypos, QString item, int
     return d;
 }
 
-S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene)
+S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Door *d = new S_Door(xpos,ypos);
+    S_Door *d = new S_Door(xpos,ypos,game);
     d->setLevelEnd(true);
     d->setNextLevel(nextLevel);
     scene->addItem(d);
@@ -123,9 +123,9 @@ S_Door* Factory_Surface::createSurfaceLastDoor(int xpos, int ypos, int nextLevel
     return d;
 }
 
-B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene)
+B_MovableSimple *Factory_Surface::createBlocMovable(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    B_MovableSimple* m = new B_MovableSimple(xpos,ypos, scene);
+    B_MovableSimple* m = new B_MovableSimple(xpos, ypos, game, scene);
     m->addToScene(scene);
     Memento::getInstance()->setPosSurface(m,new QPoint(xpos, ypos));
     return m;
@@ -139,37 +139,37 @@ B_MovableThrow *Factory_Surface::createBlocMovableThrow(int xpos, int ypos, QGra
     return m;
 }
 
-B_Wall_Alone* Factory_Surface::createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene)
+B_Wall_Alone* Factory_Surface::createBlocWallAlone(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    B_Wall_Alone* w = new B_Wall_Alone(xpos, ypos);
+    B_Wall_Alone* w = new B_Wall_Alone(xpos, ypos, game);
     scene->addItem(w);
     return w;
 }
 
-B_Wall_Group* Factory_Surface::createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene)
+B_Wall_Group* Factory_Surface::createBlocWallGroup(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    B_Wall_Group* w = new B_Wall_Group(xpos, ypos);
+    B_Wall_Group* w = new B_Wall_Group(xpos, ypos, game);
     w->addToScene(scene);
     return w;
 }
 
-B_Water* Factory_Surface::createBlocWater(int xpos, int ypos, QGraphicsScene* scene)
+B_Water* Factory_Surface::createBlocWater(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    B_Water *w = new B_Water(xpos, ypos);
+    B_Water *w = new B_Water(xpos, ypos, game);
     w->addToScene(scene);
     return w;
 }
 
-S_Fire* Factory_Surface::createBlocFire(int xpos, int ypos, QGraphicsScene* scene)
+S_Fire* Factory_Surface::createBlocFire(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Fire *f = new S_Fire(xpos, ypos);
+    S_Fire *f = new S_Fire(xpos, ypos, game);
     scene->addItem(f);
     return f;
 }
 
-S_Stone* Factory_Surface::createBlocStone(int xpos, int ypos, QGraphicsScene* scene)
+S_Stone* Factory_Surface::createBlocStone(int xpos, int ypos, QGraphicsScene* scene, G_Gameboard *game)
 {
-    S_Stone *s = new S_Stone(xpos, ypos);
+    S_Stone *s = new S_Stone(xpos, ypos, game);
     scene->addItem(s);
     return s;
 }

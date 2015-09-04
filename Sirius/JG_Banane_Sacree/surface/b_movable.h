@@ -43,7 +43,7 @@ public:
      * @texture texture of the object
      * @param parent QGraphicsItem parent
      */
-    B_Movable(int xpos, int ypos, QGraphicsScene *scene, QGraphicsItem *parent = 0);
+    B_Movable(int xpos, int ypos, QGraphicsScene *scene, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     ~B_Movable();
 
@@ -51,7 +51,7 @@ public:
      * @brief Constructor without position setup.
      * @param parent QGraphicsItem to depend on
      */
-    B_Movable(QGraphicsItem *parent = 0);
+    B_Movable(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     //Methods related to the Scene
     /**

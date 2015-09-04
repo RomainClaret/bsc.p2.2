@@ -20,13 +20,15 @@
 
 #include <QDebug>
 
-G_Surface::G_Surface(int xpos, int ypos, QGraphicsItem *parent) : QGraphicsRectItem(0, 0, G_Gameboard::getGameSquares(), G_Gameboard::getGameSquares(), parent)
+G_Surface::G_Surface(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : QGraphicsRectItem(0, 0, G_Gameboard::getGameSquares(), G_Gameboard::getGameSquares(), parent)
 {
+    this->game = game;
     setPen(Qt::NoPen);
     setPos(xpos, ypos);
 }
-G_Surface::G_Surface(int xpos, int ypos, int width, int height, QGraphicsItem *parent) : QGraphicsRectItem(0, 0, width, height, parent)
+G_Surface::G_Surface(int xpos, int ypos, int width, int height, G_Gameboard* game, QGraphicsItem *parent) : QGraphicsRectItem(0, 0, width, height, parent)
 {
+    this->game = game;
     setPen(Qt::NoPen);
     setPos(xpos, ypos);
 }

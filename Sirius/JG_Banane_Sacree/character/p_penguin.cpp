@@ -103,7 +103,7 @@ void P_Penguin::setPos(int x, int y)
 
 void P_Penguin::advance(int step)
 {
-    if(step == 0 && !game->getPauseState())
+    if(step == 0 && !game->getPauseDialogState())
     {
         iAdvanceSpeed++;
         if(iAdvanceSpeed % 2 == 0)

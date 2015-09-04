@@ -36,7 +36,7 @@ E_Fox::E_Fox(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy(pos
     {
         for(int j=-1; j<=1; j++)
         {
-            S_ViewBlockNPC* vb = new S_ViewBlockNPC(j, i, this);
+            S_ViewBlockNPC* vb = new S_ViewBlockNPC(j, i, this, game);
             viewField.append(vb);
         }
     }

@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <QGraphicsScene>
 #include <QVector>
+class G_Gameboard;
 
 /**
  * @brief SurfaceAutoTexure is a inteligent surface, it can determinate the type of the environnents surfaces to construct its skin ans play annimation
@@ -18,7 +19,7 @@
 class S_SurfaceAutoTexture : public G_Surface
 {
 public:
-    S_SurfaceAutoTexture(int xpos, int ypos,QGraphicsItem *parent = 0);
+    S_SurfaceAutoTexture(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
     virtual ~S_SurfaceAutoTexture(){}
 
     /**

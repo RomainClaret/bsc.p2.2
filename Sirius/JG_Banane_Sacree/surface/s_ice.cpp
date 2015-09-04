@@ -19,11 +19,11 @@
 #include <QDebug>
 #include "../g_level.h"
 
-S_Ice::S_Ice(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
+S_Ice::S_Ice(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, game, parent)
 {
     setDesign();
 }
-S_Ice::S_Ice(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
+S_Ice::S_Ice(G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, game, parent)
 {
     setDesign();
 }

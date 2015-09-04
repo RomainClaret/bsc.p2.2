@@ -17,14 +17,14 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 
-S_Stone::S_Stone(int xpos, int ypos, QGraphicsItem *parent) : G_Surface(xpos, ypos, parent)
+S_Stone::S_Stone(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
 {
     setDesign();
 }
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-S_Stone::S_Stone(QGraphicsItem *parent) : G_Surface(0, 0, parent)
+S_Stone::S_Stone(G_Gameboard* game, QGraphicsItem *parent) : G_Surface(0, 0, game, parent)
 {
     setDesign();
 }

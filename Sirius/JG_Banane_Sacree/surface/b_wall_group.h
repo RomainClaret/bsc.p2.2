@@ -22,13 +22,13 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem to depend on
      */
-    B_Wall_Group(int xpos, int ypos, QGraphicsItem *parent = 0);
+    B_Wall_Group(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief Constructor without position setup
      * @param parent QGraphicsItem parent
      */
-    B_Wall_Group(QGraphicsItem *parent = 0);
+    B_Wall_Group(G_Gameboard* game, QGraphicsItem *parent = 0);
 
     /**
      * @brief calculateTextures determinate the texture with the collisions

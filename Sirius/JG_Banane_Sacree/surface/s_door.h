@@ -17,6 +17,7 @@
 #include "../surface/g_surface.h"
 
 class QGraphicsItem;
+class G_Gameboard;
 
 /**
  * @brief View Transition Surface.
@@ -40,7 +41,7 @@ public:
      * @param ypos set the postion on the y-axis
      * @param parent QGraphicsItem parent
      */
-    S_Door(int xpos, int ypos, QGraphicsItem *parent = 0);
+    S_Door(int xpos, int ypos, G_Gameboard* game,  QGraphicsItem *parent = 0);
 
 //    /**
 //     * @brief Constructor without position setup.

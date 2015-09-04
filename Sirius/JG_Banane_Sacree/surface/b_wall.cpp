@@ -17,7 +17,7 @@
 #include <QGraphicsRectItem>
 
 
-B_Wall::B_Wall(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, parent)
+B_Wall::B_Wall(int xpos, int ypos, G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(xpos, ypos, game, parent)
 {
     //rien
 }
@@ -25,7 +25,7 @@ B_Wall::B_Wall(int xpos, int ypos, QGraphicsItem *parent) : S_SurfaceAutoTexture
 /**
  * @details No other choice that use FICTIVE positions x and y. Here set at 0.
  */
-B_Wall::B_Wall(QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, parent)
+B_Wall::B_Wall(G_Gameboard* game, QGraphicsItem *parent) : S_SurfaceAutoTexture(0, 0, game, parent)
 {
     //rien
 }
