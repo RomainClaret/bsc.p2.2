@@ -62,10 +62,10 @@ E_Otter::E_Otter(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy
     viewField.append(vb7);
     viewField.append(vb8);
 
-//    foreach(S_ViewBlockNPC* vb, viewField)
-//    {
-//        setActive(false);
-//    }
+    foreach(S_ViewBlockNPC* vb, viewField)
+    {
+        vb->setStyleNone();
+    }
 
     resetDefaultOrientation();
 
