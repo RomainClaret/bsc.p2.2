@@ -16,7 +16,7 @@
 	
 Pour la compression de l’executable ou des sources (autre chose est possible mais il faut un 7z):
 
-C:\Qt\QtIFW2.0.1\bin\archivegen.exe "Z:\Clouds\OneDrive\HE-Arc\Projet Qt\P2\Deploy\Installeur Windows\packages\ch.he.arc.dlm2.p2.banana.rocket.james.gouin.banane.sacree.exec\data\exec.7z" "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\JG Game Windows"
+C:\Qt\QtIFW2.0.1\bin\archivegen.exe "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\Installeur Windows\packages\ch.he.arc.dlm2.p2.banana.rocket.james.gouin.banane.sacree.exec\data\exec.7z" "C:\Users\Time-Traveling-PC\Desktop\JG\Deploy\JG Game Windows"
 
 	
 
