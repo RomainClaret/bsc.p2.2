@@ -198,6 +198,7 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
         }
         else if(typeid(*l.at(i)).name() == typeid(S_Fire).name())
         {
+            qDebug() << "POS" << this->pos().x()/G_Gameboard::getGameSquares() << " - " << this->pos().y()/G_Gameboard::getGameSquares();
             Memento::getInstance()->addRemovedSurface(this);
             Memento::getInstance()->removePosSurface(this);
             removeFromScene(scene);

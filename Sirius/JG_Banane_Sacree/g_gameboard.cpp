@@ -838,10 +838,10 @@ void G_Gameboard::keyPressEvent(QKeyEvent *event)
         {
             if(event->key() == Qt::Key_Space)
             {
-
                 audioSingleton->playSoundInteraction();
                 dialogProxy->hide();
                 dialogToogle = false;
+                observerEnemy->switchBackToState(viewRequested);
             }
         }
     }
@@ -916,7 +916,6 @@ bool G_Gameboard::movePlayableCharacter(QList<QGraphicsItem *> CollidingItems, c
             B_MovableSimple *b;
             b = dynamic_cast<B_MovableSimple*>(CollidingItems.at(i));
 
-            qDebug() << b->pos().x();
             if((int)(b->pos().x()-1) % getGameSquares() == 0 && (int)(b->pos().y()-1) % getGameSquares() == 0)
             {
                 if(direction == 'l' && b->isMovableToLeft() && checkPosition(b->getCollideBlocPosition(direction)))
@@ -1293,6 +1292,8 @@ void G_Gameboard::showDialog(QString text, QString image)
     setWidgetPositionCenter(dialog);
     dialogProxy->show();
     dialogToogle = true;
+
+    observerEnemy->switchToState(Observer_Enemy::STATE_PAUSE,viewRequested);
 }
 
 QGraphicsScene* G_Gameboard::getGraphicsScene()

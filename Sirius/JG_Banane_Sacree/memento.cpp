@@ -111,6 +111,7 @@ void Memento::addRemovedSurface(G_Surface* element)
     if(hashMapSurface.contains(element))
     {
         int size = G_Gameboard::getGameSquares();
+        qDebug() << "MEMENTO POS" << hashMapSurface[element]->x()/size << " - " << hashMapSurface[element]->y()/size;
         element->setPosition(hashMapSurface[element]->x()/size,hashMapSurface[element]->y()/size);
     }
     removedSurface.append(element);
