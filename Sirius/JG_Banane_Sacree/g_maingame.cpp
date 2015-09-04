@@ -25,6 +25,7 @@
 #include <QFormLayout>
 #include <QGLWidget>
 #include <QtCore>
+#include <QTimer>
 
 
 G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
@@ -67,11 +68,19 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     gameView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     gameView->setSceneRect(viewPositionX,viewPositionY,theGame->sizeX*G_Gameboard::getGameSquares(),theGame->sizeY*G_Gameboard::getGameSquares());
 
+    timerSplash = new QTimer();
+    connect(timerSplash, SIGNAL(timeout()), this, SLOT(splashScreenShow()));
+    timerSplash->start(3000); //3 secondes
+
+    QGraphicsScene* sceneSplash = new QGraphicsScene(this);
+    sceneSplash->addPixmap(QPixmap(":/maps/maps/splashscreen.png"));
+    gameView->setScene(sceneSplash);
+
 
 
     //Set the view position
     //gameView->setViewport(new QGLWidget);
-    gameView->setScene(gameScene);
+    //gameView->setScene(gameScene);
 
 
 //    gameView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
@@ -88,8 +97,9 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
                         );
 
     gameTitle->setGeometry(windowSizeX/2-titleSizeX/2,windowSizeY/2-menuSizeY/2-50,titleSizeX,titleSizeY);
-
+    gameTitle->hide();
     refreshGameMenu();
+    menuStart->hide();
 
     quitGame = new QPushButton(tr("Quitter le jeu"), this);
 
@@ -106,15 +116,26 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 
     QObject::connect(quitGame,SIGNAL(clicked()),this,SLOT(close()));
     quitGame->setGeometry(windowSizeX/2-quitBtnSizeX/2,windowSizeY/2+menuSizeY/2+35,quitBtnSizeX,quitBtnSizeY);
-
+    quitGame->hide();
     btnSoundMuter = new QPushButton(this);
     btnSoundMuter->setStyleSheet("background: transparent;");
     QPixmap pixmap(":/icons/audio_on60x60.png");
     QIcon ButtonIcon(pixmap);
     btnSoundMuter->setIcon(ButtonIcon);
     btnSoundMuter->setIconSize(pixmap.rect().size());
+    btnSoundMuter->hide();
 
     connect(btnSoundMuter, SIGNAL (released()), this, SLOT (soundMuter()));
+}
+
+void G_MainGame::splashScreenShow()
+{
+    timerSplash->stop();
+    gameView->setScene(gameScene);
+    gameTitle->show();
+    quitGame->show();
+    btnSoundMuter->show();
+    menuStart->show();
 }
 
 G_MainGame::~G_MainGame()

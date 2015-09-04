@@ -23,6 +23,7 @@
 class QGraphicsView;
 class QLabel;
 class Singleton_Audio;
+class QTimer;
 
 
 /**
@@ -79,6 +80,8 @@ public:
     void exitGame();
 
 private:
+
+    QTimer *timerSplash;
 
     Singleton_Audio *audioSingleton;
     QGLWidget* w;
@@ -141,6 +144,8 @@ public slots:
 
     void soundMuter();
 
+private slots:
+    void splashScreenShow();
 };
 
 #endif // G_MAINGAME_H
