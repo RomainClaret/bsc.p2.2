@@ -78,7 +78,7 @@ C_Enemy::~C_Enemy()
 {
     foreach (S_ViewBlockNPC* vb, viewField)
     {
-        game->getGraphicsScene()->removeItem(vb);
+        //game->getGraphicsScene()->removeItem(vb);
         delete vb;
     }
     delete state;
