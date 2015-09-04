@@ -388,9 +388,14 @@ void G_Gameboard::fixMovable(B_MovableSimple *b)
             vb = dynamic_cast<S_ViewBlockNPC*>(CollidingItems.at(i));
             vb->blockOn();
         }
+        if(typeid(*CollidingItems.at(i)).name() == typeid(S_Fire).name())
+        {
+            Memento::getInstance()->addRemovedSurface(b);
+            Memento::getInstance()->removePosSurface(b);
+            b->removeFromScene(mainScene);
+        }
     }
 }
-
 
 void G_Gameboard::checkPositionEvents(char sens)
 {
