@@ -51,8 +51,6 @@ E_Otter::E_Otter(QString position, QList<QPoint> path, G_Gameboard *g) : C_Enemy
     S_ViewBlockNPC* vb7 = new S_ViewBlockNPC(-1, 0, this, game);
     S_ViewBlockNPC* vb8 = new S_ViewBlockNPC(-1, 1, this, game);
 
-    //vb->setStyleNone();
-
     viewField.append(vb1);
     viewField.append(vb2);
     viewField.append(vb3);
