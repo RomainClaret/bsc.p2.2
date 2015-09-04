@@ -15,6 +15,7 @@
 #include "g_profil.h"
 #include "observer_enemy.h"
 #include "singleton_audio.h"
+#include <time.h>
 
 #include <QGraphicsView>
 #include <QLabel>
@@ -76,9 +77,19 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
 
     QGraphicsScene *sceneSplash = new QGraphicsScene(this);
     QList<QString> *splashList = new QList<QString>();
-    splashList->append(":/maps/maps/splashscreen.png");
+    splashList->append(":/splashs/splashs/00Gouin.png");
+    splashList->append(":/splashs/splashs/darthGouin.jpg");
+    splashList->append(":/splashs/splashs/frozenGouin.JPG");
+    splashList->append(":/splashs/splashs/mexicanGouin.png");
+    splashList->append(":/splashs/splashs/nerdGouin.png");
+    splashList->append(":/splashs/splashs/ninjaGouin.JPG");
+    splashList->append(":/splashs/splashs/peaceAndGouin.JPG");
+    splashList->append(":/splashs/splashs/spaceGouin.png");
 
-    int splashNumber = (qrand() % (splashList->size() - 0 + 1)) + 0;
+    //int splashNumber = qrand() % (splashList->size() + 1);
+    qDebug() << "hellowlrd: splashList->size()" << splashList->size();
+    srand(time(NULL));
+    int splashNumber = rand() % splashList->size();
 
     sceneSplash->addPixmap(QPixmap(splashList->at(splashNumber)));
     gameView->setScene(sceneSplash);
