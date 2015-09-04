@@ -92,7 +92,9 @@ W_MenuCredits::W_MenuCredits(QWidget *parent)
     scrollArea->setWidget(textCredits);
     scrollArea->setStyleSheet("border: none;");
     scrollArea->setMaximumHeight(200);
+    //scrollArea->setFixedHeight(200);
     scrollArea->setMaximumWidth(350);
+    //scrollArea->setFixedWidth(350);
     scrollArea->setFocusPolicy(Qt::NoFocus);
 
 //    scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

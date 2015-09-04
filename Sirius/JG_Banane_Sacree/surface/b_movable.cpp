@@ -190,14 +190,14 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
            typeid(*l.at(i)).name() == typeid(E_Fox).name() ||
            typeid(*l.at(i)).name() == typeid(E_Wolf).name() ||
            typeid(*l.at(i)).name() == typeid(E_Walrus).name()||
-           typeid(*l.at(i)).name() == typeid(S_Fire).name())
+           typeid(*l.at(i)).name() == typeid(S_Stone).name())
         {
             return false;
         }
-        else if(typeid(*l.at(i)).name() == typeid(S_Stone).name())
+        else if(typeid(*l.at(i)).name() == typeid(S_Fire).name())
         {
-            qDebug() << "PROBLEM HERE!!";
-            return false;
+            removeFromScene(scene);
+            return true;
         }
     }
     return true;

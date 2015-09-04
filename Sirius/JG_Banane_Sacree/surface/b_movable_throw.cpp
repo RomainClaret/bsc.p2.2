@@ -65,7 +65,7 @@ B_MovableThrow::B_MovableThrow(G_Gameboard* game, QGraphicsItem *parent) : B_Mov
 
 void B_MovableThrow::advance(int step)
 {
-    if(step == 0 && !game->getPauseState())
+    if(step == 0 && !game->getPauseDialogState())
     {
         time ++;
         if(time % speed == 0)
