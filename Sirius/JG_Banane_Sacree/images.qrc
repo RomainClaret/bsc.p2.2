@@ -133,4 +133,14 @@
         <file>surfaces/door-r.png</file>
         <file>surfaces/door-t.png</file>
     </qresource>
+    <qresource prefix="/splashs">
+        <file>splashs/00Gouin.png</file>
+        <file>splashs/darthGouin.jpg</file>
+        <file>splashs/frozenGouin.JPG</file>
+        <file>splashs/mexicanGouin.png</file>
+        <file>splashs/nerdGouin.png</file>
+        <file>splashs/ninjaGouin.JPG</file>
+        <file>splashs/peaceAndGouin.JPG</file>
+        <file>splashs/spaceGouin.png</file>
+    </qresource>
 </RCC>

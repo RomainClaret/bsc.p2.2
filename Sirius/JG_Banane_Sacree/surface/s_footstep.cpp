@@ -1,4 +1,6 @@
 #include "s_footstep.h"
+#include "../g_gameboard.h"
+
 #include <QBrush>
 #include <QDebug>
 S_Footstep::S_Footstep(int xpos, int ypos, char sens, int lifetime, G_Gameboard* game, QGraphicsItem *parent) : G_Surface(xpos, ypos, game, parent)
@@ -32,7 +34,7 @@ S_Footstep::S_Footstep(int xpos, int ypos, char sens, int lifetime, G_Gameboard*
 
 void S_Footstep::advance(int step)
 {
-    if(step == 1)
+    if(step == 1 && !game->getPauseDialogState())
     {
         itime ++;
         if(lifetime < itime)

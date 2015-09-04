@@ -30,6 +30,8 @@
 #include "../surface/s_fire.h"
 #include "../surface/s_stone.h"
 
+#include "../memento.h"
+
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #else
 #include <typeinfo.h>
@@ -193,11 +195,6 @@ bool B_Movable::isMovable(QList<QGraphicsItem *> l)
            typeid(*l.at(i)).name() == typeid(S_Stone).name())
         {
             return false;
-        }
-        else if(typeid(*l.at(i)).name() == typeid(S_Fire).name())
-        {
-            removeFromScene(scene);
-            return true;
         }
     }
     return true;
