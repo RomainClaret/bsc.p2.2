@@ -86,8 +86,6 @@ G_MainGame::G_MainGame(QWidget *parent) : QWidget(parent)
     splashList->append(":/splashs/splashs/peaceAndGouin.JPG");
     splashList->append(":/splashs/splashs/spaceGouin.png");
 
-    //int splashNumber = qrand() % (splashList->size() + 1);
-    qDebug() << "hellowlrd: splashList->size()" << splashList->size();
     srand(time(NULL));
     int splashNumber = rand() % splashList->size();
 
